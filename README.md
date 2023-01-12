@@ -2,7 +2,7 @@
 
 Collections of UDIs, UDTs, and sample programs written in Studio 5000 v35.
 
-Structured text is generally used for add-on-instruction definitions for ease of portability between IEC 61131-3 platforms.
+The structured text language is generally used for add-on-instruction definitions for ease of portability between IEC 61131-3 platforms.
 
 Type and instruction dependencies will be documented where possible.
 
