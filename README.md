@@ -44,7 +44,7 @@ Depending on use case, some of the features of an AOI will go unused. Tentativel
 So we have...
 - No suffix: base/full
 - L: Light
-- M/T: Mirror or Twin. This would be an AOI in structure only, no code. What's the purpose
+- M/T: Mirror or Twin. This would be an AOI in structure only, no code. Useful for a monitoring or concentrator PLC/DCS.
 
 Extras
 ------------
