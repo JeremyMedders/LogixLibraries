@@ -52,8 +52,8 @@ So we have...
 Extras
 ------------
 - some UDT templates to aid others in implementing the useful BIT overlay construct.
-- some explanatory documentation about known working L5X attribute values.
-- a demonstration of using the CanBeNull parameter attribute in AOIs.
+- TODO: some explanatory documentation about known working L5X attribute values.
+- TODO: demonstration of using the CanBeNull parameter attribute in AOIs.
 
 "Legacy" heads-up
 ------------
