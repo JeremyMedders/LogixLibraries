@@ -27,7 +27,7 @@ AOIs/UDTs (AO_/ST_) built as classes:
 - Msg: Message utilities.
 - RTC: Precision pulse/timing utilites.
 - Str: String utilities.
-- Sys: System diagnostic "classes", ISA 18.2 alarming with its parent "class", and other utilities.
+- Sys: System diagnostics, ISA 18.2 alarming with its parent "class", and other utilities.
 
 UDTs (ST_) follow the AOI grouping in name:
 - ST_Dvc_
