@@ -22,7 +22,7 @@ AOIs/UDTs (AO_/ST_) built as classes:
 - Dvc: Device drivers. Each of these embed a Dvc_Node that handles registering it to the Dvc_Class.
 - Math: Assorted function blocks.
 - MBTCP: Modbus TCP client driver.
-- Op: Light-weight PlantPAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PlantPAx counterpart. 
+- Op: Lightweight PAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PlantPAx counterpart. 
 - Msg: Message utilities.
 - RTC: Precision pulse/timing utilites.
 - Str: String utilities.
