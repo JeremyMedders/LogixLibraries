@@ -19,7 +19,7 @@ Parameter naming follows PlantPAx standards, where sensible:
 
 AOIs/UDTs (AO_/ST_) built as classes:
 ------------
-- Dvc: Device drivers.
+- Dvc: Device drivers. Each of these embed a Dvc_Node that handles registering it to the Dvc_Class.
 - Math: Assorted function blocks.
 - MBTCP: Modbus TCP client driver.
 - Op: Light-weight PlantPAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PlantPAx counterpart. 
@@ -44,6 +44,7 @@ Depending on use case, some of the features of an AOI will go unused. Tentativel
 So we have...
 - No suffix: base/full
 - L: Light
+- M/T: Mirror or Twin. This would be an AOI in structure only, no code. What's the purpose
 
 Extras
 ------------
