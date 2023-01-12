@@ -17,7 +17,8 @@ Parameter naming follows PlantPAx standards, where sensible:
 - At times, parameter names were modified for consistency / anti-ambiguity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
-AOIs (AO_) are organized into groups:
+AOIs/UDTs (AO_/ST_) built as classes:
+------------
 - Dvc: Device drivers.
 - Math: Assorted function blocks.
 - MBTCP: Modbus TCP client driver.
