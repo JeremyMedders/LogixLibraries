@@ -2,6 +2,16 @@
 
 Collections of UDIs, UDTs, and sample programs written in Studio 5000 v35.
 
+This is my concentrated best-effort approach to implementing object-oriented programming on Rockwell Logix5000-based controllers.
+
+- Math: Assorted function blocks
+- Dvc: Device drivers
+- MBTCP: Modbus TCP client driver
+- Op: Process blocks, modeled
+- Msg: Message utilities
+- Str: String utilities
+- Sys: System diagnostic classes and utilities
+
 Source edit protection is enabled, but the code is viewable (it may make sense to fully unlock it but I'm also learning Git, so bear with me).
 
 With the exception of complementary FactoryTalk View files, this repository contains only .L5X (Logix XML) files.
