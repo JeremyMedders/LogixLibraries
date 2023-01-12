@@ -15,7 +15,7 @@ Parameter naming follows PlantPAx standards, where sensible:
 - Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
 - Rdy_: Avoided in favor of consolidating under the Sts_ prefix.
 
-Blocks (AO_) are organized into groups:
+AOIs (AO_) are organized into groups:
 - Dvc: Device drivers
 - Math: Assorted function blocks
 - MBTCP: Modbus TCP client driver.
@@ -24,6 +24,11 @@ Blocks (AO_) are organized into groups:
 - RTC: Precision pulse/timing utilites
 - Str: String utilities
 - Sys: System diagnostic classes and utilities
+
+UDTs (ST_) follow the AOI grouping:
+- ST_Dvc_
+- ST_Sys_
+- And so on.
 
 Source edit protection is enabled, but the code is viewable (it may make sense to fully unlock it but I'm also learning Git, so bear with me).
 
