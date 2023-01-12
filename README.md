@@ -4,7 +4,8 @@ This is my best-effort approach to implementing production-ready, "object-orient
 
 With the exception of complementary sample files (FactoryTalk View, and so on), this repository contains only .L5X (Logix 5000 XML) files. Structured text is used for add-on-instruction definitions for ease of portability between IEC 61131-3 platforms. Dependencies will be documented where possible.
 
-Parameter naming follows PlantPAx standards, where sensible:
+Parameter naming follows PlantPAx, where sensible:
+------------
 - Inp_
 - PCmd_, OCmd_, MCmd, XCmd
 - PSet_, OSet_, MSet, XSet
@@ -44,7 +45,8 @@ Depending on use case, some of the features of an AOI will go unused. Tentativel
 So we have...
 - No suffix: base/full
 - L: Light
-- M/T: Mirror or Twin. This would be an AOI in structure only, no other code. Useful for a monitoring or concentrator PLC/DCS.
+- M/T: Mirror/Monitor or Twin. This would be an AOI in structure only, no other code. Useful for a monitoring or concentrator PLC/DCS.
+- S: Simulator
 
 Extras
 ------------
