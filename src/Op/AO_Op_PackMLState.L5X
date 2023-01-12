@@ -1,0 +1,1273 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Implements the ISA 88 state model (PackML v3).-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Op_PackMLState" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T21:47:02.946Z" ContainsContext="true" ExportDate="Thu Jan 12 15:47:28 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="AO_Op_PackMLState" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-11-18T21:23:11.168Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:47:02.946Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Implements the ISA 88 state model (PackML v3).]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Initialize" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Resets the object to the Stopped state.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PCmd" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Module command.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PCmd_SC" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[State transition command.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Undefined" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Clearing" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Stopped" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Starting" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Idle" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Suspended" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Execute" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Stopping" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Aborting" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Aborted" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Holding" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Held" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_UnHolding" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Suspending" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_UnSuspending" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Resetting" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Completing" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Complete" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current state.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_HasClearing" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasStarting" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasIdle" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasSuspended" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasStopping" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasAborting" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.8" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasAborted" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.9" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasHolding" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.10" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasHeld" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.11" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasUnHolding" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.12" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasSuspending" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.13" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasUnSuspending" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.14" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasResetting" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.15" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasCompleting" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.16" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_HasComplete" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Exists.17" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eState_Undefined" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 0: Undefined.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Clearing" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 1: Clearing.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Stopped" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 2: Stopped.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Starting" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 3: Starting.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Idle" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 4: Idle.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Suspended" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 5: Suspended.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Execute" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 6: Execute.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Stopping" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 7: Stopping.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Aborting" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 8: Aborting.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Aborted" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 9: Aborted.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Holding" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 10: Holding.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Held" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 11: Held.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_UnHolding" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 12: UnHolding.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Suspending" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 13: Suspending.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_UnSuspending" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 14: UnSuspending.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Resetting" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 15: Resetting.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Completing" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 16: Completing.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eState_Complete" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 17: Complete.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_Reset" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 1: Reset.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_Start" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 2: Start.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_Stop" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 3: Stop.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_Hold" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 4: Hold.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_UnHold" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 5: UnHold.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_Suspend" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 6: Suspend.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_UnSuspend" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 7: UnSuspend.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_Abort" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 8: Abort.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eCmd_Clear" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enum 9: Clear.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="State" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="tResult" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Exists" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<Comments>
+<Comment Operand=".1">
+<![CDATA[Clearing.]]>
+</Comment>
+<Comment Operand=".2">
+<![CDATA[Stopped.]]>
+</Comment>
+<Comment Operand=".3">
+<![CDATA[Starting.]]>
+</Comment>
+<Comment Operand=".4">
+<![CDATA[Idle.]]>
+</Comment>
+<Comment Operand=".5">
+<![CDATA[Suspended.]]>
+</Comment>
+<Comment Operand=".6">
+<![CDATA[Execute.]]>
+</Comment>
+<Comment Operand=".7">
+<![CDATA[Stopping.]]>
+</Comment>
+<Comment Operand=".8">
+<![CDATA[Aborting.]]>
+</Comment>
+<Comment Operand=".9">
+<![CDATA[Aborted.]]>
+</Comment>
+<Comment Operand=".10">
+<![CDATA[Holding.]]>
+</Comment>
+<Comment Operand=".11">
+<![CDATA[Held.]]>
+</Comment>
+<Comment Operand=".12">
+<![CDATA[UnHolding.]]>
+</Comment>
+<Comment Operand=".13">
+<![CDATA[Suspending.]]>
+</Comment>
+<Comment Operand=".14">
+<![CDATA[UnSuspending.]]>
+</Comment>
+<Comment Operand=".15">
+<![CDATA[Resetting.]]>
+</Comment>
+<Comment Operand=".16">
+<![CDATA[Completing.]]>
+</Comment>
+<Comment Operand=".17">
+<![CDATA[Complete.]]>
+</Comment>
+</Comments>
+<DefaultData Format="L5K">
+<![CDATA[262074]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="262074"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="tCfgError" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Initialized" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_PackMLState]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	States]]>
+</Line>
+<Line Number="5">
+<![CDATA[	0: Undefined]]>
+</Line>
+<Line Number="6">
+<![CDATA[	1: Clearing]]>
+</Line>
+<Line Number="7">
+<![CDATA[	2: Stopped]]>
+</Line>
+<Line Number="8">
+<![CDATA[	3: Starting]]>
+</Line>
+<Line Number="9">
+<![CDATA[	4: Idle]]>
+</Line>
+<Line Number="10">
+<![CDATA[	5: Suspended]]>
+</Line>
+<Line Number="11">
+<![CDATA[	6: Execute]]>
+</Line>
+<Line Number="12">
+<![CDATA[	7: Stopping]]>
+</Line>
+<Line Number="13">
+<![CDATA[	8: Aborting]]>
+</Line>
+<Line Number="14">
+<![CDATA[	9: Aborted]]>
+</Line>
+<Line Number="15">
+<![CDATA[	10: Holding]]>
+</Line>
+<Line Number="16">
+<![CDATA[	11: Held]]>
+</Line>
+<Line Number="17">
+<![CDATA[	12: Unholding]]>
+</Line>
+<Line Number="18">
+<![CDATA[	13: Suspending]]>
+</Line>
+<Line Number="19">
+<![CDATA[	14: Unsuspending]]>
+</Line>
+<Line Number="20">
+<![CDATA[	15: Resetting]]>
+</Line>
+<Line Number="21">
+<![CDATA[	16: Completing]]>
+</Line>
+<Line Number="22">
+<![CDATA[	17: Complete]]>
+</Line>
+<Line Number="23">
+<![CDATA[	]]>
+</Line>
+<Line Number="24">
+<![CDATA[	Commands:]]>
+</Line>
+<Line Number="25">
+<![CDATA[	1: Reset]]>
+</Line>
+<Line Number="26">
+<![CDATA[	2: Start]]>
+</Line>
+<Line Number="27">
+<![CDATA[	3: Stop]]>
+</Line>
+<Line Number="28">
+<![CDATA[	4: Hold]]>
+</Line>
+<Line Number="29">
+<![CDATA[	5: UnHold]]>
+</Line>
+<Line Number="30">
+<![CDATA[	6: Suspend]]>
+</Line>
+<Line Number="31">
+<![CDATA[	7: UnSuspend]]>
+</Line>
+<Line Number="32">
+<![CDATA[	8: Abort]]>
+</Line>
+<Line Number="33">
+<![CDATA[	9: Clear]]>
+</Line>
+<Line Number="34">
+<![CDATA[*/]]>
+</Line>
+<Line Number="35">
+<![CDATA[]]>
+</Line>
+<Line Number="36">
+<![CDATA[eState_Undefined := 0;]]>
+</Line>
+<Line Number="37">
+<![CDATA[eState_Clearing := 1;]]>
+</Line>
+<Line Number="38">
+<![CDATA[eState_Stopped := 2;]]>
+</Line>
+<Line Number="39">
+<![CDATA[eState_Starting := 3;]]>
+</Line>
+<Line Number="40">
+<![CDATA[eState_Idle := 4;]]>
+</Line>
+<Line Number="41">
+<![CDATA[eState_Suspended := 5;]]>
+</Line>
+<Line Number="42">
+<![CDATA[eState_Execute := 6;]]>
+</Line>
+<Line Number="43">
+<![CDATA[eState_Stopping := 7;]]>
+</Line>
+<Line Number="44">
+<![CDATA[eState_Aborting := 8;]]>
+</Line>
+<Line Number="45">
+<![CDATA[eState_Aborted := 9;]]>
+</Line>
+<Line Number="46">
+<![CDATA[eState_Holding := 10;]]>
+</Line>
+<Line Number="47">
+<![CDATA[eState_Held := 11;]]>
+</Line>
+<Line Number="48">
+<![CDATA[eState_UnHolding := 12;]]>
+</Line>
+<Line Number="49">
+<![CDATA[eState_Suspending := 13;]]>
+</Line>
+<Line Number="50">
+<![CDATA[eState_UnSuspending := 14;]]>
+</Line>
+<Line Number="51">
+<![CDATA[eState_Resetting := 15;]]>
+</Line>
+<Line Number="52">
+<![CDATA[eState_Completing := 16;]]>
+</Line>
+<Line Number="53">
+<![CDATA[eState_Complete := 17;]]>
+</Line>
+<Line Number="54">
+<![CDATA[]]>
+</Line>
+<Line Number="55">
+<![CDATA[eCmd_Reset := 1;]]>
+</Line>
+<Line Number="56">
+<![CDATA[eCmd_Start := 2;]]>
+</Line>
+<Line Number="57">
+<![CDATA[eCmd_Stop := 3;]]>
+</Line>
+<Line Number="58">
+<![CDATA[eCmd_Hold := 4;]]>
+</Line>
+<Line Number="59">
+<![CDATA[eCmd_UnHold := 5;]]>
+</Line>
+<Line Number="60">
+<![CDATA[eCmd_Suspend := 6;]]>
+</Line>
+<Line Number="61">
+<![CDATA[eCmd_UnSuspend := 7;]]>
+</Line>
+<Line Number="62">
+<![CDATA[eCmd_Abort := 8;]]>
+</Line>
+<Line Number="63">
+<![CDATA[eCmd_Clear := 9;]]>
+</Line>
+<Line Number="64">
+<![CDATA[]]>
+</Line>
+<Line Number="65">
+<![CDATA[if ((State <= eState_Undefined OR State > eState_Complete) OR (Inp_Initialize & NOT OSR.0)) then]]>
+</Line>
+<Line Number="66">
+<![CDATA[	State := eState_Stopped;]]>
+</Line>
+<Line Number="67">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="68">
+<![CDATA[OSR.0 := Inp_Initialize;]]>
+</Line>
+<Line Number="69">
+<![CDATA[]]>
+</Line>
+<Line Number="70">
+<![CDATA[if (PCmd <> 0) then]]>
+</Line>
+<Line Number="71">
+<![CDATA[	if (PCmd = eCmd_Reset) then]]>
+</Line>
+<Line Number="72">
+<![CDATA[		if ((State = eState_Stopped OR State = eState_Complete)) then]]>
+</Line>
+<Line Number="73">
+<![CDATA[			if (Cfg_HasResetting) then]]>
+</Line>
+<Line Number="74">
+<![CDATA[				State := eState_Resetting;]]>
+</Line>
+<Line Number="75">
+<![CDATA[			else]]>
+</Line>
+<Line Number="76">
+<![CDATA[				State := eState_Idle;]]>
+</Line>
+<Line Number="77">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="78">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="79">
+<![CDATA[		]]>
+</Line>
+<Line Number="80">
+<![CDATA[	elsif (PCmd = eCmd_Start) then]]>
+</Line>
+<Line Number="81">
+<![CDATA[		if (State = eState_Idle) then]]>
+</Line>
+<Line Number="82">
+<![CDATA[			if (Cfg_HasStarting) then]]>
+</Line>
+<Line Number="83">
+<![CDATA[				State := eState_Starting;]]>
+</Line>
+<Line Number="84">
+<![CDATA[			else]]>
+</Line>
+<Line Number="85">
+<![CDATA[				State := eState_Execute;]]>
+</Line>
+<Line Number="86">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="87">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="88">
+<![CDATA[		]]>
+</Line>
+<Line Number="89">
+<![CDATA[	elsif (PCmd = eCmd_Stop) then]]>
+</Line>
+<Line Number="90">
+<![CDATA[		if (State <> eState_Stopping & State <> eState_Stopped & ]]>
+</Line>
+<Line Number="91">
+<![CDATA[			State <> eState_Aborting & State <> eState_Aborted &]]>
+</Line>
+<Line Number="92">
+<![CDATA[			State <> eState_Clearing) then]]>
+</Line>
+<Line Number="93">
+<![CDATA[			]]>
+</Line>
+<Line Number="94">
+<![CDATA[			if (Cfg_HasStopping) then]]>
+</Line>
+<Line Number="95">
+<![CDATA[				State := eState_Stopping;]]>
+</Line>
+<Line Number="96">
+<![CDATA[			else]]>
+</Line>
+<Line Number="97">
+<![CDATA[				State := eState_Stopped;]]>
+</Line>
+<Line Number="98">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="99">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="100">
+<![CDATA[		]]>
+</Line>
+<Line Number="101">
+<![CDATA[	elsif (PCmd = eCmd_Hold) then]]>
+</Line>
+<Line Number="102">
+<![CDATA[		if (State = eState_Execute) then]]>
+</Line>
+<Line Number="103">
+<![CDATA[			if (Cfg_HasHolding) then]]>
+</Line>
+<Line Number="104">
+<![CDATA[				State := eState_Holding;]]>
+</Line>
+<Line Number="105">
+<![CDATA[			elsif (Cfg_HasHeld) then]]>
+</Line>
+<Line Number="106">
+<![CDATA[				State := eState_Held;]]>
+</Line>
+<Line Number="107">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="108">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="109">
+<![CDATA[		]]>
+</Line>
+<Line Number="110">
+<![CDATA[	elsif (PCmd = eCmd_UnHold) then]]>
+</Line>
+<Line Number="111">
+<![CDATA[		if (State = eState_Held) then]]>
+</Line>
+<Line Number="112">
+<![CDATA[			if (Cfg_HasUnHolding) then]]>
+</Line>
+<Line Number="113">
+<![CDATA[				State := eState_UnHolding;]]>
+</Line>
+<Line Number="114">
+<![CDATA[			else]]>
+</Line>
+<Line Number="115">
+<![CDATA[				State := eState_Execute;]]>
+</Line>
+<Line Number="116">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="117">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="118">
+<![CDATA[		]]>
+</Line>
+<Line Number="119">
+<![CDATA[	elsif (PCmd = eCmd_Suspend) then]]>
+</Line>
+<Line Number="120">
+<![CDATA[		if (State = eState_Execute) then]]>
+</Line>
+<Line Number="121">
+<![CDATA[			if (Cfg_HasSuspending) then]]>
+</Line>
+<Line Number="122">
+<![CDATA[				State := eState_Suspending;]]>
+</Line>
+<Line Number="123">
+<![CDATA[			elsif (Cfg_HasSuspended) then]]>
+</Line>
+<Line Number="124">
+<![CDATA[				State := eState_Suspended;]]>
+</Line>
+<Line Number="125">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="126">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="127">
+<![CDATA[		]]>
+</Line>
+<Line Number="128">
+<![CDATA[	elsif (PCmd = eCmd_UnSuspend) then]]>
+</Line>
+<Line Number="129">
+<![CDATA[		if (State = eState_Suspended) then]]>
+</Line>
+<Line Number="130">
+<![CDATA[			if (Cfg_HasUnSuspending) then]]>
+</Line>
+<Line Number="131">
+<![CDATA[				State := eState_UnSuspending;]]>
+</Line>
+<Line Number="132">
+<![CDATA[			else]]>
+</Line>
+<Line Number="133">
+<![CDATA[				State := eState_Execute;]]>
+</Line>
+<Line Number="134">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="135">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="136">
+<![CDATA[		]]>
+</Line>
+<Line Number="137">
+<![CDATA[	elsif (PCmd = eCmd_Abort) then]]>
+</Line>
+<Line Number="138">
+<![CDATA[		if (State <> eState_Aborted & State <> eState_Aborting) then]]>
+</Line>
+<Line Number="139">
+<![CDATA[			if (Cfg_HasAborting) then]]>
+</Line>
+<Line Number="140">
+<![CDATA[				State := eState_Aborting;]]>
+</Line>
+<Line Number="141">
+<![CDATA[			else]]>
+</Line>
+<Line Number="142">
+<![CDATA[				State := eState_Aborted;]]>
+</Line>
+<Line Number="143">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="144">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="145">
+<![CDATA[		]]>
+</Line>
+<Line Number="146">
+<![CDATA[	elsif (PCmd = eCmd_Clear) then]]>
+</Line>
+<Line Number="147">
+<![CDATA[		if (State = eState_Aborted) then]]>
+</Line>
+<Line Number="148">
+<![CDATA[			if (Cfg_HasClearing) then]]>
+</Line>
+<Line Number="149">
+<![CDATA[				State := eState_Clearing;]]>
+</Line>
+<Line Number="150">
+<![CDATA[			else]]>
+</Line>
+<Line Number="151">
+<![CDATA[				State := eState_Stopped;]]>
+</Line>
+<Line Number="152">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="153">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="154">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="155">
+<![CDATA[	]]>
+</Line>
+<Line Number="156">
+<![CDATA[	PCmd := 0;]]>
+</Line>
+<Line Number="157">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="158">
+<![CDATA[]]>
+</Line>
+<Line Number="159">
+<![CDATA[if (PCmd_SC) then]]>
+</Line>
+<Line Number="160">
+<![CDATA[	if (State = eState_Clearing) then]]>
+</Line>
+<Line Number="161">
+<![CDATA[		State := eState_Stopped;]]>
+</Line>
+<Line Number="162">
+<![CDATA[	elsif (State = eState_Starting) then]]>
+</Line>
+<Line Number="163">
+<![CDATA[		State := eState_Execute;]]>
+</Line>
+<Line Number="164">
+<![CDATA[	elsif (State = eState_Execute) then]]>
+</Line>
+<Line Number="165">
+<![CDATA[		if (Cfg_HasCompleting) then]]>
+</Line>
+<Line Number="166">
+<![CDATA[			State := eState_Completing;]]>
+</Line>
+<Line Number="167">
+<![CDATA[		else]]>
+</Line>
+<Line Number="168">
+<![CDATA[			State := eState_Complete;]]>
+</Line>
+<Line Number="169">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="170">
+<![CDATA[	elsif (State = eState_Stopping) then]]>
+</Line>
+<Line Number="171">
+<![CDATA[		State := eState_Stopped;]]>
+</Line>
+<Line Number="172">
+<![CDATA[	elsif (State = eState_Aborting) then]]>
+</Line>
+<Line Number="173">
+<![CDATA[		State := eState_Aborted;]]>
+</Line>
+<Line Number="174">
+<![CDATA[	elsif (State = eState_Holding) then]]>
+</Line>
+<Line Number="175">
+<![CDATA[		State := eState_Held;]]>
+</Line>
+<Line Number="176">
+<![CDATA[	elsif (State = eState_UnHolding) then]]>
+</Line>
+<Line Number="177">
+<![CDATA[		State := eState_Execute;]]>
+</Line>
+<Line Number="178">
+<![CDATA[	elsif (State = eState_Suspending) then]]>
+</Line>
+<Line Number="179">
+<![CDATA[		State := eState_Suspended;]]>
+</Line>
+<Line Number="180">
+<![CDATA[	elsif (State = eState_UnSuspending) then]]>
+</Line>
+<Line Number="181">
+<![CDATA[		State := eState_Execute;]]>
+</Line>
+<Line Number="182">
+<![CDATA[	elsif (State = eState_Resetting) then]]>
+</Line>
+<Line Number="183">
+<![CDATA[		State := eState_Idle;]]>
+</Line>
+<Line Number="184">
+<![CDATA[	elsif (State = eState_Completing) then]]>
+</Line>
+<Line Number="185">
+<![CDATA[		State := eState_Complete;]]>
+</Line>
+<Line Number="186">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="187">
+<![CDATA[	]]>
+</Line>
+<Line Number="188">
+<![CDATA[	PCmd_SC := 0;]]>
+</Line>
+<Line Number="189">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="190">
+<![CDATA[]]>
+</Line>
+<Line Number="191">
+<![CDATA[Val := State;]]>
+</Line>
+<Line Number="192">
+<![CDATA[]]>
+</Line>
+<Line Number="193">
+<![CDATA[Sts_Undefined := (State = eState_Undefined);]]>
+</Line>
+<Line Number="194">
+<![CDATA[Sts_Clearing := (State = eState_Clearing);]]>
+</Line>
+<Line Number="195">
+<![CDATA[Sts_Stopped := (State = eState_Stopped);]]>
+</Line>
+<Line Number="196">
+<![CDATA[Sts_Starting := (State = eState_Starting);]]>
+</Line>
+<Line Number="197">
+<![CDATA[Sts_Idle := (State = eState_Idle);]]>
+</Line>
+<Line Number="198">
+<![CDATA[Sts_Suspended := (State = eState_Suspended);]]>
+</Line>
+<Line Number="199">
+<![CDATA[Sts_Execute := (State = eState_Execute);]]>
+</Line>
+<Line Number="200">
+<![CDATA[Sts_Stopping := (State = eState_Stopping);]]>
+</Line>
+<Line Number="201">
+<![CDATA[Sts_Aborting := (State = eState_Aborting);]]>
+</Line>
+<Line Number="202">
+<![CDATA[Sts_Aborted := (State = eState_Aborted);]]>
+</Line>
+<Line Number="203">
+<![CDATA[Sts_Holding := (State = eState_Holding);]]>
+</Line>
+<Line Number="204">
+<![CDATA[Sts_Held := (State = eState_Held);]]>
+</Line>
+<Line Number="205">
+<![CDATA[Sts_UnHolding := (State = eState_UnHolding);]]>
+</Line>
+<Line Number="206">
+<![CDATA[Sts_Suspending := (State = eState_Suspending);]]>
+</Line>
+<Line Number="207">
+<![CDATA[Sts_UnSuspending := (State = eState_UnSuspending);]]>
+</Line>
+<Line Number="208">
+<![CDATA[Sts_Resetting := (State = eState_Resetting);]]>
+</Line>
+<Line Number="209">
+<![CDATA[Sts_Completing := (State = eState_Completing);]]>
+</Line>
+<Line Number="210">
+<![CDATA[Sts_Complete := (State = eState_Complete);]]>
+</Line>
+<Line Number="211">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

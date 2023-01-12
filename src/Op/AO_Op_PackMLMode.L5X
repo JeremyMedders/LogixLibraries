@@ -1,0 +1,1239 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Op_PackMLMode" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T21:46:44.837Z" ContainsContext="true" ExportDate="Thu Jan 12 15:57:50 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_DT_TimeElapsed" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Days" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hours" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Minutes" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Seconds" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="ST_OEE_TimeElapsed" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Hours" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Minutes" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Seconds" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="ST_Sys" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="Name" DataType="STR_64" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Uptime" DataType="ST_DT_TimeElapsed" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Indication" DataType="ST_Sys_Indication" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_64"/>
+<Dependency Type="DataType" Name="ST_DT_TimeElapsed"/>
+<Dependency Type="DataType" Name="ST_Sys_Indication"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_Sys_Indication" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Color_Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0]]>
+</Description>
+</Member>
+<Member Name="Color_Grey" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0]]>
+</Description>
+</Member>
+<Member Name="Color_Red" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1]]>
+</Description>
+</Member>
+<Member Name="Color_Amber" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2]]>
+</Description>
+</Member>
+<Member Name="Color_Green" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3]]>
+</Description>
+</Member>
+<Member Name="Color_Blue" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4]]>
+</Description>
+</Member>
+<Member Name="Color_White" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="ST_Util_DateTime" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="Year" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Month" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Day" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hour" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Minute" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Second" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Microsecond" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_64" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="64" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="AO_RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T16:23:44.408Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Generates precision pulses on configurable intervals.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Interval" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulse interval (milliseconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TStart" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TNow" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_RTC_PulseGen]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Generates precision pulses on configurable intervals.]]>
+</Line>
+<Line Number="5">
+<![CDATA[*/]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[GSV(WallClockTime, , CurrentValue, TNow);]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[if (Inp_Enable & NOT OSR OR Out) then]]>
+</Line>
+<Line Number="10">
+<![CDATA[	TStart := TNow;]]>
+</Line>
+<Line Number="11">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="12">
+<![CDATA[OSR := Inp_Enable;]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
+</Line>
+<Line Number="14">
+<![CDATA[Sts_Enabled := Inp_Enable;]]>
+</Line>
+<Line Number="15">
+<![CDATA[Out := Inp_Enable & (TNow - TStart >= Inp_Interval * 1000);]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_RTC_PulseGen]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[OSR := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Out := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_Math_BitCount" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2015-12-29T16:02:29.214Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:54:20.983Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Determines the number of one bits in a 32-bit word.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="None">
+<Description>
+<![CDATA[Number of high bits.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="DINT" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Math_BitCount]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[if (Inp >= 0) then]]>
+</Line>
+<Line Number="6">
+<![CDATA[	DINT := Inp - ((Inp / 2) & 16#55555555);]]>
+</Line>
+<Line Number="7">
+<![CDATA[	DINT := (DINT & 16#33333333) + ((DINT / 4) & 16#33333333);]]>
+</Line>
+<Line Number="8">
+<![CDATA[	Val := (((DINT + (DINT / 16)) & 16#0F0F0F0F) * 16#01010101) / 16#01000000;]]>
+</Line>
+<Line Number="9">
+<![CDATA[else]]>
+</Line>
+<Line Number="10">
+<![CDATA[	DINT := NOT Inp - ((NOT Inp / 2) & 16#55555555);]]>
+</Line>
+<Line Number="11">
+<![CDATA[	DINT := (DINT & 16#33333333) + ((DINT / 4) & 16#33333333);]]>
+</Line>
+<Line Number="12">
+<![CDATA[	Val := 32 - (((DINT + (DINT / 16)) & 16#0F0F0F0F) * 16#01010101) / 16#01000000;]]>
+</Line>
+<Line Number="13">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_Math_Log2" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-21T19:48:42.277Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:55:11.291Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="r" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="t" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Math_Log2]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[t := Inp;]]>
+</Line>
+<Line Number="6">
+<![CDATA[r := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+<Line Number="8">
+<![CDATA[while (t <> 0) do]]>
+</Line>
+<Line Number="9">
+<![CDATA[	t := t / 2;]]>
+</Line>
+<Line Number="10">
+<![CDATA[	r := r + 1;]]>
+</Line>
+<Line Number="11">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="12">
+<![CDATA[]]>
+</Line>
+<Line Number="13">
+<![CDATA[Val := r;]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_OEE_IncT" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-31T00:00:23.191Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:55:47.447Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_ElapsedT" TagType="Base" DataType="ST_OEE_TimeElapsed" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_OEE_TIncrement]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Ref_ElapsedT.Seconds := Ref_ElapsedT.Seconds + 1;]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (Ref_ElapsedT.Seconds >= 60) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	Ref_ElapsedT.Minutes := Ref_ElapsedT.Minutes + 1;]]>
+</Line>
+<Line Number="9">
+<![CDATA[	Ref_ElapsedT.Seconds := 0;]]>
+</Line>
+<Line Number="10">
+<![CDATA[	]]>
+</Line>
+<Line Number="11">
+<![CDATA[	if (Ref_ElapsedT.Minutes >= 60) then]]>
+</Line>
+<Line Number="12">
+<![CDATA[		Ref_ElapsedT.Hours := Ref_ElapsedT.Hours + 1;]]>
+</Line>
+<Line Number="13">
+<![CDATA[		Ref_ElapsedT.Minutes := 0;]]>
+</Line>
+<Line Number="14">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="15">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_OEE_ResetT" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-03-09T23:03:39.535Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:56:06.325Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Time" TagType="Base" DataType="ST_OEE_TimeElapsed" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_OEE_ResetTime]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Ref_Time.Hours := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Ref_Time.Minutes := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[Ref_Time.Seconds := 0;]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="AO_Op_PackMLMode" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-08T17:30:20.241Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:46:44.837Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Lock" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="OCmd_Production" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.0" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Maintenance" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.1" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Manual" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.2" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Changeover" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.3" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Clean" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.4" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Setup" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.5" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_EmptyOut" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.6" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Remote" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.7" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="PCmd_Production" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.0" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Maintenance" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Manual" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.2" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Changeover" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Clean" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Setup" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_EmptyOut" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.6" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Remote" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="XCmd_Production" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.0" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_Maintenance" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.1" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_Manual" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.2" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_Changeover" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.3" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_Clean" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.4" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_Setup" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.5" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_EmptyOut" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.6" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_Remote" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.7" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableProduction" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Enable.0" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableMainenance" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Enable.1" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableManual" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Enable.2" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableChangeover" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Enable.3" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableClean" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Enable.4" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableSetup" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Enable.5" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableEmptyOut" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Enable.6" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableRemote" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Enable.7" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableProduction" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Disable.0" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableMainenance" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Disable.1" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableManual" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Disable.2" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableChangeover" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Disable.3" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableClean" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Disable.4" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableSetup" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Disable.5" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableEmptyOut" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Disable.6" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableRemote" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd_Disable.7" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="Cfg_Exists" TagType="Base" DataType="DINT" Usage="Input" Radix="Binary" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[255]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Binary" Value="2#0000_0000_0000_0000_0000_0000_1111_1111"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enumerated operation mode. 0: Undefined, 1: Production, 2: Maintenance, 3: Manual.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Modes" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Hours" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="TimeCurrent.Hours" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Minutes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="TimeCurrent.Minutes" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Seconds" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="TimeCurrent.Seconds" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Locked" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Undefined" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Production" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.0" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Maintenance" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.1" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Manual" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.2" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Changeover" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.3" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Clean" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.4" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Setup" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.5" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_EmptyOut" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.6" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Remote" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.7" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Ref_SysObj" TagType="Base" DataType="ST_Sys" Usage="InOut" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="Sts_ProductionEnabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Enabled.0" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_MaintenanceEnabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Enabled.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_ManualEnabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Enabled.2" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_ChangeoverEnabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Enabled.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_CleanEnabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Enabled.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_SetupEnabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Enabled.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_EmptyOutEnabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Enabled.6" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_RemoteEnabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Enabled.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eMode_Undefined" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eMode_Production" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eMode_Maintenance" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eMode_Manual" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eMode_Changeover" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eMode_Clean" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eMode_Setup" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eMode_EmptyOut" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eMode_Remote" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Status" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TReset" DataType="AO_OEE_ResetT" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_OEE_ResetT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TInc" DataType="AO_OEE_IncT" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_OEE_IncT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="XCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PG" DataType="AO_RTC_PulseGen" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,1000,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_RTC_PulseGen">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Interval" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="Sts_Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TimeStamp" DataType="ST_Util_DateTime" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,0,0,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="ST_Util_DateTime">
+<DataValueMember Name="Year" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Month" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Day" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Hour" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Minute" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Second" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Microsecond" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="CmdMask" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="BitCount" DataType="AO_Math_BitCount" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Math_BitCount">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Log2" DataType="AO_Math_Log2" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Math_Log2">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TimeCurrent" DataType="ST_OEE_TimeElapsed" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="ST_OEE_TimeElapsed">
+<DataValueMember Name="Hours" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Minutes" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Seconds" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="MCmd_Enable" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="MCmd_Disable" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Enabled" DataType="DINT" Radix="Binary" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[255]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Binary" Value="2#0000_0000_0000_0000_0000_0000_1111_1111"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_PackMLMode]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[eMode_Undefined := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[eMode_Production := 1;]]>
+</Line>
+<Line Number="7">
+<![CDATA[eMode_Maintenance := 2;]]>
+</Line>
+<Line Number="8">
+<![CDATA[eMode_Manual := 3;]]>
+</Line>
+<Line Number="9">
+<![CDATA[eMode_Changeover := 4;]]>
+</Line>
+<Line Number="10">
+<![CDATA[eMode_Clean := 5;]]>
+</Line>
+<Line Number="11">
+<![CDATA[eMode_Setup := 6;]]>
+</Line>
+<Line Number="12">
+<![CDATA[eMode_EmptyOut := 7;]]>
+</Line>
+<Line Number="13">
+<![CDATA[eMode_Remote := 8;]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+<Line Number="15">
+<![CDATA[if (S:FS) then]]>
+</Line>
+<Line Number="16">
+<![CDATA[	OCmd := 0;]]>
+</Line>
+<Line Number="17">
+<![CDATA[	PCmd := 0;]]>
+</Line>
+<Line Number="18">
+<![CDATA[	XCmd := 0;]]>
+</Line>
+<Line Number="19">
+<![CDATA[	MCmd_Enable := 0;]]>
+</Line>
+<Line Number="20">
+<![CDATA[	MCmd_Disable := 0;]]>
+</Line>
+<Line Number="21">
+<![CDATA[	AO_OEE_ResetT(TReset, TimeCurrent);]]>
+</Line>
+<Line Number="22">
+<![CDATA[	]]>
+</Line>
+<Line Number="23">
+<![CDATA[	if (Status = 0) then]]>
+</Line>
+<Line Number="24">
+<![CDATA[		Status := 16#00000001 & Enabled;]]>
+</Line>
+<Line Number="25">
+<![CDATA[		Val := 1;]]>
+</Line>
+<Line Number="26">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="27">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="28">
+<![CDATA[]]>
+</Line>
+<Line Number="29">
+<![CDATA[Cfg_Exists := Cfg_Exists OR 16#000000FF; // guarantee the 8 base modes]]>
+</Line>
+<Line Number="30">
+<![CDATA[AO_Math_BitCount(BitCount, Cfg_Exists);]]>
+</Line>
+<Line Number="31">
+<![CDATA[Val_Modes := BitCount.Val;]]>
+</Line>
+<Line Number="32">
+<![CDATA[]]>
+</Line>
+<Line Number="33">
+<![CDATA[AO_Math_BitCount(BitCount, MCmd_Enable);]]>
+</Line>
+<Line Number="34">
+<![CDATA[]]>
+</Line>
+<Line Number="35">
+<![CDATA[if(BitCount.Val = 1) then]]>
+</Line>
+<Line Number="36">
+<![CDATA[	AO_Math_Log2(Log2, MCmd_Enable);]]>
+</Line>
+<Line Number="37">
+<![CDATA[	Enabled.[Log2.Val - 1] := 1;]]>
+</Line>
+<Line Number="38">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="39">
+<![CDATA[]]>
+</Line>
+<Line Number="40">
+<![CDATA[AO_Math_BitCount(BitCount, MCmd_Disable);]]>
+</Line>
+<Line Number="41">
+<![CDATA[]]>
+</Line>
+<Line Number="42">
+<![CDATA[if (BitCount.Val = 1) then]]>
+</Line>
+<Line Number="43">
+<![CDATA[	AO_Math_Log2(Log2, MCmd_Disable);]]>
+</Line>
+<Line Number="44">
+<![CDATA[	Enabled.[Log2.Val - 1] := 0;]]>
+</Line>
+<Line Number="45">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="46">
+<![CDATA[]]>
+</Line>
+<Line Number="47">
+<![CDATA[if (NOT Inp_Lock) then]]>
+</Line>
+<Line Number="48">
+<![CDATA[	CmdMask := (OCmd OR PCmd OR XCmd) & Cfg_Exists & Enabled;]]>
+</Line>
+<Line Number="49">
+<![CDATA[	AO_Math_BitCount(BitCount, CmdMask);]]>
+</Line>
+<Line Number="50">
+<![CDATA[]]>
+</Line>
+<Line Number="51">
+<![CDATA[	if (BitCount.Val = 1 & NOT OSR.0) then]]>
+</Line>
+<Line Number="52">
+<![CDATA[		AO_Math_Log2(Log2, CmdMask);]]>
+</Line>
+<Line Number="53">
+<![CDATA[		]]>
+</Line>
+<Line Number="54">
+<![CDATA[		if (Log2.Val <> Val) then]]>
+</Line>
+<Line Number="55">
+<![CDATA[			Val := Log2.Val;]]>
+</Line>
+<Line Number="56">
+<![CDATA[			AO_OEE_ResetT(TReset, TimeCurrent);]]>
+</Line>
+<Line Number="57">
+<![CDATA[			//COP(Ref_SysObj.WallClock.LocalDateTime, TimeStamp, 1);]]>
+</Line>
+<Line Number="58">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="59">
+<![CDATA[		]]>
+</Line>
+<Line Number="60">
+<![CDATA[		Status := CmdMask;]]>
+</Line>
+<Line Number="61">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="62">
+<![CDATA[	OSR.0 := (BitCount.Val = 1);]]>
+</Line>
+<Line Number="63">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="64">
+<![CDATA[]]>
+</Line>
+<Line Number="65">
+<![CDATA[PG.Inp_Interval := 1000;]]>
+</Line>
+<Line Number="66">
+<![CDATA[PG.Inp_Enable := (Status <> 0);]]>
+</Line>
+<Line Number="67">
+<![CDATA[AO_RTC_PulseGen(PG);]]>
+</Line>
+<Line Number="68">
+<![CDATA[]]>
+</Line>
+<Line Number="69">
+<![CDATA[if (PG.Out) then]]>
+</Line>
+<Line Number="70">
+<![CDATA[	AO_OEE_IncT(TInc, TimeCurrent);]]>
+</Line>
+<Line Number="71">
+<![CDATA[	//AO_OEE_IncT(TInc, TimeIn[Val - 1]);]]>
+</Line>
+<Line Number="72">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="73">
+<![CDATA[]]>
+</Line>
+<Line Number="74">
+<![CDATA[Sts_Locked := Inp_Lock;]]>
+</Line>
+<Line Number="75">
+<![CDATA[Sts_Undefined := (Val = 0);]]>
+</Line>
+<Line Number="76">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Math_BitCount"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Math_Log2"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_RTC_PulseGen"/>
+<Dependency Type="DataType" Name="ST_Sys"/>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+<Dependency Type="DataType" Name="ST_Util_DateTime"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_OEE_IncT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_OEE_ResetT"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
