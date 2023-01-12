@@ -1,0 +1,2892 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_WallClock" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T21:06:22.248Z" ContainsContext="true" ExportDate="Thu Jan 12 15:06:29 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_DT_Datetime" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Year" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Month" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Day" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hour" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Minute" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Second" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Microsecond" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="ST_Sys_WallClock" Family="NoFamily" Class="User">
+<Members>
+<Member Name="UTCTime" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UTCDateTime" DataType="ST_DT_Datetime" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LocalDateTime" DataType="ST_DT_Datetime" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LocalZone" DataType="STR_64" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DayOfWeek" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1: Mon ... 7: Sun.]]>
+</Description>
+</Member>
+<Member Name="AbbrDay" DataType="STR_4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="FullDay" DataType="STR_12" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AbbrMonth" DataType="STR_4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="FullMonth" DataType="STR_12" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ShortDate" DataType="STR_12" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AbbrDate" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LongDate" DataType="STR_32" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ShortTime" DataType="STR_12" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LongTime" DataType="STR_12" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="FullDateTime" DataType="STR_48" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RFC1153" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LocalSortable" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_DT_Datetime"/>
+<Dependency Type="DataType" Name="ST_DT_Datetime"/>
+<Dependency Type="DataType" Name="STR_64"/>
+<Dependency Type="DataType" Name="STR_4"/>
+<Dependency Type="DataType" Name="STR_12"/>
+<Dependency Type="DataType" Name="STR_4"/>
+<Dependency Type="DataType" Name="STR_12"/>
+<Dependency Type="DataType" Name="STR_12"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="STR_32"/>
+<Dependency Type="DataType" Name="STR_12"/>
+<Dependency Type="DataType" Name="STR_12"/>
+<Dependency Type="DataType" Name="STR_48"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_20"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_12" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="12" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_20" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="20" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_32" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="32" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_4" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="4" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_48" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="48" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_64" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="64" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="AO_UI_ListSelector" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-15T20:16:32.292Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T18:03:08.981Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Handles a remote piloted control list selector.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_Home" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.0" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Home button press.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_PageUp" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.1" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PageUp button press.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_Up" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.2" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Up button press.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_Down" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.3" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Down button press.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_PageDown" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.4" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PageDown button press.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_End" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.5" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[End button press.]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Size" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Size of the list.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Index" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Selected row in the list.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_RepeatDelay" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Button hold time before the button press auto-repeats (milliseconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[2.00000000e-001]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.2"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_RepeatRate" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto-repeat rate per second of a held button.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[10]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="10"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_RowsPerPage" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Number of viewable rows per page.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[22]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="22"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_EnableWrap" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Allows the list selector to travel from last item to first item, and vice-versa.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DelayTimer" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0,4,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="RepeatTimer" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0,4,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Index" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_HMI_ListNavigator]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Handles list navigation when multiple piloted control selector lists are in need of being synchronized.]]>
+</Line>
+<Line Number="5">
+<![CDATA[	An example is an HMI recipe selector with each displayed column representing a field of the recipe.]]>
+</Line>
+<Line Number="6">
+<![CDATA[*/]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+<Line Number="8">
+<![CDATA[if (Cfg_RepeatDelay <= 0.0 OR 5.0 < Cfg_RepeatDelay) then]]>
+</Line>
+<Line Number="9">
+<![CDATA[	Cfg_RepeatDelay := 0.2;]]>
+</Line>
+<Line Number="10">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="11">
+<![CDATA[]]>
+</Line>
+<Line Number="12">
+<![CDATA[DelayTimer.PRE := Cfg_RepeatDelay * 1000;]]>
+</Line>
+<Line Number="13">
+<![CDATA[DelayTimer.Reset := NOT (OCmd_PageUp OR OCmd_Up OR OCmd_Down OR OCmd_PageDown);]]>
+</Line>
+<Line Number="14">
+<![CDATA[DelayTimer.TimerEnable := (OCmd_PageUp OR OCmd_Up OR OCmd_Down OR OCmd_PageDown);]]>
+</Line>
+<Line Number="15">
+<![CDATA[TONR(DelayTimer);]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[if (0 < Cfg_RepeatRate & Cfg_RepeatRate <= 50) then]]>
+</Line>
+<Line Number="18">
+<![CDATA[	RepeatTimer.PRE := 1000 / Cfg_RepeatRate;]]>
+</Line>
+<Line Number="19">
+<![CDATA[else]]>
+</Line>
+<Line Number="20">
+<![CDATA[	RepeatTimer.PRE := 100;]]>
+</Line>
+<Line Number="21">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="22">
+<![CDATA[]]>
+</Line>
+<Line Number="23">
+<![CDATA[RepeatTimer.Reset := RepeatTimer.DN;]]>
+</Line>
+<Line Number="24">
+<![CDATA[RepeatTimer.TimerEnable := DelayTimer.DN;]]>
+</Line>
+<Line Number="25">
+<![CDATA[TONR(RepeatTimer);]]>
+</Line>
+<Line Number="26">
+<![CDATA[]]>
+</Line>
+<Line Number="27">
+<![CDATA[/*]]>
+</Line>
+<Line Number="28">
+<![CDATA[	Check for valid list size and lines per page.]]>
+</Line>
+<Line Number="29">
+<![CDATA[*/]]>
+</Line>
+<Line Number="30">
+<![CDATA[if (Inp_Size < 0) then]]>
+</Line>
+<Line Number="31">
+<![CDATA[	Inp_Size := 0;]]>
+</Line>
+<Line Number="32">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="33">
+<![CDATA[]]>
+</Line>
+<Line Number="34">
+<![CDATA[if (Cfg_RowsPerPage < 0) then]]>
+</Line>
+<Line Number="35">
+<![CDATA[	Cfg_RowsPerPage := 0;]]>
+</Line>
+<Line Number="36">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="37">
+<![CDATA[]]>
+</Line>
+<Line Number="38">
+<![CDATA[/*]]>
+</Line>
+<Line Number="39">
+<![CDATA[	Button presses]]>
+</Line>
+<Line Number="40">
+<![CDATA[	- Home]]>
+</Line>
+<Line Number="41">
+<![CDATA[	- Page Up]]>
+</Line>
+<Line Number="42">
+<![CDATA[	- Up]]>
+</Line>
+<Line Number="43">
+<![CDATA[	- Down]]>
+</Line>
+<Line Number="44">
+<![CDATA[	- Page Down]]>
+</Line>
+<Line Number="45">
+<![CDATA[	- End]]>
+</Line>
+<Line Number="46">
+<![CDATA[*/]]>
+</Line>
+<Line Number="47">
+<![CDATA[if (OCmd_Home & NOT OSR.0) then]]>
+</Line>
+<Line Number="48">
+<![CDATA[	Index := 0;]]>
+</Line>
+<Line Number="49">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="50">
+<![CDATA[OSR.0 := OCmd_Home;]]>
+</Line>
+<Line Number="51">
+<![CDATA[]]>
+</Line>
+<Line Number="52">
+<![CDATA[if ((OCmd_PageUp & NOT OSR.1) OR (OSR.1 & RepeatTimer.DN)) then]]>
+</Line>
+<Line Number="53">
+<![CDATA[	if (Index >= Cfg_RowsPerPage) then]]>
+</Line>
+<Line Number="54">
+<![CDATA[		Index := Index - Cfg_RowsPerPage;]]>
+</Line>
+<Line Number="55">
+<![CDATA[	elsif (Index = 0 & Cfg_EnableWrap & NOT DelayTimer.DN) then]]>
+</Line>
+<Line Number="56">
+<![CDATA[		Index := Inp_Size - 1;]]>
+</Line>
+<Line Number="57">
+<![CDATA[	elsif (Index <= Cfg_RowsPerPage) then]]>
+</Line>
+<Line Number="58">
+<![CDATA[		Index := 0;]]>
+</Line>
+<Line Number="59">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="60">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="61">
+<![CDATA[OSR.1 := OCmd_PageUp;]]>
+</Line>
+<Line Number="62">
+<![CDATA[]]>
+</Line>
+<Line Number="63">
+<![CDATA[if ((OCmd_Up & NOT OSR.2) OR (OSR.2 & RepeatTimer.DN)) then]]>
+</Line>
+<Line Number="64">
+<![CDATA[	if (Index > 0) then]]>
+</Line>
+<Line Number="65">
+<![CDATA[		Index := Index - 1;]]>
+</Line>
+<Line Number="66">
+<![CDATA[	elsif (Index = 0 & Cfg_EnableWrap & NOT DelayTimer.DN) then]]>
+</Line>
+<Line Number="67">
+<![CDATA[		Index := Inp_Size - 1;]]>
+</Line>
+<Line Number="68">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="69">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="70">
+<![CDATA[OSR.2 := OCmd_Up;]]>
+</Line>
+<Line Number="71">
+<![CDATA[]]>
+</Line>
+<Line Number="72">
+<![CDATA[if ((OCmd_Down & NOT OSR.3) OR (OSR.3 & RepeatTimer.DN)) then]]>
+</Line>
+<Line Number="73">
+<![CDATA[	if (Index < Inp_Size - 1) then]]>
+</Line>
+<Line Number="74">
+<![CDATA[		Index := Index + 1;]]>
+</Line>
+<Line Number="75">
+<![CDATA[	elsif (Index = Inp_Size - 1 & Cfg_EnableWrap & NOT DelayTimer.DN) then]]>
+</Line>
+<Line Number="76">
+<![CDATA[		Index := 0;]]>
+</Line>
+<Line Number="77">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="78">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="79">
+<![CDATA[OSR.3 := OCmd_Down;]]>
+</Line>
+<Line Number="80">
+<![CDATA[]]>
+</Line>
+<Line Number="81">
+<![CDATA[if ((OCmd_PageDown & NOT OSR.4) OR (OSR.4 & RepeatTimer.DN)) then]]>
+</Line>
+<Line Number="82">
+<![CDATA[	if (Index + Cfg_RowsPerPage < Inp_Size) then]]>
+</Line>
+<Line Number="83">
+<![CDATA[		Index := Index + Cfg_RowsPerPage;]]>
+</Line>
+<Line Number="84">
+<![CDATA[	elsif (Index = Inp_Size - 1 & Cfg_EnableWrap & NOT DelayTimer.DN) then]]>
+</Line>
+<Line Number="85">
+<![CDATA[		Index := 0;]]>
+</Line>
+<Line Number="86">
+<![CDATA[	elsif (Index < Inp_Size) then]]>
+</Line>
+<Line Number="87">
+<![CDATA[		Index := Inp_Size - 1;]]>
+</Line>
+<Line Number="88">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="89">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="90">
+<![CDATA[OSR.4 := OCmd_PageDown;]]>
+</Line>
+<Line Number="91">
+<![CDATA[]]>
+</Line>
+<Line Number="92">
+<![CDATA[if (OCmd_End & NOT OSR.5) then]]>
+</Line>
+<Line Number="93">
+<![CDATA[	Index := Inp_Size - 1;]]>
+</Line>
+<Line Number="94">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="95">
+<![CDATA[OSR.5 := OCmd_End;]]>
+</Line>
+<Line Number="96">
+<![CDATA[]]>
+</Line>
+<Line Number="97">
+<![CDATA[Val_Index := Index;]]>
+</Line>
+<Line Number="98">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_HMI_ListNavigator]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[OCmd := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Index := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="AO_Sys_WallClock" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-09-07T17:42:08.853Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:06:22.248Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Class" TagType="Base" DataType="ST_Sys_WallClock" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="MCmd_DSTEnable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MCmd_DSTDisable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MCmd_ZoneSelect" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_DSTAdjustment" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[60]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="60"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_DSTAdjustment" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_DSTEnabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="tF" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="tG" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Result" DataType="STR_48" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrZero" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,'0$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="1">
+<![CDATA['0']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrYear" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrSpace" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,' $00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="1">
+<![CDATA[' ']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrSecond" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrAMPM" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrMonth" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrMinute" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrHour" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrDay" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrComma" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,',$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="1">
+<![CDATA[',']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrColon" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,':$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="1">
+<![CDATA[':']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="LocalDT" DataType="ST_DT_Datetime" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,0,0,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="ST_DT_Datetime">
+<DataValueMember Name="Year" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Month" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Day" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Hour" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Minute" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Second" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Microsecond" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Seq" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrDash" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,'-$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="1">
+<![CDATA['-']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrHour12" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="UTCZones" DataType="STR_64" Dimensions="125" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Array of available time zones. Do not modify!]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[[[40,'(UTC-12:00) International Date Line West$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[41,'(UTC-11:00) Coordinated Universal Time-11$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC-10:00) Aleutian Islands$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-10:00) Hawaii$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[29,'(UTC-09:30) Marquesas Islands$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-09:00) Alaska$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[27,'(UTC-08:00) Baja California$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[41,'(UTC-08:00) Coordinated Universal Time-08$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[38,'(UTC-08:00) Pacific Time (US & Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC-07:00) Arizona$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[39,'(UTC-07:00) Chihuahua, La Paz, Mazatlan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[39,'(UTC-07:00) Mountain Time (US & Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[27,'(UTC-06:00) Central America$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[38,'(UTC-06:00) Central Time (US & Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[25,'(UTC-06:00) Easter Island$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[47,'(UTC-06:00) Guadalajara, Mexico City, Monterrey$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC-06:00) Saskatchewan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[43,'(UTC-05:00) Bogota, Lima, Quito, Rio Branco$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-05:00) Chetumal$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[38,'(UTC-05:00) Eastern Time (US & Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC-05:00) Haiti$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-05:00) Havana$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[26,'(UTC-05:00) Indiana (East)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC-05:00) Turks and Caicos$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-04:00) Asuncion$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[34,'(UTC-04:00) Atlantic Time (Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC-04:00) Caracas$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-04:00) Cuiaba$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[48,'(UTC-04:00) Georgetown, La Paz, Manaus, San Juan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-04:00) Santiago$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC-03:30) Newfoundland$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC-03:00) Araguaina$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-03:00) Brasilia$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[30,'(UTC-03:00) Cayenne, Fortaleza$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[32,'(UTC-03:00) City of Buenos Aires$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC-03:00) Greenland$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[22,'(UTC-03:00) Montevideo$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC-03:00) Punta Arenas$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[37,'(UTC-03:00) Saint Pierre and Miquelon$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-03:00) Salvador$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[41,'(UTC-02:00) Coordinated Universal Time-02$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-01:00) Azores$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[26,'(UTC-01:00) Cabo Verde Is.$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[38,'(UTC-00:00) Coordinated Universal Time$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[45,'(UTC+00:00) Dublin, Edinburgh, Lisbon, London$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[31,'(UTC+00:00) Monrovia, Reykjavik$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+00:00) Sao Tome$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[22,'(UTC+01:00) Casablanca$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[60,'(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna$00$00$00$00'],[61,'(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague$00$00$00'],[47,'(UTC+01:00) Brussels, Copenhagen, Madrid, Paris$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[44,'(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[31,'(UTC+01:00) West Central Africa$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+02:00) Amman$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[29,'(UTC+02:00) Athens, Bucharest$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+02:00) Beirut$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+02:00) Cairo$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+02:00) Chisinau$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+02:00) Damascus$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC+02:00) Gaza, Hebron$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC+02:00) Harare, Pretoria$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[57,'(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius$00$00$00$00$00$00$00'],[21,'(UTC+02:00) Jerusalem$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+02:00) Kaliningrad$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+02:00) Khartoum$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+02:00) Tripoli$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+02:00) Windhoek$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+03:00) Baghdad$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+03:00) Istanbul$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[26,'(UTC+03:00) Kuwait, Riyadh$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+03:00) Minsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[34,'(UTC+03:00) Moscow, St. Petersburg$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+03:00) Nairobi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+03:30) Tehran$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[29,'(UTC+04:00) Abu Dhabi, Muscat$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[32,'(UTC+04:00) Astrakhan, Ulyanovsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[16,'(UTC+04:00) Baku$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[27,'(UTC+04:00) Izhevsk, Samara$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[22,'(UTC+04:00) Port Louis$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+04:00) Saratov$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+04:00) Tbilisi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC+04:00) Volgograd$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+04:00) Yerevan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+04:30) Kabul$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[30,'(UTC+05:00) Ashgabat, Tashkent$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC+05:00) Ekaterinburg$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[30,'(UTC+05:00) Islamabad, Karachi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC+05:00) Qyzylorda$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[47,'(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[31,'(UTC+05:30) Sri Jayawardenepura$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC+05:45) Kathmandu$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+06:00) Astana$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+06:00) Dhaka$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[16,'(UTC+06:00) Omsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC+06:30) Yangon (Rangoon)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[35,'(UTC+07:00) Bangkok, Hanoi, Jakarta$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[34,'(UTC+07:00) Barnaul, Gorno-Altaysk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+07:00) Krasnoyarsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+07:00) Novosibirsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+07:00) Tomsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[49,'(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+08:00) Irkutsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[35,'(UTC+08:00) Kuala Lumpur, Singapore$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+08:00) Perth$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+08:00) Taipei$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+08:00) Ulaanbaatar$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+08:45) Eucla$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+09:00) Chita$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[33,'(UTC+09:00) Osaka, Sapporo, Tokyo$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC+09:00) Pyongyang$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+09:00) Seoul$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+09:00) Yakutsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+09:30) Adelaide$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+09:30) Darwin$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+10:00) Brisbane$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[39,'(UTC+10:00) Canberra, Melbourne, Sydney$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[30,'(UTC+10:00) Guam, Port Moresby$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+10:00) Hobart$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+10:00) Vladivostok$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC+10:00) Lord Howe Island$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[31,'(UTC+10:00) Bougainville Island$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[22,'(UTC+10:00) Chokurdakh$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+10:00) Magadan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[26,'(UTC+10:00) Norfolk Island$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+10:00) Sakhalin$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="STR_64" Dimensions="125">
+<Element Index="[0]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="40"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-12:00) International Date Line West']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[1]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="41"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-11:00) Coordinated Universal Time-11']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[2]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-10:00) Aleutian Islands']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[3]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-10:00) Hawaii']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[4]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="29"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-09:30) Marquesas Islands']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[5]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-09:00) Alaska']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[6]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="27"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-08:00) Baja California']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[7]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="41"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-08:00) Coordinated Universal Time-08']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[8]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="38"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-08:00) Pacific Time (US & Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[9]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-07:00) Arizona']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[10]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="39"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-07:00) Chihuahua, La Paz, Mazatlan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[11]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="39"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-07:00) Mountain Time (US & Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[12]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="27"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Central America']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[13]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="38"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Central Time (US & Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[14]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="25"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Easter Island']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[15]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="47"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Guadalajara, Mexico City, Monterrey']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[16]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Saskatchewan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[17]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="43"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Bogota, Lima, Quito, Rio Branco']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[18]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Chetumal']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[19]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="38"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Eastern Time (US & Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[20]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Haiti']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[21]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Havana']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[22]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="26"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Indiana (East)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[23]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Turks and Caicos']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[24]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Asuncion']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[25]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="34"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Atlantic Time (Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[26]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Caracas']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[27]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Cuiaba']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[28]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="48"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Georgetown, La Paz, Manaus, San Juan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[29]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Santiago']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[30]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:30) Newfoundland']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[31]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Araguaina']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[32]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Brasilia']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[33]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Cayenne, Fortaleza']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[34]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="32"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) City of Buenos Aires']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[35]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Greenland']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[36]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Montevideo']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[37]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Punta Arenas']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[38]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="37"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Saint Pierre and Miquelon']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[39]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Salvador']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[40]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="41"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-02:00) Coordinated Universal Time-02']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[41]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-01:00) Azores']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[42]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="26"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-01:00) Cabo Verde Is.']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[43]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="38"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-00:00) Coordinated Universal Time']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[44]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="45"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+00:00) Dublin, Edinburgh, Lisbon, London']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[45]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="31"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+00:00) Monrovia, Reykjavik']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[46]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+00:00) Sao Tome']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[47]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Casablanca']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[48]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="60"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[49]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="61"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[50]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="47"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Brussels, Copenhagen, Madrid, Paris']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[51]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="44"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[52]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="31"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) West Central Africa']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[53]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Amman']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[54]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="29"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Athens, Bucharest']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[55]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Beirut']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[56]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Cairo']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[57]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Chisinau']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[58]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Damascus']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[59]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Gaza, Hebron']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[60]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Harare, Pretoria']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[61]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="57"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[62]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Jerusalem']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[63]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Kaliningrad']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[64]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Khartoum']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[65]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Tripoli']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[66]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Windhoek']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[67]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Baghdad']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[68]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Istanbul']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[69]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="26"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Kuwait, Riyadh']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[70]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Minsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[71]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="34"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Moscow, St. Petersburg']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[72]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Nairobi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[73]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:30) Tehran']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[74]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="29"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Abu Dhabi, Muscat']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[75]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="32"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Astrakhan, Ulyanovsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[76]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="16"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Baku']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[77]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="27"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Izhevsk, Samara']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[78]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Port Louis']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[79]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Saratov']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[80]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Tbilisi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[81]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Volgograd']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[82]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Yerevan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[83]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:30) Kabul']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[84]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:00) Ashgabat, Tashkent']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[85]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:00) Ekaterinburg']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[86]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:00) Islamabad, Karachi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[87]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:00) Qyzylorda']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[88]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="47"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[89]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="31"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:30) Sri Jayawardenepura']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[90]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:45) Kathmandu']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[91]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+06:00) Astana']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[92]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+06:00) Dhaka']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[93]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="16"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+06:00) Omsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[94]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+06:30) Yangon (Rangoon)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[95]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="35"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Bangkok, Hanoi, Jakarta']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[96]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="34"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Barnaul, Gorno-Altaysk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[97]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Krasnoyarsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[98]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Novosibirsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[99]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Tomsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[100]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="49"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[101]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Irkutsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[102]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="35"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Kuala Lumpur, Singapore']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[103]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Perth']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[104]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Taipei']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[105]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Ulaanbaatar']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[106]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:45) Eucla']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[107]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Chita']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[108]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="33"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Osaka, Sapporo, Tokyo']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[109]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Pyongyang']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[110]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Seoul']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[111]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Yakutsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[112]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:30) Adelaide']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[113]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:30) Darwin']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[114]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Brisbane']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[115]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="39"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Canberra, Melbourne, Sydney']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[116]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Guam, Port Moresby']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[117]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Hobart']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[118]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Vladivostok']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[119]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Lord Howe Island']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[120]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="31"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Bougainville Island']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[121]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Chokurdakh']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[122]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Magadan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[123]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="26"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Norfolk Island']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[124]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Sakhalin']]>
+</DataValueMember>
+</Structure>
+</Element>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="UTCZone" DataType="STR_64" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DSTEnable" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DSTStatus" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ListSize" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ListNav" DataType="AO_UI_ListSelector" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[5,0,0,2.00000000e-001,10,22,0,[1,0,0,0,0,0,0,0,0,4,0,0],[1,0,0,0,0,0,0,0,0,4,0,0],0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_UI_ListSelector">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Home" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_PageUp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Up" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Down" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_PageDown" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_End" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Size" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Index" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Cfg_RepeatDelay" DataType="REAL" Radix="Float" Value="0.2"/>
+<DataValueMember Name="Cfg_RepeatRate" DataType="DINT" Radix="Decimal" Value="10"/>
+<DataValueMember Name="Cfg_RowsPerPage" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="Cfg_EnableWrap" DataType="BOOL" Value="1"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SelectedZone" DataType="STR_64" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DINT" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrT" DataType="STR_4" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Sys_WallClock]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[GSV(WallClockTime, , DateTime, Ref_Class.UTCDateTime.Year);]]>
+</Line>
+<Line Number="6">
+<![CDATA[GSV(WallClockTime, , LocalDateTime, Ref_Class.LocalDateTime.Year);]]>
+</Line>
+<Line Number="7">
+<![CDATA[GSV(WallClockTime, , CurrentValue, Ref_Class.UTCTime);]]>
+</Line>
+<Line Number="8">
+<![CDATA[GSV(WallClockTime, , ApplyDST, DSTStatus);]]>
+</Line>
+<Line Number="9">
+<![CDATA[GSV(WallClockTime, , DSTAdjustment, Val_DSTAdjustment);]]>
+</Line>
+<Line Number="10">
+<![CDATA[]]>
+</Line>
+<Line Number="11">
+<![CDATA[if (MCmd_DSTEnable & NOT OSR.0) then]]>
+</Line>
+<Line Number="12">
+<![CDATA[	DSTEnable := 1;]]>
+</Line>
+<Line Number="13">
+<![CDATA[	SSV(WallClockTime, , ApplyDST, DSTEnable);]]>
+</Line>
+<Line Number="14">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="15">
+<![CDATA[OSR.0 := MCmd_DSTEnable;]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[if (MCmd_DSTDisable & NOT OSR.1) then]]>
+</Line>
+<Line Number="18">
+<![CDATA[	DSTEnable := 0;]]>
+</Line>
+<Line Number="19">
+<![CDATA[	SSV(WallClockTime, , ApplyDST, DSTEnable);]]>
+</Line>
+<Line Number="20">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="21">
+<![CDATA[OSR.1 := MCmd_DSTDisable;]]>
+</Line>
+<Line Number="22">
+<![CDATA[]]>
+</Line>
+<Line Number="23">
+<![CDATA[if (Cfg_DSTAdjustment <> Val_DSTAdjustment) then]]>
+</Line>
+<Line Number="24">
+<![CDATA[	SSV(WallClockTime, , DSTAdjustment, Cfg_DSTAdjustment);]]>
+</Line>
+<Line Number="25">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="26">
+<![CDATA[]]>
+</Line>
+<Line Number="27">
+<![CDATA[Sts_DSTEnabled := (DSTStatus <> 0);]]>
+</Line>
+<Line Number="28">
+<![CDATA[]]>
+</Line>
+<Line Number="29">
+<![CDATA[GSV(WallClockTime, , TimeZoneString, UTCZone);]]>
+</Line>
+<Line Number="30">
+<![CDATA[COP(UTCZone, Ref_Class.LocalZone, 1);]]>
+</Line>
+<Line Number="31">
+<![CDATA[]]>
+</Line>
+<Line Number="32">
+<![CDATA[SIZE(UTCZones, 0, ListSize);]]>
+</Line>
+<Line Number="33">
+<![CDATA[AO_UI_ListSelector(ListNav, ListSize);]]>
+</Line>
+<Line Number="34">
+<![CDATA[]]>
+</Line>
+<Line Number="35">
+<![CDATA[if (MCmd_ZoneSelect & NOT OSR.2) then]]>
+</Line>
+<Line Number="36">
+<![CDATA[	COP(UTCZones[ListNav.Val_Index], SelectedZone, 1);]]>
+</Line>
+<Line Number="37">
+<![CDATA[	DELETE(SelectedZone, 1, 1, SelectedZone);]]>
+</Line>
+<Line Number="38">
+<![CDATA[	DELETE(SelectedZone, 1, 10, SelectedZone);]]>
+</Line>
+<Line Number="39">
+<![CDATA[	SSV(WallClockTime, , TimeZoneString, SelectedZone);]]>
+</Line>
+<Line Number="40">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="41">
+<![CDATA[OSR.2 := MCmd_ZoneSelect;]]>
+</Line>
+<Line Number="42">
+<![CDATA[]]>
+</Line>
+<Line Number="43">
+<![CDATA[if (Seq = 0) then]]>
+</Line>
+<Line Number="44">
+<![CDATA[	tF := (Ref_Class.LocalDateTime.Month + 9) MOD 12;]]>
+</Line>
+<Line Number="45">
+<![CDATA[	tG := Ref_Class.LocalDateTime.Year - (tF / 10);]]>
+</Line>
+<Line Number="46">
+<![CDATA[	Ref_Class.DayOfWeek := ((365 * tG + (tG / 4) - (tG / 100) + (tG / 400) + ]]>
+</Line>
+<Line Number="47">
+<![CDATA[		((tF * 306 + 5) / 10) + Ref_Class.LocalDateTime.Day + 2) + 6) MOD 7 + 1;]]>
+</Line>
+<Line Number="48">
+<![CDATA[	]]>
+</Line>
+<Line Number="49">
+<![CDATA[elsif (Seq = 1) then]]>
+</Line>
+<Line Number="50">
+<![CDATA[	case Ref_Class.DayOfWeek of]]>
+</Line>
+<Line Number="51">
+<![CDATA[		0:	Ref_Class.AbbrDay := ''; Ref_Class.FullDay := '';]]>
+</Line>
+<Line Number="52">
+<![CDATA[		1:	Ref_Class.AbbrDay := 'Mon'; Ref_Class.FullDay := 'Monday';]]>
+</Line>
+<Line Number="53">
+<![CDATA[		2:	Ref_Class.AbbrDay := 'Tue'; Ref_Class.FullDay := 'Tuesday';]]>
+</Line>
+<Line Number="54">
+<![CDATA[		3:	Ref_Class.AbbrDay := 'Wed'; Ref_Class.FullDay := 'Wednesday';]]>
+</Line>
+<Line Number="55">
+<![CDATA[		4:	Ref_Class.AbbrDay := 'Thu'; Ref_Class.FullDay := 'Thursday';]]>
+</Line>
+<Line Number="56">
+<![CDATA[		5:	Ref_Class.AbbrDay := 'Fri'; Ref_Class.FullDay := 'Friday';]]>
+</Line>
+<Line Number="57">
+<![CDATA[		6:	Ref_Class.AbbrDay := 'Sat'; Ref_Class.FullDay := 'Saturday';]]>
+</Line>
+<Line Number="58">
+<![CDATA[		7:	Ref_Class.AbbrDay := 'Sun'; Ref_Class.FullDay := 'Sunday';]]>
+</Line>
+<Line Number="59">
+<![CDATA[	end_case;]]>
+</Line>
+<Line Number="60">
+<![CDATA[	]]>
+</Line>
+<Line Number="61">
+<![CDATA[	case Ref_Class.LocalDateTime.Month of]]>
+</Line>
+<Line Number="62">
+<![CDATA[		0:	Ref_Class.AbbrMonth := ''; Ref_Class.FullMonth := '';]]>
+</Line>
+<Line Number="63">
+<![CDATA[		1:	Ref_Class.AbbrMonth := 'Jan'; Ref_Class.FullMonth := 'January';]]>
+</Line>
+<Line Number="64">
+<![CDATA[		2:	Ref_Class.AbbrMonth := 'Feb'; Ref_Class.FullMonth := 'February';]]>
+</Line>
+<Line Number="65">
+<![CDATA[		3:	Ref_Class.AbbrMonth := 'Mar'; Ref_Class.FullMonth := 'March';]]>
+</Line>
+<Line Number="66">
+<![CDATA[		4:	Ref_Class.AbbrMonth := 'Apr'; Ref_Class.FullMonth := 'April';]]>
+</Line>
+<Line Number="67">
+<![CDATA[		5:	Ref_Class.AbbrMonth := 'May'; Ref_Class.FullMonth := 'May';]]>
+</Line>
+<Line Number="68">
+<![CDATA[		6:	Ref_Class.AbbrMonth := 'Jun'; Ref_Class.FullMonth := 'June';]]>
+</Line>
+<Line Number="69">
+<![CDATA[		7:	Ref_Class.AbbrMonth := 'Jul'; Ref_Class.FullMonth := 'July';]]>
+</Line>
+<Line Number="70">
+<![CDATA[		8:	Ref_Class.AbbrMonth := 'Aug'; Ref_Class.FullMonth := 'August';]]>
+</Line>
+<Line Number="71">
+<![CDATA[		9:	Ref_Class.AbbrMonth := 'Sep'; Ref_Class.FullMonth := 'September';]]>
+</Line>
+<Line Number="72">
+<![CDATA[		10: Ref_Class.AbbrMonth := 'Oct'; Ref_Class.FullMonth := 'October';]]>
+</Line>
+<Line Number="73">
+<![CDATA[		11: Ref_Class.AbbrMonth := 'Nov'; Ref_Class.FullMonth := 'November';]]>
+</Line>
+<Line Number="74">
+<![CDATA[		12: Ref_Class.AbbrMonth := 'Dec'; Ref_Class.FullMonth := 'December';]]>
+</Line>
+<Line Number="75">
+<![CDATA[	end_case;]]>
+</Line>
+<Line Number="76">
+<![CDATA[	]]>
+</Line>
+<Line Number="77">
+<![CDATA[	COP(Ref_Class.LocalDateTime, LocalDT, 1);]]>
+</Line>
+<Line Number="78">
+<![CDATA[	DTOS(LocalDT.Year, StrYear);]]>
+</Line>
+<Line Number="79">
+<![CDATA[	DTOS(LocalDT.Month, StrMonth);]]>
+</Line>
+<Line Number="80">
+<![CDATA[	DTOS(LocalDT.Day, StrDay);]]>
+</Line>
+<Line Number="81">
+<![CDATA[	DTOS(LocalDT.Hour, StrHour);]]>
+</Line>
+<Line Number="82">
+<![CDATA[	DTOS(LocalDT.Minute, StrMinute);]]>
+</Line>
+<Line Number="83">
+<![CDATA[	DTOS(LocalDT.Second, StrSecond);]]>
+</Line>
+<Line Number="84">
+<![CDATA[	]]>
+</Line>
+<Line Number="85">
+<![CDATA[	if (LocalDT.Hour >= 12) then]]>
+</Line>
+<Line Number="86">
+<![CDATA[		StrAMPM := 'PM';]]>
+</Line>
+<Line Number="87">
+<![CDATA[	else]]>
+</Line>
+<Line Number="88">
+<![CDATA[		StrAMPM := 'AM';]]>
+</Line>
+<Line Number="89">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="90">
+<![CDATA[	]]>
+</Line>
+<Line Number="91">
+<![CDATA[	if (LocalDT.Hour > 12) then]]>
+</Line>
+<Line Number="92">
+<![CDATA[		LocalDT.Hour := LocalDT.Hour - 12;]]>
+</Line>
+<Line Number="93">
+<![CDATA[	elsif (LocalDT.Hour = 0) then]]>
+</Line>
+<Line Number="94">
+<![CDATA[		LocalDT.Hour := 12;]]>
+</Line>
+<Line Number="95">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="96">
+<![CDATA[	]]>
+</Line>
+<Line Number="97">
+<![CDATA[	DTOS(LocalDT.Hour, StrHour12);]]>
+</Line>
+<Line Number="98">
+<![CDATA[	]]>
+</Line>
+<Line Number="99">
+<![CDATA[elsif (Seq = 2) then ]]>
+</Line>
+<Line Number="100">
+<![CDATA[	// ShortDate]]>
+</Line>
+<Line Number="101">
+<![CDATA[	CONCAT(Result, StrMonth, Result);]]>
+</Line>
+<Line Number="102">
+<![CDATA[	CONCAT(Result, StrDash, Result);]]>
+</Line>
+<Line Number="103">
+<![CDATA[	]]>
+</Line>
+<Line Number="104">
+<![CDATA[	if (LocalDT.Day < 10) then]]>
+</Line>
+<Line Number="105">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="106">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="107">
+<![CDATA[	]]>
+</Line>
+<Line Number="108">
+<![CDATA[	CONCAT(Result, StrDay, Result);]]>
+</Line>
+<Line Number="109">
+<![CDATA[	CONCAT(Result, StrDash, Result);]]>
+</Line>
+<Line Number="110">
+<![CDATA[	CONCAT(Result, StrYear, Result);]]>
+</Line>
+<Line Number="111">
+<![CDATA[	COP(Result, Ref_Class.ShortDate, 1);]]>
+</Line>
+<Line Number="112">
+<![CDATA[	DELETE(Result, Result.LEN, 1, Result);]]>
+</Line>
+<Line Number="113">
+<![CDATA[	]]>
+</Line>
+<Line Number="114">
+<![CDATA[	// AbbrDate]]>
+</Line>
+<Line Number="115">
+<![CDATA[	CONCAT(Result, Ref_Class.AbbrDay, Result);]]>
+</Line>
+<Line Number="116">
+<![CDATA[	CONCAT(Result, StrComma, Result);]]>
+</Line>
+<Line Number="117">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="118">
+<![CDATA[	CONCAT(Result, Ref_Class.AbbrMonth, Result);]]>
+</Line>
+<Line Number="119">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="120">
+<![CDATA[	CONCAT(Result, StrDay, Result);]]>
+</Line>
+<Line Number="121">
+<![CDATA[	CONCAT(Result, StrComma, Result);]]>
+</Line>
+<Line Number="122">
+<![CDATA[	CONCAT(Result, StrSpace, Result);	]]>
+</Line>
+<Line Number="123">
+<![CDATA[	CONCAT(Result, StrYear, Result);]]>
+</Line>
+<Line Number="124">
+<![CDATA[	COP(Result, Ref_Class.AbbrDate, 1);]]>
+</Line>
+<Line Number="125">
+<![CDATA[	DELETE(Result, Result.LEN, 1, Result);]]>
+</Line>
+<Line Number="126">
+<![CDATA[	]]>
+</Line>
+<Line Number="127">
+<![CDATA[	// LongDate]]>
+</Line>
+<Line Number="128">
+<![CDATA[	CONCAT(Result, Ref_Class.FullDay, Result);]]>
+</Line>
+<Line Number="129">
+<![CDATA[	CONCAT(Result, StrComma, Result);]]>
+</Line>
+<Line Number="130">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="131">
+<![CDATA[	CONCAT(Result, Ref_Class.FullMonth, Result);]]>
+</Line>
+<Line Number="132">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="133">
+<![CDATA[	CONCAT(Result, StrDay, Result);]]>
+</Line>
+<Line Number="134">
+<![CDATA[	CONCAT(Result, StrComma, Result);]]>
+</Line>
+<Line Number="135">
+<![CDATA[	CONCAT(Result, StrSpace, Result);	]]>
+</Line>
+<Line Number="136">
+<![CDATA[	CONCAT(Result, StrYear, Result);]]>
+</Line>
+<Line Number="137">
+<![CDATA[	COP(Result, Ref_Class.LongDate, 1);]]>
+</Line>
+<Line Number="138">
+<![CDATA[	DELETE(Result, Result.LEN, 1, Result);]]>
+</Line>
+<Line Number="139">
+<![CDATA[	]]>
+</Line>
+<Line Number="140">
+<![CDATA[elsif (Seq = 3) then]]>
+</Line>
+<Line Number="141">
+<![CDATA[	//ShortTime]]>
+</Line>
+<Line Number="142">
+<![CDATA[	CONCAT(Result, StrHour12, Result);]]>
+</Line>
+<Line Number="143">
+<![CDATA[	CONCAT(Result, StrColon, Result);]]>
+</Line>
+<Line Number="144">
+<![CDATA[	]]>
+</Line>
+<Line Number="145">
+<![CDATA[	if (LocalDT.Minute < 10) then]]>
+</Line>
+<Line Number="146">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="147">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="148">
+<![CDATA[]]>
+</Line>
+<Line Number="149">
+<![CDATA[	CONCAT(Result, StrMinute, Result);]]>
+</Line>
+<Line Number="150">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="151">
+<![CDATA[	CONCAT(Result, StrAMPM, Result);]]>
+</Line>
+<Line Number="152">
+<![CDATA[	COP(Result, Ref_Class.ShortTime, 1);]]>
+</Line>
+<Line Number="153">
+<![CDATA[	DELETE(Result, Result.LEN, 1, Result);]]>
+</Line>
+<Line Number="154">
+<![CDATA[	]]>
+</Line>
+<Line Number="155">
+<![CDATA[	// LongTime]]>
+</Line>
+<Line Number="156">
+<![CDATA[	CONCAT(Result, StrHour12, Result);]]>
+</Line>
+<Line Number="157">
+<![CDATA[	CONCAT(Result, StrColon, Result);]]>
+</Line>
+<Line Number="158">
+<![CDATA[]]>
+</Line>
+<Line Number="159">
+<![CDATA[	if (LocalDT.Minute < 10) then]]>
+</Line>
+<Line Number="160">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="161">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="162">
+<![CDATA[]]>
+</Line>
+<Line Number="163">
+<![CDATA[	CONCAT(Result, StrMinute, Result);]]>
+</Line>
+<Line Number="164">
+<![CDATA[	CONCAT(Result, StrColon, Result);]]>
+</Line>
+<Line Number="165">
+<![CDATA[]]>
+</Line>
+<Line Number="166">
+<![CDATA[	if (LocalDT.Second < 10) then]]>
+</Line>
+<Line Number="167">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="168">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="169">
+<![CDATA[]]>
+</Line>
+<Line Number="170">
+<![CDATA[	CONCAT(Result, StrSecond, Result);]]>
+</Line>
+<Line Number="171">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="172">
+<![CDATA[	CONCAT(Result, StrAMPM, Result);]]>
+</Line>
+<Line Number="173">
+<![CDATA[	COP(Result, Ref_Class.LongTime, 1);]]>
+</Line>
+<Line Number="174">
+<![CDATA[	DELETE(Result, Result.LEN, 1, Result);]]>
+</Line>
+<Line Number="175">
+<![CDATA[	]]>
+</Line>
+<Line Number="176">
+<![CDATA[	// FullDateTime]]>
+</Line>
+<Line Number="177">
+<![CDATA[	CONCAT(Result, Ref_Class.LongDate, Result);]]>
+</Line>
+<Line Number="178">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="179">
+<![CDATA[	CONCAT(Result, Ref_Class.LongTime, Result);]]>
+</Line>
+<Line Number="180">
+<![CDATA[	COP(Result, Ref_Class.FullDateTime, 1);]]>
+</Line>
+<Line Number="181">
+<![CDATA[	DELETE(Result, Result.LEN, 1, Result);]]>
+</Line>
+<Line Number="182">
+<![CDATA[	]]>
+</Line>
+<Line Number="183">
+<![CDATA[	// RFC1153]]>
+</Line>
+<Line Number="184">
+<![CDATA[	CONCAT(Result, Ref_Class.AbbrDay, Result);]]>
+</Line>
+<Line Number="185">
+<![CDATA[	CONCAT(Result, StrComma, Result);]]>
+</Line>
+<Line Number="186">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="187">
+<![CDATA[	]]>
+</Line>
+<Line Number="188">
+<![CDATA[	if (LocalDT.Day < 10) then]]>
+</Line>
+<Line Number="189">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="190">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="191">
+<![CDATA[	]]>
+</Line>
+<Line Number="192">
+<![CDATA[	CONCAT(Result, StrDay, Result);]]>
+</Line>
+<Line Number="193">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="194">
+<![CDATA[	CONCAT(Result, Ref_Class.AbbrMonth, Result);]]>
+</Line>
+<Line Number="195">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="196">
+<![CDATA[	CONCAT(Result, StrYear, Result);]]>
+</Line>
+<Line Number="197">
+<![CDATA[	CONCAT(Result, StrSpace, Result);]]>
+</Line>
+<Line Number="198">
+<![CDATA[	CONCAT(Result, StrHour, Result);]]>
+</Line>
+<Line Number="199">
+<![CDATA[	CONCAT(Result, StrColon, Result);]]>
+</Line>
+<Line Number="200">
+<![CDATA[	]]>
+</Line>
+<Line Number="201">
+<![CDATA[	if (LocalDT.Minute < 10) then]]>
+</Line>
+<Line Number="202">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="203">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="204">
+<![CDATA[	]]>
+</Line>
+<Line Number="205">
+<![CDATA[	CONCAT(Result, StrMinute, Result);]]>
+</Line>
+<Line Number="206">
+<![CDATA[	CONCAT(Result, StrColon, Result);]]>
+</Line>
+<Line Number="207">
+<![CDATA[	]]>
+</Line>
+<Line Number="208">
+<![CDATA[	if (LocalDT.Second < 10) then]]>
+</Line>
+<Line Number="209">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="210">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="211">
+<![CDATA[	]]>
+</Line>
+<Line Number="212">
+<![CDATA[	CONCAT(Result, StrSecond, Result);]]>
+</Line>
+<Line Number="213">
+<![CDATA[	COP(Result, Ref_Class.RFC1153, 1);]]>
+</Line>
+<Line Number="214">
+<![CDATA[	DELETE(Result, Result.LEN, 1, Result);]]>
+</Line>
+<Line Number="215">
+<![CDATA[	]]>
+</Line>
+<Line Number="216">
+<![CDATA[	// Local Sortable]]>
+</Line>
+<Line Number="217">
+<![CDATA[	CONCAT(Result, StrYear, Result);]]>
+</Line>
+<Line Number="218">
+<![CDATA[	CONCAT(Result, StrDash, Result);]]>
+</Line>
+<Line Number="219">
+<![CDATA[	]]>
+</Line>
+<Line Number="220">
+<![CDATA[	if (LocalDT.Month < 10) then]]>
+</Line>
+<Line Number="221">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="222">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="223">
+<![CDATA[	]]>
+</Line>
+<Line Number="224">
+<![CDATA[	CONCAT(Result, StrMonth, Result);]]>
+</Line>
+<Line Number="225">
+<![CDATA[	CONCAT(Result, StrDash, Result);]]>
+</Line>
+<Line Number="226">
+<![CDATA[	]]>
+</Line>
+<Line Number="227">
+<![CDATA[	if (LocalDT.Day < 10) then]]>
+</Line>
+<Line Number="228">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="229">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="230">
+<![CDATA[	]]>
+</Line>
+<Line Number="231">
+<![CDATA[	CONCAT(Result, StrDay, Result);]]>
+</Line>
+<Line Number="232">
+<![CDATA[	CONCAT(Result, StrT, Result);]]>
+</Line>
+<Line Number="233">
+<![CDATA[	CONCAT(Result, StrHour, Result);]]>
+</Line>
+<Line Number="234">
+<![CDATA[	CONCAT(Result, StrColon, Result);]]>
+</Line>
+<Line Number="235">
+<![CDATA[	]]>
+</Line>
+<Line Number="236">
+<![CDATA[	if (LocalDT.Minute < 10) then]]>
+</Line>
+<Line Number="237">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="238">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="239">
+<![CDATA[	]]>
+</Line>
+<Line Number="240">
+<![CDATA[	CONCAT(Result, StrMinute, Result);]]>
+</Line>
+<Line Number="241">
+<![CDATA[	CONCAT(Result, StrColon, Result);]]>
+</Line>
+<Line Number="242">
+<![CDATA[	]]>
+</Line>
+<Line Number="243">
+<![CDATA[	if (LocalDT.Second < 10) then]]>
+</Line>
+<Line Number="244">
+<![CDATA[		CONCAT(Result, StrZero, Result);]]>
+</Line>
+<Line Number="245">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="246">
+<![CDATA[	]]>
+</Line>
+<Line Number="247">
+<![CDATA[	CONCAT(Result, StrSecond, Result);]]>
+</Line>
+<Line Number="248">
+<![CDATA[	COP(Result, Ref_Class.LocalSortable, 1);]]>
+</Line>
+<Line Number="249">
+<![CDATA[	DELETE(Result, Result.LEN, 1, Result);]]>
+</Line>
+<Line Number="250">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="251">
+<![CDATA[]]>
+</Line>
+<Line Number="252">
+<![CDATA[Seq := Seq + 1;]]>
+</Line>
+<Line Number="253">
+<![CDATA[if (Seq > 3) then]]>
+</Line>
+<Line Number="254">
+<![CDATA[	Seq := 0;]]>
+</Line>
+<Line Number="255">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="256">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Sys_WallClock]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[StrColon := ':';]]>
+</Line>
+<Line Number="6">
+<![CDATA[StrComma := ',';]]>
+</Line>
+<Line Number="7">
+<![CDATA[StrDash := '-';]]>
+</Line>
+<Line Number="8">
+<![CDATA[StrSpace := ' ';]]>
+</Line>
+<Line Number="9">
+<![CDATA[StrZero := '0';]]>
+</Line>
+<Line Number="10">
+<![CDATA[StrT := 'T';]]>
+</Line>
+<Line Number="11">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_UI_ListSelector"/>
+<Dependency Type="DataType" Name="ST_DT_Datetime"/>
+<Dependency Type="DataType" Name="ST_Sys_WallClock"/>
+<Dependency Type="DataType" Name="STR_48"/>
+<Dependency Type="DataType" Name="STR_64"/>
+<Dependency Type="DataType" Name="STR_4"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
