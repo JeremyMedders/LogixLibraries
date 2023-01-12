@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Provides an automatic module reset sequence.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_ModuleReset" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T21:02:21.052Z" ContainsContext="true" ExportDate="Thu Jan 12 15:02:49 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="AO_Msg_SetPathToModule" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-14T20:40:32.238Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:57:00.755Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Sets a message path to that of a module.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Module" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="Ref_Message" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="tINT" DataType="INT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Msg_SetPathToModule]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_Message.Path.DATA, 0, Size);]]>
+</Line>
+<Line Number="6">
+<![CDATA[GSV(Module, Ref_Module, Path, Ref_Message.Path.DATA[0]);]]>
+</Line>
+<Line Number="7">
+<![CDATA[COP(Ref_Message.Path.DATA[0], tINT, 1);]]>
+</Line>
+<Line Number="8">
+<![CDATA[Ref_Message.Path.LEN := tINT;]]>
+</Line>
+<Line Number="9">
+<![CDATA[COP(Ref_Message.Path.DATA[2], Ref_Message.Path.DATA[0], Size);]]>
+</Line>
+<Line Number="10">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="AO_Sys_ModuleReset" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-10T15:41:44.676Z" CreatedBy="ACH\jrogers" EditedDate="2023-01-12T21:02:21.052Z" EditedBy="RLCCONTROLS\jrogers"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Provides an automatic module reset sequence.]]>
+</Description>
+<AdditionalHelpText>
+<![CDATA[Message Configuration:
+Type: CIP Generic
+Service Type: Device Reset
+Path: Module]]>
+</AdditionalHelpText>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Module" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="Ref_ResetMsg" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="PCmd_Reset" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command to reset this module.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MCmd_Reset" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Maintenance command to reset this module.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Active" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sequence active.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="EntryStatus" DataType="DINT" Radix="Hex" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Seq" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SetPath" DataType="AO_Msg_SetPathToModule" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Msg_SetPathToModule">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Sys_ModuleReset]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Message Configuration:]]>
+</Line>
+<Line Number="5">
+<![CDATA[	Type: CIP Generic]]>
+</Line>
+<Line Number="6">
+<![CDATA[	Service Type: Device Reset]]>
+</Line>
+<Line Number="7">
+<![CDATA[	Path: Module]]>
+</Line>
+<Line Number="8">
+<![CDATA[*/]]>
+</Line>
+<Line Number="9">
+<![CDATA[]]>
+</Line>
+<Line Number="10">
+<![CDATA[if (S:FS) then]]>
+</Line>
+<Line Number="11">
+<![CDATA[	PCmd_Reset := 0;]]>
+</Line>
+<Line Number="12">
+<![CDATA[	MCmd_Reset := 0;]]>
+</Line>
+<Line Number="13">
+<![CDATA[	OSR := 0;]]>
+</Line>
+<Line Number="14">
+<![CDATA[	Seq := 0;]]>
+</Line>
+<Line Number="15">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[if ((PCmd_Reset OR MCmd_Reset) & NOT OSR) then]]>
+</Line>
+<Line Number="18">
+<![CDATA[	Seq := 4;]]>
+</Line>
+<Line Number="19">
+<![CDATA[	SSV(Module, Ref_Module, Mode, Seq);]]>
+</Line>
+<Line Number="20">
+<![CDATA[	Seq := 1;]]>
+</Line>
+<Line Number="21">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="22">
+<![CDATA[OSR := PCmd_Reset OR MCmd_Reset;]]>
+</Line>
+<Line Number="23">
+<![CDATA[]]>
+</Line>
+<Line Number="24">
+<![CDATA[GSV(Module, Ref_Module, EntryStatus, EntryStatus);]]>
+</Line>
+<Line Number="25">
+<![CDATA[EntryStatus := EntryStatus & 16#F000;]]>
+</Line>
+<Line Number="26">
+<![CDATA[]]>
+</Line>
+<Line Number="27">
+<![CDATA[if (Seq = 1 & EntryStatus = 16#6000 & (Ref_ResetMsg.DN OR Ref_ResetMsg.ER OR NOT Ref_ResetMsg.EN)) then]]>
+</Line>
+<Line Number="28">
+<![CDATA[	AO_Msg_SetPathToModule(SetPath, Ref_Module, Ref_ResetMsg);]]>
+</Line>
+<Line Number="29">
+<![CDATA[	MSG(Ref_ResetMsg);]]>
+</Line>
+<Line Number="30">
+<![CDATA[	Seq := 2;]]>
+</Line>
+<Line Number="31">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="32">
+<![CDATA[]]>
+</Line>
+<Line Number="33">
+<![CDATA[if (Seq = 2) then]]>
+</Line>
+<Line Number="34">
+<![CDATA[	Seq := 0;]]>
+</Line>
+<Line Number="35">
+<![CDATA[	SSV(Module, Ref_Module, Mode, Seq);]]>
+</Line>
+<Line Number="36">
+<![CDATA[	Seq := 3;]]>
+</Line>
+<Line Number="37">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="38">
+<![CDATA[]]>
+</Line>
+<Line Number="39">
+<![CDATA[if (Seq = 3 & EntryStatus = 16#4000) then]]>
+</Line>
+<Line Number="40">
+<![CDATA[	Seq := 0;]]>
+</Line>
+<Line Number="41">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="42">
+<![CDATA[]]>
+</Line>
+<Line Number="43">
+<![CDATA[Sts_Active := (Seq > 0);]]>
+</Line>
+<Line Number="44">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Msg_SetPathToModule"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
