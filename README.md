@@ -19,14 +19,14 @@ Parameter naming follows PlantPAx standards, where sensible:
 - External access (Read, Read/Write, None) are set where sensible.
 
 AOIs (AO_) are organized into groups:
-- Dvc: Device drivers
-- Math: Assorted function blocks
+- Dvc: Device drivers.
+- Math: Assorted function blocks.
 - MBTCP: Modbus TCP client driver.
 - Op: Light-weight PlantPAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PlantPAx counterpart. 
-- Msg: Message utilities
-- RTC: Precision pulse/timing utilites
-- Str: String utilities
-- Sys: System diagnostic "classes", ISA 18.2 alarming and its "class",  and utilities
+- Msg: Message utilities.
+- RTC: Precision pulse/timing utilites.
+- Str: String utilities.
+- Sys: System diagnostic "classes", ISA 18.2 alarming and its parent "class",  and other utilities.
 
 UDTs (ST_) follow the AOI grouping in name:
 - ST_Dvc_
