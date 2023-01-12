@@ -6,11 +6,14 @@ This is my concentrated best-effort approach to implementing object-oriented pro
 
 Parameter naming follows PlantPAx standards, where sensible:
 - Inp_
+- PCmd_, OCmd_, MCmd, XCmd
+- PSet_, OSet_, MSet, XSet
 - Out_
 - Sts_
 - Val_
 - Cfg_
-- Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters). 
+- Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
+- Rdy_: Avoided in favor of consolidating under the Sts_ prefix.
 
 Blocks (AO_) are organized into groups:
 - Dvc: Device drivers
