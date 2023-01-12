@@ -4,11 +4,21 @@ Collections of UDIs, UDTs, and sample programs written in Studio 5000 v35.
 
 This is my concentrated best-effort approach to implementing object-oriented programming on Rockwell Logix5000-based controllers.
 
-- Math: Assorted function blocks
+Parameter naming follows PlantPAx standards, where sensible:
+- Inp_
+- Out_
+- Sts_
+- Val_
+- Cfg_
+- Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters). 
+
+Blocks (AO_) are organized into groups:
 - Dvc: Device drivers
+- Math: Assorted function blocks
 - MBTCP: Modbus TCP client driver
-- Op: Process blocks, modeled
+- Op: Light-weight PlantPAx-style blocks 
 - Msg: Message utilities
+- RTC: Precision pulse/timing utilites
 - Str: String utilities
 - Sys: System diagnostic classes and utilities
 
