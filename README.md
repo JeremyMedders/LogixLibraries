@@ -35,7 +35,7 @@ UDTs follow the corresponding AOI in name:
 - And so on.
 - External access (Read, Read/Write, None) are set where sensible.
 
-AOI Variants
+AOI variants (future)
 ------------
 Depending on use case, some of the features of an AOI will go unused. Tentatively, I think a simple suffix to the block name could differentiate it from others. Example:
 - AO_Dvc_PF525: Full features. Drive parameters managed and updated dynamically from the PLC using added Class 3 messaging.
@@ -54,7 +54,7 @@ Extras
 - some explanatory documentation about known working L5X attribute values.
 - a demonstration of using the CanBeNull parameter attribute in AOIs.
 
-"Legacy" Heads-up
+"Legacy" heads-up
 ------------
 Some of the library content makes use of unsigned (USINT/UINT/UDINT/ULINT) and 64-bit (ULINT/LINT) types, limiting their use to current-generation hardware (CompactLogix 5380, CompactLogix 5480, and ControlLogix 5580 families) and future releases. CompactLogix 5370, ControlLogix 5570 and earlier families are unfortunately artificially limited to signed types (SINT/INT/DINT/LINT), so code will need to be modified to accomodate where necessary. I built this library to be as lean as possible, so the backwards accomodation would have ended up bloating solutions across the division.
 
