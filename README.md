@@ -2,7 +2,7 @@
 
 Collections of UDIs, UDTs, and sample programs written in Studio 5000 v35.
 
-This is my concentrated best-effort approach to implementing object-oriented programming on Rockwell Logix5000-based controllers.
+This is my concentrated best-effort approach to implementing object-oriented programming on Rockwell Logix5000-based controllers while also working to avoid heavy dependencies.
 
 Parameter naming follows PlantPAx standards, where sensible:
 - Inp_
