@@ -2,7 +2,7 @@
 
 Collections of UDIs, UDTs, and sample programs written in Studio 5000 v35.
 
-This is my concentrated best-effort approach to implementing object-oriented programming on Rockwell Logix5000-based controllers. Source edit protection is enabled, but the code is viewable (it may make sense to fully unlock it but I'm also learning Git, so bear with me).
+This is my concentrated best-effort approach to implementing object-oriented programming on Rockwell Logix5000-based controllers.
 
 With the exception of complementary sample files (FactoryTalk View, and so on), this repository contains only .L5X (Logix 5000 XML) files. Structured text is used for add-on-instruction definitions for ease of portability between IEC 61131-3 platforms. Type and instruction dependencies will be documented where possible.
 
