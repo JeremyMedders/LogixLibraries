@@ -15,19 +15,19 @@ Parameter naming follows PlantPAx, where sensible:
 - Cfg_
 - Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
 - Rdy_: Avoided in favor of consolidating under the Sts_ prefix.
-- At times, parameter names were modified for consistency / anti-ambiguity, particularly with my CmdSrc substitute.
+- At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
 AOIs/UDTs (AO_/ST_) built as classes:
 ------------
-- Dvc: Device drivers. Each of these embed an AO_Sys_Dvc that automagically handles registering it to its parent AO_Sys_DvcClass.
+- Dvc: Device drivers. Each of these embed an AO_Sys_Dvc that automagically handles registering it and reporting status to its parent AO_Sys_DvcClass.
 - Math: Assorted function blocks.
 - MBTCP: Modbus TCP client driver.
-- Op: Lightweight PAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PlantPAx counterpart. 
-- Msg: Message utilities.
+- Op: Lightweight PAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PAx counterpart. 
+- Msg: Message helpers and utilities.
 - RTC: Precision pulse/timing utilites.
 - Str: String utilities.
-- Sys: System diagnostics, ISA 18.2 alarming with its parent "class", and other utilities.
+- Sys: System diagnostics, WallClock utility/formatting generator, ISA 18.2 alarming with its parent "class", and other utilities.
 
 UDTs follow the corresponding AOI in name:
 - ST_Dvc_abc
