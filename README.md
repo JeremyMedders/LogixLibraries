@@ -39,6 +39,10 @@ Depending on use case, some of the features of an AOI will go unused. Tentativel
 - AO_Dvc_PF525_L: Light version. Block capable of running the device but limited to the scope of its Class 1 connection data.
 - Both of these would still contain an "Op" strategy Command Source block and identitical core .Local data to keep overall UDT sprawl to a minimum.
 
+So we have...
+- No suffix: base/full
+- L: Light
+
 Extras
 ------------
 - some UDT templates to aid others in implementing the useful BIT overlay construct.
