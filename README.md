@@ -29,9 +29,9 @@ AOIs/UDTs (AO_/ST_) built as classes:
 - Str: String utilities.
 - Sys: System diagnostics, ISA 18.2 alarming with its parent "class", and other utilities.
 
-UDTs (ST_) follow the AOI grouping in name:
-- ST_Dvc_
-- ST_Sys_
+UDTs follow the corresponding AOI in name:
+- ST_Dvc_abc
+- ST_Sys_xyz
 - And so on.
 - External access (Read, Read/Write, None) are set where sensible.
 
