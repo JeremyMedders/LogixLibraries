@@ -1,0 +1,2164 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--ISA 18.2 Alarm-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_Alarm" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T18:00:05.906Z" ContainsContext="true" ExportDate="Thu Jan 12 16:21:16 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_Op_Alarm" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="ProgramID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Type" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="TypeLabel" DataType="STR_16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Severity" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="SeverityLabel" DataType="STR_16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="UnshelveMin" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="UnshelveSec" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Condition" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LastOccurrence" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="State" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="StateLabel" DataType="STR_16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Cmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Composite command overlay.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Ack" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.0: Composite command to acknowledge an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.1: Composite command to reset an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Enable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.2: Composite command to enable an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Disable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.3: Composite command to Disable an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Suppress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.4: Composite command to suppress an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Shelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.5: Composite command to shelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Unshelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.6: Composite command to unshelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Silence" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.7: Composite command to silence an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Test" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.8: Composite command to test an alarm.]]>
+</Description>
+</Member>
+<Member Name="MCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Maintenance command overlay.]]>
+</Description>
+</Member>
+<Member Name="MCmd_Enable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.2: Maintenance command to enable an alarm.]]>
+</Description>
+</Member>
+<Member Name="MCmd_Disable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.3: Maintenance command to disable an alarm.]]>
+</Description>
+</Member>
+<Member Name="MCmd_Test" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.8: Maintenance command to test an alarm.]]>
+</Description>
+</Member>
+<Member Name="MCmd_EnableAudible" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.9: Maintenance command to enable audible output.]]>
+</Description>
+</Member>
+<Member Name="MCmd_DisableAudible" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.10: Maintenance command to disable audible output.]]>
+</Description>
+</Member>
+<Member Name="OCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Operator command overlay.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Ack" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.0: Operator command to acknowledge an alarm.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.1: Operator command to reset an alarm.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Shelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.5: Operator command to shelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Unshelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.6: Operator command to unshelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Silence" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.7: Operator command to silence an alarm.]]>
+</Description>
+</Member>
+<Member Name="PCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command overlay.]]>
+</Description>
+</Member>
+<Member Name="PCmd_Ack" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PCmd" BitNumber="0" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PCmd.0: Program command to acknowledge an alarm.]]>
+</Description>
+</Member>
+<Member Name="PCmd_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PCmd" BitNumber="1" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PCmd.1: Program command to reset an alarm.]]>
+</Description>
+</Member>
+<Member Name="PCmd_Suppress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PCmd" BitNumber="4" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PCmd.4: Program command to suppress an alarm.]]>
+</Description>
+</Member>
+<Member Name="PCmd_Unshelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PCmd" BitNumber="6" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PCmd.6: Program command to unshelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Status overlay.]]>
+</Description>
+</Member>
+<Member Name="Sts_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="0" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.0: Alarm is active.]]>
+</Description>
+</Member>
+<Member Name="Sts_Acked" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="1" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.1: Alarm has been acknowledged.]]>
+</Description>
+</Member>
+<Member Name="Sts_AckReady" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="2" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.2: Alarm ready for acknowledge.]]>
+</Description>
+</Member>
+<Member Name="Sts_ResetReady" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="3" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.3: Alarm ready for reset.]]>
+</Description>
+</Member>
+<Member Name="Sts_Inhibited" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="4" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.4: Alarm has been shelved, suppressed, or disabled.]]>
+</Description>
+</Member>
+<Member Name="Sts_Shelved" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="5" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.5: Alarm has been shelved.]]>
+</Description>
+</Member>
+<Member Name="Sts_Suppressed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="6" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.6: Alarm has been suppressed.]]>
+</Description>
+</Member>
+<Member Name="Sts_Disabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="7" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.7: Alarm has been disabled.]]>
+</Description>
+</Member>
+<Member Name="Sts_Exists" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="8" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.8: Alarm exists.]]>
+</Description>
+</Member>
+<Member Name="Out" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Output overlay.]]>
+</Description>
+</Member>
+<Member Name="Out_Audible" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Out" BitNumber="0" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Out.0: Audible output.]]>
+</Description>
+</Member>
+<Member Name="Out_Assert" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Out" BitNumber="31" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Out.31: Object assertion of bus membership.]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="STR_16"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_Sys_AlarmClass" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Instances" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Active" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms active.]]>
+</Description>
+</Member>
+<Member Name="AckReady" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms awaiting acknowledgement.]]>
+</Description>
+</Member>
+<Member Name="ResetReady" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms awaiting reset.]]>
+</Description>
+</Member>
+<Member Name="Inhibited" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms inhibited.]]>
+</Description>
+</Member>
+<Member Name="Shelved" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms shelved.]]>
+</Description>
+</Member>
+<Member Name="Suppressed" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms suppressed.]]>
+</Description>
+</Member>
+<Member Name="Disabled" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms disabled.]]>
+</Description>
+</Member>
+<Member Name="Critical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Critical severity alarms.]]>
+</Description>
+</Member>
+<Member Name="High" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[High severity alarms.]]>
+</Description>
+</Member>
+<Member Name="Medium" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Medium severity alarms.]]>
+</Description>
+</Member>
+<Member Name="Low" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Low severity alarms.]]>
+</Description>
+</Member>
+<Member Name="eState_Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: Undefined]]>
+</Description>
+</Member>
+<Member Name="eState_Normal" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1: Normal]]>
+</Description>
+</Member>
+<Member Name="eState_Active" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2: Active]]>
+</Description>
+</Member>
+<Member Name="eState_Acked" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3: Acked]]>
+</Description>
+</Member>
+<Member Name="eState_NormalUnack" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4: Normal, Unacked]]>
+</Description>
+</Member>
+<Member Name="eState_Shelved" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5: Shelved]]>
+</Description>
+</Member>
+<Member Name="eState_Suppressed" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[6: Suppressed]]>
+</Description>
+</Member>
+<Member Name="eState_Disabled" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[7: Disabled]]>
+</Description>
+</Member>
+<Member Name="eStateLabel" DataType="STR_16" Dimension="8" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="eType_Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: Undefined]]>
+</Description>
+</Member>
+<Member Name="eType_General" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1: General]]>
+</Description>
+</Member>
+<Member Name="eType_Device" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2: Device]]>
+</Description>
+</Member>
+<Member Name="eType_Electrical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3: Electrical]]>
+</Description>
+</Member>
+<Member Name="eType_External" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4: External]]>
+</Description>
+</Member>
+<Member Name="eType_Mechanical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5: Mechanical]]>
+</Description>
+</Member>
+<Member Name="eType_Operational" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[6: Operational]]>
+</Description>
+</Member>
+<Member Name="eType_Process" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[7: Process]]>
+</Description>
+</Member>
+<Member Name="eType_Protective" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[8: Protective]]>
+</Description>
+</Member>
+<Member Name="eType_Safety" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[9: Safety]]>
+</Description>
+</Member>
+<Member Name="eTypeLabel" DataType="STR_16" Dimension="10" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="eSeverity_Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: Undefined]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Info" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1: Info]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Advisory" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2: Advisory]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Low" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3: Low]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Medium" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4: Medium]]>
+</Description>
+</Member>
+<Member Name="eSeverity_High" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5: High]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Critical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[6: Critical]]>
+</Description>
+</Member>
+<Member Name="eSeverityLabel" DataType="STR_16" Dimension="7" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="List" DataType="ST_Op_Alarm" Dimension="128" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ListCapacity" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="LocalSortable" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="ST_Op_Alarm"/>
+<Dependency Type="DataType" Name="STR_20"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_16" Family="StringFamily" Class="User">
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="16" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_20" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="20" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="AO_Str_Size" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-04T14:43:23.588Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:59:33.248Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_StrData" TagType="Base" DataType="SINT" Dimensions="1" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Val_Aligned" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Data" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Str_GetSize]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_StrData, 0, Val_Data);]]>
+</Line>
+<Line Number="6">
+<![CDATA[Val_Aligned := (((Val_Data + 4) + 3) & (16#FFFF XOR 16#0003)) / 4;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T16:23:44.408Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Generates precision pulses on configurable intervals.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Interval" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulse interval (milliseconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TStart" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TNow" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_RTC_PulseGen]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Generates precision pulses on configurable intervals.]]>
+</Line>
+<Line Number="5">
+<![CDATA[*/]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[GSV(WallClockTime, , CurrentValue, TNow);]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[if (Inp_Enable & NOT OSR OR Out) then]]>
+</Line>
+<Line Number="10">
+<![CDATA[	TStart := TNow;]]>
+</Line>
+<Line Number="11">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="12">
+<![CDATA[OSR := Inp_Enable;]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
+</Line>
+<Line Number="14">
+<![CDATA[Sts_Enabled := Inp_Enable;]]>
+</Line>
+<Line Number="15">
+<![CDATA[Out := Inp_Enable & (TNow - TStart >= Inp_Interval * 1000);]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_RTC_PulseGen]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[OSR := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Out := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_Str_Clear" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-02-01T20:55:09.461Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:58:55.505Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Len" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Ref_Data" TagType="Base" DataType="SINT" Dimensions="1" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_String_Clear]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Ref_Len := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[SIZE(Ref_Data, 0, Size);]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+<Line Number="8">
+<![CDATA[i := 0;]]>
+</Line>
+<Line Number="9">
+<![CDATA[while i < Size do]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Ref_Data[i] := 0;]]>
+</Line>
+<Line Number="11">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="12">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="AO_Sys_Alarm" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-06T18:37:39.462Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T18:00:05.906Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[ISA 18.2 Alarm]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarm condition input.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Disable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[External out-of-service input.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Reset" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[External reset input.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Exists" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_ResetReqd" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Sets whether the alarm latches and requires a reset to clear.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_AckReqd" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Sets whether the alarm requires acknowledgement.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_CanShelve" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Sets whether the operator can shelve the alarm.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_CanDisable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Sets whether maintenance can disable this alarm.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Type" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Alarm type.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Severity" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Alarm severity.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_ShelveTime" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time before the alarm auto-unshelves (minutes).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[60]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="60"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_AlarmOnTime" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Minimum time alarm remains in active state (seconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[5]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="5"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PCmd_Ack" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.PCmd_Ack" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Reset" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.PCmd_Reset" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Suppress" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.PCmd_Suppress" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Unshelve" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.PCmd_Unshelve" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="MCmd_Enable" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.MCmd_Enable" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_Disable" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.MCmd_Disable" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_Test" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.MCmd_Test" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_EnableAudible" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.MCmd_EnableAudible" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_DisableAudible" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.MCmd_DisableAudible" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Ack" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.OCmd_Ack" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Reset" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.OCmd_Reset" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Shelve" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.OCmd_Shelve" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Unshelve" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.OCmd_Unshelve" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Silence" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.OCmd_Silence" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="Val_ID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.ID" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Type" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Type" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Severity" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Severity" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_State" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.State" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_UnshelveMin" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.UnshelveMin" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Time until auto-unshelve (minutes).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_UnshelveSec" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.UnshelveSec" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Time until auto-unshelve (seconds).]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Active" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_Active" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Acked" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_Acked" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_AckReady" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_AckReady" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_ResetReady" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_ResetReady" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_Inhibited" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Shelved" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_Shelved" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Suppressed" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_Suppressed" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Disabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_Disabled" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Exists" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Sts_Exists" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Out_Audible" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Out_Audible" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_StrSize" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="StrSize.Val_Aligned" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.Condition.LEN" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="Ref_Class" TagType="Base" DataType="ST_Sys_AlarmClass" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="UnshSec" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="AutoAckT" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0,4,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="AlmOnT" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0,4,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Suppressed" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Shelved" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Acked" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="InAlarm" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PG" DataType="AO_RTC_PulseGen" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_RTC_PulseGen">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Interval" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Sts_Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="UnshMin" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Disabled" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="AckSec" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="AlmOnSec" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Inhibited" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Disable" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrSize" DataType="AO_Str_Size" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Str_Size">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Val_Aligned" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Data" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="AudibleEN" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Index" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="T_Acked" DataType="STR_20" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']]]>
+</DefaultData>
+<DefaultData Format="String" Length="0">
+<![CDATA['']]>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Local" DataType="ST_Op_Alarm" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],0,0,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="ST_Op_Alarm">
+<DataValueMember Name="ID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ProgramID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Type" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="TypeLabel" DataType="STR_16">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_16" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<DataValueMember Name="Severity" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="SeverityLabel" DataType="STR_16">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_16" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<DataValueMember Name="UnshelveMin" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="UnshelveSec" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="Condition" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="LastOccurrence" DataType="STR_20">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_20" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<DataValueMember Name="State" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="StateLabel" DataType="STR_16">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_16" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<DataValueMember Name="Cmd" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Cmd_Ack" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd_Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd_Disable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd_Suppress" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd_Shelve" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd_Unshelve" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd_Silence" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd_Test" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MCmd_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_Disable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_Test" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_EnableAudible" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_DisableAudible" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="OCmd_Ack" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Shelve" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Unshelve" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Silence" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCmd" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="PCmd_Ack" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCmd_Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCmd_Suppress" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCmd_Unshelve" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Sts_Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Acked" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_AckReady" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_ResetReady" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Inhibited" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Shelved" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Suppressed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Disabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Exists" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Out_Audible" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out_Assert" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Init" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="CCmd" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrClear" DataType="AO_Str_Clear" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Str_Clear">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_Alarm]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	HMI information requirements:]]>
+</Line>
+<Line Number="5">
+<![CDATA[	• Unsuppressed active alarms]]>
+</Line>
+<Line Number="6">
+<![CDATA[	• Alarm states]]>
+</Line>
+<Line Number="7">
+<![CDATA[	• Alarm priorities]]>
+</Line>
+<Line Number="8">
+<![CDATA[	• Alarm types]]>
+</Line>
+<Line Number="9">
+<![CDATA[	• Alarm summary displays]]>
+</Line>
+<Line Number="10">
+<![CDATA[	• Alarm indications on process displays]]>
+</Line>
+<Line Number="11">
+<![CDATA[	• Alarm indications on tag detail display]]>
+</Line>
+<Line Number="12">
+<![CDATA[	• Shelved alarm summary displays]]>
+</Line>
+<Line Number="13">
+<![CDATA[	• Suppressed-by-design summary displays]]>
+</Line>
+<Line Number="14">
+<![CDATA[	• Out-of-service summary displays]]>
+</Line>
+<Line Number="15">
+<![CDATA[	]]>
+</Line>
+<Line Number="16">
+<![CDATA[	HMI functional requirements:]]>
+</Line>
+<Line Number="17">
+<![CDATA[	• Silence audible alarm indication (without acknowledging)]]>
+</Line>
+<Line Number="18">
+<![CDATA[	• Individually acknowledge alarms]]>
+</Line>
+<Line Number="19">
+<![CDATA[	• Place alarms out-of-service]]>
+</Line>
+<Line Number="20">
+<![CDATA[	• Modify alarm attributes]]>
+</Line>
+<Line Number="21">
+<![CDATA[	• Shelve an alarm]]>
+</Line>
+<Line Number="22">
+<![CDATA[	• Support suppression-by-design]]>
+</Line>
+<Line Number="23">
+<![CDATA[	• Display alarm messages]]>
+</Line>
+<Line Number="24">
+<![CDATA[	]]>
+</Line>
+<Line Number="25">
+<![CDATA[	Records requirements:]]>
+</Line>
+<Line Number="26">
+<![CDATA[	• Tag name for an alarm]]>
+</Line>
+<Line Number="27">
+<![CDATA[	• Tag description or alarm description]]>
+</Line>
+<Line Number="28">
+<![CDATA[	• Alarm state]]>
+</Line>
+<Line Number="29">
+<![CDATA[	• Alarm priority]]>
+</Line>
+<Line Number="30">
+<![CDATA[	• Alarm type]]>
+</Line>
+<Line Number="31">
+<![CDATA[	• DateTime of occurrence of the alarm state change]]>
+</Line>
+<Line Number="32">
+<![CDATA[	]]>
+</Line>
+<Line Number="33">
+<![CDATA[	Records recommendations:]]>
+</Line>
+<Line Number="34">
+<![CDATA[	• PV at the time when the alarm record is recorded]]>
+</Line>
+<Line Number="35">
+<![CDATA[	• Alarm setpoint]]>
+</Line>
+<Line Number="36">
+<![CDATA[	• Alarm group or process area]]>
+</Line>
+<Line Number="37">
+<![CDATA[	• Alarm class(es)]]>
+</Line>
+<Line Number="38">
+<![CDATA[	• Alarm message]]>
+</Line>
+<Line Number="39">
+<![CDATA[*/]]>
+</Line>
+<Line Number="40">
+<![CDATA[]]>
+</Line>
+<Line Number="41">
+<![CDATA[AO_Str_Size(StrSize, Local.Condition.DATA);]]>
+</Line>
+<Line Number="42">
+<![CDATA[GSV(Program, THIS, Instance, Local.ProgramID);]]>
+</Line>
+<Line Number="43">
+<![CDATA[]]>
+</Line>
+<Line Number="44">
+<![CDATA[if (NOT Init) then]]>
+</Line>
+<Line Number="45">
+<![CDATA[	Inp := 0;]]>
+</Line>
+<Line Number="46">
+<![CDATA[	Inp_Disable := 0;]]>
+</Line>
+<Line Number="47">
+<![CDATA[	Inp_Reset := 0;]]>
+</Line>
+<Line Number="48">
+<![CDATA[	]]>
+</Line>
+<Line Number="49">
+<![CDATA[	Local.ID := 0;]]>
+</Line>
+<Line Number="50">
+<![CDATA[	Local.PCmd := 0;]]>
+</Line>
+<Line Number="51">
+<![CDATA[	Local.OCmd := 0;]]>
+</Line>
+<Line Number="52">
+<![CDATA[	Local.MCmd := 0;]]>
+</Line>
+<Line Number="53">
+<![CDATA[	]]>
+</Line>
+<Line Number="54">
+<![CDATA[	Acked := 1;]]>
+</Line>
+<Line Number="55">
+<![CDATA[	Inhibited := 0;]]>
+</Line>
+<Line Number="56">
+<![CDATA[	Suppressed := 0;]]>
+</Line>
+<Line Number="57">
+<![CDATA[	Disable := 0;]]>
+</Line>
+<Line Number="58">
+<![CDATA[	Disabled := 0;]]>
+</Line>
+<Line Number="59">
+<![CDATA[	Shelved := 0;]]>
+</Line>
+<Line Number="60">
+<![CDATA[	]]>
+</Line>
+<Line Number="61">
+<![CDATA[	Init := 1;]]>
+</Line>
+<Line Number="62">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="63">
+<![CDATA[]]>
+</Line>
+<Line Number="64">
+<![CDATA[if (0 <= Cfg_Type & Cfg_Type <= 9) then]]>
+</Line>
+<Line Number="65">
+<![CDATA[	Local.Type := Cfg_Type;]]>
+</Line>
+<Line Number="66">
+<![CDATA[	COP(Ref_Class.eTypeLabel[Local.Type], Local.TypeLabel, 1);]]>
+</Line>
+<Line Number="67">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="68">
+<![CDATA[]]>
+</Line>
+<Line Number="69">
+<![CDATA[if (0 <= Cfg_Severity & Cfg_Severity <= 6) then]]>
+</Line>
+<Line Number="70">
+<![CDATA[	Local.Severity := Cfg_Severity;]]>
+</Line>
+<Line Number="71">
+<![CDATA[	COP(Ref_Class.eSeverityLabel[Local.Severity], Local.SeverityLabel, 1);]]>
+</Line>
+<Line Number="72">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="73">
+<![CDATA[]]>
+</Line>
+<Line Number="74">
+<![CDATA[AudibleEN := (AudibleEN OR MCmd_EnableAudible) & NOT MCmd_DisableAudible;]]>
+</Line>
+<Line Number="75">
+<![CDATA[]]>
+</Line>
+<Line Number="76">
+<![CDATA[if (Cfg_ShelveTime < 1 OR 1440 < Cfg_ShelveTime) then]]>
+</Line>
+<Line Number="77">
+<![CDATA[	Cfg_ShelveTime := 60;]]>
+</Line>
+<Line Number="78">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="79">
+<![CDATA[]]>
+</Line>
+<Line Number="80">
+<![CDATA[if (Cfg_AlarmOnTime < 5) then]]>
+</Line>
+<Line Number="81">
+<![CDATA[	Cfg_AlarmOnTime := 5;]]>
+</Line>
+<Line Number="82">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="83">
+<![CDATA[]]>
+</Line>
+<Line Number="84">
+<![CDATA[/*]]>
+</Line>
+<Line Number="85">
+<![CDATA[	Alarm registration]]>
+</Line>
+<Line Number="86">
+<![CDATA[	• Get the list size]]>
+</Line>
+<Line Number="87">
+<![CDATA[	• Check for valid index]]>
+</Line>
+<Line Number="88">
+<![CDATA[	• Check for ID or ParentID inequality at the current index]]>
+</Line>
+<Line Number="89">
+<![CDATA[	• Search for an empty spot]]>
+</Line>
+<Line Number="90">
+<![CDATA[*/]]>
+</Line>
+<Line Number="91">
+<![CDATA[SIZE(Ref_Class.List, 0, Size);]]>
+</Line>
+<Line Number="92">
+<![CDATA[]]>
+</Line>
+<Line Number="93">
+<![CDATA[if (Index < 0 OR Size < Index OR Local.ID <= 0 OR]]>
+</Line>
+<Line Number="94">
+<![CDATA[	Ref_Class.List[Index].ID <> Local.ID OR ]]>
+</Line>
+<Line Number="95">
+<![CDATA[	Ref_Class.List[Index].ProgramID <> Local.ProgramID) then]]>
+</Line>
+<Line Number="96">
+<![CDATA[	]]>
+</Line>
+<Line Number="97">
+<![CDATA[	i := 0;]]>
+</Line>
+<Line Number="98">
+<![CDATA[	while i < Size do]]>
+</Line>
+<Line Number="99">
+<![CDATA[		]]>
+</Line>
+<Line Number="100">
+<![CDATA[		if (Ref_Class.List[i].ID = 0) then]]>
+</Line>
+<Line Number="101">
+<![CDATA[			//Local.ID := Local.Type * 1000 + i + 1;]]>
+</Line>
+<Line Number="102">
+<![CDATA[			Local.ID := i + 1;]]>
+</Line>
+<Line Number="103">
+<![CDATA[			Index := i;]]>
+</Line>
+<Line Number="104">
+<![CDATA[			exit;]]>
+</Line>
+<Line Number="105">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="106">
+<![CDATA[		]]>
+</Line>
+<Line Number="107">
+<![CDATA[		i := i + 1;]]>
+</Line>
+<Line Number="108">
+<![CDATA[	end_while;]]>
+</Line>
+<Line Number="109">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="110">
+<![CDATA[]]>
+</Line>
+<Line Number="111">
+<![CDATA[if (Local.ID <> 0) then]]>
+</Line>
+<Line Number="112">
+<![CDATA[	CCmd := Ref_Class.List[Index].Cmd OR ]]>
+</Line>
+<Line Number="113">
+<![CDATA[		Ref_Class.List[Index].OCmd OR ]]>
+</Line>
+<Line Number="114">
+<![CDATA[		Ref_Class.List[Index].MCmd OR ]]>
+</Line>
+<Line Number="115">
+<![CDATA[		Ref_Class.List[Index].PCmd;]]>
+</Line>
+<Line Number="116">
+<![CDATA[else]]>
+</Line>
+<Line Number="117">
+<![CDATA[	CCmd := 0;]]>
+</Line>
+<Line Number="118">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="119">
+<![CDATA[]]>
+</Line>
+<Line Number="120">
+<![CDATA[Local.Cmd := Local.PCmd OR Local.OCmd OR Local.MCmd OR CCmd; // composite command set]]>
+</Line>
+<Line Number="121">
+<![CDATA[]]>
+</Line>
+<Line Number="122">
+<![CDATA[/*]]>
+</Line>
+<Line Number="123">
+<![CDATA[	Inhibited states:]]>
+</Line>
+<Line Number="124">
+<![CDATA[	• Suppressed]]>
+</Line>
+<Line Number="125">
+<![CDATA[	• Disabled]]>
+</Line>
+<Line Number="126">
+<![CDATA[	• Shelved]]>
+</Line>
+<Line Number="127">
+<![CDATA[	]]>
+</Line>
+<Line Number="128">
+<![CDATA[	Shelving functional requirements:]]>
+</Line>
+<Line Number="129">
+<![CDATA[	• Ability to shelve]]>
+</Line>
+<Line Number="130">
+<![CDATA[	• Displays of shelved alarms, or equivalent list capabilities to indicate all alarms shelved]]>
+</Line>
+<Line Number="131">
+<![CDATA[	• Time limit for shelving]]>
+</Line>
+<Line Number="132">
+<![CDATA[	• Access control for shelving of individual alarms]]>
+</Line>
+<Line Number="133">
+<![CDATA[	• Ability to unshelve alarms]]>
+</Line>
+<Line Number="134">
+<![CDATA[	• Record of each alarm shelved]]>
+</Line>
+<Line Number="135">
+<![CDATA[	• a manually unshelved alarm should transition to the acknowledged alarm state, and]]>
+</Line>
+<Line Number="136">
+<![CDATA[	• an automatically unshelved alarm should transition to the unacknowledged alarm state]]>
+</Line>
+<Line Number="137">
+<![CDATA[*/]]>
+</Line>
+<Line Number="138">
+<![CDATA[]]>
+</Line>
+<Line Number="139">
+<![CDATA[Suppressed := Local.Cmd_Suppress;]]>
+</Line>
+<Line Number="140">
+<![CDATA[Disable := (Disable OR Local.Cmd_Disable) & (Cfg_CanDisable & NOT Local.Cmd_Enable);]]>
+</Line>
+<Line Number="141">
+<![CDATA[Disabled := Inp_Disable OR Disable;]]>
+</Line>
+<Line Number="142">
+<![CDATA[Shelved := (Shelved OR Local.Cmd_Shelve & NOT OSR.1) & (Cfg_CanShelve & ((UnshMin OR UnshSec) > 0) & NOT Local.Cmd_Unshelve);]]>
+</Line>
+<Line Number="143">
+<![CDATA[]]>
+</Line>
+<Line Number="144">
+<![CDATA[Inhibited := Shelved OR Suppressed OR Disabled;]]>
+</Line>
+<Line Number="145">
+<![CDATA[]]>
+</Line>
+<Line Number="146">
+<![CDATA[if (NOT Shelved OR Local.Cmd_Shelve & NOT OSR.1) then]]>
+</Line>
+<Line Number="147">
+<![CDATA[	UnshMin := Cfg_ShelveTime;]]>
+</Line>
+<Line Number="148">
+<![CDATA[	UnshSec := 0;]]>
+</Line>
+<Line Number="149">
+<![CDATA[elsif (NOT Cfg_CanShelve) then]]>
+</Line>
+<Line Number="150">
+<![CDATA[	UnshMin := 0;]]>
+</Line>
+<Line Number="151">
+<![CDATA[	UnshSec := 0;]]>
+</Line>
+<Line Number="152">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="153">
+<![CDATA[OSR.1 := Local.Cmd_Shelve;]]>
+</Line>
+<Line Number="154">
+<![CDATA[]]>
+</Line>
+<Line Number="155">
+<![CDATA[PG.Inp_Enable := Shelved;]]>
+</Line>
+<Line Number="156">
+<![CDATA[PG.Inp_Interval := 1000;]]>
+</Line>
+<Line Number="157">
+<![CDATA[AO_RTC_PulseGen(PG);]]>
+</Line>
+<Line Number="158">
+<![CDATA[]]>
+</Line>
+<Line Number="159">
+<![CDATA[if (PG.Out) then]]>
+</Line>
+<Line Number="160">
+<![CDATA[	UnshSec := UnshSec - 1;]]>
+</Line>
+<Line Number="161">
+<![CDATA[	if (UnshSec < 0 & UnshMin > 0) then]]>
+</Line>
+<Line Number="162">
+<![CDATA[		UnshSec := 59;]]>
+</Line>
+<Line Number="163">
+<![CDATA[		UnshMin := UnshMin - 1;]]>
+</Line>
+<Line Number="164">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="165">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="166">
+<![CDATA[]]>
+</Line>
+<Line Number="167">
+<![CDATA[Val_UnshelveMin := UnshMin;]]>
+</Line>
+<Line Number="168">
+<![CDATA[Val_UnshelveSec := UnshSec;]]>
+</Line>
+<Line Number="169">
+<![CDATA[]]>
+</Line>
+<Line Number="170">
+<![CDATA[/*]]>
+</Line>
+<Line Number="171">
+<![CDATA[	Alarm and Re-Alarm]]>
+</Line>
+<Line Number="172">
+<![CDATA[*/]]>
+</Line>
+<Line Number="173">
+<![CDATA[if ((Inp & NOT Inhibited) OR Local.Cmd_Test) then]]>
+</Line>
+<Line Number="174">
+<![CDATA[	]]>
+</Line>
+<Line Number="175">
+<![CDATA[	if (NOT InAlarm) then]]>
+</Line>
+<Line Number="176">
+<![CDATA[		COP(Ref_Class.LocalSortable, Local.LastOccurrence, 1);]]>
+</Line>
+<Line Number="177">
+<![CDATA[		Acked := 0;]]>
+</Line>
+<Line Number="178">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="179">
+<![CDATA[	]]>
+</Line>
+<Line Number="180">
+<![CDATA[	InAlarm := 1;]]>
+</Line>
+<Line Number="181">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="182">
+<![CDATA[]]>
+</Line>
+<Line Number="183">
+<![CDATA[AlmOnT.PRE := Cfg_AlarmOnTime * 1000;]]>
+</Line>
+<Line Number="184">
+<![CDATA[AlmOnT.Reset := AlmOnT.DN & NOT InAlarm;]]>
+</Line>
+<Line Number="185">
+<![CDATA[AlmOnT.TimerEnable := InAlarm OR AlmOnT.TT;]]>
+</Line>
+<Line Number="186">
+<![CDATA[TONR(AlmOnT);]]>
+</Line>
+<Line Number="187">
+<![CDATA[]]>
+</Line>
+<Line Number="188">
+<![CDATA[/*]]>
+</Line>
+<Line Number="189">
+<![CDATA[	Ack and Reset]]>
+</Line>
+<Line Number="190">
+<![CDATA[	• Auto-ack time is always 5 seconds.]]>
+</Line>
+<Line Number="191">
+<![CDATA[*/]]>
+</Line>
+<Line Number="192">
+<![CDATA[AutoAckT.PRE := 5000;]]>
+</Line>
+<Line Number="193">
+<![CDATA[AutoAckT.Reset := Acked;]]>
+</Line>
+<Line Number="194">
+<![CDATA[AutoAckT.TimerEnable := NOT Cfg_AckReqd & NOT Acked;]]>
+</Line>
+<Line Number="195">
+<![CDATA[TONR(AutoAckT);]]>
+</Line>
+<Line Number="196">
+<![CDATA[]]>
+</Line>
+<Line Number="197">
+<![CDATA[if (Local.Cmd_Ack OR AutoAckT.DN) then]]>
+</Line>
+<Line Number="198">
+<![CDATA[	Acked := 1;]]>
+</Line>
+<Line Number="199">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="200">
+<![CDATA[]]>
+</Line>
+<Line Number="201">
+<![CDATA[if (NOT AutoAckT.TT & (Inp_Reset OR Local.Cmd_Reset) & (NOT Inp OR Inhibited)) then]]>
+</Line>
+<Line Number="202">
+<![CDATA[	Acked := 1;]]>
+</Line>
+<Line Number="203">
+<![CDATA[	InAlarm := 0;]]>
+</Line>
+<Line Number="204">
+<![CDATA[	AO_Str_Clear(StrClear, Local.LastOccurrence.LEN, Local.LastOccurrence.DATA);]]>
+</Line>
+<Line Number="205">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="206">
+<![CDATA[]]>
+</Line>
+<Line Number="207">
+<![CDATA[if ((NOT Inp OR Inp_Disable) & NOT Cfg_ResetReqd & NOT AlmOnT.TT) OR (Disabled & NOT AutoAckT.TT) then]]>
+</Line>
+<Line Number="208">
+<![CDATA[	InAlarm := 0;]]>
+</Line>
+<Line Number="209">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="210">
+<![CDATA[]]>
+</Line>
+<Line Number="211">
+<![CDATA[/*]]>
+</Line>
+<Line Number="212">
+<![CDATA[	Alarm Status and State indication:]]>
+</Line>
+<Line Number="213">
+<![CDATA[	• 1: Normal]]>
+</Line>
+<Line Number="214">
+<![CDATA[	• 2: Unacknowledged]]>
+</Line>
+<Line Number="215">
+<![CDATA[	• 3: Acknowledged]]>
+</Line>
+<Line Number="216">
+<![CDATA[	• 4: Return-to-normal unacknowledged]]>
+</Line>
+<Line Number="217">
+<![CDATA[	• 5: Shelved]]>
+</Line>
+<Line Number="218">
+<![CDATA[	• 6: Suppressed]]>
+</Line>
+<Line Number="219">
+<![CDATA[	• 7: Disabled]]>
+</Line>
+<Line Number="220">
+<![CDATA[*/]]>
+</Line>
+<Line Number="221">
+<![CDATA[Sts_Active := InAlarm & NOT Inhibited;]]>
+</Line>
+<Line Number="222">
+<![CDATA[Sts_Acked := Acked;]]>
+</Line>
+<Line Number="223">
+<![CDATA[Sts_AckReady := NOT AutoAckT.TT & NOT Acked;]]>
+</Line>
+<Line Number="224">
+<![CDATA[Sts_ResetReady := NOT AutoAckT.TT & InAlarm & Cfg_ResetReqd & (NOT Inp OR Inhibited);]]>
+</Line>
+<Line Number="225">
+<![CDATA[Sts_Inhibited := Inhibited;]]>
+</Line>
+<Line Number="226">
+<![CDATA[Sts_Shelved := Shelved;]]>
+</Line>
+<Line Number="227">
+<![CDATA[Sts_Suppressed := Suppressed;]]>
+</Line>
+<Line Number="228">
+<![CDATA[Sts_Disabled := Disabled;]]>
+</Line>
+<Line Number="229">
+<![CDATA[Sts_Exists := Cfg_Exists;]]>
+</Line>
+<Line Number="230">
+<![CDATA[]]>
+</Line>
+<Line Number="231">
+<![CDATA[if (NOT Inhibited) then]]>
+</Line>
+<Line Number="232">
+<![CDATA[	if (NOT Sts_Active & Sts_Acked) then]]>
+</Line>
+<Line Number="233">
+<![CDATA[		Val_State := 1;]]>
+</Line>
+<Line Number="234">
+<![CDATA[		]]>
+</Line>
+<Line Number="235">
+<![CDATA[	elsif (Sts_Active & NOT Sts_Acked) then]]>
+</Line>
+<Line Number="236">
+<![CDATA[		Val_State := 2;]]>
+</Line>
+<Line Number="237">
+<![CDATA[		]]>
+</Line>
+<Line Number="238">
+<![CDATA[	elsif (Sts_Active & Sts_Acked) then]]>
+</Line>
+<Line Number="239">
+<![CDATA[		Val_State := 3;]]>
+</Line>
+<Line Number="240">
+<![CDATA[		]]>
+</Line>
+<Line Number="241">
+<![CDATA[	elsif (NOT Sts_Active & NOT Sts_Acked) then]]>
+</Line>
+<Line Number="242">
+<![CDATA[		Val_State := 4;]]>
+</Line>
+<Line Number="243">
+<![CDATA[		]]>
+</Line>
+<Line Number="244">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="245">
+<![CDATA[else]]>
+</Line>
+<Line Number="246">
+<![CDATA[	if (Sts_Shelved) then]]>
+</Line>
+<Line Number="247">
+<![CDATA[		Val_State := 5;]]>
+</Line>
+<Line Number="248">
+<![CDATA[		]]>
+</Line>
+<Line Number="249">
+<![CDATA[	elsif (Sts_Suppressed) then]]>
+</Line>
+<Line Number="250">
+<![CDATA[		Val_State := 6;]]>
+</Line>
+<Line Number="251">
+<![CDATA[		]]>
+</Line>
+<Line Number="252">
+<![CDATA[	elsif (Sts_Disabled) then]]>
+</Line>
+<Line Number="253">
+<![CDATA[		Val_State := 7;]]>
+</Line>
+<Line Number="254">
+<![CDATA[		]]>
+</Line>
+<Line Number="255">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="256">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="257">
+<![CDATA[]]>
+</Line>
+<Line Number="258">
+<![CDATA[if(0 <= Val_State & Val_State <= 7) then]]>
+</Line>
+<Line Number="259">
+<![CDATA[	COP(Ref_Class.eStateLabel[Val_State], Local.StateLabel, 1);]]>
+</Line>
+<Line Number="260">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="261">
+<![CDATA[]]>
+</Line>
+<Line Number="262">
+<![CDATA[Out_Audible := (Out_Audible & AudibleEN & AlmOnT.TT & NOT OCmd_Silence & NOT Local.Cmd_Ack) OR (Sts_Active & NOT OSR.2);]]>
+</Line>
+<Line Number="263">
+<![CDATA[OSR.2 := Sts_Active;]]>
+</Line>
+<Line Number="264">
+<![CDATA[]]>
+</Line>
+<Line Number="265">
+<![CDATA[if (Local.ID <> 0) then]]>
+</Line>
+<Line Number="266">
+<![CDATA[	Local.Out_Assert := 1;]]>
+</Line>
+<Line Number="267">
+<![CDATA[	COP(Local, Ref_Class.List[Index], 1);]]>
+</Line>
+<Line Number="268">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="269">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_Alarm]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Init := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Op_Alarm"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_RTC_PulseGen"/>
+<Dependency Type="DataType" Name="ST_Sys_AlarmClass"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Str_Clear"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Str_Size"/>
+<Dependency Type="DataType" Name="STR_20"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

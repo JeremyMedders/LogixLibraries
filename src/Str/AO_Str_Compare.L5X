@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Compares Left string to Right string.
+
+Compares the first character of each string. If they are equal to each other, it continues with the following pairs until the characters differ or until a terminating null-character is reached.
+
+Return value:
+-1 :  the first character that does not match has a lower value in Left than in Right
+0 : the contents of both strings are equal
+1 : the first character that does not match has a greater value in Left than in Right-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Str_Compare" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T17:59:05.600Z" ContainsContext="true" ExportDate="Thu Jan 12 16:33:46 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="AO_Str_Compare" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-09-16T14:28:55.208Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:59:05.600Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Compares Left string to Right string.
+
+Compares the first character of each string. If they are equal to each other, it continues with the following pairs until the characters differ or until a terminating null-character is reached.
+
+Return value:
+-1 :  the first character that does not match has a lower value in Left than in Right
+0 : the contents of both strings are equal
+1 : the first character that does not match has a greater value in Left than in Right]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_LeftData" TagType="Base" DataType="SINT" Dimensions="1" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="Ref_RightData" TagType="Base" DataType="SINT" Dimensions="1" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="Val" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="RSize" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="RCh" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="LCh" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="LSize" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_String_Compare]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_LeftData, 0, LSize);]]>
+</Line>
+<Line Number="6">
+<![CDATA[SIZE(Ref_RightData, 0, RSize);]]>
+</Line>
+<Line Number="7">
+<![CDATA[Val := 0;]]>
+</Line>
+<Line Number="8">
+<![CDATA[i := 0;]]>
+</Line>
+<Line Number="9">
+<![CDATA[]]>
+</Line>
+<Line Number="10">
+<![CDATA[while (i < LSize & i < RSize) do]]>
+</Line>
+<Line Number="11">
+<![CDATA[	LCh := Ref_LeftData[i];]]>
+</Line>
+<Line Number="12">
+<![CDATA[	RCh := Ref_RightData[i];]]>
+</Line>
+<Line Number="13">
+<![CDATA[	]]>
+</Line>
+<Line Number="14">
+<![CDATA[	if (65 <= LCh & LCh <= 90) then]]>
+</Line>
+<Line Number="15">
+<![CDATA[		LCh := LCh + 32;]]>
+</Line>
+<Line Number="16">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="17">
+<![CDATA[	]]>
+</Line>
+<Line Number="18">
+<![CDATA[	if (65 <= RCh & RCh <= 90) then]]>
+</Line>
+<Line Number="19">
+<![CDATA[		RCh := RCh + 32;]]>
+</Line>
+<Line Number="20">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="21">
+<![CDATA[	]]>
+</Line>
+<Line Number="22">
+<![CDATA[	if (LCh < RCh) then]]>
+</Line>
+<Line Number="23">
+<![CDATA[		Val := -1;]]>
+</Line>
+<Line Number="24">
+<![CDATA[		i := LSize;]]>
+</Line>
+<Line Number="25">
+<![CDATA[	elsif (LCh > RCh) then]]>
+</Line>
+<Line Number="26">
+<![CDATA[		Val := 1;]]>
+</Line>
+<Line Number="27">
+<![CDATA[		i := LSize;]]>
+</Line>
+<Line Number="28">
+<![CDATA[	elsif (LCh = RCh) then]]>
+</Line>
+<Line Number="29">
+<![CDATA[		i := i + 1;]]>
+</Line>
+<Line Number="30">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="31">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="32">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
