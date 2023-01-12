@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Sys_WallClock" TargetType="DataType" ContainsContext="true" ExportDate="Thu Jan 12 15:05:57 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Sys_WallClock" TargetType="DataType" ContainsContext="true" ExportDate="Thu Jan 12 16:41:59 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_DT_Datetime" Family="NoFamily" Class="User">

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Sys_Node" TargetType="DataType" ContainsContext="true" ExportDate="Thu Jan 12 16:41:26 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_Sys_Identity" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="VendorID" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 1]]>
+</Description>
+</Member>
+<Member Name="DeviceType" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 2]]>
+</Description>
+</Member>
+<Member Name="ProductCode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 3]]>
+</Description>
+</Member>
+<Member Name="MajorRevision" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="MinorRevision" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="Status" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="SerialNumber" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 6]]>
+</Description>
+</Member>
+<Member Name="ProductName" DataType="STR_32" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_32"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_Sys_IOMap" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="ModuleType" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 1]]>
+</Description>
+</Member>
+<Member Name="Status" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4: Status.]]>
+</Description>
+</Member>
+<Member Name="StatusLabel" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4: Status string (derived).]]>
+</Description>
+</Member>
+<Member Name="LinkParent" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 8: Originator.]]>
+</Description>
+</Member>
+<Member Name="LinkPort" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 9: Originator port number.]]>
+</Description>
+</Member>
+<Member Name="LinkAddress" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Originator slot number.]]>
+</Description>
+</Member>
+<Member Name="MapAddress" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 13: Unique key for Symbol table.]]>
+</Description>
+</Member>
+<Member Name="MapInstance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 14: This instance number.]]>
+</Description>
+</Member>
+<Member Name="LinkLongAddress" DataType="STRING" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 18]]>
+</Description>
+</Member>
+<Member Name="Path" DataType="STRING" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 31: Endpoint path.]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_20"/>
+</Dependencies>
+</DataType>
+<DataType Use="Target" Name="ST_Sys_Node" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="Name" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Identity" DataType="ST_Sys_Identity" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="IOMap" DataType="ST_Sys_IOMap" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="ST_Sys_Identity"/>
+<Dependency Type="DataType" Name="ST_Sys_IOMap"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_20" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="20" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_32" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="32" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

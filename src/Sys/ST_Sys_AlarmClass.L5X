@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Sys_AlarmClass" TargetType="DataType" ContainsContext="true" ExportDate="Thu Jan 12 16:40:21 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_Op_Alarm" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="ProgramID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Type" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="TypeLabel" DataType="STR_16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Severity" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="SeverityLabel" DataType="STR_16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="UnshelveMin" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="UnshelveSec" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Condition" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LastOccurrence" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="State" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="StateLabel" DataType="STR_16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Cmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Composite command overlay.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Ack" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.0: Composite command to acknowledge an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.1: Composite command to reset an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Enable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.2: Composite command to enable an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Disable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.3: Composite command to Disable an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Suppress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.4: Composite command to suppress an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Shelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.5: Composite command to shelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Unshelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.6: Composite command to unshelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Silence" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.7: Composite command to silence an alarm.]]>
+</Description>
+</Member>
+<Member Name="Cmd_Test" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Cmd" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cmd.8: Composite command to test an alarm.]]>
+</Description>
+</Member>
+<Member Name="MCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Maintenance command overlay.]]>
+</Description>
+</Member>
+<Member Name="MCmd_Enable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.2: Maintenance command to enable an alarm.]]>
+</Description>
+</Member>
+<Member Name="MCmd_Disable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.3: Maintenance command to disable an alarm.]]>
+</Description>
+</Member>
+<Member Name="MCmd_Test" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.8: Maintenance command to test an alarm.]]>
+</Description>
+</Member>
+<Member Name="MCmd_EnableAudible" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.9: Maintenance command to enable audible output.]]>
+</Description>
+</Member>
+<Member Name="MCmd_DisableAudible" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MCmd" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MCmd.10: Maintenance command to disable audible output.]]>
+</Description>
+</Member>
+<Member Name="OCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Operator command overlay.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Ack" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.0: Operator command to acknowledge an alarm.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.1: Operator command to reset an alarm.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Shelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.5: Operator command to shelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Unshelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.6: Operator command to unshelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="OCmd_Silence" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OCmd" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OCmd.7: Operator command to silence an alarm.]]>
+</Description>
+</Member>
+<Member Name="PCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command overlay.]]>
+</Description>
+</Member>
+<Member Name="PCmd_Ack" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PCmd" BitNumber="0" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PCmd.0: Program command to acknowledge an alarm.]]>
+</Description>
+</Member>
+<Member Name="PCmd_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PCmd" BitNumber="1" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PCmd.1: Program command to reset an alarm.]]>
+</Description>
+</Member>
+<Member Name="PCmd_Suppress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PCmd" BitNumber="4" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PCmd.4: Program command to suppress an alarm.]]>
+</Description>
+</Member>
+<Member Name="PCmd_Unshelve" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PCmd" BitNumber="6" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PCmd.6: Program command to unshelve an alarm.]]>
+</Description>
+</Member>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Status overlay.]]>
+</Description>
+</Member>
+<Member Name="Sts_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="0" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.0: Alarm is active.]]>
+</Description>
+</Member>
+<Member Name="Sts_Acked" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="1" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.1: Alarm has been acknowledged.]]>
+</Description>
+</Member>
+<Member Name="Sts_AckReady" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="2" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.2: Alarm ready for acknowledge.]]>
+</Description>
+</Member>
+<Member Name="Sts_ResetReady" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="3" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.3: Alarm ready for reset.]]>
+</Description>
+</Member>
+<Member Name="Sts_Inhibited" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="4" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.4: Alarm has been shelved, suppressed, or disabled.]]>
+</Description>
+</Member>
+<Member Name="Sts_Shelved" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="5" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.5: Alarm has been shelved.]]>
+</Description>
+</Member>
+<Member Name="Sts_Suppressed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="6" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.6: Alarm has been suppressed.]]>
+</Description>
+</Member>
+<Member Name="Sts_Disabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="7" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.7: Alarm has been disabled.]]>
+</Description>
+</Member>
+<Member Name="Sts_Exists" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="8" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sts.8: Alarm exists.]]>
+</Description>
+</Member>
+<Member Name="Out" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Output overlay.]]>
+</Description>
+</Member>
+<Member Name="Out_Audible" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Out" BitNumber="0" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Out.0: Audible output.]]>
+</Description>
+</Member>
+<Member Name="Out_Assert" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Out" BitNumber="31" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Out.31: Object assertion of bus membership.]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="STR_16"/>
+</Dependencies>
+</DataType>
+<DataType Use="Target" Name="ST_Sys_AlarmClass" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Instances" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="Active" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms active.]]>
+</Description>
+</Member>
+<Member Name="AckReady" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms awaiting acknowledgement.]]>
+</Description>
+</Member>
+<Member Name="ResetReady" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms awaiting reset.]]>
+</Description>
+</Member>
+<Member Name="Inhibited" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms inhibited.]]>
+</Description>
+</Member>
+<Member Name="Shelved" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms shelved.]]>
+</Description>
+</Member>
+<Member Name="Suppressed" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms suppressed.]]>
+</Description>
+</Member>
+<Member Name="Disabled" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarms disabled.]]>
+</Description>
+</Member>
+<Member Name="Critical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Critical severity alarms.]]>
+</Description>
+</Member>
+<Member Name="High" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[High severity alarms.]]>
+</Description>
+</Member>
+<Member Name="Medium" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Medium severity alarms.]]>
+</Description>
+</Member>
+<Member Name="Low" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Low severity alarms.]]>
+</Description>
+</Member>
+<Member Name="eState_Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: Undefined]]>
+</Description>
+</Member>
+<Member Name="eState_Normal" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1: Normal]]>
+</Description>
+</Member>
+<Member Name="eState_Active" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2: Active]]>
+</Description>
+</Member>
+<Member Name="eState_Acked" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3: Acked]]>
+</Description>
+</Member>
+<Member Name="eState_NormalUnack" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4: Normal, Unacked]]>
+</Description>
+</Member>
+<Member Name="eState_Shelved" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5: Shelved]]>
+</Description>
+</Member>
+<Member Name="eState_Suppressed" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[6: Suppressed]]>
+</Description>
+</Member>
+<Member Name="eState_Disabled" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[7: Disabled]]>
+</Description>
+</Member>
+<Member Name="eStateLabel" DataType="STR_16" Dimension="8" Radix="NullType" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="eType_Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: Undefined]]>
+</Description>
+</Member>
+<Member Name="eType_General" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1: General]]>
+</Description>
+</Member>
+<Member Name="eType_Device" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2: Device]]>
+</Description>
+</Member>
+<Member Name="eType_Electrical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3: Electrical]]>
+</Description>
+</Member>
+<Member Name="eType_External" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4: External]]>
+</Description>
+</Member>
+<Member Name="eType_Mechanical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5: Mechanical]]>
+</Description>
+</Member>
+<Member Name="eType_Operational" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[6: Operational]]>
+</Description>
+</Member>
+<Member Name="eType_Process" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[7: Process]]>
+</Description>
+</Member>
+<Member Name="eType_Protective" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[8: Protective]]>
+</Description>
+</Member>
+<Member Name="eType_Safety" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[9: Safety]]>
+</Description>
+</Member>
+<Member Name="eTypeLabel" DataType="STR_16" Dimension="10" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="eSeverity_Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: Undefined]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Info" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1: Info]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Advisory" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2: Advisory]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Low" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3: Low]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Medium" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4: Medium]]>
+</Description>
+</Member>
+<Member Name="eSeverity_High" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5: High]]>
+</Description>
+</Member>
+<Member Name="eSeverity_Critical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[6: Critical]]>
+</Description>
+</Member>
+<Member Name="eSeverityLabel" DataType="STR_16" Dimension="7" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="List" DataType="ST_Op_Alarm" Dimension="128" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ListCapacity" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only"/>
+<Member Name="LocalSortable" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="ST_Op_Alarm"/>
+<Dependency Type="DataType" Name="STR_20"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_16" Family="StringFamily" Class="User">
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="16" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_20" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="20" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
