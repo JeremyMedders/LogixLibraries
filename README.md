@@ -20,7 +20,7 @@ Parameter naming follows PlantPAx, where sensible:
 
 AOIs/UDTs (AO_/ST_) built as classes:
 ------------
-- Dvc: Device drivers. Each of these embed an AO_Sys_Dvc that automagically handles registering it and reporting status to its parent AO_Sys_DvcClass.
+- Dvc: Device drivers. Each of these embed an AO_Sys_Dvc that automagically handles registration and reporting to its parent AO_Sys_DvcClass.
 - Math: Assorted function blocks.
 - MBTCP: Modbus TCP client driver.
 - Op: Lightweight PAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PAx counterpart. 
