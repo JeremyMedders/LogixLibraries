@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Template_OverlaySINT" TargetType="DataType" ContainsContext="true" ExportDate="Thu Jan 12 14:00:57 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="ST_Template_OverlaySINT" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Status" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status (overlay).]]>
+</Description>
+</Member>
+<Member Name="StatusBit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.0: Description]]>
+</Description>
+</Member>
+<Member Name="StatusBit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.1: Description]]>
+</Description>
+</Member>
+<Member Name="StatusBit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.2: Description]]>
+</Description>
+</Member>
+<Member Name="StatusBit3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.3: Description]]>
+</Description>
+</Member>
+<Member Name="StatusBit4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.4: Description]]>
+</Description>
+</Member>
+<Member Name="StatusBit5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.5: Description]]>
+</Description>
+</Member>
+<Member Name="StatusBit6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.6: Description]]>
+</Description>
+</Member>
+<Member Name="StatusBit7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.7: Description]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
