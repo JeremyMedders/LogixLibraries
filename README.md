@@ -28,6 +28,7 @@ AOIs/UDTs (AO_/ST_) built as classes:
 - RTC: Precision pulse/timing utilites.
 - Str: String utilities.
 - Sys: System diagnostics, WallClock utility/formatting generator, ISA 18.2 alarming with its parent "class", and other utilities.
+- UI: HMI helper blocks. Includes List Selector object with support for variable rows and unlimited columns of data.
 
 UDTs follow the corresponding AOI in name:
 - ST_Dvc_abc
