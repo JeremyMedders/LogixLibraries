@@ -32,6 +32,11 @@ UDTs (ST_) follow the AOI grouping in name:
 - And so on.
 - External access (Read, Read/Write, None) are set where sensible.
 
+Variants. Depending on use case, some of the features of an AOI will go unused. Tentatively, I think a simple suffix to the block name could differentiate it from others. Example:
+- AO_Dvc_PF525: Full features. Drive parameters managed and updated dynamically from the PLC using added Class 3 messaging.
+- AO_Dvc_PF525_L: Light version. Block capable of running the device but limited to the scope of its Class 1 connection data.
+- Both of these would still contain an "Op" strategy Command Source block and identitical core .Local data to keep overall UDT sprawl to a minimum.
+
 Will also be including:
 - some UDT templates to aid others in implementing the useful BIT overlay construct.
 - some explanatory documentation about known working L5X attribute values.
