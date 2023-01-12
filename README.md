@@ -14,6 +14,7 @@ Parameter naming follows PlantPAx standards, where sensible:
 - Cfg_
 - Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
 - Rdy_: Avoided in favor of consolidating under the Sts_ prefix.
+- At times, parameter names were modified for consistency / anti-ambiguity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
 AOIs (AO_) are organized into groups:
