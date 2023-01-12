@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_RTD" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T17:55:29.272Z" ContainsContext="true" ExportDate="Thu Jan 12 15:31:20 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="AO_Math_RTD" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-22T20:44:41.211Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:55:29.272Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Ohms" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Temperature" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Coef" DataType="REAL" Dimensions="8" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[-2.45190000e+002,2.52929997e+000,-6.60459995e-002,4.04219981e-003,-2.06970000e-006,-2.54219994e-002,1.68830000e-003,-1.36009999e-006]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="8" Radix="Float">
+<Element Index="[0]" Value="-245.19"/>
+<Element Index="[1]" Value="2.5293"/>
+<Element Index="[2]" Value="-0.066046"/>
+<Element Index="[3]" Value="0.0040422"/>
+<Element Index="[4]" Value="-2.06970000e-006"/>
+<Element Index="[5]" Value="-0.025422"/>
+<Element Index="[6]" Value="0.0016883"/>
+<Element Index="[7]" Value="-1.36009999e-006"/>
+</Array>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Math_RTD]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Computes the RTD response over a greater range and with]]>
+</Line>
+<Line Number="5">
+<![CDATA[	greater accuracy than the cubic, quadratic, and linear]]>
+</Line>
+<Line Number="6">
+<![CDATA[	fits. This function also interpolates the RTD input more]]>
+</Line>
+<Line Number="7">
+<![CDATA[	smoothly than simpler polynomials used in other functions.]]>
+</Line>
+<Line Number="8">
+<![CDATA[*/]]>
+</Line>
+<Line Number="9">
+<![CDATA[]]>
+</Line>
+<Line Number="10">
+<![CDATA[Val_Temperature := Coef[0] + ]]>
+</Line>
+<Line Number="11">
+<![CDATA[	(Inp_Ohms * (Coef[1] + Inp_Ohms * (Coef[2] + Inp_Ohms * (Coef[3] + Coef[4] * Inp_Ohms))))]]>
+</Line>
+<Line Number="12">
+<![CDATA[	/ (1.0 + Inp_Ohms * (Coef[5] + Inp_Ohms * (Coef[6] + Coef[7] * Inp_Ohms)));]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

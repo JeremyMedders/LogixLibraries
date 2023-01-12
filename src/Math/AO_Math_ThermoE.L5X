@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Type E Thermocouple-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_ThermoE" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T18:03:59.592Z" ContainsContext="true" ExportDate="Thu Jan 12 15:31:31 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="AO_Math_ThermoE" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-05-27T22:07:24.862Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T18:03:59.592Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Type E Thermocouple]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Voltage" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Measured voltage across the thermocouple wires (millivolts).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_JunctionTemp" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Temperature of the reference (cold) junction (Celsius).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Temperature" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Temperature of the hot junction (Celsius).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="TC_E_VoltToT_B" DataType="REAL" Dimensions="10" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0.00000000e+000,1.70570354e+001,-2.33017594e-001,6.54355856e-003,-7.35627473e-005,-1.78960011e-006,8.40361665e-008,-1.37358791e-009,1.06298234e-011,-3.24470878e-014]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="10" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="17.057035"/>
+<Element Index="[2]" Value="-0.2330176"/>
+<Element Index="[3]" Value="6.54355856e-003"/>
+<Element Index="[4]" Value="-7.35627473e-005"/>
+<Element Index="[5]" Value="-1.78960011e-006"/>
+<Element Index="[6]" Value="8.40361665e-008"/>
+<Element Index="[7]" Value="-1.37358791e-009"/>
+<Element Index="[8]" Value="1.06298234e-011"/>
+<Element Index="[9]" Value="-3.24470878e-014"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TC_E_VoltToT_A" DataType="REAL" Dimensions="9" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0.00000000e+000,1.69772873e+001,-4.35149699e-001,-1.58596963e-001,-9.25028697e-002,-2.60843132e-002,-4.13601985e-003,-3.40340310e-004,-1.15648900e-005]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="9" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="16.977287"/>
+<Element Index="[2]" Value="-0.4351497"/>
+<Element Index="[3]" Value="-0.15859696"/>
+<Element Index="[4]" Value="-0.09250287"/>
+<Element Index="[5]" Value="-0.026084313"/>
+<Element Index="[6]" Value="-0.00413602"/>
+<Element Index="[7]" Value="-3.40340310e-004"/>
+<Element Index="[8]" Value="-1.15648900e-005"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TC_E_TempToV_B" DataType="REAL" Dimensions="11" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0.00000000e+000,5.86655100e-002,4.50322768e-005,2.89084063e-008,-3.30568961e-010,6.50244019e-013,-1.91974962e-016,-1.25366000e-018,2.14892173e-021,-1.43880419e-024,3.59608989e-028]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="11" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="0.05866551"/>
+<Element Index="[2]" Value="4.50322768e-005"/>
+<Element Index="[3]" Value="2.89084063e-008"/>
+<Element Index="[4]" Value="-3.30568961e-010"/>
+<Element Index="[5]" Value="6.50244019e-013"/>
+<Element Index="[6]" Value="-1.91974962e-016"/>
+<Element Index="[7]" Value="-1.25366000e-018"/>
+<Element Index="[8]" Value="2.14892173e-021"/>
+<Element Index="[9]" Value="-1.43880419e-024"/>
+<Element Index="[10]" Value="3.59608989e-028"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TC_E_TempToV_A" DataType="REAL" Dimensions="14" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0.00000000e+000,5.86655100e-002,4.54109759e-005,-7.79980496e-007,-2.58001600e-008,-5.94525817e-010,-9.32140563e-012,-1.02876061e-013,-8.03701230e-016,-4.39794974e-018,-1.64147756e-020,-3.96736198e-023,-5.58273288e-026,-3.46578406e-029]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="14" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="0.05866551"/>
+<Element Index="[2]" Value="4.54109759e-005"/>
+<Element Index="[3]" Value="-7.79980496e-007"/>
+<Element Index="[4]" Value="-2.58001600e-008"/>
+<Element Index="[5]" Value="-5.94525817e-010"/>
+<Element Index="[6]" Value="-9.32140563e-012"/>
+<Element Index="[7]" Value="-1.02876061e-013"/>
+<Element Index="[8]" Value="-8.03701230e-016"/>
+<Element Index="[9]" Value="-4.39794974e-018"/>
+<Element Index="[10]" Value="-1.64147756e-020"/>
+<Element Index="[11]" Value="-3.96736198e-023"/>
+<Element Index="[12]" Value="-5.58273288e-026"/>
+<Element Index="[13]" Value="-3.46578406e-029"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="VoltageCJ" DataType="REAL" Radix="Float" ExternalAccess="None">
+<Description>
+<![CDATA[Cold junction compensation voltage.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="VoltageComp" DataType="REAL" Radix="Float" ExternalAccess="None">
+<Description>
+<![CDATA[Compensated voltage sum.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Math_ThermoE]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Type E Thermocouple]]>
+</Line>
+<Line Number="5">
+<![CDATA[	https://srdata.nist.gov/its90/download/type_e.tab]]>
+</Line>
+<Line Number="6">
+<![CDATA[*/]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+<Line Number="8">
+<![CDATA[if (Inp_JunctionTemp >= -270.0 & Inp_JunctionTemp < 0.0) then]]>
+</Line>
+<Line Number="9">
+<![CDATA[	VoltageCJ := TC_E_TempToV_A[0]]]>
+</Line>
+<Line Number="10">
+<![CDATA[		+ TC_E_TempToV_A[1] * Inp_JunctionTemp]]>
+</Line>
+<Line Number="11">
+<![CDATA[		+ TC_E_TempToV_A[2] * (Inp_JunctionTemp ** 2.0)]]>
+</Line>
+<Line Number="12">
+<![CDATA[		+ TC_E_TempToV_A[3] * (Inp_JunctionTemp ** 3.0)]]>
+</Line>
+<Line Number="13">
+<![CDATA[		+ TC_E_TempToV_A[4] * (Inp_JunctionTemp ** 4.0)]]>
+</Line>
+<Line Number="14">
+<![CDATA[		+ TC_E_TempToV_A[5] * (Inp_JunctionTemp ** 5.0)]]>
+</Line>
+<Line Number="15">
+<![CDATA[		+ TC_E_TempToV_A[6] * (Inp_JunctionTemp ** 6.0)]]>
+</Line>
+<Line Number="16">
+<![CDATA[		+ TC_E_TempToV_A[7] * (Inp_JunctionTemp ** 7.0)]]>
+</Line>
+<Line Number="17">
+<![CDATA[		+ TC_E_TempToV_A[8] * (Inp_JunctionTemp ** 8.0)]]>
+</Line>
+<Line Number="18">
+<![CDATA[		+ TC_E_TempToV_A[9] * (Inp_JunctionTemp ** 9.0)]]>
+</Line>
+<Line Number="19">
+<![CDATA[		+ TC_E_TempToV_A[10] * (Inp_JunctionTemp ** 10.0)]]>
+</Line>
+<Line Number="20">
+<![CDATA[		+ TC_E_TempToV_A[11] * (Inp_JunctionTemp ** 11.0)]]>
+</Line>
+<Line Number="21">
+<![CDATA[		+ TC_E_TempToV_A[12] * (Inp_JunctionTemp ** 12.0)]]>
+</Line>
+<Line Number="22">
+<![CDATA[		+ TC_E_TempToV_A[13] * (Inp_JunctionTemp ** 13.0);]]>
+</Line>
+<Line Number="23">
+<![CDATA[		]]>
+</Line>
+<Line Number="24">
+<![CDATA[elsif (Inp_JunctionTemp >= 0.0 & Inp_JunctionTemp <= 1000.0) then]]>
+</Line>
+<Line Number="25">
+<![CDATA[	VoltageCJ := TC_E_TempToV_B[0]]]>
+</Line>
+<Line Number="26">
+<![CDATA[		+ TC_E_TempToV_B[1] * Inp_JunctionTemp]]>
+</Line>
+<Line Number="27">
+<![CDATA[		+ TC_E_TempToV_B[2] * (Inp_JunctionTemp ** 2.0)]]>
+</Line>
+<Line Number="28">
+<![CDATA[		+ TC_E_TempToV_B[3] * (Inp_JunctionTemp ** 3.0)]]>
+</Line>
+<Line Number="29">
+<![CDATA[		+ TC_E_TempToV_B[4] * (Inp_JunctionTemp ** 4.0)]]>
+</Line>
+<Line Number="30">
+<![CDATA[		+ TC_E_TempToV_B[5] * (Inp_JunctionTemp ** 5.0)]]>
+</Line>
+<Line Number="31">
+<![CDATA[		+ TC_E_TempToV_B[6] * (Inp_JunctionTemp ** 6.0)]]>
+</Line>
+<Line Number="32">
+<![CDATA[		+ TC_E_TempToV_B[7] * (Inp_JunctionTemp ** 7.0)]]>
+</Line>
+<Line Number="33">
+<![CDATA[		+ TC_E_TempToV_B[8] * (Inp_JunctionTemp ** 8.0)]]>
+</Line>
+<Line Number="34">
+<![CDATA[		+ TC_E_TempToV_B[9] * (Inp_JunctionTemp ** 9.0)]]>
+</Line>
+<Line Number="35">
+<![CDATA[		+ TC_E_TempToV_B[10] * (Inp_JunctionTemp ** 10.0);]]>
+</Line>
+<Line Number="36">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="37">
+<![CDATA[]]>
+</Line>
+<Line Number="38">
+<![CDATA[VoltageComp := Inp_Voltage + VoltageCJ;]]>
+</Line>
+<Line Number="39">
+<![CDATA[]]>
+</Line>
+<Line Number="40">
+<![CDATA[if (VoltageComp >= -8.825 & VoltageComp < 0.0) then]]>
+</Line>
+<Line Number="41">
+<![CDATA[	Val_Temperature := TC_E_VoltToT_A[0]]]>
+</Line>
+<Line Number="42">
+<![CDATA[		+ TC_E_VoltToT_A[1] * VoltageComp]]>
+</Line>
+<Line Number="43">
+<![CDATA[		+ TC_E_VoltToT_A[2] * (VoltageComp ** 2.0)]]>
+</Line>
+<Line Number="44">
+<![CDATA[		+ TC_E_VoltToT_A[3] * (VoltageComp ** 3.0)]]>
+</Line>
+<Line Number="45">
+<![CDATA[		+ TC_E_VoltToT_A[4] * (VoltageComp ** 4.0)]]>
+</Line>
+<Line Number="46">
+<![CDATA[		+ TC_E_VoltToT_A[5] * (VoltageComp ** 5.0)]]>
+</Line>
+<Line Number="47">
+<![CDATA[		+ TC_E_VoltToT_A[6] * (VoltageComp ** 6.0)]]>
+</Line>
+<Line Number="48">
+<![CDATA[		+ TC_E_VoltToT_A[7] * (VoltageComp ** 7.0)]]>
+</Line>
+<Line Number="49">
+<![CDATA[		+ TC_E_VoltToT_A[8] * (VoltageComp ** 8.0);]]>
+</Line>
+<Line Number="50">
+<![CDATA[		]]>
+</Line>
+<Line Number="51">
+<![CDATA[elsif (VoltageComp >= 0.0 & VoltageComp <= 76.373) then]]>
+</Line>
+<Line Number="52">
+<![CDATA[	Val_Temperature := TC_E_VoltToT_B[0]]]>
+</Line>
+<Line Number="53">
+<![CDATA[		+ TC_E_VoltToT_B[1] * VoltageComp]]>
+</Line>
+<Line Number="54">
+<![CDATA[		+ TC_E_VoltToT_B[2] * (VoltageComp ** 2.0)]]>
+</Line>
+<Line Number="55">
+<![CDATA[		+ TC_E_VoltToT_B[3] * (VoltageComp ** 3.0)]]>
+</Line>
+<Line Number="56">
+<![CDATA[		+ TC_E_VoltToT_B[4] * (VoltageComp ** 4.0)]]>
+</Line>
+<Line Number="57">
+<![CDATA[		+ TC_E_VoltToT_B[5] * (VoltageComp ** 5.0)]]>
+</Line>
+<Line Number="58">
+<![CDATA[		+ TC_E_VoltToT_B[6] * (VoltageComp ** 6.0)]]>
+</Line>
+<Line Number="59">
+<![CDATA[		+ TC_E_VoltToT_B[7] * (VoltageComp ** 7.0)]]>
+</Line>
+<Line Number="60">
+<![CDATA[		+ TC_E_VoltToT_B[8] * (VoltageComp ** 8.0)]]>
+</Line>
+<Line Number="61">
+<![CDATA[		+ TC_E_VoltToT_B[9] * (VoltageComp ** 9.0);	]]>
+</Line>
+<Line Number="62">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="63">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
