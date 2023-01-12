@@ -23,9 +23,9 @@ AOIs (AO_) are organized into groups:
 - Msg: Message utilities
 - RTC: Precision pulse/timing utilites
 - Str: String utilities
-- Sys: System diagnostic classes and utilities
+- Sys: System diagnostic "classes", ISA 18.2 alarming and its "class",  and utilities
 
-UDTs (ST_) follow the AOI grouping:
+UDTs (ST_) follow the AOI grouping in name:
 - ST_Dvc_
 - ST_Sys_
 - And so on.
