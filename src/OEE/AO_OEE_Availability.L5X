@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Used to track the runtime and starts for equipment.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_OEE_Availability" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T22:02:47.842Z" ContainsContext="true" ExportDate="Thu Jan 12 16:02:59 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_OEE_Availability" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Starts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RunTime" DataType="ST_OEE_TimeElapsed" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MaxRunTime" DataType="ST_OEE_TimeElapsed" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TotalRunTime" DataType="ST_OEE_TimeElapsed" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="IdleTime" DataType="ST_OEE_TimeElapsed" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DownTime" DataType="ST_OEE_TimeElapsed" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_OEE_TimeElapsed" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Hours" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Minutes" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Seconds" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="AO_RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T16:23:44.408Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Generates precision pulses on configurable intervals.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Interval" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulse interval (milliseconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TStart" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TNow" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_RTC_PulseGen]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Generates precision pulses on configurable intervals.]]>
+</Line>
+<Line Number="5">
+<![CDATA[*/]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[GSV(WallClockTime, , CurrentValue, TNow);]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[if (Inp_Enable & NOT OSR OR Out) then]]>
+</Line>
+<Line Number="10">
+<![CDATA[	TStart := TNow;]]>
+</Line>
+<Line Number="11">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="12">
+<![CDATA[OSR := Inp_Enable;]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
+</Line>
+<Line Number="14">
+<![CDATA[Sts_Enabled := Inp_Enable;]]>
+</Line>
+<Line Number="15">
+<![CDATA[Out := Inp_Enable & (TNow - TStart >= Inp_Interval * 1000);]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_RTC_PulseGen]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[OSR := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Out := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_OEE_IncT" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-31T00:00:23.191Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:55:47.447Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_ElapsedT" TagType="Base" DataType="ST_OEE_TimeElapsed" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_OEE_TIncrement]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Ref_ElapsedT.Seconds := Ref_ElapsedT.Seconds + 1;]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (Ref_ElapsedT.Seconds >= 60) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	Ref_ElapsedT.Minutes := Ref_ElapsedT.Minutes + 1;]]>
+</Line>
+<Line Number="9">
+<![CDATA[	Ref_ElapsedT.Seconds := 0;]]>
+</Line>
+<Line Number="10">
+<![CDATA[	]]>
+</Line>
+<Line Number="11">
+<![CDATA[	if (Ref_ElapsedT.Minutes >= 60) then]]>
+</Line>
+<Line Number="12">
+<![CDATA[		Ref_ElapsedT.Hours := Ref_ElapsedT.Hours + 1;]]>
+</Line>
+<Line Number="13">
+<![CDATA[		Ref_ElapsedT.Minutes := 0;]]>
+</Line>
+<Line Number="14">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="15">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_OEE_ResetT" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-03-09T23:03:39.535Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:56:06.325Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Time" TagType="Base" DataType="ST_OEE_TimeElapsed" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_OEE_ResetTime]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Ref_Time.Hours := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Ref_Time.Minutes := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[Ref_Time.Seconds := 0;]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_OEE_TimeElapsed"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="AO_OEE_Availability" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-29T14:44:01.278Z" CreatedBy="Not Available" EditedDate="2023-01-12T22:02:47.842Z" EditedBy="RLCCONTROLS\jrogers"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Used to track the runtime and starts for equipment.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Active" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.0" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The equipment module is in the running state.]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Idle" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.1" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The equipment module is in the idle state.]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Down" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.2" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The equipment module is down.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_ClearStarts" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.0" Required="false" Visible="true" ExternalAccess="None">
+<Description>
+<![CDATA[Program command to clear the start count.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_ClearMax" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.1" Required="false" Visible="true" ExternalAccess="None">
+<Description>
+<![CDATA[Program command to clear the max runtime.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_ClearTotal" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.2" Required="false" Visible="true" ExternalAccess="None">
+<Description>
+<![CDATA[Program command to clear the total runtime.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_ClearIdle" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.3" Required="false" Visible="true" ExternalAccess="None">
+<Description>
+<![CDATA[Program command to clear the idle time.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_ClearDown" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.4" Required="false" Visible="true" ExternalAccess="None">
+<Description>
+<![CDATA[Program command to clear the downtime.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_ClearAll" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.5" Required="false" Visible="true" ExternalAccess="None">
+<Description>
+<![CDATA[Program command to clear all counters.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_ClearStarts" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.0" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Maintenance command to clear the start count.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_ClearTotal" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.1" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Maintenance command to clear the total runtime.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_ClearMax" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.2" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Maintenance command to clear the max runtime.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_ClearIdle" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.3" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Maintenance command to clear the idle time.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_ClearDown" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.4" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Maintenance command to clear the downtime.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_ClearAll" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.5" Required="false" Visible="false" ExternalAccess="None">
+<Description>
+<![CDATA[Maintenance command to clear all counters.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Active" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Sts.0" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Runtime is accumulating.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Idle" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Sts.1" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Idle time is accumulating.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Down" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Sts.2" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Downtime is accumulating.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_Starts" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.Starts" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The number of equipment starts.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_Hours" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.RunTime.Hours" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current runtime (hours).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_Minutes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.RunTime.Minutes" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current runtime (minutes).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_Seconds" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.RunTime.Seconds" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current runtime (hours).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_MaxHours" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.MaxRunTime.Hours" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Highest continuous runtime (hours).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_MaxMinutes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.MaxRunTime.Minutes" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Highest continuous runtime (minutes).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_MaxSeconds" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.MaxRunTime.Seconds" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Highest continuous runtime (seconds).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_TotalHours" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.TotalRunTime.Hours" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Total runtime (hours).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_TotalMinutes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.TotalRunTime.Minutes" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Total runtime (minutes).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_TotalSeconds" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.TotalRunTime.Seconds" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Total runtime (seconds).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_IdleHours" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.IdleTime.Hours" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Total idle time (hours).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_IdleMinutes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.IdleTime.Minutes" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Total idle time (minutes).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_IdleSeconds" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.IdleTime.Seconds" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Total idle time (seconds).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_DownHours" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.DownTime.Hours" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current downtime (hours).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_DownMinutes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.DownTime.Minutes" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current downtime (minutes).]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_DownSeconds" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data.DownTime.Seconds" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current downtime (seconds).]]>
+</Description>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="PG" DataType="AO_RTC_PulseGen" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_RTC_PulseGen">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Interval" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Sts_Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Data" DataType="ST_OEE_Availability" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[0,[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="ST_OEE_Availability">
+<DataValueMember Name="Starts" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="RunTime" DataType="ST_OEE_TimeElapsed">
+<DataValueMember Name="Hours" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Minutes" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Seconds" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+<StructureMember Name="MaxRunTime" DataType="ST_OEE_TimeElapsed">
+<DataValueMember Name="Hours" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Minutes" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Seconds" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+<StructureMember Name="TotalRunTime" DataType="ST_OEE_TimeElapsed">
+<DataValueMember Name="Hours" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Minutes" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Seconds" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+<StructureMember Name="IdleTime" DataType="ST_OEE_TimeElapsed">
+<DataValueMember Name="Hours" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Minutes" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Seconds" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+<StructureMember Name="DownTime" DataType="ST_OEE_TimeElapsed">
+<DataValueMember Name="Hours" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Minutes" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Seconds" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="IncT" DataType="AO_OEE_IncT" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_OEE_IncT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PCmd" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="MCmd" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Inp" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Cmd" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ResetT" DataType="AO_OEE_ResetT" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_OEE_ResetT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Sts" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_OEE_Availability]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Sts_Active := Inp_Active & NOT Inp_Down;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Sts_Idle := Inp_Idle & NOT (Inp_Active OR Inp_Down);]]>
+</Line>
+<Line Number="7">
+<![CDATA[Sts_Down := Inp_Down;]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[/*]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Command Map]]>
+</Line>
+<Line Number="11">
+<![CDATA[	• Cmd.0: Clear starts]]>
+</Line>
+<Line Number="12">
+<![CDATA[	• Cmd.1: Clear max]]>
+</Line>
+<Line Number="13">
+<![CDATA[	• Cmd.2: Clear total]]>
+</Line>
+<Line Number="14">
+<![CDATA[	• Cmd.3: Clear idle]]>
+</Line>
+<Line Number="15">
+<![CDATA[	• Cmd.4: Clear down]]>
+</Line>
+<Line Number="16">
+<![CDATA[	• Cmd.5: Clear all]]>
+</Line>
+<Line Number="17">
+<![CDATA[*/]]>
+</Line>
+<Line Number="18">
+<![CDATA[]]>
+</Line>
+<Line Number="19">
+<![CDATA[Cmd := PCmd OR MCmd;]]>
+</Line>
+<Line Number="20">
+<![CDATA[]]>
+</Line>
+<Line Number="21">
+<![CDATA[if ((Cmd.0 OR Cmd.5) & NOT OSR.0) then]]>
+</Line>
+<Line Number="22">
+<![CDATA[	Data.Starts := 0;]]>
+</Line>
+<Line Number="23">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="24">
+<![CDATA[OSR.0 := Cmd.0 OR Cmd.5;]]>
+</Line>
+<Line Number="25">
+<![CDATA[]]>
+</Line>
+<Line Number="26">
+<![CDATA[if ((NOT Sts_Active OR Cmd.5) & NOT OSR.1) then]]>
+</Line>
+<Line Number="27">
+<![CDATA[	AO_OEE_ResetT(ResetT, Data.RunTime);]]>
+</Line>
+<Line Number="28">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="29">
+<![CDATA[OSR.1 := NOT Sts_Active OR Cmd.5;]]>
+</Line>
+<Line Number="30">
+<![CDATA[]]>
+</Line>
+<Line Number="31">
+<![CDATA[if ((Cmd.1 OR Cmd.5) & NOT OSR.2) then]]>
+</Line>
+<Line Number="32">
+<![CDATA[	AO_OEE_ResetT(ResetT, Data.MaxRunTime);]]>
+</Line>
+<Line Number="33">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="34">
+<![CDATA[OSR.2 := Cmd.1 OR Cmd.5;]]>
+</Line>
+<Line Number="35">
+<![CDATA[]]>
+</Line>
+<Line Number="36">
+<![CDATA[if ((Cmd.2 OR Cmd.5) & NOT OSR.3) then]]>
+</Line>
+<Line Number="37">
+<![CDATA[	AO_OEE_ResetT(ResetT, Data.TotalRunTime);]]>
+</Line>
+<Line Number="38">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="39">
+<![CDATA[OSR.3 := Cmd.2 OR Cmd.5;]]>
+</Line>
+<Line Number="40">
+<![CDATA[]]>
+</Line>
+<Line Number="41">
+<![CDATA[if ((Cmd.3 OR Cmd.5) & NOT OSR.4) then]]>
+</Line>
+<Line Number="42">
+<![CDATA[	AO_OEE_ResetT(ResetT, Data.IdleTime);]]>
+</Line>
+<Line Number="43">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="44">
+<![CDATA[OSR.4 := Cmd.3 OR Cmd.5;]]>
+</Line>
+<Line Number="45">
+<![CDATA[]]>
+</Line>
+<Line Number="46">
+<![CDATA[if ((Cmd.4 OR Cmd.5) & NOT OSR.5) then]]>
+</Line>
+<Line Number="47">
+<![CDATA[	AO_OEE_ResetT(ResetT, Data.DownTime);]]>
+</Line>
+<Line Number="48">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="49">
+<![CDATA[OSR.5 := Cmd.4 OR Cmd.5;]]>
+</Line>
+<Line Number="50">
+<![CDATA[]]>
+</Line>
+<Line Number="51">
+<![CDATA[/*]]>
+</Line>
+<Line Number="52">
+<![CDATA[	Increment starts]]>
+</Line>
+<Line Number="53">
+<![CDATA[*/]]>
+</Line>
+<Line Number="54">
+<![CDATA[if (Sts_Active & NOT OSR.7) then]]>
+</Line>
+<Line Number="55">
+<![CDATA[	Data.Starts := Data.Starts + 1;]]>
+</Line>
+<Line Number="56">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="57">
+<![CDATA[OSR.7 := Sts_Active;]]>
+</Line>
+<Line Number="58">
+<![CDATA[]]>
+</Line>
+<Line Number="59">
+<![CDATA[PG.Inp_Interval := 1000;]]>
+</Line>
+<Line Number="60">
+<![CDATA[PG.Inp_Enable := (Sts <> 0);]]>
+</Line>
+<Line Number="61">
+<![CDATA[AO_RTC_PulseGen(PG);]]>
+</Line>
+<Line Number="62">
+<![CDATA[]]>
+</Line>
+<Line Number="63">
+<![CDATA[if (PG.Out) then]]>
+</Line>
+<Line Number="64">
+<![CDATA[	if (Sts_Active) then]]>
+</Line>
+<Line Number="65">
+<![CDATA[		AO_OEE_IncT(IncT, Data.RunTime);]]>
+</Line>
+<Line Number="66">
+<![CDATA[		AO_OEE_IncT(IncT, Data.TotalRunTime);]]>
+</Line>
+<Line Number="67">
+<![CDATA[		]]>
+</Line>
+<Line Number="68">
+<![CDATA[		if (Data.RunTime.Hours = Data.MaxRunTime.Hours) then]]>
+</Line>
+<Line Number="69">
+<![CDATA[			if (Data.RunTime.Minutes = Data.MaxRunTime.Minutes) then]]>
+</Line>
+<Line Number="70">
+<![CDATA[				if (Data.RunTime.Seconds > Data.MaxRunTime.Seconds) then]]>
+</Line>
+<Line Number="71">
+<![CDATA[						Data.MaxRunTime.Seconds := Data.RunTime.Seconds;]]>
+</Line>
+<Line Number="72">
+<![CDATA[				end_if;]]>
+</Line>
+<Line Number="73">
+<![CDATA[			elsif (Data.RunTime.Minutes > Data.MaxRunTime.Minutes) then]]>
+</Line>
+<Line Number="74">
+<![CDATA[					Data.MaxRunTime.Minutes := Data.RunTime.Minutes;]]>
+</Line>
+<Line Number="75">
+<![CDATA[					Data.MaxRunTime.Seconds := 0;]]>
+</Line>
+<Line Number="76">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="77">
+<![CDATA[		elsif (Data.RunTime.Hours > Data.MaxRunTime.Hours) then]]>
+</Line>
+<Line Number="78">
+<![CDATA[			Data.MaxRunTime.Hours := Data.RunTime.Hours;]]>
+</Line>
+<Line Number="79">
+<![CDATA[			Data.MaxRunTime.Minutes := 0;]]>
+</Line>
+<Line Number="80">
+<![CDATA[			Data.MaxRunTime.Seconds := 0;]]>
+</Line>
+<Line Number="81">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="82">
+<![CDATA[		]]>
+</Line>
+<Line Number="83">
+<![CDATA[	elsif (Sts_Idle) then]]>
+</Line>
+<Line Number="84">
+<![CDATA[		AO_OEE_IncT(IncT, Data.IdleTime);]]>
+</Line>
+<Line Number="85">
+<![CDATA[		]]>
+</Line>
+<Line Number="86">
+<![CDATA[	elsif (Sts_Down) then]]>
+</Line>
+<Line Number="87">
+<![CDATA[		AO_OEE_IncT(IncT, Data.DownTime);]]>
+</Line>
+<Line Number="88">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="89">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="90">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_OEE_Availability]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Inp := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[PCmd := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[MCmd := 0;]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_OEE_Availability"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_OEE_IncT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_RTC_PulseGen"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_OEE_ResetT"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
