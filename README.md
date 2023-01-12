@@ -26,7 +26,7 @@ Source edit protection is enabled, but the code is viewable (it may make sense t
 
 With the exception of complementary FactoryTalk View files, this repository contains only .L5X (Logix XML) files.
 
-The structured text language is generally used for add-on-instruction definitions for ease of portability between IEC 61131-3 platforms.
+Structured text is used for add-on-instruction definitions for ease of portability between IEC 61131-3 platforms.
 
 Type and instruction dependencies will be documented where possible.
 
