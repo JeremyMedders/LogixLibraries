@@ -15,7 +15,7 @@ Parameter naming follows PlantPAx standards, where sensible:
 Blocks (AO_) are organized into groups:
 - Dvc: Device drivers
 - Math: Assorted function blocks
-- MBTCP: Modbus TCP client driver
+- MBTCP: Modbus TCP client driver.
 - Op: Light-weight PlantPAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PlantPAx counterpart. 
 - Msg: Message utilities
 - RTC: Precision pulse/timing utilites
