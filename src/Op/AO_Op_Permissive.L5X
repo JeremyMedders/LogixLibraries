@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Op_Permissive" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T17:57:50.797Z" ContainsContext="true" ExportDate="Thu Jan 12 16:08:56 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="AO_Str_Size" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-04T14:43:23.588Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:59:33.248Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_StrData" TagType="Base" DataType="SINT" Dimensions="1" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Val_Aligned" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Data" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Str_GetSize]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_StrData, 0, Val_Data);]]>
+</Line>
+<Line Number="6">
+<![CDATA[Val_Aligned := (((Val_Data + 4) + 3) & (16#FFFF XOR 16#0003)) / 4;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="AO_Op_Permissive" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T19:47:32.835Z" CreatedBy="ACH\jrogers" EditedDate="2023-01-12T17:57:50.797Z" EditedBy="RLCCONTROLS\jrogers"
+ SoftwareRevision="v35.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp" TagType="Alias" Usage="Input" Radix="Binary" AliasFor="Inputs" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Bypass" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enables permissive bypass.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_OK" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Overall status.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_NBOK" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Overall non-bypassable status.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Bypass" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Indicates whether bypassable permissives are ignored.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Permissives" TagType="Base" DataType="DINT" Usage="Output" Radix="Binary" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Bits indicate individual permissive status.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Binary" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Exists" TagType="Base" DataType="DINT" Usage="Input" Radix="Binary" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Binary" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_OKState" TagType="Base" DataType="DINT" Usage="Input" Radix="Binary" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits configure which state of each input is okay to start.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Binary" Value="2#0000_0000_0000_0000_0000_0000_0000_0001"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Bypassable" TagType="Base" DataType="DINT" Usage="Input" Radix="Binary" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Set bits indicate which conditions can be bypassed.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Binary" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MSet_Bypass" TagType="Base" DataType="DINT" Usage="Input" Radix="Binary" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits handle maintenance bypass toggles.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Binary" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_StrArraySize" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[416]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="416"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_StrSize" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Ptr_Condition00" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[0].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition01" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[1].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition02" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[2].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition03" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[3].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition04" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[4].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition05" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[5].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition06" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[6].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition07" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[7].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition08" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[8].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition09" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[9].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition10" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[10].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition11" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[11].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition12" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[12].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition13" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[13].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition14" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[14].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition15" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[15].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition16" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[16].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition17" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[17].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition18" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[18].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition19" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[19].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition20" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[20].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition21" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[21].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition22" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[22].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition23" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[23].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition24" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[24].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition25" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[25].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition26" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[26].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition27" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[27].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition28" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[28].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition29" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[29].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition30" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[30].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Condition31" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Conditions[31].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Inputs" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Conditions" DataType="STR_40" Dimensions="32" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="STR_40" Dimensions="32">
+<Element Index="[0]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[1]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[2]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[3]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[4]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[5]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[6]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[7]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[8]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[9]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[10]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[11]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[12]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[13]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[14]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[15]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[16]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[17]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[18]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[19]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[20]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[21]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[22]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[23]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[24]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[25]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[26]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[27]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[28]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[29]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[30]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[31]">
+<Structure DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</Structure>
+</Element>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="GetStrSize" DataType="AO_Str_Size" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Str_Size">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Val_Aligned" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Data" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Inv" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Bypass" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_Permissive]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[AO_Str_Size(GetStrSize, Conditions[0].DATA);]]>
+</Line>
+<Line Number="6">
+<![CDATA[Val_StrSize := GetStrSize.Val_Aligned;]]>
+</Line>
+<Line Number="7">
+<![CDATA[SIZE(Conditions, 0, Size);]]>
+</Line>
+<Line Number="8">
+<![CDATA[Val_StrArraySize := GetStrSize.Val_Aligned * Size;]]>
+</Line>
+<Line Number="9">
+<![CDATA[]]>
+</Line>
+<Line Number="10">
+<![CDATA[Inputs := Inputs & Cfg_Exists;]]>
+</Line>
+<Line Number="11">
+<![CDATA[Inv := Inputs XOR (NOT Cfg_OKState);]]>
+</Line>
+<Line Number="12">
+<![CDATA[MSet_Bypass := Cfg_Bypassable & MSet_Bypass;]]>
+</Line>
+<Line Number="13">
+<![CDATA[Bypass := MSet_Bypass OR Inv;]]>
+</Line>
+<Line Number="14">
+<![CDATA[Sts_Permissives := Inv;]]>
+</Line>
+<Line Number="15">
+<![CDATA[Sts_OK := (Sts_Permissives = -1);]]>
+</Line>
+<Line Number="16">
+<![CDATA[Sts_NBOK := (Bypass = -1);]]>
+</Line>
+<Line Number="17">
+<![CDATA[Sts_Bypass := Inp_Bypass;]]>
+</Line>
+<Line Number="18">
+<![CDATA[]]>
+</Line>
+<Line Number="19">
+<![CDATA[//MSet_Bypass := Cfg_Bypassable & MSet_Bypass;]]>
+</Line>
+<Line Number="20">
+<![CDATA[//Sts_Permissives := Inputs XOR (NOT Cfg_OKState);]]>
+</Line>
+<Line Number="21">
+<![CDATA[//Sts_OK := (Sts_Permissives = -1);]]>
+</Line>
+<Line Number="22">
+<![CDATA[//Sts_NBOK := ((MSet_Bypass OR Sts_Permissives) = -1);]]>
+</Line>
+<Line Number="23">
+<![CDATA[//Sts_Bypass := Inp_Bypass;]]>
+</Line>
+<Line Number="24">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_Permissive]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Inputs := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Sts_OK := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[Sts_NBOK := 0;]]>
+</Line>
+<Line Number="8">
+<![CDATA[Sts_Bypass := 0;]]>
+</Line>
+<Line Number="9">
+<![CDATA[Sts_Permissives := 0;]]>
+</Line>
+<Line Number="10">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Str_Size"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
