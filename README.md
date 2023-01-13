@@ -57,7 +57,7 @@ Extras
 To-Do
 ------------
 - documentation about known working .L5X attribute values.
-- how-to for putting the CanBeNull parameter attribute in AOIs to use.
+- how to for put the CanBeNull parameter attribute in AOIs to use.
 - documentation for the Alarm family.
 - workarounds and solutions for common
 - overall repository structure improvements
