@@ -52,6 +52,7 @@ So we have...
 Extras
 ------------
 - UDT templates to aid in implementing the useful BIT overlay construct.
+- IO module / connection templates.
 
 To-Do
 ------------
@@ -61,7 +62,8 @@ To-Do
 - workarounds and solutions for common
 - overall repository structure improvements
 - MBTCP client, sample program, features, basic documentation
-- discussion board
+- documentation for the PowerFlex 525
+- open discussion board
 
 "Legacy" hazards
 ------------
