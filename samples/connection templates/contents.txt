@@ -1,0 +1,5 @@
+
+Dev_PF525_Template99_Module
+---------------------------
+Logix Generic EthernetIP import for a PowerFlex 525
+Isn't keyed to a specific model, so it's easy to substitute larger/smaller physical drives by just assigning an IP to the device
