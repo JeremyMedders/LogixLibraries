@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_MBTCP_ClientData" TargetType="DataType" ContainsContext="true" ExportDate="Fri Jan 13 17:38:33 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="ST_MBTCP_ClientData" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Coils" DataType="BOOL" Dimension="1024" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0xxx]]>
+</Description>
+</Member>
+<Member Name="DiscreteInputs" DataType="BOOL" Dimension="1024" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1xxx]]>
+</Description>
+</Member>
+<Member Name="InputRegisters" DataType="INT" Dimension="1024" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3xxx]]>
+</Description>
+</Member>
+<Member Name="HoldingRegisters" DataType="INT" Dimension="1024" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4xxx]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

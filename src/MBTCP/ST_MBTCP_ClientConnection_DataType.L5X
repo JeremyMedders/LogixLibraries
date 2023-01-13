@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_MBTCP_ClientConnection" TargetType="DataType" ContainsContext="true" ExportDate="Fri Jan 13 17:38:29 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="ST_MBTCP_ClientConnection" Family="NoFamily" Class="User">
+<Members>
+<Member Name="LocalSlot" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Local slot of the Ethernet module. ControlLogix: use module slot. CompactLogix: use slot 0.]]>
+</Description>
+</Member>
+<Member Name="LocalAddress" DataType="STR_16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Used only for controllers with more than one local IP address (5380, 5480). 
+For all others leave blank.]]>
+</Description>
+</Member>
+<Member Name="DestAddress" DataType="STR_16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IP address of the Modbus TCP server.]]>
+</Description>
+</Member>
+<Member Name="DestPort" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Modbus port number open on the server. Default: 502.]]>
+</Description>
+</Member>
+<Member Name="MsgSrc" DataType="SINT" Dimension="500" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Contains message source.]]>
+</Description>
+</Member>
+<Member Name="MsgDest" DataType="SINT" Dimension="500" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Contains message destination.]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_16"/>
+<Dependency Type="DataType" Name="STR_16"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_16" Family="StringFamily" Class="User">
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="16" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
