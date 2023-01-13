@@ -51,13 +51,22 @@ So we have...
 
 Extras
 ------------
-- some UDT templates to aid others in implementing the useful BIT overlay construct.
-- TODO: some explanatory documentation about known working L5X attribute values.
-- TODO: demonstration of using the CanBeNull parameter attribute in AOIs.
+- UDT templates to aid in implementing the useful BIT overlay construct.
 
-"Legacy" heads-up
+To-Do
 ------------
-Some of the library content makes use of unsigned (USINT/UINT/UDINT/ULINT) and 64-bit (ULINT/LINT) types, limiting their use to current-generation hardware (CompactLogix 5380, CompactLogix 5480, and ControlLogix 5580 families). Logix 5370/5570 and earlier families are unfortunately artificially limited to signed types (SINT/INT/DINT/LINT), so code will need to be modified to accomodate where necessary. I built this library to be as lean as possible, so the backwards accomodation would have ended up bloating solutions across the division.
+- documentation about known working .L5X attribute values.
+- how-to for putting the CanBeNull parameter attribute in AOIs to use.
+- documentation for the Alarm family.
+- workarounds and solutions for common
+- overall repository structure improvements
+- discussion board
+
+"Legacy" hazards
+------------
+- Some of the library content makes use of unsigned (USINT/UINT/UDINT/ULINT) and 64-bit (ULINT/LINT) types, limiting their use to current-generation hardware (CompactLogix 5380, CompactLogix 5480, and ControlLogix 5580 families).
+- Logix 5370/5570 and earlier families are unfortunately artificially limited to signed types (SINT/INT/DINT/LINT), so code will need to be modified to accomodate where necessary. I built this library to be as lean as possible, so the backwards accomodation would have ended up bloating solutions across the division.
+- Sample code heavily favors program-scoped tags to promote organization and consistent naming. For that reason, these sample programs will sometimes have program-scoped Messages tags and will also require accomodation for pre-5x80 hardware.
 
 Always:
 ------------
