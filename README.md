@@ -4,7 +4,7 @@ This is my best-effort approach to implementing production-ready, "object-orient
 
 With the exception of supporting sample files (FactoryTalk View ME screens/definitions, etc.), this repository contains only .L5X (Logix 5000 XML) files. Structured text is used for AOI definitions to ease porting between IEC 61131-3 platforms. Dependencies will be documented where possible.
 
-Parameter naming follows PlantPAx, where sensible:
+Parameter naming follows PlantPAx (sensibly):
 ------------
 - Inp_
 - PCmd_, OCmd_, MCmd, XCmd
@@ -61,7 +61,7 @@ To-Do
 - documentation for the Alarm family.
 - workarounds and solutions for common
 - overall repository structure improvements
-- MBTCP client, sample program, features, basic documentation
+- MBTCP client basic documentation
 - documentation for the PowerFlex 525
 - open discussion board
 
