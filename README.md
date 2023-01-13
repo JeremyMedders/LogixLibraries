@@ -1,6 +1,6 @@
 # LogixLibraries
 
-This is my best-effort approach to implementing production-ready, "object-oriented" programming on Rockwell Logix5000-based controllers.
+This is my best-effort approach to implementing production-ready, "object-oriented" and "functional" styles of programming on Rockwell Logix5000 controllers.
 
 With the exception of supporting sample files (FactoryTalk View ME screens/definitions, etc.), this repository contains only .L5X (Logix 5000 XML) files. Structured text is used for AOI definitions to ease porting between IEC 61131-3 platforms. Dependencies will be documented where possible.
 
@@ -58,11 +58,12 @@ To-Do
 ------------
 - documentation about known working .L5X attribute values.
 - how to for put the CanBeNull parameter attribute in AOIs to use.
-- documentation for the Alarm family.
-- workarounds and solutions for common
+- documentation for the Alarm family
+- design pattern guides
 - overall repository structure improvements
 - MBTCP client basic documentation
 - documentation for the PowerFlex 525
+- OSCAT library port
 - open discussion board
 
 "Legacy" hazards
