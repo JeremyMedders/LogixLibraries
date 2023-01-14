@@ -60,14 +60,16 @@ To-Do
 - documentation about known working .L5X attribute values
 - how to put the CanBeNull parameter attribute in AOIs to use
 - documentation for the Alarm family
-- design pattern guides
+- design pattern guides and rationale
 - overall repository structure improvements
 - MBTCP client basic documentation
 - documentation for the PowerFlex 525
 - OSCAT library port
-- open discussion board
 - Arduino PLC data exchange
 - pointers vs. InOut / ByRef data handling and (safe!) examples
+
+Done:
+- open discussion board
 
 "Legacy" hazards
 ------------
