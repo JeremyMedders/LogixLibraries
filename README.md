@@ -68,8 +68,8 @@ To-Do
 - Arduino PLC data exchange
 - pointers vs. InOut / ByRef data handling and (safe!) examples
 - AOI dependency chart/tree/spreadsheet
-- Produce/Consume guide
-- "free" functions
+- Produce/Consume guide with UDTs
+- PackML starter guide and sample
 
 Done:
 - open discussion board
