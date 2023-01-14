@@ -4,7 +4,7 @@ This is my best-effort approach to implementing production-ready, "object-orient
 
 With the exception of supporting sample files (FactoryTalk View ME screens/definitions, etc.), this repository contains only .L5X (Logix 5000 XML) files. Structured text is used for AOI definitions to ease porting between IEC 61131-3 platforms. Dependencies will be documented where possible.
 
-Parameter naming follows PlantPAx (sensibly):
+Parameter naming follows PlantPAx (sensibly)
 ------------
 - Inp_
 - PCmd_, OCmd_, MCmd, XCmd
@@ -18,7 +18,7 @@ Parameter naming follows PlantPAx (sensibly):
 - At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
-AOIs/UDTs (AO_/ST_) built as classes:
+AOIs/UDTs (AO_/ST_) built as classes
 ------------
 - Dvc: Device drivers. Each of these embed an AO_Sys_Dvc that automagically handles registration and reporting to its parent AO_Sys_DvcClass.
 - Math: Assorted function blocks.
@@ -72,7 +72,7 @@ To-Do
 - Logix 5370/5570 and earlier families are unfortunately artificially limited to signed types (SINT/INT/DINT/LINT), so code will need to be modified to accomodate where necessary. I built this library to be as lean as possible, so the backwards accomodation would have ended up bloating solutions across the division.
 - Sample code heavily favors program-scoped tags to promote organization and consistent naming. For that reason, these sample programs will sometimes have program-scoped Messages and will require accomodation for pre-5x80 hardware.
 
-Always:
+Always
 ------------
 - Engineer to win.
 - Feel free to ask any questions.
