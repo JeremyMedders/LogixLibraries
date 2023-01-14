@@ -58,7 +58,7 @@ To-Do
 ------------
 - performance profiling database
 - documentation about known working .L5X attribute values
-- how to for put the CanBeNull parameter attribute in AOIs to use
+- how to put the CanBeNull parameter attribute in AOIs to use
 - documentation for the Alarm family
 - design pattern guides
 - overall repository structure improvements
