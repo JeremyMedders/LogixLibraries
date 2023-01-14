@@ -67,6 +67,7 @@ To-Do
 - OSCAT library port
 - open discussion board
 - Arduino PLC data exchange
+- pointers vs. InOut / ByRef data handling and (safe!) examples
 
 "Legacy" hazards
 ------------
