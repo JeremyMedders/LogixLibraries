@@ -56,8 +56,9 @@ Extras
 
 To-Do
 ------------
-- documentation about known working .L5X attribute values.
-- how to for put the CanBeNull parameter attribute in AOIs to use.
+- performance profiling database
+- documentation about known working .L5X attribute values
+- how to for put the CanBeNull parameter attribute in AOIs to use
 - documentation for the Alarm family
 - design pattern guides
 - overall repository structure improvements
@@ -65,6 +66,7 @@ To-Do
 - documentation for the PowerFlex 525
 - OSCAT library port
 - open discussion board
+- Arduino PLC data exchange
 
 "Legacy" hazards
 ------------
