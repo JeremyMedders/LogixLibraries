@@ -56,23 +56,23 @@ Extras
 
 To-Do
 ------------
-- performance profiling database
-- documentation about known working .L5X attribute values
-- how to put the CanBeNull parameter attribute in AOIs to use
-- documentation for the Alarm family
-- design pattern guides and rationale
-- overall repository structure improvements
+- Performance profiling database
+- Documentation about known working .L5X attribute values
+- How to put the CanBeNull parameter attribute in AOIs to use
+- Alarm class ocumentation
+- Design pattern guides and rationale
+- Overall repository continuous improvements
 - MBTCP client basic documentation
-- documentation for the PowerFlex 525
+- Documentation for the PowerFlex 525
 - OSCAT library port
 - Arduino PLC data exchange
-- pointers vs. InOut / ByRef data handling and (safe!) examples
+- Pointers vs. InOut / ByRef data handling and (safe!) examples
 - AOI dependency chart/tree/spreadsheet
 - Produce/Consume tags "the smart way" guide with UDTs and sample
 - PackML starter guide and sample
 
 Done:
-- open discussion board
+- Open discussion board
 
 "Legacy" hazards
 ------------
