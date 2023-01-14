@@ -69,6 +69,7 @@ To-Do
 - pointers vs. InOut / ByRef data handling and (safe!) examples
 - AOI dependency chart/tree/spreadsheet
 - Produce/Consume guide
+- "free" functions
 
 Done:
 - open discussion board
