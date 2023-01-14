@@ -68,6 +68,7 @@ To-Do
 - Arduino PLC data exchange
 - pointers vs. InOut / ByRef data handling and (safe!) examples
 - AOI dependency chart/tree/spreadsheet
+- Produce/Consume guide
 
 Done:
 - open discussion board
