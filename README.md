@@ -67,6 +67,7 @@ To-Do
 - OSCAT library port
 - Arduino PLC data exchange
 - pointers vs. InOut / ByRef data handling and (safe!) examples
+- AOI dependency chart/tree/spreadsheet
 
 Done:
 - open discussion board
