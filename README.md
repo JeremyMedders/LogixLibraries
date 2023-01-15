@@ -1,10 +1,10 @@
 # LogixLibraries
 
-This is my best-effort approach to implementing production-ready, "object-oriented" programming on Rockwell Logix5000-based controllers.
+This is my best-effort approach to implementing production-ready, "object-oriented" and "functional" styles of programming on Rockwell Logix5000 controllers.
 
 With the exception of supporting sample files (FactoryTalk View ME screens/definitions, etc.), this repository contains only .L5X (Logix 5000 XML) files. Structured text is used for AOI definitions to ease porting between IEC 61131-3 platforms. Dependencies will be documented where possible.
 
-Parameter naming follows PlantPAx (sensibly):
+Parameter naming follows PlantPAx (sensibly)
 ------------
 - Inp_
 - PCmd_, OCmd_, MCmd, XCmd
@@ -18,7 +18,7 @@ Parameter naming follows PlantPAx (sensibly):
 - At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
-AOIs/UDTs (AO_/ST_) built as classes:
+AOIs/UDTs (AO_/ST_) built as classes
 ------------
 - Dvc: Device drivers. Each of these embed an AO_Sys_Dvc that automagically handles registration and reporting to its parent AO_Sys_DvcClass.
 - Math: Assorted function blocks.
@@ -56,22 +56,31 @@ Extras
 
 To-Do
 ------------
-- documentation about known working .L5X attribute values.
-- how to for put the CanBeNull parameter attribute in AOIs to use.
-- documentation for the Alarm family.
-- workarounds and solutions for common
-- overall repository structure improvements
+- Performance profiling database
+- Documentation about known working .L5X attribute values
+- How to put the CanBeNull parameter attribute in AOIs to use
+- Alarm class ocumentation
+- Design pattern guides and rationale
+- Overall repository continuous improvements
 - MBTCP client basic documentation
-- documentation for the PowerFlex 525
-- open discussion board
+- Documentation for the PowerFlex 525
+- OSCAT library port
+- Arduino PLC data exchange
+- Pointers vs. InOut / ByRef data handling and (safe!) examples
+- AOI dependency chart/tree/spreadsheet
+- Produce/Consume tags "the smart way" guide with UDTs and sample
+- PackML starter guide and sample
+
+Done:
+- Open discussion board
 
 "Legacy" hazards
 ------------
-- Some of the library content makes use of unsigned (USINT/UINT/UDINT/ULINT) and 64-bit (ULINT/LINT) types, limiting their use to current-generation hardware (CompactLogix 5380, CompactLogix 5480, and ControlLogix 5580 families).
+- Some of the library content makes use of unsigned (USINT/UINT/UDINT/ULINT) and 64-bit (ULINT/LINT) types, limiting their use to current-generation hardware (CompactLogix 5380/5480 and ControlLogix 5580 families).
 - Logix 5370/5570 and earlier families are unfortunately artificially limited to signed types (SINT/INT/DINT/LINT), so code will need to be modified to accomodate where necessary. I built this library to be as lean as possible, so the backwards accomodation would have ended up bloating solutions across the division.
 - Sample code heavily favors program-scoped tags to promote organization and consistent naming. For that reason, these sample programs will sometimes have program-scoped Messages and will require accomodation for pre-5x80 hardware.
 
-Always:
+Always
 ------------
 - Engineer to win.
 - Feel free to ask any questions.
