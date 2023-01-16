@@ -72,6 +72,7 @@ To-Do
 - PackML starter guide and sample
 
 Done:
+- OSCAT and extra vector math
 - Open discussion board
 
 "Legacy" hazards
