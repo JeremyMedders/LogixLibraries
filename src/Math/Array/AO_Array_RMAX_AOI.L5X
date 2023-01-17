@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Finds the maximum of an array of REAL.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RMAX" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T16:59:16.207Z" ContainsContext="true" ExportDate="Tue Jan 17 11:00:52 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RMAX" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:38:48.930Z" ContainsContext="true" ExportDate="Tue Jan 17 11:42:53 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Array_RMAX" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T18:51:12.519Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T16:59:16.207Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_RMAX" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T18:51:12.519Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:38:48.930Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Finds the maximum of an array of REAL.]]>
@@ -74,7 +74,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	Finds the maximum of an array of REAL.]]>
+<![CDATA[	AO_Array_RMAX]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>

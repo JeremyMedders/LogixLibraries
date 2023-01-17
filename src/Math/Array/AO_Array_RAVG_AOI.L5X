@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Finds the average of an array of REAL.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RAVG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T16:57:44.110Z" ContainsContext="true" ExportDate="Tue Jan 17 11:00:47 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RAVG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:38:23.336Z" ContainsContext="true" ExportDate="Tue Jan 17 11:42:46 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Array_RAVG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T16:05:38.005Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T16:57:44.110Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_RAVG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T16:05:38.005Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:38:23.336Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Finds the average of an array of REAL.]]>
@@ -74,7 +74,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	Finds the average of an array of REAL.]]>
+<![CDATA[	AO_Array_RAVG]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>

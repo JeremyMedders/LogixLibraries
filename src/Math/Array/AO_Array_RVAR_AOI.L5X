@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Finds the variance of an array of REAL.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RVAR" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:00:23.066Z" ContainsContext="true" ExportDate="Tue Jan 17 11:01:08 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RVAR" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:39:22.728Z" ContainsContext="true" ExportDate="Tue Jan 17 11:43:09 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Array_RVAR" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T18:34:14.091Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:00:23.066Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_RVAR" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T18:34:14.091Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:39:22.728Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Finds the variance of an array of REAL.]]>
@@ -90,7 +90,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	Finds the variance of an array of REAL.]]>
+<![CDATA[	AO_Array_RVAR]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
