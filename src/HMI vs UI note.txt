@@ -1,0 +1,4 @@
+
+HMI folders are dedicated to HMI screens proper
+
+UI folders are dedicated to helper AOIs for HMIs
