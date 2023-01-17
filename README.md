@@ -72,6 +72,7 @@ To-Do
 - PackML starter guide and sample
 
 Done:
+- CIP base data types (Identity, Port, EnetLink, TCPIP)
 - OSCAT vector math
 - Open discussion board
 
