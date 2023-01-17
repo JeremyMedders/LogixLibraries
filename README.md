@@ -20,15 +20,15 @@ Parameter naming follows PlantPAx (sensibly)
 
 AOIs/UDTs (AO_/ST_) built as classes
 ------------
-- Dvc: Device drivers. Each of these embed an AO_Sys_Dvc that automagically handles registration and reporting to its parent AO_Sys_DvcClass.
-- Math: Assorted function blocks.
-- MBTCP: Modbus TCP client driver.
-- Op: Lightweight PAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PAx counterpart. 
-- Msg: Message helpers and utilities.
-- RTC: Precision pulse/timing utilites.
-- Str: String utilities.
-- Sys: System diagnostics, WallClock utility/formatting generator, ISA 18.2 alarming with its parent "class", and other utilities.
-- UI: HMI helper blocks. Includes List Selector object with support for variable rows and unlimited columns of data.
+- Device (Dvc_): Device drivers.
+- Math (Math_): Assorted function blocks.
+- MBTCP (MBTCP_): Modbus TCP client driver.
+- Msg (Msg_): Message helpers and utilities.
+- Process (Op_): Lightweight PAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PAx counterpart. 
+- RTC (RTC_): Precision pulse/timing utilites.
+- String (Str_): String utilities.
+- System (Sys_): System diagnostics, WallClock utility/formatting generator, ISA 18.2 alarming with its parent "class", and other utilities.
+- UI (UI_): HMI helper blocks. Includes List Selector object with support for variable rows and unlimited columns of data.
 
 UDTs follow the corresponding AOI in name:
 - ST_Dvc_abc
