@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Finds basic stats of an array of REAL.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_R" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:01:23.537Z" ContainsContext="true" ExportDate="Tue Jan 17 11:01:33 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_R" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-16T23:22:49.480Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:01:23.537Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Finds basic stats of an array of REAL.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Data" TagType="Base" DataType="REAL" Dimensions="1" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="true">
+<Description>
+<![CDATA[Array.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_Avg" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Average.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_HAvg" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Harmonic average.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Max" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Maximum.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Min" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Minimum.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_SDev" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Standard deviation.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Size" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Size.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Span" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Span.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Sum" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sum.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Var" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Variance.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Max" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Min" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Sum" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="HAvg" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Var" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Avg" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Array_R]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_Data, 0, Size);]]>
+</Line>
+<Line Number="6">
+<![CDATA[HAvg := 0.0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[Max := Ref_Data[0];]]>
+</Line>
+<Line Number="8">
+<![CDATA[Min := Max;]]>
+</Line>
+<Line Number="9">
+<![CDATA[Sum := 0.0;]]>
+</Line>
+<Line Number="10">
+<![CDATA[Var := 0.0;]]>
+</Line>
+<Line Number="11">
+<![CDATA[]]>
+</Line>
+<Line Number="12">
+<![CDATA[while (i < Size) do]]>
+</Line>
+<Line Number="13">
+<![CDATA[	if (Ref_Data[i] > Max) then]]>
+</Line>
+<Line Number="14">
+<![CDATA[		Max := Ref_Data[i];]]>
+</Line>
+<Line Number="15">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="16">
+<![CDATA[	]]>
+</Line>
+<Line Number="17">
+<![CDATA[	if (Ref_Data[i] < Min) then]]>
+</Line>
+<Line Number="18">
+<![CDATA[		Min := Ref_Data[i];]]>
+</Line>
+<Line Number="19">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="20">
+<![CDATA[	]]>
+</Line>
+<Line Number="21">
+<![CDATA[	HAvg := HAvg + 1.0 / Ref_Data[i];]]>
+</Line>
+<Line Number="22">
+<![CDATA[	]]>
+</Line>
+<Line Number="23">
+<![CDATA[	Sum := Sum + Ref_Data[i];]]>
+</Line>
+<Line Number="24">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="25">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="26">
+<![CDATA[]]>
+</Line>
+<Line Number="27">
+<![CDATA[Avg := Sum / Size;]]>
+</Line>
+<Line Number="28">
+<![CDATA[]]>
+</Line>
+<Line Number="29">
+<![CDATA[while (i < Size) do]]>
+</Line>
+<Line Number="30">
+<![CDATA[	Var := Var + (Ref_Data[i] - Avg) * (Ref_Data[i] - Avg);]]>
+</Line>
+<Line Number="31">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="32">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="33">
+<![CDATA[]]>
+</Line>
+<Line Number="34">
+<![CDATA[Val_Avg := Avg;]]>
+</Line>
+<Line Number="35">
+<![CDATA[Val_HAvg := Size / HAvg;]]>
+</Line>
+<Line Number="36">
+<![CDATA[Val_Max := Max;]]>
+</Line>
+<Line Number="37">
+<![CDATA[Val_Min := Min;]]>
+</Line>
+<Line Number="38">
+<![CDATA[Val_SDev := SQRT(Var);]]>
+</Line>
+<Line Number="39">
+<![CDATA[Val_Size := Size;]]>
+</Line>
+<Line Number="40">
+<![CDATA[Val_Span := Max - Min;]]>
+</Line>
+<Line Number="41">
+<![CDATA[Val_Sum := Sum;]]>
+</Line>
+<Line Number="42">
+<![CDATA[Val_Var := Var / Size;]]>
+</Line>
+<Line Number="43">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

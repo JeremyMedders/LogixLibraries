@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Finds the average of an array of REAL.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RAVG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T16:57:44.110Z" ContainsContext="true" ExportDate="Tue Jan 17 11:00:47 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_RAVG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T16:05:38.005Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T16:57:44.110Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Finds the average of an array of REAL.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Data" TagType="Base" DataType="REAL" Dimensions="1" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="true">
+<Description>
+<![CDATA[Array.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Average.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Sum" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	Finds the average of an array of REAL.]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_Data, 0, Size);]]>
+</Line>
+<Line Number="6">
+<![CDATA[Sum := 0.0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+<Line Number="8">
+<![CDATA[while (i < Size) do]]>
+</Line>
+<Line Number="9">
+<![CDATA[	Sum := Sum + Ref_Data[i];]]>
+</Line>
+<Line Number="10">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="11">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="12">
+<![CDATA[]]>
+</Line>
+<Line Number="13">
+<![CDATA[Val := Sum / Size;]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
