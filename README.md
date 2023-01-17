@@ -18,8 +18,9 @@ Parameter naming follows PlantPAx (sensibly)
 - At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
-AOIs/UDTs (AO_/ST_) built as classes
+AOIs/UDTs
 ------------
+- CIP: Common Industrial Protocol utilities and structs.
 - Device (Dvc_): Device drivers.
 - Math (Math_): Assorted function blocks.
 - MBTCP (MBTCP_): Modbus TCP client driver.
