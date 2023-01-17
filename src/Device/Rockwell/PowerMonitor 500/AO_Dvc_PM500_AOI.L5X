@@ -1,0 +1,4139 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PowerMonitor 500-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Dvc_PM500" TargetType="AddOnInstructionDefinition" TargetRevision="4.0 " TargetLastEdited="2023-01-12T19:27:23.945Z" ContainsContext="true" ExportDate="Mon Jan 16 19:01:31 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_Dvc" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Name" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Description" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Tag" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Indicator" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ObjectStatus" DataType="ST_Obj_Status" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="ST_Obj_Status"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_Dvc_PM500" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Info" DataType="ST_Dvc" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L1toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:0 (V)]]>
+</Description>
+</Member>
+<Member Name="L2toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:1 (V)]]>
+</Description>
+</Member>
+<Member Name="L3toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:2 (V)]]>
+</Description>
+</Member>
+<Member Name="AvgLNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:3 (V)]]>
+</Description>
+</Member>
+<Member Name="L1toL2Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:4 (V)]]>
+</Description>
+</Member>
+<Member Name="L2toL3Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:5 (V)]]>
+</Description>
+</Member>
+<Member Name="L3toL1Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:6 (V)]]>
+</Description>
+</Member>
+<Member Name="AvgLLVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:7 (V)]]>
+</Description>
+</Member>
+<Member Name="L1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:8 (A)]]>
+</Description>
+</Member>
+<Member Name="L2Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:9 (A)]]>
+</Description>
+</Member>
+<Member Name="L3Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:10 (A)]]>
+</Description>
+</Member>
+<Member Name="NeutralCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[101:11 (A)]]>
+</Description>
+</Member>
+<Member Name="L1RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:0 (W)]]>
+</Description>
+</Member>
+<Member Name="L2RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:1 (W)]]>
+</Description>
+</Member>
+<Member Name="L3RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:2 (W)]]>
+</Description>
+</Member>
+<Member Name="TotalRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:3 (W)]]>
+</Description>
+</Member>
+<Member Name="L1ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:4 (VA)]]>
+</Description>
+</Member>
+<Member Name="L2ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:5 (VA)]]>
+</Description>
+</Member>
+<Member Name="L3ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:6 (VA)]]>
+</Description>
+</Member>
+<Member Name="TotalApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:7 (VA)]]>
+</Description>
+</Member>
+<Member Name="L1ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:8 (VAR)]]>
+</Description>
+</Member>
+<Member Name="L2ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:9 (VAR)]]>
+</Description>
+</Member>
+<Member Name="L3ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:10 (VAR)]]>
+</Description>
+</Member>
+<Member Name="TotalReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:11 (VAR)]]>
+</Description>
+</Member>
+<Member Name="L1PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:12 (PF)]]>
+</Description>
+</Member>
+<Member Name="L2PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:13 (PF)]]>
+</Description>
+</Member>
+<Member Name="L3PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:14 (PF)]]>
+</Description>
+</Member>
+<Member Name="TotalPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:15 (PF)]]>
+</Description>
+</Member>
+<Member Name="Frequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:16 (Hz)]]>
+</Description>
+</Member>
+<Member Name="PhaseSequence" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[102:17. Voltage rotation. 1: L1-L2-L3, 0: Not L1-L2-L3.]]>
+</Description>
+</Member>
+<Member Name="MaxL1toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:0 (V)]]>
+</Description>
+</Member>
+<Member Name="MaxL2toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:1 (V)]]>
+</Description>
+</Member>
+<Member Name="MaxL3toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:2 (V)]]>
+</Description>
+</Member>
+<Member Name="MaxAvgLNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:3 (V)]]>
+</Description>
+</Member>
+<Member Name="MaxL1toL2Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:4 (V)]]>
+</Description>
+</Member>
+<Member Name="MaxL2toL3Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:5 (V)]]>
+</Description>
+</Member>
+<Member Name="MaxL3toL1Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:6 (V)]]>
+</Description>
+</Member>
+<Member Name="MaxAvgLLVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:7 (V)]]>
+</Description>
+</Member>
+<Member Name="MaxL1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:8 (A)]]>
+</Description>
+</Member>
+<Member Name="MaxL2Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:9 (A)]]>
+</Description>
+</Member>
+<Member Name="MaxL3Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:10 (A)]]>
+</Description>
+</Member>
+<Member Name="MaxNeutralCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[103:11 (A)]]>
+</Description>
+</Member>
+<Member Name="MaxL1RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:0 (W)]]>
+</Description>
+</Member>
+<Member Name="MaxL2RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:1 (W)]]>
+</Description>
+</Member>
+<Member Name="MaxL3RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:2 (W)]]>
+</Description>
+</Member>
+<Member Name="MaxTotalRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:3 (W)]]>
+</Description>
+</Member>
+<Member Name="MaxL1ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:4 (VA)]]>
+</Description>
+</Member>
+<Member Name="MaxL2ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:5 (VA)]]>
+</Description>
+</Member>
+<Member Name="MaxL3ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:6 (VA)]]>
+</Description>
+</Member>
+<Member Name="MaxTotalApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:7 (VA)]]>
+</Description>
+</Member>
+<Member Name="MaxL1ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:8 (VAR)]]>
+</Description>
+</Member>
+<Member Name="MaxL2ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:9 (VAR)]]>
+</Description>
+</Member>
+<Member Name="MaxL3ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:10 (VAR)]]>
+</Description>
+</Member>
+<Member Name="MaxTotalReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:11 (VAR)]]>
+</Description>
+</Member>
+<Member Name="MaxL1PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:12 (PF)]]>
+</Description>
+</Member>
+<Member Name="MaxL2PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:13 (PF)]]>
+</Description>
+</Member>
+<Member Name="MaxL3PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:14 (PF)]]>
+</Description>
+</Member>
+<Member Name="MaxTotalPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:15 (PF)]]>
+</Description>
+</Member>
+<Member Name="MaxFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[104:16 (Hz)]]>
+</Description>
+</Member>
+<Member Name="DmdL1toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:0 (V)]]>
+</Description>
+</Member>
+<Member Name="DmdL2toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:1 (V)]]>
+</Description>
+</Member>
+<Member Name="DmdL3toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:2 (V)]]>
+</Description>
+</Member>
+<Member Name="DmdAvgLNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:3 (V)]]>
+</Description>
+</Member>
+<Member Name="DmdL1toL2Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:4 (V)]]>
+</Description>
+</Member>
+<Member Name="DmdL2toL3Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:6 (V)]]>
+</Description>
+</Member>
+<Member Name="DmdL3toL1Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:7 (V)]]>
+</Description>
+</Member>
+<Member Name="DmdAvgLLVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:8 (V)]]>
+</Description>
+</Member>
+<Member Name="DmdL1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:9 (A)]]>
+</Description>
+</Member>
+<Member Name="DmdL2Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:10 (A)]]>
+</Description>
+</Member>
+<Member Name="DmdL3Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:11 (A)]]>
+</Description>
+</Member>
+<Member Name="DmdNeutralCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[105:12 (A)]]>
+</Description>
+</Member>
+<Member Name="DmdL1RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:0 (W)]]>
+</Description>
+</Member>
+<Member Name="DmdL2RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:1 (W)]]>
+</Description>
+</Member>
+<Member Name="DmdL3RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:2 (W)]]>
+</Description>
+</Member>
+<Member Name="DmdTotalRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:3 (W)]]>
+</Description>
+</Member>
+<Member Name="DmdL1ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:4 (VA)]]>
+</Description>
+</Member>
+<Member Name="DmdL2ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:5 (VA)]]>
+</Description>
+</Member>
+<Member Name="DmdL3ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:6 (VA)]]>
+</Description>
+</Member>
+<Member Name="DmdTotalApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:7 (VA)]]>
+</Description>
+</Member>
+<Member Name="DmdL1ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:8 (VAR)]]>
+</Description>
+</Member>
+<Member Name="DmdL2ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:9 (VAR)]]>
+</Description>
+</Member>
+<Member Name="DmdL3ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:10 (VAR)]]>
+</Description>
+</Member>
+<Member Name="DmdTotalReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:11 (VAR)]]>
+</Description>
+</Member>
+<Member Name="DmdL1PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:12 (PF)]]>
+</Description>
+</Member>
+<Member Name="DmdL2PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:13 (PF)]]>
+</Description>
+</Member>
+<Member Name="DmdL3PowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:14 (PF)]]>
+</Description>
+</Member>
+<Member Name="DmdTotalPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:15 (PF)]]>
+</Description>
+</Member>
+<Member Name="DmdFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[106:16 (Hz)]]>
+</Description>
+</Member>
+<Member Name="kWhConsumed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:0 (Total kWh+)]]>
+</Description>
+</Member>
+<Member Name="GWhConsumed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:1 (Total GWh+)]]>
+</Description>
+</Member>
+<Member Name="kVARhConsumed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:2 (Total kVARh+)]]>
+</Description>
+</Member>
+<Member Name="GVARhConsumed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:3 (Total GVARh+)]]>
+</Description>
+</Member>
+<Member Name="kWhGenerated" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:4 (Total kWh-)]]>
+</Description>
+</Member>
+<Member Name="GWhGenerated" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:5 (Total GWh-)]]>
+</Description>
+</Member>
+<Member Name="kVARhGenerated" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:6 (Total kVARh-)]]>
+</Description>
+</Member>
+<Member Name="GVARhGenerated" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:7 (Total GVARh-)]]>
+</Description>
+</Member>
+<Member Name="PartialKWhConsumed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:8 (Partial KWh+)]]>
+</Description>
+</Member>
+<Member Name="PartialGWhConsumed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:9 (Partial GWh+)]]>
+</Description>
+</Member>
+<Member Name="PartialKVARhConsumed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:10 (Partial KVARh+)]]>
+</Description>
+</Member>
+<Member Name="PartialGVARhConsumed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:11 (Partial GVARh+)]]>
+</Description>
+</Member>
+<Member Name="PartialKWhGenerated" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:12 (Partial KWh-)]]>
+</Description>
+</Member>
+<Member Name="PartialGWhGenerated" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:13 (Partial GWh-)]]>
+</Description>
+</Member>
+<Member Name="PartialKVARhGenerated" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:14 (Partial KVARh-)]]>
+</Description>
+</Member>
+<Member Name="PartialGVARhGenerated" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:15 (Partial GVARh-)]]>
+</Description>
+</Member>
+<Member Name="HourCounter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:16 (Hours)]]>
+</Description>
+</Member>
+<Member Name="MinuteCounter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[107:17 (Minutes)]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Dvc"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_Obj" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Name" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Tag" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Type" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TypeLabel" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="CmdSrc" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ProgramID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Interface" DataType="ST_Obj_Interface" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Object status (overlay).]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Sts_Initialized" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.0]]>
+</Description>
+</Member>
+<Member Name="Sts_Physical" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.1]]>
+</Description>
+</Member>
+<Member Name="Sts_Virtual" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.2]]>
+</Description>
+</Member>
+<Member Name="Sts_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.3]]>
+</Description>
+</Member>
+<Member Name="Sts_Alarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.4]]>
+</Description>
+</Member>
+<Member Name="Sts_AtSetpoint" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.5]]>
+</Description>
+</Member>
+<Member Name="Sts_AudibleRequest" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.6]]>
+</Description>
+</Member>
+<Member Name="Sts_Bypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.7]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Sts_CommLoss" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.8]]>
+</Description>
+</Member>
+<Member Name="Sts_Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.9]]>
+</Description>
+</Member>
+<Member Name="Sts_IOFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.10]]>
+</Description>
+</Member>
+<Member Name="Sts_ResetReady" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj18" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.11]]>
+</Description>
+</Member>
+<Member Name="Sts_Starting" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj18" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.12]]>
+</Description>
+</Member>
+<Member Name="Sts_Stopping" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj18" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.13]]>
+</Description>
+</Member>
+<Member Name="Sts_PSetOverride" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj18" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.14]]>
+</Description>
+</Member>
+<Member Name="Sts_SetTracking" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj18" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.15]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj27" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Sts_InterlocksExist" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj27" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.16]]>
+</Description>
+</Member>
+<Member Name="Sts_InterlocksOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj27" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.17]]>
+</Description>
+</Member>
+<Member Name="Sts_NBInterlocksOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj27" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.18]]>
+</Description>
+</Member>
+<Member Name="Sts_PermissivesExist" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj27" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.19]]>
+</Description>
+</Member>
+<Member Name="Sts_PermissivesOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj27" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.20]]>
+</Description>
+</Member>
+<Member Name="Sts_NBPermissivesOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj27" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.21]]>
+</Description>
+</Member>
+<Member Name="Sts_SafetyExists" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj27" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.22]]>
+</Description>
+</Member>
+<Member Name="Sts_SafetyActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj27" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.23]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj36" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Sts_24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj36" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.24]]>
+</Description>
+</Member>
+<Member Name="Sts_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj36" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.25]]>
+</Description>
+</Member>
+<Member Name="Sts_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj36" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.26]]>
+</Description>
+</Member>
+<Member Name="Sts_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj36" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.27]]>
+</Description>
+</Member>
+<Member Name="Sts_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj36" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.28]]>
+</Description>
+</Member>
+<Member Name="Sts_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj36" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.29]]>
+</Description>
+</Member>
+<Member Name="Sts_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj36" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.30]]>
+</Description>
+</Member>
+<Member Name="Sts_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj36" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.31]]>
+</Description>
+</Member>
+<Member Name="Out" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Object outputs (overlay).]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj46" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Out_Assert" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj46" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.0: Command to assert bus membership.]]>
+</Description>
+</Member>
+<Member Name="Out_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj46" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.1]]>
+</Description>
+</Member>
+<Member Name="Out_AckAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj46" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.2]]>
+</Description>
+</Member>
+<Member Name="Out_03" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj46" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.3]]>
+</Description>
+</Member>
+<Member Name="Out_04" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj46" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.4]]>
+</Description>
+</Member>
+<Member Name="Out_05" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj46" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.5]]>
+</Description>
+</Member>
+<Member Name="Out_06" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj46" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.6]]>
+</Description>
+</Member>
+<Member Name="Out_07" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj46" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.7]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj55" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Out_08" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj55" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.8]]>
+</Description>
+</Member>
+<Member Name="Out_09" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj55" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.9]]>
+</Description>
+</Member>
+<Member Name="Out_10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj55" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.10]]>
+</Description>
+</Member>
+<Member Name="Out_11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj55" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.11]]>
+</Description>
+</Member>
+<Member Name="Out_12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj55" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.12]]>
+</Description>
+</Member>
+<Member Name="Out_13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj55" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.13]]>
+</Description>
+</Member>
+<Member Name="Out_14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj55" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.14]]>
+</Description>
+</Member>
+<Member Name="Out_15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj55" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.15]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj64" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Out_16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj64" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.16]]>
+</Description>
+</Member>
+<Member Name="Out_17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj64" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.17]]>
+</Description>
+</Member>
+<Member Name="Out_18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj64" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.18]]>
+</Description>
+</Member>
+<Member Name="Out_19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj64" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.19]]>
+</Description>
+</Member>
+<Member Name="Out_20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj64" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.20]]>
+</Description>
+</Member>
+<Member Name="Out_21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj64" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.21]]>
+</Description>
+</Member>
+<Member Name="Out_22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj64" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.22]]>
+</Description>
+</Member>
+<Member Name="Out_23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj64" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.23]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj73" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Out_24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj73" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.24]]>
+</Description>
+</Member>
+<Member Name="Out_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj73" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.25]]>
+</Description>
+</Member>
+<Member Name="Out_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj73" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.26]]>
+</Description>
+</Member>
+<Member Name="Out_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj73" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.27]]>
+</Description>
+</Member>
+<Member Name="Out_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj73" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.28]]>
+</Description>
+</Member>
+<Member Name="Out_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj73" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.29]]>
+</Description>
+</Member>
+<Member Name="Out_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj73" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.30]]>
+</Description>
+</Member>
+<Member Name="Out_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj73" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Out.31]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="ST_Obj_Interface"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_Obj_Interface" Family="NoFamily" Class="User">
+<Members>
+<Member Name="OutSts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Outgoing status (overlay).]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj1" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="OutSts_Initialized" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj1" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.0]]>
+</Description>
+</Member>
+<Member Name="OutSts_Physical" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj1" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.1]]>
+</Description>
+</Member>
+<Member Name="OutSts_Virtual" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj1" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.2]]>
+</Description>
+</Member>
+<Member Name="OutSts_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj1" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.3]]>
+</Description>
+</Member>
+<Member Name="OutSts_Alarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj1" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.4]]>
+</Description>
+</Member>
+<Member Name="OutSts_AtSetpoint" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj1" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.5]]>
+</Description>
+</Member>
+<Member Name="OutSts_AudibleRequest" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj1" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.6]]>
+</Description>
+</Member>
+<Member Name="OutSts_BypassActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj1" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.7]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj10" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="OutSts_CommLoss" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj10" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.8]]>
+</Description>
+</Member>
+<Member Name="OutSts_Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj10" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.9]]>
+</Description>
+</Member>
+<Member Name="OutSts_IOFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj10" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.10]]>
+</Description>
+</Member>
+<Member Name="OutSts_ResetReady" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj10" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.11]]>
+</Description>
+</Member>
+<Member Name="OutSts_Starting" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj10" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.12]]>
+</Description>
+</Member>
+<Member Name="OutSts_Stopping" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj10" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.13]]>
+</Description>
+</Member>
+<Member Name="OutSts_PSetOverride" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj10" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.14]]>
+</Description>
+</Member>
+<Member Name="OutSts_SetTracking" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj10" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.15]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj19" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="OutSts_InterlocksExist" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj19" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.16]]>
+</Description>
+</Member>
+<Member Name="OutSts_InterlocksOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj19" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.17]]>
+</Description>
+</Member>
+<Member Name="OutSts_NBInterlocksOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj19" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.18]]>
+</Description>
+</Member>
+<Member Name="OutSts_PermissivesExist" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj19" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.19]]>
+</Description>
+</Member>
+<Member Name="OutSts_PermissivesOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj19" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.20]]>
+</Description>
+</Member>
+<Member Name="OutSts_NBPermissivesOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj19" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.21]]>
+</Description>
+</Member>
+<Member Name="OutSts_SafetyExists" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj19" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.22]]>
+</Description>
+</Member>
+<Member Name="OutSts_SafetyActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj19" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.23]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj28" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="OutSts_24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj28" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.24]]>
+</Description>
+</Member>
+<Member Name="OutSts_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj28" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.25]]>
+</Description>
+</Member>
+<Member Name="OutSts_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj28" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.26]]>
+</Description>
+</Member>
+<Member Name="OutSts_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj28" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.27]]>
+</Description>
+</Member>
+<Member Name="OutSts_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj28" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.28]]>
+</Description>
+</Member>
+<Member Name="OutSts_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj28" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.29]]>
+</Description>
+</Member>
+<Member Name="OutSts_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj28" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.30]]>
+</Description>
+</Member>
+<Member Name="OutSts_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj28" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutSts.31]]>
+</Description>
+</Member>
+<Member Name="OutCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Outgoing commands (overlay).]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj38" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="OutCmd_Assert" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj38" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.0: Command to assert bus membership.]]>
+</Description>
+</Member>
+<Member Name="OutCmd_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj38" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.1]]>
+</Description>
+</Member>
+<Member Name="OutCmd_AckAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj38" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.2]]>
+</Description>
+</Member>
+<Member Name="OutCmd_03" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj38" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.3]]>
+</Description>
+</Member>
+<Member Name="OutCmd_04" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj38" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.4]]>
+</Description>
+</Member>
+<Member Name="OutCmd_05" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj38" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.5]]>
+</Description>
+</Member>
+<Member Name="OutCmd_06" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj38" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.6]]>
+</Description>
+</Member>
+<Member Name="OutCmd_07" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj38" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.7]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj47" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="OutCmd_08" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj47" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.8]]>
+</Description>
+</Member>
+<Member Name="OutCmd_09" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj47" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.9]]>
+</Description>
+</Member>
+<Member Name="OutCmd_10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj47" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.10]]>
+</Description>
+</Member>
+<Member Name="OutCmd_11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj47" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.11]]>
+</Description>
+</Member>
+<Member Name="OutCmd_12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj47" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.12]]>
+</Description>
+</Member>
+<Member Name="OutCmd_13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj47" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.13]]>
+</Description>
+</Member>
+<Member Name="OutCmd_14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj47" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.14]]>
+</Description>
+</Member>
+<Member Name="OutCmd_15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj47" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.15]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj56" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="OutCmd_16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj56" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.16]]>
+</Description>
+</Member>
+<Member Name="OutCmd_17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj56" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.17]]>
+</Description>
+</Member>
+<Member Name="OutCmd_18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj56" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.18]]>
+</Description>
+</Member>
+<Member Name="OutCmd_19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj56" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.19]]>
+</Description>
+</Member>
+<Member Name="OutCmd_20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj56" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.20]]>
+</Description>
+</Member>
+<Member Name="OutCmd_21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj56" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.21]]>
+</Description>
+</Member>
+<Member Name="OutCmd_22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj56" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.22]]>
+</Description>
+</Member>
+<Member Name="OutCmd_23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj56" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.23]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj65" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="OutCmd_24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj65" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.24]]>
+</Description>
+</Member>
+<Member Name="OutCmd_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj65" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.25]]>
+</Description>
+</Member>
+<Member Name="OutCmd_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj65" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.26]]>
+</Description>
+</Member>
+<Member Name="OutCmd_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj65" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.27]]>
+</Description>
+</Member>
+<Member Name="OutCmd_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj65" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.28]]>
+</Description>
+</Member>
+<Member Name="OutCmd_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj65" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.29]]>
+</Description>
+</Member>
+<Member Name="OutCmd_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj65" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.30]]>
+</Description>
+</Member>
+<Member Name="OutCmd_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj65" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutCmd.31]]>
+</Description>
+</Member>
+<Member Name="InSts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Incoming status (overlay).]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj75" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="InSts_00" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj75" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.0]]>
+</Description>
+</Member>
+<Member Name="InSts_01" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj75" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.1]]>
+</Description>
+</Member>
+<Member Name="InSts_02" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj75" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.2]]>
+</Description>
+</Member>
+<Member Name="InSts_03" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj75" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.3]]>
+</Description>
+</Member>
+<Member Name="InSts_04" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj75" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.4]]>
+</Description>
+</Member>
+<Member Name="InSts_05" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj75" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.5]]>
+</Description>
+</Member>
+<Member Name="InSts_06" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj75" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.6]]>
+</Description>
+</Member>
+<Member Name="InSts_07" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj75" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.7]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj84" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="InSts_08" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj84" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.8]]>
+</Description>
+</Member>
+<Member Name="InSts_09" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj84" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.9]]>
+</Description>
+</Member>
+<Member Name="InSts_10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj84" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.10]]>
+</Description>
+</Member>
+<Member Name="InSts_11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj84" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.11]]>
+</Description>
+</Member>
+<Member Name="InSts_12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj84" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.12]]>
+</Description>
+</Member>
+<Member Name="InSts_13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj84" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.13]]>
+</Description>
+</Member>
+<Member Name="InSts_14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj84" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.14]]>
+</Description>
+</Member>
+<Member Name="InSts_15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj84" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.15]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj93" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="InSts_16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj93" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.16]]>
+</Description>
+</Member>
+<Member Name="InSts_17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj93" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.17]]>
+</Description>
+</Member>
+<Member Name="InSts_18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj93" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.18]]>
+</Description>
+</Member>
+<Member Name="InSts_19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj93" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.19]]>
+</Description>
+</Member>
+<Member Name="InSts_20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj93" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.20]]>
+</Description>
+</Member>
+<Member Name="InSts_21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj93" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.21]]>
+</Description>
+</Member>
+<Member Name="InSts_22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj93" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.22]]>
+</Description>
+</Member>
+<Member Name="InSts_23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj93" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.23]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj102" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="InSts_24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj102" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.24]]>
+</Description>
+</Member>
+<Member Name="InSts_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj102" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.25]]>
+</Description>
+</Member>
+<Member Name="InSts_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj102" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.26]]>
+</Description>
+</Member>
+<Member Name="InSts_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj102" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.27]]>
+</Description>
+</Member>
+<Member Name="InSts_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj102" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.28]]>
+</Description>
+</Member>
+<Member Name="InSts_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj102" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.29]]>
+</Description>
+</Member>
+<Member Name="InSts_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj102" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.30]]>
+</Description>
+</Member>
+<Member Name="InSts_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj102" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InSts.31]]>
+</Description>
+</Member>
+<Member Name="InCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Incoming commands (overlay).]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj112" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="InCmd_00" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj112" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.0]]>
+</Description>
+</Member>
+<Member Name="InCmd_01" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj112" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.1]]>
+</Description>
+</Member>
+<Member Name="InCmd_02" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj112" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.2]]>
+</Description>
+</Member>
+<Member Name="InCmd_03" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj112" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.3]]>
+</Description>
+</Member>
+<Member Name="InCmd_04" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj112" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.4]]>
+</Description>
+</Member>
+<Member Name="InCmd_05" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj112" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.5]]>
+</Description>
+</Member>
+<Member Name="InCmd_06" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj112" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.6]]>
+</Description>
+</Member>
+<Member Name="InCmd_07" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj112" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.7]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj121" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="InCmd_08" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj121" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.8]]>
+</Description>
+</Member>
+<Member Name="InCmd_09" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj121" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.9]]>
+</Description>
+</Member>
+<Member Name="InCmd_10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj121" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.10]]>
+</Description>
+</Member>
+<Member Name="InCmd_11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj121" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.11]]>
+</Description>
+</Member>
+<Member Name="InCmd_12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj121" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.12]]>
+</Description>
+</Member>
+<Member Name="InCmd_13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj121" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.13]]>
+</Description>
+</Member>
+<Member Name="InCmd_14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj121" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.14]]>
+</Description>
+</Member>
+<Member Name="InCmd_15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj121" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.15]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj130" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="InCmd_16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj130" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.16]]>
+</Description>
+</Member>
+<Member Name="InCmd_17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj130" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.17]]>
+</Description>
+</Member>
+<Member Name="InCmd_18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj130" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.18]]>
+</Description>
+</Member>
+<Member Name="InCmd_19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj130" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.19]]>
+</Description>
+</Member>
+<Member Name="InCmd_20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj130" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.20]]>
+</Description>
+</Member>
+<Member Name="InCmd_21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj130" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.21]]>
+</Description>
+</Member>
+<Member Name="InCmd_22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj130" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.22]]>
+</Description>
+</Member>
+<Member Name="InCmd_23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj130" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.23]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Dvc_Obj139" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="InCmd_24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj139" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.24]]>
+</Description>
+</Member>
+<Member Name="InCmd_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj139" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.25]]>
+</Description>
+</Member>
+<Member Name="InCmd_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj139" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.26]]>
+</Description>
+</Member>
+<Member Name="InCmd_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj139" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.27]]>
+</Description>
+</Member>
+<Member Name="InCmd_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj139" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.28]]>
+</Description>
+</Member>
+<Member Name="InCmd_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj139" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.29]]>
+</Description>
+</Member>
+<Member Name="InCmd_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj139" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.30]]>
+</Description>
+</Member>
+<Member Name="InCmd_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Dvc_Obj139" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InCmd.31]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="ST_Obj_Status" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Bytes" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Overlay.]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj_Sta1" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Sts_Initialized" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta1" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.0]]>
+</Description>
+</Member>
+<Member Name="Sts_Physical" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta1" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.1]]>
+</Description>
+</Member>
+<Member Name="Sts_Virtual" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta1" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.2]]>
+</Description>
+</Member>
+<Member Name="Sts_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta1" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.3]]>
+</Description>
+</Member>
+<Member Name="Sts_Alarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta1" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.4]]>
+</Description>
+</Member>
+<Member Name="Sts_AtSetpoint" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta1" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.5]]>
+</Description>
+</Member>
+<Member Name="Sts_AudibleRequest" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta1" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.6]]>
+</Description>
+</Member>
+<Member Name="Sts_BypassActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta1" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.7]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj_Sta10" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Sts_CommLoss" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta10" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.8]]>
+</Description>
+</Member>
+<Member Name="Sts_Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta10" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.9]]>
+</Description>
+</Member>
+<Member Name="Sts_IOFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta10" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.10]]>
+</Description>
+</Member>
+<Member Name="Sts_IOUncertain" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta10" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.11]]>
+</Description>
+</Member>
+<Member Name="Sts_ResetReady" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta10" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.12]]>
+</Description>
+</Member>
+<Member Name="Sts_Starting" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta10" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.13]]>
+</Description>
+</Member>
+<Member Name="Sts_Stopping" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta10" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.14]]>
+</Description>
+</Member>
+<Member Name="Sts_PSetOverride" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta10" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.15]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj_Sta19" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Sts_SetTracking" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta19" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.16]]>
+</Description>
+</Member>
+<Member Name="Sts_InterlocksExist" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta19" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.17]]>
+</Description>
+</Member>
+<Member Name="Sts_InterlocksOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta19" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.18]]>
+</Description>
+</Member>
+<Member Name="Sts_NBInterlocksOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta19" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.19]]>
+</Description>
+</Member>
+<Member Name="Sts_PermissivesExist" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta19" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.20]]>
+</Description>
+</Member>
+<Member Name="Sts_PermissivesOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta19" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.21]]>
+</Description>
+</Member>
+<Member Name="Sts_NBPermissivesOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta19" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.22]]>
+</Description>
+</Member>
+<Member Name="Sts_SafetyExists" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta19" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.23]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Obj_Sta28" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Sts_SafetyActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta28" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.24]]>
+</Description>
+</Member>
+<Member Name="Sts_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta28" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.25]]>
+</Description>
+</Member>
+<Member Name="Sts_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta28" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.26]]>
+</Description>
+</Member>
+<Member Name="Sts_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta28" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.27]]>
+</Description>
+</Member>
+<Member Name="Sts_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta28" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.28]]>
+</Description>
+</Member>
+<Member Name="Sts_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta28" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.29]]>
+</Description>
+</Member>
+<Member Name="Sts_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta28" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.30]]>
+</Description>
+</Member>
+<Member Name="Sts_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Obj_Sta28" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.31]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="ST_Sys_DeviceClass" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Instances" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TypeCount" DataType="ST_Sys_DeviceTypeCounts" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="StatusCount" DataType="ST_Sys_DeviceStatusCounts" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ControlCount" DataType="ST_Sys_DeviceControlCounts" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="eType_Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0]]>
+</Description>
+</Member>
+<Member Name="eType_AnalogInput" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1]]>
+</Description>
+</Member>
+<Member Name="eType_AnalogOutput" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2]]>
+</Description>
+</Member>
+<Member Name="eType_Burner" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3]]>
+</Description>
+</Member>
+<Member Name="eType_DiscreteInput" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4]]>
+</Description>
+</Member>
+<Member Name="eType_DiscreteOutput" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5]]>
+</Description>
+</Member>
+<Member Name="eType_Encoder" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[6]]>
+</Description>
+</Member>
+<Member Name="eType_EnergyMonitor" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[7]]>
+</Description>
+</Member>
+<Member Name="eType_MotorStarter" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[8]]>
+</Description>
+</Member>
+<Member Name="eType_NetworkAppliance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[9]]>
+</Description>
+</Member>
+<Member Name="eType_SafetyRelay" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[10]]>
+</Description>
+</Member>
+<Member Name="eType_SoftStarter" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[11]]>
+</Description>
+</Member>
+<Member Name="eType_Stacklight" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[12]]>
+</Description>
+</Member>
+<Member Name="eType_Valve" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13]]>
+</Description>
+</Member>
+<Member Name="eType_VSD" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14]]>
+</Description>
+</Member>
+<Member Name="eType_WeighScale" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15]]>
+</Description>
+</Member>
+<Member Name="eTypeLabel" DataType="STR_20" Dimension="32" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="List" DataType="ST_Obj" Dimension="128" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ListCapacity" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Sys_DeviceTypeCounts"/>
+<Dependency Type="DataType" Name="ST_Sys_DeviceStatusCounts"/>
+<Dependency Type="DataType" Name="ST_Sys_DeviceControlCounts"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="ST_Obj"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_Sys_DeviceControlCounts" Family="NoFamily" Class="User">
+<Members>
+<Member Name="None" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Local" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Disabled" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Maintenance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Override" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="External" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Operator" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Program" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="ST_Sys_DeviceStatusCounts" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Initialized" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1: Initialized devices.]]>
+</Description>
+</Member>
+<Member Name="Physical" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2: Physical devices.]]>
+</Description>
+</Member>
+<Member Name="Virtual" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[3: Virtual devices.]]>
+</Description>
+</Member>
+<Member Name="Active" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[4: Active devices.]]>
+</Description>
+</Member>
+<Member Name="Alarm" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[5: Devices with a raised embedded alarm.]]>
+</Description>
+</Member>
+<Member Name="AtSetpoint" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[6: Devices at their setpoint.]]>
+</Description>
+</Member>
+<Member Name="AudibleRequest" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[7: Devices requesting audible annunciation.]]>
+</Description>
+</Member>
+<Member Name="Bypass" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[8: Devices bypassing bypassable interlocks and permissives.]]>
+</Description>
+</Member>
+<Member Name="CommLoss" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[9: Devices with a comm loss.]]>
+</Description>
+</Member>
+<Member Name="Fault" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[10: Devices faulted.]]>
+</Description>
+</Member>
+<Member Name="IOFault" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[11: Devices with an IO fault.]]>
+</Description>
+</Member>
+<Member Name="IOUncertain" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[12: Devices with an IO uncertainty.]]>
+</Description>
+</Member>
+<Member Name="ResetReady" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13: Devices waiting for reset.]]>
+</Description>
+</Member>
+<Member Name="Resetting" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14: Devices performing a reset.]]>
+</Description>
+</Member>
+<Member Name="Starting" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15: Devices starting.]]>
+</Description>
+</Member>
+<Member Name="Stopping" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16: Devices stopping.]]>
+</Description>
+</Member>
+<Member Name="PSetOverride" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17: Devices with an overridden Program setpoint.]]>
+</Description>
+</Member>
+<Member Name="SetTracking" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[18: Devices configured for setpoint tracking for bumpless control.]]>
+</Description>
+</Member>
+<Member Name="SafetyExists" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[19: Devices with an integrated safety function.]]>
+</Description>
+</Member>
+<Member Name="SafetyActive" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[20: Devices whose integrated safety function is active.]]>
+</Description>
+</Member>
+<Member Name="Pad21" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[21: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad22" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[22: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad23" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[23: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad24" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[24: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad25" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[25: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad26" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[26: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad27" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[27: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad28" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[28: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad29" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[29: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad30" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[30: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad31" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[31: Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad32" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[32: Reserved.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="ST_Sys_DeviceTypeCounts" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Undefined" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AnalogInputs" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AnalogOutputs" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Burners" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DiscreteInputs" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DiscreteOutputs" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Encoders" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EnergyMonitors" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MotorStarters" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="NetAppliances" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SafetyRelays" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SoftStarters" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Stacklights" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Valves" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VSDs" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="WeighScales" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pad16" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad17" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad18" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad19" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad20" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad21" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad22" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad23" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad24" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad25" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad26" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad27" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad28" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad29" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad30" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+<Member Name="Pad31" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reserved.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="STR_20" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="20" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
+  <Libs>
+    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
+  </Libs>
+</Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
+  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val>
+</Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="AO_Str_Size" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-04T14:43:23.588Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:59:33.248Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_StrData" TagType="Base" DataType="SINT" Dimensions="1" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Val_Aligned" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Data" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Str_GetSize]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_StrData, 0, Val_Data);]]>
+</Line>
+<Line Number="6">
+<![CDATA[Val_Aligned := (((Val_Data + 4) + 3) & (16#FFFF XOR 16#0003)) / 4;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_Sys_Dvc" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-10-23T02:59:04.405Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T19:27:23.904Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Initialized" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.0" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Physical" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Virtual" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.2" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Active" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Alarm" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_AtSetpoint" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_AudibleRequest" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.6" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_BypassActive" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_CommLoss" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.8" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Fault" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.9" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_IOFault" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.10" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_IOUncertain" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.11" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_ResetReady" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.12" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Resetting" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.13" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Starting" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.14" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Stopping" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.15" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_PSetOverride" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.16" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_SetTracking" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.17" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_SafetyExists" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.18" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_SafetyActive" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.19" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_20" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.20" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_21" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.21" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_22" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.22" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_23" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.23" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_24" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.24" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_25" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.25" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_26" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.26" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_27" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.27" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_28" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.28" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_29" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.29" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_30" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.30" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_31" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Inp.31" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Inp_Status" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Type" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_CmdSrc" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Ref_Info" TagType="Base" DataType="ST_Dvc" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Ref_Class" TagType="Base" DataType="ST_Sys_DeviceClass" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Val_NameSize" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_DescSize" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_ID" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_IndicationColor" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Index" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ID" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Init" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Inp" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StrSize" DataType="AO_Str_Size" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Str_Size">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Val_Aligned" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Data" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Dvc]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[if (NOT Init) then]]>
+</Line>
+<Line Number="6">
+<![CDATA[	Inp := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[	Index := 0;]]>
+</Line>
+<Line Number="8">
+<![CDATA[	ID := 0;]]>
+</Line>
+<Line Number="9">
+<![CDATA[	Init := 1;]]>
+</Line>
+<Line Number="10">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="11">
+<![CDATA[]]>
+</Line>
+<Line Number="12">
+<![CDATA[AO_Str_Size(StrSize, Ref_Info.Name.DATA);]]>
+</Line>
+<Line Number="13">
+<![CDATA[Val_NameSize := StrSize.Val_Aligned;]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+<Line Number="15">
+<![CDATA[SIZE(Ref_Class.List, 0, Size);]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[if (Index < 0 OR Size < Index OR ID <= 0 OR]]>
+</Line>
+<Line Number="18">
+<![CDATA[	Ref_Class.List[Index].ID <> ID) then]]>
+</Line>
+<Line Number="19">
+<![CDATA[	]]>
+</Line>
+<Line Number="20">
+<![CDATA[	i := 0;]]>
+</Line>
+<Line Number="21">
+<![CDATA[	while i < Size do]]>
+</Line>
+<Line Number="22">
+<![CDATA[		]]>
+</Line>
+<Line Number="23">
+<![CDATA[		if (Ref_Class.List[i].ID = 0) then]]>
+</Line>
+<Line Number="24">
+<![CDATA[			ID := i + 1;]]>
+</Line>
+<Line Number="25">
+<![CDATA[			Index := i;]]>
+</Line>
+<Line Number="26">
+<![CDATA[			exit;]]>
+</Line>
+<Line Number="27">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="28">
+<![CDATA[		]]>
+</Line>
+<Line Number="29">
+<![CDATA[		i := i + 1;]]>
+</Line>
+<Line Number="30">
+<![CDATA[	end_while;]]>
+</Line>
+<Line Number="31">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="32">
+<![CDATA[]]>
+</Line>
+<Line Number="33">
+<![CDATA[if (ID <> 0) then]]>
+</Line>
+<Line Number="34">
+<![CDATA[	Ref_Class.List[Index].ID := ID;]]>
+</Line>
+<Line Number="35">
+<![CDATA[	Ref_Class.List[Index].Type := Inp_Type;]]>
+</Line>
+<Line Number="36">
+<![CDATA[	]]>
+</Line>
+<Line Number="37">
+<![CDATA[	SIZE(Ref_Class.eTypeLabel, 0, Size);]]>
+</Line>
+<Line Number="38">
+<![CDATA[	]]>
+</Line>
+<Line Number="39">
+<![CDATA[	if (0 <= Inp_Type & Inp_Type < Size) then]]>
+</Line>
+<Line Number="40">
+<![CDATA[		COP(Ref_Class.eTypeLabel[Inp_Type], Ref_Class.List[Index].TypeLabel, 1);]]>
+</Line>
+<Line Number="41">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="42">
+<![CDATA[	]]>
+</Line>
+<Line Number="43">
+<![CDATA[	COP(Ref_Info.Name, Ref_Class.List[Index].Name, 1);]]>
+</Line>
+<Line Number="44">
+<![CDATA[	]]>
+</Line>
+<Line Number="45">
+<![CDATA[	Ref_Class.List[Index].CmdSrc := Inp_CmdSrc;]]>
+</Line>
+<Line Number="46">
+<![CDATA[	]]>
+</Line>
+<Line Number="47">
+<![CDATA[	GSV(Program, THIS, Name, Ref_Class.List[Index].ProgramID);]]>
+</Line>
+<Line Number="48">
+<![CDATA[	//GSV(Program, THIS, Name, Ref_Sys.Devices.List[Index].ProgramName);]]>
+</Line>
+<Line Number="49">
+<![CDATA[	]]>
+</Line>
+<Line Number="50">
+<![CDATA[	Ref_Class.List[Index].Status := Inp;]]>
+</Line>
+<Line Number="51">
+<![CDATA[	Ref_Class.List[Index].Out_Assert := 1;]]>
+</Line>
+<Line Number="52">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="53">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[Init := 0;]]>
+</Line>
+<Line Number="2">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Sys_DeviceClass"/>
+<Dependency Type="DataType" Name="ST_Dvc"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Str_Size"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T16:23:44.408Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Generates precision pulses on configurable intervals.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Interval" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulse interval (milliseconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TStart" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TNow" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_RTC_PulseGen]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Generates precision pulses on configurable intervals.]]>
+</Line>
+<Line Number="5">
+<![CDATA[*/]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[GSV(WallClockTime, , CurrentValue, TNow);]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[if (Inp_Enable & NOT OSR OR Out) then]]>
+</Line>
+<Line Number="10">
+<![CDATA[	TStart := TNow;]]>
+</Line>
+<Line Number="11">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="12">
+<![CDATA[OSR := Inp_Enable;]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
+</Line>
+<Line Number="14">
+<![CDATA[Sts_Enabled := Inp_Enable;]]>
+</Line>
+<Line Number="15">
+<![CDATA[Out := Inp_Enable & (TNow - TStart >= Inp_Interval * 1000);]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_RTC_PulseGen]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[OSR := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Out := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_Msg_SetParams" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-13T16:36:51.731Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:56:24.263Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Class" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Instance" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Attribute" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_ReqLen" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Ref_Msg" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Msg_SetParams]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Ref_Msg.Class := Inp_Class;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Ref_Msg.Instance := Inp_Instance;]]>
+</Line>
+<Line Number="7">
+<![CDATA[Ref_Msg.Attribute := Inp_Attribute;]]>
+</Line>
+<Line Number="8">
+<![CDATA[Ref_Msg.REQ_LEN := Inp_ReqLen;]]>
+</Line>
+<Line Number="9">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_Msg_SetPathToModule" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-14T20:40:32.238Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:57:00.755Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Sets a message path to that of a module.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Module" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="Ref_Message" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="tINT" DataType="INT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Msg_SetPathToModule]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_Message.Path.DATA, 0, Size);]]>
+</Line>
+<Line Number="6">
+<![CDATA[GSV(Module, Ref_Module, Path, Ref_Message.Path.DATA[0]);]]>
+</Line>
+<Line Number="7">
+<![CDATA[COP(Ref_Message.Path.DATA[0], tINT, 1);]]>
+</Line>
+<Line Number="8">
+<![CDATA[Ref_Message.Path.LEN := tINT;]]>
+</Line>
+<Line Number="9">
+<![CDATA[COP(Ref_Message.Path.DATA[2], Ref_Message.Path.DATA[0], Size);]]>
+</Line>
+<Line Number="10">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="AO_Sys_Module" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-11-11T18:04:33.847Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:02:37.278Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Provides detailed module diagnostics and inhibit ability.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Module" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true">
+<Description>
+<![CDATA[Name of the module in the I/O tree.]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Inhibit" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Command to inhibit the module.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Uninhibit" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Command to uninhibit the module.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_EntryStatus" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Specifies the current state of the specified map entry.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_FaultCode" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[A number that identifies a module fault, if one occurs.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_FaultInfo" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Provides specific information about the Module object fault code.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Instance" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Provides the instance number of this module object.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Mode" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Specifies the current mode of the Module object.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Standby" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.0" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The controller is powering up.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Faulted" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.1" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Indicates whether any of the Module object’s connections to the associated module have failed.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Validating" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.2" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The Module object is verifying Module object integrity prior to establishing connections to the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Connecting" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.3" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The Module object is initiating connections to the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Connected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.4" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[All connections to the module are established and data is transferring.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_ShuttingDown" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.5" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The Module object is in the process of shutting down all connections to the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.6" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The Module object is inhibited (the inhibit bit in the Mode attribute is set).]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Waiting" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.7" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The parent object upon which this Module object depends is not running.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_FirmwareUpdating" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.9" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Firmware supervisor is attempting to flash the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Configuring" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.10" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Controller is downloading configuration to the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Disconnected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.11" Required="false" Visible="true" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="ModeSet" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ESts" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Status" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Sys_Module]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[GSV(Module, Ref_Module, INSTANCE, Val_Instance);]]>
+</Line>
+<Line Number="6">
+<![CDATA[GSV(Module, Ref_Module, EntryStatus, Val_EntryStatus);]]>
+</Line>
+<Line Number="7">
+<![CDATA[GSV(Module, Ref_Module, FaultCode, Val_FaultCode);]]>
+</Line>
+<Line Number="8">
+<![CDATA[GSV(Module, Ref_Module, FaultInfo, Val_FaultInfo);]]>
+</Line>
+<Line Number="9">
+<![CDATA[GSV(Module, Ref_Module, Mode, Val_Mode);]]>
+</Line>
+<Line Number="10">
+<![CDATA[]]>
+</Line>
+<Line Number="11">
+<![CDATA[if (Inp_Inhibit & NOT OSR) then]]>
+</Line>
+<Line Number="12">
+<![CDATA[	ModeSet := Val_Mode OR 16#0004;]]>
+</Line>
+<Line Number="13">
+<![CDATA[	SSV(Module, Ref_Module, Mode, ModeSet);]]>
+</Line>
+<Line Number="14">
+<![CDATA[elsif (Inp_Uninhibit & NOT OSR) then]]>
+</Line>
+<Line Number="15">
+<![CDATA[	ModeSet := Val_Mode AND 16#FFFB;]]>
+</Line>
+<Line Number="16">
+<![CDATA[	SSV(Module, Ref_Module, Mode, ModeSet);]]>
+</Line>
+<Line Number="17">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="18">
+<![CDATA[OSR := Inp_Inhibit OR Inp_Uninhibit;]]>
+</Line>
+<Line Number="19">
+<![CDATA[]]>
+</Line>
+<Line Number="20">
+<![CDATA[/*]]>
+</Line>
+<Line Number="21">
+<![CDATA[	Entry Status Map]]>
+</Line>
+<Line Number="22">
+<![CDATA[	• 0x0000: Standby]]>
+</Line>
+<Line Number="23">
+<![CDATA[	• 0x1000: Faulted]]>
+</Line>
+<Line Number="24">
+<![CDATA[	• 0x2000: Validating]]>
+</Line>
+<Line Number="25">
+<![CDATA[	• 0x3000: Connecting]]>
+</Line>
+<Line Number="26">
+<![CDATA[	• 0x4000: Running]]>
+</Line>
+<Line Number="27">
+<![CDATA[	• 0x5000: Shutting Down]]>
+</Line>
+<Line Number="28">
+<![CDATA[	• 0x6000: Inhibited]]>
+</Line>
+<Line Number="29">
+<![CDATA[	• 0x7000: Waiting]]>
+</Line>
+<Line Number="30">
+<![CDATA[	• 0x9000: Firmware Updating]]>
+</Line>
+<Line Number="31">
+<![CDATA[	• 0xA000: Configuring]]>
+</Line>
+<Line Number="32">
+<![CDATA[*/]]>
+</Line>
+<Line Number="33">
+<![CDATA[ESts := Val_EntryStatus & 16#F000;]]>
+</Line>
+<Line Number="34">
+<![CDATA[]]>
+</Line>
+<Line Number="35">
+<![CDATA[Sts_Standby := (ESts = 16#0000);]]>
+</Line>
+<Line Number="36">
+<![CDATA[Sts_Faulted := (ESts = 16#1000);]]>
+</Line>
+<Line Number="37">
+<![CDATA[Sts_Validating := (ESts = 16#2000);]]>
+</Line>
+<Line Number="38">
+<![CDATA[Sts_Connecting := (ESts = 16#3000);]]>
+</Line>
+<Line Number="39">
+<![CDATA[Sts_Connected := (ESts = 16#4000);]]>
+</Line>
+<Line Number="40">
+<![CDATA[Sts_ShuttingDown := (ESts = 16#5000);]]>
+</Line>
+<Line Number="41">
+<![CDATA[Sts_Inhibited := (ESts = 16#6000);]]>
+</Line>
+<Line Number="42">
+<![CDATA[Sts_Waiting := (ESts = 16#7000);]]>
+</Line>
+<Line Number="43">
+<![CDATA[Sts_FirmwareUpdating := (ESts = 16#9000);]]>
+</Line>
+<Line Number="44">
+<![CDATA[Sts_Configuring := (ESts = 16#A000);]]>
+</Line>
+<Line Number="45">
+<![CDATA[Sts_Disconnected := NOT (Sts_Inhibited OR Sts_Connected);]]>
+</Line>
+<Line Number="46">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Sys_Module]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Inp_Inhibit := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Inp_Uninhibit := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+<Line Number="8">
+<![CDATA[Status := 0;]]>
+</Line>
+<Line Number="9">
+<![CDATA[]]>
+</Line>
+<Line Number="10">
+<![CDATA[Val_Instance := 0;]]>
+</Line>
+<Line Number="11">
+<![CDATA[Val_EntryStatus := 0;]]>
+</Line>
+<Line Number="12">
+<![CDATA[Val_FaultCode := 0;]]>
+</Line>
+<Line Number="13">
+<![CDATA[Val_FaultInfo := 0;]]>
+</Line>
+<Line Number="14">
+<![CDATA[Val_Mode := 0;]]>
+</Line>
+<Line Number="15">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="AO_Dvc_PM500" Revision="4.0" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-14T16:29:20.370Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T19:27:23.945Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[PowerMonitor 500]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Module" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="Ref_Msg" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="Ref_Response" TagType="Base" DataType="REAL" Dimensions="18" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Ref_Class" TagType="Base" DataType="ST_Sys_DeviceClass" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="MCmd_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MCmd_Disable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_PowerUpEnable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Enables (1) or disables (0) data collection on system power-up. Default: 1.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Disconnected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Disconnected" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L1toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L1toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L1-N volts.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_L2toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L2toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L2-N volts.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_L3toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L3toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L3-N volts.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_AvgLNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.AvgLNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L1toL2Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L1toL2Voltage" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L1-L2 volts.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_L2toL3Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L2toL3Voltage" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L2-L3 volts.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_L3toL1Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L3toL1Voltage" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L3-L1 volts.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_AvgLLVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.AvgLLVoltage" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L1Amps" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L1Current" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L1 amps.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_L2Amps" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L2Current" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L2 amps.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_L3Amps" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L3Current" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[L3 amps.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_NeutralCurrent" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.NeutralCurrent" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Neutral amps. Calculated by instrument base.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_L1RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L1RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L2RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L2RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L3RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L3RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_TotalRealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.TotalRealPower" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L1ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L1ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L2ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L2ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L3ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L3ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_TotalApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.TotalApparentPower" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L1ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L1ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L2ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L2ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L3ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L3ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_TotalReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.TotalReactivePower" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L1PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L1PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L2PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L2PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_L3PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.L3PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_TotalPowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.TotalPowerFactor" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Frequency" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.Frequency" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PhaseSequence" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PhaseSequence" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL1toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL1toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL2toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL2toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL3toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL3toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxAvgLNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxAvgLNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL1toL2Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL1toL2Voltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL2toL3Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL2toL3Voltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL3toL1Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL3toL1Voltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxAvgLLVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxAvgLLVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL1Current" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL1Current" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL2Current" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL2Current" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL3Current" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL3Current" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxNeutralCurrent" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxNeutralCurrent" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL1RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL1RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL2RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL2RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL3RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL3RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxTotalRealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxTotalRealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL1ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL1ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL2ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL2ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL3ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL3ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxTotalVA" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxTotalApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL1ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL1ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL2ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL2ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL3ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL3ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxTotalVAR" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxTotalReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL1PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL1PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL2PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL2PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxL3PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxL3PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxTotalPowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxTotalPowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MaxFrequency" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MaxFrequency" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL1toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL1toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL2toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL2toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL3toNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL3toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdAvgLNVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdAvgLNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL1toL2Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL1toL2Voltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL2toL3Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL2toL3Voltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL3toL1Voltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL3toL1Voltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdAvgLLVoltage" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdAvgLLVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL1Current" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL1Current" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL2Current" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL2Current" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL3Current" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL3Current" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdNeutralCurrent" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdNeutralCurrent" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL1RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL1RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL2RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL2RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL3RealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL3RealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdTotalRealPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdTotalRealPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL1ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL1ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL2ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL2ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL3ApparentPower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL3ApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdTotalVA" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdTotalApparentPower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL1ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL1ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL2ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL2ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL3ReactivePower" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL3ReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdTotalVAR" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdTotalReactivePower" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL1PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL1PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL2PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL2PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdL3PowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdL3PowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdTotalPowerFactor" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdTotalPowerFactor" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_DmdFrequency" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.DmdFrequency" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_kWhConsumed" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.kWhConsumed" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_GWhConsumed" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.GWhConsumed" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_kVARhConsumed" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.kVARhConsumed" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_GVARhConsumed" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.GVARhConsumed" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_kWhGenerated" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.kWhGenerated" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_GWhGenerated" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.GWhGenerated" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_kVARhGenerated" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.kVARhGenerated" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_GVARhGenerated" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.GVARhGenerated" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PartialKWhConsumed" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PartialKWhConsumed" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PartialGWhConsumed" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PartialGWhConsumed" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PartialKVARhConsumed" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PartialKVARhConsumed" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PartialGVARhConsumed" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PartialGVARhConsumed" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PartialKWhGenerated" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PartialKWhGenerated" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PartialGWhGenerated" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PartialGWhGenerated" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PartialKVARhGenerated" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PartialKVARhGenerated" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_PartialGVARhGenerated" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.PartialGVARhGenerated" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_HourCounter" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.HourCounter" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MinuteCounter" TagType="Alias" Usage="Output" Radix="Float" AliasFor="Local.MinuteCounter" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ptr_Data" TagType="Alias" Usage="Input" Radix="Float" AliasFor="Local.L1toNVoltage" Required="false" Visible="false" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Instance" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Enabled" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SetMsgPath" DataType="AO_Msg_SetPathToModule" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Msg_SetPathToModule">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PG" DataType="AO_RTC_PulseGen" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,1000,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_RTC_PulseGen">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Interval" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="Sts_Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Module" DataType="AO_Sys_Module" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Sys_Module">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Inhibit" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Uninhibit" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Val_EntryStatus" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="Val_FaultCode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_FaultInfo" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Instance" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Mode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Sts_Standby" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Validating" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Connecting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Connected" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_ShuttingDown" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Inhibited" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Waiting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_FirmwareUpdating" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Configuring" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Disconnected" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SetMsgParams" DataType="AO_Msg_SetParams" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Msg_SetParams">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Class" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Inp_Instance" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Inp_Attribute" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Inp_ReqLen" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Local" DataType="ST_Dvc_PM500" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],0,[0,0,0,0,0]],0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="ST_Dvc_PM500">
+<StructureMember Name="Info" DataType="ST_Dvc">
+<StructureMember Name="Name" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Description" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Tag" DataType="STR_20">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_20" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<DataValueMember Name="Indicator" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="ObjectStatus" DataType="ST_Obj_Status">
+<DataValueMember Name="Bytes" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Sts_Initialized" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Physical" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Virtual" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Alarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_AtSetpoint" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_AudibleRequest" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_BypassActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_CommLoss" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Fault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_IOFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_IOUncertain" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_ResetReady" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Starting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Stopping" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_PSetOverride" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_SetTracking" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_InterlocksExist" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_InterlocksOK" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_NBInterlocksOK" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_PermissivesExist" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_PermissivesOK" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_NBPermissivesOK" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_SafetyExists" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_SafetyActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_31" DataType="BOOL" Value="0"/>
+</StructureMember>
+</StructureMember>
+<DataValueMember Name="L1toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L2toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L3toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="AvgLNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L1toL2Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L2toL3Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L3toL1Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="AvgLLVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L1Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L2Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L3Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="NeutralCurrent" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L1RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L2RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L3RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="TotalRealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L1ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L2ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L3ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="TotalApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L1ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L2ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L3ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="TotalReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L1PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L2PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="L3PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="TotalPowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Frequency" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PhaseSequence" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL1toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL2toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL3toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxAvgLNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL1toL2Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL2toL3Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL3toL1Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxAvgLLVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL1Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL2Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL3Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxNeutralCurrent" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL1RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL2RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL3RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxTotalRealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL1ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL2ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL3ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxTotalApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL1ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL2ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL3ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxTotalReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL1PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL2PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxL3PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxTotalPowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MaxFrequency" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL1toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL2toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL3toNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdAvgLNVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL1toL2Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL2toL3Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL3toL1Voltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdAvgLLVoltage" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL1Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL2Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL3Current" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdNeutralCurrent" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL1RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL2RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL3RealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdTotalRealPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL1ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL2ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL3ApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdTotalApparentPower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL1ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL2ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL3ReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdTotalReactivePower" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL1PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL2PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdL3PowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdTotalPowerFactor" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DmdFrequency" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="kWhConsumed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="GWhConsumed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="kVARhConsumed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="GVARhConsumed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="kWhGenerated" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="GWhGenerated" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="kVARhGenerated" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="GVARhGenerated" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PartialKWhConsumed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PartialGWhConsumed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PartialKVARhConsumed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PartialGVARhConsumed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PartialKWhGenerated" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PartialGWhGenerated" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PartialKVARhGenerated" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PartialGVARhGenerated" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="HourCounter" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MinuteCounter" DataType="REAL" Radix="Float" Value="0.0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Base" DataType="AO_Sys_Dvc" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0,0,0,0,0,[1,0,0,0]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Sys_Dvc">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Initialized" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Physical" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Virtual" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Alarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_AtSetpoint" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_AudibleRequest" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_BypassActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_CommLoss" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Fault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_IOFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_IOUncertain" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_ResetReady" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Resetting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Starting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Stopping" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_PSetOverride" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_SetTracking" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_SafetyExists" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_SafetyActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_31" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Inp_Type" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Inp_CmdSrc" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_NameSize" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_DescSize" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_ID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_IndicationColor" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Obj" DataType="AO_Sys_Dvc" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0,0,0,0,0,[1,0,0,0]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="AO_Sys_Dvc">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Initialized" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Physical" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Virtual" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Alarm" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_AtSetpoint" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_AudibleRequest" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_BypassActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_CommLoss" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Fault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_IOFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_IOUncertain" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_ResetReady" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Resetting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Starting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Stopping" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_PSetOverride" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_SetTracking" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_SafetyExists" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_SafetyActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_31" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Inp_Type" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Inp_CmdSrc" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_NameSize" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_DescSize" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_ID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_IndicationColor" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*	]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Dvc_PM500]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Message Config:]]>
+</Line>
+<Line Number="5">
+<![CDATA[	• Message Type: CIP Generic]]>
+</Line>
+<Line Number="6">
+<![CDATA[	• Service Type: Custom]]>
+</Line>
+<Line Number="7">
+<![CDATA[	• Service Code: 0x0E]]>
+</Line>
+<Line Number="8">
+<![CDATA[	• Class: 0x04]]>
+</Line>
+<Line Number="9">
+<![CDATA[	• Instance: 101, 102, 103, 104, 105, 106, 107]]>
+</Line>
+<Line Number="10">
+<![CDATA[	• Attribute: 0x03]]>
+</Line>
+<Line Number="11">
+<![CDATA[	• Source Element: None]]>
+</Line>
+<Line Number="12">
+<![CDATA[	• Source Length: None]]>
+</Line>
+<Line Number="13">
+<![CDATA[	• Destination Element: REAL[18]]]>
+</Line>
+<Line Number="14">
+<![CDATA[*/]]>
+</Line>
+<Line Number="15">
+<![CDATA[]]>
+</Line>
+<Line Number="16">
+<![CDATA[AO_Sys_Dvc(Obj, Ref_Class.eType_EnergyMonitor, Local.Info, Ref_Class);]]>
+</Line>
+<Line Number="17">
+<![CDATA[AO_Sys_Module(Module, Ref_Module);]]>
+</Line>
+<Line Number="18">
+<![CDATA[]]>
+</Line>
+<Line Number="19">
+<![CDATA[Enabled := (Enabled OR MCmd_Enable) & MCmd_Disable;]]>
+</Line>
+<Line Number="20">
+<![CDATA[]]>
+</Line>
+<Line Number="21">
+<![CDATA[PG.Inp_Interval := 200; // lowest per manual]]>
+</Line>
+<Line Number="22">
+<![CDATA[PG.Inp_Enable := Enabled & Module.Sts_Connected;]]>
+</Line>
+<Line Number="23">
+<![CDATA[AO_RTC_PulseGen(PG);]]>
+</Line>
+<Line Number="24">
+<![CDATA[]]>
+</Line>
+<Line Number="25">
+<![CDATA[if (PG.Out & (Ref_Msg.DN OR Ref_Msg.ER OR NOT Ref_Msg.EN)) then]]>
+</Line>
+<Line Number="26">
+<![CDATA[	AO_Msg_SetParams(SetMsgParams, 16#0004, Instance, 16#03, 0, Ref_Msg);]]>
+</Line>
+<Line Number="27">
+<![CDATA[	AO_Msg_SetPathToModule(SetMsgPath, Ref_Module, Ref_Msg);]]>
+</Line>
+<Line Number="28">
+<![CDATA[	MSG(Ref_Msg);]]>
+</Line>
+<Line Number="29">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="30">
+<![CDATA[]]>
+</Line>
+<Line Number="31">
+<![CDATA[if ((Ref_Msg.DN OR Ref_Msg.ER) & NOT OSR) then]]>
+</Line>
+<Line Number="32">
+<![CDATA[	if (Ref_Msg.DN) then]]>
+</Line>
+<Line Number="33">
+<![CDATA[		if (Instance = 101) then]]>
+</Line>
+<Line Number="34">
+<![CDATA[			COP(Ref_Response[0], Local.L1toNVoltage, 12);]]>
+</Line>
+<Line Number="35">
+<![CDATA[		elsif (Instance = 102) then]]>
+</Line>
+<Line Number="36">
+<![CDATA[			COP(Ref_Response[0], Local.L1RealPower, 18);]]>
+</Line>
+<Line Number="37">
+<![CDATA[		elsif (Instance = 103) then]]>
+</Line>
+<Line Number="38">
+<![CDATA[			COP(Ref_Response[0], Local.MaxL1toNVoltage, 12);]]>
+</Line>
+<Line Number="39">
+<![CDATA[		elsif (Instance = 104) then]]>
+</Line>
+<Line Number="40">
+<![CDATA[			COP(Ref_Response[0], Local.MaxL1RealPower, 17);]]>
+</Line>
+<Line Number="41">
+<![CDATA[		elsif (Instance = 105) then]]>
+</Line>
+<Line Number="42">
+<![CDATA[			COP(Ref_Response[0], Local.DmdL1toNVoltage, 12);]]>
+</Line>
+<Line Number="43">
+<![CDATA[		elsif (Instance = 106) then]]>
+</Line>
+<Line Number="44">
+<![CDATA[			COP(Ref_Response[0], Local.DmdL1RealPower, 17);]]>
+</Line>
+<Line Number="45">
+<![CDATA[		elsif (Instance = 107) then]]>
+</Line>
+<Line Number="46">
+<![CDATA[			COP(Ref_Response[0], Local.kWhConsumed, 18);]]>
+</Line>
+<Line Number="47">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="48">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="49">
+<![CDATA[	]]>
+</Line>
+<Line Number="50">
+<![CDATA[	Instance := Instance + 1;]]>
+</Line>
+<Line Number="51">
+<![CDATA[	if (Instance > 107) then]]>
+</Line>
+<Line Number="52">
+<![CDATA[		Instance := 0;]]>
+</Line>
+<Line Number="53">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="54">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="55">
+<![CDATA[OSR := (Ref_Msg.DN OR Ref_Msg.ER);]]>
+</Line>
+<Line Number="56">
+<![CDATA[]]>
+</Line>
+<Line Number="57">
+<![CDATA[Sts_Enabled := Enabled;]]>
+</Line>
+<Line Number="58">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Dvc_PM500]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Instance := 101;]]>
+</Line>
+<Line Number="6">
+<![CDATA[MCmd_Enable := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[MCmd_Disable := 0;]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[if (Cfg_PowerUpEnable) then]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Enabled := 1;]]>
+</Line>
+<Line Number="11">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="12">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Sys_Dvc"/>
+<Dependency Type="DataType" Name="ST_Dvc_PM500"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Sys_Module"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_RTC_PulseGen"/>
+<Dependency Type="DataType" Name="ST_Sys_DeviceClass"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Msg_SetParams"/>
+<Dependency Type="AddOnInstructionDefinition" Name="AO_Msg_SetPathToModule"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
