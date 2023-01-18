@@ -29,6 +29,7 @@ AOIs/UDTs
 - RTC (RTC_): Precision pulse/timing utilites.
 - String (Str_): String utilities.
 - System (Sys_): System diagnostics, WallClock utility/formatting generator, ISA 18.2 alarming with its parent "class", and other utilities.
+- Time (T_): Time utilities.
 - UI (UI_): HMI helper blocks. Includes List Selector object with support for variable rows and unlimited columns of data.
 
 UDTs follow the corresponding AOI in name:
