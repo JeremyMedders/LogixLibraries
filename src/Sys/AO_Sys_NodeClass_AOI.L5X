@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_NodeClass" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T22:32:02.756Z" ContainsContext="true" ExportDate="Thu Jan 12 16:34:50 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_NodeClass" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T01:22:15.697Z" ContainsContext="true" ExportDate="Wed Jan 18 19:22:43 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Sys_Identity" Family="NoFamily" Class="User">
@@ -16,6 +16,9 @@
 </DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
+<Description>
+<![CDATA[CIP Identity object.]]>
+</Description>
 <Members>
 <Member Name="VendorID" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
@@ -1092,7 +1095,7 @@ Return value:
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="AO_Sys_NodeClass" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-08-20T13:50:20.445Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T22:32:02.756Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Sys_NodeClass" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-08-20T13:50:20.445Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T01:22:15.697Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -3247,930 +3250,936 @@ Return value:
 <![CDATA[]]>
 </Line>
 <Line Number="30">
-<![CDATA[if (IOMapStep = 10 & (Ref_IOMap4BMsg.DN OR Ref_IOMap4BMsg.ER)) then]]>
+<![CDATA[AO_UI_ListSelector(ListNav, ListSize);]]>
 </Line>
 <Line Number="31">
-<![CDATA[	if (Ref_IOMap4BMsg.ER OR Ref_IOMap4BMsg.DN_LEN = 0) then]]>
+<![CDATA[]]>
 </Line>
 <Line Number="32">
-<![CDATA[		IOMapInst := 0;]]>
+<![CDATA[if (IOMapStep = 10 & (Ref_IOMap4BMsg.DN OR Ref_IOMap4BMsg.ER)) then]]>
 </Line>
 <Line Number="33">
-<![CDATA[		IOMapIndex := 0;]]>
+<![CDATA[	if (Ref_IOMap4BMsg.ER OR Ref_IOMap4BMsg.DN_LEN = 0) then]]>
 </Line>
 <Line Number="34">
-<![CDATA[		]]>
+<![CDATA[		IOMapInst := 0;]]>
 </Line>
 <Line Number="35">
-<![CDATA[		i1 := 0;]]>
+<![CDATA[		IOMapIndex := 0;]]>
 </Line>
 <Line Number="36">
-<![CDATA[		iMax := i1;]]>
+<![CDATA[		]]>
 </Line>
 <Line Number="37">
-<![CDATA[		j1 := i1 + 1;]]>
+<![CDATA[		i1 := 0;]]>
 </Line>
 <Line Number="38">
-<![CDATA[		IOMapStep := 35;]]>
+<![CDATA[		iMax := i1;]]>
 </Line>
 <Line Number="39">
-<![CDATA[	else]]>
+<![CDATA[		j1 := i1 + 1;]]>
 </Line>
 <Line Number="40">
-<![CDATA[		if (IOMapInst = 0) then]]>
+<![CDATA[		IOMapStep := 35;]]>
 </Line>
 <Line Number="41">
-<![CDATA[			IOMapCount := Ref_IOMap4BMsg.DN_LEN / 4;]]>
+<![CDATA[	else]]>
 </Line>
 <Line Number="42">
-<![CDATA[			IOMapIOCount := IOMapCount - 1;]]>
+<![CDATA[		if (IOMapInst = 0) then]]>
 </Line>
 <Line Number="43">
-<![CDATA[			]]>
+<![CDATA[			IOMapCount := Ref_IOMap4BMsg.DN_LEN / 4;]]>
 </Line>
 <Line Number="44">
-<![CDATA[			if (IOMapIOCount <> PrevNodeCount) then]]>
+<![CDATA[			IOMapIOCount := IOMapCount - 1;]]>
 </Line>
 <Line Number="45">
-<![CDATA[				Ref_Class.ListSorted := 0;]]>
+<![CDATA[			]]>
 </Line>
 <Line Number="46">
-<![CDATA[				i1 := 0;]]>
+<![CDATA[			if (IOMapIOCount <> PrevNodeCount) then]]>
 </Line>
 <Line Number="47">
-<![CDATA[				while i1 < ListSize do]]>
-</Line>
-<Line Number="48">
-<![CDATA[					COP(NodeZeroObj, Ref_Class.List[i1], 1);]]>
-</Line>
-<Line Number="49">
-<![CDATA[					i1 := i1 + 1;]]>
-</Line>
-<Line Number="50">
-<![CDATA[				end_while;]]>
-</Line>
-<Line Number="51">
-<![CDATA[			end_if;]]>
-</Line>
-<Line Number="52">
-<![CDATA[			]]>
-</Line>
-<Line Number="53">
-<![CDATA[			PrevNodeCount := IOMapIOCount;]]>
-</Line>
-<Line Number="54">
-<![CDATA[		end_if;]]>
-</Line>
-<Line Number="55">
-<![CDATA[		]]>
-</Line>
-<Line Number="56">
-<![CDATA[		COP(IOMapResp[0], IOMapInst, 1);]]>
-</Line>
-<Line Number="57">
-<![CDATA[		IOMapStep := 20;]]>
-</Line>
-<Line Number="58">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="59">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="60">
-<![CDATA[]]>
-</Line>
-<Line Number="61">
-<![CDATA[if (IOMapStep = 20 & (Ref_IOMap03Msg.DN OR Ref_IOMap03Msg.ER OR NOT Ref_IOMap03Msg.EN)) then]]>
-</Line>
-<Line Number="62">
-<![CDATA[	IOMapReq[0] := 9; // number of attributes]]>
-</Line>
-<Line Number="63">
-<![CDATA[	IOMapReq[1] := 1; // module type]]>
-</Line>
-<Line Number="64">
-<![CDATA[	IOMapReq[2] := 4; // status]]>
-</Line>
-<Line Number="65">
-<![CDATA[	IOMapReq[3] := 8; // link parent]]>
-</Line>
-<Line Number="66">
-<![CDATA[	IOMapReq[4] := 9; // link port]]>
-</Line>
-<Line Number="67">
-<![CDATA[	IOMapReq[5] := 10; // link address (slot)]]>
-</Line>
-<Line Number="68">
-<![CDATA[	IOMapReq[6] := 13; // map address]]>
-</Line>
-<Line Number="69">
-<![CDATA[	IOMapReq[7] := 14; // map instance]]>
-</Line>
-<Line Number="70">
-<![CDATA[	IOMapReq[8] := 18; // link long address (Enet IP address)]]>
-</Line>
-<Line Number="71">
-<![CDATA[	IOMapReq[9] := 31; // path]]>
-</Line>
-<Line Number="72">
-<![CDATA[	]]>
-</Line>
-<Line Number="73">
-<![CDATA[	AO_Msg_SetParams(SetParams, 16#69, IOMapInst, 0, 24, Ref_IOMap03Msg);]]>
-</Line>
-<Line Number="74">
-<![CDATA[	MSG(Ref_IOMap03Msg);]]>
-</Line>
-<Line Number="75">
-<![CDATA[	IOMapStep := 30;]]>
-</Line>
-<Line Number="76">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="77">
-<![CDATA[]]>
-</Line>
-<Line Number="78">
-<![CDATA[if (IOMapStep = 30 & (Ref_IOMap03Msg.DN OR Ref_IOMap03Msg.ER)) then]]>
-</Line>
-<Line Number="79">
-<![CDATA[	if (Ref_IOMap03Msg.DN) then]]>
-</Line>
-<Line Number="80">
-<![CDATA[		COP(NodeZeroObj, NodeObj, 1); // necessary to avoid stale path data]]>
-</Line>
-<Line Number="81">
-<![CDATA[		COP(IOMapResp[6], NodeObj.IOMap.ModuleType, 1);]]>
-</Line>
-<Line Number="82">
-<![CDATA[		COP(IOMapResp[12], NodeObj.IOMap.Status, 1);]]>
-</Line>
-<Line Number="83">
-<![CDATA[		]]>
-</Line>
-<Line Number="84">
-<![CDATA[		case NodeObj.IOMap.Status & 16#F000 of]]>
-</Line>
-<Line Number="85">
-<![CDATA[			16#0000: NodeObj.IOMap.StatusLabel := 'Standby';]]>
-</Line>
-<Line Number="86">
-<![CDATA[			16#1000: NodeObj.IOMap.StatusLabel := 'Faulted';]]>
-</Line>
-<Line Number="87">
-<![CDATA[			16#2000: NodeObj.IOMap.StatusLabel := 'Validating';]]>
-</Line>
-<Line Number="88">
-<![CDATA[			16#3000: NodeObj.IOMap.StatusLabel := 'Connecting';]]>
-</Line>
-<Line Number="89">
-<![CDATA[			16#4000: NodeObj.IOMap.StatusLabel := 'Connected';]]>
-</Line>
-<Line Number="90">
-<![CDATA[			16#5000: NodeObj.IOMap.StatusLabel := 'Shutting Down';]]>
-</Line>
-<Line Number="91">
-<![CDATA[			16#6000: NodeObj.IOMap.StatusLabel := 'Inhibited';]]>
-</Line>
-<Line Number="92">
-<![CDATA[			16#7000: NodeObj.IOMap.StatusLabel := 'Waiting';]]>
-</Line>
-<Line Number="93">
-<![CDATA[			16#9000: NodeObj.IOMap.StatusLabel := 'Firmware Updating';]]>
-</Line>
-<Line Number="94">
-<![CDATA[			16#A000: NodeObj.IOMap.StatusLabel := 'Configuring';]]>
-</Line>
-<Line Number="95">
-<![CDATA[		end_case;]]>
-</Line>
-<Line Number="96">
-<![CDATA[		]]>
-</Line>
-<Line Number="97">
-<![CDATA[		COP(IOMapResp[18], NodeObj.IOMap.LinkParent, 1);]]>
-</Line>
-<Line Number="98">
-<![CDATA[		COP(IOMapResp[26], NodeObj.IOMap.LinkPort, 1);]]>
-</Line>
-<Line Number="99">
-<![CDATA[		COP(IOMapResp[32], NodeObj.IOMap.LinkAddress, 1);]]>
-</Line>
-<Line Number="100">
-<![CDATA[		COP(IOMapResp[40], NodeObj.IOMap.MapAddress, 1);]]>
-</Line>
-<Line Number="101">
-<![CDATA[		COP(IOMapResp[48], NodeObj.IOMap.MapInstance, 1);]]>
-</Line>
-<Line Number="102">
-<![CDATA[		COP(IOMapResp[56], Offset, 1);]]>
-</Line>
-<Line Number="103">
-<![CDATA[		NodeObj.IOMap.LinkLongAddress.LEN := Offset;]]>
-</Line>
-<Line Number="104">
-<![CDATA[		COP(IOMapResp[58], NodeObj.IOMap.LinkLongAddress.DATA[0], NodeObj.IOMap.LinkLongAddress.LEN);]]>
-</Line>
-<Line Number="105">
-<![CDATA[		Offset := Offset + 62;]]>
-</Line>
-<Line Number="106">
-<![CDATA[		COP(IOMapResp[Offset], INT, 1);]]>
-</Line>
-<Line Number="107">
-<![CDATA[		NodeObj.IOMap.Path.LEN := INT;]]>
-</Line>
-<Line Number="108">
-<![CDATA[		Offset := Offset + 2;]]>
-</Line>
-<Line Number="109">
-<![CDATA[		COP(IOMapResp[Offset], NodeObj.IOMap.Path.DATA[0], NodeObj.IOMap.Path.LEN);]]>
-</Line>
-<Line Number="110">
-<![CDATA[		]]>
-</Line>
-<Line Number="111">
-<![CDATA[		if (NodeObj.IOMap.MapInstance > 1) then]]>
-</Line>
-<Line Number="112">
-<![CDATA[			// otherwise, check to see if it already exists]]>
-</Line>
-<Line Number="113">
-<![CDATA[			Found := 0;]]>
-</Line>
-<Line Number="114">
-<![CDATA[			i1 := 1;]]>
-</Line>
-<Line Number="115">
-<![CDATA[			while (i1 < ListSize) do]]>
-</Line>
-<Line Number="116">
-<![CDATA[				// update existing if found]]>
-</Line>
-<Line Number="117">
-<![CDATA[				if (NodeObj.IOMap.MapInstance = Ref_Class.List[i1].IOMap.MapInstance) then]]>
-</Line>
-<Line Number="118">
-<![CDATA[					COP(NodeObj.IOMap, Ref_Class.List[i1].IOMap, 1); ]]>
-</Line>
-<Line Number="119">
-<![CDATA[					Found := 1;]]>
-</Line>
-<Line Number="120">
-<![CDATA[					exit;]]>
-</Line>
-<Line Number="121">
-<![CDATA[				end_if;]]>
-</Line>
-<Line Number="122">
-<![CDATA[				i1 := i1 + 1;]]>
-</Line>
-<Line Number="123">
-<![CDATA[			end_while;]]>
-</Line>
-<Line Number="124">
-<![CDATA[			]]>
-</Line>
-<Line Number="125">
-<![CDATA[			// if the new connection wasn't located, insert it]]>
-</Line>
-<Line Number="126">
-<![CDATA[			if (NOT Found & IOMapIndex < ListSize) then]]>
-</Line>
-<Line Number="127">
-<![CDATA[				COP(NodeObj.IOMap, Ref_Class.List[IOMapIndex].IOMap, 1);]]>
-</Line>
-<Line Number="128">
-<![CDATA[			end_if;]]>
-</Line>
-<Line Number="129">
-<![CDATA[			]]>
-</Line>
-<Line Number="130">
-<![CDATA[		// if this is the root node, set path]]>
-</Line>
-<Line Number="131">
-<![CDATA[		elsif (NodeObj.IOMap.MapInstance = 1) then]]>
-</Line>
-<Line Number="132">
-<![CDATA[			NodeObj.IOMap.Path.LEN := 2;]]>
-</Line>
-<Line Number="133">
-<![CDATA[			NodeObj.IOMap.Path.DATA[0] := 1;]]>
-</Line>
-<Line Number="134">
-<![CDATA[			NodeObj.IOMap.Path.DATA[1] := 0;]]>
-</Line>
-<Line Number="135">
-<![CDATA[			COP(NodeObj.IOMap, Ref_Class.List[0].IOMap, 1);]]>
-</Line>
-<Line Number="136">
-<![CDATA[		end_if;]]>
-</Line>
-<Line Number="137">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="138">
-<![CDATA[	]]>
-</Line>
-<Line Number="139">
-<![CDATA[	if (IOMapIndex < IOMapCount) then // check condition]]>
-</Line>
-<Line Number="140">
-<![CDATA[		IOMapIndex := IOMapIndex + 1;]]>
-</Line>
-<Line Number="141">
-<![CDATA[		IOMapInst := IOMapInst + 1;]]>
-</Line>
-<Line Number="142">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="143">
-<![CDATA[	]]>
-</Line>
-<Line Number="144">
-<![CDATA[	IOMapStep := 0;]]>
-</Line>
-<Line Number="145">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="146">
-<![CDATA[]]>
-</Line>
-<Line Number="147">
-<![CDATA[// sort list by path]]>
-</Line>
-<Line Number="148">
-<![CDATA[if (IOMapStep = 35) then]]>
-</Line>
-<Line Number="149">
-<![CDATA[	if (i1 < IOMapCount - 1) then]]>
-</Line>
-<Line Number="150">
-<![CDATA[		if (j1 < ListSize) then]]>
-</Line>
-<Line Number="151">
-<![CDATA[			AO_Str_Compare(StrCmp, Ref_Class.List[j1].IOMap.Path.DATA, Ref_Class.List[iMax].IOMap.Path.DATA);]]>
-</Line>
-<Line Number="152">
-<![CDATA[			if (StrCmp.Val = -1 & Ref_Class.List[j1].IOMap.Path.LEN > 0 OR ]]>
-</Line>
-<Line Number="153">
-<![CDATA[				StrCmp.Val = 1 & Ref_Class.List[iMax].IOMap.Path.LEN = 0) then]]>
-</Line>
-<Line Number="154">
 <![CDATA[				Ref_Class.ListSorted := 0;]]>
 </Line>
-<Line Number="155">
-<![CDATA[				iMax := j1;]]>
+<Line Number="48">
+<![CDATA[				i1 := 0;]]>
 </Line>
-<Line Number="156">
+<Line Number="49">
+<![CDATA[				while i1 < ListSize do]]>
+</Line>
+<Line Number="50">
+<![CDATA[					COP(NodeZeroObj, Ref_Class.List[i1], 1);]]>
+</Line>
+<Line Number="51">
+<![CDATA[					i1 := i1 + 1;]]>
+</Line>
+<Line Number="52">
+<![CDATA[				end_while;]]>
+</Line>
+<Line Number="53">
 <![CDATA[			end_if;]]>
 </Line>
-<Line Number="157">
+<Line Number="54">
 <![CDATA[			]]>
 </Line>
-<Line Number="158">
-<![CDATA[			j1 := j1 + 1;]]>
+<Line Number="55">
+<![CDATA[			PrevNodeCount := IOMapIOCount;]]>
 </Line>
-<Line Number="159">
-<![CDATA[		else]]>
-</Line>
-<Line Number="160">
-<![CDATA[			if (i1 <> iMax) then]]>
-</Line>
-<Line Number="161">
-<![CDATA[				COP(Ref_Class.List[i1], NodeObj, 1);]]>
-</Line>
-<Line Number="162">
-<![CDATA[				COP(Ref_Class.List[iMax], Ref_Class.List[i1], 1);]]>
-</Line>
-<Line Number="163">
-<![CDATA[				COP(NodeObj, Ref_Class.List[iMax], 1);]]>
-</Line>
-<Line Number="164">
-<![CDATA[			end_if;]]>
-</Line>
-<Line Number="165">
-<![CDATA[			]]>
-</Line>
-<Line Number="166">
-<![CDATA[			i1 := i1 + 1;]]>
-</Line>
-<Line Number="167">
-<![CDATA[			j1 := i1 + 1;]]>
-</Line>
-<Line Number="168">
-<![CDATA[			iMax := i1;]]>
-</Line>
-<Line Number="169">
+<Line Number="56">
 <![CDATA[		end_if;]]>
 </Line>
-<Line Number="170">
-<![CDATA[	else]]>
-</Line>
-<Line Number="171">
-<![CDATA[		iMax := 0;]]>
-</Line>
-<Line Number="172">
-<![CDATA[		IOMapStep := 0;]]>
-</Line>
-<Line Number="173">
-<![CDATA[		Ref_Class.ListSorted := 1;]]>
-</Line>
-<Line Number="174">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="175">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="176">
-<![CDATA[]]>
-</Line>
-<Line Number="177">
-<![CDATA[/*]]>
-</Line>
-<Line Number="178">
-<![CDATA[	Identity Class]]>
-</Line>
-<Line Number="179">
-<![CDATA[	• Service Type: Custom]]>
-</Line>
-<Line Number="180">
-<![CDATA[	• Service Code: 0x01]]>
-</Line>
-<Line Number="181">
-<![CDATA[	• Class: 0x01]]>
-</Line>
-<Line Number="182">
-<![CDATA[	• Instance: 1]]>
-</Line>
-<Line Number="183">
-<![CDATA[	• Attribute: 0x00]]>
-</Line>
-<Line Number="184">
-<![CDATA[	• Destination Element: IDResp, SINT[256]]]>
-</Line>
-<Line Number="185">
-<![CDATA[*/]]>
-</Line>
-<Line Number="186">
-<![CDATA[]]>
-</Line>
-<Line Number="187">
-<![CDATA[if (IdStep = 0 & (Ref_Id01Msg.DN OR Ref_Id01Msg.ER OR NOT Ref_Id01Msg.EN)) then]]>
-</Line>
-<Line Number="188">
-<![CDATA[	if (0 <= i2 & i2 < ListSize) then]]>
-</Line>
-<Line Number="189">
-<![CDATA[		if ((Ref_Class.List[i2].IOMap.Status & 16#F000) = 16#4000) then]]>
-</Line>
-<Line Number="190">
-<![CDATA[			IdMapInst := Ref_Class.List[i2].IOMap.MapInstance;]]>
-</Line>
-<Line Number="191">
-<![CDATA[			COP(Ref_Class.List[i2].IOMap.Path, Ref_Id01Msg.Path, 1);]]>
-</Line>
-<Line Number="192">
-<![CDATA[			AO_Msg_SetParams(SetParams, 16#01, 1, 0, 0, Ref_Id01Msg);]]>
-</Line>
-<Line Number="193">
-<![CDATA[			MSG(Ref_Id01Msg);]]>
-</Line>
-<Line Number="194">
-<![CDATA[			IdStep := 10;]]>
-</Line>
-<Line Number="195">
-<![CDATA[		else]]>
-</Line>
-<Line Number="196">
-<![CDATA[			i2 := i2 + 1;]]>
-</Line>
-<Line Number="197">
-<![CDATA[		end_if;]]>
-</Line>
-<Line Number="198">
-<![CDATA[	else]]>
-</Line>
-<Line Number="199">
-<![CDATA[		i2 := 0;]]>
-</Line>
-<Line Number="200">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="201">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="202">
-<![CDATA[]]>
-</Line>
-<Line Number="203">
-<![CDATA[if (IdStep = 10 & (Ref_Id01Msg.DN OR Ref_Id01Msg.ER)) then]]>
-</Line>
-<Line Number="204">
-<![CDATA[	if (NOT Ref_Id01Msg.ER) then]]>
-</Line>
-<Line Number="205">
-<![CDATA[		COP(IdResp[0], IdObj.VendorID, 5);]]>
-</Line>
-<Line Number="206">
-<![CDATA[		COP(IdResp[10], IdObj.SerialNumber, 1);]]>
-</Line>
-<Line Number="207">
-<![CDATA[		IdObj.ProductName.LEN := IdResp[14];]]>
-</Line>
-<Line Number="208">
-<![CDATA[		COP(IdResp[15], IdObj.ProductName.DATA[0], IdObj.ProductName.LEN);]]>
-</Line>
-<Line Number="209">
+<Line Number="57">
 <![CDATA[		]]>
 </Line>
-<Line Number="210">
-<![CDATA[		j2 := 0;]]>
+<Line Number="58">
+<![CDATA[		COP(IOMapResp[0], IOMapInst, 1);]]>
 </Line>
-<Line Number="211">
-<![CDATA[		while (j2 < IOMapIOCount) do]]>
+<Line Number="59">
+<![CDATA[		IOMapStep := 20;]]>
 </Line>
-<Line Number="212">
-<![CDATA[			if (IdMapInst = Ref_Class.List[j2].IOMap.MapInstance) then]]>
-</Line>
-<Line Number="213">
-<![CDATA[				COP(IdObj, Ref_Class.List[j2].Identity, 1);]]>
-</Line>
-<Line Number="214">
-<![CDATA[				exit;]]>
-</Line>
-<Line Number="215">
-<![CDATA[			end_if;]]>
-</Line>
-<Line Number="216">
-<![CDATA[			j2 := j2 + 1;]]>
-</Line>
-<Line Number="217">
-<![CDATA[		end_while;]]>
-</Line>
-<Line Number="218">
+<Line Number="60">
 <![CDATA[	end_if;]]>
 </Line>
-<Line Number="219">
+<Line Number="61">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="62">
+<![CDATA[]]>
+</Line>
+<Line Number="63">
+<![CDATA[if (IOMapStep = 20 & (Ref_IOMap03Msg.DN OR Ref_IOMap03Msg.ER OR NOT Ref_IOMap03Msg.EN)) then]]>
+</Line>
+<Line Number="64">
+<![CDATA[	IOMapReq[0] := 9; // number of attributes]]>
+</Line>
+<Line Number="65">
+<![CDATA[	IOMapReq[1] := 1; // module type]]>
+</Line>
+<Line Number="66">
+<![CDATA[	IOMapReq[2] := 4; // status]]>
+</Line>
+<Line Number="67">
+<![CDATA[	IOMapReq[3] := 8; // link parent]]>
+</Line>
+<Line Number="68">
+<![CDATA[	IOMapReq[4] := 9; // link port]]>
+</Line>
+<Line Number="69">
+<![CDATA[	IOMapReq[5] := 10; // link address (slot)]]>
+</Line>
+<Line Number="70">
+<![CDATA[	IOMapReq[6] := 13; // map address]]>
+</Line>
+<Line Number="71">
+<![CDATA[	IOMapReq[7] := 14; // map instance]]>
+</Line>
+<Line Number="72">
+<![CDATA[	IOMapReq[8] := 18; // link long address (Enet IP address)]]>
+</Line>
+<Line Number="73">
+<![CDATA[	IOMapReq[9] := 31; // path]]>
+</Line>
+<Line Number="74">
 <![CDATA[	]]>
 </Line>
-<Line Number="220">
-<![CDATA[	i2 := i2 + 1;]]>
+<Line Number="75">
+<![CDATA[	AO_Msg_SetParams(SetParams, 16#69, IOMapInst, 0, 24, Ref_IOMap03Msg);]]>
 </Line>
-<Line Number="221">
-<![CDATA[	IdStep := 0;]]>
+<Line Number="76">
+<![CDATA[	MSG(Ref_IOMap03Msg);]]>
 </Line>
-<Line Number="222">
+<Line Number="77">
+<![CDATA[	IOMapStep := 30;]]>
+</Line>
+<Line Number="78">
 <![CDATA[end_if;]]>
 </Line>
-<Line Number="223">
+<Line Number="79">
 <![CDATA[]]>
 </Line>
-<Line Number="224">
-<![CDATA[/*]]>
+<Line Number="80">
+<![CDATA[if (IOMapStep = 30 & (Ref_IOMap03Msg.DN OR Ref_IOMap03Msg.ER)) then]]>
 </Line>
-<Line Number="225">
-<![CDATA[	Symbol Class]]>
+<Line Number="81">
+<![CDATA[	if (Ref_IOMap03Msg.DN) then]]>
 </Line>
-<Line Number="226">
-<![CDATA[	• Service Type: Custom]]>
+<Line Number="82">
+<![CDATA[		COP(NodeZeroObj, NodeObj, 1); // necessary to avoid stale path data]]>
 </Line>
-<Line Number="227">
-<![CDATA[	• Service Code: 0x03]]>
+<Line Number="83">
+<![CDATA[		COP(IOMapResp[6], NodeObj.IOMap.ModuleType, 1);]]>
 </Line>
-<Line Number="228">
-<![CDATA[	• Class: 0x6B]]>
+<Line Number="84">
+<![CDATA[		COP(IOMapResp[12], NodeObj.IOMap.Status, 1);]]>
 </Line>
-<Line Number="229">
-<![CDATA[	• Instance: 0]]>
-</Line>
-<Line Number="230">
-<![CDATA[	• Attribute: 0x00]]>
-</Line>
-<Line Number="231">
-<![CDATA[	• Source Element: SymReq, INT[4]]]>
-</Line>
-<Line Number="232">
-<![CDATA[	• Source Length: 2 + 3 * 2 = 8 bytes]]>
-</Line>
-<Line Number="233">
-<![CDATA[	• Destination Element: SymResp, SINT[256]]]>
-</Line>
-<Line Number="234">
-<![CDATA[	]]>
-</Line>
-<Line Number="235">
-<![CDATA[	• Service Type: Custom]]>
-</Line>
-<Line Number="236">
-<![CDATA[	• Service Code: 0x01]]>
-</Line>
-<Line Number="237">
-<![CDATA[	• Class: 0x6B]]>
-</Line>
-<Line Number="238">
-<![CDATA[	• Instance: Variable]]>
-</Line>
-<Line Number="239">
-<![CDATA[	• Attribute: 0x00]]>
-</Line>
-<Line Number="240">
-<![CDATA[	• Destination Element: SymResp, SINT[256]]]>
-</Line>
-<Line Number="241">
-<![CDATA[*/]]>
-</Line>
-<Line Number="242">
-<![CDATA[]]>
-</Line>
-<Line Number="243">
-<![CDATA[if (SymStep = 0 & (Ref_Sym03Msg.DN OR Ref_Sym03Msg.ER OR NOT Ref_Sym03Msg.EN)) then]]>
-</Line>
-<Line Number="244">
-<![CDATA[	SymReq[0] := 3;]]>
-</Line>
-<Line Number="245">
-<![CDATA[	SymReq[1] := 1;]]>
-</Line>
-<Line Number="246">
-<![CDATA[	SymReq[2] := 2;]]>
-</Line>
-<Line Number="247">
-<![CDATA[	SymReq[3] := 3;]]>
-</Line>
-<Line Number="248">
-<![CDATA[	]]>
-</Line>
-<Line Number="249">
-<![CDATA[	AO_Msg_SetParams(SetParams, 16#6B, 0, 0, 8, Ref_Sym03Msg);]]>
-</Line>
-<Line Number="250">
-<![CDATA[	MSG(Ref_Sym03Msg);]]>
-</Line>
-<Line Number="251">
-<![CDATA[	SymStep := 10;]]>
-</Line>
-<Line Number="252">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="253">
-<![CDATA[]]>
-</Line>
-<Line Number="254">
-<![CDATA[if (SymStep = 10 & (Ref_Sym03Msg.DN OR Ref_Sym03Msg.ER)) then]]>
-</Line>
-<Line Number="255">
-<![CDATA[	if(NOT Ref_Sym03Msg.ER) then]]>
-</Line>
-<Line Number="256">
-<![CDATA[		COP(SymResp[12], SymMax, 1);]]>
-</Line>
-<Line Number="257">
-<![CDATA[		SymInst := 0;]]>
-</Line>
-<Line Number="258">
-<![CDATA[		SymStep := 20;]]>
-</Line>
-<Line Number="259">
-<![CDATA[	else]]>
-</Line>
-<Line Number="260">
-<![CDATA[		SymStep := 0;]]>
-</Line>
-<Line Number="261">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="262">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="263">
-<![CDATA[]]>
-</Line>
-<Line Number="264">
-<![CDATA[if (SymStep = 20 & (Ref_Sym01Msg.DN OR Ref_Sym01Msg.ER OR NOT Ref_Sym01Msg.EN)) then]]>
-</Line>
-<Line Number="265">
-<![CDATA[	AO_Msg_SetParams(SetParams, 16#6B, SymInst, 0, 0, Ref_Sym01Msg);]]>
-</Line>
-<Line Number="266">
-<![CDATA[	MSG(Ref_Sym01Msg);]]>
-</Line>
-<Line Number="267">
-<![CDATA[	SymStep := 30;]]>
-</Line>
-<Line Number="268">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="269">
-<![CDATA[]]>
-</Line>
-<Line Number="270">
-<![CDATA[if (SymStep = 30 & (Ref_Sym01Msg.DN OR Ref_Sym01Msg.ER)) then]]>
-</Line>
-<Line Number="271">
-<![CDATA[	if (NOT Ref_Sym01Msg.ER) then]]>
-</Line>
-<Line Number="272">
-<![CDATA[		SymObj.Instance := SymInst;]]>
-</Line>
-<Line Number="273">
-<![CDATA[		COP(SymResp[0], SymObj.Type, 1);]]>
-</Line>
-<Line Number="274">
+<Line Number="85">
 <![CDATA[		]]>
 </Line>
-<Line Number="275">
-<![CDATA[		if (SymObj.Type = 4201) then]]>
+<Line Number="86">
+<![CDATA[		case NodeObj.IOMap.Status & 16#F000 of]]>
 </Line>
-<Line Number="276">
-<![CDATA[			COP(SymResp[2], SymObj.Address, 1);]]>
+<Line Number="87">
+<![CDATA[			16#0000: NodeObj.IOMap.StatusLabel := 'Standby';]]>
 </Line>
-<Line Number="277">
-<![CDATA[			COP(SymResp[6], Offset, 1);]]>
+<Line Number="88">
+<![CDATA[			16#1000: NodeObj.IOMap.StatusLabel := 'Faulted';]]>
 </Line>
-<Line Number="278">
-<![CDATA[			SymObj.Name.LEN := Offset;]]>
+<Line Number="89">
+<![CDATA[			16#2000: NodeObj.IOMap.StatusLabel := 'Validating';]]>
 </Line>
-<Line Number="279">
-<![CDATA[			COP(SymResp[8], SymObj.Name.DATA[0], SymObj.Name.LEN);]]>
+<Line Number="90">
+<![CDATA[			16#3000: NodeObj.IOMap.StatusLabel := 'Connecting';]]>
 </Line>
-<Line Number="280">
-<![CDATA[			]]>
+<Line Number="91">
+<![CDATA[			16#4000: NodeObj.IOMap.StatusLabel := 'Connected';]]>
 </Line>
-<Line Number="281">
-<![CDATA[			i3 := 0;]]>
+<Line Number="92">
+<![CDATA[			16#5000: NodeObj.IOMap.StatusLabel := 'Shutting Down';]]>
 </Line>
-<Line Number="282">
-<![CDATA[			while (i3 < ListSize) do]]>
+<Line Number="93">
+<![CDATA[			16#6000: NodeObj.IOMap.StatusLabel := 'Inhibited';]]>
 </Line>
-<Line Number="283">
-<![CDATA[				if (SymObj.Address = Ref_Class.List[i3].IOMap.MapAddress) then]]>
+<Line Number="94">
+<![CDATA[			16#7000: NodeObj.IOMap.StatusLabel := 'Waiting';]]>
 </Line>
-<Line Number="284">
-<![CDATA[					if (SymObj.Name.LEN >= 4) then]]>
+<Line Number="95">
+<![CDATA[			16#9000: NodeObj.IOMap.StatusLabel := 'Firmware Updating';]]>
 </Line>
-<Line Number="285">
-<![CDATA[						SymObj.Name.LEN := SymObj.Name.LEN - 4;]]>
+<Line Number="96">
+<![CDATA[			16#A000: NodeObj.IOMap.StatusLabel := 'Configuring';]]>
 </Line>
-<Line Number="286">
-<![CDATA[					end_if;]]>
+<Line Number="97">
+<![CDATA[		end_case;]]>
 </Line>
-<Line Number="287">
-<![CDATA[					Ref_Class.List[i3].Name.LEN := SymObj.Name.LEN;]]>
+<Line Number="98">
+<![CDATA[		]]>
 </Line>
-<Line Number="288">
-<![CDATA[					COP(SymObj.Name.DATA[4], Ref_Class.List[i3].Name.DATA[0], SymObj.Name.LEN);]]>
+<Line Number="99">
+<![CDATA[		COP(IOMapResp[18], NodeObj.IOMap.LinkParent, 1);]]>
 </Line>
-<Line Number="289">
+<Line Number="100">
+<![CDATA[		COP(IOMapResp[26], NodeObj.IOMap.LinkPort, 1);]]>
+</Line>
+<Line Number="101">
+<![CDATA[		COP(IOMapResp[32], NodeObj.IOMap.LinkAddress, 1);]]>
+</Line>
+<Line Number="102">
+<![CDATA[		COP(IOMapResp[40], NodeObj.IOMap.MapAddress, 1);]]>
+</Line>
+<Line Number="103">
+<![CDATA[		COP(IOMapResp[48], NodeObj.IOMap.MapInstance, 1);]]>
+</Line>
+<Line Number="104">
+<![CDATA[		COP(IOMapResp[56], Offset, 1);]]>
+</Line>
+<Line Number="105">
+<![CDATA[		NodeObj.IOMap.LinkLongAddress.LEN := Offset;]]>
+</Line>
+<Line Number="106">
+<![CDATA[		COP(IOMapResp[58], NodeObj.IOMap.LinkLongAddress.DATA[0], NodeObj.IOMap.LinkLongAddress.LEN);]]>
+</Line>
+<Line Number="107">
+<![CDATA[		Offset := Offset + 62;]]>
+</Line>
+<Line Number="108">
+<![CDATA[		COP(IOMapResp[Offset], INT, 1);]]>
+</Line>
+<Line Number="109">
+<![CDATA[		NodeObj.IOMap.Path.LEN := INT;]]>
+</Line>
+<Line Number="110">
+<![CDATA[		Offset := Offset + 2;]]>
+</Line>
+<Line Number="111">
+<![CDATA[		COP(IOMapResp[Offset], NodeObj.IOMap.Path.DATA[0], NodeObj.IOMap.Path.LEN);]]>
+</Line>
+<Line Number="112">
+<![CDATA[		]]>
+</Line>
+<Line Number="113">
+<![CDATA[		if (NodeObj.IOMap.MapInstance > 1) then]]>
+</Line>
+<Line Number="114">
+<![CDATA[			// otherwise, check to see if it already exists]]>
+</Line>
+<Line Number="115">
+<![CDATA[			Found := 0;]]>
+</Line>
+<Line Number="116">
+<![CDATA[			i1 := 1;]]>
+</Line>
+<Line Number="117">
+<![CDATA[			while (i1 < ListSize) do]]>
+</Line>
+<Line Number="118">
+<![CDATA[				// update existing if found]]>
+</Line>
+<Line Number="119">
+<![CDATA[				if (NodeObj.IOMap.MapInstance = Ref_Class.List[i1].IOMap.MapInstance) then]]>
+</Line>
+<Line Number="120">
+<![CDATA[					COP(NodeObj.IOMap, Ref_Class.List[i1].IOMap, 1); ]]>
+</Line>
+<Line Number="121">
+<![CDATA[					Found := 1;]]>
+</Line>
+<Line Number="122">
 <![CDATA[					exit;]]>
 </Line>
-<Line Number="290">
+<Line Number="123">
 <![CDATA[				end_if;]]>
 </Line>
-<Line Number="291">
-<![CDATA[				]]>
+<Line Number="124">
+<![CDATA[				i1 := i1 + 1;]]>
 </Line>
-<Line Number="292">
-<![CDATA[				i3 := i3 + 1;]]>
-</Line>
-<Line Number="293">
+<Line Number="125">
 <![CDATA[			end_while;]]>
 </Line>
-<Line Number="294">
+<Line Number="126">
+<![CDATA[			]]>
+</Line>
+<Line Number="127">
+<![CDATA[			// if the new connection wasn't located, insert it]]>
+</Line>
+<Line Number="128">
+<![CDATA[			if (NOT Found & IOMapIndex < ListSize) then]]>
+</Line>
+<Line Number="129">
+<![CDATA[				COP(NodeObj.IOMap, Ref_Class.List[IOMapIndex].IOMap, 1);]]>
+</Line>
+<Line Number="130">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="131">
+<![CDATA[			]]>
+</Line>
+<Line Number="132">
+<![CDATA[		// if this is the root node, set path]]>
+</Line>
+<Line Number="133">
+<![CDATA[		elsif (NodeObj.IOMap.MapInstance = 1) then]]>
+</Line>
+<Line Number="134">
+<![CDATA[			NodeObj.IOMap.Path.LEN := 2;]]>
+</Line>
+<Line Number="135">
+<![CDATA[			NodeObj.IOMap.Path.DATA[0] := 1;]]>
+</Line>
+<Line Number="136">
+<![CDATA[			NodeObj.IOMap.Path.DATA[1] := 0;]]>
+</Line>
+<Line Number="137">
+<![CDATA[			COP(NodeObj.IOMap, Ref_Class.List[0].IOMap, 1);]]>
+</Line>
+<Line Number="138">
 <![CDATA[		end_if;]]>
 </Line>
-<Line Number="295">
+<Line Number="139">
 <![CDATA[	end_if;]]>
 </Line>
-<Line Number="296">
+<Line Number="140">
 <![CDATA[	]]>
 </Line>
-<Line Number="297">
-<![CDATA[	SymInst := SymInst + 1;]]>
+<Line Number="141">
+<![CDATA[	if (IOMapIndex < IOMapCount) then // check condition]]>
 </Line>
-<Line Number="298">
-<![CDATA[	if (SymInst > SymMax) then]]>
+<Line Number="142">
+<![CDATA[		IOMapIndex := IOMapIndex + 1;]]>
 </Line>
-<Line Number="299">
-<![CDATA[		SymStep := 0;]]>
+<Line Number="143">
+<![CDATA[		IOMapInst := IOMapInst + 1;]]>
 </Line>
-<Line Number="300">
-<![CDATA[	else]]>
-</Line>
-<Line Number="301">
-<![CDATA[		SymStep := 20;]]>
-</Line>
-<Line Number="302">
+<Line Number="144">
 <![CDATA[	end_if;]]>
 </Line>
-<Line Number="303">
+<Line Number="145">
+<![CDATA[	]]>
+</Line>
+<Line Number="146">
+<![CDATA[	IOMapStep := 0;]]>
+</Line>
+<Line Number="147">
 <![CDATA[end_if;]]>
 </Line>
-<Line Number="304">
+<Line Number="148">
 <![CDATA[]]>
+</Line>
+<Line Number="149">
+<![CDATA[// sort list by path]]>
+</Line>
+<Line Number="150">
+<![CDATA[if (IOMapStep = 35) then]]>
+</Line>
+<Line Number="151">
+<![CDATA[	if (i1 < IOMapCount - 1) then]]>
+</Line>
+<Line Number="152">
+<![CDATA[		if (j1 < ListSize) then]]>
+</Line>
+<Line Number="153">
+<![CDATA[			AO_Str_Compare(StrCmp, Ref_Class.List[j1].IOMap.Path.DATA, Ref_Class.List[iMax].IOMap.Path.DATA);]]>
+</Line>
+<Line Number="154">
+<![CDATA[			if (StrCmp.Val = -1 & Ref_Class.List[j1].IOMap.Path.LEN > 0 OR ]]>
+</Line>
+<Line Number="155">
+<![CDATA[				StrCmp.Val = 1 & Ref_Class.List[iMax].IOMap.Path.LEN = 0) then]]>
+</Line>
+<Line Number="156">
+<![CDATA[				Ref_Class.ListSorted := 0;]]>
+</Line>
+<Line Number="157">
+<![CDATA[				iMax := j1;]]>
+</Line>
+<Line Number="158">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="159">
+<![CDATA[			]]>
+</Line>
+<Line Number="160">
+<![CDATA[			j1 := j1 + 1;]]>
+</Line>
+<Line Number="161">
+<![CDATA[		else]]>
+</Line>
+<Line Number="162">
+<![CDATA[			if (i1 <> iMax) then]]>
+</Line>
+<Line Number="163">
+<![CDATA[				COP(Ref_Class.List[i1], NodeObj, 1);]]>
+</Line>
+<Line Number="164">
+<![CDATA[				COP(Ref_Class.List[iMax], Ref_Class.List[i1], 1);]]>
+</Line>
+<Line Number="165">
+<![CDATA[				COP(NodeObj, Ref_Class.List[iMax], 1);]]>
+</Line>
+<Line Number="166">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="167">
+<![CDATA[			]]>
+</Line>
+<Line Number="168">
+<![CDATA[			i1 := i1 + 1;]]>
+</Line>
+<Line Number="169">
+<![CDATA[			j1 := i1 + 1;]]>
+</Line>
+<Line Number="170">
+<![CDATA[			iMax := i1;]]>
+</Line>
+<Line Number="171">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="172">
+<![CDATA[	else]]>
+</Line>
+<Line Number="173">
+<![CDATA[		iMax := 0;]]>
+</Line>
+<Line Number="174">
+<![CDATA[		IOMapStep := 0;]]>
+</Line>
+<Line Number="175">
+<![CDATA[		Ref_Class.ListSorted := 1;]]>
+</Line>
+<Line Number="176">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="177">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="178">
+<![CDATA[]]>
+</Line>
+<Line Number="179">
+<![CDATA[/*]]>
+</Line>
+<Line Number="180">
+<![CDATA[	Identity Class]]>
+</Line>
+<Line Number="181">
+<![CDATA[	• Service Type: Custom]]>
+</Line>
+<Line Number="182">
+<![CDATA[	• Service Code: 0x01]]>
+</Line>
+<Line Number="183">
+<![CDATA[	• Class: 0x01]]>
+</Line>
+<Line Number="184">
+<![CDATA[	• Instance: 1]]>
+</Line>
+<Line Number="185">
+<![CDATA[	• Attribute: 0x00]]>
+</Line>
+<Line Number="186">
+<![CDATA[	• Destination Element: IDResp, SINT[256]]]>
+</Line>
+<Line Number="187">
+<![CDATA[*/]]>
+</Line>
+<Line Number="188">
+<![CDATA[]]>
+</Line>
+<Line Number="189">
+<![CDATA[if (IdStep = 0 & (Ref_Id01Msg.DN OR Ref_Id01Msg.ER OR NOT Ref_Id01Msg.EN)) then]]>
+</Line>
+<Line Number="190">
+<![CDATA[	if (0 <= i2 & i2 < ListSize) then]]>
+</Line>
+<Line Number="191">
+<![CDATA[		if ((Ref_Class.List[i2].IOMap.Status & 16#F000) = 16#4000) then]]>
+</Line>
+<Line Number="192">
+<![CDATA[			IdMapInst := Ref_Class.List[i2].IOMap.MapInstance;]]>
+</Line>
+<Line Number="193">
+<![CDATA[			COP(Ref_Class.List[i2].IOMap.Path, Ref_Id01Msg.Path, 1);]]>
+</Line>
+<Line Number="194">
+<![CDATA[			AO_Msg_SetParams(SetParams, 16#01, 1, 0, 0, Ref_Id01Msg);]]>
+</Line>
+<Line Number="195">
+<![CDATA[			MSG(Ref_Id01Msg);]]>
+</Line>
+<Line Number="196">
+<![CDATA[			IdStep := 10;]]>
+</Line>
+<Line Number="197">
+<![CDATA[		else]]>
+</Line>
+<Line Number="198">
+<![CDATA[			i2 := i2 + 1;]]>
+</Line>
+<Line Number="199">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="200">
+<![CDATA[	else]]>
+</Line>
+<Line Number="201">
+<![CDATA[		i2 := 0;]]>
+</Line>
+<Line Number="202">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="203">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="204">
+<![CDATA[]]>
+</Line>
+<Line Number="205">
+<![CDATA[if (IdStep = 10 & (Ref_Id01Msg.DN OR Ref_Id01Msg.ER)) then]]>
+</Line>
+<Line Number="206">
+<![CDATA[	if (NOT Ref_Id01Msg.ER) then]]>
+</Line>
+<Line Number="207">
+<![CDATA[		COP(IdResp[0], IdObj.VendorID, 5);]]>
+</Line>
+<Line Number="208">
+<![CDATA[		COP(IdResp[10], IdObj.SerialNumber, 1);]]>
+</Line>
+<Line Number="209">
+<![CDATA[		IdObj.ProductName.LEN := IdResp[14];]]>
+</Line>
+<Line Number="210">
+<![CDATA[		COP(IdResp[15], IdObj.ProductName.DATA[0], IdObj.ProductName.LEN);]]>
+</Line>
+<Line Number="211">
+<![CDATA[		]]>
+</Line>
+<Line Number="212">
+<![CDATA[		j2 := 0;]]>
+</Line>
+<Line Number="213">
+<![CDATA[		while (j2 < IOMapIOCount) do]]>
+</Line>
+<Line Number="214">
+<![CDATA[			if (IdMapInst = Ref_Class.List[j2].IOMap.MapInstance) then]]>
+</Line>
+<Line Number="215">
+<![CDATA[				COP(IdObj, Ref_Class.List[j2].Identity, 1);]]>
+</Line>
+<Line Number="216">
+<![CDATA[				exit;]]>
+</Line>
+<Line Number="217">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="218">
+<![CDATA[			j2 := j2 + 1;]]>
+</Line>
+<Line Number="219">
+<![CDATA[		end_while;]]>
+</Line>
+<Line Number="220">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="221">
+<![CDATA[	]]>
+</Line>
+<Line Number="222">
+<![CDATA[	i2 := i2 + 1;]]>
+</Line>
+<Line Number="223">
+<![CDATA[	IdStep := 0;]]>
+</Line>
+<Line Number="224">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="225">
+<![CDATA[]]>
+</Line>
+<Line Number="226">
+<![CDATA[/*]]>
+</Line>
+<Line Number="227">
+<![CDATA[	Symbol Class]]>
+</Line>
+<Line Number="228">
+<![CDATA[	• Service Type: Custom]]>
+</Line>
+<Line Number="229">
+<![CDATA[	• Service Code: 0x03]]>
+</Line>
+<Line Number="230">
+<![CDATA[	• Class: 0x6B]]>
+</Line>
+<Line Number="231">
+<![CDATA[	• Instance: 0]]>
+</Line>
+<Line Number="232">
+<![CDATA[	• Attribute: 0x00]]>
+</Line>
+<Line Number="233">
+<![CDATA[	• Source Element: SymReq, INT[4]]]>
+</Line>
+<Line Number="234">
+<![CDATA[	• Source Length: 2 + 3 * 2 = 8 bytes]]>
+</Line>
+<Line Number="235">
+<![CDATA[	• Destination Element: SymResp, SINT[256]]]>
+</Line>
+<Line Number="236">
+<![CDATA[	]]>
+</Line>
+<Line Number="237">
+<![CDATA[	• Service Type: Custom]]>
+</Line>
+<Line Number="238">
+<![CDATA[	• Service Code: 0x01]]>
+</Line>
+<Line Number="239">
+<![CDATA[	• Class: 0x6B]]>
+</Line>
+<Line Number="240">
+<![CDATA[	• Instance: Variable]]>
+</Line>
+<Line Number="241">
+<![CDATA[	• Attribute: 0x00]]>
+</Line>
+<Line Number="242">
+<![CDATA[	• Destination Element: SymResp, SINT[256]]]>
+</Line>
+<Line Number="243">
+<![CDATA[*/]]>
+</Line>
+<Line Number="244">
+<![CDATA[]]>
+</Line>
+<Line Number="245">
+<![CDATA[if (SymStep = 0 & (Ref_Sym03Msg.DN OR Ref_Sym03Msg.ER OR NOT Ref_Sym03Msg.EN)) then]]>
+</Line>
+<Line Number="246">
+<![CDATA[	SymReq[0] := 3;]]>
+</Line>
+<Line Number="247">
+<![CDATA[	SymReq[1] := 1;]]>
+</Line>
+<Line Number="248">
+<![CDATA[	SymReq[2] := 2;]]>
+</Line>
+<Line Number="249">
+<![CDATA[	SymReq[3] := 3;]]>
+</Line>
+<Line Number="250">
+<![CDATA[	]]>
+</Line>
+<Line Number="251">
+<![CDATA[	AO_Msg_SetParams(SetParams, 16#6B, 0, 0, 8, Ref_Sym03Msg);]]>
+</Line>
+<Line Number="252">
+<![CDATA[	MSG(Ref_Sym03Msg);]]>
+</Line>
+<Line Number="253">
+<![CDATA[	SymStep := 10;]]>
+</Line>
+<Line Number="254">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="255">
+<![CDATA[]]>
+</Line>
+<Line Number="256">
+<![CDATA[if (SymStep = 10 & (Ref_Sym03Msg.DN OR Ref_Sym03Msg.ER)) then]]>
+</Line>
+<Line Number="257">
+<![CDATA[	if(NOT Ref_Sym03Msg.ER) then]]>
+</Line>
+<Line Number="258">
+<![CDATA[		COP(SymResp[12], SymMax, 1);]]>
+</Line>
+<Line Number="259">
+<![CDATA[		SymInst := 0;]]>
+</Line>
+<Line Number="260">
+<![CDATA[		SymStep := 20;]]>
+</Line>
+<Line Number="261">
+<![CDATA[	else]]>
+</Line>
+<Line Number="262">
+<![CDATA[		SymStep := 0;]]>
+</Line>
+<Line Number="263">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="264">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="265">
+<![CDATA[]]>
+</Line>
+<Line Number="266">
+<![CDATA[if (SymStep = 20 & (Ref_Sym01Msg.DN OR Ref_Sym01Msg.ER OR NOT Ref_Sym01Msg.EN)) then]]>
+</Line>
+<Line Number="267">
+<![CDATA[	AO_Msg_SetParams(SetParams, 16#6B, SymInst, 0, 0, Ref_Sym01Msg);]]>
+</Line>
+<Line Number="268">
+<![CDATA[	MSG(Ref_Sym01Msg);]]>
+</Line>
+<Line Number="269">
+<![CDATA[	SymStep := 30;]]>
+</Line>
+<Line Number="270">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="271">
+<![CDATA[]]>
+</Line>
+<Line Number="272">
+<![CDATA[if (SymStep = 30 & (Ref_Sym01Msg.DN OR Ref_Sym01Msg.ER)) then]]>
+</Line>
+<Line Number="273">
+<![CDATA[	if (NOT Ref_Sym01Msg.ER) then]]>
+</Line>
+<Line Number="274">
+<![CDATA[		SymObj.Instance := SymInst;]]>
+</Line>
+<Line Number="275">
+<![CDATA[		COP(SymResp[0], SymObj.Type, 1);]]>
+</Line>
+<Line Number="276">
+<![CDATA[		]]>
+</Line>
+<Line Number="277">
+<![CDATA[		if (SymObj.Type = 4201) then]]>
+</Line>
+<Line Number="278">
+<![CDATA[			COP(SymResp[2], SymObj.Address, 1);]]>
+</Line>
+<Line Number="279">
+<![CDATA[			COP(SymResp[6], Offset, 1);]]>
+</Line>
+<Line Number="280">
+<![CDATA[			SymObj.Name.LEN := Offset;]]>
+</Line>
+<Line Number="281">
+<![CDATA[			COP(SymResp[8], SymObj.Name.DATA[0], SymObj.Name.LEN);]]>
+</Line>
+<Line Number="282">
+<![CDATA[			]]>
+</Line>
+<Line Number="283">
+<![CDATA[			i3 := 0;]]>
+</Line>
+<Line Number="284">
+<![CDATA[			while (i3 < ListSize) do]]>
+</Line>
+<Line Number="285">
+<![CDATA[				if (SymObj.Address = Ref_Class.List[i3].IOMap.MapAddress) then]]>
+</Line>
+<Line Number="286">
+<![CDATA[					if (SymObj.Name.LEN >= 4) then]]>
+</Line>
+<Line Number="287">
+<![CDATA[						SymObj.Name.LEN := SymObj.Name.LEN - 4;]]>
+</Line>
+<Line Number="288">
+<![CDATA[					end_if;]]>
+</Line>
+<Line Number="289">
+<![CDATA[					Ref_Class.List[i3].Name.LEN := SymObj.Name.LEN;]]>
+</Line>
+<Line Number="290">
+<![CDATA[					COP(SymObj.Name.DATA[4], Ref_Class.List[i3].Name.DATA[0], SymObj.Name.LEN);]]>
+</Line>
+<Line Number="291">
+<![CDATA[					exit;]]>
+</Line>
+<Line Number="292">
+<![CDATA[				end_if;]]>
+</Line>
+<Line Number="293">
+<![CDATA[				]]>
+</Line>
+<Line Number="294">
+<![CDATA[				i3 := i3 + 1;]]>
+</Line>
+<Line Number="295">
+<![CDATA[			end_while;]]>
+</Line>
+<Line Number="296">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="297">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="298">
+<![CDATA[	]]>
+</Line>
+<Line Number="299">
+<![CDATA[	SymInst := SymInst + 1;]]>
+</Line>
+<Line Number="300">
+<![CDATA[	if (SymInst > SymMax) then]]>
+</Line>
+<Line Number="301">
+<![CDATA[		SymStep := 0;]]>
+</Line>
+<Line Number="302">
+<![CDATA[	else]]>
+</Line>
+<Line Number="303">
+<![CDATA[		SymStep := 20;]]>
+</Line>
+<Line Number="304">
+<![CDATA[	end_if;]]>
 </Line>
 <Line Number="305">
-<![CDATA[NodesConnected := 0;]]>
+<![CDATA[end_if;]]>
 </Line>
 <Line Number="306">
-<![CDATA[NodesInhibited := 0;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="307">
-<![CDATA[NodesDisconnected := 0;]]>
+<![CDATA[NodesConnected := 0;]]>
 </Line>
 <Line Number="308">
-<![CDATA[NodesLocal := 0;]]>
+<![CDATA[NodesInhibited := 0;]]>
 </Line>
 <Line Number="309">
-<![CDATA[NodesEthernet := 0;]]>
+<![CDATA[NodesDisconnected := 0;]]>
 </Line>
 <Line Number="310">
-<![CDATA[]]>
+<![CDATA[NodesLocal := 0;]]>
 </Line>
 <Line Number="311">
-<![CDATA[i := 0;]]>
+<![CDATA[NodesEthernet := 0;]]>
 </Line>
 <Line Number="312">
-<![CDATA[while i < ListSize do]]>
-</Line>
-<Line Number="313">
-<![CDATA[	IOMapStatus := Ref_Class.List[i].IOMap.Status & 16#F000;]]>
-</Line>
-<Line Number="314">
-<![CDATA[	]]>
-</Line>
-<Line Number="315">
-<![CDATA[	if (IOMapStatus = 16#4000) then]]>
-</Line>
-<Line Number="316">
-<![CDATA[		NodesConnected := NodesConnected + 1;]]>
-</Line>
-<Line Number="317">
-<![CDATA[	elsif (IOMapStatus = 16#6000) then]]>
-</Line>
-<Line Number="318">
-<![CDATA[		NodesInhibited := NodesInhibited + 1;]]>
-</Line>
-<Line Number="319">
-<![CDATA[	elsif (IOMapStatus <> 16#4000 & IOMapStatus <> 16#6000 & IOMapStatus <> 0) then]]>
-</Line>
-<Line Number="320">
-<![CDATA[		NodesDisconnected := NodesDisconnected + 1;]]>
-</Line>
-<Line Number="321">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="322">
-<![CDATA[	]]>
-</Line>
-<Line Number="323">
-<![CDATA[	if (Ref_Class.List[i].IOMap.LinkPort = 1 & Ref_Class.List[i].IOMap.LinkParent = 1) then]]>
-</Line>
-<Line Number="324">
-<![CDATA[		NodesLocal := NodesLocal + 1;]]>
-</Line>
-<Line Number="325">
-<![CDATA[	elsif (Ref_Class.List[i].IOMap.LinkLongAddress.LEN > 0) then]]>
-</Line>
-<Line Number="326">
-<![CDATA[		NodesEthernet := NodesEthernet + 1;]]>
-</Line>
-<Line Number="327">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="328">
-<![CDATA[	]]>
-</Line>
-<Line Number="329">
-<![CDATA[	i := i + 1;]]>
-</Line>
-<Line Number="330">
-<![CDATA[end_while;]]>
-</Line>
-<Line Number="331">
 <![CDATA[]]>
 </Line>
+<Line Number="313">
+<![CDATA[i := 0;]]>
+</Line>
+<Line Number="314">
+<![CDATA[while i < ListSize do]]>
+</Line>
+<Line Number="315">
+<![CDATA[	IOMapStatus := Ref_Class.List[i].IOMap.Status & 16#F000;]]>
+</Line>
+<Line Number="316">
+<![CDATA[	]]>
+</Line>
+<Line Number="317">
+<![CDATA[	if (IOMapStatus = 16#4000) then]]>
+</Line>
+<Line Number="318">
+<![CDATA[		NodesConnected := NodesConnected + 1;]]>
+</Line>
+<Line Number="319">
+<![CDATA[	elsif (IOMapStatus = 16#6000) then]]>
+</Line>
+<Line Number="320">
+<![CDATA[		NodesInhibited := NodesInhibited + 1;]]>
+</Line>
+<Line Number="321">
+<![CDATA[	elsif (IOMapStatus <> 16#4000 & IOMapStatus <> 16#6000 & IOMapStatus <> 0) then]]>
+</Line>
+<Line Number="322">
+<![CDATA[		NodesDisconnected := NodesDisconnected + 1;]]>
+</Line>
+<Line Number="323">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="324">
+<![CDATA[	]]>
+</Line>
+<Line Number="325">
+<![CDATA[	if (Ref_Class.List[i].IOMap.LinkPort = 1 & Ref_Class.List[i].IOMap.LinkParent = 1) then]]>
+</Line>
+<Line Number="326">
+<![CDATA[		NodesLocal := NodesLocal + 1;]]>
+</Line>
+<Line Number="327">
+<![CDATA[	elsif (Ref_Class.List[i].IOMap.LinkLongAddress.LEN > 0) then]]>
+</Line>
+<Line Number="328">
+<![CDATA[		NodesEthernet := NodesEthernet + 1;]]>
+</Line>
+<Line Number="329">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="330">
+<![CDATA[	]]>
+</Line>
+<Line Number="331">
+<![CDATA[	i := i + 1;]]>
+</Line>
 <Line Number="332">
-<![CDATA[Ref_Class.Instances := IOMapCount;]]>
+<![CDATA[end_while;]]>
 </Line>
 <Line Number="333">
-<![CDATA[Ref_Class.Connected := NodesConnected;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="334">
-<![CDATA[Ref_Class.Disconnected := NodesDisconnected;]]>
+<![CDATA[Ref_Class.Instances := IOMapCount;]]>
 </Line>
 <Line Number="335">
-<![CDATA[Ref_Class.Inhibited := NodesInhibited;]]>
+<![CDATA[Ref_Class.Connected := NodesConnected;]]>
 </Line>
 <Line Number="336">
-<![CDATA[Ref_Class.Local := NodesLocal;]]>
+<![CDATA[Ref_Class.Disconnected := NodesDisconnected;]]>
 </Line>
 <Line Number="337">
-<![CDATA[Ref_Class.Ethernet := NodesEthernet;]]>
+<![CDATA[Ref_Class.Inhibited := NodesInhibited;]]>
 </Line>
 <Line Number="338">
+<![CDATA[Ref_Class.Local := NodesLocal;]]>
+</Line>
+<Line Number="339">
+<![CDATA[Ref_Class.Ethernet := NodesEthernet;]]>
+</Line>
+<Line Number="340">
 <![CDATA[]]>
 </Line>
 </STContent>
