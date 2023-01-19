@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Finds the minimum of an array of REAL.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RMIN" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:39:01.526Z" ContainsContext="true" ExportDate="Tue Jan 17 11:42:56 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RMIN" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T01:51:23.171Z" ContainsContext="true" ExportDate="Wed Jan 18 19:54:13 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Array_RMIN" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T18:51:49.467Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:39:01.526Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_RMIN" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T18:51:49.467Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T01:51:23.171Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Finds the minimum of an array of REAL.]]>
@@ -89,36 +89,39 @@
 <![CDATA[Min := Ref_Data[0];]]>
 </Line>
 <Line Number="7">
-<![CDATA[]]>
+<![CDATA[i := 0;]]>
 </Line>
 <Line Number="8">
-<![CDATA[while (i < Size) do]]>
-</Line>
-<Line Number="9">
-<![CDATA[	if (Ref_Data[i] < Min) then]]>
-</Line>
-<Line Number="10">
-<![CDATA[		Min := Ref_Data[i];]]>
-</Line>
-<Line Number="11">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="12">
-<![CDATA[	]]>
-</Line>
-<Line Number="13">
-<![CDATA[	i := i + 1;]]>
-</Line>
-<Line Number="14">
-<![CDATA[end_while;]]>
-</Line>
-<Line Number="15">
 <![CDATA[]]>
 </Line>
+<Line Number="9">
+<![CDATA[while (i < Size) do]]>
+</Line>
+<Line Number="10">
+<![CDATA[	if (Ref_Data[i] < Min) then]]>
+</Line>
+<Line Number="11">
+<![CDATA[		Min := Ref_Data[i];]]>
+</Line>
+<Line Number="12">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="13">
+<![CDATA[	]]>
+</Line>
+<Line Number="14">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="15">
+<![CDATA[end_while;]]>
+</Line>
 <Line Number="16">
-<![CDATA[Val := Min;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="17">
+<![CDATA[Val := Min;]]>
+</Line>
+<Line Number="18">
 <![CDATA[]]>
 </Line>
 </STContent>

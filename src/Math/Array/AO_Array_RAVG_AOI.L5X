@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Finds the average of an array of REAL.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RAVG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:38:23.336Z" ContainsContext="true" ExportDate="Tue Jan 17 11:42:46 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RAVG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T01:53:09.527Z" ContainsContext="true" ExportDate="Wed Jan 18 19:53:49 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Array_RAVG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T16:05:38.005Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:38:23.336Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_RAVG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T16:05:38.005Z" CreatedBy="APEX\JEREMY" EditedDate="2023-01-19T01:53:09.527Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Finds the average of an array of REAL.]]>
@@ -89,27 +89,30 @@
 <![CDATA[Sum := 0.0;]]>
 </Line>
 <Line Number="7">
-<![CDATA[]]>
+<![CDATA[i := 0;]]>
 </Line>
 <Line Number="8">
-<![CDATA[while (i < Size) do]]>
-</Line>
-<Line Number="9">
-<![CDATA[	Sum := Sum + Ref_Data[i];]]>
-</Line>
-<Line Number="10">
-<![CDATA[	i := i + 1;]]>
-</Line>
-<Line Number="11">
-<![CDATA[end_while;]]>
-</Line>
-<Line Number="12">
 <![CDATA[]]>
 </Line>
+<Line Number="9">
+<![CDATA[while (i < Size) do]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Sum := Sum + Ref_Data[i];]]>
+</Line>
+<Line Number="11">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="12">
+<![CDATA[end_while;]]>
+</Line>
 <Line Number="13">
-<![CDATA[Val := Sum / Size;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="14">
+<![CDATA[Val := Sum / Size;]]>
+</Line>
+<Line Number="15">
 <![CDATA[]]>
 </Line>
 </STContent>

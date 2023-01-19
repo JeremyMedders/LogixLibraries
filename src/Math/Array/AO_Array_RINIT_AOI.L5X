@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Finds the maximum of an array of REAL.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RMAX" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T01:51:29.296Z" ContainsContext="true" ExportDate="Wed Jan 18 19:54:07 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Initializes an array of REAL to a given value.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RINIT" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T01:52:52.137Z" ContainsContext="true" ExportDate="Wed Jan 18 19:53:57 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Array_RMAX" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T18:51:12.519Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T01:51:29.296Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_RINIT" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T18:34:14.091Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T01:52:52.137Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
-<![CDATA[Finds the maximum of an array of REAL.]]>
+<![CDATA[Initializes an array of REAL to a given value.]]>
 </Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -21,14 +21,14 @@
 <![CDATA[Enable Output - System Defined Parameter]]>
 </Description>
 </Parameter>
-<Parameter Name="Ref_Data" TagType="Base" DataType="REAL" Dimensions="1" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="true">
+<Parameter Name="Ref_Data" TagType="Base" DataType="REAL" Dimensions="1" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false">
 <Description>
 <![CDATA[Array.]]>
 </Description>
 </Parameter>
-<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Parameter Name="Inp" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
 <Description>
-<![CDATA[Maximum.]]>
+<![CDATA[Value to assign.]]>
 </Description>
 <DefaultData Format="L5K">
 <![CDATA[0.00000000e+000]]>
@@ -39,6 +39,14 @@
 </Parameter>
 </Parameters>
 <LocalTags>
+<LocalTag Name="Sum" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
 <LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[0]]>
@@ -55,14 +63,6 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="Max" DataType="REAL" Radix="Float" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</LocalTag>
 </LocalTags>
 <Routines>
 <Routine Name="Logic" Type="ST">
@@ -74,7 +74,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Array_RMAX]]>
+<![CDATA[	AO_Array_RSUM]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -86,7 +86,7 @@
 <![CDATA[SIZE(Ref_Data, 0, Size);]]>
 </Line>
 <Line Number="6">
-<![CDATA[Max := Ref_Data[0];]]>
+<![CDATA[Sum := 0.0;]]>
 </Line>
 <Line Number="7">
 <![CDATA[i := 0;]]>
@@ -98,30 +98,15 @@
 <![CDATA[while (i < Size) do]]>
 </Line>
 <Line Number="10">
-<![CDATA[	if (Ref_Data[i] > Max) then]]>
+<![CDATA[	Ref_Data[i] := Inp;]]>
 </Line>
 <Line Number="11">
-<![CDATA[		Max := Ref_Data[i];]]>
-</Line>
-<Line Number="12">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="13">
-<![CDATA[	]]>
-</Line>
-<Line Number="14">
 <![CDATA[	i := i + 1;]]>
 </Line>
-<Line Number="15">
+<Line Number="12">
 <![CDATA[end_while;]]>
 </Line>
-<Line Number="16">
-<![CDATA[]]>
-</Line>
-<Line Number="17">
-<![CDATA[Val := Max;]]>
-</Line>
-<Line Number="18">
+<Line Number="13">
 <![CDATA[]]>
 </Line>
 </STContent>

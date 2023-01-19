@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Finds the harmonic average of an array of REAL.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RHAV" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:38:37.419Z" ContainsContext="true" ExportDate="Tue Jan 17 11:42:50 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Array_RHAV" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T01:53:00.807Z" ContainsContext="true" ExportDate="Wed Jan 18 19:53:54 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Array_RHAV" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T16:05:38.005Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:38:37.419Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Array_RHAV" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-12-14T16:05:38.005Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T01:53:00.807Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00" TrackingGroups="16#0000_0002">
 <Description>
 <![CDATA[Finds the harmonic average of an array of REAL.]]>
@@ -89,27 +89,30 @@
 <![CDATA[HAvg := 0.0;]]>
 </Line>
 <Line Number="7">
-<![CDATA[]]>
+<![CDATA[i := 0;]]>
 </Line>
 <Line Number="8">
-<![CDATA[while (i < Size) do]]>
-</Line>
-<Line Number="9">
-<![CDATA[	HAvg := HAvg + 1.0 / Ref_Data[i];]]>
-</Line>
-<Line Number="10">
-<![CDATA[	i := i + 1;]]>
-</Line>
-<Line Number="11">
-<![CDATA[end_while;]]>
-</Line>
-<Line Number="12">
 <![CDATA[]]>
 </Line>
+<Line Number="9">
+<![CDATA[while (i < Size) do]]>
+</Line>
+<Line Number="10">
+<![CDATA[	HAvg := HAvg + 1.0 / Ref_Data[i];]]>
+</Line>
+<Line Number="11">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="12">
+<![CDATA[end_while;]]>
+</Line>
 <Line Number="13">
-<![CDATA[Val := Size / HAvg;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="14">
+<![CDATA[Val := Size / HAvg;]]>
+</Line>
+<Line Number="15">
 <![CDATA[]]>
 </Line>
 </STContent>
