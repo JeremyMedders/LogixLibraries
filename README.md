@@ -6,13 +6,9 @@ With the exception of supporting sample files (FactoryTalk View ME screens/defin
 
 Parameter naming follows PlantPAx (sensibly)
 ------------
-- Inp_
-- PCmd_, OCmd_, MCmd, XCmd
-- PSet_, OSet_, MSet, XSet
-- Out_
-- Sts_
-- Val_
-- Cfg_
+- Inp_, Cfg_, PCmd_, OCmd_, MCmd, XCmd, PSet_, OSet_, MSet, XSet
+- Out_, Sts_, Val_
+- Ref_
 - Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
 - Rdy_: Avoided in favor of consolidating under the Sts_ prefix.
 - At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
