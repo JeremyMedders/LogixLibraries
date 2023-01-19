@@ -74,6 +74,7 @@ Done:
 - OSCAT vector math
 - CIP base data types (Identity, Port, EnetLink, TCPIP)
 - REAL array math
+- Preliminary wiki structure and topics
 
 "Legacy" hazards
 ------------
