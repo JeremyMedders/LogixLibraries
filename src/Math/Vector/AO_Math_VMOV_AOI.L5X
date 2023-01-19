@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Assigns the values of one vector to another.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VMOV" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:53:11.447Z" ContainsContext="true" ExportDate="Sun Jan 15 19:53:26 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VMOV" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T19:53:52.519Z" ContainsContext="true" ExportDate="Thu Jan 19 13:53:58 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,7 +12,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VMOV" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:53:11.447Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Math_VMOV" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T19:53:52.519Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Assigns the values of one vector to another.]]>
@@ -28,8 +28,8 @@
 <![CDATA[Enable Output - System Defined Parameter]]>
 </Description>
 </Parameter>
-<Parameter Name="Src" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
-<Parameter Name="Dest" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="A" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="B" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 </Parameters>
 <LocalTags/>
 <Routines>
@@ -51,13 +51,13 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[Dest.X := Src.X;]]>
+<![CDATA[B.X := A.X;]]>
 </Line>
 <Line Number="6">
-<![CDATA[Dest.Y := Src.Y;]]>
+<![CDATA[B.Y := A.Y;]]>
 </Line>
 <Line Number="7">
-<![CDATA[Dest.Z := Src.Z;]]>
+<![CDATA[B.Z := A.Z;]]>
 </Line>
 <Line Number="8">
 <![CDATA[]]>
