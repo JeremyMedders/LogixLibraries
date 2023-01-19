@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_SINC" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T02:24:12.814Z" ContainsContext="true" ExportDate="Wed Jan 18 20:24:29 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Sinc function.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_SINC" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T02:30:17.091Z" ContainsContext="true" ExportDate="Wed Jan 18 20:30:22 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_SINC" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T02:14:07.170Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T02:24:12.814Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Math_SINC" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T02:14:07.170Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T02:30:17.091Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Sinc function.]]>
+</Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
@@ -45,7 +49,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_TANC]]>
+<![CDATA[	AO_Math_SINC]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -57,7 +61,7 @@
 <![CDATA[if (Inp <> 0.0) then]]>
 </Line>
 <Line Number="6">
-<![CDATA[	Val := TAN(Inp) / Inp;]]>
+<![CDATA[	Val := SIN(Inp) / Inp;]]>
 </Line>
 <Line Number="7">
 <![CDATA[else]]>

@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_TANC" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T02:17:22.542Z" ContainsContext="true" ExportDate="Wed Jan 18 20:17:39 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Tanc function.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_TANC" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T02:30:07.297Z" ContainsContext="true" ExportDate="Wed Jan 18 20:30:25 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_TANC" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T02:14:07.170Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T02:17:22.542Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Math_TANC" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T02:14:07.170Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T02:30:07.297Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Tanc function.]]>
+</Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
