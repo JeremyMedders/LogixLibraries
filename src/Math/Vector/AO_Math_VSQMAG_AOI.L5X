@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Calculates square magnitude of two vectors.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VSQMAG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:17:38.106Z" ContainsContext="true" ExportDate="Sun Jan 15 19:25:55 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VSQMAG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T19:49:52.227Z" ContainsContext="true" ExportDate="Thu Jan 19 13:52:40 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,7 +12,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VSQMAG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-15T23:25:22.137Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:17:38.106Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="AO_Math_VSQMAG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-15T23:25:22.137Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T19:49:52.227Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Calculates square magnitude of two vectors.]]>
@@ -29,7 +29,7 @@
 </Description>
 </Parameter>
 <Parameter Name="V" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
-<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[0.00000000e+000]]>
 </DefaultData>
