@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--ISO 8601 day of week.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_T_DayOfWeek" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T17:52:14.098Z" ContainsContext="true" ExportDate="Tue Jan 17 11:52:55 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Time_DayOfWeek" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T16:58:54.244Z" ContainsContext="true" ExportDate="Sat Jan 21 09:51:33 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_T_DayOfWeek" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-17T17:48:46.356Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T17:52:14.098Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Time_DayOfWeek" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-17T17:48:46.356Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T16:58:54.244Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[ISO 8601 day of week.]]>

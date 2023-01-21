@@ -1,26 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Time format: MM:SS-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_T_ToStrMMSS" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-17T02:39:05.409Z" ContainsContext="true" ExportDate="Mon Jan 16 20:39:14 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Time_ToStrMMSS" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T17:08:25.260Z" ContainsContext="true" ExportDate="Sat Jan 21 09:51:47 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="STR_4" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -31,21 +25,15 @@
 <DataType Name="STR_8" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -55,7 +43,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_T_ToStrMMSS" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-10-10T16:15:05.675Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-17T02:39:05.409Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Time_ToStrMMSS" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-10-10T16:15:05.675Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:08:25.260Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Time format: MM:SS]]>
