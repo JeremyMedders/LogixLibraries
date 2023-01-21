@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_NodeClass" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T01:22:15.697Z" ContainsContext="true" ExportDate="Wed Jan 18 19:22:43 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_NodeClass" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T19:08:03.276Z" ContainsContext="true" ExportDate="Sat Jan 21 09:45:40 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Sys_Identity" Family="NoFamily" Class="User">
@@ -216,21 +216,15 @@
 <DataType Name="STR_20" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -241,21 +235,15 @@
 <DataType Name="STR_32" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -266,21 +254,15 @@
 <DataType Name="STR_40" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -291,21 +273,15 @@
 <DataType Name="STR_64" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -315,7 +291,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Name="AO_Msg_SetParams" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-13T16:36:51.731Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:56:24.263Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Msg_SetParams" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-13T16:36:51.731Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:39:49.460Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -400,7 +376,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="AO_Str_Compare" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-09-16T14:28:55.208Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:59:05.600Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Str_Compare" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-09-16T14:28:55.208Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:54:04.103Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Compares Left string to Right string.
@@ -582,7 +558,7 @@ Return value:
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="AO_UI_ListSelector" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-15T20:16:32.292Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T18:03:08.981Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="UI_ListSelector" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-15T20:16:32.292Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T03:17:09.280Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Handles a remote piloted control list selector.]]>
@@ -1095,7 +1071,7 @@ Return value:
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="AO_Sys_NodeClass" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-08-20T13:50:20.445Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T01:22:15.697Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Sys_NodeClass" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-08-20T13:50:20.445Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T19:08:03.276Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -2307,12 +2283,12 @@ Return value:
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="StrCmp" DataType="AO_Str_Compare" ExternalAccess="None">
+<LocalTag Name="StrCmp" DataType="Str_Compare" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[[1,0,0,0,0,0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="AO_Str_Compare">
+<Structure DataType="Str_Compare">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Val" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -3077,12 +3053,12 @@ Return value:
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="SetParams" DataType="AO_Msg_SetParams" ExternalAccess="None">
+<LocalTag Name="SetParams" DataType="Msg_SetParams" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[[1,0,0,0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="AO_Msg_SetParams">
+<Structure DataType="Msg_SetParams">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Inp_Class" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -3132,12 +3108,12 @@ Return value:
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="ListNav" DataType="AO_UI_ListSelector" ExternalAccess="Read/Write">
+<LocalTag Name="ListNav" DataType="UI_ListSelector" ExternalAccess="Read/Write">
 <DefaultData Format="L5K">
 <![CDATA[[5,0,0,2.00000000e-001,10,22,0,[1,0,0,0,0,0,0,0,0,4,0,0],[1,0,0,0,0,0,0,0,0,4,0,0],0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="AO_UI_ListSelector">
+<Structure DataType="UI_ListSelector">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="OCmd_Home" DataType="BOOL" Value="0"/>
@@ -3235,7 +3211,7 @@ Return value:
 <![CDATA[	Ref_Class.ListCapacity := ListSize;]]>
 </Line>
 <Line Number="25">
-<![CDATA[	AO_Msg_SetParams(SetParams, 16#69, IOMapInst, 0, 0, Ref_IOMap4BMsg);]]>
+<![CDATA[	Msg_SetParams(SetParams, 16#69, IOMapInst, 0, 0, Ref_IOMap4BMsg);]]>
 </Line>
 <Line Number="26">
 <![CDATA[	MSG(Ref_IOMap4BMsg);]]>
@@ -3250,7 +3226,7 @@ Return value:
 <![CDATA[]]>
 </Line>
 <Line Number="30">
-<![CDATA[AO_UI_ListSelector(ListNav, ListSize);]]>
+<![CDATA[UI_ListSelector(ListNav, ListSize);]]>
 </Line>
 <Line Number="31">
 <![CDATA[]]>
@@ -3385,7 +3361,7 @@ Return value:
 <![CDATA[	]]>
 </Line>
 <Line Number="75">
-<![CDATA[	AO_Msg_SetParams(SetParams, 16#69, IOMapInst, 0, 24, Ref_IOMap03Msg);]]>
+<![CDATA[	Msg_SetParams(SetParams, 16#69, IOMapInst, 0, 24, Ref_IOMap03Msg);]]>
 </Line>
 <Line Number="76">
 <![CDATA[	MSG(Ref_IOMap03Msg);]]>
@@ -3619,7 +3595,7 @@ Return value:
 <![CDATA[		if (j1 < ListSize) then]]>
 </Line>
 <Line Number="153">
-<![CDATA[			AO_Str_Compare(StrCmp, Ref_Class.List[j1].IOMap.Path.DATA, Ref_Class.List[iMax].IOMap.Path.DATA);]]>
+<![CDATA[			Str_Compare(StrCmp, Ref_Class.List[j1].IOMap.Path.DATA, Ref_Class.List[iMax].IOMap.Path.DATA);]]>
 </Line>
 <Line Number="154">
 <![CDATA[			if (StrCmp.Val = -1 & Ref_Class.List[j1].IOMap.Path.LEN > 0 OR ]]>
@@ -3742,7 +3718,7 @@ Return value:
 <![CDATA[			COP(Ref_Class.List[i2].IOMap.Path, Ref_Id01Msg.Path, 1);]]>
 </Line>
 <Line Number="194">
-<![CDATA[			AO_Msg_SetParams(SetParams, 16#01, 1, 0, 0, Ref_Id01Msg);]]>
+<![CDATA[			Msg_SetParams(SetParams, 16#01, 1, 0, 0, Ref_Id01Msg);]]>
 </Line>
 <Line Number="195">
 <![CDATA[			MSG(Ref_Id01Msg);]]>
@@ -3913,7 +3889,7 @@ Return value:
 <![CDATA[	]]>
 </Line>
 <Line Number="251">
-<![CDATA[	AO_Msg_SetParams(SetParams, 16#6B, 0, 0, 8, Ref_Sym03Msg);]]>
+<![CDATA[	Msg_SetParams(SetParams, 16#6B, 0, 0, 8, Ref_Sym03Msg);]]>
 </Line>
 <Line Number="252">
 <![CDATA[	MSG(Ref_Sym03Msg);]]>
@@ -3961,7 +3937,7 @@ Return value:
 <![CDATA[if (SymStep = 20 & (Ref_Sym01Msg.DN OR Ref_Sym01Msg.ER OR NOT Ref_Sym01Msg.EN)) then]]>
 </Line>
 <Line Number="267">
-<![CDATA[	AO_Msg_SetParams(SetParams, 16#6B, SymInst, 0, 0, Ref_Sym01Msg);]]>
+<![CDATA[	Msg_SetParams(SetParams, 16#6B, SymInst, 0, 0, Ref_Sym01Msg);]]>
 </Line>
 <Line Number="268">
 <![CDATA[	MSG(Ref_Sym01Msg);]]>
@@ -4296,11 +4272,11 @@ Return value:
 </Routines>
 <Dependencies>
 <Dependency Type="DataType" Name="ST_Sys_Identity"/>
-<Dependency Type="AddOnInstructionDefinition" Name="AO_UI_ListSelector"/>
+<Dependency Type="AddOnInstructionDefinition" Name="UI_ListSelector"/>
 <Dependency Type="DataType" Name="ST_Sys_Node"/>
 <Dependency Type="DataType" Name="ST_Sys_NodeClass"/>
-<Dependency Type="AddOnInstructionDefinition" Name="AO_Msg_SetParams"/>
-<Dependency Type="AddOnInstructionDefinition" Name="AO_Str_Compare"/>
+<Dependency Type="AddOnInstructionDefinition" Name="Msg_SetParams"/>
+<Dependency Type="AddOnInstructionDefinition" Name="Str_Compare"/>
 <Dependency Type="DataType" Name="ST_Sys_Symbol"/>
 </Dependencies>
 </AddOnInstructionDefinition>

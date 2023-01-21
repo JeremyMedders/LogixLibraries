@@ -1,23 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_WallClock" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T21:06:22.248Z" ContainsContext="true" ExportDate="Thu Jan 12 15:06:29 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_WallClock" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T19:07:10.381Z" ContainsContext="true" ExportDate="Sat Jan 21 09:46:00 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
-<DataType Name="ST_DT_Datetime" Family="NoFamily" Class="User">
-<Members>
-<Member Name="Year" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Month" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Day" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Hour" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Minute" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Second" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Microsecond" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-</Members>
-</DataType>
 <DataType Name="ST_Sys_WallClock" Family="NoFamily" Class="User">
 <Members>
 <Member Name="UTCTime" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="UTCDateTime" DataType="ST_DT_Datetime" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="LocalDateTime" DataType="ST_DT_Datetime" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UTCDateTime" DataType="ST_T_DT" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LocalDateTime" DataType="ST_T_DT" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="LocalZone" DataType="STR_64" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="DayOfWeek" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
@@ -38,8 +27,8 @@
 <Member Name="LocalSortable" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 <Dependencies>
-<Dependency Type="DataType" Name="ST_DT_Datetime"/>
-<Dependency Type="DataType" Name="ST_DT_Datetime"/>
+<Dependency Type="DataType" Name="ST_T_DT"/>
+<Dependency Type="DataType" Name="ST_T_DT"/>
 <Dependency Type="DataType" Name="STR_64"/>
 <Dependency Type="DataType" Name="STR_4"/>
 <Dependency Type="DataType" Name="STR_12"/>
@@ -55,24 +44,32 @@
 <Dependency Type="DataType" Name="STR_20"/>
 </Dependencies>
 </DataType>
+<DataType Name="ST_T_DT" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[System Date & Time]]>
+</Description>
+<Members>
+<Member Name="Year" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Month" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Day" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hour" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Minute" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Second" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Microsecond" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
 <DataType Name="STR_12" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -83,21 +80,15 @@
 <DataType Name="STR_20" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -108,21 +99,15 @@
 <DataType Name="STR_32" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -133,21 +118,15 @@
 <DataType Name="STR_4" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -158,21 +137,15 @@
 <DataType Name="STR_40" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -183,21 +156,15 @@
 <DataType Name="STR_48" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -208,21 +175,15 @@
 <DataType Name="STR_64" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -232,7 +193,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Name="AO_UI_ListSelector" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-15T20:16:32.292Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T18:03:08.981Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="UI_ListSelector" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-15T20:16:32.292Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T03:17:09.280Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Handles a remote piloted control list selector.]]>
@@ -745,7 +706,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="AO_Sys_WallClock" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-09-07T17:42:08.853Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:06:22.248Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Sys_WallClock" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-09-07T17:42:08.853Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T19:07:10.381Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -921,12 +882,12 @@
 <![CDATA[':']]>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="LocalDT" DataType="ST_DT_Datetime" ExternalAccess="None">
+<LocalTag Name="LocalDT" DataType="ST_T_DT" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[[0,0,0,0,0,0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="ST_DT_Datetime">
+<Structure DataType="ST_T_DT">
 <DataValueMember Name="Year" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="Month" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="Day" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -2013,12 +1974,12 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="ListNav" DataType="AO_UI_ListSelector" ExternalAccess="Read/Write">
+<LocalTag Name="ListNav" DataType="UI_ListSelector" ExternalAccess="Read/Write">
 <DefaultData Format="L5K">
 <![CDATA[[5,0,0,2.00000000e-001,10,22,0,[1,0,0,0,0,0,0,0,0,4,0,0],[1,0,0,0,0,0,0,0,0,4,0,0],0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="AO_UI_ListSelector">
+<Structure DataType="UI_ListSelector">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="OCmd_Home" DataType="BOOL" Value="0"/>
@@ -2164,7 +2125,7 @@
 <![CDATA[SIZE(UTCZones, 0, ListSize);]]>
 </Line>
 <Line Number="33">
-<![CDATA[AO_UI_ListSelector(ListNav, ListSize);]]>
+<![CDATA[UI_ListSelector(ListNav, ListSize);]]>
 </Line>
 <Line Number="34">
 <![CDATA[]]>
@@ -2879,8 +2840,8 @@
 </Routine>
 </Routines>
 <Dependencies>
-<Dependency Type="AddOnInstructionDefinition" Name="AO_UI_ListSelector"/>
-<Dependency Type="DataType" Name="ST_DT_Datetime"/>
+<Dependency Type="AddOnInstructionDefinition" Name="UI_ListSelector"/>
+<Dependency Type="DataType" Name="ST_T_DT"/>
 <Dependency Type="DataType" Name="ST_Sys_WallClock"/>
 <Dependency Type="DataType" Name="STR_48"/>
 <Dependency Type="DataType" Name="STR_64"/>

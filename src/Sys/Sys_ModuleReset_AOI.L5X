@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Provides an automatic module reset sequence.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_ModuleReset" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T21:02:21.052Z" ContainsContext="true" ExportDate="Thu Jan 12 15:02:49 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_ModuleReset" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T19:07:55.657Z" ContainsContext="true" ExportDate="Sat Jan 21 09:45:34 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Name="AO_Msg_SetPathToModule" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-14T20:40:32.238Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:57:00.755Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Msg_SetPathToModule" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-14T20:40:32.238Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:43:52.747Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Sets a message path to that of a module.]]>
@@ -82,7 +82,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="AO_Sys_ModuleReset" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-10T15:41:44.676Z" CreatedBy="ACH\jrogers" EditedDate="2023-01-12T21:02:21.052Z" EditedBy="RLCCONTROLS\jrogers"
+<AddOnInstructionDefinition Use="Target" Name="Sys_ModuleReset" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-10T15:41:44.676Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T19:07:55.657Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Provides an automatic module reset sequence.]]>
@@ -165,12 +165,12 @@ Path: Module]]>
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="SetPath" DataType="AO_Msg_SetPathToModule" ExternalAccess="None">
+<LocalTag Name="SetPath" DataType="Msg_SetPathToModule" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[[1,0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="AO_Msg_SetPathToModule">
+<Structure DataType="Msg_SetPathToModule">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 </Structure>
@@ -265,7 +265,7 @@ Path: Module]]>
 <![CDATA[if (Seq = 1 & EntryStatus = 16#6000 & (Ref_ResetMsg.DN OR Ref_ResetMsg.ER OR NOT Ref_ResetMsg.EN)) then]]>
 </Line>
 <Line Number="28">
-<![CDATA[	AO_Msg_SetPathToModule(SetPath, Ref_Module, Ref_ResetMsg);]]>
+<![CDATA[	Msg_SetPathToModule(SetPath, Ref_Module, Ref_ResetMsg);]]>
 </Line>
 <Line Number="29">
 <![CDATA[	MSG(Ref_ResetMsg);]]>
@@ -319,7 +319,7 @@ Path: Module]]>
 </Routine>
 </Routines>
 <Dependencies>
-<Dependency Type="AddOnInstructionDefinition" Name="AO_Msg_SetPathToModule"/>
+<Dependency Type="AddOnInstructionDefinition" Name="Msg_SetPathToModule"/>
 </Dependencies>
 </AddOnInstructionDefinition>
 </AddOnInstructionDefinitions>

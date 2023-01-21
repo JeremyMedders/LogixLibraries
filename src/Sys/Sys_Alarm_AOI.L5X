@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--ISA 18.2 Alarm-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Sys_Alarm" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T18:00:05.906Z" ContainsContext="true" ExportDate="Thu Jan 12 16:21:16 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_Alarm" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T18:43:11.784Z" ContainsContext="true" ExportDate="Sat Jan 21 09:45:13 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Op_Alarm" Family="NoFamily" Class="User">
@@ -433,21 +433,15 @@
 <DataType Name="STR_20" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -458,21 +452,15 @@
 <DataType Name="STR_40" Family="StringFamily" Class="User">
 <CustomProperties>
 <Provider ID="ACM" Ext="0">
-<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1">
-  <Libs>
-    <LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" />
-  </Libs>
-</Header>
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
 </Provider>
 <Provider ID="ACM" Ext="1">
-<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1">
-  <Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
   <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
     <Attrib />
     <Subs />
   </Private>
-</DecoratedData>]]></Val>
-</Data>
+</DecoratedData>]]></Val></Data>
 </Provider>
 </CustomProperties>
 <Members>
@@ -482,79 +470,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Name="AO_Str_Size" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-04T14:43:23.588Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:59:33.248Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
->
-<Parameters>
-<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Enable Input - System Defined Parameter]]>
-</Description>
-</Parameter>
-<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Enable Output - System Defined Parameter]]>
-</Description>
-</Parameter>
-<Parameter Name="Ref_StrData" TagType="Base" DataType="SINT" Dimensions="1" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
-<Parameter Name="Val_Aligned" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Val_Data" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
-</Parameters>
-<LocalTags>
-<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
-</DefaultData>
-</LocalTag>
-</LocalTags>
-<Routines>
-<Routine Name="Logic" Type="ST">
-<STContent>
-<Line Number="0">
-<![CDATA[]]>
-</Line>
-<Line Number="1">
-<![CDATA[/*]]>
-</Line>
-<Line Number="2">
-<![CDATA[	AO_Str_GetSize]]>
-</Line>
-<Line Number="3">
-<![CDATA[*/]]>
-</Line>
-<Line Number="4">
-<![CDATA[]]>
-</Line>
-<Line Number="5">
-<![CDATA[SIZE(Ref_StrData, 0, Val_Data);]]>
-</Line>
-<Line Number="6">
-<![CDATA[Val_Aligned := (((Val_Data + 4) + 3) & (16#FFFF XOR 16#0003)) / 4;]]>
-</Line>
-<Line Number="7">
-<![CDATA[]]>
-</Line>
-</STContent>
-</Routine>
-</Routines>
-</AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="AO_RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T16:23:44.408Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:09:25.399Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Generates precision pulses on configurable intervals.]]>
@@ -718,7 +634,79 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="AO_Str_Clear" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-02-01T20:55:09.461Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:58:55.505Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Str_Size" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-10-04T14:43:23.588Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:53:41.933Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_StrData" TagType="Base" DataType="SINT" Dimensions="1" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Val_Aligned" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Data" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Str_GetSize]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Ref_StrData, 0, Val_Data);]]>
+</Line>
+<Line Number="6">
+<![CDATA[Val_Aligned := (((Val_Data + 4) + 3) & (16#FFFF XOR 16#0003)) / 4;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="Str_Clear" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-02-01T20:55:09.461Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:54:20.703Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -801,7 +789,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="AO_Sys_Alarm" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-06T18:37:39.462Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T18:00:05.906Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Sys_Alarm" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-06T18:37:39.462Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T18:43:11.784Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[ISA 18.2 Alarm]]>
@@ -1071,12 +1059,12 @@
 <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="PG" DataType="AO_RTC_PulseGen" ExternalAccess="None">
+<LocalTag Name="PG" DataType="RTC_PulseGen" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[[1,0,0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="AO_RTC_PulseGen">
+<Structure DataType="RTC_PulseGen">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Inp_Enable" DataType="BOOL" Value="0"/>
@@ -1142,12 +1130,12 @@
 <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="StrSize" DataType="AO_Str_Size" ExternalAccess="Read Only">
+<LocalTag Name="StrSize" DataType="Str_Size" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,0,0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="AO_Str_Size">
+<Structure DataType="Str_Size">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Val_Aligned" DataType="DINT" Radix="Decimal" Value="0"/>
@@ -1297,12 +1285,12 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="StrClear" DataType="AO_Str_Clear" ExternalAccess="None">
+<LocalTag Name="StrClear" DataType="Str_Clear" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[[1,0,0]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="AO_Str_Clear">
+<Structure DataType="Str_Clear">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 </Structure>
@@ -1436,7 +1424,7 @@
 <![CDATA[]]>
 </Line>
 <Line Number="41">
-<![CDATA[AO_Str_Size(StrSize, Local.Condition.DATA);]]>
+<![CDATA[Str_Size(StrSize, Local.Condition.DATA);]]>
 </Line>
 <Line Number="42">
 <![CDATA[GSV(Program, THIS, Instance, Local.ProgramID);]]>
@@ -1784,7 +1772,7 @@
 <![CDATA[PG.Inp_Interval := 1000;]]>
 </Line>
 <Line Number="157">
-<![CDATA[AO_RTC_PulseGen(PG);]]>
+<![CDATA[RTC_PulseGen(PG);]]>
 </Line>
 <Line Number="158">
 <![CDATA[]]>
@@ -1925,7 +1913,7 @@
 <![CDATA[	InAlarm := 0;]]>
 </Line>
 <Line Number="204">
-<![CDATA[	AO_Str_Clear(StrClear, Local.LastOccurrence.LEN, Local.LastOccurrence.DATA);]]>
+<![CDATA[	Str_Clear(StrClear, Local.LastOccurrence.LEN, Local.LastOccurrence.DATA);]]>
 </Line>
 <Line Number="205">
 <![CDATA[end_if;]]>
@@ -2152,10 +2140,10 @@
 </Routines>
 <Dependencies>
 <Dependency Type="DataType" Name="ST_Op_Alarm"/>
-<Dependency Type="AddOnInstructionDefinition" Name="AO_RTC_PulseGen"/>
+<Dependency Type="AddOnInstructionDefinition" Name="RTC_PulseGen"/>
 <Dependency Type="DataType" Name="ST_Sys_AlarmClass"/>
-<Dependency Type="AddOnInstructionDefinition" Name="AO_Str_Clear"/>
-<Dependency Type="AddOnInstructionDefinition" Name="AO_Str_Size"/>
+<Dependency Type="AddOnInstructionDefinition" Name="Str_Clear"/>
+<Dependency Type="AddOnInstructionDefinition" Name="Str_Size"/>
 <Dependency Type="DataType" Name="STR_20"/>
 </Dependencies>
 </AddOnInstructionDefinition>
