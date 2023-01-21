@@ -10,7 +10,6 @@ Parameter naming follows PlantPAx (sensibly)
 - Out_, Sts_, Val_
 - Ref_
 - Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
-- Rdy_: Avoided in favor of consolidating under the Sts_ prefix.
 - At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
