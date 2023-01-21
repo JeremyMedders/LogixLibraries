@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Calculates square magnitude of two vectors.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VSQMAG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T19:49:52.227Z" ContainsContext="true" ExportDate="Thu Jan 19 13:52:40 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Determines whether two vectors are not equal.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Math_VxNEQ" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T23:28:30.002Z" ContainsContext="true" ExportDate="Sat Jan 21 10:47:14 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,10 +12,10 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VSQMAG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-15T23:25:22.137Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T19:49:52.227Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Math_VxNEQ" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-15T23:22:58.575Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T23:28:30.002Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
-<![CDATA[Calculates square magnitude of two vectors.]]>
+<![CDATA[Determines whether two vectors are not equal.]]>
 </Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -28,13 +28,14 @@
 <![CDATA[Enable Output - System Defined Parameter]]>
 </Description>
 </Parameter>
-<Parameter Name="V" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
-<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Parameter Name="A" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="B" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="Val" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
+<![CDATA[0]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
 </Parameters>
@@ -49,7 +50,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_VSQMAG]]>
+<![CDATA[	AO_Math_VNEQ]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -58,7 +59,7 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[Val := V.X * V.X + V.Y * V.Y + V.Z * V.Z;]]>
+<![CDATA[Val := (A.X <> B.X) OR (A.Y <> A.Y) OR (A.Z <> A.Z);]]>
 </Line>
 <Line Number="6">
 <![CDATA[]]>

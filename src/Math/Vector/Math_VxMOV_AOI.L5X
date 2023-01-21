@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Determines whether two vectors are not equal.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VNEQ" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:21:44.802Z" ContainsContext="true" ExportDate="Sun Jan 15 19:25:38 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Assigns the values of one vector to another.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Math_VxMOV" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T23:28:39.921Z" ContainsContext="true" ExportDate="Sat Jan 21 10:47:06 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,10 +12,10 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VNEQ" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-15T23:22:58.575Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:21:44.802Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Math_VxMOV" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T23:28:39.921Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
-<![CDATA[Determines whether two vectors are not equal.]]>
+<![CDATA[Assigns the values of one vector to another.]]>
 </Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -29,15 +29,7 @@
 </Description>
 </Parameter>
 <Parameter Name="A" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
-<Parameter Name="B" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
-<Parameter Name="Val" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
+<Parameter Name="B" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 </Parameters>
 <LocalTags/>
 <Routines>
@@ -50,7 +42,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_VNEQ]]>
+<![CDATA[	AO_Math_VMOV]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -59,9 +51,15 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[Val := (A.X <> B.X) OR (A.Y <> A.Y) OR (A.Z <> A.Z);]]>
+<![CDATA[B.X := A.X;]]>
 </Line>
 <Line Number="6">
+<![CDATA[B.Y := A.Y;]]>
+</Line>
+<Line Number="7">
+<![CDATA[B.Z := A.Z;]]>
+</Line>
+<Line Number="8">
 <![CDATA[]]>
 </Line>
 </STContent>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Determines whether a vector is null.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VNULL" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:22:07.074Z" ContainsContext="true" ExportDate="Sun Jan 15 19:25:44 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Generates a vector with absolute length 1 from a vector.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Math_VxNORM" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T23:28:25.273Z" ContainsContext="true" ExportDate="Sat Jan 21 10:47:20 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,10 +12,10 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VNULL" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:22:07.074Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Math_VxNORM" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T23:28:25.273Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
-<![CDATA[Determines whether a vector is null.]]>
+<![CDATA[Generates a vector with absolute length 1 from a vector.]]>
 </Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -29,16 +29,18 @@
 </Description>
 </Parameter>
 <Parameter Name="A" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
-<Parameter Name="Val" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<Parameter Name="Val" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="tR" DataType="REAL" Radix="Float" ExternalAccess="None">
 <DefaultData Format="L5K">
-<![CDATA[0]]>
+<![CDATA[0.00000000e+000]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
 </DefaultData>
-</Parameter>
-</Parameters>
-<LocalTags/>
+</LocalTag>
+</LocalTags>
 <Routines>
 <Routine Name="Logic" Type="ST">
 <STContent>
@@ -49,7 +51,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_VNULL]]>
+<![CDATA[	AO_Math_VNORM]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -58,9 +60,33 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[Val := (A.X = 0.0) & (A.Y = 0.0) & (A.Z = 0.0);]]>
+<![CDATA[tR := SQRT(A.X * A.X + A.Y * A.Y + A.Z * A.Z);]]>
 </Line>
 <Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (tR > 0.0) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	tR := 1.0 / tR;]]>
+</Line>
+<Line Number="9">
+<![CDATA[	]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Val.X := A.X * tR;]]>
+</Line>
+<Line Number="11">
+<![CDATA[	Val.Y := A.Y * tR;]]>
+</Line>
+<Line Number="12">
+<![CDATA[	Val.Z := A.Z * tR;]]>
+</Line>
+<Line Number="13">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="14">
 <![CDATA[]]>
 </Line>
 </STContent>

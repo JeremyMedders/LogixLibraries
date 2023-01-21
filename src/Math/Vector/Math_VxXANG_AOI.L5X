@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Calculates the angle between two vectors.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VANG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:20:28.753Z" ContainsContext="true" ExportDate="Sun Jan 15 19:25:22 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Calculates the angle between the X-axis and a vector.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Math_VxXANG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T23:27:01.170Z" ContainsContext="true" ExportDate="Sat Jan 21 10:47:51 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,10 +12,10 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VANG" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:48:11.112Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:20:28.753Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Math_VxXANG" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T23:27:01.170Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
-<![CDATA[Calculates the angle between two vectors.]]>
+<![CDATA[Calculates the angle between the X-axis and a vector.]]>
 </Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -29,7 +29,6 @@
 </Description>
 </Parameter>
 <Parameter Name="A" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
-<Parameter Name="B" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
 <Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[0.00000000e+000]]>
@@ -48,22 +47,6 @@
 <DataValue DataType="REAL" Radix="Float" Value="0.0"/>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="tA" DataType="REAL" Radix="Float" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="tB" DataType="REAL" Radix="Float" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</LocalTag>
 </LocalTags>
 <Routines>
 <Routine Name="Logic" Type="ST">
@@ -75,7 +58,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_VANG]]>
+<![CDATA[	AO_Math_VXANG]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -84,57 +67,21 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[tA := SQRT(A.X * A.X + A.Y * A.Y + A.Z * A.Z);]]>
+<![CDATA[tR := SQRT(A.X * A.X + A.Y * A.Y + A.Z * A.Z);]]>
 </Line>
 <Line Number="6">
-<![CDATA[tB := SQRT(B.X * B.X + B.Y * B.Y + B.Z * B.Z);]]>
-</Line>
-<Line Number="7">
-<![CDATA[tR := tA * tB;]]>
-</Line>
-<Line Number="8">
 <![CDATA[]]>
 </Line>
-<Line Number="9">
+<Line Number="7">
 <![CDATA[if (tR > 0.0) then]]>
 </Line>
-<Line Number="10">
-<![CDATA[	tR := (A.X * B.X + A.Y * B.Y + A.Z * B.Z) / tR;]]>
+<Line Number="8">
+<![CDATA[	Val := ACOS(A.X / tR);]]>
 </Line>
-<Line Number="11">
-<![CDATA[	]]>
-</Line>
-<Line Number="12">
-<![CDATA[	if (tR < -1.0) then]]>
-</Line>
-<Line Number="13">
-<![CDATA[		tR := -1.0;]]>
-</Line>
-<Line Number="14">
-<![CDATA[	elsif (1.0 < tR) then]]>
-</Line>
-<Line Number="15">
-<![CDATA[		tR := 1.0;]]>
-</Line>
-<Line Number="16">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="17">
-<![CDATA[	]]>
-</Line>
-<Line Number="18">
-<![CDATA[	Val := ACOS(tR);]]>
-</Line>
-<Line Number="19">
-<![CDATA[else]]>
-</Line>
-<Line Number="20">
-<![CDATA[	Val := 0.0;]]>
-</Line>
-<Line Number="21">
+<Line Number="9">
 <![CDATA[end_if;]]>
 </Line>
-<Line Number="22">
+<Line Number="10">
 <![CDATA[]]>
 </Line>
 </STContent>

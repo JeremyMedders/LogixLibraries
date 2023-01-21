@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Determines whether two vectors are parallel.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VPARA" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:22:46.404Z" ContainsContext="true" ExportDate="Sun Jan 15 19:25:50 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Subtracts two vectors.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Math_VxSUB" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T23:27:16.775Z" ContainsContext="true" ExportDate="Sat Jan 21 10:47:48 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,10 +12,10 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VPARA" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-15T23:26:09.066Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:22:46.404Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Math_VxSUB" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T23:27:16.775Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
-<![CDATA[Determines whether two vectors are parallel.]]>
+<![CDATA[Subtracts two vectors.]]>
 </Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -30,29 +30,9 @@
 </Parameter>
 <Parameter Name="A" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
 <Parameter Name="B" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
-<Parameter Name="Val" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 </Parameters>
-<LocalTags>
-<LocalTag Name="tV" DataType="ST_Math_Vector3D" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[[0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<Structure DataType="ST_Math_Vector3D">
-<DataValueMember Name="X" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="Y" DataType="REAL" Radix="Float" Value="0.0"/>
-<DataValueMember Name="Z" DataType="REAL" Radix="Float" Value="0.0"/>
-</Structure>
-</DefaultData>
-</LocalTag>
-</LocalTags>
+<LocalTags/>
 <Routines>
 <Routine Name="Logic" Type="ST">
 <STContent>
@@ -63,7 +43,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_VPARA]]>
+<![CDATA[	AO_Math_VSUB]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -72,21 +52,15 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[tV.X := A.Y * B.Z - A.Z * B.Y;]]>
+<![CDATA[Val.X := A.X - B.X;]]>
 </Line>
 <Line Number="6">
-<![CDATA[tV.Y := A.Z * B.X - A.X * B.Z;]]>
+<![CDATA[Val.Y := A.Y - B.Y;]]>
 </Line>
 <Line Number="7">
-<![CDATA[tV.Z := A.X * B.Y - A.Y * B.X;]]>
+<![CDATA[Val.Z := A.Z - B.Z;]]>
 </Line>
 <Line Number="8">
-<![CDATA[]]>
-</Line>
-<Line Number="9">
-<![CDATA[Val := (SQRT(tV.X * tV.X + tV.Y * tV.Y + tV.Z * tV.Z) = 0.0);]]>
-</Line>
-<Line Number="10">
 <![CDATA[]]>
 </Line>
 </STContent>

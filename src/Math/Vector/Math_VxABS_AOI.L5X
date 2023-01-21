@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Calculates the angle between the Z-axis and a vector.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VZANG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:17:17.994Z" ContainsContext="true" ExportDate="Sun Jan 15 19:26:06 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Calculates the length of a vector.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Math_VxABS" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T23:29:12.499Z" ContainsContext="true" ExportDate="Sat Jan 21 10:46:43 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,10 +12,10 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VZANG" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:17:17.994Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Math_VxABS" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:47:13.216Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T23:29:12.499Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
-<![CDATA[Calculates the angle between the Z-axis and a vector.]]>
+<![CDATA[Calculates the length of a vector.]]>
 </Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -38,16 +38,7 @@
 </DefaultData>
 </Parameter>
 </Parameters>
-<LocalTags>
-<LocalTag Name="tR" DataType="REAL" Radix="Float" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</LocalTag>
-</LocalTags>
+<LocalTags/>
 <Routines>
 <Routine Name="Logic" Type="ST">
 <STContent>
@@ -58,7 +49,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_VZANG]]>
+<![CDATA[	AO_Math_VABS]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -67,21 +58,9 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[tR := SQRT(A.X * A.X + A.Y * A.Y + A.Z * A.Z);]]>
+<![CDATA[Val := SQRT(A.X * A.X + A.Y * A.Y + A.Z * A.Z);]]>
 </Line>
 <Line Number="6">
-<![CDATA[]]>
-</Line>
-<Line Number="7">
-<![CDATA[if (tR > 0.0) then]]>
-</Line>
-<Line Number="8">
-<![CDATA[	Val := ACOS(A.Z / tR);]]>
-</Line>
-<Line Number="9">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="10">
 <![CDATA[]]>
 </Line>
 </STContent>

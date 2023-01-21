@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VORTH" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:18:08.845Z" ContainsContext="true" ExportDate="Sun Jan 15 19:25:47 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Multiplies a vector by scalar.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Math_VxMULS" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T23:28:35.150Z" ContainsContext="true" ExportDate="Sat Jan 21 10:47:10 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -11,8 +12,11 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VORTH" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-15T23:24:21.651Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:18:08.845Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Math_VxMULS" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:49:30.945Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T23:28:35.150Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Multiplies a vector by scalar.]]>
+</Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
@@ -25,6 +29,14 @@
 </Description>
 </Parameter>
 <Parameter Name="A" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="M" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
 <Parameter Name="Val" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 </Parameters>
 <LocalTags/>
@@ -38,7 +50,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_VORTH]]>
+<![CDATA[	AO_Math_VMULS]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -47,33 +59,15 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[if (A.Z < A.X) then]]>
+<![CDATA[Val.X := A.X * M;]]>
 </Line>
 <Line Number="6">
-<![CDATA[	Val.X := A.Y;]]>
+<![CDATA[Val.Y := A.Y * M;]]>
 </Line>
 <Line Number="7">
-<![CDATA[	Val.Y := -A.X;]]>
+<![CDATA[Val.Z := A.Z * M;]]>
 </Line>
 <Line Number="8">
-<![CDATA[	Val.Z := 0;]]>
-</Line>
-<Line Number="9">
-<![CDATA[else]]>
-</Line>
-<Line Number="10">
-<![CDATA[	Val.X := 0;]]>
-</Line>
-<Line Number="11">
-<![CDATA[	Val.Y := -A.Z;]]>
-</Line>
-<Line Number="12">
-<![CDATA[	Val.Z := A.Y;]]>
-</Line>
-<Line Number="13">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="14">
 <![CDATA[]]>
 </Line>
 </STContent>

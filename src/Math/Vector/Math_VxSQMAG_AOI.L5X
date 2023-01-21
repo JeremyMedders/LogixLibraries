@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Calculates the length of a vector.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Math_VABS" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-16T01:20:40.795Z" ContainsContext="true" ExportDate="Sun Jan 15 19:25:16 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Calculates square magnitude of two vectors.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Math_VxSQMAG" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-19T23:27:59.552Z" ContainsContext="true" ExportDate="Sat Jan 21 10:47:43 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Math_Vector3D" Family="NoFamily" Class="User">
@@ -12,10 +12,10 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Math_VABS" Revision="1.0" Vendor="OSCAT by Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-14T05:47:13.216Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-16T01:20:40.795Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Math_VxSQMAG" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-15T23:25:22.137Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-19T23:27:59.552Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
-<![CDATA[Calculates the length of a vector.]]>
+<![CDATA[Calculates square magnitude of two vectors.]]>
 </Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -28,7 +28,7 @@
 <![CDATA[Enable Output - System Defined Parameter]]>
 </Description>
 </Parameter>
-<Parameter Name="A" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="V" TagType="Base" DataType="ST_Math_Vector3D" Usage="InOut" Required="true" Visible="true" Constant="true"/>
 <Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[0.00000000e+000]]>
@@ -49,7 +49,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Math_VABS]]>
+<![CDATA[	AO_Math_VSQMAG]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -58,7 +58,7 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[Val := SQRT(A.X * A.X + A.Y * A.Y + A.Z * A.Z);]]>
+<![CDATA[Val := V.X * V.X + V.Y * V.Y + V.Z * V.Z;]]>
 </Line>
 <Line Number="6">
 <![CDATA[]]>
