@@ -1,0 +1,3007 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PID Controller-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Op_PID" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T18:22:41.538Z" ContainsContext="true" ExportDate="Sat Jan 21 09:46:36 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="Op_CmdSrc" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-08T00:43:25.202Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T18:22:41.521Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Command Source]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Local" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Used when a device has hardwired or local control and the process object cannot control the device.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Disable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Disables the object. Supersedes all command sources.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Override" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Override acquire.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_ExtInhibit" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Inhibits External command source.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Initialize" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Initializes this object.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_ResetConfig" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Resets configuration values to defaults.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PCmd_Prog" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.0" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command to acquire from Operator.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_Oper" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.1" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command to release to Operator.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_Normal" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.2" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command to set to normal.]]>
+</Description>
+</Parameter>
+<Parameter Name="PCmd_Lock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PCmd.3" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command to lock.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_Acquire" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.0" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Operator command to acquire from Program.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_Release" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.1" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Operator command to release to Program.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_Normal" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.2" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Operator command to set to normal.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_Lock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.3" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Operator command to lock.]]>
+</Description>
+</Parameter>
+<Parameter Name="OCmd_Unlock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.4" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Operator command to unlock.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_Acquire" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.0" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Maintenance command to acquire.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_Release" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.1" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Maintenance command to release.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_Normal" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.2" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Maintenance command to set to normal.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_Enable" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.5" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Maintenance command to enable.]]>
+</Description>
+</Parameter>
+<Parameter Name="MCmd_Disable" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MCmd.6" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Maintenance command to disable.]]>
+</Description>
+</Parameter>
+<Parameter Name="XCmd_Acquire" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.0" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[External command to acquire from Program or Operator.]]>
+</Description>
+</Parameter>
+<Parameter Name="XCmd_Release" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.1" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[External command to release to Program or Operator.]]>
+</Description>
+</Parameter>
+<Parameter Name="XCmd_Normal" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="XCmd.2" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[External command to set to normal.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current command source.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="eSrc_None" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[0]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_Local" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[1]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_ProgramDisable" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[2]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_MaintenanceDisable" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[3]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_Maintenance" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[4]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_Override" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[5]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_External" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[6]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_OperatorLock" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[7]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_Operator" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[8]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_ProgramLock" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[9]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="eSrc_Program" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="eSources[10]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Local" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.0" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Hardwired circuitry or other external logic controls the device.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Disabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.1" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Object disabled.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_ProgDisable" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.2" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Object disabled by Program.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_MaintDisable" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.3" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Object disabled by Maintenance.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Maintenance" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.4" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Object owned by Maintenance.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Override" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.5" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Object owned by Override source. Supersedes Program, Operator, and External sources.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_External" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.6" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Object owned by External source. Supersedes Operator and Program.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_OperatorLock" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.7" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Operator Lock is in effect.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Operator" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.8" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Operator has control of the device.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_ProgramLock" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.9" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program Lock is in effect.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Program" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.10" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program logic has control of the device.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Normal" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.11" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Current owner matches configured Normal source.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Initialized" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.31" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Object commands and status have been reset, and power-up owner set.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_HasOper" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.0" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Operator exists. Default: 1.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_HasOperLock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.1" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Operator Lock exists. Default: 1.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_HasProg" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.2" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program exists. Default: 1.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_HasProgLock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.3" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program Lock exists. Default: 1.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_HasExternal" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.4" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[External owner exists. Default: 0.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_HasMaint" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.5" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Maintenance exists. Default: 1.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_HasMaintDisable" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.6" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Maintenance Disable exists. Default: 1.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_OvrdOverLock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.7" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Override supersedes Program/Operator lock. 0: Disable, 1: Enable (default).]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_ExtOverLock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.8" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[External supersedes Program/Operator lock. 0: Disable (default), 1: Enable.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_OperNormal" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.9" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Normal source. 0: Program (default), 1: Operator.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_ProgPriority" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.10" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program commands take priority over operator. 1: Enable, Default: 0.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_OperPowerUp" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Config.11" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Power-up owner can be set. 0: Program, 1: Operator, Default: 0.]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_OperHasHostCmd0" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.0" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd1" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd2" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.2" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd3" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd4" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd5" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd6" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.6" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd7" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd8" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.8" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd9" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.9" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd10" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.10" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd11" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.11" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd12" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.12" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd13" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.13" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd14" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.14" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd15" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.15" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd16" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.16" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd17" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.17" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd18" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.18" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd19" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.19" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd20" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.20" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd21" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.21" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd22" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.22" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd23" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.23" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd24" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.24" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd25" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.25" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd26" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.26" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd27" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.27" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd28" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.28" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd29" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.29" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd30" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.30" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_OperHasHostCmd31" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OperConfig.31" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd0" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.0" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd1" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd2" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.2" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd3" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd4" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd5" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd6" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.6" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd7" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd8" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.8" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd9" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.9" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd10" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.10" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd11" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.11" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd12" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.12" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd13" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.13" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd14" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.14" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd15" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.15" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd16" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.16" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd17" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.17" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd18" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.18" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd19" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.19" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd20" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.20" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd21" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.21" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd22" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.22" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd23" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.23" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd24" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.24" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd25" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.25" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd26" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.26" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd27" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.27" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd28" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.28" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd29" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.29" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd30" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.30" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ProgHasHostCmd31" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ProgConfig.31" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd0" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.0" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd1" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd2" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.2" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd3" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd4" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd5" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd6" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.6" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd7" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd8" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.8" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd9" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.9" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd10" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.10" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd11" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.11" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd12" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.12" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd13" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.13" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd14" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.14" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHaHosteCmd15" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.15" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd16" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.16" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd17" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.17" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd18" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.18" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd19" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.19" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd20" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.20" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd21" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.21" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd22" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.22" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd23" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.23" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd24" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.24" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd25" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.25" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd26" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.26" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd27" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.27" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd28" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.28" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd29" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.29" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd30" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.30" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_ExtHasHostCmd31" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="ExtConfig.31" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd0" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.0" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd1" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd2" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.2" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd3" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd4" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd5" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd6" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.6" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd7" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd8" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.8" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd9" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.9" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd10" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.10" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd11" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.11" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd12" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.12" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd13" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.13" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd14" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.14" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd15" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.15" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd16" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.16" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd17" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.17" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd18" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.18" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd19" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.19" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd20" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.20" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd21" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.21" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd22" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.22" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd23" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.23" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd24" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.24" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd25" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.25" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd26" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.26" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd27" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.27" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd28" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.28" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd29" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.29" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd30" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.30" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MaintHasHostCmd31" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="MaintConfig.31" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd0Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.0" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd1Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.1" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd2Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.2" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd3Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.3" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd4Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.4" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd5Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.5" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd6Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.6" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd7Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.7" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd8Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.8" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd9Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.9" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd10Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.10" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd11Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.11" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd12Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.12" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd13Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.13" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd14Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.14" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd15Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.15" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd16Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.16" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd17Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.17" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd18Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.18" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd19Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.19" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd20Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.20" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd21Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.21" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd22Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.22" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd23Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.23" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd24Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.24" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd25Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.25" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd26Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.26" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd27Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.27" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd28Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.28" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd29Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.29" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd30Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.30" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_HostCmd31Avail" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Avail.31" Required="false" Visible="false" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Ext" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Prog" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Oper" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Maint" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ProgLock" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OperLock" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Disabled" DataType="BOOL" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Ovrd" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Local" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Init" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="MaintDisable" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Config" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[239]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="239"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="eSources" DataType="DINT" Dimensions="11" Radix="Decimal" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enumeration.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[[0,1,2,3,4,5,6,7,8,9,10]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="DINT" Dimensions="11" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="1"/>
+<Element Index="[2]" Value="2"/>
+<Element Index="[3]" Value="3"/>
+<Element Index="[4]" Value="4"/>
+<Element Index="[5]" Value="5"/>
+<Element Index="[6]" Value="6"/>
+<Element Index="[7]" Value="7"/>
+<Element Index="[8]" Value="8"/>
+<Element Index="[9]" Value="9"/>
+<Element Index="[10]" Value="10"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Status" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="XCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="MCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ProgConfig" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ExtConfig" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="MaintConfig" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OperConfig" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Avail" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_CmdSrc]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Operation:]]>
+</Line>
+<Line Number="5">
+<![CDATA[	• Provides selection of a component's command source.]]>
+</Line>
+<Line Number="6">
+<![CDATA[	• Tracks the state of the device for bumpless transfer back to other command sources.]]>
+</Line>
+<Line Number="7">
+<![CDATA[	• Asserted inputs corresponding to methods with higher priority result in that control.]]>
+</Line>
+<Line Number="8">
+<![CDATA[	• Lesser priority requests are processed and retained by the instruction.]]>
+</Line>
+<Line Number="9">
+<![CDATA[	• Resulting state is that of the highest priority request.]]>
+</Line>
+<Line Number="10">
+<![CDATA[	]]>
+</Line>
+<Line Number="11">
+<![CDATA[	The core control model determines if the source is:]]>
+</Line>
+<Line Number="12">
+<![CDATA[	• A programmatic entity which resides entirely within the processing environment.]]>
+</Line>
+<Line Number="13">
+<![CDATA[	• An entity which issues commands and parameters externally and asynchronously to the processing environment.]]>
+</Line>
+<Line Number="14">
+<![CDATA[	]]>
+</Line>
+<Line Number="15">
+<![CDATA[	Core control model consists of these sources:]]>
+</Line>
+<Line Number="16">
+<![CDATA[	• Operator]]>
+</Line>
+<Line Number="17">
+<![CDATA[	• Operator Lock]]>
+</Line>
+<Line Number="18">
+<![CDATA[	• Program]]>
+</Line>
+<Line Number="19">
+<![CDATA[	• Program Lock]]>
+</Line>
+<Line Number="20">
+<![CDATA[	• The control model defaults to this configuration.]]>
+</Line>
+<Line Number="21">
+<![CDATA[	• Other command sources may be present, but act as overriding command sources.]]>
+</Line>
+<Line Number="22">
+<![CDATA[	]]>
+</Line>
+<Line Number="23">
+<![CDATA[	Priorities (highest to lowest):]]>
+</Line>
+<Line Number="24">
+<![CDATA[	• Local: Hardwired logic or other logic outside the instruction controls the device.]]>
+</Line>
+<Line Number="25">
+<![CDATA[	• Disabled: The instruction is disabled and has no owner (Local still applies).]]>
+</Line>
+<Line Number="26">
+<![CDATA[	• Maintenance: Maintenance controls the device and supersedes Operator, Program, External and Override control.]]>
+</Line>
+<Line Number="27">
+<![CDATA[	• Maintenance commands (MCmd_) and settings from the HMI are accepted.]]>
+</Line>
+<Line Number="28">
+<![CDATA[	• Override: Priority logic controls the device and supersedes Operator, Program and External control.]]>
+</Line>
+<Line Number="29">
+<![CDATA[	• External:	External logic (e.g. field pilot control or upstream SCADA) controls the device. External commands (XCmd_) are accepted.]]>
+</Line>
+<Line Number="30">
+<![CDATA[	• Program locked: Program logic controls the device. Program commands (PCmd_) are accepted. Operator cannot take control from the Program.]]>
+</Line>
+<Line Number="31">
+<![CDATA[	• Program: Program logic controls the device. Program commands (PCmd_) are accepted.]]>
+</Line>
+<Line Number="32">
+<![CDATA[	• Operator locked: The Operator controls the device. Operator commands (OCmd_) from the HMI are accepted. Program cannot take control from Operator.]]>
+</Line>
+<Line Number="33">
+<![CDATA[	• Operator: The Operator controls the device. Operator commands (OCmd_) from the HMI are accepted.]]>
+</Line>
+<Line Number="34">
+<![CDATA[	]]>
+</Line>
+<Line Number="35">
+<![CDATA[	Instruction configuration manages these operations:]]>
+</Line>
+<Line Number="36">
+<![CDATA[	• Maintenance Disable exists.]]>
+</Line>
+<Line Number="37">
+<![CDATA[	• Maintenance exists.]]>
+</Line>
+<Line Number="38">
+<![CDATA[	• External exists.]]>
+</Line>
+<Line Number="39">
+<![CDATA[	• Program exists.]]>
+</Line>
+<Line Number="40">
+<![CDATA[	• Program Lock exists.]]>
+</Line>
+<Line Number="41">
+<![CDATA[	• Operator exists.]]>
+</Line>
+<Line Number="42">
+<![CDATA[	• Operator Lock exists.]]>
+</Line>
+<Line Number="43">
+<![CDATA[	• Override supersedes Program/Operator lock.]]>
+</Line>
+<Line Number="44">
+<![CDATA[	• External supersedes Program/Operator lock.]]>
+</Line>
+<Line Number="45">
+<![CDATA[	• Normal command source (Program/Operator).]]>
+</Line>
+<Line Number="46">
+<![CDATA[	• Program/Operator command priority.]]>
+</Line>
+<Line Number="47">
+<![CDATA[	• Power-up command source (Program/Operator).]]>
+</Line>
+<Line Number="48">
+<![CDATA[	]]>
+</Line>
+<Line Number="49">
+<![CDATA[	Initialization:]]>
+</Line>
+<Line Number="50">
+<![CDATA[	• All commands that are automatically cleared.]]>
+</Line>
+<Line Number="51">
+<![CDATA[	• Program/Operator selection is set based on the configuration.]]>
+</Line>
+<Line Number="52">
+<![CDATA[	• Program/Operator Lock selection is set to unlocked.]]>
+</Line>
+<Line Number="53">
+<![CDATA[	• Maintenance state is restored on power-up.]]>
+</Line>
+<Line Number="54">
+<![CDATA[	]]>
+</Line>
+<Line Number="55">
+<![CDATA[	Input commands (level)]]>
+</Line>
+<Line Number="56">
+<![CDATA[	• Inp_Local: 1 = Acquire (typically permanently set to local), 0: Release. Default is false.]]>
+</Line>
+<Line Number="57">
+<![CDATA[	• Inp_Override: 1 = Acquire (higher priority program logic), 0: Release. Default is false.]]>
+</Line>
+<Line Number="58">
+<![CDATA[	• Inp_Disable]]>
+</Line>
+<Line Number="59">
+<![CDATA[	• Inp_ExtInhibit: 1 = Inhibit External, 0 = Allow External. Default is true.]]>
+</Line>
+<Line Number="60">
+<![CDATA[	• Inp_Initialize]]>
+</Line>
+<Line Number="61">
+<![CDATA[	• Inp_ResetConfig]]>
+</Line>
+<Line Number="62">
+<![CDATA[*/]]>
+</Line>
+<Line Number="63">
+<![CDATA[]]>
+</Line>
+<Line Number="64">
+<![CDATA[SIZE(eSources, 0, Size);]]>
+</Line>
+<Line Number="65">
+<![CDATA[i := 0;]]>
+</Line>
+<Line Number="66">
+<![CDATA[while i < Size do]]>
+</Line>
+<Line Number="67">
+<![CDATA[	eSources[i] := i;]]>
+</Line>
+<Line Number="68">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="69">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="70">
+<![CDATA[]]>
+</Line>
+<Line Number="71">
+<![CDATA[if (NOT Init OR Inp_Initialize) then]]>
+</Line>
+<Line Number="72">
+<![CDATA[	Inp_Initialize := 0;]]>
+</Line>
+<Line Number="73">
+<![CDATA[	]]>
+</Line>
+<Line Number="74">
+<![CDATA[	Inp_Local := 0;]]>
+</Line>
+<Line Number="75">
+<![CDATA[	Inp_Override := 0;]]>
+</Line>
+<Line Number="76">
+<![CDATA[	Inp_ExtInhibit := 0;]]>
+</Line>
+<Line Number="77">
+<![CDATA[	Inp_ResetConfig := 0;]]>
+</Line>
+<Line Number="78">
+<![CDATA[	Inp_Disable := 0;]]>
+</Line>
+<Line Number="79">
+<![CDATA[	]]>
+</Line>
+<Line Number="80">
+<![CDATA[	MCmd := 0;]]>
+</Line>
+<Line Number="81">
+<![CDATA[	OCmd := 0;]]>
+</Line>
+<Line Number="82">
+<![CDATA[	PCmd := 0;]]>
+</Line>
+<Line Number="83">
+<![CDATA[	XCmd := 0;]]>
+</Line>
+<Line Number="84">
+<![CDATA[]]>
+</Line>
+<Line Number="85">
+<![CDATA[	Disabled := 0;]]>
+</Line>
+<Line Number="86">
+<![CDATA[	Ovrd := 0;]]>
+</Line>
+<Line Number="87">
+<![CDATA[	Ext := 0;]]>
+</Line>
+<Line Number="88">
+<![CDATA[	OperLock := 0;]]>
+</Line>
+<Line Number="89">
+<![CDATA[	Oper := Cfg_OperPowerUp & Cfg_HasOper;]]>
+</Line>
+<Line Number="90">
+<![CDATA[	ProgLock := 0;]]>
+</Line>
+<Line Number="91">
+<![CDATA[	Prog := NOT Oper & Cfg_HasOper;]]>
+</Line>
+<Line Number="92">
+<![CDATA[	]]>
+</Line>
+<Line Number="93">
+<![CDATA[	Status := 0;]]>
+</Line>
+<Line Number="94">
+<![CDATA[	Val := 0;]]>
+</Line>
+<Line Number="95">
+<![CDATA[	]]>
+</Line>
+<Line Number="96">
+<![CDATA[	Init := 1;]]>
+</Line>
+<Line Number="97">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="98">
+<![CDATA[]]>
+</Line>
+<Line Number="99">
+<![CDATA[if (Inp_ResetConfig) then]]>
+</Line>
+<Line Number="100">
+<![CDATA[	Inp_ResetConfig := 0;]]>
+</Line>
+<Line Number="101">
+<![CDATA[	Config := 2#0000_0000_1110_1111;]]>
+</Line>
+<Line Number="102">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="103">
+<![CDATA[]]>
+</Line>
+<Line Number="104">
+<![CDATA[Local := Inp_Local;]]>
+</Line>
+<Line Number="105">
+<![CDATA[Ovrd := Inp_Override;]]>
+</Line>
+<Line Number="106">
+<![CDATA[]]>
+</Line>
+<Line Number="107">
+<![CDATA[/*]]>
+</Line>
+<Line Number="108">
+<![CDATA[	Disable]]>
+</Line>
+<Line Number="109">
+<![CDATA[*/]]>
+</Line>
+<Line Number="110">
+<![CDATA[MaintDisable := (MaintDisable OR MCmd_Disable) & Cfg_HasMaintDisable & NOT MCmd_Enable;]]>
+</Line>
+<Line Number="111">
+<![CDATA[Disabled := Inp_Disable OR MaintDisable;]]>
+</Line>
+<Line Number="112">
+<![CDATA[]]>
+</Line>
+<Line Number="113">
+<![CDATA[/*]]>
+</Line>
+<Line Number="114">
+<![CDATA[	Maintenance]]>
+</Line>
+<Line Number="115">
+<![CDATA[	• MCmd_Acquire: Acquires ownership (Operator/Program/External/Override to Maintenance).]]>
+</Line>
+<Line Number="116">
+<![CDATA[	• MCmd_Release: Releases ownership (Maintenance to Operator/Program/External/Override).]]>
+</Line>
+<Line Number="117">
+<![CDATA[	• MCmd_Enable: Enables the object.]]>
+</Line>
+<Line Number="118">
+<![CDATA[	• MCmd_Disable: Disables the object.]]>
+</Line>
+<Line Number="119">
+<![CDATA[*/]]>
+</Line>
+<Line Number="120">
+<![CDATA[Maint := (Maint OR MCmd_Acquire) & Cfg_HasMaint & NOT MCmd_Release;]]>
+</Line>
+<Line Number="121">
+<![CDATA[]]>
+</Line>
+<Line Number="122">
+<![CDATA[/*]]>
+</Line>
+<Line Number="123">
+<![CDATA[	External]]>
+</Line>
+<Line Number="124">
+<![CDATA[	• XCmd_Acquire: Acquires ownership (Operator/Program/Override to External).]]>
+</Line>
+<Line Number="125">
+<![CDATA[	• XCmd_Release: Releases ownership (External to Operator/Program/Override).]]>
+</Line>
+<Line Number="126">
+<![CDATA[*/]]>
+</Line>
+<Line Number="127">
+<![CDATA[Ext := (Ext OR XCmd_Acquire) & Cfg_HasExternal & NOT XCmd_Release & NOT Inp_ExtInhibit;]]>
+</Line>
+<Line Number="128">
+<![CDATA[]]>
+</Line>
+<Line Number="129">
+<![CDATA[/*]]>
+</Line>
+<Line Number="130">
+<![CDATA[	Operator]]>
+</Line>
+<Line Number="131">
+<![CDATA[	• OCmd_Acquire: Acquires ownership (Program to Operator).]]>
+</Line>
+<Line Number="132">
+<![CDATA[	• OCmd_Release: Releases ownership (Operator to Program).]]>
+</Line>
+<Line Number="133">
+<![CDATA[	• OCmd_Lock: Locks ownership (disallow Program).]]>
+</Line>
+<Line Number="134">
+<![CDATA[	• OCmd_Unlock: Unlocks ownership (allow Program to acquire).]]>
+</Line>
+<Line Number="135">
+<![CDATA[*/]]>
+</Line>
+<Line Number="136">
+<![CDATA[if (OCmd_Acquire & Cfg_HasOper & NOT ProgLock & NOT Disabled) then]]>
+</Line>
+<Line Number="137">
+<![CDATA[	if (NOT PCmd_Prog OR (PCmd_Prog & NOT Cfg_ProgPriority)) then]]>
+</Line>
+<Line Number="138">
+<![CDATA[		Prog := 0;]]>
+</Line>
+<Line Number="139">
+<![CDATA[		Oper := 1;]]>
+</Line>
+<Line Number="140">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="141">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="142">
+<![CDATA[]]>
+</Line>
+<Line Number="143">
+<![CDATA[if (OCmd_Release & Oper & NOT Disabled) then]]>
+</Line>
+<Line Number="144">
+<![CDATA[	Oper := 0;]]>
+</Line>
+<Line Number="145">
+<![CDATA[	OperLock := 0;]]>
+</Line>
+<Line Number="146">
+<![CDATA[	]]>
+</Line>
+<Line Number="147">
+<![CDATA[	if (Cfg_HasProg) then]]>
+</Line>
+<Line Number="148">
+<![CDATA[		Prog := 1;]]>
+</Line>
+<Line Number="149">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="150">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="151">
+<![CDATA[]]>
+</Line>
+<Line Number="152">
+<![CDATA[if (OCmd_Lock & Cfg_HasOperLock & NOT (ProgLock OR Ext OR Ovrd OR Maint OR Disabled)) then]]>
+</Line>
+<Line Number="153">
+<![CDATA[	Prog := 0;]]>
+</Line>
+<Line Number="154">
+<![CDATA[	Oper := 1;]]>
+</Line>
+<Line Number="155">
+<![CDATA[	OperLock := 1;]]>
+</Line>
+<Line Number="156">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="157">
+<![CDATA[]]>
+</Line>
+<Line Number="158">
+<![CDATA[if (OCmd_Unlock OR NOT Cfg_HasOperLock OR Disabled OR Maint OR (Ovrd & Cfg_OvrdOverLock) OR (Ext & Cfg_ExtOverLock)) then]]>
+</Line>
+<Line Number="159">
+<![CDATA[	OperLock := 0;]]>
+</Line>
+<Line Number="160">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="161">
+<![CDATA[]]>
+</Line>
+<Line Number="162">
+<![CDATA[/*]]>
+</Line>
+<Line Number="163">
+<![CDATA[	Program commands]]>
+</Line>
+<Line Number="164">
+<![CDATA[	• PCmd_Prog: Acquires ownership (Operator to Program).]]>
+</Line>
+<Line Number="165">
+<![CDATA[	• PCmd_Oper: Releases ownership (Program to Operator).]]>
+</Line>
+<Line Number="166">
+<![CDATA[	• PCmd_Lock: Locks ownership (disallow Operator).]]>
+</Line>
+<Line Number="167">
+<![CDATA[*/]]>
+</Line>
+<Line Number="168">
+<![CDATA[if (PCmd_Prog & Cfg_HasProg & NOT OperLock & NOT Disabled) then]]>
+</Line>
+<Line Number="169">
+<![CDATA[	if (NOT OCmd_Acquire OR (OCmd_Acquire & Cfg_ProgPriority)) then]]>
+</Line>
+<Line Number="170">
+<![CDATA[		Oper := 0;]]>
+</Line>
+<Line Number="171">
+<![CDATA[		Prog := 1;]]>
+</Line>
+<Line Number="172">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="173">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="174">
+<![CDATA[]]>
+</Line>
+<Line Number="175">
+<![CDATA[if (PCmd_Oper & Cfg_HasOper & NOT ProgLock & NOT Disabled) then]]>
+</Line>
+<Line Number="176">
+<![CDATA[	Prog := 0;]]>
+</Line>
+<Line Number="177">
+<![CDATA[	Oper := 1;]]>
+</Line>
+<Line Number="178">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="179">
+<![CDATA[]]>
+</Line>
+<Line Number="180">
+<![CDATA[if (PCmd_Lock & Cfg_HasProgLock & NOT (OperLock OR Ext OR Ovrd OR Maint OR Disabled)) then]]>
+</Line>
+<Line Number="181">
+<![CDATA[	Oper := 0;]]>
+</Line>
+<Line Number="182">
+<![CDATA[	Prog := 1;]]>
+</Line>
+<Line Number="183">
+<![CDATA[	ProgLock := 1;]]>
+</Line>
+<Line Number="184">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="185">
+<![CDATA[]]>
+</Line>
+<Line Number="186">
+<![CDATA[if (NOT PCmd_Lock OR NOT Cfg_HasProgLock OR Disabled OR Maint OR (Ovrd & Cfg_OvrdOverLock) OR (Ext & Cfg_ExtOverLock)) then]]>
+</Line>
+<Line Number="187">
+<![CDATA[	ProgLock := 0;]]>
+</Line>
+<Line Number="188">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="189">
+<![CDATA[]]>
+</Line>
+<Line Number="190">
+<![CDATA[/*]]>
+</Line>
+<Line Number="191">
+<![CDATA[	Normal commands]]>
+</Line>
+<Line Number="192">
+<![CDATA[	• OCmd_Normal: Selects Normal (Operator or Program).]]>
+</Line>
+<Line Number="193">
+<![CDATA[	• PCmd_Normal: Selects Normal (Operator or Program).]]>
+</Line>
+<Line Number="194">
+<![CDATA[	• XCmd_Normal: Selects Normal (Operator or Program).]]>
+</Line>
+<Line Number="195">
+<![CDATA[	• MCmd_Normal: Selects Normal (Operator or Program).]]>
+</Line>
+<Line Number="196">
+<![CDATA[*/]]>
+</Line>
+<Line Number="197">
+<![CDATA[if ((OCmd_Normal & Sts_Operator) OR (PCmd_Normal & Sts_Program) OR (XCmd_Normal & Ext) OR (MCmd_Normal & Maint)) then]]>
+</Line>
+<Line Number="198">
+<![CDATA[	if (Cfg_OperNormal) then]]>
+</Line>
+<Line Number="199">
+<![CDATA[		Prog := 0;]]>
+</Line>
+<Line Number="200">
+<![CDATA[		ProgLock := 0;]]>
+</Line>
+<Line Number="201">
+<![CDATA[		Ext := 0;]]>
+</Line>
+<Line Number="202">
+<![CDATA[		Ovrd := 0;]]>
+</Line>
+<Line Number="203">
+<![CDATA[		Maint := 0;]]>
+</Line>
+<Line Number="204">
+<![CDATA[		Oper := 1;]]>
+</Line>
+<Line Number="205">
+<![CDATA[	else]]>
+</Line>
+<Line Number="206">
+<![CDATA[		Oper := 0;]]>
+</Line>
+<Line Number="207">
+<![CDATA[		OperLock := 0;]]>
+</Line>
+<Line Number="208">
+<![CDATA[		Ext := 0;]]>
+</Line>
+<Line Number="209">
+<![CDATA[		Ovrd := 0;]]>
+</Line>
+<Line Number="210">
+<![CDATA[		Maint := 0;]]>
+</Line>
+<Line Number="211">
+<![CDATA[		Prog := 1;]]>
+</Line>
+<Line Number="212">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="213">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="214">
+<![CDATA[]]>
+</Line>
+<Line Number="215">
+<![CDATA[/*]]>
+</Line>
+<Line Number="216">
+<![CDATA[	Enumerated source]]>
+</Line>
+<Line Number="217">
+<![CDATA[	• 0: None]]>
+</Line>
+<Line Number="218">
+<![CDATA[	• 1: Local]]>
+</Line>
+<Line Number="219">
+<![CDATA[	• 2: Program Disable]]>
+</Line>
+<Line Number="220">
+<![CDATA[	• 3: Maintenance Disable]]>
+</Line>
+<Line Number="221">
+<![CDATA[	• 4: Maintenance]]>
+</Line>
+<Line Number="222">
+<![CDATA[	• 5: Override]]>
+</Line>
+<Line Number="223">
+<![CDATA[	• 6: External]]>
+</Line>
+<Line Number="224">
+<![CDATA[	• 7: Operator Lock]]>
+</Line>
+<Line Number="225">
+<![CDATA[	• 8: Operator]]>
+</Line>
+<Line Number="226">
+<![CDATA[	• 9: Program Lock]]>
+</Line>
+<Line Number="227">
+<![CDATA[	• 10: Program]]>
+</Line>
+<Line Number="228">
+<![CDATA[	• ]]>
+</Line>
+<Line Number="229">
+<![CDATA[*/]]>
+</Line>
+<Line Number="230">
+<![CDATA[if (Local) then]]>
+</Line>
+<Line Number="231">
+<![CDATA[	Val := eSrc_Local;]]>
+</Line>
+<Line Number="232">
+<![CDATA[	Avail := 0;]]>
+</Line>
+<Line Number="233">
+<![CDATA[elsif (Inp_Disable) then]]>
+</Line>
+<Line Number="234">
+<![CDATA[	Val := eSrc_ProgramDisable;]]>
+</Line>
+<Line Number="235">
+<![CDATA[	Avail := 0;]]>
+</Line>
+<Line Number="236">
+<![CDATA[elsif (MaintDisable) then]]>
+</Line>
+<Line Number="237">
+<![CDATA[	Val := eSrc_MaintenanceDisable;]]>
+</Line>
+<Line Number="238">
+<![CDATA[	Avail := 0;]]>
+</Line>
+<Line Number="239">
+<![CDATA[elsif (Maint) then]]>
+</Line>
+<Line Number="240">
+<![CDATA[	Val := eSrc_Maintenance;]]>
+</Line>
+<Line Number="241">
+<![CDATA[	Avail := MaintConfig;]]>
+</Line>
+<Line Number="242">
+<![CDATA[elsif (Ovrd) then]]>
+</Line>
+<Line Number="243">
+<![CDATA[	Val := eSrc_Override;]]>
+</Line>
+<Line Number="244">
+<![CDATA[elsif (Ext) then]]>
+</Line>
+<Line Number="245">
+<![CDATA[	Val := eSrc_External;]]>
+</Line>
+<Line Number="246">
+<![CDATA[	Avail := ExtConfig;]]>
+</Line>
+<Line Number="247">
+<![CDATA[elsif (OperLock) then]]>
+</Line>
+<Line Number="248">
+<![CDATA[	Val := eSrc_OperatorLock;]]>
+</Line>
+<Line Number="249">
+<![CDATA[	Avail := OperConfig;]]>
+</Line>
+<Line Number="250">
+<![CDATA[elsif (Oper) then]]>
+</Line>
+<Line Number="251">
+<![CDATA[	Val := eSrc_Operator;]]>
+</Line>
+<Line Number="252">
+<![CDATA[	Avail := OperConfig;]]>
+</Line>
+<Line Number="253">
+<![CDATA[elsif (ProgLock) then]]>
+</Line>
+<Line Number="254">
+<![CDATA[	Val := eSrc_ProgramLock;]]>
+</Line>
+<Line Number="255">
+<![CDATA[	Avail := ProgConfig;]]>
+</Line>
+<Line Number="256">
+<![CDATA[elsif (Prog) then]]>
+</Line>
+<Line Number="257">
+<![CDATA[	Val := eSrc_Program;]]>
+</Line>
+<Line Number="258">
+<![CDATA[	Avail := ProgConfig;]]>
+</Line>
+<Line Number="259">
+<![CDATA[else]]>
+</Line>
+<Line Number="260">
+<![CDATA[	Val := 0;]]>
+</Line>
+<Line Number="261">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="262">
+<![CDATA[]]>
+</Line>
+<Line Number="263">
+<![CDATA[OCmd := 0;]]>
+</Line>
+<Line Number="264">
+<![CDATA[XCmd := 0;]]>
+</Line>
+<Line Number="265">
+<![CDATA[MCmd := 0;]]>
+</Line>
+<Line Number="266">
+<![CDATA[]]>
+</Line>
+<Line Number="267">
+<![CDATA[Sts_Local := Local;]]>
+</Line>
+<Line Number="268">
+<![CDATA[Sts_Disabled := Disabled;]]>
+</Line>
+<Line Number="269">
+<![CDATA[Sts_ProgDisable := Inp_Disable;]]>
+</Line>
+<Line Number="270">
+<![CDATA[Sts_MaintDisable := MaintDisable;]]>
+</Line>
+<Line Number="271">
+<![CDATA[Sts_Maintenance := Maint & NOT (Local OR Inp_Disable);]]>
+</Line>
+<Line Number="272">
+<![CDATA[Sts_Override := Ovrd & NOT (Local OR Maint OR Disabled);]]>
+</Line>
+<Line Number="273">
+<![CDATA[Sts_External := Ext & NOT (Ovrd OR Maint OR Local OR Disabled);]]>
+</Line>
+<Line Number="274">
+<![CDATA[Sts_Program := Prog & NOT (Oper OR Ext OR Ovrd OR Maint OR Local OR Disabled);]]>
+</Line>
+<Line Number="275">
+<![CDATA[Sts_ProgramLock := Sts_Program & ProgLock;]]>
+</Line>
+<Line Number="276">
+<![CDATA[Sts_Operator := Oper & NOT (Prog OR Ext OR Ovrd OR Maint OR Local OR Disabled);]]>
+</Line>
+<Line Number="277">
+<![CDATA[Sts_OperatorLock := Sts_Operator & OperLock;]]>
+</Line>
+<Line Number="278">
+<![CDATA[Sts_Normal := (Sts_Operator & Cfg_OperNormal) OR (Sts_Program & NOT Cfg_OperNormal);]]>
+</Line>
+<Line Number="279">
+<![CDATA[]]>
+</Line>
+<Line Number="280">
+<![CDATA[Sts_Initialized := Init;]]>
+</Line>
+<Line Number="281">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_CmdSrc]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Init := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="Op_PID" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-09-23T20:29:56.879Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T18:22:41.538Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Description>
+<![CDATA[PID Controller]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_PV" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Tieback" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_CV" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Inhold" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_InholdValue" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PCmd_Oper" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.PCmd_Oper" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Prog" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.PCmd_Prog" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PCmd_Disable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PCmd_Lock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.PCmd_Lock" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="OCmd_Lock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.OCmd_Lock" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Unlock" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.OCmd_Unlock" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_Acquire" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.MCmd_Acquire" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_Release" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.MCmd_Release" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_Enable" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.MCmd_Enable" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="MCmd_Disable" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.MCmd_Disable" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Acquire" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.OCmd_Acquire" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Release" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.OCmd_Release" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_Acquire" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.XCmd_Acquire" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="XCmd_Release" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="CmdSrc.XCmd_Release" Required="false" Visible="false" ExternalAccess="Read/Write"/>
+<Parameter Name="Cfg_LoopUpdateTime" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Loop update time (seconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PSet_Setpoint" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="OSet_Setpoint" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MSet_Setpoint" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_KP" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Independent - proportional gain (unitless), Dependent - controller gain (unitless)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_KI" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Independent - integral gain (1/sec), Dependent - reset time (minutes per repeat)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_KD" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Independent - derivative gain (seconds), Dependent - rate time (minutes)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Setpoint" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_ProcessVariable" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Output" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[output %]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Error" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[scaled error value]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_CascadeType" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[cascade type (0=slave; 1=master)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_CascadeLoop" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[cascade loop (0=no; 1=yes)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_PVTracking" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[process variable tracking (0=no; 1=yes)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_DOE" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[derivative of (0=PV; 1=error)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_SoftwareMode" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[software mode (0=no-auto); 1=yes- sw manual)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_ControlAction" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[control action (0=reverse (SP-PV); 1=direct (PV- SP))]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_StationMode" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[station mode (0=automatic; 1=manual)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Equation" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PID equation (0=independent; 1=dependent)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_DerivativeSmoothing" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[derivative smoothing (0=no; 1=yes)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_BiasCalculation" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[bias calculation (0=no; 1=yes)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_ZeroCrossing" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[zero crossing (0=no; 1=for deadband)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_BIAS" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[feedforward or bias %]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MAXS" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[maximum engineering unit scaling value]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MINS" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[minimum engineering unit scaling value]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_DB" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_DVDB" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[deviation alarm deadband]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_SO" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[set output %]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MAXO" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[maximum output limit (% of output)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MINO" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[minimum output limit (% of output)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MAXCV" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[maximum CV value (corresponding to 100%)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MAXI" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[maximum PV value (unscaled input)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MINCV" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[minimum CV value (corresponding to 0%)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MINI" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[minimum PV value (unscaled input)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MAXTIE" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[maximum tieback value (corresponding to 0%)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_MINTIE" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[minimum tieback value (corresponding to 100%)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_DVN" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[negative deviation alarm limit]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_DVP" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[positive deviation alarm limit]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Local" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_Local" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Hardwired circuitry or other external logic controls the device.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Disabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_ProgDisable" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The device has been taken out-of-service.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Maintenance" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_Maintenance" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Maintenance has control of the device.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Override" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_Override" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Priority logic has control of the device. Supersedes Program, Operator, and External sources.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_External" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_External" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[An external logic source has control of the device. Supersedes Operator and Program.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Program" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_Program" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program logic has control of the device.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_ProgramLock" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_ProgramLock" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command source is locked to program.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Operator" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_Operator" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Operator has control of the device.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_OperatorLock" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Sts_OperatorLock" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Operator command source is locked to operator.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_CmdSrc" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="CmdSrc.Val" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Enabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.EN" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Initialized" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.INI" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_SPOR" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.SPOR" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[setpoint out of range]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_OLL" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.OLL" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[CV is below minimum output value]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_OLH" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.OLH" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[CV is above maximum output value]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_EWD" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.EWD" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[error is within deadband]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_DVNA" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.DVNA" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[error is alarmed low]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_DVPA" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.DVPA" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[error is alarmed high]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_PVLA" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.PVLA" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PV is alarmed low]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_PVHA" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="PID.PVHA" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PV is alarmed high]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_IntegralAccum" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[0]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[integral accumulation]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_DerivSmoothTemp" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[1]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[derivative smoothing temporary value]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_PrevPV" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[2]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[previous .PV value]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_PrevERR" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[3]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[previous .ERR value]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_PrevSP" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[4]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[previous valid .SP value]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_ScaleConstPct" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[5]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[percent scaling constant]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_PVScaleConst" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[6]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[.PV scaling constant]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_DerivScaleConst" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[7]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[derivative scaling constant]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_PrevInhold" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[8]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[previous .KP Inp_InholdValue]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_PrevKI" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[9]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[previous .KI value]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_PrevKD" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[10]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[previous .KD value]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_DepGainKP" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[11]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[dependent gain .KP]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_DepGainKI" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[12]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[dependent gain .KI]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_DepGainKD" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[13]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[dependent gain .KD]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_PrevCV" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[14]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[previous .CV value]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_CVDescaleConst" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[15]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[.CV descaling constant]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_TiebackDescaleConst" TagType="Alias" Usage="Output" Radix="Float" AliasFor="PID.DATA[16]" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[tieback descaling constant]]>
+</Description>
+</Parameter>
+<Parameter Name="Cfg_PVH" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[process variable high alarm limit]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_PVL" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[process variable low alarm limit]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_PVDB" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[process variable alarm deadband]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="PID" DataType="PID" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[0,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,[0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="PID">
+<DataValueMember Name="CTL" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CL" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PVT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DOE" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SWM" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CA" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MO" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PE" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NDF" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NOBC" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NOZC" DataType="BOOL" Value="0"/>
+<DataValueMember Name="INI" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SPOR" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OLL" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OLH" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EWD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DVNA" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DVPA" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PVLA" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PVHA" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SP" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="KP" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="KI" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="KD" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="BIAS" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MAXS" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MINS" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="SO" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MAXO" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MINO" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="UPD" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PV" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="ERR" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="OUT" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PVH" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PVL" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DVP" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DVN" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="PVDB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DVDB" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MAXI" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MINI" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="TIE" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MAXCV" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MINCV" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MINTIE" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="MAXTIE" DataType="REAL" Radix="Float" Value="0.0"/>
+<ArrayMember Name="DATA" DataType="REAL" Dimensions="17" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="0.0"/>
+<Element Index="[2]" Value="0.0"/>
+<Element Index="[3]" Value="0.0"/>
+<Element Index="[4]" Value="0.0"/>
+<Element Index="[5]" Value="0.0"/>
+<Element Index="[6]" Value="0.0"/>
+<Element Index="[7]" Value="0.0"/>
+<Element Index="[8]" Value="0.0"/>
+<Element Index="[9]" Value="0.0"/>
+<Element Index="[10]" Value="0.0"/>
+<Element Index="[11]" Value="0.0"/>
+<Element Index="[12]" Value="0.0"/>
+<Element Index="[13]" Value="0.0"/>
+<Element Index="[14]" Value="0.0"/>
+<Element Index="[15]" Value="0.0"/>
+<Element Index="[16]" Value="0.0"/>
+</ArrayMember>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="CmdSrc" DataType="Op_CmdSrc" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[33,0,239,[0,1,2,3,4,5,6,7,8,9,10],0,0,0,0,0,0,0,0,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="Op_CmdSrc">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Local" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Disable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Override" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_ExtInhibit" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Inp_Initialize" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_ResetConfig" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCmd_Prog" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCmd_Oper" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCmd_Normal" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCmd_Lock" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Acquire" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Release" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Normal" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Lock" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OCmd_Unlock" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_Acquire" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_Release" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_Normal" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MCmd_Disable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="XCmd_Acquire" DataType="BOOL" Value="0"/>
+<DataValueMember Name="XCmd_Release" DataType="BOOL" Value="0"/>
+<DataValueMember Name="XCmd_Normal" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Val" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="eSrc_None" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="eSrc_Local" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="eSrc_ProgramDisable" DataType="DINT" Radix="Decimal" Value="2"/>
+<DataValueMember Name="eSrc_MaintenanceDisable" DataType="DINT" Radix="Decimal" Value="3"/>
+<DataValueMember Name="eSrc_Maintenance" DataType="DINT" Radix="Decimal" Value="4"/>
+<DataValueMember Name="eSrc_Override" DataType="DINT" Radix="Decimal" Value="5"/>
+<DataValueMember Name="eSrc_External" DataType="DINT" Radix="Decimal" Value="6"/>
+<DataValueMember Name="eSrc_OperatorLock" DataType="DINT" Radix="Decimal" Value="7"/>
+<DataValueMember Name="eSrc_Operator" DataType="DINT" Radix="Decimal" Value="8"/>
+<DataValueMember Name="eSrc_ProgramLock" DataType="DINT" Radix="Decimal" Value="9"/>
+<DataValueMember Name="eSrc_Program" DataType="DINT" Radix="Decimal" Value="10"/>
+<DataValueMember Name="Sts_Local" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Disabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_ProgDisable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_MaintDisable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Maintenance" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Override" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_External" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_OperatorLock" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Operator" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_ProgramLock" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Program" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Normal" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Initialized" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_HasOper" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cfg_HasOperLock" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cfg_HasProg" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cfg_HasProgLock" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cfg_HasExternal" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_HasMaint" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cfg_HasMaintDisable" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cfg_OvrdOverLock" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cfg_ExtOverLock" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperNormal" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgPriority" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperPowerUp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd0" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd9" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_OperHasHostCmd31" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd0" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd9" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ProgHasHostCmd31" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd0" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd9" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHaHosteCmd15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_ExtHasHostCmd31" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd0" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd9" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_MaintHasHostCmd31" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd0Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd1Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd2Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd3Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd4Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd5Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd6Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd7Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd8Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd9Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd10Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd11Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd12Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd13Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd14Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd15Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd16Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd17Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd18Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd19Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd20Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd21Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd22Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd23Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd24Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd25Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd26Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd27Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd28Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd29Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd30Avail" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_HostCmd31Avail" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Dvc_PID]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[PID.EN := Inp_Enable & (Cfg_LoopUpdateTime > 0.0);]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (Cfg_LoopUpdateTime <= 0.0) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	Cfg_LoopUpdateTime := 1.0;]]>
+</Line>
+<Line Number="9">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="10">
+<![CDATA[]]>
+</Line>
+<Line Number="11">
+<![CDATA[if (PID.EN) then]]>
+</Line>
+<Line Number="12">
+<![CDATA[	PID(PID, Inp_PV, Inp_Tieback, Inp_CV, 0, Inp_Inhold, Inp_InholdValue);]]>
+</Line>
+<Line Number="13">
+<![CDATA[else]]>
+</Line>
+<Line Number="14">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="15">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[CmdSrc.Inp_Disable := PCmd_Disable;]]>
+</Line>
+<Line Number="18">
+<![CDATA[Op_CmdSrc(CmdSrc);]]>
+</Line>
+<Line Number="19">
+<![CDATA[]]>
+</Line>
+<Line Number="20">
+<![CDATA[/*]]>
+</Line>
+<Line Number="21">
+<![CDATA[	Tuning Parameters]]>
+</Line>
+<Line Number="22">
+<![CDATA[*/]]>
+</Line>
+<Line Number="23">
+<![CDATA[if (CmdSrc.Sts_Program) then]]>
+</Line>
+<Line Number="24">
+<![CDATA[	Val_Setpoint := PSet_Setpoint;]]>
+</Line>
+<Line Number="25">
+<![CDATA[elsif (CmdSrc.Sts_Operator) then]]>
+</Line>
+<Line Number="26">
+<![CDATA[	Val_Setpoint := OSet_Setpoint;]]>
+</Line>
+<Line Number="27">
+<![CDATA[elsif (CmdSrc.Sts_Maintenance) then]]>
+</Line>
+<Line Number="28">
+<![CDATA[	Val_Setpoint := MSet_Setpoint;]]>
+</Line>
+<Line Number="29">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="30">
+<![CDATA[]]>
+</Line>
+<Line Number="31">
+<![CDATA[PID.SP := Val_Setpoint;]]>
+</Line>
+<Line Number="32">
+<![CDATA[PID.SO := Cfg_SO;]]>
+</Line>
+<Line Number="33">
+<![CDATA[PID.BIAS := Cfg_BIAS;]]>
+</Line>
+<Line Number="34">
+<![CDATA[]]>
+</Line>
+<Line Number="35">
+<![CDATA[PID.SWM := Cfg_SoftwareMode;]]>
+</Line>
+<Line Number="36">
+<![CDATA[PID.MO := Cfg_StationMode;]]>
+</Line>
+<Line Number="37">
+<![CDATA[]]>
+</Line>
+<Line Number="38">
+<![CDATA[PID.KD := Cfg_KD;]]>
+</Line>
+<Line Number="39">
+<![CDATA[PID.KI := Cfg_KI;]]>
+</Line>
+<Line Number="40">
+<![CDATA[PID.KP := Cfg_KP;]]>
+</Line>
+<Line Number="41">
+<![CDATA[]]>
+</Line>
+<Line Number="42">
+<![CDATA[/*]]>
+</Line>
+<Line Number="43">
+<![CDATA[	Configuration Parameters]]>
+</Line>
+<Line Number="44">
+<![CDATA[*/]]>
+</Line>
+<Line Number="45">
+<![CDATA[PID.PE := Cfg_Equation;]]>
+</Line>
+<Line Number="46">
+<![CDATA[PID.CA := Cfg_ControlAction;]]>
+</Line>
+<Line Number="47">
+<![CDATA[PID.DOE := Cfg_DOE;]]>
+</Line>
+<Line Number="48">
+<![CDATA[]]>
+</Line>
+<Line Number="49">
+<![CDATA[if (PID.UPD <> Cfg_LoopUpdateTime) then]]>
+</Line>
+<Line Number="50">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="51">
+<![CDATA[	PID.UPD := Cfg_LoopUpdateTime;]]>
+</Line>
+<Line Number="52">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="53">
+<![CDATA[]]>
+</Line>
+<Line Number="54">
+<![CDATA[if (PID.MAXCV <> Cfg_MAXCV) then]]>
+</Line>
+<Line Number="55">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="56">
+<![CDATA[	PID.MAXCV := Cfg_MAXCV;]]>
+</Line>
+<Line Number="57">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="58">
+<![CDATA[]]>
+</Line>
+<Line Number="59">
+<![CDATA[if (PID.MINCV <> Cfg_MINCV) then]]>
+</Line>
+<Line Number="60">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="61">
+<![CDATA[	PID.MINCV := Cfg_MINCV;]]>
+</Line>
+<Line Number="62">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="63">
+<![CDATA[]]>
+</Line>
+<Line Number="64">
+<![CDATA[PID.DB := Cfg_DB;]]>
+</Line>
+<Line Number="65">
+<![CDATA[PID.NDF := Cfg_DerivativeSmoothing;]]>
+</Line>
+<Line Number="66">
+<![CDATA[PID.NOBC := Cfg_BiasCalculation;]]>
+</Line>
+<Line Number="67">
+<![CDATA[PID.NOZC := Cfg_ZeroCrossing;]]>
+</Line>
+<Line Number="68">
+<![CDATA[PID.PVT := Cfg_PVTracking;]]>
+</Line>
+<Line Number="69">
+<![CDATA[PID.CL := Cfg_CascadeLoop;]]>
+</Line>
+<Line Number="70">
+<![CDATA[PID.CT := Cfg_CascadeType;]]>
+</Line>
+<Line Number="71">
+<![CDATA[]]>
+</Line>
+<Line Number="72">
+<![CDATA[/*]]>
+</Line>
+<Line Number="73">
+<![CDATA[	Alarm Parameters]]>
+</Line>
+<Line Number="74">
+<![CDATA[*/]]>
+</Line>
+<Line Number="75">
+<![CDATA[PID.PVH := Cfg_PVH;]]>
+</Line>
+<Line Number="76">
+<![CDATA[PID.PVL := Cfg_PVL;]]>
+</Line>
+<Line Number="77">
+<![CDATA[PID.PVDB := Cfg_PVDB;]]>
+</Line>
+<Line Number="78">
+<![CDATA[PID.DVP := Cfg_DVP;]]>
+</Line>
+<Line Number="79">
+<![CDATA[PID.DVN := Cfg_DVN;]]>
+</Line>
+<Line Number="80">
+<![CDATA[PID.DVDB := Cfg_DVDB;]]>
+</Line>
+<Line Number="81">
+<![CDATA[]]>
+</Line>
+<Line Number="82">
+<![CDATA[/*]]>
+</Line>
+<Line Number="83">
+<![CDATA[	Scaling Parameters]]>
+</Line>
+<Line Number="84">
+<![CDATA[*/]]>
+</Line>
+<Line Number="85">
+<![CDATA[if (PID.MAXI <> Cfg_MAXI) then]]>
+</Line>
+<Line Number="86">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="87">
+<![CDATA[	PID.MAXI := Cfg_MAXI;]]>
+</Line>
+<Line Number="88">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="89">
+<![CDATA[]]>
+</Line>
+<Line Number="90">
+<![CDATA[if (PID.MINI <> Cfg_MINI) then]]>
+</Line>
+<Line Number="91">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="92">
+<![CDATA[	PID.MINI := Cfg_MINI;]]>
+</Line>
+<Line Number="93">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="94">
+<![CDATA[]]>
+</Line>
+<Line Number="95">
+<![CDATA[if (PID.MAXS <> Cfg_MAXS) then]]>
+</Line>
+<Line Number="96">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="97">
+<![CDATA[	PID.MAXS := Cfg_MAXS;]]>
+</Line>
+<Line Number="98">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="99">
+<![CDATA[]]>
+</Line>
+<Line Number="100">
+<![CDATA[if (PID.MINS <> Cfg_MINS) then]]>
+</Line>
+<Line Number="101">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="102">
+<![CDATA[	PID.MINS := Cfg_MINS;]]>
+</Line>
+<Line Number="103">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="104">
+<![CDATA[]]>
+</Line>
+<Line Number="105">
+<![CDATA[if (PID.MAXO <> Cfg_MAXO) then]]>
+</Line>
+<Line Number="106">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="107">
+<![CDATA[	PID.MAXO := Cfg_MAXO;]]>
+</Line>
+<Line Number="108">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="109">
+<![CDATA[]]>
+</Line>
+<Line Number="110">
+<![CDATA[if (PID.MINO <> Cfg_MINO) then]]>
+</Line>
+<Line Number="111">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="112">
+<![CDATA[	PID.MINO := Cfg_MINO;]]>
+</Line>
+<Line Number="113">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="114">
+<![CDATA[]]>
+</Line>
+<Line Number="115">
+<![CDATA[if (PID.MAXTIE <> Cfg_MAXTIE) then]]>
+</Line>
+<Line Number="116">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="117">
+<![CDATA[	PID.MAXTIE := Cfg_MAXTIE;]]>
+</Line>
+<Line Number="118">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="119">
+<![CDATA[]]>
+</Line>
+<Line Number="120">
+<![CDATA[if (PID.MINTIE <> Cfg_MINTIE) then]]>
+</Line>
+<Line Number="121">
+<![CDATA[	PID.INI := 0;]]>
+</Line>
+<Line Number="122">
+<![CDATA[	PID.MINTIE := Cfg_MINTIE;]]>
+</Line>
+<Line Number="123">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="124">
+<![CDATA[]]>
+</Line>
+<Line Number="125">
+<![CDATA[/*]]>
+</Line>
+<Line Number="126">
+<![CDATA[	PID Outputs]]>
+</Line>
+<Line Number="127">
+<![CDATA[*/]]>
+</Line>
+<Line Number="128">
+<![CDATA[if (PID.EN) then]]>
+</Line>
+<Line Number="129">
+<![CDATA[	Val_Output := PID.OUT;]]>
+</Line>
+<Line Number="130">
+<![CDATA[	Val_Error := PID.ERR;]]>
+</Line>
+<Line Number="131">
+<![CDATA[	Val_ProcessVariable := PID.PV;]]>
+</Line>
+<Line Number="132">
+<![CDATA[else]]>
+</Line>
+<Line Number="133">
+<![CDATA[	Val_Output := 0.0;]]>
+</Line>
+<Line Number="134">
+<![CDATA[	Val_Error := 0.0;]]>
+</Line>
+<Line Number="135">
+<![CDATA[	Val_ProcessVariable := 0.0;]]>
+</Line>
+<Line Number="136">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="137">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="Op_CmdSrc"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
