@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_OEE_IncT" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T21:55:47.447Z" ContainsContext="true" ExportDate="Thu Jan 12 15:56:16 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="OEE_ResetT" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T18:26:17.547Z" ContainsContext="true" ExportDate="Sat Jan 21 10:32:16 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_OEE_TimeElapsed" Family="NoFamily" Class="User">
@@ -11,7 +11,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_OEE_IncT" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-31T00:00:23.191Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T21:55:47.447Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="OEE_ResetT" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-03-09T23:03:39.535Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T18:26:17.547Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -24,7 +24,7 @@
 <![CDATA[Enable Output - System Defined Parameter]]>
 </Description>
 </Parameter>
-<Parameter Name="Ref_ElapsedT" TagType="Base" DataType="ST_OEE_TimeElapsed" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Ref_Time" TagType="Base" DataType="ST_OEE_TimeElapsed" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 </Parameters>
 <LocalTags/>
 <Routines>
@@ -37,7 +37,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_OEE_TIncrement]]>
+<![CDATA[	AO_OEE_ResetTime]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -46,39 +46,15 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[Ref_ElapsedT.Seconds := Ref_ElapsedT.Seconds + 1;]]>
+<![CDATA[Ref_Time.Hours := 0;]]>
 </Line>
 <Line Number="6">
-<![CDATA[]]>
+<![CDATA[Ref_Time.Minutes := 0;]]>
 </Line>
 <Line Number="7">
-<![CDATA[if (Ref_ElapsedT.Seconds >= 60) then]]>
+<![CDATA[Ref_Time.Seconds := 0;]]>
 </Line>
 <Line Number="8">
-<![CDATA[	Ref_ElapsedT.Minutes := Ref_ElapsedT.Minutes + 1;]]>
-</Line>
-<Line Number="9">
-<![CDATA[	Ref_ElapsedT.Seconds := 0;]]>
-</Line>
-<Line Number="10">
-<![CDATA[	]]>
-</Line>
-<Line Number="11">
-<![CDATA[	if (Ref_ElapsedT.Minutes >= 60) then]]>
-</Line>
-<Line Number="12">
-<![CDATA[		Ref_ElapsedT.Hours := Ref_ElapsedT.Hours + 1;]]>
-</Line>
-<Line Number="13">
-<![CDATA[		Ref_ElapsedT.Minutes := 0;]]>
-</Line>
-<Line Number="14">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="15">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="16">
 <![CDATA[]]>
 </Line>
 </STContent>
