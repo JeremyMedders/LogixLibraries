@@ -7,12 +7,12 @@ Return value:
 -1 :  the first character that does not match has a lower value in Left than in Right
 0 : the contents of both strings are equal
 1 : the first character that does not match has a greater value in Left than in Right-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="AO_Str_Compare" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-12T17:59:05.600Z" ContainsContext="true" ExportDate="Thu Jan 12 16:33:46 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Str_Compare" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T17:54:04.103Z" ContainsContext="true" ExportDate="Sat Jan 21 09:44:17 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="AO_Str_Compare" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-09-16T14:28:55.208Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-12T17:59:05.600Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Str_Compare" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-09-16T14:28:55.208Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:54:04.103Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Compares Left string to Right string.
