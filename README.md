@@ -24,7 +24,7 @@ AOIs/UDTs
 - Math (Math_): Assorted function blocks.
 - Modbus TCP (MBTCP_): Modbus TCP client driver.
 - Message (Msg_): Message helpers and utilities.
-- Numeric (Num_)
+- Numeric (Num_): Forms string representations of various types of numbers.
 - Process (Op_): Lightweight PAx-style blocks.
 - RTC (RTC_): Precision pulse/timing utilites.
 - String (Str_): String utilities.
