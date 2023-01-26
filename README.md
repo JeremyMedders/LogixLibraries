@@ -22,14 +22,15 @@ AOIs/UDTs
 - CIP: Common Industrial Protocol utilities and structs.
 - Device (Dvc_): Device drivers.
 - Math (Math_): Assorted function blocks.
-- MBTCP (MBTCP_): Modbus TCP client driver.
-- Msg (Msg_): Message helpers and utilities.
+- Modbus TCP (MBTCP_): Modbus TCP client driver.
+- Message (Msg_): Message helpers and utilities.
+- Numeric (Num_)
 - Process (Op_): Lightweight PAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PAx counterpart. 
 - RTC (RTC_): Precision pulse/timing utilites.
 - String (Str_): String utilities.
-- System (Sys_): System diagnostics, WallClock utility/formatting generator, ISA 18.2 alarming with its parent "class", and other utilities.
+- System (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
 - Time (Time_)
-- UI (UI_): HMI helper blocks. Includes List Selector object with support for variable rows and unlimited columns of data.
+- UI (UI_): HMI helpers. Includes List Selector object with support for variable rows and unlimited columns of data.
 
 UDTs follow the corresponding AOI in name:
 - ST_Dvc_abc
