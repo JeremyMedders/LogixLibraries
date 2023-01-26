@@ -76,6 +76,7 @@ Done:
 - MBTCP client basic documentation
 - UDT templates to aid in implementing the BIT overlay construct
 - IO module / connection templates (ongoing)
+- Numeric library release
 
 "Legacy" hazards
 ------------
