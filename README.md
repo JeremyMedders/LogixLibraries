@@ -25,7 +25,7 @@ AOIs/UDTs
 - Modbus TCP (MBTCP_): Modbus TCP client driver.
 - Message (Msg_): Message helpers and utilities.
 - Numeric (Num_)
-- Process (Op_): Lightweight PAx-style blocks. Parameter naming and layout isn't necessarily 1:1 with their PAx counterpart. 
+- Process (Op_): Lightweight PAx-style blocks.
 - RTC (RTC_): Precision pulse/timing utilites.
 - String (Str_): String utilities.
 - System (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
