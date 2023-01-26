@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Num_DINTtoHex" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-26T19:37:50.175Z" ContainsContext="true" ExportDate="Thu Jan 26 13:37:57 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Num_DINTtoHex" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-26T22:07:59.965Z" ContainsContext="true" ExportDate="Thu Jan 26 16:20:27 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="STR_8" Family="StringFamily" Class="User">
@@ -23,7 +23,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="Num_DINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T19:37:50.175Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Num_DINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:07:59.965Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -55,7 +55,7 @@
 <![CDATA['']]>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="Bytes" DataType="SINT" Dimensions="4" Radix="Decimal" ExternalAccess="None">
+<LocalTag Name="Bits" DataType="SINT" Dimensions="4" Radix="Decimal" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[[0,0,0,0]]]>
 </DefaultData>
@@ -104,7 +104,7 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[COP(Inp, Bytes[0], 4);]]>
+<![CDATA[COP(Inp, Bits[0], 4);]]>
 </Line>
 <Line Number="6">
 <![CDATA[Str.LEN := 8;]]>
@@ -119,7 +119,7 @@
 <![CDATA[	// byte[i], first character]]>
 </Line>
 <Line Number="10">
-<![CDATA[	Byte := (Bytes[i] & 16#F0) / 16;]]>
+<![CDATA[	Byte := (Bits[i] & 16#F0) / 16;]]>
 </Line>
 <Line Number="11">
 <![CDATA[	if (Byte < 10) then]]>
@@ -146,7 +146,7 @@
 <![CDATA[	// byte[i], second character]]>
 </Line>
 <Line Number="19">
-<![CDATA[	Byte := Bytes[i] & 16#0F;]]>
+<![CDATA[	Byte := Bits[i] & 16#0F;]]>
 </Line>
 <Line Number="20">
 <![CDATA[	if (Byte < 10) then]]>
