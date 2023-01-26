@@ -8,16 +8,7 @@ Structured text is used for AOI definitions to ease porting between IEC 61131-3 
 
 Wiki: https://github.com/JeremyMedders/LogixLibraries/wiki
 
-Parameter naming follows PlantPAx (sensibly)
-------------
-- Inp_, Cfg_, PCmd_, OCmd_, MCmd, XCmd, PSet_, OSet_, MSet, XSet
-- Out_, Sts_, Val_
-- Ref_
-- Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
-- At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
-- External access (Read, Read/Write, None) are set where sensible.
-
-AOIs/UDTs
+Contents
 ------------
 - CIP: Common Industrial Protocol utilities and structs.
 - Device (Dvc_): Device drivers.
@@ -31,6 +22,15 @@ AOIs/UDTs
 - System (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
 - Time (Time_)
 - UI (UI_): HMI helpers.
+
+Parameter naming follows PlantPAx (sensibly)
+------------
+- Inp_, Cfg_, PCmd_, OCmd_, MCmd, XCmd, PSet_, OSet_, MSet, XSet
+- Out_, Sts_, Val_
+- Ref_
+- Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
+- At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
+- External access (Read, Read/Write, None) are set where sensible.
 
 UDTs follow the corresponding AOI in name:
 - ST_Dvc_abc
