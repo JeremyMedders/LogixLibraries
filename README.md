@@ -30,7 +30,7 @@ AOIs/UDTs
 - String (Str_): String utilities.
 - System (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
 - Time (Time_)
-- UI (UI_): HMI helpers. Includes List Selector object with support for variable rows and unlimited columns of data.
+- UI (UI_): HMI helpers.
 
 UDTs follow the corresponding AOI in name:
 - ST_Dvc_abc
