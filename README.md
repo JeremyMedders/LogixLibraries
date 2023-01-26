@@ -51,11 +51,6 @@ So we have...
 - M/T: Mirror/Monitor or Twin. This would be an AOI in structure only, no other code. Perhaps useful for a monitoring or concentrator PLC/DCS.
 - S: Simulator
 
-Extras
-------------
-- UDT templates to aid in implementing the useful BIT overlay construct.
-- IO module / connection templates.
-
 To-Do
 ------------
 - Performance profiling database
@@ -79,6 +74,8 @@ Done:
 - REAL array math
 - Preliminary wiki structure and topics
 - MBTCP client basic documentation
+- UDT templates to aid in implementing the BIT overlay construct
+- IO module / connection templates (ongoing)
 
 "Legacy" hazards
 ------------
