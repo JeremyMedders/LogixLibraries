@@ -61,10 +61,9 @@ To-Do
 - Performance profiling database
 - Documentation about known working .L5X attribute values
 - How to put the CanBeNull parameter attribute in AOIs to use
-- Alarm class ocumentation
+- Alarm class documentation
 - Design pattern guides and rationale
 - Overall repository continuous improvements
-- MBTCP client basic documentation
 - Documentation for the PowerFlex 525
 - OSCAT library port
 - Arduino PLC data exchange
@@ -79,6 +78,7 @@ Done:
 - CIP base data types (Identity, Port, EnetLink, TCPIP)
 - REAL array math
 - Preliminary wiki structure and topics
+- MBTCP client basic documentation
 
 "Legacy" hazards
 ------------
