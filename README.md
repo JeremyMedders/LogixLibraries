@@ -6,6 +6,8 @@ With the exception of supporting sample files (FactoryTalk View ME screens/defin
 
 Structured text is used for AOI definitions to ease porting between IEC 61131-3 platforms. Dependencies will be documented where possible.
 
+Wiki: https://github.com/JeremyMedders/LogixLibraries/wiki
+
 Parameter naming follows PlantPAx (sensibly)
 ------------
 - Inp_, Cfg_, PCmd_, OCmd_, MCmd, XCmd, PSet_, OSet_, MSet, XSet
