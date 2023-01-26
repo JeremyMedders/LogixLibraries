@@ -2,7 +2,9 @@
 
 This is my approach to implementing production-ready, "object-oriented" and "functional" styles of programming on Rockwell Logix5000 controllers.
 
-With the exception of supporting sample files (FactoryTalk View ME screens/definitions, etc.), this repository contains only .L5X (Logix 5000 XML) files. Structured text is used for AOI definitions to ease porting between IEC 61131-3 platforms. Dependencies will be documented where possible.
+With the exception of supporting sample files (FactoryTalk View ME screens/definitions, etc.), this repository contains only .L5X (Logix 5000 XML) files.
+
+Structured text is used for AOI definitions to ease porting between IEC 61131-3 platforms. Dependencies will be documented where possible.
 
 Parameter naming follows PlantPAx (sensibly)
 ------------
