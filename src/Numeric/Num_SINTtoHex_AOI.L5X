@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Num_SINTtoHex" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-26T19:36:49.589Z" ContainsContext="true" ExportDate="Thu Jan 26 13:38:03 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Num_SINTtoHex" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-26T22:08:52.664Z" ContainsContext="true" ExportDate="Thu Jan 26 16:20:45 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="STR_4" Family="StringFamily" Class="User">
@@ -23,7 +23,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="Num_SINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T19:36:49.589Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Num_SINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:08:52.664Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -47,7 +47,7 @@
 <Parameter Name="Val" TagType="Base" DataType="STR_4" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 </Parameters>
 <LocalTags>
-<LocalTag Name="Bytes" DataType="SINT" Radix="Decimal" ExternalAccess="None">
+<LocalTag Name="Bits" DataType="SINT" Radix="Decimal" ExternalAccess="None">
 <DefaultData Format="L5K">
 <![CDATA[0]]>
 </DefaultData>
@@ -91,7 +91,7 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[COP(Inp, Bytes, 1);]]>
+<![CDATA[COP(Inp, Bits, 1);]]>
 </Line>
 <Line Number="6">
 <![CDATA[Str.LEN := 2;]]>
@@ -103,7 +103,7 @@
 <![CDATA[// byte[i], first character]]>
 </Line>
 <Line Number="9">
-<![CDATA[Byte := (Bytes & 16#F0) / 16;]]>
+<![CDATA[Byte := (Bits & 16#F0) / 16;]]>
 </Line>
 <Line Number="10">
 <![CDATA[]]>
@@ -133,7 +133,7 @@
 <![CDATA[// byte[i], second character]]>
 </Line>
 <Line Number="19">
-<![CDATA[Byte := Bytes & 16#0F;]]>
+<![CDATA[Byte := Bits & 16#0F;]]>
 </Line>
 <Line Number="20">
 <![CDATA[if (Byte < 10) then]]>
