@@ -10,18 +10,18 @@ Wiki: https://github.com/JeremyMedders/LogixLibraries/wiki
 
 Contents
 ------------
-- CIP: Common Industrial Protocol utilities and structs.
-- Device (Dvc_): Device drivers.
-- Math (Math_): Assorted function blocks.
-- Modbus TCP (MBTCP_): Modbus TCP client driver.
-- Message (Msg_): Message helpers and utilities.
-- Numeric (Num_): Forms string representations of various types of numbers.
-- Process (Op_): Lightweight PAx-style blocks.
-- RTC (RTC_): Precision pulse/timing utilites.
-- String (Str_): String utilities.
-- System (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
-- Time (Time_)
-- UI (UI_): HMI helpers.
+- **CIP**: Common Industrial Protocol utilities and structs.
+- **Device** (Dvc_): Device drivers.
+- **Math** (Math_): Assorted functions.
+- **Message** (Msg_): Generic message helpers and utilities.
+- **Modbus TCP** (MBTCP_): Modbus TCP client driver.
+- **Numeric** (Num_): Forms string representations of various types of numbers.
+- **Process** (Op_): Lightweight PAx-style blocks.
+- **RTC** (RTC_): Precision pulse/timing utilites.
+- **String** (Str_): String utilities.
+- **System** (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
+- **Time** (Time_): ISO 8601 utilities.
+- **UI** (UI_): HMI helpers.
 
 Parameter naming follows PlantPAx (sensibly)
 ------------
