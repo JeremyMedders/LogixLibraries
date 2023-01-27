@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_Numeric" TargetType="Program" ContainsContext="true" ExportDate="Fri Jan 27 12:17:37 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_Numeric" TargetType="Program" ContainsContext="true" ExportDate="Fri Jan 27 14:31:53 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Sys_EthernetLink" Family="NoFamily" Class="User">
@@ -2110,10 +2110,10 @@
 <Tags Use="Context">
 <Tag Name="SysEnetLinks" TagType="Base" DataType="ST_Sys_EthernetLinkClass" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
-<![CDATA[[4,3,3,[[1,1000,15,[92,136,22,236,19,225],662434693,1306086,330007,0,0,4736,571238385,2330196,313399,0,0,0,0,0,0
+<![CDATA[[4,3,3,[[1,1000,15,[92,136,22,236,19,225],663474419,1309319,330246,0,0,4743,572873829,2336545,313876,0,0,0,0,0,0
 		,0,0,0,0,0,0,0,0,1,0,2,1,1,[2,'B1$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		],-117,0],[2,100,15,[92,136,22,236,19,223],65209,0,1069,0,0,0,28209166,0,314460,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,1,1,[2,'A1$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		],-117,0],[3,100,15,[92,136,22,236,19,224],1674947006,5957453,2547,0,0,0,2050114776,11884998,314463,0,0,0,0,0,0,0
+		],-117,0],[2,100,15,[92,136,22,236,19,223],65270,0,1070,0,0,0,28252018,0,314937,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,1,1,[2,'A1$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],-117,0],[3,100,15,[92,136,22,236,19,224],1677638436,5967025,2550,0,0,0,2053406586,11904095,314941,0,0,0,0,0,0,0
 		,0,0,0,0,0,0,0,1,0,2,1,1,[2,'A2$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],-117,0]]]]]>
 </Data>
@@ -2136,15 +2136,15 @@
 <Element Index="[4]" Value="19"/>
 <Element Index="[5]" Value="225"/>
 </ArrayMember>
-<DataValueMember Name="InOctets" DataType="UDINT" Radix="Decimal" Value="662434693"/>
-<DataValueMember Name="InUnicastPackets" DataType="UDINT" Radix="Decimal" Value="1306086"/>
-<DataValueMember Name="InNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="330007"/>
+<DataValueMember Name="InOctets" DataType="UDINT" Radix="Decimal" Value="663474419"/>
+<DataValueMember Name="InUnicastPackets" DataType="UDINT" Radix="Decimal" Value="1309319"/>
+<DataValueMember Name="InNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="330246"/>
 <DataValueMember Name="InDiscards" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="InErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="InUnknownProtocol" DataType="UDINT" Radix="Decimal" Value="4736"/>
-<DataValueMember Name="OutOctets" DataType="UDINT" Radix="Decimal" Value="571238385"/>
-<DataValueMember Name="OutUnicastPackets" DataType="UDINT" Radix="Decimal" Value="2330196"/>
-<DataValueMember Name="OutNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="313399"/>
+<DataValueMember Name="InUnknownProtocol" DataType="UDINT" Radix="Decimal" Value="4743"/>
+<DataValueMember Name="OutOctets" DataType="UDINT" Radix="Decimal" Value="572873829"/>
+<DataValueMember Name="OutUnicastPackets" DataType="UDINT" Radix="Decimal" Value="2336545"/>
+<DataValueMember Name="OutNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="313876"/>
 <DataValueMember Name="OutDiscards" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="OutErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="AlignmentErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
@@ -2194,15 +2194,15 @@
 <Element Index="[4]" Value="19"/>
 <Element Index="[5]" Value="223"/>
 </ArrayMember>
-<DataValueMember Name="InOctets" DataType="UDINT" Radix="Decimal" Value="65209"/>
+<DataValueMember Name="InOctets" DataType="UDINT" Radix="Decimal" Value="65270"/>
 <DataValueMember Name="InUnicastPackets" DataType="UDINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="InNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="1069"/>
+<DataValueMember Name="InNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="1070"/>
 <DataValueMember Name="InDiscards" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="InErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="InUnknownProtocol" DataType="UDINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="OutOctets" DataType="UDINT" Radix="Decimal" Value="28209166"/>
+<DataValueMember Name="OutOctets" DataType="UDINT" Radix="Decimal" Value="28252018"/>
 <DataValueMember Name="OutUnicastPackets" DataType="UDINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="OutNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="314460"/>
+<DataValueMember Name="OutNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="314937"/>
 <DataValueMember Name="OutDiscards" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="OutErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="AlignmentErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
@@ -2252,15 +2252,15 @@
 <Element Index="[4]" Value="19"/>
 <Element Index="[5]" Value="224"/>
 </ArrayMember>
-<DataValueMember Name="InOctets" DataType="UDINT" Radix="Decimal" Value="1674947006"/>
-<DataValueMember Name="InUnicastPackets" DataType="UDINT" Radix="Decimal" Value="5957453"/>
-<DataValueMember Name="InNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="2547"/>
+<DataValueMember Name="InOctets" DataType="UDINT" Radix="Decimal" Value="1677638436"/>
+<DataValueMember Name="InUnicastPackets" DataType="UDINT" Radix="Decimal" Value="5967025"/>
+<DataValueMember Name="InNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="2550"/>
 <DataValueMember Name="InDiscards" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="InErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="InUnknownProtocol" DataType="UDINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="OutOctets" DataType="UDINT" Radix="Decimal" Value="2050114776"/>
-<DataValueMember Name="OutUnicastPackets" DataType="UDINT" Radix="Decimal" Value="11884998"/>
-<DataValueMember Name="OutNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="314463"/>
+<DataValueMember Name="OutOctets" DataType="UDINT" Radix="Decimal" Value="2053406586"/>
+<DataValueMember Name="OutUnicastPackets" DataType="UDINT" Radix="Decimal" Value="11904095"/>
+<DataValueMember Name="OutNonUnicastPackets" DataType="UDINT" Radix="Decimal" Value="314941"/>
 <DataValueMember Name="OutDiscards" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="OutErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="AlignmentErrors" DataType="UDINT" Radix="Decimal" Value="0"/>
@@ -2474,53 +2474,6 @@
 </Data>
 <Data Format="String" Length="13">
 <![CDATA['192.168.32.50']]>
-</Data>
-</Tag>
-<Tag Name="IPDNS1Str" TagType="Base" DataType="STR_16" Constant="false" ExternalAccess="Read Only">
-<Data Format="L5K">
-<![CDATA[[7,'0.0.0.0.32.10$00$00$00']]]>
-</Data>
-<Data Format="String" Length="7">
-<![CDATA['0.0.0.0']]>
-</Data>
-</Tag>
-<Tag Name="IPDNS2Str" TagType="Base" DataType="STR_16" Constant="false" ExternalAccess="Read Only">
-<Data Format="L5K">
-<![CDATA[[7,'0.0.0.0.32.10$00$00$00']]]>
-</Data>
-<Data Format="String" Length="7">
-<![CDATA['0.0.0.0']]>
-</Data>
-</Tag>
-<Tag Name="IPGatewayStr" TagType="Base" DataType="STR_16" Constant="false" ExternalAccess="Read Only">
-<Data Format="L5K">
-<![CDATA[[12,'192.168.32.10$00$00$00']]]>
-</Data>
-<Data Format="String" Length="12">
-<![CDATA['192.168.32.1']]>
-</Data>
-</Tag>
-<Tag Name="IPMAC" TagType="Base" DataType="USINT" Dimensions="6" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
-<Data Format="L5K">
-<![CDATA[[0,0,0,0,0,0]]]>
-</Data>
-<Data Format="Decorated">
-<Array DataType="USINT" Dimensions="6" Radix="Decimal">
-<Element Index="[0]" Value="0"/>
-<Element Index="[1]" Value="0"/>
-<Element Index="[2]" Value="0"/>
-<Element Index="[3]" Value="0"/>
-<Element Index="[4]" Value="0"/>
-<Element Index="[5]" Value="0"/>
-</Array>
-</Data>
-</Tag>
-<Tag Name="IPMaskStr" TagType="Base" DataType="STR_16" Constant="false" ExternalAccess="Read Only">
-<Data Format="L5K">
-<![CDATA[[13,'255.255.255.0$00$00$00']]]>
-</Data>
-<Data Format="String" Length="13">
-<![CDATA['255.255.255.0']]>
 </Data>
 </Tag>
 <Tag Name="IPv4toStr" TagType="Base" DataType="Num_IPv4toStr" Constant="false" ExternalAccess="Read/Write">
@@ -2737,61 +2690,81 @@
 </Text>
 </Rung>
 <Rung Number="1" Type="N">
+<Comment>
+<![CDATA[Num_ETHMACtoStr]]>
+</Comment>
 <Text>
-<![CDATA[Num_ETHMACtoStr(ETHMACtoStr,SysEnetLinks.List[0].PhysicalAddress,0,ETHMACStr)MOV(ETHMACStr,ETHMACStr);]]>
+<![CDATA[[Num_ETHMACtoStr(ETHMACtoStr,SysEnetLinks.List[0].PhysicalAddress,0,ETHMACStr) MOV(ETHMACStr,ETHMACStr) ,Num_ETHMACtoStr(ETHMACtoStr,SysEnetLinks.List[0].PhysicalAddress,1,ETHMACStr1) MOV(ETHMACStr1,ETHMACStr1) ,Num_ETHMACtoStr(ETHMACtoStr,SysEnetLinks.List[0].PhysicalAddress,2,ETHMACStr2) MOV(ETHMACStr2,ETHMACStr2) ];]]>
 </Text>
 </Rung>
 <Rung Number="2" Type="N">
-<Text>
-<![CDATA[Num_ETHMACtoStr(ETHMACtoStr,SysEnetLinks.List[0].PhysicalAddress,1,ETHMACStr1)MOV(ETHMACStr1,ETHMACStr1);]]>
-</Text>
-</Rung>
-<Rung Number="3" Type="N">
-<Text>
-<![CDATA[Num_ETHMACtoStr(ETHMACtoStr,SysEnetLinks.List[0].PhysicalAddress,2,ETHMACStr2)MOV(ETHMACStr2,ETHMACStr2);]]>
-</Text>
-</Rung>
-<Rung Number="4" Type="N">
+<Comment>
+<![CDATA[Num_IPv4toStr]]>
+</Comment>
 <Text>
 <![CDATA[Num_IPv4toStr(IPv4toStr,SysTCPIPInterfaces.List[0].IPAddress,IPAddrStr)MOV(IPAddrStr,IPAddrStr);]]>
 </Text>
 </Rung>
-<Rung Number="5" Type="N">
+<Rung Number="3" Type="N">
+<Comment>
+<![CDATA[Num_LINTtoHex]]>
+</Comment>
 <Text>
 <![CDATA[Num_LINTtoHex(Num_LINTtoHex,LINT,LINTtoHexStr)MOV(LINTtoHexStr,LINTtoHexStr);]]>
 </Text>
 </Rung>
-<Rung Number="6" Type="N">
+<Rung Number="4" Type="N">
+<Comment>
+<![CDATA[Num_DINTtoHex]]>
+</Comment>
 <Text>
 <![CDATA[Num_DINTtoHex(Num_DINTtoHex,DINT,DINTtoHexStr)MOV(DINTtoHexStr,DINTtoHexStr);]]>
 </Text>
 </Rung>
-<Rung Number="7" Type="N">
+<Rung Number="5" Type="N">
+<Comment>
+<![CDATA[Num_INTtoHex]]>
+</Comment>
 <Text>
 <![CDATA[Num_INTtoHex(Num_INTtoHex,INT,INTtoHexStr)MOV(INTtoHexStr,INTtoHexStr);]]>
 </Text>
 </Rung>
-<Rung Number="8" Type="N">
+<Rung Number="6" Type="N">
+<Comment>
+<![CDATA[Num_SINTtoHex]]>
+</Comment>
 <Text>
 <![CDATA[Num_SINTtoHex(Num_SINTtoHex,SINT,SINTtoHexStr)MOV(SINTtoHexStr,SINTtoHexStr);]]>
 </Text>
 </Rung>
-<Rung Number="9" Type="N">
+<Rung Number="7" Type="N">
+<Comment>
+<![CDATA[Num_ULINTtoHex]]>
+</Comment>
 <Text>
 <![CDATA[Num_ULINTtoHex(Num_ULINTtoHex,ULINT,ULINTtoHexStr)MOV(ULINTtoHexStr,ULINTtoHexStr);]]>
 </Text>
 </Rung>
-<Rung Number="10" Type="N">
+<Rung Number="8" Type="N">
+<Comment>
+<![CDATA[Num_UDINTtoHex]]>
+</Comment>
 <Text>
 <![CDATA[Num_UDINTtoHex(Num_UDINTtoHex,UDINT,UDINTtoHexStr)MOV(UDINTtoHexStr,UDINTtoHexStr);]]>
 </Text>
 </Rung>
-<Rung Number="11" Type="N">
+<Rung Number="9" Type="N">
+<Comment>
+<![CDATA[Num_UINTtoHex]]>
+</Comment>
 <Text>
 <![CDATA[Num_UINTtoHex(Num_UINTtoHex,UINT,UINTtoHexStr)MOV(UINTtoHexStr,UINTtoHexStr);]]>
 </Text>
 </Rung>
-<Rung Number="12" Type="N">
+<Rung Number="10" Type="N">
+<Comment>
+<![CDATA[Num_USINTtoHex]]>
+</Comment>
 <Text>
 <![CDATA[Num_USINTtoHex(Num_USINTtoHex,USINT,USINTtoHexStr)MOV(USINTtoHexStr,USINTtoHexStr);]]>
 </Text>
