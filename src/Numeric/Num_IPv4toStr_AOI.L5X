@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Num_IPv4toStr" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-25T23:45:22.935Z" ContainsContext="true" ExportDate="Wed Jan 25 17:46:34 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Converts an IPv4 address to a string.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Num_IPv4toStr" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-27T18:01:33.132Z" ContainsContext="true" ExportDate="Fri Jan 27 12:01:38 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="STR_16" Family="StringFamily" Class="User">
@@ -29,8 +30,11 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="Num_IPv4toStr" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T19:18:10.350Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-25T23:45:22.935Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Num_IPv4toStr" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T19:18:10.350Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-27T18:01:33.132Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Converts an IPv4 address to a string.]]>
+</Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
