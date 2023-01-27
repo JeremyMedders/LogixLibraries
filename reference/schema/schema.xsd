@@ -1,0 +1,3588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RSLogix5000Content" type="RSLogix5000ContentType" />
+  <xs:complexType name="RSLogix5000ContentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Controller" type="ControllerType" />
+    </xs:sequence>
+    <xs:attribute name="SchemaRevision" type="xs:string" />
+    <xs:attribute name="SoftwareRevision" type="xs:string" />
+    <xs:attribute name="TargetName" type="xs:string" />
+    <xs:attribute name="TargetType" type="xs:string" />
+    <xs:attribute name="TargetSubType" type="xs:string" />
+    <xs:attribute name="TargetClass" type="ComponentClassEnum" />
+    <xs:attribute name="TargetCount" type="xs:unsignedLong" />
+    <xs:attribute name="TargetRevision" type="xs:string" />
+    <xs:attribute name="TargetLastEdited" type="xs:string" />
+    <xs:attribute name="TargetSignature" type="xs:string" />
+    <xs:attribute name="CurrentLanguage" type="xs:string" />
+    <xs:attribute name="ContainsContext" type="BoolEnum" />
+    <xs:attribute name="Owner" type="xs:string" />
+    <xs:attribute name="ExportDate" type="xs:string" />
+    <xs:attribute name="ExportOptions" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ControllerType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RedundancyInfo" type="RedundancyInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Security" type="SecurityInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SafetyInfo" type="SafetyInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DataTypes" type="DataTypeCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Modules" type="ModuleCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AddOnInstructionDefinitions" type="AOIDefinitionCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Tags" type="TagCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Programs" type="ProgramCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Tasks" type="TaskCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CommPorts" type="ArrayOfSerialPortType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CST" type="CSTType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="WallClockTime" type="WallClockTimeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Trends" type="TrendCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DataLogs" />
+      <xs:element minOccurs="0" maxOccurs="1" name="QuickWatchLists" type="ArrayOfQuickWatchType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TimeSynchronize" type="TimeSynchronizeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="InternetProtocol" type="InternetProtocolType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EthernetPorts" type="ArrayOfEthernetLinkType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EthernetNetwork" type="EthernetNetworkType" />
+    </xs:sequence>
+    <xs:attribute name="Use" type="UseEnum" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="ProcessorType" type="xs:string" />
+    <xs:attribute name="MajorRev" type="xs:unsignedLong" />
+    <xs:attribute name="MinorRev" type="xs:unsignedShort" />
+    <xs:attribute name="TimeSlice" type="xs:unsignedShort" />
+    <xs:attribute name="ShareUnusedTimeSlice" type="xs:unsignedShort" />
+    <xs:attribute name="PowerLossProgram" type="xs:string" />
+    <xs:attribute name="PowerLossProgramUId" type="xs:unsignedLong" />
+    <xs:attribute name="MajorFaultProgram" type="xs:string" />
+    <xs:attribute name="MajorFaultProgramUId" type="xs:unsignedLong" />
+    <xs:attribute name="ProjectCreationDate" type="xs:string" />
+    <xs:attribute name="LastModifiedDate" type="xs:string" />
+    <xs:attribute name="SFCExecutionControl" type="xs:string" />
+    <xs:attribute name="SFCRestartPosition" type="xs:string" />
+    <xs:attribute name="SFCLastScan" type="xs:string" />
+    <xs:attribute name="CommDriver" type="xs:string" />
+    <xs:attribute name="CommPath" type="xs:string" />
+    <xs:attribute name="ProjectSN" type="xs:string" />
+    <xs:attribute name="OnlineSN" type="xs:string" />
+    <xs:attribute name="MatchProjectToController" type="BoolEnum" />
+    <xs:attribute name="CanUseRPIFromProducer" type="BoolEnum" />
+    <xs:attribute name="InhibitAutomaticFirmwareUpdate" type="xs:unsignedByte" />
+    <xs:attribute name="PassThroughConfiguration" type="xs:string" />
+    <xs:attribute name="DownloadProjectDocumentationAndExtendedProperties" type="xs:string" />
+    <xs:attribute name="DownloadProjectCustomProperties" type="BoolEnum" />
+    <xs:attribute name="ReportMinorOverflow" type="BoolEnum" />
+    <xs:attribute name="CurrentProjectLanguage" type="xs:string" />
+    <xs:attribute name="DefaultProjectLanguage" type="xs:string" />
+    <xs:attribute name="ControllerLanguage" type="xs:string" />
+    <xs:attribute name="IOForcesEnabled" type="BoolEnum" />
+    <xs:attribute name="SFCForcesEnabled" type="BoolEnum" />
+    <xs:attribute name="RedundancyUId" type="xs:unsignedLong" />
+    <xs:attribute name="SafetyUId" type="xs:unsignedLong" />
+    <xs:attribute name="DataTypesUId" type="xs:unsignedLong" />
+    <xs:attribute name="ModulesUId" type="xs:unsignedLong" />
+    <xs:attribute name="AddOnInstructionDefinitionsUId" type="xs:unsignedLong" />
+    <xs:attribute name="TagsUId" type="xs:unsignedLong" />
+    <xs:attribute name="ProgramsUId" type="xs:unsignedLong" />
+    <xs:attribute name="TasksUId" type="xs:unsignedLong" />
+    <xs:attribute name="AxesUId" type="xs:unsignedLong" />
+    <xs:attribute name="CoordinateSystemsUId" type="xs:unsignedLong" />
+    <xs:attribute name="MotionGroupsUId" type="xs:unsignedLong" />
+    <xs:attribute name="CSTUId" type="xs:unsignedLong" />
+    <xs:attribute name="WallClockTimeUId" type="xs:unsignedLong" />
+    <xs:attribute name="TimeSynchronizeUId" type="xs:unsignedLong" />
+    <xs:attribute name="TrendGroupCollectionUId" type="xs:unsignedLong" />
+    <xs:attribute name="FilePath" type="xs:string" />
+    <xs:attribute name="ProductCode" type="xs:unsignedShort" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+    <xs:attribute name="ControllerEditsExist" type="BoolEnum" />
+    <xs:attribute name="PendingEditsExist" type="BoolEnum" />
+    <xs:attribute name="ForcesExist" type="BoolEnum" />
+    <xs:attribute name="EditResource" type="xs:unsignedByte" />
+    <xs:attribute name="Faulted" type="ContFaultedStateEnum" />
+    <xs:attribute name="GeneralStatus" type="ContGenStatusEnum" />
+    <xs:attribute name="IOMapLEDStatus" type="ContIOMapLEDStatusEnum" />
+    <xs:attribute name="KeySwitchPosition" type="ContKeySwitchEnum" />
+    <xs:attribute name="Mode" type="ContOpModeEnum" />
+    <xs:attribute name="ConnectedState" type="xs:string" />
+    <xs:attribute name="IsProjectDirty" type="BoolEnum" />
+    <xs:attribute name="IsProjectDirtyFromAnotherWorkstation" type="BoolEnum" />
+    <xs:attribute name="EtherNetIPMode" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="DescriptionType" mixed="true">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="LocalizedDescription" type="LocalizedDescriptionType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocalizedDescriptionType" mixed="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Value" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="Lang" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="RedundancyInfoType">
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="Enabled" type="BoolEnum" />
+    <xs:attribute name="KeepTestEditsOnSwitchOver" type="BoolEnum" />
+    <xs:attribute name="IOMemoryPadPercentage" type="xs:unsignedShort" />
+    <xs:attribute name="DataTablePadPercentage" type="xs:unsignedShort" />
+  </xs:complexType>
+  <xs:simpleType name="BoolEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="false" />
+      <xs:enumeration value="true" />
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+      <xs:enumeration value="0" />
+      <xs:enumeration value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SecurityInfoType">
+    <xs:attribute name="Code" type="xs:unsignedLong" />
+    <xs:attribute name="SecurityAuthorityID" type="xs:string" />
+    <xs:attribute name="SecurityAuthorityURI" type="xs:string" />
+    <xs:attribute name="ChangesToDetect" type="xs:string" />
+    <xs:attribute name="TrustedSlots" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="SafetyInfoType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SafetyTaskFaultString" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SafetyTagMap" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="SafetySignature" type="xs:string" />
+    <xs:attribute name="SafetyLocked" type="BoolEnum" />
+    <xs:attribute name="SafetyLockPassword" type="xs:string" />
+    <xs:attribute name="SafetyUnlockPassword" type="xs:string" />
+    <xs:attribute name="ConfigureSafetyIOAlways" type="BoolEnum" />
+    <xs:attribute name="SignatureRunModeProtect" type="BoolEnum" />
+    <xs:attribute name="SafetySigned" type="BoolEnum" />
+    <xs:attribute name="SafetyLevel" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="DataTypeCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataType" type="DataTypeType" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="DataTypeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Members" type="ArrayOfDataTypeMemberType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Dependencies" type="ArrayOfDataTypeDependencyType" />
+    </xs:sequence>
+    <xs:attribute name="Use" type="UseEnum" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Family" type="DTFamilyTypeEnum" />
+    <xs:attribute name="Class" type="DTClassTypeEnum" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="Size" type="xs:long" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfDataTypeMemberType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Member" type="DataTypeMemberType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DataTypeMemberType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="DataTypeUId" type="xs:unsignedLong" />
+    <xs:attribute name="Dimension" type="xs:unsignedShort" />
+    <xs:attribute name="Radix" type="RadixEnum" />
+    <xs:attribute name="Hidden" type="BoolEnum" />
+    <xs:attribute name="Target" type="xs:string" />
+    <xs:attribute name="BitNumber" type="xs:unsignedShort" />
+    <xs:attribute name="ExternalAccess" type="ExternalAccessEnum" />
+    <xs:attribute name="Size" type="xs:unsignedLong" />
+    <xs:attribute name="Offset" type="xs:unsignedLong" />
+    <xs:attribute name="MinValue" type="xs:long" />
+    <xs:attribute name="MaxValue" type="xs:long" />
+    <xs:attribute name="DefaultValue" type="xs:long" />
+  </xs:complexType>
+  <xs:simpleType name="RadixEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NullType" />
+      <xs:enumeration value="General" />
+      <xs:enumeration value="Binary" />
+      <xs:enumeration value="Octal" />
+      <xs:enumeration value="Decimal" />
+      <xs:enumeration value="Hex" />
+      <xs:enumeration value="Exponential" />
+      <xs:enumeration value="Float" />
+      <xs:enumeration value="ASCII" />
+      <xs:enumeration value="Unicode" />
+      <xs:enumeration value="Date/Time" />
+      <xs:enumeration value="Date/Time (ns)" />
+      <xs:enumeration value="UseTypeStyle" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ExternalAccessEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Read/Write" />
+      <xs:enumeration value="Read Only" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfDataTypeDependencyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dependency" type="DataTypeDependencyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DataTypeDependencyType">
+    <xs:attribute name="Type" type="xs:string" />
+    <xs:attribute name="Name" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="UseEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invalid" />
+      <xs:enumeration value="Context" />
+      <xs:enumeration value="Create" />
+      <xs:enumeration value="Target" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="Delete" />
+      <xs:enumeration value="Insert" />
+      <xs:enumeration value="Append" />
+      <xs:enumeration value="Redefine" />
+      <xs:enumeration value="Reference" />
+      <xs:enumeration value="Overwrite" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DTFamilyTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoFamily" />
+      <xs:enumeration value="StringFamily" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DTClassTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="User" />
+      <xs:enumeration value="ProductDefined" />
+      <xs:enumeration value="IO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ModuleCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Module" type="ModuleType" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="ModuleType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FaultString" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EKey" type="ModuleEKeyType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Ports" type="ArrayOfPortType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Communications" type="CommunicationsType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ExtendedProperties">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any processContents="lax"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="CatalogNumber" type="xs:string" />
+    <xs:attribute name="Vendor" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="ProductType" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="ProductCode" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="Major" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="Minor" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="UserDefinedVendor" type="xs:unsignedShort" />
+    <xs:attribute name="UserDefinedProductType" type="xs:unsignedShort" />
+    <xs:attribute name="UserDefinedProductCode" type="xs:unsignedShort" />
+    <xs:attribute name="UserDefinedMajor" type="xs:unsignedByte" />
+    <xs:attribute name="UserDefinedMinor" type="xs:unsignedByte" />
+    <xs:attribute name="ConfigMethod" type="xs:unsignedLong" />
+    <xs:attribute name="Mode" type="xs:unsignedShort" />
+    <xs:attribute name="DtlsFileName" type="xs:string" />
+    <xs:attribute name="ConfigCode" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentModule" type="xs:string" />
+    <xs:attribute name="ParentModuleUId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentModPortId" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="Inhibited" type="BoolEnum" />
+    <xs:attribute name="MajorFault" type="BoolEnum" />
+    <xs:attribute name="DriverType" type="xs:unsignedShort" />
+    <xs:attribute name="Throttle" type="BoolEnum" />
+    <xs:attribute name="ControlNetSignature" type="xs:string" />
+    <xs:attribute name="ShutdownParentOnFault" type="BoolEnum" />
+    <xs:attribute name="DrivesADCMode" type="BoolEnum" />
+    <xs:attribute name="DrivesADCEnabled" type="BoolEnum" />
+    <xs:attribute name="UserDefinedCatalogNumber" type="xs:string" />
+    <xs:attribute name="SafetyNetwork" type="xs:string" />
+    <xs:attribute name="SafetyEnabled" type="BoolEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+    <xs:attribute name="FaultCode" type="xs:unsignedShort" />
+    <xs:attribute name="FaultInto" type="xs:unsignedLong" />
+    <xs:attribute name="Status" type="xs:string" />
+    <xs:attribute name="StatusString" type="IOMapStatusEnum" />
+    <xs:attribute name="ImportCreateMode" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="ModuleEKeyType">
+    <xs:attribute name="State" type="EKeyingStateEnum" use="required" />
+    <xs:attribute name="Relaxed" type="BoolEnum" />
+    <xs:attribute name="Vendor" type="BoolEnum" />
+    <xs:attribute name="ProductCode" type="BoolEnum" />
+    <xs:attribute name="ProductType" type="BoolEnum" />
+    <xs:attribute name="Major" type="BoolEnum" />
+    <xs:attribute name="Minor" type="BoolEnum" />
+  </xs:complexType>
+  <xs:simpleType name="EKeyingStateEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExactMatch" />
+      <xs:enumeration value="CompatibleModule" />
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Custom" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfPortType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Port" type="PortType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PortType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Bus" type="BusType" />
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="Slot" type="xs:unsignedByte" />
+    <xs:attribute name="Address" type="xs:string" />
+    <xs:attribute name="Type" type="xs:string" />
+    <xs:attribute name="Upstream" type="BoolEnum" />
+    <xs:attribute name="ConnectorOffset" type="xs:unsignedShort" />
+    <xs:attribute name="Width" type="xs:unsignedShort" />
+  </xs:complexType>
+  <xs:complexType name="BusType">
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="Size" type="xs:unsignedShort" />
+    <xs:attribute name="Baud" type="DHRIOBaudEnum" />
+  </xs:complexType>
+  <xs:simpleType name="DHRIOBaudEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="57.6" />
+      <xs:enumeration value="115.2" />
+      <xs:enumeration value="230.4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CommunicationsType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="ConfigData" type="ConfigDataType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ConfigScript" type="ConfigScriptType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ConfigTag" type="ConfigTagType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Connections" type="ConnectionCollection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SafetyScript" type="SafetyScriptType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="CommMethod" type="xs:unsignedLong" />
+    <xs:attribute name="ConfigTagUId" type="xs:unsignedLong" />
+    <xs:attribute name="PrimCxnInputSize" type="xs:unsignedShort" />
+    <xs:attribute name="PrimCxnOutputSize" type="xs:unsignedShort" />
+    <xs:attribute name="SecCxnInputSize" type="xs:unsignedShort" />
+    <xs:attribute name="SecCxnOutputSize" type="xs:unsignedShort" />
+  </xs:complexType>
+  <xs:complexType name="ConfigDataType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Data" type="Data" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ConfigSize" type="xs:unsignedLong" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="Dimension" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="Data" mixed="true">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="AlarmAnalogParameters" type="ALMAType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="AlarmConfig" type="AlarmConfigType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="AlarmDigitalParameters" type="ALMDType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Array" type="DataArray" />
+        <xs:element minOccurs="0" maxOccurs="1" name="AxisParameters" type="AxisType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="CoordinateSystemParameters" type="CoordinateSystemType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="DataValue" type="DataValue" />
+        <xs:element minOccurs="0" maxOccurs="1" name="MessageParameters" type="MessageType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="MotionGroupParameters" type="MotionGroupType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Structure" type="DataStructure" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Format" type="xs:string" />
+    <xs:attribute name="Length" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="ALMAType">
+    <xs:attribute name="EnableIn" type="BitValueEnum" />
+    <xs:attribute name="InFault" type="BitValueEnum" />
+    <xs:attribute name="HHEnabled" type="BitValueEnum" />
+    <xs:attribute name="HEnabled" type="BitValueEnum" />
+    <xs:attribute name="LEnabled" type="BitValueEnum" />
+    <xs:attribute name="LLEnabled" type="BitValueEnum" />
+    <xs:attribute name="AckRequired" type="BitValueEnum" />
+    <xs:attribute name="ProgAckAll" type="BitValueEnum" />
+    <xs:attribute name="OperAckAll" type="BitValueEnum" />
+    <xs:attribute name="HHProgAck" type="BitValueEnum" />
+    <xs:attribute name="HHOperAck" type="BitValueEnum" />
+    <xs:attribute name="HProgAck" type="BitValueEnum" />
+    <xs:attribute name="HOperAck" type="BitValueEnum" />
+    <xs:attribute name="LProgAck" type="BitValueEnum" />
+    <xs:attribute name="LOperAck" type="BitValueEnum" />
+    <xs:attribute name="LLProgAck" type="BitValueEnum" />
+    <xs:attribute name="LLOperAck" type="BitValueEnum" />
+    <xs:attribute name="ROCPosProgAck" type="BitValueEnum" />
+    <xs:attribute name="ROCPosOperAck" type="BitValueEnum" />
+    <xs:attribute name="ROCNegProgAck" type="BitValueEnum" />
+    <xs:attribute name="ROCNegOperAck" type="BitValueEnum" />
+    <xs:attribute name="ProgSuppress" type="BitValueEnum" />
+    <xs:attribute name="OperSuppress" type="BitValueEnum" />
+    <xs:attribute name="ProgUnsuppress" type="BitValueEnum" />
+    <xs:attribute name="OperUnsuppress" type="BitValueEnum" />
+    <xs:attribute name="ProgDisable" type="BitValueEnum" />
+    <xs:attribute name="OperDisable" type="BitValueEnum" />
+    <xs:attribute name="ProgEnable" type="BitValueEnum" />
+    <xs:attribute name="OperEnable" type="BitValueEnum" />
+    <xs:attribute name="AlarmCountReset" type="BitValueEnum" />
+    <xs:attribute name="In" type="xs:float" />
+    <xs:attribute name="HHLimit" type="xs:float" />
+    <xs:attribute name="HHSeverity" type="xs:unsignedLong" />
+    <xs:attribute name="HLimit" type="xs:float" />
+    <xs:attribute name="HSeverity" type="xs:unsignedLong" />
+    <xs:attribute name="LLimit" type="xs:float" />
+    <xs:attribute name="LSeverity" type="xs:unsignedLong" />
+    <xs:attribute name="LLLimit" type="xs:float" />
+    <xs:attribute name="LLSeverity" type="xs:unsignedLong" />
+    <xs:attribute name="MinDurationPRE" type="xs:unsignedLong" />
+    <xs:attribute name="Deadband" type="xs:float" />
+    <xs:attribute name="ROCPosLimit" type="xs:float" />
+    <xs:attribute name="ROCPosSeverity" type="xs:unsignedLong" />
+    <xs:attribute name="ROCNegLimit" type="xs:float" />
+    <xs:attribute name="ROCNegSeverity" type="xs:unsignedLong" />
+    <xs:attribute name="ROCPeriod" type="xs:float" />
+    <xs:attribute name="AssocTag1" type="xs:string" />
+    <xs:attribute name="AssocTag2" type="xs:string" />
+    <xs:attribute name="AssocTag3" type="xs:string" />
+    <xs:attribute name="AssocTag4" type="xs:string" />
+    <xs:attribute name="EnableOut" type="BitValueEnum" />
+    <xs:attribute name="InAlarm" type="BitValueEnum" />
+    <xs:attribute name="AnyInAlarmUnack" type="BitValueEnum" />
+    <xs:attribute name="HHInAlarm" type="BitValueEnum" />
+    <xs:attribute name="HHAcked" type="BitValueEnum" />
+    <xs:attribute name="HHInAlarmUnack" type="BitValueEnum" />
+    <xs:attribute name="HInAlarm" type="BitValueEnum" />
+    <xs:attribute name="HAcked" type="BitValueEnum" />
+    <xs:attribute name="HInAlarmUnack" type="BitValueEnum" />
+    <xs:attribute name="LInAlarm" type="BitValueEnum" />
+    <xs:attribute name="LAcked" type="BitValueEnum" />
+    <xs:attribute name="LInAlarmUnack" type="BitValueEnum" />
+    <xs:attribute name="LLInAlarm" type="BitValueEnum" />
+    <xs:attribute name="LLAcked" type="BitValueEnum" />
+    <xs:attribute name="LLInAlarmUnack" type="BitValueEnum" />
+    <xs:attribute name="ROCPosInAlarm" type="BitValueEnum" />
+    <xs:attribute name="ROCPosAcked" type="BitValueEnum" />
+    <xs:attribute name="ROCPosInAlarmUnack" type="BitValueEnum" />
+    <xs:attribute name="ROCNegInAlarm" type="BitValueEnum" />
+    <xs:attribute name="ROCNegAcked" type="BitValueEnum" />
+    <xs:attribute name="ROCNegInAlarmUnack" type="BitValueEnum" />
+    <xs:attribute name="Suppressed" type="BitValueEnum" />
+    <xs:attribute name="Disabled" type="BitValueEnum" />
+    <xs:attribute name="MinDurationACC" type="xs:unsignedLong" />
+    <xs:attribute name="HHInAlarmTime" type="xs:long" />
+    <xs:attribute name="HHAlarmCount" type="xs:unsignedLong" />
+    <xs:attribute name="HInAlarmTime" type="xs:long" />
+    <xs:attribute name="HAlarmCount" type="xs:unsignedLong" />
+    <xs:attribute name="LInAlarmTime" type="xs:long" />
+    <xs:attribute name="LAlarmCount" type="xs:unsignedLong" />
+    <xs:attribute name="LLInAlarmTime" type="xs:long" />
+    <xs:attribute name="LLAlarmCount" type="xs:unsignedLong" />
+    <xs:attribute name="ROCPosInAlarmTime" type="xs:long" />
+    <xs:attribute name="ROCPosAlarmCnt" type="xs:unsignedLong" />
+    <xs:attribute name="ROCNegInAlarmTime" type="xs:long" />
+    <xs:attribute name="ROCNegAlarmCnt" type="xs:unsignedLong" />
+    <xs:attribute name="AckTime" type="xs:long" />
+    <xs:attribute name="RetToNormalTime" type="xs:long" />
+    <xs:attribute name="AlarmCountResetTime" type="xs:long" />
+    <xs:attribute name="DeliveryER" type="BitValueEnum" />
+    <xs:attribute name="DeliveryDN" type="BitValueEnum" />
+    <xs:attribute name="DeliveryEN" type="BitValueEnum" />
+    <xs:attribute name="NoSubscriber" type="BitValueEnum" />
+    <xs:attribute name="NoConnection" type="BitValueEnum" />
+    <xs:attribute name="CommError" type="BitValueEnum" />
+    <xs:attribute name="AlarmBuffered" type="BitValueEnum" />
+    <xs:attribute name="Subscribers" type="xs:unsignedLong" />
+    <xs:attribute name="SubscNotified" type="xs:unsignedLong" />
+    <xs:attribute name="InstructFault" type="BitValueEnum" />
+    <xs:attribute name="InFaulted" type="BitValueEnum" />
+    <xs:attribute name="SeverityInv" type="BitValueEnum" />
+    <xs:attribute name="AlarmLimitsInv" type="BitValueEnum" />
+    <xs:attribute name="DeadbandInv" type="BitValueEnum" />
+    <xs:attribute name="ROCPosLimitInv" type="BitValueEnum" />
+    <xs:attribute name="ROCNegLimitInv" type="BitValueEnum" />
+    <xs:attribute name="ROCPeriodInv" type="BitValueEnum" />
+  </xs:complexType>
+  <xs:simpleType name="BitValueEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="false" />
+      <xs:enumeration value="true" />
+      <xs:enumeration value="0" />
+      <xs:enumeration value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AlarmConfigType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Messages" type="ArrayOfAlarmMessageType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AlarmClass" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="HMICmd" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAlarmMessageType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Message" type="AlarmMessageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlarmMessageType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Text" type="AlarmMessageTextType" />
+    </xs:sequence>
+    <xs:attribute name="Type" type="xs:string" />
+    <xs:attribute name="ID" type="xs:unsignedShort" />
+  </xs:complexType>
+  <xs:complexType name="AlarmMessageTextType" mixed="true">
+    <xs:attribute name="Lang" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ALMDType">
+    <xs:attribute name="EnableIn" type="BitValueEnum" />
+    <xs:attribute name="In" type="BitValueEnum" />
+    <xs:attribute name="InFault" type="BitValueEnum" />
+    <xs:attribute name="Condition" type="BitValueEnum" />
+    <xs:attribute name="AckRequired" type="BitValueEnum" />
+    <xs:attribute name="Latched" type="BitValueEnum" />
+    <xs:attribute name="ProgAck" type="BitValueEnum" />
+    <xs:attribute name="OperAck" type="BitValueEnum" />
+    <xs:attribute name="ProgReset" type="BitValueEnum" />
+    <xs:attribute name="OperReset" type="BitValueEnum" />
+    <xs:attribute name="ProgSuppress" type="BitValueEnum" />
+    <xs:attribute name="OperSuppress" type="BitValueEnum" />
+    <xs:attribute name="ProgUnsuppress" type="BitValueEnum" />
+    <xs:attribute name="OperUnsuppress" type="BitValueEnum" />
+    <xs:attribute name="ProgDisable" type="BitValueEnum" />
+    <xs:attribute name="OperDisable" type="BitValueEnum" />
+    <xs:attribute name="ProgEnable" type="BitValueEnum" />
+    <xs:attribute name="OperEnable" type="BitValueEnum" />
+    <xs:attribute name="AlarmCountReset" type="BitValueEnum" />
+    <xs:attribute name="UseProgTime" type="BitValueEnum" />
+    <xs:attribute name="Severity" type="xs:unsignedLong" />
+    <xs:attribute name="MinDurationPRE" type="xs:unsignedLong" />
+    <xs:attribute name="ProgTime" type="xs:string" />
+    <xs:attribute name="AssocTag1" type="xs:string" />
+    <xs:attribute name="AssocTag2" type="xs:string" />
+    <xs:attribute name="AssocTag3" type="xs:string" />
+    <xs:attribute name="AssocTag4" type="xs:string" />
+    <xs:attribute name="EnableOut" type="BitValueEnum" />
+    <xs:attribute name="InAlarm" type="BitValueEnum" />
+    <xs:attribute name="Acked" type="BitValueEnum" />
+    <xs:attribute name="InAlarmUnack" type="BitValueEnum" />
+    <xs:attribute name="Suppressed" type="BitValueEnum" />
+    <xs:attribute name="Disabled" type="BitValueEnum" />
+    <xs:attribute name="MinDurationACC" type="xs:unsignedLong" />
+    <xs:attribute name="AlarmCount" type="xs:unsignedLong" />
+    <xs:attribute name="InAlarmTime" type="xs:long" />
+    <xs:attribute name="AckTime" type="xs:long" />
+    <xs:attribute name="RetToNormalTime" type="xs:long" />
+    <xs:attribute name="AlarmCountResetTime" type="xs:long" />
+    <xs:attribute name="DeliveryER" type="BitValueEnum" />
+    <xs:attribute name="DeliveryDN" type="BitValueEnum" />
+    <xs:attribute name="DeliveryEN" type="BitValueEnum" />
+    <xs:attribute name="NoSubscriber" type="BitValueEnum" />
+    <xs:attribute name="NoConnection" type="BitValueEnum" />
+    <xs:attribute name="CommError" type="BitValueEnum" />
+    <xs:attribute name="AlarmBuffered" type="BitValueEnum" />
+    <xs:attribute name="Subscribers" type="xs:unsignedLong" />
+    <xs:attribute name="SubscNotified" type="xs:unsignedLong" />
+    <xs:attribute name="InstructFault" type="BitValueEnum" />
+    <xs:attribute name="InFaulted" type="BitValueEnum" />
+    <xs:attribute name="SeverityInv" type="BitValueEnum" />
+  </xs:complexType>
+  <xs:complexType name="DataArray">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Element" type="DataArrayElement" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="Dimensions" type="xs:string" />
+    <xs:attribute name="Radix" type="RadixEnum" />
+  </xs:complexType>
+  <xs:complexType name="DataArrayElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Structure" type="DataStructure" />
+    </xs:sequence>
+    <xs:attribute name="Index" type="xs:string" />
+    <xs:attribute name="Value" type="xs:string" />
+    <xs:attribute name="ForceValue" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="DataStructure">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="ArrayMember" type="DataArray" />
+        <xs:element minOccurs="0" maxOccurs="1" name="DataValueMember" type="DataValue" />
+        <xs:element minOccurs="0" maxOccurs="1" name="StructureMember" type="DataStructure" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="DataType" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="DataValue" mixed="true">
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="Radix" type="RadixEnum" />
+    <xs:attribute name="Value" type="xs:string" />
+    <xs:attribute name="ForceValue" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="AxisType">
+    <xs:attribute name="MotionGroup" type="xs:string" />
+    <xs:attribute name="CIPDriveSetAttrUpdateBits" type="xs:string" />
+    <xs:attribute name="CIPDriveGetAttrUpdateBits" type="xs:string" />
+    <xs:attribute name="CIPControllerSetAttrUpdateBits" type="xs:string" />
+    <xs:attribute name="CIPControllerGetAttrUpdateBits" type="xs:string" />
+    <xs:attribute name="MotionModule" type="xs:string" />
+    <xs:attribute name="AxisConfiguration" type="AxisConfigurationEnum" />
+    <xs:attribute name="FeedbackConfiguration" type="AxisFeedbackConfigurationEnum" />
+    <xs:attribute name="MotorDataSource" type="AxisMotorDataSourceEnum" />
+    <xs:attribute name="MotorCatalogNumber" type="xs:string" />
+    <xs:attribute name="Feedback1Type" type="AxisFeedbackTypeEnum" />
+    <xs:attribute name="Feedback2Type" type="AxisFeedbackTypeEnum" />
+    <xs:attribute name="MotorType" type="AxisMotorTypeEnum" />
+    <xs:attribute name="MotionScalingConfiguration" type="AxisMotionScalingConfigurationEnum" />
+    <xs:attribute name="RotationalPosResolution" type="xs:unsignedLong" />
+    <xs:attribute name="ConversionConstant" type="xs:float" />
+    <xs:attribute name="OutputCamExecutionTargets" type="xs:unsignedLong" />
+    <xs:attribute name="AxisState" type="AxisStateEnum" />
+    <xs:attribute name="PositionUnits" type="xs:string" />
+    <xs:attribute name="AverageVelocityTimebase" type="xs:float" />
+    <xs:attribute name="RotaryAxis" type="RotaryAxisEnum" />
+    <xs:attribute name="PositionUnwind" type="xs:unsignedLong" />
+    <xs:attribute name="HomeMode" type="AxisHomeModeEnum" />
+    <xs:attribute name="HomeDirection" type="AxisHomeDirEnum" />
+    <xs:attribute name="HomeSequence" type="AxisHomeSeqEnum" />
+    <xs:attribute name="HomeConfigurationBits" type="xs:string" />
+    <xs:attribute name="HomePosition" type="xs:float" />
+    <xs:attribute name="HomeOffset" type="xs:float" />
+    <xs:attribute name="HomeSpeed" type="xs:float" />
+    <xs:attribute name="HomeReturnSpeed" type="xs:float" />
+    <xs:attribute name="MaximumSpeed" type="xs:float" />
+    <xs:attribute name="MaximumAcceleration" type="xs:float" />
+    <xs:attribute name="MaximumDeceleration" type="xs:float" />
+    <xs:attribute name="ProgrammedStopMode" type="AxisProgStopModeEnum" />
+    <xs:attribute name="MasterInputConfigurationBits" type="xs:unsignedLong" />
+    <xs:attribute name="MasterPositionFilterBandwidth" type="xs:float" />
+    <xs:attribute name="AxisType" type="AxisTypeEnum" />
+    <xs:attribute name="ServoLoopConfiguration" type="ServoLoopConfigEnum" />
+    <xs:attribute name="ExternalDriveType" type="AxisExtDriveTypeEnum" />
+    <xs:attribute name="FaultConfigurationBits" type="xs:unsignedLong" />
+    <xs:attribute name="AxisInfoSelect1" type="AxisInfoSelectEnum" />
+    <xs:attribute name="AxisInfoSelect2" type="AxisInfoSelectEnum" />
+    <xs:attribute name="LDTType" type="LDTTypeEnum" />
+    <xs:attribute name="LDTRecirculations" type="xs:unsignedByte" />
+    <xs:attribute name="LDTCalibrationConstant" type="xs:float" />
+    <xs:attribute name="LDTCalibrationConstantUnits" type="LDTCalibConstUnitsEnum" />
+    <xs:attribute name="LDTScaling" type="xs:float" />
+    <xs:attribute name="LDTScalingUnits" type="LDTScalingUnitsEnum" />
+    <xs:attribute name="LDTLength" type="xs:float" />
+    <xs:attribute name="LDTLengthUnits" type="LDTLengthUnitsEnum" />
+    <xs:attribute name="SSICodeType" type="SSICodeTypeEnum" />
+    <xs:attribute name="SSIDataLength" type="xs:unsignedByte" />
+    <xs:attribute name="SSIClockFrequency" type="SSIClockFreqEnum" />
+    <xs:attribute name="AbsoluteFeedbackEnable" type="xs:unsignedByte" />
+    <xs:attribute name="AbsoluteFeedbackOffset" type="xs:float" />
+    <xs:attribute name="ServoFeedbackType" type="ServoFeedbackTypeEnum" />
+    <xs:attribute name="ServoPolarityBits" type="xs:unsignedLong" />
+    <xs:attribute name="VelocityFeedforwardGain" type="xs:float" />
+    <xs:attribute name="AccelerationFeedforwardGain" type="xs:float" />
+    <xs:attribute name="PositionProportionalGain" type="xs:float" />
+    <xs:attribute name="PositionIntegralGain" type="xs:float" />
+    <xs:attribute name="VelocityProportionalGain" type="xs:float" />
+    <xs:attribute name="VelocityIntegralGain" type="xs:float" />
+    <xs:attribute name="VelocityScaling" type="xs:float" />
+    <xs:attribute name="TorqueScaling" type="xs:float" />
+    <xs:attribute name="OutputLPFilterBandwidth" type="xs:float" />
+    <xs:attribute name="IntegratorHoldEnable" type="EnabledEnum" />
+    <xs:attribute name="PositionDifferentialGain" type="xs:float" />
+    <xs:attribute name="DirectionalScalingRatio" type="xs:float" />
+    <xs:attribute name="MaximumPositiveTravel" type="xs:float" />
+    <xs:attribute name="MaximumNegativeTravel" type="xs:float" />
+    <xs:attribute name="PositionErrorTolerance" type="xs:float" />
+    <xs:attribute name="PositionLockTolerance" type="xs:float" />
+    <xs:attribute name="OutputLimit" type="xs:float" />
+    <xs:attribute name="DirectDriveRampRate" type="xs:float" />
+    <xs:attribute name="OutputOffset" type="xs:float" />
+    <xs:attribute name="VelocityOffset" type="xs:float" />
+    <xs:attribute name="TorqueOffset" type="xs:float" />
+    <xs:attribute name="FrictionCompensation" type="xs:float" />
+    <xs:attribute name="FrictionCompensationWindow" type="xs:float" />
+    <xs:attribute name="BacklashStabilizationWindow" type="xs:float" />
+    <xs:attribute name="BacklashReversalOffset" type="xs:float" />
+    <xs:attribute name="HardOvertravelFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="SoftOvertravelFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="PositionErrorFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="FeedbackFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="FeedbackNoiseFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="DriveFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="TestIncrement" type="xs:float" />
+    <xs:attribute name="TuningTravelLimit" type="xs:float" />
+    <xs:attribute name="TuningSpeed" type="xs:float" />
+    <xs:attribute name="TuningTorque" type="xs:float" />
+    <xs:attribute name="DampingFactor" type="xs:float" />
+    <xs:attribute name="DriveModelTimeConstant" type="xs:float" />
+    <xs:attribute name="PositionServoBandwidth" type="xs:float" />
+    <xs:attribute name="VelocityServoBandwidth" type="xs:float" />
+    <xs:attribute name="TuningConfigurationBits" type="xs:string" />
+    <xs:attribute name="TorqueLimitSource" type="AxisTorqueLimitSrcEnum" />
+    <xs:attribute name="DriveUnit" type="AxisDriveUnitEnum" />
+    <xs:attribute name="PositionDataScaling" type="xs:unsignedShort" />
+    <xs:attribute name="PositionDataScalingFactor" type="xs:unsignedLong" />
+    <xs:attribute name="PositionDataScalingExp" type="xs:short" />
+    <xs:attribute name="VelocityDataScaling" type="xs:unsignedShort" />
+    <xs:attribute name="VelocityDataScalingFactor" type="xs:unsignedLong" />
+    <xs:attribute name="VelocityDataScalingExp" type="xs:short" />
+    <xs:attribute name="AccelerationDataScaling" type="xs:unsignedShort" />
+    <xs:attribute name="AccelerationDataScalingFactor" type="xs:unsignedLong" />
+    <xs:attribute name="AccelerationDataScalingExp" type="xs:short" />
+    <xs:attribute name="TorqueDataScaling" type="xs:unsignedShort" />
+    <xs:attribute name="TorqueDataScalingFactor" type="xs:unsignedLong" />
+    <xs:attribute name="TorqueDataScalingExp" type="xs:short" />
+    <xs:attribute name="DrivePolarity" type="AxisDrivePolarityEnum" />
+    <xs:attribute name="MotorFeedbackType" type="xs:string" />
+    <xs:attribute name="MotorFeedbackResolution" type="xs:unsignedLong" />
+    <xs:attribute name="AuxFeedbackType" type="xs:string" />
+    <xs:attribute name="AuxFeedbackResolution" type="xs:unsignedLong" />
+    <xs:attribute name="MotorFeedbackUnit" type="AxisFeedbackUnitEnum" />
+    <xs:attribute name="AuxFeedbackUnit" type="AxisFeedbackUnitEnum" />
+    <xs:attribute name="OutputNotchFilterFrequency" type="xs:float" />
+    <xs:attribute name="VelocityDroop" type="xs:float" />
+    <xs:attribute name="VelocityLimitBipolar" type="xs:float" />
+    <xs:attribute name="AccelerationLimitBipolar" type="xs:float" />
+    <xs:attribute name="TorqueLimitBipolar" type="xs:float" />
+    <xs:attribute name="VelocityLimitPositive" type="xs:float" />
+    <xs:attribute name="VelocityLimitNegative" type="xs:float" />
+    <xs:attribute name="VelocityThreshold" type="xs:float" />
+    <xs:attribute name="VelocityWindow" type="xs:float" />
+    <xs:attribute name="VelocityStandstillWindow" type="xs:float" />
+    <xs:attribute name="AccelerationLimitPositive" type="xs:float" />
+    <xs:attribute name="AccelerationLimitNegative" type="xs:float" />
+    <xs:attribute name="TorqueLimitPositive" type="xs:float" />
+    <xs:attribute name="TorqueLimitNegative" type="xs:float" />
+    <xs:attribute name="TorqueThreshold" type="xs:float" />
+    <xs:attribute name="DriveThermalFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="MotorThermalFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="DriveEnableInputFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="StoppingTorque" type="xs:float" />
+    <xs:attribute name="StoppingTimeLimit" type="xs:float" />
+    <xs:attribute name="BrakeEngageDelayTime" type="xs:float" />
+    <xs:attribute name="BrakeReleaseDelayTime" type="xs:float" />
+    <xs:attribute name="PowerSupplyID" type="xs:string" />
+    <xs:attribute name="BusRegulatorID" type="xs:string" />
+    <xs:attribute name="PWMFrequencySelect" type="AxisPWMFrequencySelectEnum" />
+    <xs:attribute name="LoadInertiaRatio" type="xs:float" />
+    <xs:attribute name="AmplifierCatalogNumber" type="xs:string" />
+    <xs:attribute name="AuxFeedbackRatio" type="xs:float" />
+    <xs:attribute name="ContinuousTorqueLimit" type="xs:float" />
+    <xs:attribute name="ResistiveBrakeContactDelay" type="xs:float" />
+    <xs:attribute name="ConfigurationProfile" type="AxisConfigurationProfileEnum" />
+    <xs:attribute name="RegistrationInputs" type="xs:unsignedShort" />
+    <xs:attribute name="MaximumAccelerationJerk" type="xs:float" />
+    <xs:attribute name="MaximumDecelerationJerk" type="xs:float" />
+    <xs:attribute name="DynamicsConfigurationBits" type="xs:unsignedLong" />
+    <xs:attribute name="PhaseLossFaultAction" type="AxisFaultActionEnum" />
+    <xs:attribute name="HomeTorqueLevel" type="xs:float" />
+    <xs:attribute name="InputPowerPhase" type="DriveInputPowerPhaseEnum" />
+    <xs:attribute name="ControlMode" type="AxisControlModeEnum" />
+    <xs:attribute name="ControlMethod" type="AxisControlMethodEnum" />
+    <xs:attribute name="FeedbackUnitRatio" type="xs:float" />
+    <xs:attribute name="AccelerationLimit" type="xs:float" />
+    <xs:attribute name="DecelerationLimit" type="xs:float" />
+    <xs:attribute name="RampJerkControl" type="xs:float" />
+    <xs:attribute name="FlyingStartEnable" type="EnabledEnum" />
+    <xs:attribute name="SkipSpeed1" type="xs:float" />
+    <xs:attribute name="SkipSpeed2" type="xs:float" />
+    <xs:attribute name="SkipSpeed3" type="xs:float" />
+    <xs:attribute name="SkipSpeedBand" type="xs:float" />
+    <xs:attribute name="CommandTorque" type="xs:float" />
+    <xs:attribute name="PositionIntegratorBandwidth" type="xs:float" />
+    <xs:attribute name="PositionErrorToleranceTime" type="xs:float" />
+    <xs:attribute name="PositionIntegratorControl" type="xs:unsignedByte" />
+    <xs:attribute name="PositionIntegratorPreload" type="EnabledEnum" />
+    <xs:attribute name="VelocityErrorTolerance" type="xs:float" />
+    <xs:attribute name="VelocityErrorToleranceTime" type="xs:float" />
+    <xs:attribute name="VelocityIntegratorControl" type="EnabledEnum" />
+    <xs:attribute name="VelocityIntegratorPreload" type="xs:float" />
+    <xs:attribute name="VelocityLockTolerance" type="xs:float" />
+    <xs:attribute name="SystemInertia" type="xs:float" />
+    <xs:attribute name="TorqueLowPassFilterBandwidth" type="xs:float" />
+    <xs:attribute name="TorqueNotchFilterFrequency" type="xs:float" />
+    <xs:attribute name="TorqueRateLimit" type="xs:float" />
+    <xs:attribute name="OvertorqueLimit" type="xs:float" />
+    <xs:attribute name="OvertorqueLimitTime" type="xs:float" />
+    <xs:attribute name="UndertorqueLimit" type="xs:float" />
+    <xs:attribute name="UndertorqueLimitTime" type="xs:float" />
+    <xs:attribute name="FluxCurrentReference" type="xs:float" />
+    <xs:attribute name="CurrentError" type="xs:float" />
+    <xs:attribute name="TorqueLoopBandwidth" type="xs:float" />
+    <xs:attribute name="TorqueIntegralTimeConstant" type="xs:float" />
+    <xs:attribute name="FluxLoopBandwidth" type="xs:float" />
+    <xs:attribute name="FluxIntegralTimeConstant" type="xs:float" />
+    <xs:attribute name="FluxUpControl" type="AxisFluxUpControlEnum" />
+    <xs:attribute name="FluxUpTime" type="xs:float" />
+    <xs:attribute name="FrequencyControlMethod" type="AxisFrequencyControlMethodEnum" />
+    <xs:attribute name="MaximumVoltage" type="xs:float" />
+    <xs:attribute name="MaximumFrequency" type="xs:float" />
+    <xs:attribute name="BreakVoltage" type="xs:float" />
+    <xs:attribute name="BreakFrequency" type="xs:float" />
+    <xs:attribute name="StartBoost" type="xs:float" />
+    <xs:attribute name="RunBoost" type="xs:float" />
+    <xs:attribute name="StoppingAction" type="AxisStoppingActionEnum" />
+    <xs:attribute name="MechanicalBrakeControl" type="AxisMechanicalBrakeControlEnum" />
+    <xs:attribute name="MechanicalBrakeReleaseDelay" type="xs:float" />
+    <xs:attribute name="MechanicalBrakeEngageDelay" type="xs:float" />
+    <xs:attribute name="PowerLossAction" type="AxisPowerLossActionEnum" />
+    <xs:attribute name="PowerLossThreshold" type="xs:float" />
+    <xs:attribute name="ShutdownAction" type="AxisShutdownActionEnum" />
+    <xs:attribute name="InverterCapacity" type="xs:float" />
+    <xs:attribute name="ConverterCapacity" type="xs:float" />
+    <xs:attribute name="InverterOverloadAction" type="AxisInverterOverloadActionEnum" />
+    <xs:attribute name="MotorOverloadAction" type="AxisMotorOverloadActionEnum" />
+    <xs:attribute name="CIPAxisExceptionAction" type="AxisExceptionActionEnum" />
+    <xs:attribute name="CIPAxisExceptionActionRA" type="xs:string" />
+    <xs:attribute name="MotorOverspeedUserLimit" type="xs:float" />
+    <xs:attribute name="MotorThermalOverloadUserLimit" type="xs:float" />
+    <xs:attribute name="InverterThermalOverloadUserLimit" type="xs:float" />
+    <xs:attribute name="LocalControl" type="AxisLocalControlEnum" />
+    <xs:attribute name="PositionLeadLagFilterBandwidth" type="xs:float" />
+    <xs:attribute name="PositionLeadLagFilterGain" type="xs:float" />
+    <xs:attribute name="PositionNotchFilterFrequency" type="xs:float" />
+    <xs:attribute name="VelocityNegativeFeedforwardGain" type="xs:float" />
+    <xs:attribute name="BacklashCompensationWindow" type="xs:float" />
+    <xs:attribute name="TorqueLeadLagFilterBandwidth" type="xs:float" />
+    <xs:attribute name="TorqueLeadLagFilterGain" type="xs:float" />
+    <xs:attribute name="SLATConfiguration" type="AxisSLATConfiguration" />
+    <xs:attribute name="SLATSetPoint" type="xs:float" />
+    <xs:attribute name="SLATTimeDelay" type="xs:float" />
+    <xs:attribute name="CurrentDisturbance" type="xs:float" />
+    <xs:attribute name="CommutationSelfSensingCurrent" type="xs:float" />
+    <xs:attribute name="DCInjectionBrakeCurrent" type="xs:float" />
+    <xs:attribute name="FluxBrakingEnable" type="EnabledEnum" />
+    <xs:attribute name="DCInjectionBrakeTime" type="xs:float" />
+    <xs:attribute name="MotorDeviceCode" type="xs:string" />
+    <xs:attribute name="MotorUnit" type="AxisMotorUnitEnum" />
+    <xs:attribute name="MotorPolarity" type="AxisPolarityEnum" />
+    <xs:attribute name="MotorRatedVoltage" type="xs:float" />
+    <xs:attribute name="MotorRatedContinuousCurrent" type="xs:float" />
+    <xs:attribute name="MotorRatedPeakCurrent" type="xs:float" />
+    <xs:attribute name="MotorRatedOutputPower" type="xs:float" />
+    <xs:attribute name="MotorOverloadLimit" type="xs:float" />
+    <xs:attribute name="MotorIntegralThermalSwitch" type="BoolEnum" />
+    <xs:attribute name="MotorMaxWindingTemperature" type="xs:float" />
+    <xs:attribute name="MotorWindingToAmbientResistance" type="xs:float" />
+    <xs:attribute name="PMMotorResistance" type="xs:float" />
+    <xs:attribute name="PMMotorInductance" type="xs:float" />
+    <xs:attribute name="RotaryMotorPoles" type="xs:unsignedShort" />
+    <xs:attribute name="RotaryMotorInertia" type="xs:float" />
+    <xs:attribute name="RotaryMotorRatedSpeed" type="xs:float" />
+    <xs:attribute name="RotaryMotorMaxSpeed" type="xs:float" />
+    <xs:attribute name="RotaryMotorDampingCoefficient" type="xs:float" />
+    <xs:attribute name="LinearMotorPolePitch" type="xs:float" />
+    <xs:attribute name="LinearMotorRatedSpeed" type="xs:float" />
+    <xs:attribute name="LinearMotorMass" type="xs:float" />
+    <xs:attribute name="LinearMotorMaxSpeed" type="xs:float" />
+    <xs:attribute name="LinearMotorDampingCoefficient" type="xs:float" />
+    <xs:attribute name="PMMotorRatedTorque" type="xs:float" />
+    <xs:attribute name="PMMotorTorqueConstant" type="xs:float" />
+    <xs:attribute name="PMMotorRotaryVoltageConstant" type="xs:float" />
+    <xs:attribute name="PMMotorRatedForce" type="xs:float" />
+    <xs:attribute name="PMMotorForceConstant" type="xs:float" />
+    <xs:attribute name="PMMotorLinearVoltageConstant" type="xs:float" />
+    <xs:attribute name="InductionMotorRatedFrequency" type="xs:float" />
+    <xs:attribute name="InductionMotorFluxCurrent" type="xs:float" />
+    <xs:attribute name="InductionMotorStatorResistance" type="xs:float" />
+    <xs:attribute name="InductionMotorStatorLeakageReactance" type="xs:float" />
+    <xs:attribute name="InductionMotorMagnetizationReactance" type="xs:float" />
+    <xs:attribute name="InductionMotorRotorResistance" type="xs:float" />
+    <xs:attribute name="InductionMotorRotorLeakageReactance" type="xs:float" />
+    <xs:attribute name="Feedback1Unit" type="AxisCIPFeedbackUnitEnum" />
+    <xs:attribute name="Feedback1Polarity" type="AxisPolarityEnum" />
+    <xs:attribute name="Feedback1StartupMethod" type="AxisFeedbackStartupMethodEnum" />
+    <xs:attribute name="Feedback1CycleResolution" type="xs:unsignedLong" />
+    <xs:attribute name="Feedback1CycleInterpolation" type="xs:unsignedLong" />
+    <xs:attribute name="Feedback1Turns" type="xs:unsignedLong" />
+    <xs:attribute name="Feedback1Length" type="xs:float" />
+    <xs:attribute name="Feedback1DataLength" type="xs:unsignedByte" />
+    <xs:attribute name="Feedback1DataCode" type="AxisFeedbackNDataCodeEnum" />
+    <xs:attribute name="Feedback1ResolverTransformerRatio" type="xs:float" />
+    <xs:attribute name="Feedback1ResolverExcitationVoltage" type="xs:float" />
+    <xs:attribute name="Feedback1ResolverExcitationFrequency" type="xs:float" />
+    <xs:attribute name="Feedback1ResolverCableBalance" type="xs:float" />
+    <xs:attribute name="Feedback1VelocityFilterBandwidth" type="xs:float" />
+    <xs:attribute name="Feedback1AccelFilterBandwidth" type="xs:float" />
+    <xs:attribute name="PMMotorFluxSaturation" type="xs:float" />
+    <xs:attribute name="RotaryMotorFanCoolingSpeed" type="xs:float" />
+    <xs:attribute name="RotaryMotorFanCoolingDerating" type="xs:float" />
+    <xs:attribute name="LinearMotorIntegralLimitSwitch" type="BoolEnum" />
+    <xs:attribute name="Feedback1LossAction" type="AxisFeedbackLossActionEnum" />
+    <xs:attribute name="Feedback1VelocityFilterTaps" type="xs:unsignedShort" />
+    <xs:attribute name="Feedback1AccelFilterTaps" type="xs:unsignedShort" />
+    <xs:attribute name="CIPAxisFaultLog" type="xs:unsignedByte" />
+    <xs:attribute name="CIPAxisFaultLogReset" type="xs:unsignedByte" />
+    <xs:attribute name="CyclicReadUpdateList" type="AxisCyclicReadEnum" />
+    <xs:attribute name="CyclicWriteUpdateList" type="AxisCyclicWriteEnum" />
+    <xs:attribute name="ScalingSource" type="AxisScalingSourceEnum" />
+    <xs:attribute name="LoadType" type="AxisLoadTypeEnum" />
+    <xs:attribute name="ActuatorType" type="AxisActuatorTypeEnum" />
+    <xs:attribute name="TravelMode" type="AxisTravelModeEnum" />
+    <xs:attribute name="PositionScalingNumerator" type="xs:float" />
+    <xs:attribute name="PositionScalingDenominator" type="xs:float" />
+    <xs:attribute name="PositionUnwindNumerator" type="xs:float" />
+    <xs:attribute name="PositionUnwindDenominator" type="xs:float" />
+    <xs:attribute name="TravelRange" type="xs:float" />
+    <xs:attribute name="MotionUnit" type="AxisMotionUnitEnum" />
+    <xs:attribute name="MotionResolution" type="xs:long" />
+    <xs:attribute name="MotionPolarity" type="AxisPolarityEnum" />
+    <xs:attribute name="MotorTestResistance" type="xs:float" />
+    <xs:attribute name="MotorTestInductance" type="xs:float" />
+    <xs:attribute name="MotorTestFluxCurrent" type="xs:float" />
+    <xs:attribute name="MotorTestSlipSpeed" type="xs:float" />
+    <xs:attribute name="TuneFriction" type="xs:float" />
+    <xs:attribute name="TuneLoadOffset" type="xs:float" />
+    <xs:attribute name="TotalInertia" type="xs:float" />
+    <xs:attribute name="TuningSelect" type="AxisTuningSelectEnum" />
+    <xs:attribute name="TuningDirection" type="AxisTuningDirectionEnum" />
+    <xs:attribute name="ApplicationType" type="AxisApplicationTypeEnum" />
+    <xs:attribute name="LoopResponse" type="AxisLoopResponseEnum" />
+    <xs:attribute name="FeedbackCommutationAligned" type="AxisFeedbackCommutationAlignedEnum" />
+    <xs:attribute name="FrictionCompensationSliding" type="xs:float" />
+    <xs:attribute name="FrictionCompensationStatic" type="xs:float" />
+    <xs:attribute name="FrictionCompensationViscous" type="xs:float" />
+    <xs:attribute name="RampVelocityPositive" type="xs:float" />
+    <xs:attribute name="RampVelocityNegative" type="xs:float" />
+    <xs:attribute name="RampAcceleration" type="xs:float" />
+    <xs:attribute name="RampDeceleration" type="xs:float" />
+    <xs:attribute name="PositionLoopBandwidth" type="xs:float" />
+    <xs:attribute name="VelocityLoopBandwidth" type="xs:float" />
+    <xs:attribute name="VelocityIntegratorBandwidth" type="xs:float" />
+    <xs:attribute name="CIPAxisAlarmLogReset" type="xs:float" />
+    <xs:attribute name="FeedbackNoiseUserLimit" type="xs:float" />
+    <xs:attribute name="FeedbackSignalLossUserLimit" type="xs:float" />
+    <xs:attribute name="FeedbackDataLossUserLimit" type="xs:float" />
+    <xs:attribute name="Feedback1BatteryAbsolute" type="xs:float" />
+    <xs:attribute name="CIPAxisAlarmLog" type="xs:unsignedByte" />
+    <xs:attribute name="MotionExceptionAction" type="AxisMotionExceptionActionEnum" />
+    <xs:attribute name="SoftTravelLimitChecking" type="BoolEnum" />
+    <xs:attribute name="MoveRepeatMode" type="AxisMoveRepeatModeEnum" />
+    <xs:attribute name="MoveRepeatDwell" type="xs:float" />
+    <xs:attribute name="Feedback2Unit" type="AxisCIPFeedbackUnitEnum" />
+    <xs:attribute name="Feedback2Polarity" type="AxisPolarityEnum" />
+    <xs:attribute name="Feedback2StartupMethod" type="AxisFeedbackStartupMethodEnum" />
+    <xs:attribute name="Feedback2CycleResolution" type="xs:unsignedLong" />
+    <xs:attribute name="Feedback2CycleInterpolation" type="xs:unsignedLong" />
+    <xs:attribute name="Feedback2Turns" type="xs:unsignedLong" />
+    <xs:attribute name="Feedback2Length" type="xs:float" />
+    <xs:attribute name="Feedback2DataLength" type="xs:unsignedByte" />
+    <xs:attribute name="Feedback2DataCode" type="AxisFeedbackNDataCodeEnum" />
+    <xs:attribute name="Feedback2ResolverTransformerRatio" type="xs:float" />
+    <xs:attribute name="Feedback2ResolverExcitationVoltage" type="xs:float" />
+    <xs:attribute name="Feedback2ResolverExcitationFrequency" type="xs:float" />
+    <xs:attribute name="Feedback2ResolverCableBalance" type="xs:float" />
+    <xs:attribute name="Feedback2VelocityFilterBandwidth" type="xs:float" />
+    <xs:attribute name="Feedback2AccelFilterBandwidth" type="xs:string" />
+    <xs:attribute name="Feedback2LossAction" type="AxisFeedbackLossActionEnum" />
+    <xs:attribute name="Feedback2VelocityFilterTaps" type="xs:unsignedShort" />
+    <xs:attribute name="Feedback2AccelFilterTaps" type="xs:unsignedShort" />
+    <xs:attribute name="Feedback2BatteryAbsolute" type="BoolEnum" />
+    <xs:attribute name="LoadRatio" type="xs:float" />
+    <xs:attribute name="TotalMass" type="xs:float" />
+    <xs:attribute name="TuneInertiaMass" type="xs:float" />
+    <xs:attribute name="SoftTravelLimitPositive" type="xs:float" />
+    <xs:attribute name="SoftTravelLimitNegative" type="xs:float" />
+    <xs:attribute name="GainTuningConfigurationBits" type="xs:string" />
+    <xs:attribute name="AxisFeatures" type="AxisFeaturesEnum" />
+    <xs:attribute name="CommutationOffset" type="xs:float" />
+    <xs:attribute name="PowerLossTime" type="xs:float" />
+    <xs:attribute name="SystemBandwidth" type="xs:float" />
+    <xs:attribute name="VelocityLowPassFilterBandwidth" type="xs:float" />
+    <xs:attribute name="FeedbackMasterSelect" type="AxisFeedbackMasterSelectEnum" />
+    <xs:attribute name="TransmissionRatioInput" type="xs:long" />
+    <xs:attribute name="TransmissionRatioOutput" type="xs:long" />
+    <xs:attribute name="ActuatorLead" type="xs:float" />
+    <xs:attribute name="ActuatorLeadUnit" type="AxisActuatorLeadUnitEnum" />
+    <xs:attribute name="ActuatorDiameter" type="xs:float" />
+    <xs:attribute name="ActuatorDiameterUnit" type="AxisActuatorDiameterUnitEnum" />
+    <xs:attribute name="SystemAccelerationBase" type="xs:float" />
+    <xs:attribute name="DriveModelTimeConstantBase" type="xs:float" />
+    <xs:attribute name="DriveRatedPeakCurrent" type="xs:float" />
+    <xs:attribute name="HookupTestDistance" type="xs:float" />
+    <xs:attribute name="HookupTestTime" type="xs:float" />
+    <xs:attribute name="HookupTestFeedbackChannel" type="AxisHookupTestFeedbackChannelEnum" />
+    <xs:attribute name="LoadCoupling" type="AxisLoadCouplingEnum" />
+    <xs:attribute name="SystemDamping" type="xs:float" />
+    <xs:attribute name="CurrentVectorLimit" type="xs:float" />
+    <xs:attribute name="InductionMotorRatedSlipSpeed" type="xs:float" />
+    <xs:attribute name="CommutationPolarity" type="AxisPolarityEnum" />
+    <xs:attribute name="LoadObserverConfiguration" type="AxisLoadObserverConfigurationEnum" />
+    <xs:attribute name="LoadObserverBandwidth" type="xs:float" />
+    <xs:attribute name="LoadObserverIntegratorBandwidth" type="xs:string" />
+    <xs:attribute name="LoadObserverFeedbackGain" type="xs:float" />
+    <xs:attribute name="AxisID" type="xs:unsignedLong" />
+    <xs:attribute name="Feedback1SerialNumber" type="xs:string" />
+    <xs:attribute name="Feedback2SerialNumber" type="xs:string" />
+    <xs:attribute name="MotorData" type="xs:string" />
+    <xs:attribute name="AdditionalBusCapacitance" type="xs:unsignedShort" />
+    <xs:attribute name="InterpolatedPositionConfiguration" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="AxisConfigurationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Feedback Only" />
+      <xs:enumeration value="Frequency Control" />
+      <xs:enumeration value="Position Loop" />
+      <xs:enumeration value="Velocity Loop" />
+      <xs:enumeration value="Torque Loop" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeedbackConfigurationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No Feedback" />
+      <xs:enumeration value="Master Feedback" />
+      <xs:enumeration value="Motor Feedback" />
+      <xs:enumeration value="Load Feedback" />
+      <xs:enumeration value="Dual Feedback" />
+      <xs:enumeration value="Dual Integrator Feedback" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMotorDataSourceEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Nameplate Datasheet" />
+      <xs:enumeration value="Database" />
+      <xs:enumeration value="Drive NV" />
+      <xs:enumeration value="Motor NV" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeedbackTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Not Specified" />
+      <xs:enumeration value="Digital AqB" />
+      <xs:enumeration value="Digital AqB with UVW" />
+      <xs:enumeration value="Digital Parallel" />
+      <xs:enumeration value="Sine/Cosine" />
+      <xs:enumeration value="Sine/Cosine with UVW" />
+      <xs:enumeration value="Hiperface" />
+      <xs:enumeration value="EnDat 2.1" />
+      <xs:enumeration value="EnDat 2.2" />
+      <xs:enumeration value="Resolver" />
+      <xs:enumeration value="SSI" />
+      <xs:enumeration value="LDT" />
+      <xs:enumeration value="Tamagawa Serial" />
+      <xs:enumeration value="Stahl SSI" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMotorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rotary Permanent Magnet" />
+      <xs:enumeration value="Rotary Induction" />
+      <xs:enumeration value="Not Specified" />
+      <xs:enumeration value="Linear Permanent Magnet" />
+      <xs:enumeration value="Linear Induction" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMotionScalingConfigurationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Control Scaling" />
+      <xs:enumeration value="Drive Scaling" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisStateEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Axis-Ready" />
+      <xs:enumeration value="Direct Drive Control" />
+      <xs:enumeration value="Servo Control" />
+      <xs:enumeration value="Axis Faulted" />
+      <xs:enumeration value="Axis Shutdown" />
+      <xs:enumeration value="Axis Inhibited" />
+      <xs:enumeration value="Axis Ungrouped" />
+      <xs:enumeration value="Axis No Module" />
+      <xs:enumeration value="Axis Configuring" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RotaryAxisEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Linear" />
+      <xs:enumeration value="Rotary" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisHomeModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Passive" />
+      <xs:enumeration value="Active" />
+      <xs:enumeration value="Absolute" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisHomeDirEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Uni-directional Forward" />
+      <xs:enumeration value="Bi-directional Forward" />
+      <xs:enumeration value="Uni-directional Reverse" />
+      <xs:enumeration value="Bi-directional Reverse" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisHomeSeqEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Immediate" />
+      <xs:enumeration value="Switch" />
+      <xs:enumeration value="Marker" />
+      <xs:enumeration value="Switch-Marker" />
+      <xs:enumeration value="Torque Level" />
+      <xs:enumeration value="Torque Level-Marker" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisProgStopModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fast Stop" />
+      <xs:enumeration value="Fast Disable" />
+      <xs:enumeration value="Hard Disable" />
+      <xs:enumeration value="Fast Shutdown" />
+      <xs:enumeration value="Hard Shutdown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unused" />
+      <xs:enumeration value="Feedback Only" />
+      <xs:enumeration value="Servo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ServoLoopConfigEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="Motor Feedback Only" />
+      <xs:enumeration value="Aux Feedback Only" />
+      <xs:enumeration value="Position Servo" />
+      <xs:enumeration value="Aux Position Servo" />
+      <xs:enumeration value="Dual Position Servo" />
+      <xs:enumeration value="Dual Command Servo" />
+      <xs:enumeration value="Aux Dual Command Servo" />
+      <xs:enumeration value="Velocity Servo" />
+      <xs:enumeration value="Torque Servo" />
+      <xs:enumeration value="Dual Command/Feedback Servo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisExtDriveTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Torque" />
+      <xs:enumeration value="Velocity" />
+      <xs:enumeration value="Hydraulic" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisInfoSelectEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="[none]" />
+      <xs:enumeration value="Position Command" />
+      <xs:enumeration value="Position Feedback" />
+      <xs:enumeration value="Aux Position Feedback" />
+      <xs:enumeration value="Position Error" />
+      <xs:enumeration value="Position Int. Error" />
+      <xs:enumeration value="Velocity Command" />
+      <xs:enumeration value="Velocity Feedback" />
+      <xs:enumeration value="Velocity Error" />
+      <xs:enumeration value="Velocity Int. Error" />
+      <xs:enumeration value="Accel. Command" />
+      <xs:enumeration value="Accel. Feedback" />
+      <xs:enumeration value="Servo Output Level" />
+      <xs:enumeration value="Marker Distance" />
+      <xs:enumeration value="Torque Command" />
+      <xs:enumeration value="Torque Feedback" />
+      <xs:enumeration value="Positive Dynamic Torque Limit" />
+      <xs:enumeration value="Negative Dynamic Torque Limit" />
+      <xs:enumeration value="Motor Capacity" />
+      <xs:enumeration value="Drive Capacity" />
+      <xs:enumeration value="Power Capacity" />
+      <xs:enumeration value="Bus Regulator Capacity" />
+      <xs:enumeration value="Motor Electrical Angle" />
+      <xs:enumeration value="Torque Limit Source" />
+      <xs:enumeration value="DC Bus Voltage" />
+      <xs:enumeration value="Absolute Offset" />
+      <xs:enumeration value="Analog Input 1" />
+      <xs:enumeration value="Analog Input 2" />
+      <xs:enumeration value="Guard Status" />
+      <xs:enumeration value="Guard Faults" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LDTTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PWM" />
+      <xs:enumeration value="Start/Stop Rising" />
+      <xs:enumeration value="Start/Stop Falling" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LDTCalibConstUnitsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="m/sec" />
+      <xs:enumeration value="us/in" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LDTScalingUnitsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Position Units/m" />
+      <xs:enumeration value="Position Units/in" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LDTLengthUnitsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="m" />
+      <xs:enumeration value="in" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SSICodeTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Binary" />
+      <xs:enumeration value="Gray" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SSIClockFreqEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="208" />
+      <xs:enumeration value="625" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ServoFeedbackTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AQB - A Quadrature B" />
+      <xs:enumeration value="SSI - Synchronous Serial Interface" />
+      <xs:enumeration value="LDT - Linear Displacement Transducer" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnabledEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Enabled" />
+      <xs:enumeration value="0" />
+      <xs:enumeration value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFaultActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Shutdown" />
+      <xs:enumeration value="Disable Drive" />
+      <xs:enumeration value="Stop Motion" />
+      <xs:enumeration value="Status Only" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisTorqueLimitSrcEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Not Limited" />
+      <xs:enumeration value="Negative Limit" />
+      <xs:enumeration value="Positive Limit" />
+      <xs:enumeration value="Bridge Limit" />
+      <xs:enumeration value="I(t) Limit" />
+      <xs:enumeration value="Motor Limit" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisDriveUnitEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Motor Rev" />
+      <xs:enumeration value="Aux Rev" />
+      <xs:enumeration value="Motor Inch" />
+      <xs:enumeration value="Aux Inch" />
+      <xs:enumeration value="Motor Millimeter" />
+      <xs:enumeration value="Aux Millimeter" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisDrivePolarityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="Positive" />
+      <xs:enumeration value="Negative" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeedbackUnitEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rev" />
+      <xs:enumeration value="Inch" />
+      <xs:enumeration value="Millimeter" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisPWMFrequencySelectEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Low Frequency" />
+      <xs:enumeration value="High Frequency" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisConfigurationProfileEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RA Classic" />
+      <xs:enumeration value="Packaging" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DriveInputPowerPhaseEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Three-Phase" />
+      <xs:enumeration value="Single-Phase" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisControlModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No Control" />
+      <xs:enumeration value="Position Control" />
+      <xs:enumeration value="Velocity Control" />
+      <xs:enumeration value="Acceleration Control" />
+      <xs:enumeration value="Torque Control" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisControlMethodEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No Control" />
+      <xs:enumeration value="Frequency Control" />
+      <xs:enumeration value="PI Vector Control" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFluxUpControlEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No Delay" />
+      <xs:enumeration value="Manual Delay" />
+      <xs:enumeration value="Automatic Delay" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFrequencyControlMethodEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Basic Volts/Hertz" />
+      <xs:enumeration value="Fan/Pump Volts/Hertz" />
+      <xs:enumeration value="Sensorless Vector" />
+      <xs:enumeration value="Sensorless Vector Economy" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisStoppingActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disable Coast" />
+      <xs:enumeration value="Current Decel Disable" />
+      <xs:enumeration value="Ramped Decel Disable" />
+      <xs:enumeration value="Current Decel Hold" />
+      <xs:enumeration value="Ramped Decel Hold" />
+      <xs:enumeration value="DC Injection Brake" />
+      <xs:enumeration value="AC Injection Brake" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMechanicalBrakeControlEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Automatic" />
+      <xs:enumeration value="Brake Released" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisPowerLossActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Continue" />
+      <xs:enumeration value="Coast Through" />
+      <xs:enumeration value="Decel Regen" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisShutdownActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disable" />
+      <xs:enumeration value="Drop DC Bus" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisInverterOverloadActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Current Foldback" />
+      <xs:enumeration value="Reduce PWM Rate" />
+      <xs:enumeration value="PWM - Foldback" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMotorOverloadActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Current Foldback" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisExceptionActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ignore" />
+      <xs:enumeration value="Alarm" />
+      <xs:enumeration value="FaultStatusOnly" />
+      <xs:enumeration value="StopPlanner" />
+      <xs:enumeration value="StopDrive" />
+      <xs:enumeration value="Shutdown" />
+      <xs:enumeration value="Unsupported" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisLocalControlEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Local Control Not Allowed" />
+      <xs:enumeration value="Local Control Conditionally Allowed" />
+      <xs:enumeration value="Local Control Allowed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisSLATConfiguration">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Torque Only" />
+      <xs:enumeration value="SLAT Min Speed/Torque" />
+      <xs:enumeration value="SLAT Max Speed/Torque" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMotorUnitEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rev" />
+      <xs:enumeration value="Meter" />
+      <xs:enumeration value="Inch" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisPolarityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Inverted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisCIPFeedbackUnitEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rev" />
+      <xs:enumeration value="Meter" />
+      <xs:enumeration value="Inch" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeedbackStartupMethodEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Incremental" />
+      <xs:enumeration value="Absolute" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeedbackNDataCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Binary" />
+      <xs:enumeration value="Gray" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeedbackLossActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Set/GSV Exception" />
+      <xs:enumeration value="Switch to Sensorless Feedback" />
+      <xs:enumeration value="Switch to Redundant Feedback" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisCyclicReadEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PositionFineCommand" />
+      <xs:enumeration value="PositionReference" />
+      <xs:enumeration value="PositionFeedback1" />
+      <xs:enumeration value="PositionFeedback2" />
+      <xs:enumeration value="PositionError" />
+      <xs:enumeration value="PositionIntegratorOutput" />
+      <xs:enumeration value="PositionLoopOutput" />
+      <xs:enumeration value="VelocityFineCommand" />
+      <xs:enumeration value="VelocityFeedforwardCommand" />
+      <xs:enumeration value="VelocityReference" />
+      <xs:enumeration value="VelocityFeedback" />
+      <xs:enumeration value="VelocityError" />
+      <xs:enumeration value="VelocityIntegratorOutput" />
+      <xs:enumeration value="VelocityLoopOutput" />
+      <xs:enumeration value="AccelerationFineCommand" />
+      <xs:enumeration value="AccelerationFeedforwardCommand" />
+      <xs:enumeration value="AccelerationReference" />
+      <xs:enumeration value="AccelerationFeedback" />
+      <xs:enumeration value="LoadObserverAccelerationEstimate" />
+      <xs:enumeration value="LoadObserverTorqueEstimate" />
+      <xs:enumeration value="TorqueReference" />
+      <xs:enumeration value="TorqueReferenceFiltered" />
+      <xs:enumeration value="TorqueReferenceLimited" />
+      <xs:enumeration value="CurrentCommand" />
+      <xs:enumeration value="CurrentReference" />
+      <xs:enumeration value="CurrentFeedback" />
+      <xs:enumeration value="CurrentError" />
+      <xs:enumeration value="FluxCurrentReference" />
+      <xs:enumeration value="FluxCurrentFeedback" />
+      <xs:enumeration value="FluxCurrentError" />
+      <xs:enumeration value="OperativeCurrentLimit" />
+      <xs:enumeration value="CurrentLimitSource" />
+      <xs:enumeration value="MotorElectricalAngle" />
+      <xs:enumeration value="SlipCompensation" />
+      <xs:enumeration value="OutputFrequency" />
+      <xs:enumeration value="OutputCurrent" />
+      <xs:enumeration value="OutputVoltage" />
+      <xs:enumeration value="OutputPower" />
+      <xs:enumeration value="DCBusVoltage" />
+      <xs:enumeration value="MotorCapacity" />
+      <xs:enumeration value="InverterCapacity" />
+      <xs:enumeration value="ConverterCapacity" />
+      <xs:enumeration value="BusRegulatorCapacity" />
+      <xs:enumeration value="DigitalInputs" />
+      <xs:enumeration value="AnalogInput1" />
+      <xs:enumeration value="AnalogInput2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisCyclicWriteEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PositionTrim" />
+      <xs:enumeration value="VelocityTrim" />
+      <xs:enumeration value="AccelerationTrim" />
+      <xs:enumeration value="TorqueTrim" />
+      <xs:enumeration value="VelocityFeedforwardGain" />
+      <xs:enumeration value="AccelerationFeedforwardGain" />
+      <xs:enumeration value="PositionLoopBandwidth" />
+      <xs:enumeration value="PositionIntegratorBandwidth" />
+      <xs:enumeration value="VelocityLoopBandwidth" />
+      <xs:enumeration value="VelocityIntegratorBandwidth" />
+      <xs:enumeration value="LoadObserverBandwidth" />
+      <xs:enumeration value="LoadObserverIntegratorBandwidth" />
+      <xs:enumeration value="TorqueLimitPositive" />
+      <xs:enumeration value="TorqueLimitNegative" />
+      <xs:enumeration value="VelocityLowPassFilterBandwidth" />
+      <xs:enumeration value="TorqueLowPassFilterBandwidth" />
+      <xs:enumeration value="SystemInertia" />
+      <xs:enumeration value="CurrentDisturbance" />
+      <xs:enumeration value="DigitalOutputs" />
+      <xs:enumeration value="AnalogOutput1" />
+      <xs:enumeration value="AnalogOutput2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisScalingSourceEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="From Calculator" />
+      <xs:enumeration value="Direct Scaling Factor Entry" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisLoadTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Direct Coupled Rotary" />
+      <xs:enumeration value="Direct Coupled Linear" />
+      <xs:enumeration value="Rotary Transmission" />
+      <xs:enumeration value="Linear Actuator" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisActuatorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Screw" />
+      <xs:enumeration value="Belt and Pulley" />
+      <xs:enumeration value="Chain and Sprocket" />
+      <xs:enumeration value="Rack and Pinion" />
+      <xs:enumeration value="&lt;none&gt;" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisTravelModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unlimited" />
+      <xs:enumeration value="Limited" />
+      <xs:enumeration value="Cyclic" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMotionUnitEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Motor Rev" />
+      <xs:enumeration value="Load Rev" />
+      <xs:enumeration value="Feedback Rev" />
+      <xs:enumeration value="Motor Millimeter" />
+      <xs:enumeration value="Load Millimeter" />
+      <xs:enumeration value="Motor Inch" />
+      <xs:enumeration value="Load Inch" />
+      <xs:enumeration value="Feedback Inch" />
+      <xs:enumeration value="Motor Rev/s" />
+      <xs:enumeration value="Load Rev/s" />
+      <xs:enumeration value="Motor Meter/s" />
+      <xs:enumeration value="Load Meter/s" />
+      <xs:enumeration value="Motor Inch/s" />
+      <xs:enumeration value="Load Inch/s" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisTuningSelectEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Motor Inertia" />
+      <xs:enumeration value="Total Inertia" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisTuningDirectionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Uni-directional Forward" />
+      <xs:enumeration value="Uni-directional Reverse" />
+      <xs:enumeration value="Bi-directional Forward" />
+      <xs:enumeration value="Bi-directional Reverse" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisApplicationTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="Basic" />
+      <xs:enumeration value="Tracking" />
+      <xs:enumeration value="Point-to-Point" />
+      <xs:enumeration value="Constant Speed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisLoopResponseEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="Medium" />
+      <xs:enumeration value="High" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeedbackCommutationAlignedEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Not Aligned" />
+      <xs:enumeration value="Controller Offset" />
+      <xs:enumeration value="Motor Offset" />
+      <xs:enumeration value="Self-Sense" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMotionExceptionActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ignore" />
+      <xs:enumeration value="Alarm" />
+      <xs:enumeration value="FaultStatusOnly" />
+      <xs:enumeration value="StopPlanner" />
+      <xs:enumeration value="StopDrive" />
+      <xs:enumeration value="Shutdown" />
+      <xs:enumeration value="Unsupported" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisMoveRepeatModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="P Control" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeaturesEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fine Interpolation" />
+      <xs:enumeration value="Registration Autorearm" />
+      <xs:enumeration value="Alarm Log" />
+      <xs:enumeration value="Marker" />
+      <xs:enumeration value="Home Switch" />
+      <xs:enumeration value="Hookup Test" />
+      <xs:enumeration value="Commutation Test" />
+      <xs:enumeration value="Motor Test" />
+      <xs:enumeration value="Inertia Test" />
+      <xs:enumeration value="Sensorless Control" />
+      <xs:enumeration value="Drive Scaling" />
+      <xs:enumeration value="Ext Event Block" />
+      <xs:enumeration value="Integer Cmd Pos" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisFeedbackMasterSelectEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Reversed" />
+      <xs:enumeration value="Feedback 1" />
+      <xs:enumeration value="Feedback 2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisActuatorLeadUnitEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Millimeter/Rev" />
+      <xs:enumeration value="Inch/Rev" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisActuatorDiameterUnitEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Millimeter" />
+      <xs:enumeration value="Inch" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisHookupTestFeedbackChannelEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Feedback 1" />
+      <xs:enumeration value="Feedback 2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisLoadCouplingEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rigid" />
+      <xs:enumeration value="Compliant" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AxisLoadObserverConfigurationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Load Observer Only" />
+      <xs:enumeration value="Load Observer with Velocity Estimate" />
+      <xs:enumeration value="Velocity Estimate Only" />
+      <xs:enumeration value="Acceleration Feedback" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CoordinateSystemType">
+    <xs:attribute name="MotionGroupInstance" type="xs:string" />
+    <xs:attribute name="SystemType" type="CoordSystemTypeEnum" />
+    <xs:attribute name="Dimension" type="xs:unsignedLong" />
+    <xs:attribute name="Axes" type="xs:string" />
+    <xs:attribute name="MaximumPendingMoves" type="xs:unsignedLong" />
+    <xs:attribute name="CoordinationMode" type="xs:string" />
+    <xs:attribute name="CoordinationUnits" type="xs:string" />
+    <xs:attribute name="ConversionRatioNumerator" type="xs:string" />
+    <xs:attribute name="ConversionRatioDenominator" type="xs:string" />
+    <xs:attribute name="CoordinateSystemAutoTagUpdate" type="EnabledEnum" />
+    <xs:attribute name="MaximumSpeed" type="xs:float" />
+    <xs:attribute name="MaximumAcceleration" type="xs:float" />
+    <xs:attribute name="MaximumDeceleration" type="xs:float" />
+    <xs:attribute name="ActualPositionTolerance" type="xs:float" />
+    <xs:attribute name="CommandPositionTolerance" type="xs:float" />
+    <xs:attribute name="TransformDimension" type="xs:unsignedLong" />
+    <xs:attribute name="JointRatioNumerator" type="xs:string" />
+    <xs:attribute name="JointRatioDenominator" type="xs:string" />
+    <xs:attribute name="LinkLength1" type="xs:float" />
+    <xs:attribute name="LinkLength2" type="xs:float" />
+    <xs:attribute name="ZeroAngleOffset1" type="xs:float" />
+    <xs:attribute name="ZeroAngleOffset2" type="xs:float" />
+    <xs:attribute name="ZeroAngleOffset3" type="xs:float" />
+    <xs:attribute name="BaseOffset1" type="xs:float" />
+    <xs:attribute name="BaseOffset2" type="xs:float" />
+    <xs:attribute name="BaseOffset3" type="xs:float" />
+    <xs:attribute name="EndEffectorOffset1" type="xs:float" />
+    <xs:attribute name="EndEffectorOffset2" type="xs:float" />
+    <xs:attribute name="EndEffectorOffset3" type="xs:float" />
+    <xs:attribute name="DynamicsConfigurationBits" type="xs:unsignedLong" />
+    <xs:attribute name="MaximumAccelerationJerk" type="xs:float" />
+    <xs:attribute name="MaximumDecelerationJerk" type="xs:float" />
+    <xs:attribute name="MasterInputConfigurationBits" type="xs:unsignedLong" />
+    <xs:attribute name="MasterPositionFilterBandwidth" type="xs:float" />
+  </xs:complexType>
+  <xs:simpleType name="CoordSystemTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cartesian" />
+      <xs:enumeration value="Articulated Cylindrical" />
+      <xs:enumeration value="Articulated Dependent" />
+      <xs:enumeration value="Articulated Independent" />
+      <xs:enumeration value="Polar/Cylindrical" />
+      <xs:enumeration value="SCARA Dependent" />
+      <xs:enumeration value="SCARA Independent" />
+      <xs:enumeration value="Delta" />
+      <xs:enumeration value="SCARA" />
+      <xs:enumeration value="SCARA Delta" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MessageType">
+    <xs:attribute name="MessageType" type="MessageTypeEnum" use="required" />
+    <xs:attribute name="RemoteElement" type="xs:string" />
+    <xs:attribute name="RequestedLength" type="xs:unsignedShort" />
+    <xs:attribute name="ConnectedFlag" type="ConnectedEnum" />
+    <xs:attribute name="ConnectionPath" type="xs:string" />
+    <xs:attribute name="CommTypeCode" type="MsgDF1FlagEnum" />
+    <xs:attribute name="ServiceCode" type="xs:string" />
+    <xs:attribute name="ObjectType" type="xs:string" />
+    <xs:attribute name="TargetObject" type="xs:unsignedLong" />
+    <xs:attribute name="AttributeNumber" type="xs:string" />
+    <xs:attribute name="Channel" type="xs:unsignedByte" />
+    <xs:attribute name="DHPlusSourceLink" type="xs:unsignedShort" />
+    <xs:attribute name="DHPlusDestinationLink" type="xs:string" />
+    <xs:attribute name="DHPlusDestinationNode" type="xs:string" />
+    <xs:attribute name="Rack" type="xs:unsignedByte" />
+    <xs:attribute name="Group" type="xs:unsignedByte" />
+    <xs:attribute name="Slot" type="xs:unsignedByte" />
+    <xs:attribute name="LocalIndex" type="xs:unsignedLong" />
+    <xs:attribute name="RemoteIndex" type="xs:unsignedLong" />
+    <xs:attribute name="LocalElement" type="xs:string" />
+    <xs:attribute name="DestinationTag" type="xs:string" />
+    <xs:attribute name="CacheConnections" type="xs:string" />
+    <xs:attribute name="LargePacketUsage" type="BoolEnum" />
+  </xs:complexType>
+  <xs:simpleType name="MessageTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unconfigured" />
+      <xs:enumeration value="CIP Data Table Read" />
+      <xs:enumeration value="CIP Data Table Write" />
+      <xs:enumeration value="CIP Generic" />
+      <xs:enumeration value="PLC2 Unprotected Read" />
+      <xs:enumeration value="PLC2 Unprotected Write" />
+      <xs:enumeration value="PLC3 Word Range Read" />
+      <xs:enumeration value="PLC3 Word Range Write" />
+      <xs:enumeration value="PLC3 Typed Read" />
+      <xs:enumeration value="PLC3 Typed Write" />
+      <xs:enumeration value="PLC5 Word Range Read" />
+      <xs:enumeration value="PLC5 Word Range Write" />
+      <xs:enumeration value="PLC5 Typed Read" />
+      <xs:enumeration value="PLC5 Typed Write" />
+      <xs:enumeration value="SLC Typed Read" />
+      <xs:enumeration value="SLC Typed Write" />
+      <xs:enumeration value="Block Transfer Read" />
+      <xs:enumeration value="Block Transfer Write" />
+      <xs:enumeration value="Module Reconfigure" />
+      <xs:enumeration value="SERCOS IDN Read" />
+      <xs:enumeration value="SERCOS IDN Write" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConnectedEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1" />
+      <xs:enumeration value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MsgDF1FlagEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0" />
+      <xs:enumeration value="1" />
+      <xs:enumeration value="2" />
+      <xs:enumeration value="3" />
+      <xs:enumeration value="4" />
+      <xs:enumeration value="5" />
+      <xs:enumeration value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MotionGroupType">
+    <xs:attribute name="GroupType" type="MotionGroupTypeEnum" />
+    <xs:attribute name="CoarseUpdatePeriod" type="xs:unsignedLong" />
+    <xs:attribute name="PhaseShift" type="xs:unsignedLong" />
+    <xs:attribute name="GeneralFaultType" type="MGGeneralFaultEnum" />
+    <xs:attribute name="AutoTagUpdate" type="EnabledEnum" />
+  </xs:complexType>
+  <xs:simpleType name="MotionGroupTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Warning Enabled" />
+      <xs:enumeration value="Warning Disabled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MGGeneralFaultEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Non Major Fault" />
+      <xs:enumeration value="Major Fault" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ConfigScriptType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Data" type="Data" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="Size" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="ConfigTagType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="CommentCollection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Data" type="Data" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Suffix" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="ConfigSize" type="xs:unsignedLong" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="Dimensions" type="xs:string" />
+    <xs:attribute name="Radix" type="RadixEnum" />
+    <xs:attribute name="ExternalAccess" type="ExternalAccessEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="CommentCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Comment" type="CommentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CommentType" mixed="true">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="LocalizedComment" type="LocalizedCommentType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:normalizedString" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="Unused" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="LocalizedCommentType" mixed="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Value" type="xs:normalizedString" />
+    </xs:sequence>
+    <xs:attribute name="Lang" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ConnectionCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Connection" type="ConnectionType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RackConnection" type="RackConnectionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConnectionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="InputTag" type="InputTagType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="InputData" type="InputDataType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OutputTag" type="OutputTagType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OutputData" type="OutputDataType" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="RPI" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Type" type="ConnTypeEnum" />
+    <xs:attribute name="Priority" type="ConnPriorityEnum" />
+    <xs:attribute name="InputConnectionType" type="ConnTransmissionTypeEnum" />
+    <xs:attribute name="OutputRedundantOwner" type="BoolEnum" />
+    <xs:attribute name="InputProductionTrigger" type="ConnProductionTriggerEnum" />
+    <xs:attribute name="ConnectionPath" type="xs:string" />
+    <xs:attribute name="InputTagSuffix" type="xs:string" />
+    <xs:attribute name="OutputTagSuffix" type="xs:string" />
+    <xs:attribute name="InputTagUId" type="xs:unsignedLong" />
+    <xs:attribute name="OutputTagUId" type="xs:unsignedLong" />
+    <xs:attribute name="InputCxnPoint" type="xs:unsignedShort" />
+    <xs:attribute name="OutputCxnPoint" type="xs:unsignedShort" />
+    <xs:attribute name="InputSize" type="xs:unsignedShort" />
+    <xs:attribute name="OutputSize" type="xs:unsignedShort" />
+    <xs:attribute name="Unicast" type="BoolEnum" />
+    <xs:attribute name="EventID" type="xs:unsignedLong" />
+    <xs:attribute name="ProgrammaticallySendEventTrigger" type="BoolEnum" />
+    <xs:attribute name="TimeoutMultiplier" type="xs:unsignedByte" />
+    <xs:attribute name="NetworkDelayMultiplier" type="xs:unsignedShort" />
+    <xs:attribute name="ReactionTimeLimit" type="xs:float" />
+    <xs:attribute name="MaxObservedNetworkDelay" type="xs:unsignedLong" />
+    <xs:attribute name="ControlNetScheduled" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="InputTagType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="CommentCollection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Data" type="Data" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ForceData" type="ForceData" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Suffix" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="ExternalAccess" type="ExternalAccessEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="ForceData" mixed="true">
+    <xs:attribute name="Format" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="InputDataType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Data" type="Data" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="Dimension" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="OutputTagType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="CommentCollection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Data" type="Data" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ForceData" type="ForceData" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Suffix" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="ExternalAccess" type="ExternalAccessEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="OutputDataType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Data" type="Data" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="Dimension" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:simpleType name="ConnTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Input" />
+      <xs:enumeration value="Output" />
+      <xs:enumeration value="DiagnosticInput" />
+      <xs:enumeration value="C2C_RC" />
+      <xs:enumeration value="C2C_SC" />
+      <xs:enumeration value="MotionSync" />
+      <xs:enumeration value="MotionAsync" />
+      <xs:enumeration value="MotionEvent" />
+      <xs:enumeration value="SafetyInput" />
+      <xs:enumeration value="SafetyOutput" />
+      <xs:enumeration value="Safety_C2C_RC" />
+      <xs:enumeration value="Safety_C2C_SC" />
+      <xs:enumeration value="Safety_C2C_SCHB" />
+      <xs:enumeration value="StandardDataDriven" />
+      <xs:enumeration value="SafetyInputDataDriven" />
+      <xs:enumeration value="SafetyOutputDataDriven" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConnPriorityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="High" />
+      <xs:enumeration value="Scheduled" />
+      <xs:enumeration value="Urgent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConnTransmissionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Null" />
+      <xs:enumeration value="Multicast" />
+      <xs:enumeration value="Unicast" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConnProductionTriggerEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cyclic" />
+      <xs:enumeration value="COS" />
+      <xs:enumeration value="Application" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RackConnectionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="InAliasTag" type="InAliasTagType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OutAliasTag" type="OutAliasTagType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InAliasTagType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="ArrayOfCommentType" />
+    </xs:sequence>
+    <xs:attribute name="Suffix" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCommentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Comment" type="CommentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OutAliasTagType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="ArrayOfCommentType" />
+    </xs:sequence>
+    <xs:attribute name="Suffix" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="SafetyScriptType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Data" type="Data" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="Size" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:simpleType name="IOMapStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NullStatus" />
+      <xs:enumeration value="StandBy" />
+      <xs:enumeration value="IOFaulted" />
+      <xs:enumeration value="Validating" />
+      <xs:enumeration value="Connecting" />
+      <xs:enumeration value="Running" />
+      <xs:enumeration value="ShuttingDown" />
+      <xs:enumeration value="Inhibited" />
+      <xs:enumeration value="Waiting" />
+      <xs:enumeration value="Reconfiguring" />
+      <xs:enumeration value="FirmwareUpdating" />
+      <xs:enumeration value="Configuring" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AOIDefinitionCollection">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="AddOnInstructionDefinition" type="AOIDefinitionType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="EncodedData" type="EncodedAOIDefinitionType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="AOIDefinitionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RevisionNote" type="RevisionNoteType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AdditionalHelpText" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="ArrayOfAOIParameterType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LocalTags" type="ArrayOfAOILocalTagType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Tags" type="TagCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Routines" type="RoutineCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Dependencies" type="ArrayOfAOIDependencyType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SignatureHistory" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="Class" type="ComponentClassEnum" />
+    <xs:attribute name="Revision" type="xs:string" />
+    <xs:attribute name="RevisionExtension" type="xs:string" />
+    <xs:attribute name="Vendor" type="xs:string" />
+    <xs:attribute name="ExecutePrescan" type="BoolEnum" />
+    <xs:attribute name="ExecutePostscan" type="BoolEnum" />
+    <xs:attribute name="ExecuteEnableInFalse" type="BoolEnum" />
+    <xs:attribute name="CreatedDate" type="xs:string" />
+    <xs:attribute name="CreatedBy" type="xs:string" />
+    <xs:attribute name="EditedDate" type="xs:string" />
+    <xs:attribute name="EditedBy" type="xs:string" />
+    <xs:attribute name="SoftwareRevision" type="xs:string" />
+    <xs:attribute name="OriginalLibrary" type="xs:string" />
+    <xs:attribute name="OriginalName" type="xs:string" />
+    <xs:attribute name="OriginalRevision" type="xs:string" />
+    <xs:attribute name="OriginalVendor" type="xs:string" />
+    <xs:attribute name="AddedToProject" type="xs:string" />
+    <xs:attribute name="SourceKey" type="xs:string" />
+    <xs:attribute name="SourceProtectionType" type="RoutineProtectionTypeEnum" />
+    <xs:attribute default="false" name="EncryptReady" type="BoolEnum" />
+    <xs:attribute default="false" name="IsEncrypted" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="RevisionNoteType" mixed="true">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="LocalizedRevisionNote" type="LocalizedRevisionNoteType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:normalizedString" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocalizedRevisionNoteType" mixed="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Value" type="xs:normalizedString" />
+    </xs:sequence>
+    <xs:attribute name="Lang" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAOIParameterType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Parameter" type="AOIParameterType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AOIParameterType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="CommentCollection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="DefaultData" type="Data" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="TagType" type="TagTypeEnum" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="DataTypeUId" type="xs:unsignedLong" />
+    <xs:attribute name="Dimensions" type="xs:string" />
+    <xs:attribute name="Usage" type="TagUsageEnum" use="required" />
+    <xs:attribute name="Radix" type="RadixEnum" />
+    <xs:attribute name="Required" type="BoolEnum" />
+    <xs:attribute name="Visible" type="BoolEnum" />
+    <xs:attribute name="Constant" type="BoolEnum" />
+    <xs:attribute name="ExternalAccess" type="ExternalAccessEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+    <xs:attribute name="AliasFor" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="TagTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Base" />
+      <xs:enumeration value="Alias" />
+      <xs:enumeration value="Produced" />
+      <xs:enumeration value="Consumed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TagUsageEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Local" />
+      <xs:enumeration value="Input" />
+      <xs:enumeration value="Output" />
+      <xs:enumeration value="InOut" />
+      <xs:enumeration value="Static" />
+      <xs:enumeration value="NULL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfAOILocalTagType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocalTag" type="AOILocalTagType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AOILocalTagType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="CommentCollection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="DefaultData" type="Data" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="DataTypeUId" type="xs:unsignedLong" />
+    <xs:attribute name="Dimensions" type="xs:string" />
+    <xs:attribute name="Radix" type="RadixEnum" />
+    <xs:attribute name="ExternalAccess" type="ExternalAccessEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="TagCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tag" type="TagType" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="TagType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="BaseDescription" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="CommentCollection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsumeInfo" type="ConsumeTagInfoType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Data" type="Data" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ForceData" type="ForceData" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ProduceInfo" type="ProduceTagInfoType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentlUId" type="xs:unsignedLong" />
+    <xs:attribute name="TagType" type="TagTypeEnum" />
+    <xs:attribute name="DataType" type="xs:string" />
+    <xs:attribute name="DataTypeUId" type="xs:unsignedLong" />
+    <xs:attribute name="Dimensions" type="xs:string" />
+    <xs:attribute name="Class" type="ComponentClassEnum" />
+    <xs:attribute name="Radix" type="RadixEnum" />
+    <xs:attribute name="AliasFor" type="xs:string" />
+    <xs:attribute name="AliasBase" type="xs:string" />
+    <xs:attribute name="Usage" type="TagUsageEnum" />
+    <xs:attribute name="IO" type="BoolEnum" />
+    <xs:attribute name="Scope" type="ObjectScopeEnum" />
+    <xs:attribute name="CanForce" type="BoolEnum" />
+    <xs:attribute name="FullName" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+    <xs:attribute name="Constant" type="BoolEnum" />
+    <xs:attribute name="ExternalAccess" type="ExternalAccessEnum" />
+  </xs:complexType>
+  <xs:complexType name="ConsumeTagInfoType">
+    <xs:attribute name="Producer" type="xs:string" />
+    <xs:attribute name="RemoteTag" type="xs:string" />
+    <xs:attribute name="RemoteInstance" type="xs:unsignedLong" />
+    <xs:attribute name="RPI" type="xs:unsignedLong" />
+    <xs:attribute name="IncludeConnectionStatus" type="BoolEnum" />
+    <xs:attribute name="TimeoutMultiplier" type="xs:unsignedByte" />
+    <xs:attribute name="NetworkDelayMultiplier" type="xs:unsignedShort" />
+    <xs:attribute name="ReactionTimeLimit" type="xs:unsignedLong" />
+    <xs:attribute name="MaxObservedNetworkDelay" type="xs:unsignedLong" />
+    <xs:attribute name="Unicast" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="ProduceTagInfoType">
+    <xs:attribute name="ProduceCount" type="xs:unsignedLong" />
+    <xs:attribute name="MinimumRPI" type="xs:float" />
+    <xs:attribute name="MaximumRPI" type="xs:float" />
+    <xs:attribute name="DefaultRPI" type="xs:float" />
+    <xs:attribute name="PLCMappingFile" type="xs:unsignedLong" />
+    <xs:attribute name="PLC2Mapping" type="xs:unsignedLong" />
+    <xs:attribute name="ProgrammaticallySendEventTrigger" type="BoolEnum" />
+    <xs:attribute name="IncludeConnectionStatus" type="BoolEnum" />
+    <xs:attribute name="UnicastPermitted" type="BoolEnum" />
+  </xs:complexType>
+  <xs:simpleType name="ComponentClassEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Standard" />
+      <xs:enumeration value="Safety" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ObjectScopeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NullScope" />
+      <xs:enumeration value="ControllerScope" />
+      <xs:enumeration value="ProgramScope" />
+      <xs:enumeration value="RoutineScope" />
+      <xs:enumeration value="LastScope" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RoutineCollection">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="EncodedData" type="EncodedRoutineType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Routine" type="RoutineType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="EncodedRoutineType" mixed="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+    </xs:sequence>
+    <xs:attribute name="EncodedType" type="xs:string" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Type" type="RoutineTypeEnum" />
+  </xs:complexType>
+  <xs:simpleType name="RoutineTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Typeless" />
+      <xs:enumeration value="RLL" />
+      <xs:enumeration value="FBD" />
+      <xs:enumeration value="SFC" />
+      <xs:enumeration value="ST" />
+      <xs:enumeration value="External" />
+      <xs:enumeration value="Encrypted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RoutineType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RLLContent" type="RLLContentType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FBDContent" type="FBDContentType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SFCContent" type="SFCContentType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="STContent" type="STContentType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExternalContent" type="ExternalContentType" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Type" type="RoutineTypeEnum" use="required" />
+    <xs:attribute name="SourceKey" type="xs:string" />
+    <xs:attribute name="SourceProtectionType" type="RoutineProtectionTypeEnum" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+    <xs:attribute default="false" name="EncryptReady" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="RLLContentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Labels" type="LabelCollection" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rung" type="RungType" />
+    </xs:sequence>
+    <xs:attribute name="Use" type="UseEnum" />
+    <xs:attribute name="Start" type="xs:unsignedLong" />
+    <xs:attribute name="Count" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="LabelCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Label" type="LabelType" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="LabelType">
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="RungType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="RungCommentType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Text" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="Number" type="xs:unsignedLong" />
+    <xs:attribute name="Type" type="RungTypeEnum" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="RungId" type="xs:unsignedLong" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="RungCommentType" mixed="true">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="LocalizedComment" type="LocalizedCommentType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:normalizedString" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="RungTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="N" />
+      <xs:enumeration value="I" />
+      <xs:enumeration value="D" />
+      <xs:enumeration value="IR" />
+      <xs:enumeration value="rR" />
+      <xs:enumeration value="R" />
+      <xs:enumeration value="rI" />
+      <xs:enumeration value="rN" />
+      <xs:enumeration value="e" />
+      <xs:enumeration value="er" />
+      <xs:enumeration value="dN" />
+      <xs:enumeration value="dD" />
+      <xs:enumeration value="dI" />
+      <xs:enumeration value="dIR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="FBDContentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sheet" type="SheetType" />
+    </xs:sequence>
+    <xs:attribute name="Use" type="UseEnum" />
+    <xs:attribute name="Start" type="xs:unsignedLong" />
+    <xs:attribute name="Count" type="xs:unsignedLong" />
+    <xs:attribute name="SheetSize" type="xs:string" />
+    <xs:attribute name="SheetOrientation" type="SheetOrientationEnum" use="required" />
+    <xs:attribute name="OnlineEditType" type="LangContOnlineEditEnum" />
+  </xs:complexType>
+  <xs:complexType name="SheetType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IRef" type="FBD_IRefType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ORef" type="FBD_ORefType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICon" type="FBD_IConType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OCon" type="FBD_OConType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Block" type="FBD_BlockType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddOnInstruction" type="FBD_AOIType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GSV" type="FBD_GSVType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SSV" type="FBD_SSVType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JSR" type="FBD_JSRType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SBR" type="FBD_SBRType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RET" type="FBD_RETType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Wire" type="FBD_WireType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FeedbackWire" type="FBD_FeedbackWireType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TextBox" type="TextBoxType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" type="AttachmentType" />
+    </xs:sequence>
+    <xs:attribute name="Number" type="xs:unsignedLong" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="FBD_IRefType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="HideDesc" type="BoolEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_ORefType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="HideDesc" type="BoolEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_IConType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_OConType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_BlockType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Array" type="FBD_SpecialArrayType" />
+    </xs:sequence>
+    <xs:attribute name="Type" type="xs:string" />
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="VisiblePins" type="xs:string" />
+    <xs:attribute name="HideDesc" type="BoolEnum" />
+    <xs:attribute name="AutotuneTag" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_SpecialArrayType">
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Operand" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="FBD_AOIType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InOutParameter" type="FBD_AOIArgumentType" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="VisiblePins" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_AOIArgumentType">
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Argument" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="FBD_GSVType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Object" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_SSVType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Object" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_JSRType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Routine" type="xs:string" />
+    <xs:attribute name="In" type="xs:string" />
+    <xs:attribute name="Ret" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_SBRType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Routine" type="xs:string" />
+    <xs:attribute name="Ret" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_RETType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Routine" type="xs:string" />
+    <xs:attribute name="In" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_WireType">
+    <xs:attribute name="FromID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="FromParam" type="xs:string" />
+    <xs:attribute name="ToID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="ToParam" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="FBD_FeedbackWireType">
+    <xs:attribute name="FromID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="FromParam" type="xs:string" />
+    <xs:attribute name="ToID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="ToParam" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="TextBoxType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Text" type="TextBoxAdaptorType" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Width" type="xs:unsignedLong" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="TextBoxAdaptorType" mixed="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Value" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocalizedText" type="LocalizedTextType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocalizedTextType" mixed="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Value" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="Lang" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="AttachmentType">
+    <xs:attribute name="FromID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="ToID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:simpleType name="SheetOrientationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Landscape" />
+      <xs:enumeration value="Portrait" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LangContOnlineEditEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoType" />
+      <xs:enumeration value="Original" />
+      <xs:enumeration value="PendingEdits" />
+      <xs:enumeration value="TestEdits" />
+      <xs:enumeration value="OrginalPending" />
+      <xs:enumeration value="LastType" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SFCContentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Step" type="SFCStepType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transition" type="SFCTransType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Branch" type="SFCBranchType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SbrRet" type="SFCSubRetType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Stop" type="SFCStopType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DirectedLink" type="SFCDLinkType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TextBox" type="TextBoxType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" type="AttachmentType" />
+    </xs:sequence>
+    <xs:attribute name="Use" type="UseEnum" />
+    <xs:attribute name="SheetSize" type="xs:string" />
+    <xs:attribute name="SheetOrientation" type="SheetOrientationEnum" use="required" />
+    <xs:attribute name="StepName" type="xs:string" />
+    <xs:attribute name="TransitionName" type="xs:string" />
+    <xs:attribute name="ActionName" type="xs:string" />
+    <xs:attribute name="StopName" type="xs:string" />
+    <xs:attribute name="OnlineEditType" type="LangContOnlineEditEnum" />
+  </xs:complexType>
+  <xs:complexType name="SFCStepType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="1" name="Action" type="SFCActionType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LimitHigh" type="EmbeddedLanguageBlockType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LimitLow" type="EmbeddedLanguageBlockType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Preset" type="EmbeddedLanguageBlockType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="HideDesc" type="BoolEnum" />
+    <xs:attribute name="DescX" type="xs:unsignedLong" />
+    <xs:attribute name="DescY" type="xs:unsignedLong" />
+    <xs:attribute name="DescWidth" type="xs:unsignedLong" />
+    <xs:attribute name="InitialStep" type="BoolEnum" />
+    <xs:attribute name="PresetUsesExpr" type="BoolEnum" />
+    <xs:attribute name="LimitHighUsesExpr" type="BoolEnum" />
+    <xs:attribute name="LimitLowUsesExpr" type="BoolEnum" />
+    <xs:attribute name="ShowActions" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="SFCActionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Preset" type="EmbeddedLanguageBlockType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Body" type="EmbeddedLanguageBlockType" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="Qualifier" type="SFCActionQualifierEnum" />
+    <xs:attribute name="IsBoolean" type="BoolEnum" />
+    <xs:attribute name="PresetUsesExpr" type="BoolEnum" />
+    <xs:attribute name="IndicatorTag" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="EmbeddedLanguageBlockType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="STContent" type="STContentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="STContentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Line" type="STLineType" />
+    </xs:sequence>
+    <xs:attribute name="Use" type="UseEnum" />
+    <xs:attribute name="Start" type="xs:unsignedLong" />
+    <xs:attribute name="Count" type="xs:unsignedLong" />
+    <xs:attribute name="OnlineEditType" type="LangContOnlineEditEnum" />
+  </xs:complexType>
+  <xs:complexType name="STLineType" mixed="true">
+    <xs:attribute name="Number" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:simpleType name="SFCActionQualifierEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="QualifierTypeNull" />
+      <xs:enumeration value="NonStored" />
+      <xs:enumeration value="N" />
+      <xs:enumeration value="Reset" />
+      <xs:enumeration value="R" />
+      <xs:enumeration value="Stored" />
+      <xs:enumeration value="S" />
+      <xs:enumeration value="TimeLimited" />
+      <xs:enumeration value="L" />
+      <xs:enumeration value="TimeDelayed" />
+      <xs:enumeration value="D" />
+      <xs:enumeration value="Pulse" />
+      <xs:enumeration value="P" />
+      <xs:enumeration value="PulseRisingEdge" />
+      <xs:enumeration value="P1" />
+      <xs:enumeration value="PulseFallingEdge" />
+      <xs:enumeration value="P0" />
+      <xs:enumeration value="StoredTimeLimited" />
+      <xs:enumeration value="SL" />
+      <xs:enumeration value="StoredTimeDelayed" />
+      <xs:enumeration value="SD" />
+      <xs:enumeration value="TimeDelayedStored" />
+      <xs:enumeration value="DS" />
+      <xs:enumeration value="QualifierTypeLast" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SFCTransType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Condition" type="EmbeddedLanguageBlockType" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="HideDesc" type="BoolEnum" />
+    <xs:attribute name="DescX" type="xs:unsignedLong" />
+    <xs:attribute name="DescY" type="xs:unsignedLong" />
+    <xs:attribute name="DescWidth" type="xs:unsignedLong" />
+    <xs:attribute name="Force" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="SFCBranchType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Leg" type="SFCLegType" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="BranchType" type="SFCBranchTypeEnum" use="required" />
+    <xs:attribute name="BranchFlow" type="SFCBranchFlowEnum" use="required" />
+    <xs:attribute name="Priority" type="SFCBranchPriorityEnum" />
+  </xs:complexType>
+  <xs:complexType name="SFCLegType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Force" type="SFCLegForceEnum" />
+  </xs:complexType>
+  <xs:simpleType name="SFCLegForceEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoForce" />
+      <xs:enumeration value="FALSE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SFCBranchTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Selection" />
+      <xs:enumeration value="Simultaneous" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SFCBranchFlowEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Converge" />
+      <xs:enumeration value="Diverge" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SFCBranchPriorityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UserDefined" />
+      <xs:enumeration value="Default" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SFCSubRetType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="In" type="xs:string" />
+    <xs:attribute name="Ret" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="SFCStopType">
+    <xs:attribute name="ID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="X" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Operand" type="xs:string" />
+    <xs:attribute name="HideDesc" type="BoolEnum" />
+    <xs:attribute name="DescX" type="xs:unsignedLong" />
+    <xs:attribute name="DescY" type="xs:unsignedLong" />
+    <xs:attribute name="DescWidth" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="SFCDLinkType">
+    <xs:attribute name="FromID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="ToID" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="Show" type="BoolEnum" use="required" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="ExternalContentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DLL" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EntryPoint" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ExternalRoutineXml" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="RoutineProtectionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Full Protection" />
+      <xs:enumeration value="Viewable" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfAOIDependencyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dependency" type="AOIDependencyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AOIDependencyType">
+    <xs:attribute name="Type" type="xs:string" />
+    <xs:attribute name="Name" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="EncodedAOIDefinitionType" mixed="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RevisionNote" type="RevisionNoteType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AdditionalHelpText" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="StringType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="ArrayOfAOIParameterType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SignatureHistory" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="EncodedType" type="xs:string" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Revision" type="xs:string" />
+    <xs:attribute name="RevisionExtension" type="xs:string" />
+    <xs:attribute name="Vendor" type="xs:string" />
+    <xs:attribute name="EditedDate" type="xs:string" />
+    <xs:attribute name="OriginalLibrary" type="xs:string" />
+    <xs:attribute name="OriginalName" type="xs:string" />
+    <xs:attribute name="OriginalRevision" type="xs:string" />
+    <xs:attribute name="OriginalVendor" type="xs:string" />
+    <xs:attribute name="SoftwareRevision" type="xs:string" />
+    <xs:attribute name="EncryptionConfig" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="ProgramCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Program" type="ProgramType" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="ProgramType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Tags" type="TagCollection" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="ArrayOfAOIParameterType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LocalTags" type="ArrayOfAOILocalTagType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Routines" type="RoutineCollection" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="Type" type="ProgTypeEnum" />
+    <xs:attribute name="TestEdits" type="BoolEnum" />
+    <xs:attribute name="MainRoutineName" type="xs:string" />
+    <xs:attribute name="PreStateRoutineName" type="xs:string" />
+    <xs:attribute name="FaultRoutineName" type="xs:string" />
+    <xs:attribute name="ExecutingTaskName" type="xs:string" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+    <xs:attribute name="EditsExist" type="BoolEnum" />
+    <xs:attribute name="Disabled" type="BoolEnum" />
+    <xs:attribute name="InitialStepIndex" type="xs:long" />
+    <xs:attribute name="InitialState" type="ProgInitialStateEnum" />
+    <xs:attribute name="CompleteStateIfNotImpl" type="ProgNotImplActionEnum" />
+    <xs:attribute name="LossOfCommCmd" type="ProgLossOfCCEnum" />
+    <xs:attribute name="ExternalRequestAction" type="ProgExternalRequestEnum" />
+    <xs:attribute name="EquipmentId" type="xs:long" />
+    <xs:attribute name="RecipePhaseNames" type="xs:string" />
+    <xs:attribute name="LastScanTime" type="xs:unsignedLong" />
+    <xs:attribute name="MaxScanTime" type="xs:unsignedLong" />
+    <xs:attribute name="TagsUId" type="xs:unsignedLong" />
+    <xs:attribute name="RoutinesUId" type="xs:unsignedLong" />
+    <xs:attribute name="Class" type="ComponentClassEnum" />
+    <xs:attribute name="SynchronizeRedundancyDataAfterExecution" type="BoolEnum" />
+    <xs:attribute name="UseAsFolder" type="BoolEnum" />
+  </xs:complexType>
+  <xs:simpleType name="ProgTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Typeless" />
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="EquipmentPhase" />
+      <xs:enumeration value="LastProgramType" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProgInitialStateEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NullState" />
+      <xs:enumeration value="Idle" />
+      <xs:enumeration value="Aborted" />
+      <xs:enumeration value="Stopped" />
+      <xs:enumeration value="Complete" />
+      <xs:enumeration value="LastState" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProgNotImplActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoAction" />
+      <xs:enumeration value="StateComplete" />
+      <xs:enumeration value="NotImplPhaseFailure" />
+      <xs:enumeration value="LastNotImplAction" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProgLossOfCCEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Abort" />
+      <xs:enumeration value="Hold" />
+      <xs:enumeration value="Stop" />
+      <xs:enumeration value="LastCommLossAction" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProgExternalRequestEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Clear" />
+      <xs:enumeration value="LastExternalRequestAction" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TaskCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Task" type="TaskType" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="TaskType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EventInfo" type="TaskEventInfoType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ScheduledPrograms" type="ArrayOfScheduledProgramType" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+    <xs:attribute name="Type" type="TaskTypeEnum" use="required" />
+    <xs:attribute name="Watchdog" type="xs:unsignedLong" />
+    <xs:attribute name="Priority" type="xs:unsignedShort" />
+    <xs:attribute name="Rate" type="xs:unsignedLong" />
+    <xs:attribute name="DisableUpdateOutputs" type="BoolEnum" />
+    <xs:attribute name="InhibitTask" type="BoolEnum" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+    <xs:attribute name="LastScanTime" type="xs:unsignedLong" />
+    <xs:attribute name="MaxScanTime" type="xs:unsignedLong" />
+    <xs:attribute name="MaxInterval" type="xs:string" />
+    <xs:attribute name="MinInterval" type="xs:string" />
+    <xs:attribute name="StartTime" type="xs:string" />
+    <xs:attribute name="Class" type="ComponentClassEnum" />
+  </xs:complexType>
+  <xs:complexType name="TaskEventInfoType">
+    <xs:attribute name="EventTrigger" type="TaskTriggerEnum" />
+    <xs:attribute name="EventTag" type="xs:string" />
+    <xs:attribute name="EnableTimeout" type="BoolEnum" />
+  </xs:complexType>
+  <xs:simpleType name="TaskTriggerEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Axis Home" />
+      <xs:enumeration value="Axis Watch" />
+      <xs:enumeration value="Axis Registration 1" />
+      <xs:enumeration value="Axis Registration 2" />
+      <xs:enumeration value="Motion Group Execution" />
+      <xs:enumeration value="EVENT Instruction Only" />
+      <xs:enumeration value="Module Input Data State Change" />
+      <xs:enumeration value="Consumed Tag" />
+      <xs:enumeration value="Windows Event" />
+      <xs:enumeration value="" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfScheduledProgramType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ScheduledProgram" type="ScheduledProgramType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScheduledProgramType">
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:simpleType name="TaskTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EVENT" />
+      <xs:enumeration value="PERIODIC" />
+      <xs:enumeration value="CONTINUOUS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfSerialPortType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SerialPort" type="SerialPortType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SerialPortType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ASCII" type="ASCIIDriverType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DF1" type="DF1DriverType" />
+    </xs:sequence>
+    <xs:attribute name="Channel" type="xs:unsignedShort" />
+    <xs:attribute name="BaudRate" type="BaudRateEnum" />
+    <xs:attribute name="Parity" type="ParityEnum" />
+    <xs:attribute name="DataBits" type="DataBitsEnum" />
+    <xs:attribute name="StopBits" type="StopBitsEnum" />
+    <xs:attribute name="ComDriverId" type="CommDriverIdEnum" />
+    <xs:attribute name="RTSOffDelay" type="xs:unsignedShort" />
+    <xs:attribute name="RTSSendDelay" type="xs:unsignedShort" />
+    <xs:attribute name="ControlLine" type="ControlLineEnum" />
+    <xs:attribute name="RemoteModeChangeFlag" type="BoolEnum" />
+    <xs:attribute name="ModeChangeAttentionChar" type="xs:unsignedByte" />
+    <xs:attribute name="SystemModeCharacter" type="xs:unsignedByte" />
+    <xs:attribute name="UserModeCharacter" type="xs:unsignedByte" />
+    <xs:attribute name="DCDWaitDelay" type="xs:unsignedShort" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="ASCIIDriverType">
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="XONXOFFEnable" type="BoolEnum" use="required" />
+    <xs:attribute name="DeleteMode" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="EchoMode" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="TerminationChars" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="AppendChars" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="BufferSize" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="DF1DriverType">
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="DuplicateDetection" type="BoolEnum" use="required" />
+    <xs:attribute name="ErrorDetection" type="DF1ErrDetEnum" use="required" />
+    <xs:attribute name="EmbeddedResponseEnable" type="DF1EmbRespEnEnum" use="required" />
+    <xs:attribute name="DF1Mode" type="DF1ModeEnum" use="required" />
+    <xs:attribute name="ACKTimeout" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="NAKReceiveLimit" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="ENQTransmitLimit" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="TransmitRetries" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="StationAddress" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="ReplyMessageWait" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="PollingMode" type="DF1PollingEnum" use="required" />
+    <xs:attribute name="MasterMessageTransmit" type="DF1MMsgTransEnum" use="required" />
+    <xs:attribute name="NormalPollNodeFile" type="xs:string" />
+    <xs:attribute name="NormalPollGroupSize" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="PriorityPollNodeFile" type="xs:string" />
+    <xs:attribute name="ActiveStationFile" type="xs:string" />
+    <xs:attribute name="SlavePollTimeout" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="EOTSuppression" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="MaxStationAddress" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="TokenHoldFactor" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="StoreFwdFile" type="xs:string" />
+    <xs:attribute name="EnableStoreFwd" type="BoolEnum" use="required" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:simpleType name="DF1ErrDetEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BCC Error" />
+      <xs:enumeration value="CRC Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DF1EmbRespEnEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Autodetect" />
+      <xs:enumeration value="Enabled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DF1ModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pt to Pt" />
+      <xs:enumeration value="Slave" />
+      <xs:enumeration value="Master" />
+      <xs:enumeration value="DH485" />
+      <xs:enumeration value="RadioModem" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DF1PollingEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Message Based (slave cannot initiate messages)" />
+      <xs:enumeration value="Message Based (slave can initiate messages)" />
+      <xs:enumeration value="Standard (single message transfer per node scan)" />
+      <xs:enumeration value="Standard (multiple message transfer per node scan)" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DF1MMsgTransEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Between station polls" />
+      <xs:enumeration value="In polling sequence" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BaudRateEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="38400" />
+      <xs:enumeration value="19200" />
+      <xs:enumeration value="9600" />
+      <xs:enumeration value="4800" />
+      <xs:enumeration value="2400" />
+      <xs:enumeration value="1200" />
+      <xs:enumeration value="600" />
+      <xs:enumeration value="300" />
+      <xs:enumeration value="110" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No Parity" />
+      <xs:enumeration value="Odd Parity" />
+      <xs:enumeration value="Even Parity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DataBitsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="7 Bits of Data" />
+      <xs:enumeration value="8 Bits of Data" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StopBitsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1 Stop Bit" />
+      <xs:enumeration value="2 Stop Bits" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CommDriverIdEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DF1" />
+      <xs:enumeration value="ASCII" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ControlLineEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No Handshake" />
+      <xs:enumeration value="Full Duplex" />
+      <xs:enumeration value="Half Duplex without Continuous Carrier" />
+      <xs:enumeration value="Half Duplex with Continuous Carrier" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CSTType">
+    <xs:attribute name="MasterID" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+    <xs:attribute name="Status" type="xs:unsignedShort" />
+    <xs:attribute name="Master" type="xs:unsignedByte" />
+  </xs:complexType>
+  <xs:complexType name="WallClockTimeType">
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="LocalTimeAdjustment" type="xs:short" />
+    <xs:attribute name="TimeZone" type="xs:unsignedShort" />
+    <xs:attribute name="Verified" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="TrendCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Trend" type="TrendType" />
+    </xs:sequence>
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="ParentUId" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="TrendType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Template" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Pens" type="ArrayOfPenType" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="SamplePeriod" type="xs:unsignedLong" />
+    <xs:attribute name="NumberOfCaptures" type="xs:unsignedLong" />
+    <xs:attribute name="CaptureSizeType" type="TrendCaptureSizeTypeEnum" />
+    <xs:attribute name="CaptureSize" type="xs:unsignedLong" />
+    <xs:attribute name="StartTriggerType" type="TrendTriggerTypeEnum" />
+    <xs:attribute name="StartTriggerTag1" type="xs:string" />
+    <xs:attribute name="StartTriggerOperation1" type="xs:unsignedLong" />
+    <xs:attribute name="StartTriggerTargetType1" type="TrendTriggerTargetTypeEnum" />
+    <xs:attribute name="StartTriggerTargetValue1" type="xs:string" />
+    <xs:attribute name="StartTriggerTargetTag1" type="xs:string" />
+    <xs:attribute name="StartTriggerLogicalOperation" type="AndOrEnum" />
+    <xs:attribute name="StartTriggerTag2" type="xs:string" />
+    <xs:attribute name="StartTriggerOperation2" type="xs:unsignedLong" />
+    <xs:attribute name="StartTriggerTargetType2" type="TrendTriggerTargetTypeEnum" />
+    <xs:attribute name="StartTriggerTargetValue2" type="xs:string" />
+    <xs:attribute name="StartTriggerTargetTag2" type="xs:string" />
+    <xs:attribute name="PreSampleType" type="TrendPrePostSampleTypeEnum" />
+    <xs:attribute name="PreSamples" type="xs:unsignedLong" />
+    <xs:attribute name="StopTriggerType" type="TrendTriggerTypeEnum" />
+    <xs:attribute name="StopTriggerTag1" type="xs:string" />
+    <xs:attribute name="StopTriggerOperation1" type="xs:unsignedLong" />
+    <xs:attribute name="StopTriggerTargetType1" type="TrendTriggerTargetTypeEnum" />
+    <xs:attribute name="StopTriggerTargetValue1" type="xs:string" />
+    <xs:attribute name="StopTriggerTargetTag1" type="xs:string" />
+    <xs:attribute name="StopTriggerLogicalOperation" type="AndOrEnum" />
+    <xs:attribute name="StopTriggerTag2" type="xs:string" />
+    <xs:attribute name="StopTriggerOperation2" type="xs:unsignedLong" />
+    <xs:attribute name="StopTriggerTargetType2" type="TrendTriggerTargetTypeEnum" />
+    <xs:attribute name="StopTriggerTargetValue2" type="xs:string" />
+    <xs:attribute name="StopTriggerTargetTag2" type="xs:string" />
+    <xs:attribute name="PostSampleType" type="TrendPrePostSampleTypeEnum" />
+    <xs:attribute name="PostSamples" type="xs:unsignedLong" />
+    <xs:attribute name="TrendxVersion" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfPenType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pen" type="PenType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PenType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="DescriptionType" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Color" type="xs:string" />
+    <xs:attribute name="Visible" type="BoolEnum" />
+    <xs:attribute name="Width" type="xs:unsignedLong" />
+    <xs:attribute name="Type" type="TrendPenTypeEnum" />
+    <xs:attribute name="Style" type="xs:unsignedLong" />
+    <xs:attribute name="Marker" type="xs:unsignedLong" />
+    <xs:attribute name="Min" type="xs:float" />
+    <xs:attribute name="Max" type="xs:float" />
+    <xs:attribute name="EngUnits" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="TrendPenTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Analog" />
+      <xs:enumeration value="Digital" />
+      <xs:enumeration value="Full-Width" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TrendCaptureSizeTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No Limit" />
+      <xs:enumeration value="Samples" />
+      <xs:enumeration value="Time Period" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TrendTriggerTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Event Trigger" />
+      <xs:enumeration value="No Trigger" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TrendTriggerTargetTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Target Tag" />
+      <xs:enumeration value="Target Value" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AndOrEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AND" />
+      <xs:enumeration value="OR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TrendPrePostSampleTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Samples" />
+      <xs:enumeration value="Time Period" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfQuickWatchType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuickWatchList" type="QuickWatchType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QuickWatchType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WatchTag" type="WatchTagType" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="WatchTagType">
+    <xs:attribute name="Specifier" type="xs:string" />
+    <xs:attribute name="Scope" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="TimeSynchronizeType">
+    <xs:attribute name="UId" type="xs:unsignedLong" />
+    <xs:attribute name="Priority1" type="xs:unsignedByte" />
+    <xs:attribute name="Priority2" type="xs:unsignedByte" />
+    <xs:attribute name="PTPEnable" type="BoolEnum" />
+  </xs:complexType>
+  <xs:complexType name="InternetProtocolType">
+    <xs:attribute name="ConfigType" type="ConfigTypeEnum" />
+    <xs:attribute name="IPAddress" type="xs:string" />
+    <xs:attribute name="SubnetMask" type="xs:string" />
+    <xs:attribute name="Gateway" type="xs:string" />
+    <xs:attribute name="PrimaryDNS" type="xs:string" />
+    <xs:attribute name="SecondaryDNS" type="xs:string" />
+    <xs:attribute name="DomainName" type="xs:string" />
+    <xs:attribute name="HostName" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="ConfigTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Manual" />
+      <xs:enumeration value="BOOTP" />
+      <xs:enumeration value="DHCP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfEthernetLinkType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EthernetPort" type="EthernetLinkType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EthernetLinkType">
+    <xs:attribute name="Port" type="xs:unsignedShort" />
+    <xs:attribute name="PortEnabled" type="BoolEnum" />
+    <xs:attribute name="AutoNegotiateEnabled" type="BoolEnum" />
+    <xs:attribute name="InterfaceSpeed" type="xs:float" />
+    <xs:attribute name="DuplexMode" type="DuplexModeEnum" />
+  </xs:complexType>
+  <xs:simpleType name="DuplexModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Half" />
+      <xs:enumeration value="Full" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EthernetNetworkType">
+    <xs:attribute name="SupervisorModeEnabled" type="BoolEnum" />
+    <xs:attribute name="SupervisorPrecedence" type="xs:unsignedShort" />
+    <xs:attribute name="BeaconInterval" type="xs:unsignedLong" />
+    <xs:attribute name="BeaconTimeout" type="xs:unsignedLong" />
+    <xs:attribute name="VLANID" type="xs:unsignedShort" />
+  </xs:complexType>
+  <xs:simpleType name="ContFaultedStateEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Not Faulted" />
+      <xs:enumeration value="Minor" />
+      <xs:enumeration value="Major" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ContGenStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ok" />
+      <xs:enumeration value="Not Responding" />
+      <xs:enumeration value="Faulted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ContIOMapLEDStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LED Off" />
+      <xs:enumeration value="LED Blinking Red" />
+      <xs:enumeration value="LED Blinking Green" />
+      <xs:enumeration value="LED Solid Green" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ContKeySwitchEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Run" />
+      <xs:enumeration value="Program" />
+      <xs:enumeration value="Remote" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ContOpModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Run Mode" />
+      <xs:enumeration value="Program Mode" />
+      <xs:enumeration value="Faulted Mode" />
+      <xs:enumeration value="Debug Mode" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ControllerType" nillable="true" type="ControllerType" />
+  <xs:element name="DescriptionType" nillable="true" type="DescriptionType" />
+  <xs:element name="LocalizedDescriptionType" nillable="true" type="LocalizedDescriptionType" />
+  <xs:element name="PenType" nillable="true" type="PenType" />
+  <xs:element name="BoolEnum" type="BoolEnum" />
+  <xs:element name="TrendPenTypeEnum" type="TrendPenTypeEnum" />
+  <xs:element name="TrendType" nillable="true" type="TrendType" />
+  <xs:element name="TrendCaptureSizeTypeEnum" type="TrendCaptureSizeTypeEnum" />
+  <xs:element name="TrendTriggerTypeEnum" type="TrendTriggerTypeEnum" />
+  <xs:element name="TrendTriggerTargetTypeEnum" type="TrendTriggerTargetTypeEnum" />
+  <xs:element name="AndOrEnum" type="AndOrEnum" />
+  <xs:element name="TrendPrePostSampleTypeEnum" type="TrendPrePostSampleTypeEnum" />
+  <xs:element name="TrendCollection" nillable="true" type="TrendCollection" />
+  <xs:element name="DF1DriverType" nillable="true" type="DF1DriverType" />
+  <xs:element name="DF1ErrDetEnum" type="DF1ErrDetEnum" />
+  <xs:element name="DF1EmbRespEnEnum" type="DF1EmbRespEnEnum" />
+  <xs:element name="DF1ModeEnum" type="DF1ModeEnum" />
+  <xs:element name="DF1PollingEnum" type="DF1PollingEnum" />
+  <xs:element name="DF1MMsgTransEnum" type="DF1MMsgTransEnum" />
+  <xs:element name="ASCIIDriverType" nillable="true" type="ASCIIDriverType" />
+  <xs:element name="SerialPortType" nillable="true" type="SerialPortType" />
+  <xs:element name="BaudRateEnum" type="BaudRateEnum" />
+  <xs:element name="ParityEnum" type="ParityEnum" />
+  <xs:element name="DataBitsEnum" type="DataBitsEnum" />
+  <xs:element name="StopBitsEnum" type="StopBitsEnum" />
+  <xs:element name="CommDriverIdEnum" type="CommDriverIdEnum" />
+  <xs:element name="ControlLineEnum" type="ControlLineEnum" />
+  <xs:element name="EthernetNetworkType" nillable="true" type="EthernetNetworkType" />
+  <xs:element name="EthernetLinkType" nillable="true" type="EthernetLinkType" />
+  <xs:element name="DuplexModeEnum" type="DuplexModeEnum" />
+  <xs:element name="InternetProtocolType" nillable="true" type="InternetProtocolType" />
+  <xs:element name="ConfigTypeEnum" type="ConfigTypeEnum" />
+  <xs:element name="WallClockTimeType" nillable="true" type="WallClockTimeType" />
+  <xs:element name="CSTType" nillable="true" type="CSTType" />
+  <xs:element name="TimeSynchronizeType" nillable="true" type="TimeSynchronizeType" />
+  <xs:element name="WatchTagType" nillable="true" type="WatchTagType" />
+  <xs:element name="QuickWatchType" nillable="true" type="QuickWatchType" />
+  <xs:element name="ScheduledProgramType" nillable="true" type="ScheduledProgramType" />
+  <xs:element name="TaskEventInfoType" nillable="true" type="TaskEventInfoType" />
+  <xs:element name="TaskTriggerEnum" type="TaskTriggerEnum" />
+  <xs:element name="TaskType" nillable="true" type="TaskType" />
+  <xs:element name="TaskTypeEnum" type="TaskTypeEnum" />
+  <xs:element name="ComponentClassEnum" type="ComponentClassEnum" />
+  <xs:element name="TaskCollection" nillable="true" type="TaskCollection" />
+  <xs:element name="EncryptedRoutineContentType" nillable="true" type="EncryptedRoutineContentType" />
+  <xs:complexType name="EncryptedRoutineContentType">
+    <xs:attribute name="OnlineEditType" type="LangContOnlineEditEnum" />
+    <xs:attribute name="EncryptedType" type="RoutineTypeEnum" use="required" />
+    <xs:attribute name="EncodedXRT" type="xs:string" />
+    <xs:attribute name="EncodedSegmentGraph" type="xs:string" />
+    <xs:attribute name="EncryptedSource" type="xs:string" />
+  </xs:complexType>
+  <xs:element name="LangContOnlineEditEnum" type="LangContOnlineEditEnum" />
+  <xs:element name="RoutineTypeEnum" type="RoutineTypeEnum" />
+  <xs:element name="ProgramType" nillable="true" type="ProgramType" />
+  <xs:element name="TagCollection" nillable="true" type="TagCollection" />
+  <xs:element name="TagType" nillable="true" type="TagType" />
+  <xs:element name="CommentCollection" nillable="true" type="CommentCollection" />
+  <xs:element name="CommentType" nillable="true" type="CommentType" />
+  <xs:element name="LocalizedCommentType" nillable="true" type="LocalizedCommentType" />
+  <xs:element name="ConsumeTagInfoType" nillable="true" type="ConsumeTagInfoType" />
+  <xs:element name="Data" nillable="true" type="Data" />
+  <xs:element name="ALMAType" nillable="true" type="ALMAType" />
+  <xs:element name="BitValueEnum" type="BitValueEnum" />
+  <xs:element name="AlarmConfigType" nillable="true" type="AlarmConfigType" />
+  <xs:element name="AlarmMessageType" nillable="true" type="AlarmMessageType" />
+  <xs:element name="AlarmMessageTextType" nillable="true" type="AlarmMessageTextType" />
+  <xs:element name="ALMDType" nillable="true" type="ALMDType" />
+  <xs:element name="DataArray" nillable="true" type="DataArray" />
+  <xs:element name="DataArrayElement" nillable="true" type="DataArrayElement" />
+  <xs:element name="DataStructure" nillable="true" type="DataStructure" />
+  <xs:element name="DataValue" nillable="true" type="DataValue" />
+  <xs:element name="RadixEnum" type="RadixEnum" />
+  <xs:element name="AxisType" nillable="true" type="AxisType" />
+  <xs:element name="AxisConfigurationEnum" type="AxisConfigurationEnum" />
+  <xs:element name="AxisFeedbackConfigurationEnum" type="AxisFeedbackConfigurationEnum" />
+  <xs:element name="AxisMotorDataSourceEnum" type="AxisMotorDataSourceEnum" />
+  <xs:element name="AxisFeedbackTypeEnum" type="AxisFeedbackTypeEnum" />
+  <xs:element name="AxisMotorTypeEnum" type="AxisMotorTypeEnum" />
+  <xs:element name="AxisMotionScalingConfigurationEnum" type="AxisMotionScalingConfigurationEnum" />
+  <xs:element name="AxisStateEnum" type="AxisStateEnum" />
+  <xs:element name="RotaryAxisEnum" type="RotaryAxisEnum" />
+  <xs:element name="AxisHomeModeEnum" type="AxisHomeModeEnum" />
+  <xs:element name="AxisHomeDirEnum" type="AxisHomeDirEnum" />
+  <xs:element name="AxisHomeSeqEnum" type="AxisHomeSeqEnum" />
+  <xs:element name="AxisProgStopModeEnum" type="AxisProgStopModeEnum" />
+  <xs:element name="AxisTypeEnum" type="AxisTypeEnum" />
+  <xs:element name="ServoLoopConfigEnum" type="ServoLoopConfigEnum" />
+  <xs:element name="AxisExtDriveTypeEnum" type="AxisExtDriveTypeEnum" />
+  <xs:element name="AxisInfoSelectEnum" type="AxisInfoSelectEnum" />
+  <xs:element name="LDTTypeEnum" type="LDTTypeEnum" />
+  <xs:element name="LDTCalibConstUnitsEnum" type="LDTCalibConstUnitsEnum" />
+  <xs:element name="LDTScalingUnitsEnum" type="LDTScalingUnitsEnum" />
+  <xs:element name="LDTLengthUnitsEnum" type="LDTLengthUnitsEnum" />
+  <xs:element name="SSICodeTypeEnum" type="SSICodeTypeEnum" />
+  <xs:element name="SSIClockFreqEnum" type="SSIClockFreqEnum" />
+  <xs:element name="ServoFeedbackTypeEnum" type="ServoFeedbackTypeEnum" />
+  <xs:element name="EnabledEnum" type="EnabledEnum" />
+  <xs:element name="AxisFaultActionEnum" type="AxisFaultActionEnum" />
+  <xs:element name="AxisTorqueLimitSrcEnum" type="AxisTorqueLimitSrcEnum" />
+  <xs:element name="AxisDriveUnitEnum" type="AxisDriveUnitEnum" />
+  <xs:element name="AxisDrivePolarityEnum" type="AxisDrivePolarityEnum" />
+  <xs:element name="AxisFeedbackUnitEnum" type="AxisFeedbackUnitEnum" />
+  <xs:element name="AxisPWMFrequencySelectEnum" type="AxisPWMFrequencySelectEnum" />
+  <xs:element name="AxisConfigurationProfileEnum" type="AxisConfigurationProfileEnum" />
+  <xs:element name="DriveInputPowerPhaseEnum" type="DriveInputPowerPhaseEnum" />
+  <xs:element name="AxisControlModeEnum" type="AxisControlModeEnum" />
+  <xs:element name="AxisControlMethodEnum" type="AxisControlMethodEnum" />
+  <xs:element name="AxisFluxUpControlEnum" type="AxisFluxUpControlEnum" />
+  <xs:element name="AxisFrequencyControlMethodEnum" type="AxisFrequencyControlMethodEnum" />
+  <xs:element name="AxisStoppingActionEnum" type="AxisStoppingActionEnum" />
+  <xs:element name="AxisMechanicalBrakeControlEnum" type="AxisMechanicalBrakeControlEnum" />
+  <xs:element name="AxisPowerLossActionEnum" type="AxisPowerLossActionEnum" />
+  <xs:element name="AxisShutdownActionEnum" type="AxisShutdownActionEnum" />
+  <xs:element name="AxisInverterOverloadActionEnum" type="AxisInverterOverloadActionEnum" />
+  <xs:element name="AxisMotorOverloadActionEnum" type="AxisMotorOverloadActionEnum" />
+  <xs:element name="AxisExceptionActionEnum" type="AxisExceptionActionEnum" />
+  <xs:element name="AxisLocalControlEnum" type="AxisLocalControlEnum" />
+  <xs:element name="AxisSLATConfiguration" type="AxisSLATConfiguration" />
+  <xs:element name="AxisMotorUnitEnum" type="AxisMotorUnitEnum" />
+  <xs:element name="AxisPolarityEnum" type="AxisPolarityEnum" />
+  <xs:element name="AxisCIPFeedbackUnitEnum" type="AxisCIPFeedbackUnitEnum" />
+  <xs:element name="AxisFeedbackStartupMethodEnum" type="AxisFeedbackStartupMethodEnum" />
+  <xs:element name="AxisFeedbackNDataCodeEnum" type="AxisFeedbackNDataCodeEnum" />
+  <xs:element name="AxisFeedbackLossActionEnum" type="AxisFeedbackLossActionEnum" />
+  <xs:element name="AxisCyclicReadEnum" type="AxisCyclicReadEnum" />
+  <xs:element name="AxisCyclicWriteEnum" type="AxisCyclicWriteEnum" />
+  <xs:element name="AxisScalingSourceEnum" type="AxisScalingSourceEnum" />
+  <xs:element name="AxisLoadTypeEnum" type="AxisLoadTypeEnum" />
+  <xs:element name="AxisActuatorTypeEnum" type="AxisActuatorTypeEnum" />
+  <xs:element name="AxisTravelModeEnum" type="AxisTravelModeEnum" />
+  <xs:element name="AxisMotionUnitEnum" type="AxisMotionUnitEnum" />
+  <xs:element name="AxisTuningSelectEnum" type="AxisTuningSelectEnum" />
+  <xs:element name="AxisTuningDirectionEnum" type="AxisTuningDirectionEnum" />
+  <xs:element name="AxisApplicationTypeEnum" type="AxisApplicationTypeEnum" />
+  <xs:element name="AxisLoopResponseEnum" type="AxisLoopResponseEnum" />
+  <xs:element name="AxisFeedbackCommutationAlignedEnum" type="AxisFeedbackCommutationAlignedEnum" />
+  <xs:element name="AxisMotionExceptionActionEnum" type="AxisMotionExceptionActionEnum" />
+  <xs:element name="AxisMoveRepeatModeEnum" type="AxisMoveRepeatModeEnum" />
+  <xs:element name="AxisFeaturesEnum" type="AxisFeaturesEnum" />
+  <xs:element name="AxisFeedbackMasterSelectEnum" type="AxisFeedbackMasterSelectEnum" />
+  <xs:element name="AxisActuatorLeadUnitEnum" type="AxisActuatorLeadUnitEnum" />
+  <xs:element name="AxisActuatorDiameterUnitEnum" type="AxisActuatorDiameterUnitEnum" />
+  <xs:element name="AxisHookupTestFeedbackChannelEnum" type="AxisHookupTestFeedbackChannelEnum" />
+  <xs:element name="AxisLoadCouplingEnum" type="AxisLoadCouplingEnum" />
+  <xs:element name="AxisLoadObserverConfigurationEnum" type="AxisLoadObserverConfigurationEnum" />
+  <xs:element name="CoordinateSystemType" nillable="true" type="CoordinateSystemType" />
+  <xs:element name="CoordSystemTypeEnum" type="CoordSystemTypeEnum" />
+  <xs:element name="MessageType" nillable="true" type="MessageType" />
+  <xs:element name="MessageTypeEnum" type="MessageTypeEnum" />
+  <xs:element name="ConnectedEnum" type="ConnectedEnum" />
+  <xs:element name="MsgDF1FlagEnum" type="MsgDF1FlagEnum" />
+  <xs:element name="MotionGroupType" nillable="true" type="MotionGroupType" />
+  <xs:element name="MotionGroupTypeEnum" type="MotionGroupTypeEnum" />
+  <xs:element name="MGGeneralFaultEnum" type="MGGeneralFaultEnum" />
+  <xs:element name="ForceData" nillable="true" type="ForceData" />
+  <xs:element name="ProduceTagInfoType" nillable="true" type="ProduceTagInfoType" />
+  <xs:element name="TagTypeEnum" type="TagTypeEnum" />
+  <xs:element name="TagUsageEnum" type="TagUsageEnum" />
+  <xs:element name="ObjectScopeEnum" type="ObjectScopeEnum" />
+  <xs:element name="ExternalAccessEnum" type="ExternalAccessEnum" />
+  <xs:element name="AOIParameterType" nillable="true" type="AOIParameterType" />
+  <xs:element name="AOILocalTagType" nillable="true" type="AOILocalTagType" />
+  <xs:element name="RoutineCollection" nillable="true" type="RoutineCollection" />
+  <xs:element name="EncodedRoutineType" nillable="true" type="EncodedRoutineType" />
+  <xs:element name="RoutineType" nillable="true" type="RoutineType" />
+  <xs:element name="RLLContentType" nillable="true" type="RLLContentType" />
+  <xs:element name="LabelCollection" nillable="true" type="LabelCollection" />
+  <xs:element name="LabelType" nillable="true" type="LabelType" />
+  <xs:element name="RungType" nillable="true" type="RungType" />
+  <xs:element name="RungCommentType" nillable="true" type="RungCommentType" />
+  <xs:element name="RungTypeEnum" type="RungTypeEnum" />
+  <xs:element name="UseEnum" type="UseEnum" />
+  <xs:element name="FBDContentType" nillable="true" type="FBDContentType" />
+  <xs:element name="SheetType" nillable="true" type="SheetType" />
+  <xs:element name="FBD_IRefType" nillable="true" type="FBD_IRefType" />
+  <xs:element name="FBD_ORefType" nillable="true" type="FBD_ORefType" />
+  <xs:element name="FBD_IConType" nillable="true" type="FBD_IConType" />
+  <xs:element name="FBD_OConType" nillable="true" type="FBD_OConType" />
+  <xs:element name="FBD_BlockType" nillable="true" type="FBD_BlockType" />
+  <xs:element name="FBD_SpecialArrayType" nillable="true" type="FBD_SpecialArrayType" />
+  <xs:element name="FBD_AOIType" nillable="true" type="FBD_AOIType" />
+  <xs:element name="FBD_AOIArgumentType" nillable="true" type="FBD_AOIArgumentType" />
+  <xs:element name="FBD_GSVType" nillable="true" type="FBD_GSVType" />
+  <xs:element name="FBD_SSVType" nillable="true" type="FBD_SSVType" />
+  <xs:element name="FBD_JSRType" nillable="true" type="FBD_JSRType" />
+  <xs:element name="FBD_SBRType" nillable="true" type="FBD_SBRType" />
+  <xs:element name="FBD_RETType" nillable="true" type="FBD_RETType" />
+  <xs:element name="FBD_WireType" nillable="true" type="FBD_WireType" />
+  <xs:element name="FBD_FeedbackWireType" nillable="true" type="FBD_FeedbackWireType" />
+  <xs:element name="TextBoxType" nillable="true" type="TextBoxType" />
+  <xs:element name="TextBoxAdaptorType" nillable="true" type="TextBoxAdaptorType" />
+  <xs:element name="LocalizedTextType" nillable="true" type="LocalizedTextType" />
+  <xs:element name="AttachmentType" nillable="true" type="AttachmentType" />
+  <xs:element name="SheetOrientationEnum" type="SheetOrientationEnum" />
+  <xs:element name="SFCContentType" nillable="true" type="SFCContentType" />
+  <xs:element name="SFCStepType" nillable="true" type="SFCStepType" />
+  <xs:element name="SFCActionType" nillable="true" type="SFCActionType" />
+  <xs:element name="EmbeddedLanguageBlockType" nillable="true" type="EmbeddedLanguageBlockType" />
+  <xs:element name="STContentType" nillable="true" type="STContentType" />
+  <xs:element name="STLineType" nillable="true" type="STLineType" />
+  <xs:element name="SFCActionQualifierEnum" type="SFCActionQualifierEnum" />
+  <xs:element name="SFCTransType" nillable="true" type="SFCTransType" />
+  <xs:element name="SFCBranchType" nillable="true" type="SFCBranchType" />
+  <xs:element name="SFCLegType" nillable="true" type="SFCLegType" />
+  <xs:element name="SFCLegForceEnum" type="SFCLegForceEnum" />
+  <xs:element name="SFCBranchTypeEnum" type="SFCBranchTypeEnum" />
+  <xs:element name="SFCBranchFlowEnum" type="SFCBranchFlowEnum" />
+  <xs:element name="SFCBranchPriorityEnum" type="SFCBranchPriorityEnum" />
+  <xs:element name="SFCSubRetType" nillable="true" type="SFCSubRetType" />
+  <xs:element name="SFCStopType" nillable="true" type="SFCStopType" />
+  <xs:element name="SFCDLinkType" nillable="true" type="SFCDLinkType" />
+  <xs:element name="ExternalContentType" nillable="true" type="ExternalContentType" />
+  <xs:element name="RoutineProtectionTypeEnum" type="RoutineProtectionTypeEnum" />
+  <xs:element name="ProgTypeEnum" type="ProgTypeEnum" />
+  <xs:element name="ProgInitialStateEnum" type="ProgInitialStateEnum" />
+  <xs:element name="ProgNotImplActionEnum" type="ProgNotImplActionEnum" />
+  <xs:element name="ProgLossOfCCEnum" type="ProgLossOfCCEnum" />
+  <xs:element name="ProgExternalRequestEnum" type="ProgExternalRequestEnum" />
+  <xs:element name="ProgramCollection" nillable="true" type="ProgramCollection" />
+  <xs:element name="EncryptedAOIContentType" nillable="true" type="EncryptedAOIContentType" />
+  <xs:complexType name="EncryptedAOIContentType">
+    <xs:attribute name="EncodedXRT" type="xs:string" />
+    <xs:attribute name="EncryptedSource" type="xs:string" />
+  </xs:complexType>
+  <xs:element name="EncodedAOIDefinitionType" nillable="true" type="EncodedAOIDefinitionType" />
+  <xs:element name="RevisionNoteType" nillable="true" type="RevisionNoteType" />
+  <xs:element name="LocalizedRevisionNoteType" nillable="true" type="LocalizedRevisionNoteType" />
+  <xs:element name="AOIDependencyType" nillable="true" type="AOIDependencyType" />
+  <xs:element name="AOIDefinitionType" nillable="true" type="AOIDefinitionType" />
+  <xs:element name="AOIDefinitionCollection" nillable="true" type="AOIDefinitionCollection" />
+  <xs:element name="SafetyScriptType" nillable="true" type="SafetyScriptType" />
+  <xs:element name="ConfigScriptType" nillable="true" type="ConfigScriptType" />
+  <xs:element name="OutAliasTagType" nillable="true" type="OutAliasTagType" />
+  <xs:element name="InAliasTagType" nillable="true" type="InAliasTagType" />
+  <xs:element name="RackConnectionType" nillable="true" type="RackConnectionType" />
+  <xs:element name="OutputDataType" nillable="true" type="OutputDataType" />
+  <xs:element name="OutputTagType" nillable="true" type="OutputTagType" />
+  <xs:element name="InputDataType" nillable="true" type="InputDataType" />
+  <xs:element name="InputTagType" nillable="true" type="InputTagType" />
+  <xs:element name="ConnectionType" nillable="true" type="ConnectionType" />
+  <xs:element name="ConnTypeEnum" type="ConnTypeEnum" />
+  <xs:element name="ConnPriorityEnum" type="ConnPriorityEnum" />
+  <xs:element name="ConnTransmissionTypeEnum" type="ConnTransmissionTypeEnum" />
+  <xs:element name="ConnProductionTriggerEnum" type="ConnProductionTriggerEnum" />
+  <xs:element name="ConnectionCollection" nillable="true" type="ConnectionCollection" />
+  <xs:element name="ConfigTagType" nillable="true" type="ConfigTagType" />
+  <xs:element name="ConfigDataType" nillable="true" type="ConfigDataType" />
+  <xs:element name="CommunicationsType" nillable="true" type="CommunicationsType" />
+  <xs:element name="BusType" nillable="true" type="BusType" />
+  <xs:element name="DHRIOBaudEnum" type="DHRIOBaudEnum" />
+  <xs:element name="PortType" nillable="true" type="PortType" />
+  <xs:element name="ModuleEKeyType" nillable="true" type="ModuleEKeyType" />
+  <xs:element name="EKeyingStateEnum" type="EKeyingStateEnum" />
+  <xs:element name="ModuleType" nillable="true" type="ModuleType" />
+  <xs:element name="IOMapStatusEnum" type="IOMapStatusEnum" />
+  <xs:element name="ModuleCollection" nillable="true" type="ModuleCollection" />
+  <xs:element name="DataTypeDependencyType" nillable="true" type="DataTypeDependencyType" />
+  <xs:element name="DataTypeMemberType" nillable="true" type="DataTypeMemberType" />
+  <xs:element name="DataTypeType" nillable="true" type="DataTypeType" />
+  <xs:element name="DTFamilyTypeEnum" type="DTFamilyTypeEnum" />
+  <xs:element name="DTClassTypeEnum" type="DTClassTypeEnum" />
+  <xs:element name="DataTypeCollection" nillable="true" type="DataTypeCollection" />
+  <xs:element name="SafetyInfoType" nillable="true" type="SafetyInfoType" />
+  <xs:element name="SecurityInfoType" nillable="true" type="SecurityInfoType" />
+  <xs:element name="RedundancyInfoType" nillable="true" type="RedundancyInfoType" />
+  <xs:element name="ContFaultedStateEnum" type="ContFaultedStateEnum" />
+  <xs:element name="ContGenStatusEnum" type="ContGenStatusEnum" />
+  <xs:element name="ContIOMapLEDStatusEnum" type="ContIOMapLEDStatusEnum" />
+  <xs:element name="ContKeySwitchEnum" type="ContKeySwitchEnum" />
+  <xs:element name="ContOpModeEnum" type="ContOpModeEnum" />
+</xs:schema>
