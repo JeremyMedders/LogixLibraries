@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Time_DT_TZContainerOnly" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-27T18:55:41.236Z" ContainsContext="true" ExportDate="Fri Jan 27 12:56:29 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Time_DT_TZContainerOnly" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-27T19:13:19.734Z" ContainsContext="true" ExportDate="Fri Jan 27 13:13:24 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="STR_64" Family="StringFamily" Class="User">
@@ -23,7 +23,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="Time_DT_TZContainerOnly" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-25T20:18:41.799Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-27T18:55:41.236Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Time_DT_TZContainerOnly" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-25T20:18:41.799Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-27T19:13:19.734Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -38,7 +38,7 @@
 </Parameter>
 </Parameters>
 <LocalTags>
-<LocalTag Name="UTCZones" DataType="STR_64" Dimensions="125" ExternalAccess="None">
+<LocalTag Name="UTCZones" DataType="STR_64" Dimensions="125" ExternalAccess="Read Only">
 <Description>
 <![CDATA[Array of available time zones. Do not modify!]]>
 </Description>
