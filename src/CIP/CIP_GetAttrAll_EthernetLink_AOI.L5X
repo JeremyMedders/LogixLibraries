@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="CIP_GetAttrAll_EthernetLink" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-30T05:49:19.283Z" ContainsContext="true" ExportDate="Mon Jan 30 05:36:20 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_Sys_EthernetLink" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Description>
+<![CDATA[CIP EthernetLink object.]]>
+</Description>
+<Members>
+<Member Name="Instance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Speed" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 1]]>
+</Description>
+</Member>
+<Member Name="Flags" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 2]]>
+</Description>
+</Member>
+<Member Name="PhysicalAddress" DataType="USINT" Dimension="6" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 3]]>
+</Description>
+</Member>
+<Member Name="InOctets" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="InUnicastPackets" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="InNonUnicastPackets" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="InDiscards" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="InErrors" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="InUnknownProtocol" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="OutOctets" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="OutUnicastPackets" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="OutNonUnicastPackets" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="OutDiscards" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="OutErrors" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="AlignmentErrors" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="FCSErrors" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="SingleCollisions" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="MultipleCollisions" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="SQETestErrors" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="DeferredTransmissions" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="LateCollisions" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="ExcessiveCollisions" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="MACTransmitErrors" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="CarrierSenseErrors" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="FrameTooLong" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="MACReceiveErrors" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="ControlBits" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 6]]>
+</Description>
+</Member>
+<Member Name="ForcedSpeed" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 6]]>
+</Description>
+</Member>
+<Member Name="Type" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7]]>
+</Description>
+</Member>
+<Member Name="State" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 8]]>
+</Description>
+</Member>
+<Member Name="AdminState" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 9]]>
+</Description>
+</Member>
+<Member Name="Label" DataType="STR_32" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZST_Sys_Eth33" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="LinkActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth33" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="FullDuplex" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth33" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="HalfDuplex" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth33" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="AutoNegotiated" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth33" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="ResetRequired" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth33" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="HardwareFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth33" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="IsInternal" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth33" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="IsTwistedPair" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth33" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZST_Sys_Eth42" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="IsOpticalFiber" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_Sys_Eth42" BitNumber="0" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_32"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_32" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="32" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="CIP_GetAttrAll_EthernetLink" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-30T05:33:27.389Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T05:49:19.283Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Data" TagType="Base" DataType="SINT" Dimensions="256" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="Ref_Instance" TagType="Base" DataType="ST_Sys_EthernetLink" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	CIP_GetAttrAll_EthernetLink]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[COP(Ref_Data[0], Ref_Instance.Speed, 2);]]>
+</Line>
+<Line Number="6">
+<![CDATA[COP(Ref_Data[8], Ref_Instance.PhysicalAddress[0], 6);]]>
+</Line>
+<Line Number="7">
+<![CDATA[COP(Ref_Data[14], Ref_Instance.InOctets, 11);]]>
+</Line>
+<Line Number="8">
+<![CDATA[COP(Ref_Data[58], Ref_Instance.AlignmentErrors, 12);]]>
+</Line>
+<Line Number="9">
+<![CDATA[COP(Ref_Data[106], Ref_Instance.ControlBits, 2);]]>
+</Line>
+<Line Number="10">
+<![CDATA[COP(Ref_Data[110], Ref_Instance.Type, 3);]]>
+</Line>
+<Line Number="11">
+<![CDATA[Ref_Instance.Label.LEN := Ref_Data[113];]]>
+</Line>
+<Line Number="12">
+<![CDATA[COP(Ref_Data[114], Ref_Instance.Label.DATA[0], Ref_Instance.Label.LEN);]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
+</Line>
+<Line Number="14">
+<![CDATA[Ref_Instance.LinkActive := Ref_Instance.Flags.0;]]>
+</Line>
+<Line Number="15">
+<![CDATA[Ref_Instance.FullDuplex := Ref_Instance.Flags.0 & Ref_Instance.Flags.1;]]>
+</Line>
+<Line Number="16">
+<![CDATA[Ref_Instance.HalfDuplex := Ref_Instance.Flags.0 & NOT Ref_Instance.Flags.1;]]>
+</Line>
+<Line Number="17">
+<![CDATA[Ref_Instance.AutoNegotiated := Ref_Instance.Flags.0 & Ref_Instance.Flags.2 & Ref_Instance.Flags.3;]]>
+</Line>
+<Line Number="18">
+<![CDATA[Ref_Instance.ResetRequired := Ref_Instance.Flags.0 & Ref_Instance.Flags.5;]]>
+</Line>
+<Line Number="19">
+<![CDATA[Ref_Instance.HardwareFault := Ref_Instance.Flags.0 & Ref_Instance.Flags.6;]]>
+</Line>
+<Line Number="20">
+<![CDATA[]]>
+</Line>
+<Line Number="21">
+<![CDATA[Ref_Instance.IsInternal := (Ref_Instance.Type = 1);]]>
+</Line>
+<Line Number="22">
+<![CDATA[Ref_Instance.IsTwistedPair := (Ref_Instance.Type = 2);]]>
+</Line>
+<Line Number="23">
+<![CDATA[Ref_Instance.IsOpticalFiber := (Ref_Instance.Type = 3);]]>
+</Line>
+<Line Number="24">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Sys_EthernetLink"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
