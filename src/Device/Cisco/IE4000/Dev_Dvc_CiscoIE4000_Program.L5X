@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_Dvc_CiscoIE4000" TargetType="Program" ContainsContext="true" ExportDate="Mon Jan 30 05:36:43 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_Dvc_CiscoIE4000" TargetType="Program" ContainsContext="true" ExportDate="Mon Jan 30 08:48:05 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Dvc" Family="NoFamily" Class="User">
@@ -4108,7 +4108,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T11:07:05.306Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T14:46:51.041Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Cisco IE 4000 Network Switch]]>
@@ -4131,109 +4131,109 @@
 <Parameter Name="Ref_Msg" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
 <Parameter Name="Ref_MsgResp" TagType="Base" DataType="SINT" Dimensions="256" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
 <Parameter Name="Val_Fault" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataIn.Fault" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi11_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi12_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi13_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi14_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi14_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi15_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi15_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi16_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi16_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi17_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi17_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi18_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi18_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi19_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi19_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi110_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi110_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi111_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi111_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi112_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi112_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi113_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi113_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi114_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi114_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi115_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi115_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi116_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi116_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi117_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi117_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi118_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi119_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Val_Gi120_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port01_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port02_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port03_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port04_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi14_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port05_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi15_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port06_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi16_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port07_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi17_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port08_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi18_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port09_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi19_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port10_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi110_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port11_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi111_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port12_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi112_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port13_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi113_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port14_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi114_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port15_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi115_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port16_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi116_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port17_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi117_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port18_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port19_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Port20_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_SVI1_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.SVI1_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi11_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi12_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi13_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi14_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi14_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi15_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi15_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi16_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi16_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi17_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi17_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi18_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi18_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi19_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi19_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi110_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi110_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi111_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi111_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi112_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi112_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi113_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi113_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi114_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi114_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi115_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi115_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi116_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi116_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi117_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi117_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi118_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi119_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi120_LinkUp" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi11_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi12_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi13_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi14_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi14_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi15_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi15_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi16_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi16_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi17_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi17_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi18_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi18_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi19_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi19_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi110_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi110_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi111_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi111_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi112_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi112_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi113_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi113_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi114_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi114_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi115_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi115_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi116_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi116_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi117_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi117_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi118_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi119_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi120_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi11_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi12_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi13_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi14_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi14_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi15_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi15_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi16_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi16_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi17_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi17_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi18_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi18_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi19_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi19_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi110_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi110_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi111_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi111_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi112_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi112_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi113_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi113_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi114_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi114_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi115_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi115_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi116_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi116_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi117_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi117_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi118_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi119_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Sts_Gi120_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port01" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port02" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port03" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port04" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi14_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port05" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi15_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port06" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi16_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port07" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi17_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port08" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi18_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port09" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi19_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port10" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi110_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port11" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi111_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port12" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi112_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port13" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi113_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port14" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi114_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port15" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi115_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port16" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi116_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port17" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi117_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port18" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port19" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port20" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port01_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port02_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port03_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port04_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi14_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port05_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi15_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port06_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi16_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port07_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi17_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port08_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi18_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port09_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi19_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port10_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi110_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port11_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi111_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port12_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi112_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port13_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi113_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port14_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi114_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port15_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi115_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port16_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi116_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port17_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi117_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port18_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port19_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port20_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port01_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port02_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port03_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port04_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi14_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port05_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi15_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port06_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi16_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port07_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi17_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port08_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi18_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port09_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi19_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port10_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi110_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port11_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi111_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port12_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi112_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port13_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi113_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port14_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi114_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port15_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi115_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port16_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi116_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port17_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi117_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port18_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port19_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Port20_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_MajorAlarm" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.MajorAlarm" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_MinorAlarm" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.MinorAlarm" Required="false" Visible="true" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi11" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi11_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi12" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi12_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi13" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi13_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi14" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi14_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi15" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi15_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi16" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi16_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi17" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi17_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi18" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi18_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi19" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi19_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi110" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi110_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi111" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi111_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi112" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi112_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi113" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi113_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi114" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi114_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi115" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi115_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi116" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi116_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi117" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi117_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi118" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi118_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi119" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi119_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
-<Parameter Name="Cfg_DisableGi120" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi120_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort01" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi11_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort02" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi12_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort03" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi13_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort04" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi14_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort05" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi15_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort06" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi16_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort07" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi17_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort08" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi18_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort09" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi19_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort10" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi110_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort11" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi111_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort12" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi112_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort13" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi113_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort14" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi114_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort15" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi115_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort16" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi116_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort17" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi117_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort18" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi118_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort19" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi119_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_DisablePort20" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataOut.Gi120_Disable" Required="false" Visible="false" ExternalAccess="Read Only"/>
 </Parameters>
 <LocalTags>
 <LocalTag Name="Obj" DataType="Sys_Dvc" ExternalAccess="None">
@@ -35729,8 +35729,8 @@
 <Tags>
 <Tag Name="Dvc" TagType="Base" DataType="Dvc_CiscoIE4000" Usage="Public" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
-<![CDATA[[7,[7,0,9,0,11,0,0,0,0,0,128,128,0,[3,11,40,0]],[3,16384,0,0,36317,0,0,16384,16],[47,50,1675078114159886,1675078114189888
-		],[1,0,0],[3,1,1,0,0],[1,0,0,0],[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+<![CDATA[[7,[7,0,9,0,11,0,0,0,0,0,128,128,0,[3,11,40,0]],[3,16384,0,0,36317,0,0,16384,16],[47,50,883613430691737,883613430711719
+		],[1,0,0],[3,245,1,0,0],[1,0,0,0],[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],0,[0,0,0,0,0]],[[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
@@ -35738,8 +35738,7 @@
 		,[15,'IE-4000-4TC4G-E$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']],[0,1,20,0,3232243727
 		,4294967040,3232243713,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],[5,'cisco$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		]],[[0,1000,15,[0,42,16,161,133,129],140085462,240314,78968,0,0,0,106624911,409787,34480,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
-		,0,0,[5,'Gi1/1$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		]],[[0,1000,15,[0,42,16,161,133,129],8843299,11689,315,0,0,0,3070988,17791,1587,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Gi1/1$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],11,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
@@ -35759,116 +35758,116 @@
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		],0,0]]],[0,263,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5],[0]],0,[3],[3,42,2],[3],10]]]>
+		],0,0]]],[0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[0]],0,[3],[3,42,2],[3],30]]]>
 </Data>
 <Data Format="Decorated">
 <Structure DataType="Dvc_CiscoIE4000">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Val_Fault" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi11_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi12_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi13_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi14_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi15_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi16_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi17_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi18_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi19_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi110_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi111_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi112_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi113_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi114_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi115_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi116_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi117_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi118_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi119_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Val_Gi120_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port01_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port02_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port03_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port04_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port05_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port06_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port07_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port08_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port09_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port10_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port11_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port12_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port13_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port14_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port15_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port16_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port17_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port18_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port19_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Port20_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="Val_SVI1_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Sts_Gi11_LinkUp" DataType="BOOL" Value="1"/>
-<DataValueMember Name="Sts_Gi12_LinkUp" DataType="BOOL" Value="1"/>
-<DataValueMember Name="Sts_Gi13_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi14_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi15_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi16_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi17_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi18_LinkUp" DataType="BOOL" Value="1"/>
-<DataValueMember Name="Sts_Gi19_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi110_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi111_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi112_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi113_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi114_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi115_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi116_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi117_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi118_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi119_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi120_LinkUp" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi11_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi12_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi13_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi14_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi15_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi16_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi17_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi18_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi19_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi110_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi111_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi112_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi113_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi114_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi115_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi116_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi117_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi118_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi119_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi120_UnauthMACID" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi11_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi12_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi13_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi14_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi15_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi16_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi17_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi18_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi19_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi110_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi111_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi112_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi113_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi114_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi115_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi116_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi117_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi118_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi119_ThresholdExceeded" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Gi120_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port01" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Sts_Port02" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Sts_Port03" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port04" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port05" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port06" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port07" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port08" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port09" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port01_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port02_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port03_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port04_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port05_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port06_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port07_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port08_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port09_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port10_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port11_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port12_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port13_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port14_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port15_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port16_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port17_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port18_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port19_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port20_UnauthMACID" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port01_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port02_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port03_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port04_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port05_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port06_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port07_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port08_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port09_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port10_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port11_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port12_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port13_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port14_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port15_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port16_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port17_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port18_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port19_ThresholdExceeded" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port20_ThresholdExceeded" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Sts_MajorAlarm" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Sts_MinorAlarm" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi11" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi12" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi13" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi14" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi15" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi16" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi17" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi18" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi19" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi110" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi111" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi112" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi113" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi114" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi115" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi116" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi117" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi118" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi119" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Cfg_DisableGi120" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort01" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort02" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort03" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort04" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort05" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort06" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort07" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort08" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort09" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cfg_DisablePort20" DataType="BOOL" Value="0"/>
 </Structure>
 </Data>
 </Tag>
@@ -35880,45 +35879,44 @@
 </Tag>
 <Tag Name="MsgAttrAllResp" TagType="Base" DataType="SINT" Dimensions="256" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
-<![CDATA[[-85,3,44,0,1,0,6,1,101,0,-128,-123,-95,110,15,73,69,45,52,48,48,48,45,52,84,67,52,71,45,69,-1,0,0,0,0,0,0,0,-113,-9,90,6,-69
-		,64,6,0,-80,-122,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,5,71,105
-		,49,47,49,2,0,0,0,0,-42,-120,89,8,0,0,0,0,-70,-86,3,0,0,0,0,0,78,2,1,0,0,0,0,0,42,50,0,0,0,0,0,0,-113,-9,90,6,0,0,0,0,-69,64,6,0,0,0,0,0,30
-		,-122,0,0,0,0,0,0,-110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-		,0,0,0,0,0,0,0,0]]]>
+<![CDATA[[1,0,0,0,20,0,0,0,0,0,0,0,2,0,32,-10,36,27,15,32,-88,-64,0,-1,-1,-1,1,32,-88,-64,0,0,0,0,0,0,0,0,0,0,5,0,99,105,115,99,111,0,0,0,0,0,0
+		,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,1,0,0,0,0,0,0,5,71,105,49,47,49,2,0,0,0,0,35
+		,-16,-122,0,0,0,0,0,-87,45,0,0,0,0,0,0,-58,0,0,0,0,0,0,0,117,0,0,0,0,0,0,0,12,-36,46,0,0,0,0,0,127,69,0,0,0,0,0,0,-20,4,0,0,0,0,0,0,71,1,0,0
+		,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]]>
 </Data>
 <Data Format="Decorated">
 <Array DataType="SINT" Dimensions="256" Radix="Decimal">
-<Element Index="[0]" Value="-85"/>
-<Element Index="[1]" Value="3"/>
-<Element Index="[2]" Value="44"/>
+<Element Index="[0]" Value="1"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="0"/>
 <Element Index="[3]" Value="0"/>
-<Element Index="[4]" Value="1"/>
+<Element Index="[4]" Value="20"/>
 <Element Index="[5]" Value="0"/>
-<Element Index="[6]" Value="6"/>
-<Element Index="[7]" Value="1"/>
-<Element Index="[8]" Value="101"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+<Element Index="[8]" Value="0"/>
 <Element Index="[9]" Value="0"/>
-<Element Index="[10]" Value="-128"/>
-<Element Index="[11]" Value="-123"/>
-<Element Index="[12]" Value="-95"/>
-<Element Index="[13]" Value="110"/>
-<Element Index="[14]" Value="15"/>
-<Element Index="[15]" Value="73"/>
-<Element Index="[16]" Value="69"/>
-<Element Index="[17]" Value="45"/>
-<Element Index="[18]" Value="52"/>
-<Element Index="[19]" Value="48"/>
-<Element Index="[20]" Value="48"/>
-<Element Index="[21]" Value="48"/>
-<Element Index="[22]" Value="45"/>
-<Element Index="[23]" Value="52"/>
-<Element Index="[24]" Value="84"/>
-<Element Index="[25]" Value="67"/>
-<Element Index="[26]" Value="52"/>
-<Element Index="[27]" Value="71"/>
-<Element Index="[28]" Value="45"/>
-<Element Index="[29]" Value="69"/>
-<Element Index="[30]" Value="-1"/>
+<Element Index="[10]" Value="0"/>
+<Element Index="[11]" Value="0"/>
+<Element Index="[12]" Value="2"/>
+<Element Index="[13]" Value="0"/>
+<Element Index="[14]" Value="32"/>
+<Element Index="[15]" Value="-10"/>
+<Element Index="[16]" Value="36"/>
+<Element Index="[17]" Value="27"/>
+<Element Index="[18]" Value="15"/>
+<Element Index="[19]" Value="32"/>
+<Element Index="[20]" Value="-88"/>
+<Element Index="[21]" Value="-64"/>
+<Element Index="[22]" Value="0"/>
+<Element Index="[23]" Value="-1"/>
+<Element Index="[24]" Value="-1"/>
+<Element Index="[25]" Value="-1"/>
+<Element Index="[26]" Value="1"/>
+<Element Index="[27]" Value="32"/>
+<Element Index="[28]" Value="-88"/>
+<Element Index="[29]" Value="-64"/>
+<Element Index="[30]" Value="0"/>
 <Element Index="[31]" Value="0"/>
 <Element Index="[32]" Value="0"/>
 <Element Index="[33]" Value="0"/>
@@ -35926,23 +35924,23 @@
 <Element Index="[35]" Value="0"/>
 <Element Index="[36]" Value="0"/>
 <Element Index="[37]" Value="0"/>
-<Element Index="[38]" Value="-113"/>
-<Element Index="[39]" Value="-9"/>
-<Element Index="[40]" Value="90"/>
-<Element Index="[41]" Value="6"/>
-<Element Index="[42]" Value="-69"/>
-<Element Index="[43]" Value="64"/>
-<Element Index="[44]" Value="6"/>
-<Element Index="[45]" Value="0"/>
-<Element Index="[46]" Value="-80"/>
-<Element Index="[47]" Value="-122"/>
+<Element Index="[38]" Value="0"/>
+<Element Index="[39]" Value="0"/>
+<Element Index="[40]" Value="5"/>
+<Element Index="[41]" Value="0"/>
+<Element Index="[42]" Value="99"/>
+<Element Index="[43]" Value="105"/>
+<Element Index="[44]" Value="115"/>
+<Element Index="[45]" Value="99"/>
+<Element Index="[46]" Value="111"/>
+<Element Index="[47]" Value="0"/>
 <Element Index="[48]" Value="0"/>
 <Element Index="[49]" Value="0"/>
 <Element Index="[50]" Value="0"/>
 <Element Index="[51]" Value="0"/>
 <Element Index="[52]" Value="0"/>
 <Element Index="[53]" Value="0"/>
-<Element Index="[54]" Value="0"/>
+<Element Index="[54]" Value="1"/>
 <Element Index="[55]" Value="0"/>
 <Element Index="[56]" Value="0"/>
 <Element Index="[57]" Value="0"/>
@@ -35988,7 +35986,7 @@
 <Element Index="[97]" Value="0"/>
 <Element Index="[98]" Value="0"/>
 <Element Index="[99]" Value="0"/>
-<Element Index="[100]" Value="0"/>
+<Element Index="[100]" Value="120"/>
 <Element Index="[101]" Value="0"/>
 <Element Index="[102]" Value="0"/>
 <Element Index="[103]" Value="0"/>
@@ -36012,64 +36010,64 @@
 <Element Index="[121]" Value="0"/>
 <Element Index="[122]" Value="0"/>
 <Element Index="[123]" Value="0"/>
-<Element Index="[124]" Value="-42"/>
-<Element Index="[125]" Value="-120"/>
-<Element Index="[126]" Value="89"/>
-<Element Index="[127]" Value="8"/>
+<Element Index="[124]" Value="35"/>
+<Element Index="[125]" Value="-16"/>
+<Element Index="[126]" Value="-122"/>
+<Element Index="[127]" Value="0"/>
 <Element Index="[128]" Value="0"/>
 <Element Index="[129]" Value="0"/>
 <Element Index="[130]" Value="0"/>
 <Element Index="[131]" Value="0"/>
-<Element Index="[132]" Value="-70"/>
-<Element Index="[133]" Value="-86"/>
-<Element Index="[134]" Value="3"/>
+<Element Index="[132]" Value="-87"/>
+<Element Index="[133]" Value="45"/>
+<Element Index="[134]" Value="0"/>
 <Element Index="[135]" Value="0"/>
 <Element Index="[136]" Value="0"/>
 <Element Index="[137]" Value="0"/>
 <Element Index="[138]" Value="0"/>
 <Element Index="[139]" Value="0"/>
-<Element Index="[140]" Value="78"/>
-<Element Index="[141]" Value="2"/>
-<Element Index="[142]" Value="1"/>
+<Element Index="[140]" Value="-58"/>
+<Element Index="[141]" Value="0"/>
+<Element Index="[142]" Value="0"/>
 <Element Index="[143]" Value="0"/>
 <Element Index="[144]" Value="0"/>
 <Element Index="[145]" Value="0"/>
 <Element Index="[146]" Value="0"/>
 <Element Index="[147]" Value="0"/>
-<Element Index="[148]" Value="42"/>
-<Element Index="[149]" Value="50"/>
+<Element Index="[148]" Value="117"/>
+<Element Index="[149]" Value="0"/>
 <Element Index="[150]" Value="0"/>
 <Element Index="[151]" Value="0"/>
 <Element Index="[152]" Value="0"/>
 <Element Index="[153]" Value="0"/>
 <Element Index="[154]" Value="0"/>
 <Element Index="[155]" Value="0"/>
-<Element Index="[156]" Value="-113"/>
-<Element Index="[157]" Value="-9"/>
-<Element Index="[158]" Value="90"/>
-<Element Index="[159]" Value="6"/>
+<Element Index="[156]" Value="12"/>
+<Element Index="[157]" Value="-36"/>
+<Element Index="[158]" Value="46"/>
+<Element Index="[159]" Value="0"/>
 <Element Index="[160]" Value="0"/>
 <Element Index="[161]" Value="0"/>
 <Element Index="[162]" Value="0"/>
 <Element Index="[163]" Value="0"/>
-<Element Index="[164]" Value="-69"/>
-<Element Index="[165]" Value="64"/>
-<Element Index="[166]" Value="6"/>
+<Element Index="[164]" Value="127"/>
+<Element Index="[165]" Value="69"/>
+<Element Index="[166]" Value="0"/>
 <Element Index="[167]" Value="0"/>
 <Element Index="[168]" Value="0"/>
 <Element Index="[169]" Value="0"/>
 <Element Index="[170]" Value="0"/>
 <Element Index="[171]" Value="0"/>
-<Element Index="[172]" Value="30"/>
-<Element Index="[173]" Value="-122"/>
+<Element Index="[172]" Value="-20"/>
+<Element Index="[173]" Value="4"/>
 <Element Index="[174]" Value="0"/>
 <Element Index="[175]" Value="0"/>
 <Element Index="[176]" Value="0"/>
 <Element Index="[177]" Value="0"/>
 <Element Index="[178]" Value="0"/>
 <Element Index="[179]" Value="0"/>
-<Element Index="[180]" Value="-110"/>
-<Element Index="[181]" Value="0"/>
+<Element Index="[180]" Value="71"/>
+<Element Index="[181]" Value="1"/>
 <Element Index="[182]" Value="0"/>
 <Element Index="[183]" Value="0"/>
 <Element Index="[184]" Value="0"/>
