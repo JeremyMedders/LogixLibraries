@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Converts an IPv4 address to a string.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Num_IPv4toStr" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-30T11:27:12.764Z" ContainsContext="true" ExportDate="Mon Jan 30 05:28:51 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Num_IPv4toStr" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-30T11:30:25.588Z" ContainsContext="true" ExportDate="Mon Jan 30 05:30:36 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="STR_16" Family="StringFamily" Class="User">
@@ -30,7 +30,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="Num_IPv4toStr" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T19:18:10.350Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T11:27:12.764Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Num_IPv4toStr" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T19:18:10.350Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T11:30:25.588Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Converts an IPv4 address to a string.]]>
@@ -133,57 +133,54 @@
 <![CDATA[COP(Inp_IP, Octs[0], 4);]]>
 </Line>
 <Line Number="6">
-<![CDATA[//DELETE(IPStr, 16, 1, IPStr);]]>
-</Line>
-<Line Number="7">
 <![CDATA[IPStr.LEN := 0;]]>
 </Line>
-<Line Number="8">
+<Line Number="7">
 <![CDATA[i := 3;]]>
 </Line>
-<Line Number="9">
+<Line Number="8">
 <![CDATA[]]>
 </Line>
-<Line Number="10">
+<Line Number="9">
 <![CDATA[while (i >= 0) do]]>
 </Line>
-<Line Number="11">
+<Line Number="10">
 <![CDATA[	Oct := Octs[i];]]>
 </Line>
-<Line Number="12">
+<Line Number="11">
 <![CDATA[	DTOS(Oct, OctStr);]]>
 </Line>
-<Line Number="13">
+<Line Number="12">
 <![CDATA[	CONCAT(IPStr, OctStr, IPStr);]]>
 </Line>
-<Line Number="14">
+<Line Number="13">
 <![CDATA[	]]>
 </Line>
-<Line Number="15">
+<Line Number="14">
 <![CDATA[	if (i > 0) then]]>
 </Line>
-<Line Number="16">
+<Line Number="15">
 <![CDATA[		CONCAT(IPStr, Dot, IPStr);]]>
 </Line>
-<Line Number="17">
+<Line Number="16">
 <![CDATA[	end_if;]]>
 </Line>
-<Line Number="18">
+<Line Number="17">
 <![CDATA[	]]>
 </Line>
-<Line Number="19">
+<Line Number="18">
 <![CDATA[	i := i - 1;]]>
 </Line>
-<Line Number="20">
+<Line Number="19">
 <![CDATA[end_while;]]>
 </Line>
-<Line Number="21">
+<Line Number="20">
 <![CDATA[]]>
 </Line>
-<Line Number="22">
+<Line Number="21">
 <![CDATA[COP(IPStr, Val, 1);]]>
 </Line>
-<Line Number="23">
+<Line Number="22">
 <![CDATA[]]>
 </Line>
 </STContent>
