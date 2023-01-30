@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_Dvc_CiscoIE4000" TargetType="Program" ContainsContext="true" ExportDate="Mon Jan 30 09:09:22 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_Dvc_CiscoIE4000" TargetType="Program" ContainsContext="true" ExportDate="Mon Jan 30 10:02:39 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Dvc" Family="NoFamily" Class="User">
@@ -4108,7 +4108,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T15:06:44.160Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T16:01:44.235Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Cisco IE 4000 Network Switch]]>
@@ -4130,6 +4130,9 @@
 <Parameter Name="Ref_DataOut" TagType="Base" DataType="AB:ETHERNET_MODULE_SINT_4Bytes:O:0" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 <Parameter Name="Ref_Msg" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
 <Parameter Name="Ref_MsgResp" TagType="Base" DataType="SINT" Dimensions="256" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Sts_Connected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Connected" Required="false" Visible="true" ExternalAccess="None"/>
+<Parameter Name="Sts_CommLoss" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Disconnected" Required="false" Visible="true" ExternalAccess="None"/>
+<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Inhibited" Required="false" Visible="true" ExternalAccess="None"/>
 <Parameter Name="Val_Fault" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataIn.Fault" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Port01_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Port02_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
@@ -35767,8 +35770,8 @@
 <Tags>
 <Tag Name="Dvc" TagType="Base" DataType="Dvc_CiscoIE4000" Usage="Public" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
-<![CDATA[[7,[7,0,9,0,11,0,0,0,0,0,128,128,0,[3,11,40,0]],[3,16384,0,0,36317,0,0,16384,16],[47,50,883615475186870,883615475186870
-		],[1,0,0],[3,246,1,0,0],[1,0,0,0],[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+<![CDATA[[7,[7,0,9,0,11,0,0,0,0,0,128,128,0,[3,11,40,0]],[3,16384,0,0,36317,0,0,16384,16],[63,50,883618015986732,883618016036749
+		],[1,0,0],[3,246,0,0,0],[1,0,0,0],[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],0,[0,0,0,0,0]],[[[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
@@ -35776,14 +35779,15 @@
 		,[15,'IE-4000-4TC4G-E$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']],[0,1,20,0,3232243727
 		,4294967040,3232243713,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],[5,'cisco$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		]],[[0,1000,15,[0,42,16,161,133,129],28455419,44183,800,0,0,0,16198049,72587,9243,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Gi1/1$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		],11,0],[0,1000,15,[0,42,16,161,133,130],22245718,151416,7856,0,0,0,40095183,117520,2104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
-		,0,[5,'Gi1/2$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		]],[[0,1000,15,[0,42,16,161,133,129],75676222,131499,14662,0,0,0,64955406,233003,19149,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+		,[5,'Gi1/1$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],11,0],[0,1000,15,[0,42,16,161,133,130],77868758,394145,16092,0,0,0,99724846,277898,17576,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+		,0,0,0,[5,'Gi1/2$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],11,0],[0,0,4,[0,42,16,161,133,131],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Gi1/3$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,4,[0,42,16,161,133,132],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Gi1/4$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,4,[0,42,16,161,133,133],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Fa1/5$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		],0,0],[0,0,4,[0,42,16,161,133,134],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Fa1/6$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		],0,0],[0,0,4,[0,42,16,161,133,135],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Fa1/7$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],0,0],[0,100,15,[0,42,16,161,133,134],27444,0,288,0,0,0,210488,0,2273,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Fa1/6$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],11,0],[0,0,4,[0,42,16,161,133,135],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Fa1/7$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,4,[0,42,16,161,133,136],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,[5,'Fa1/8$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
@@ -35797,12 +35801,15 @@
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
 		],0,0],[0,0,0,[0,0,0,0,0,0],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
-		],0,0]]],[0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[0]],0,[3],[3,42,2],[3],45,2]]]>
+		],0,0]]],[0,71,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[0]],0,[3],[3,42,2],[3],45,1]]]>
 </Data>
 <Data Format="Decorated">
 <Structure DataType="Dvc_CiscoIE4000">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Sts_Connected" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Sts_CommLoss" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Inhibited" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Val_Fault" DataType="DINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="Val_Port01_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
 <DataValueMember Name="Val_Port02_Utilization" DataType="SINT" Radix="Decimal" Value="0"/>
@@ -35830,7 +35837,7 @@
 <DataValueMember Name="Sts_Port03" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Sts_Port04" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Sts_Port05" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Sts_Port06" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Port06" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Sts_Port07" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Sts_Port08" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Sts_Port09" DataType="BOOL" Value="0"/>
@@ -35918,43 +35925,43 @@
 </Tag>
 <Tag Name="MsgAttrAllResp" TagType="Base" DataType="SINT" Dimensions="256" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
-<![CDATA[[-24,3,0,0,15,0,0,0,0,42,16,-95,-123,-127,-5,49,-78,1,-105,-84,0,0,32,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-95,41,-9,0,-117,27,1,0,27,36
-		,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,5,71,105,49,47,49,2,0,0,0
-		,0,-5,49,-78,1,0,0,0,0,-105,-84,0,0,0,0,0,0,-94,1,0,0,0,0,0,0,126,1,0,0,0,0,0,0,-95,41,-9,0,0,0,0,0,-117,27,1,0,0,0,0,0,30,28,0,0,0,0,0,0,-3
-		,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]]>
+<![CDATA[[4,0,27,0,9,0,0,0,0,0,105,0,-101,0,32,-10,36,27,15,32,-88,-64,0,-1,-1,-1,1,32,-88,-64,0,0,0,0,0,0,0,0,0,0,5,0,99,105,115,99,111,0
+		,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,1,0,0,0,0,0,0,5,70,97,49,47,56,2,0,0
+		,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+		,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]]>
 </Data>
 <Data Format="Decorated">
 <Array DataType="SINT" Dimensions="256" Radix="Decimal">
-<Element Index="[0]" Value="-24"/>
-<Element Index="[1]" Value="3"/>
-<Element Index="[2]" Value="0"/>
+<Element Index="[0]" Value="4"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="27"/>
 <Element Index="[3]" Value="0"/>
-<Element Index="[4]" Value="15"/>
+<Element Index="[4]" Value="9"/>
 <Element Index="[5]" Value="0"/>
 <Element Index="[6]" Value="0"/>
 <Element Index="[7]" Value="0"/>
 <Element Index="[8]" Value="0"/>
-<Element Index="[9]" Value="42"/>
-<Element Index="[10]" Value="16"/>
-<Element Index="[11]" Value="-95"/>
-<Element Index="[12]" Value="-123"/>
-<Element Index="[13]" Value="-127"/>
-<Element Index="[14]" Value="-5"/>
-<Element Index="[15]" Value="49"/>
-<Element Index="[16]" Value="-78"/>
-<Element Index="[17]" Value="1"/>
-<Element Index="[18]" Value="-105"/>
-<Element Index="[19]" Value="-84"/>
-<Element Index="[20]" Value="0"/>
-<Element Index="[21]" Value="0"/>
-<Element Index="[22]" Value="32"/>
-<Element Index="[23]" Value="3"/>
-<Element Index="[24]" Value="0"/>
-<Element Index="[25]" Value="0"/>
-<Element Index="[26]" Value="0"/>
-<Element Index="[27]" Value="0"/>
-<Element Index="[28]" Value="0"/>
-<Element Index="[29]" Value="0"/>
+<Element Index="[9]" Value="0"/>
+<Element Index="[10]" Value="105"/>
+<Element Index="[11]" Value="0"/>
+<Element Index="[12]" Value="-101"/>
+<Element Index="[13]" Value="0"/>
+<Element Index="[14]" Value="32"/>
+<Element Index="[15]" Value="-10"/>
+<Element Index="[16]" Value="36"/>
+<Element Index="[17]" Value="27"/>
+<Element Index="[18]" Value="15"/>
+<Element Index="[19]" Value="32"/>
+<Element Index="[20]" Value="-88"/>
+<Element Index="[21]" Value="-64"/>
+<Element Index="[22]" Value="0"/>
+<Element Index="[23]" Value="-1"/>
+<Element Index="[24]" Value="-1"/>
+<Element Index="[25]" Value="-1"/>
+<Element Index="[26]" Value="1"/>
+<Element Index="[27]" Value="32"/>
+<Element Index="[28]" Value="-88"/>
+<Element Index="[29]" Value="-64"/>
 <Element Index="[30]" Value="0"/>
 <Element Index="[31]" Value="0"/>
 <Element Index="[32]" Value="0"/>
@@ -35963,23 +35970,23 @@
 <Element Index="[35]" Value="0"/>
 <Element Index="[36]" Value="0"/>
 <Element Index="[37]" Value="0"/>
-<Element Index="[38]" Value="-95"/>
-<Element Index="[39]" Value="41"/>
-<Element Index="[40]" Value="-9"/>
+<Element Index="[38]" Value="0"/>
+<Element Index="[39]" Value="0"/>
+<Element Index="[40]" Value="5"/>
 <Element Index="[41]" Value="0"/>
-<Element Index="[42]" Value="-117"/>
-<Element Index="[43]" Value="27"/>
-<Element Index="[44]" Value="1"/>
-<Element Index="[45]" Value="0"/>
-<Element Index="[46]" Value="27"/>
-<Element Index="[47]" Value="36"/>
+<Element Index="[42]" Value="99"/>
+<Element Index="[43]" Value="105"/>
+<Element Index="[44]" Value="115"/>
+<Element Index="[45]" Value="99"/>
+<Element Index="[46]" Value="111"/>
+<Element Index="[47]" Value="0"/>
 <Element Index="[48]" Value="0"/>
 <Element Index="[49]" Value="0"/>
 <Element Index="[50]" Value="0"/>
 <Element Index="[51]" Value="0"/>
 <Element Index="[52]" Value="0"/>
 <Element Index="[53]" Value="0"/>
-<Element Index="[54]" Value="0"/>
+<Element Index="[54]" Value="1"/>
 <Element Index="[55]" Value="0"/>
 <Element Index="[56]" Value="0"/>
 <Element Index="[57]" Value="0"/>
@@ -36025,7 +36032,7 @@
 <Element Index="[97]" Value="0"/>
 <Element Index="[98]" Value="0"/>
 <Element Index="[99]" Value="0"/>
-<Element Index="[100]" Value="0"/>
+<Element Index="[100]" Value="120"/>
 <Element Index="[101]" Value="0"/>
 <Element Index="[102]" Value="0"/>
 <Element Index="[103]" Value="0"/>
@@ -36039,74 +36046,74 @@
 <Element Index="[111]" Value="0"/>
 <Element Index="[112]" Value="0"/>
 <Element Index="[113]" Value="5"/>
-<Element Index="[114]" Value="71"/>
-<Element Index="[115]" Value="105"/>
+<Element Index="[114]" Value="70"/>
+<Element Index="[115]" Value="97"/>
 <Element Index="[116]" Value="49"/>
 <Element Index="[117]" Value="47"/>
-<Element Index="[118]" Value="49"/>
+<Element Index="[118]" Value="56"/>
 <Element Index="[119]" Value="2"/>
 <Element Index="[120]" Value="0"/>
 <Element Index="[121]" Value="0"/>
 <Element Index="[122]" Value="0"/>
 <Element Index="[123]" Value="0"/>
-<Element Index="[124]" Value="-5"/>
-<Element Index="[125]" Value="49"/>
-<Element Index="[126]" Value="-78"/>
-<Element Index="[127]" Value="1"/>
+<Element Index="[124]" Value="0"/>
+<Element Index="[125]" Value="0"/>
+<Element Index="[126]" Value="0"/>
+<Element Index="[127]" Value="0"/>
 <Element Index="[128]" Value="0"/>
 <Element Index="[129]" Value="0"/>
 <Element Index="[130]" Value="0"/>
 <Element Index="[131]" Value="0"/>
-<Element Index="[132]" Value="-105"/>
-<Element Index="[133]" Value="-84"/>
+<Element Index="[132]" Value="0"/>
+<Element Index="[133]" Value="0"/>
 <Element Index="[134]" Value="0"/>
 <Element Index="[135]" Value="0"/>
 <Element Index="[136]" Value="0"/>
 <Element Index="[137]" Value="0"/>
 <Element Index="[138]" Value="0"/>
 <Element Index="[139]" Value="0"/>
-<Element Index="[140]" Value="-94"/>
-<Element Index="[141]" Value="1"/>
+<Element Index="[140]" Value="0"/>
+<Element Index="[141]" Value="0"/>
 <Element Index="[142]" Value="0"/>
 <Element Index="[143]" Value="0"/>
 <Element Index="[144]" Value="0"/>
 <Element Index="[145]" Value="0"/>
 <Element Index="[146]" Value="0"/>
 <Element Index="[147]" Value="0"/>
-<Element Index="[148]" Value="126"/>
-<Element Index="[149]" Value="1"/>
+<Element Index="[148]" Value="0"/>
+<Element Index="[149]" Value="0"/>
 <Element Index="[150]" Value="0"/>
 <Element Index="[151]" Value="0"/>
 <Element Index="[152]" Value="0"/>
 <Element Index="[153]" Value="0"/>
 <Element Index="[154]" Value="0"/>
 <Element Index="[155]" Value="0"/>
-<Element Index="[156]" Value="-95"/>
-<Element Index="[157]" Value="41"/>
-<Element Index="[158]" Value="-9"/>
+<Element Index="[156]" Value="0"/>
+<Element Index="[157]" Value="0"/>
+<Element Index="[158]" Value="0"/>
 <Element Index="[159]" Value="0"/>
 <Element Index="[160]" Value="0"/>
 <Element Index="[161]" Value="0"/>
 <Element Index="[162]" Value="0"/>
 <Element Index="[163]" Value="0"/>
-<Element Index="[164]" Value="-117"/>
-<Element Index="[165]" Value="27"/>
-<Element Index="[166]" Value="1"/>
+<Element Index="[164]" Value="0"/>
+<Element Index="[165]" Value="0"/>
+<Element Index="[166]" Value="0"/>
 <Element Index="[167]" Value="0"/>
 <Element Index="[168]" Value="0"/>
 <Element Index="[169]" Value="0"/>
 <Element Index="[170]" Value="0"/>
 <Element Index="[171]" Value="0"/>
-<Element Index="[172]" Value="30"/>
-<Element Index="[173]" Value="28"/>
+<Element Index="[172]" Value="0"/>
+<Element Index="[173]" Value="0"/>
 <Element Index="[174]" Value="0"/>
 <Element Index="[175]" Value="0"/>
 <Element Index="[176]" Value="0"/>
 <Element Index="[177]" Value="0"/>
 <Element Index="[178]" Value="0"/>
 <Element Index="[179]" Value="0"/>
-<Element Index="[180]" Value="-3"/>
-<Element Index="[181]" Value="7"/>
+<Element Index="[180]" Value="0"/>
+<Element Index="[181]" Value="0"/>
 <Element Index="[182]" Value="0"/>
 <Element Index="[183]" Value="0"/>
 <Element Index="[184]" Value="0"/>
