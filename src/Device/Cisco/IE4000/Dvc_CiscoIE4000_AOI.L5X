@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Cisco IE 4000 Network Switch-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_CiscoIE4000" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-30T15:06:44.160Z" ContainsContext="true" ExportDate="Mon Jan 30 09:09:32 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_CiscoIE4000" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-30T16:01:44.235Z" ContainsContext="true" ExportDate="Mon Jan 30 10:02:25 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Dvc" Family="NoFamily" Class="User">
@@ -4105,7 +4105,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T15:06:44.160Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T16:01:44.235Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Cisco IE 4000 Network Switch]]>
@@ -4127,6 +4127,9 @@
 <Parameter Name="Ref_DataOut" TagType="Base" DataType="AB:ETHERNET_MODULE_SINT_4Bytes:O:0" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 <Parameter Name="Ref_Msg" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
 <Parameter Name="Ref_MsgResp" TagType="Base" DataType="SINT" Dimensions="256" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Sts_Connected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Connected" Required="false" Visible="true" ExternalAccess="None"/>
+<Parameter Name="Sts_CommLoss" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Disconnected" Required="false" Visible="true" ExternalAccess="None"/>
+<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Inhibited" Required="false" Visible="true" ExternalAccess="None"/>
 <Parameter Name="Val_Fault" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Local.DataIn.Fault" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Port01_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Port02_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
