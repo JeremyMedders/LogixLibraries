@@ -8,7 +8,7 @@ Structured text is generally used for AOI definitions to ease porting between IE
 
 Wiki: https://github.com/JeremyMedders/LogixLibraries/wiki
 
-Contents
+Content
 ------------
 - **CIP** (CIP_): Common Industrial Protocol utilities and structs.
 - **Device** (Dvc_): Device drivers.
