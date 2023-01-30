@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="CIP_GetAttrAll_Port" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-30T06:00:38.091Z" ContainsContext="true" ExportDate="Mon Jan 30 05:36:25 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_Sys_Port" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Description>
+<![CDATA[CIP Port object.]]>
+</Description>
+<Members>
+<Member Name="Type" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 1]]>
+</Description>
+</Member>
+<Member Name="Number" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 2]]>
+</Description>
+</Member>
+<Member Name="LinkObjectPath" DataType="STR_12" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 3]]>
+</Description>
+</Member>
+<Member Name="Name" DataType="STR_64" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="TypeName" DataType="STR_64" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="NodeAddress" DataType="SINT" Dimension="82" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_12"/>
+<Dependency Type="DataType" Name="STR_64"/>
+<Dependency Type="DataType" Name="STR_64"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_12" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="12" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_64" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="64" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="CIP_GetAttrAll_Port" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-30T05:33:27.389Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T06:00:38.091Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Data" TagType="Base" DataType="SINT" Dimensions="256" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="Ref_Instance" TagType="Base" DataType="ST_Sys_Port" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Offset" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="INT" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Index" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	CIP_GetAttrAll_TCPIPInterface]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[COP(Ref_Data[0], Ref_Instance.Type, 2);]]>
+</Line>
+<Line Number="6">
+<![CDATA[COP(Ref_Data[4], INT, 1);]]>
+</Line>
+<Line Number="7">
+<![CDATA[Ref_Instance.LinkObjectPath.LEN := INT;]]>
+</Line>
+<Line Number="8">
+<![CDATA[Offset := Ref_Instance.LinkObjectPath.LEN * 2;]]>
+</Line>
+<Line Number="9">
+<![CDATA[Index := 6;]]>
+</Line>
+<Line Number="10">
+<![CDATA[COP(Ref_Data[Index], Ref_Instance.LinkObjectPath.DATA[0], Offset);]]>
+</Line>
+<Line Number="11">
+<![CDATA[]]>
+</Line>
+<Line Number="12">
+<![CDATA[SIZE(Ref_Instance.Name.DATA, 0, Size);]]>
+</Line>
+<Line Number="13">
+<![CDATA[i := 0;]]>
+</Line>
+<Line Number="14">
+<![CDATA[while i < Size do]]>
+</Line>
+<Line Number="15">
+<![CDATA[	Ref_Instance.Name.DATA[i] := 0;]]>
+</Line>
+<Line Number="16">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="17">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="18">
+<![CDATA[]]>
+</Line>
+<Line Number="19">
+<![CDATA[Index := Index + Offset;]]>
+</Line>
+<Line Number="20">
+<![CDATA[Ref_Instance.Name.LEN := Ref_Data[Index];]]>
+</Line>
+<Line Number="21">
+<![CDATA[Offset := Ref_Instance.Name.LEN;]]>
+</Line>
+<Line Number="22">
+<![CDATA[Index := Index + 1;]]>
+</Line>
+<Line Number="23">
+<![CDATA[COP(Ref_Data[Index], Ref_Instance.Name.DATA[0], Offset);]]>
+</Line>
+<Line Number="24">
+<![CDATA[]]>
+</Line>
+<Line Number="25">
+<![CDATA[if (Ref_Instance.Type = 1 OR Ref_Instance.Type = 100 OR Ref_Instance.Type = 109) then]]>
+</Line>
+<Line Number="26">
+<![CDATA[	Ref_Instance.TypeName := 'Backplane';]]>
+</Line>
+<Line Number="27">
+<![CDATA[elsif (Ref_Instance.Type = 2) then]]>
+</Line>
+<Line Number="28">
+<![CDATA[	Ref_Instance.TypeName := 'ControlNet';]]>
+</Line>
+<Line Number="29">
+<![CDATA[elsif (Ref_Instance.Type = 4) then]]>
+</Line>
+<Line Number="30">
+<![CDATA[	Ref_Instance.TypeName := 'EtherNet/IP';]]>
+</Line>
+<Line Number="31">
+<![CDATA[elsif (Ref_Instance.Type = 5) then]]>
+</Line>
+<Line Number="32">
+<![CDATA[	Ref_Instance.TypeName := 'DeviceNet';]]>
+</Line>
+<Line Number="33">
+<![CDATA[elsif (Ref_Instance.Type = 104) then]]>
+</Line>
+<Line Number="34">
+<![CDATA[	Ref_Instance.TypeName := 'HIM';]]>
+</Line>
+<Line Number="35">
+<![CDATA[elsif (Ref_Instance.Type = 107) then]]>
+</Line>
+<Line Number="36">
+<![CDATA[	Ref_Instance.TypeName := 'PCviaUSB';]]>
+</Line>
+<Line Number="37">
+<![CDATA[elsif (Ref_Instance.Type = 200) then]]>
+</Line>
+<Line Number="38">
+<![CDATA[	Ref_Instance.TypeName := 'CompoNet';]]>
+</Line>
+<Line Number="39">
+<![CDATA[elsif (Ref_Instance.Type = 201) then]]>
+</Line>
+<Line Number="40">
+<![CDATA[	Ref_Instance.TypeName := 'Modbus/TCP';]]>
+</Line>
+<Line Number="41">
+<![CDATA[elsif (Ref_Instance.Type = 202) then]]>
+</Line>
+<Line Number="42">
+<![CDATA[	Ref_Instance.TypeName := 'Modbus/SL';]]>
+</Line>
+<Line Number="43">
+<![CDATA[elsif (Ref_Instance.Type = 65535) then]]>
+</Line>
+<Line Number="44">
+<![CDATA[	Ref_Instance.TypeName := 'Unconfigured';]]>
+</Line>
+<Line Number="45">
+<![CDATA[else]]>
+</Line>
+<Line Number="46">
+<![CDATA[	Ref_Instance.TypeName := '';]]>
+</Line>
+<Line Number="47">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="48">
+<![CDATA[]]>
+</Line>
+<Line Number="49">
+<![CDATA[SIZE(Ref_Instance.NodeAddress, 0, Size);]]>
+</Line>
+<Line Number="50">
+<![CDATA[i := 0;]]>
+</Line>
+<Line Number="51">
+<![CDATA[while i < Size do]]>
+</Line>
+<Line Number="52">
+<![CDATA[	Ref_Instance.NodeAddress[i] := 0;]]>
+</Line>
+<Line Number="53">
+<![CDATA[	i := i + 1;]]>
+</Line>
+<Line Number="54">
+<![CDATA[end_while;]]>
+</Line>
+<Line Number="55">
+<![CDATA[]]>
+</Line>
+<Line Number="56">
+<![CDATA[Index := Index + Offset;]]>
+</Line>
+<Line Number="57">
+<![CDATA[Ref_Instance.NodeAddress[0] := Ref_Data[Index];]]>
+</Line>
+<Line Number="58">
+<![CDATA[Index := Index + 1;]]>
+</Line>
+<Line Number="59">
+<![CDATA[Ref_Instance.NodeAddress[1] := Ref_Data[Index];]]>
+</Line>
+<Line Number="60">
+<![CDATA[Offset := Ref_Data[Index];]]>
+</Line>
+<Line Number="61">
+<![CDATA[Index := Index + 1;]]>
+</Line>
+<Line Number="62">
+<![CDATA[COP(Ref_Data[Index], Ref_Instance.NodeAddress[2], Offset);]]>
+</Line>
+<Line Number="63">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Sys_Port"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
