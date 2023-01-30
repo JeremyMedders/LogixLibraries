@@ -10,7 +10,7 @@ Wiki: https://github.com/JeremyMedders/LogixLibraries/wiki
 
 Contents
 ------------
-- **CIP**: Common Industrial Protocol utilities and structs.
+- **CIP** (CIP_): Common Industrial Protocol utilities and structs.
 - **Device** (Dvc_): Device drivers.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
