@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_CiscoIE4000" TargetType="Module" ContainsContext="true" ExportDate="Mon Jan 30 04:59:35 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_CiscoIE4000" TargetType="Module" ContainsContext="true" ExportDate="Mon Jan 30 05:08:44 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <Modules Use="Context">
 <Module Use="Target" Name="Dev_CiscoIE4000" CatalogNumber="ETHERNET-MODULE" Vendor="1" ProductType="0" ProductCode="18" Major="1" Minor="1" ParentModule="Local" ParentModPortId="2" Inhibited="false"
@@ -425,7 +425,7 @@
 </Data>
 </ConfigTag>
 <Connections>
-<Connection Name="Standard" RPI="100000" Type="Output" InputCxnPoint="101" OutputCxnPoint="102" OutputSize="4" InputSize="56" EventID="0" ProgrammaticallySendEventTrigger="false" Unicast="true">
+<Connection Name="Standard" RPI="50000" Type="Output" InputCxnPoint="101" OutputCxnPoint="102" OutputSize="4" InputSize="56" EventID="0" ProgrammaticallySendEventTrigger="false" Unicast="true">
 <InputTag ExternalAccess="Read Only">
 <Data Format="Decorated">
 <Structure DataType="AB:ETHERNET_MODULE_SINT_56Bytes:I:0">
