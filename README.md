@@ -78,6 +78,7 @@ Done:
 - IO module / connection templates (ongoing)
 - Numeric library release
 - PackML state machine starter and sample
+- MIT license
 
 "Legacy" hazards
 ------------
