@@ -66,6 +66,7 @@ To-Do
 - AOI dependency chart/tree/spreadsheet
 - Produce/Consume tags "the smart way" guide with UDTs and sample
 - UI_ListVisitor
+- Str_Copy
 
 Done:
 - Open discussion board
