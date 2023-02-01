@@ -19,6 +19,7 @@ Content
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
 - **Numeric** (Num_): Forms string representations of various types of numbers.
 - **Process** (Op_): Lightweight PAx-style blocks.
+- **Recipe** (Recipe_)
 - **RTC** (RTC_): Precision pulse/timing utilities.
 - **String** (Str_): String utilities.
 - **System** (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
