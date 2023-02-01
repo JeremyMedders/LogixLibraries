@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Visitor of an array of REAL.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Array_RVIS" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-31T22:15:07.795Z" ContainsContext="true" ExportDate="Tue Jan 31 16:15:49 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Array_RVIS" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-01T02:52:56.323Z" ContainsContext="true" ExportDate="Tue Jan 31 21:43:29 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Array" Family="NoFamily" Class="User">
@@ -171,7 +171,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Array_RVIS" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-16T23:22:49.480Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-31T22:15:07.795Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Array_RVIS" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-16T23:22:49.480Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-01T02:52:56.323Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Visitor of an array of REAL.]]>
@@ -192,7 +192,7 @@
 <![CDATA[Array.]]>
 </Description>
 </Parameter>
-<Parameter Name="Inp_Sync" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Parameter Name="Inp_Sync" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[0]]>
 </DefaultData>
