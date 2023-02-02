@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Cisco IE 4000 Network Switch-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_CiscoIE4000" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-30T16:01:44.235Z" ContainsContext="true" ExportDate="Mon Jan 30 10:02:25 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_CiscoIE4000" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-02T17:57:05.917Z" ContainsContext="true" ExportDate="Thu Feb 02 12:02:32 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Dvc" Family="NoFamily" Class="User">
@@ -2685,7 +2685,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Name="RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T02:52:26.487Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T02:52:26.487Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Generates precision pulses on configurable intervals.]]>
@@ -3009,7 +3009,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="CIP_GetAttrAll_EthernetLink" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-30T05:33:27.389Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T05:49:19.283Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="CIP_GetAttrAll_EthernetLink" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-30T05:33:27.389Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2023-01-30T05:49:19.283Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -3111,7 +3111,7 @@
 <Dependency Type="DataType" Name="ST_Sys_EthernetLink"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="CIP_GetAttrAll_Identity" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-30T05:33:27.389Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T05:48:48.788Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="CIP_GetAttrAll_Identity" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-30T05:33:27.389Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2023-01-30T05:48:48.788Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -3168,7 +3168,7 @@
 <Dependency Type="DataType" Name="ST_Sys_Identity"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="CIP_GetAttrAll_TCPIPInterface" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-30T05:33:27.389Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T10:55:11.014Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="CIP_GetAttrAll_TCPIPInterface" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-30T05:33:27.389Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2023-01-30T10:55:11.014Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -4105,7 +4105,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T16:01:44.235Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2023-02-02T17:57:05.917Z" EditedBy="RLCCONTROLS\jrogers"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Cisco IE 4000 Network Switch]]>
@@ -5960,7 +5960,7 @@
 <![CDATA[*/]]>
 </Line>
 <Line Number="21">
-<![CDATA[PG.Inp_Interval := 50;]]>
+<![CDATA[PG.Inp_Interval := 100;]]>
 </Line>
 <Line Number="22">
 <![CDATA[PG.Inp_Enable := Module.Sts_Connected;]]>
