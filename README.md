@@ -18,7 +18,7 @@ Content
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
 - **Numeric** (Num_): Forms string representations of various types of numbers.
-- **Param** (Param_): Experimental BS
+- **Param** (Param_): Experimental generic parameter handling.
 - **Process** (Op_): Lightweight PAx-style blocks.
 - **Recipe** (Recipe_)
 - **RTC** (RTC_): Precision pulse/timing utilities.
@@ -70,7 +70,6 @@ To-Do
 - AOI dependency chart/tree/spreadsheet
 - Produce/Consume tags "the smart way" guide with UDTs and sample
 - UI_ListVisitor
-- Str_Copy
 
 Done:
 - Open discussion board
@@ -84,6 +83,8 @@ Done:
 - Numeric library release
 - PackML state machine starter and sample
 - MIT license
+- Str_Copy
+- Initial parameter library (experimental)
 
 "Legacy" hazards
 ------------
