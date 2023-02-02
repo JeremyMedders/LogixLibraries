@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_Param" TargetType="Program" ContainsContext="true" ExportDate="Thu Feb 02 09:37:28 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_Param" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Type" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Number" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Enabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="DeviationEnabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Name" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ingredient" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Comment" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EU" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EUShort" DataType="STR_8" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="CastData" DataType="ST_ParamOBJ" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="STR_8"/>
+<Dependency Type="DataType" Name="ST_ParamOBJ"/>
+</Dependencies>
+</DataType>
+<DataType Name="ST_ParamBOOL" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZST_RecipeP0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Val" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZST_RecipeP0" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Pad" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="ST_ParamOBJ" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Data" DataType="SINT" Dimension="8" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_20" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="20" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_8" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="8" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<EncodedData EncodedType="AddOnInstructionDefinition" Name="Param_Cast" Revision="1.0" Vendor="Jeremy Medders" EditedDate="2023-02-02T14:55:26.457Z" SoftwareRevision="v35.00" EncryptionConfig="9">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Param" TagType="Base" DataType="ST_Param" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asBOOL" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asINT" TagType="Base" DataType="INT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asUINT" TagType="Base" DataType="UINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asDINT" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asUDINT" TagType="Base" DataType="UDINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asLINT" TagType="Base" DataType="LINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asULINT" TagType="Base" DataType="ULINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asREAL" TagType="Base" DataType="REAL" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asLREAL" TagType="Base" DataType="LREAL" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asParam" TagType="Base" DataType="ST_Param" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Param"/>
+</Dependencies>
+AAn7p/plgvB/ACBlf/fri7JKuJNSiF56TTh2gt4ri0SjvVsf4j+4H4EEltYGnrij1RDsI72F4AtpurBsH52UCT4YLkkeTcYDfR0+QYcjNR/mw17+GmKdBVgJCp8KBzj1LGM20drN/Pf8usC3ouRrUquQJX3l+i1jESb7V6YD7A4DkMEfbR1Gfaxwr1rqxZKf7LB2zQYiImAYkNzLHMxhbpQIONfsSzevCPTxHhMIG4PonbdJHJ4+rKkssvJVYyLYv7G0MMBiyx8yZkn9SR5Bfr5Twyb4ppGXa6kKHaG+cEqtXkA30EdAinphrrZpf3DNKne5j04dIC/3b3FSgOyhz+FChvcZXQU/Ab7yTdiAd0VeSRnpxMQdapVKtnLx0URHNcjzn/XrBlAAT9LpFdOop25iZhpDdUdB4GzPu84d4w9+hO88BahZzV80p4jG1XZwItqwVKYySS15ksA2KqDx2CfSKyKB0+IwdQ8eLnJXJBp5n3C7NSebFrH0dIpSVcxoW31MZ13AJxSSJnZr/LRL2Vi2DtWjUDe8yYYWS2OxP0yPkcaD0u1PYgwoV4DnHxGW6MpdgiaXCFFJED2BUw6mQ52A4VqKwcXkEXkeYDBPVRbEUR/dVsK2+LahlrT26MwktewphTdflIWEkV89TxK2wea+XRSRzce2wWcrnkd7oHcan8ag3MNUctlL4VSA1b5GVqOE32DA1f7cQDvwqhxM4Nuj/WwXtsifjZ1rzX5WDr7P1Oz/Y51zW6mom+6wgfDMaN01yGqV8149Nb57ZV4d8A03/Mjq184rMtQ4bD3r8BDcKvwOuBDdzelIv7QEqoIVcB0UekFtq/+kN2mCXhaQ1BSZziLzaKuxZfqdqGVtCR00r99nIYtIR9C3pA1pgy7SdM6AQ+frCqn9NYfqIhbfJbJ9AL6odKzTlUnyGoZ4469AJmn/5D7m/mCSflHCpRZaUeZQNZUto/0EeoS3iwpbYALbgXumAXWx7bee27CS9uuQjFIj0RVE186ZDopOIsnFIdSLaPF3Nzj3uOY2E4d0g0Wndo+skULedyGil/TLxNNGQhc1/SWxGggJVQTskK7brdubCtajJvCFzwQGe2ZaehGQL4T+f04be0wUbOOZ/4tQSK+srrQyU+43LMF/ucvzceY5Iw9AWKF0BUqUwicDKoRs0gXNTHdQVnPPJfw+EMFqSxCROvq2SZMkqa/HQe+EivoQ0G9i+exVuGNVaW6/E6QJAiO1vkKVASSH3632aPKFQyCohDTCvVtHdWIKwkujCvQwidlQraj6mnzXeKfgq3p5kWUFeAGCzWrcCynA5NUEdiAkZXD4Z4V/qJhBDVt0FJQMZHCi3dI07qVo0nkh0aYiwSJFjXxjPcPi77G/mQlBFYsCtQga5p3n4dD1FUH72vV2jGog+iRzURc26Rofmzs4u2HM2QS4b+kIq0JAvbuqD/BgI4XDsltRVZvL6wixqpKjQoDRGNhxhs1EJ+7eYfyuYvEIuoZ3eC9XAtTgs3W7HadL8YFLfhfwPyt0oRY3NyOK1KvB7zjViRRuUKUn2e0dpf/dVXPAVrC0bZWKQGnRLW0Sf9QL4N5zWSzHQXniICXpK+B5qW+4MxMvk9amIwb1qiaV2i98Jy1gwYQP7AcG24Jlw2bDJILogDf+FfF1THArOaS4mu8gvvpyyJSNtRVXyqyY2bh/T+HygEsnYcbaOengTIhRJuS95dfcfGvcrYSt/YEcjOlm3rZWleXfm3uFbamx0QUG+6QYFC8SoRCjEspHjp8kcJrJ1Kwhq0vvhkz6WCnMIQsxI6R77XsTajMf+LScb9e6L8+wnFpqbXaEed8ibeZeG7y5CjB0U3Z8Q0ZDCEpOgZrO7dQxT1s0aqfFCYP801QA7pRH6Xm4EVw830hwYGMspt87AMQrEokmltEtGLjqWRVixCZ4Gt9FzuFqA4Eu/0aORs5Vsz8cFsY35mo1ZaYwpSsXMgsV2UVlJp189LYaSJgJPSSZXbeZOvfwEbnR/zyXmV3+97s9SPm8eODrSt/mjQHwCgfIvES2FQdM2WyhZEITyrX9AVK5QRmI1O4vx3xrTkWoh3ht8OpWkUWU0vyHXReY1+VwAf2AAulbQ8wWDGhVB7BuNlCpJBe6T4xZfFCBjz2ZrIwEuLC/6lnM7BDRnnV9Se6++85qoZ33V82tBPR47InUozO+MM7m6FnMVvjG2d3D6MRjniMpHWfkxglK5SI+Gs9/VTZHlxunXQz3Cf5eAPoL8Jp+4jdkbm26MoSktBKh9T80ugbuljdEwFTNXe2S4vb9bo3R4jruY43EbgyKMmeE6N4j+y4lgY/qPd9AlpCm8O3D9SMLYbMeWkqjl002l/Jz9ORjONVWyeBAdowZ4v1oLDA0+XgcJ9MSf2L/lYN4/gn9DHTE6bIpX5IsO5xdhyqYXjHC1rIM7s9501eyelif+Wtf7VE0K3gcKHKgSiQ6SwthFmwJqtRGFUlLI7J1U63DZh7nuJqJ9RDkxVi6HYs8ocYqa9UW+XsCaLqCbTgYTKe3VHbYofw/4gzEogwuaaIyrbpl2SfF+Or8C1uA+ll/tGTtuaX2QYTSrdKWATXI+bptW7GRHpMOQIp9gGKcgE+L9MGOq4M/+kMN5mdlL4mVnYXBfyPVf1qWHiNWlJA3LQapeiFbQIfRQvm59zUWPEh3c5cD2evEZfBuPsvEtaj9EiBtKkt15quU1y6i6WRoP/qcWHve2+9DzzjQE4UgxxDB/lbSCphNmYBkJ9eGW9sHHJxf6hIGi/LWr0v/NGYFMPUykxsNF76/NCyZ3AdFoJBBuEbWTy7FJBP/hbAQQcp9Tlp2m6nrWcE92arYlXIAo9RmkeGk82o3H+ZcVh1MJeyisk07Q9jKGEmJ4EhP3UtmqzblDtNNxYzarDzkebgC8MmEF8bLD00QIG4in8Ceifncn3bUnQzcyhnOA0plfgoaBqV72YpaPqxTxe4QCP+I7K7AOuwVWpRNuEAHXb/ausqQbFC3XXUlF4qfD/j+iIpNQ7al3DwNqMt9ryONWkH7L50D7jHMnJDqvuWzAH9/ZUeFNNpi8Wrm2rzRNG9KV9yH+TpsCg2ZSn6tVDjiobg1q6PWNzlgmwsoXxQ0Eda/yh0wIvpj8z4yk5j/ew6Nuqtyc4SvdG1Yc/IbYpPk11hIWA6fxwV/gNuQOJuowUyTW65MVMBns+WobKff2IhTWE0Q7NfIrmwaeQLko31UswRZhf113iyWz9Md5nnq5Be/d+0NE9V6DMTiSeWoeKXzdvup8X9vWmAbple3c3TxydgbklkL8heA85GRrn+xWxwGlpvgIWS8UKQJyiXZvV3FZh04OA0Dx1bTOF03YaNmqThl2d78tMixL0/MaFV3Ve5H5qwq23l44G/lGq49DiKTHxKOORXD0EWzVRt5OU+aRdc1ZlOxECCTNkGNdEaqOdfMPR8l6K74RLqIkkKwaJuoev33FwwbK41h20DlrVoB3+UvQxbcIaqaWYT5E2gsZEGSUqyqiQs8svmX7eSZoMQyestvFzRKM8sBcuyZT08/nObzP7lrxrgzuTNGLyNB9fp4ml3knbsCpxDxrPaCrmdS+VDI+jqDxTAr8xMLSQlinPTUNLN6Gn/IlVkEKbz5pUmMrciC0zSEUEzpgdkgs4bUFG5TsG9F2BhPUXJV0HcOq5FPOXKD41p4rF6bJhEBqIvPXbRUXAK18uCFkdKQfQdh4ZJevS1PraRovj328yENqZbgogq0SLSawHPiO63wLwBwfsBXBBxfCKg808N2OVZljpV4gDPtfyNb6ACePoHk6SzvhxUfvNMeniYN/8mZCF2vF3YRwMl6IlW8K1cLk0vM7YRs4NZj6AQ77xkQafJe4jSCigFU+y+cMzpJyKGcuicC9gYcpXXDEKyvJKRUuKxD0ZU7Z14JPHNoza+iZhQeImfLPBhaxdh6k+X82wiWnOU08yieYTGMqF6W8lZgegtbZ4Ani/thBSI2/CwyR/HhgkIUVTJK2qAnVMF4x+A0Xj4EYJo5Ky/LTej3oJ3UjE6TV6FNcjQNG/RMvmxcAQ3MGGJn+GTec/8HaxQGZv3xFgHBIhw66OMwNuX7JR45jARAzB/EfhJe/67siVuzBQp3ReuYIb+iAQSLrZd6bWcisC2a31cB8RfpG+1Si7lSBqzckcdOSjzwpNrg3cqWRRoryrBXie/yvCUHMt47vnmfgxSJ59NwCutt04quSEQKT4WpyTApfdFS3SN5FOrzDVRNtAsKD2obhepnaCyaEYDfYXG7juB0ruphf39CiCKi79DA+ZGDHoPk4qzAWoUgrt3MTZBpYoDsZyk6a/+wkN9t12H/fWj4yOTp2EAGpGnHfFUK3HAIZXI7pmDtvwi+6ipiPH2pevR/zDWaqTuFfIwwBZWGshU2kJdEzOtYAsUOhfq9qC2dwI0xs+NTAsPr6o/Mh3PZB2zhxpLhloLNBNJ1mJGETswgPfmepaoUUKlKmi9rHukUKkmheZof/Kjav7JwdrLTdwfYE7Y0ScYaEFOGhF8VwEZRDsM7xmJiCwlm/IbIYr4DW7YnlKNuSQSVrN5iLcv9az4qQDXbtSFrLWdlJ3kHhvUjKpvd9130da5exfXGj6647eXnro9oREyfngPSVsqJyrDB7KW2i57Xy4VC03Ld3mPQj56oTbEdPwWG0c72y+GgO8VjQuIZpH/Z2t2ryIHvqvKvBAxhNjt+mSOwF7AFkUi6UW0UmvUMgDL44/aFNmrLeoSWv/9mf8yXO965XxGvyxVZZFnWum9BsT47gq1BULGtPjPj/DSDNDp5Hpv9H185+AIyVbCWOTywlDRcFdOFr/5KRcRC+IZqj4ok3FeSEC0kkCusXpBlgy2ojSQ714bek2qwQ2bYjk6eVLfU6dGgrDoJTf+zGhI0svGBZcMyItpmrmsUnQtRop3RgYtvmw6QeOc7k+pYb9vvL1vipZRPSkXeqaSJ4VcnbhJUahQqq0Vk/8t1fRZRaQBI36HzgN4JRWOt9mctaUp8jQOH+3N5oaHTCZAlsm8aFjZU0h1tEmzYN24CVRCAiuJ1QU/kneihD73evl9L34At/0llPLIl07Fi7mDVQxDGDXVnaoaRRQ8nHtPSSyIBQE+0qpbFV5wWQAa2c60lC9b06C3B3yBJWPotv1gaQ5g+o4o75n3dFY0kKDHhJGy30LoCoYV7kWq/aXbOP/KJdeOcz9BFK5Vert10fBX0rV2tBssP0oktiILqto2bBfG5KevgZXq+B6ax+3C3qwJHON9s6w23S5j+U4wNC4XYkrK/1CqCvpsXpWP7eLV3BhePc5SE9AXzXk3JHfzJZ5Psj2QfzQ3j9kHIvGaNFoVz0jkN4eGazgP3FmUG9q/TqG/DaEb5QIJfj6uF9lQElH+KpiRK2wiVWyFMLSMLuKoMLajROZRJqFgx6Zz+vQHGJBu39ouwiSxgUq3z4Ezu3QBYQflRX4GV19isMpXOMMqthOWpmf4B42P4jD/1MeRh+98d9eVz4ty7gjbEkrHPFtz47s+hmXDiXmhylLGjLTP/JptrdS5Kbek4QAnsGh3uz+8L8fffRb76fmeuejnkEixyFAy49ZDAfJ0</EncodedData>
+<AddOnInstructionDefinition Name="Param_Cast_Src" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-01T16:24:39.559Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-02T14:55:26.457Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Param" TagType="Base" DataType="ST_Param" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asBOOL" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asINT" TagType="Base" DataType="INT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asUINT" TagType="Base" DataType="UINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asDINT" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asUDINT" TagType="Base" DataType="UDINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asLINT" TagType="Base" DataType="LINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asULINT" TagType="Base" DataType="ULINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asREAL" TagType="Base" DataType="REAL" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asLREAL" TagType="Base" DataType="LREAL" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asParam" TagType="Base" DataType="ST_Param" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Comment>
+<![CDATA[Param_Cast_Src
+
+Export to L5X
+
+Add attritute CanBeNull="true" to the 'as' InOut parameters.
+
+Rename "Param_Cast_Src" references in L5X to "Param_Cast"
+
+Save, then import the L5X and overwrite.]]>
+</Comment>
+<Text>
+<![CDATA[NOP();]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Text>
+<![CDATA[XRP(asBOOL)[XIC(Param.CastData.Data[0].0) OTL(asBOOL) ,XIO(Param.CastData.Data[0].0) OTU(asBOOL) ];]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Text>
+<![CDATA[XRP(asINT)COP(Param.CastData,asINT,1);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Text>
+<![CDATA[XRP(asUINT)COP(Param.CastData,asUINT,1);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Text>
+<![CDATA[XRP(asDINT)COP(Param.CastData,asDINT,1);]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Text>
+<![CDATA[XRP(asUDINT)COP(Param.CastData,asUDINT,1);]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Text>
+<![CDATA[XRP(asLINT)COP(Param.CastData,asLINT,1);]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Text>
+<![CDATA[XRP(asULINT)COP(Param.CastData,asULINT,1);]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Text>
+<![CDATA[XRP(asREAL)COP(Param.CastData,asREAL,1);]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Text>
+<![CDATA[XRP(asLREAL)COP(Param.CastData,asLREAL,1);]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Text>
+<![CDATA[XRP(asParam)COP(Param.CastData,asParam.CastData,1);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Param"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+<Programs Use="Context">
+<Program Use="Target" Name="Dev_Param" TestEdits="false" MainRoutineName="Main" Disabled="false" UseAsFolder="false">
+<Tags>
+<Tag Name="BOOL" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="INT" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="LREAL" TagType="Base" DataType="LREAL" Radix="Float" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0.0000000000000000e+000]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="LREAL" Radix="Float" Value="0.0"/>
+</Data>
+</Tag>
+<Tag Name="ParamTest1" TagType="Base" DataType="ST_Param" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00'
+		],[[0,0,0,0,0,0,0,0]]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="ST_Param">
+<DataValueMember Name="ID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Type" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Number" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeviationEnabled" DataType="BOOL" Value="0"/>
+<StructureMember Name="Name" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Ingredient" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Comment" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="EU" DataType="STR_20">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_20" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="EUShort" DataType="STR_8">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_8" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="CastData" DataType="ST_ParamOBJ">
+<ArrayMember Name="Data" DataType="SINT" Dimensions="8" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="0"/>
+<Element Index="[4]" Value="0"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+</ArrayMember>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="ParamTest2" TagType="Base" DataType="ST_Param" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00'
+		],[[0,0,0,0,0,0,0,0]]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="ST_Param">
+<DataValueMember Name="ID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Type" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Number" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeviationEnabled" DataType="BOOL" Value="0"/>
+<StructureMember Name="Name" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Ingredient" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Comment" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="EU" DataType="STR_20">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_20" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="EUShort" DataType="STR_8">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_8" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="CastData" DataType="ST_ParamOBJ">
+<ArrayMember Name="Data" DataType="SINT" Dimensions="8" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="0"/>
+<Element Index="[4]" Value="0"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+</ArrayMember>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="ParamTest3" TagType="Base" DataType="ST_Param" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[0,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'
+		],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00'
+		],[[0,0,0,0,0,0,0,0]]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="ST_Param">
+<DataValueMember Name="ID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Type" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Number" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeviationEnabled" DataType="BOOL" Value="0"/>
+<StructureMember Name="Name" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Ingredient" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Comment" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="EU" DataType="STR_20">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_20" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="EUShort" DataType="STR_8">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_8" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="CastData" DataType="ST_ParamOBJ">
+<ArrayMember Name="Data" DataType="SINT" Dimensions="8" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="0"/>
+<Element Index="[4]" Value="0"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+</ArrayMember>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="PBOOL" TagType="Base" DataType="ST_ParamBOOL" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="ST_ParamBOOL">
+<DataValueMember Name="Val" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Pad" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="PCAST" TagType="Base" DataType="Param_Cast" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[3]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="Param_Cast">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="PCAST_Src" TagType="Base" DataType="Param_Cast_Src" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[3]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="Param_Cast_Src">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="PDINT" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="PLINT" TagType="Base" DataType="LINT" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="REAL" TagType="Base" DataType="REAL" Radix="Float" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</Data>
+</Tag>
+<Tag Name="UDINT" TagType="Base" DataType="UDINT" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="UINT" TagType="Base" DataType="UINT" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="UINT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="ULINT" TagType="Base" DataType="ULINT" Radix="Decimal" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="ULINT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+</Tags>
+<Routines>
+<Routine Name="Main" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Text>
+<![CDATA[NOP();]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Text>
+<![CDATA[Param_Cast_Src(PCAST_Src,ParamTest1,BOOL,INT,UINT,PDINT,UDINT,PLINT,ULINT,REAL,LREAL,ParamTest2);]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Text>
+<![CDATA[Param_Cast(PCAST,ParamTest3,0,0,0,0,0,0,0,0,0,0);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>
