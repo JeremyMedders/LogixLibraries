@@ -18,7 +18,7 @@ Content
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
 - **Numeric** (Num_): Forms string representations of various types of numbers.
-- **Param** (Param_): Experimental generic parameter handling.
+- **Parameter** (Param_): Experimental generic parameter handling.
 - **Process** (Op_): Lightweight PAx-style blocks.
 - **Recipe** (Recipe_)
 - **RTC** (RTC_): Precision pulse/timing utilities.
