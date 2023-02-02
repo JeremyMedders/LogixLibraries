@@ -18,9 +18,9 @@ Content
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
 - **Numeric** (Num_): Forms string representations of various types of numbers.
-- **Parameter** (Param_): Experimental generic parameter handling.
+- **Parameter** (Par_): Experimental generic parameter handling.
 - **Process** (Op_): Lightweight PAx-style blocks.
-- **Recipe** (Recipe_)
+- **Recipe** (Rec_)
 - **RTC** (RTC_): Precision pulse/timing utilities.
 - **String** (Str_): String utilities.
 - **System** (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
