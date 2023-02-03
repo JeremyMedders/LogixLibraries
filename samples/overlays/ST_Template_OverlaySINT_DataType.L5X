@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Template_OverlaySINT" TargetType="DataType" ContainsContext="true" ExportDate="Thu Feb 02 18:38:23 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="ST_Template_OverlaySINT" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Bits" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits (overlay).]]>
+</Description>
+</Member>
+<Member Name="Bit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.0: Description]]>
+</Description>
+</Member>
+<Member Name="Bit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.1: Description]]>
+</Description>
+</Member>
+<Member Name="Bit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.2: Description]]>
+</Description>
+</Member>
+<Member Name="Bit3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.3: Description]]>
+</Description>
+</Member>
+<Member Name="Bit4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.4: Description]]>
+</Description>
+</Member>
+<Member Name="Bit5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.5: Description]]>
+</Description>
+</Member>
+<Member Name="Bit6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.6: Description]]>
+</Description>
+</Member>
+<Member Name="Bit7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.7: Description]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
