@@ -11,162 +11,162 @@
 </Member>
 <Member Name="Bit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.0: Description]]>
+<![CDATA[Bits.0]]>
 </Description>
 </Member>
 <Member Name="Bit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.1: Description]]>
+<![CDATA[Bits.1]]>
 </Description>
 </Member>
 <Member Name="Bit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.2: Description]]>
+<![CDATA[Bits.2]]>
 </Description>
 </Member>
 <Member Name="Bit3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.3: Description]]>
+<![CDATA[Bits.3]]>
 </Description>
 </Member>
 <Member Name="Bit4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.4: Description]]>
+<![CDATA[Bits.4]]>
 </Description>
 </Member>
 <Member Name="Bit5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.5: Description]]>
+<![CDATA[Bits.5]]>
 </Description>
 </Member>
 <Member Name="Bit6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="6" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.6: Description]]>
+<![CDATA[Bits.6]]>
 </Description>
 </Member>
 <Member Name="Bit7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="7" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.7: Description]]>
+<![CDATA[Bits.7]]>
 </Description>
 </Member>
 <Member Name="Bit8" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="8" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.8: Description]]>
+<![CDATA[Bits.8]]>
 </Description>
 </Member>
 <Member Name="Bit9" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="9" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.9: Description]]>
+<![CDATA[Bits.9]]>
 </Description>
 </Member>
 <Member Name="Bit10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="10" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.10: Description]]>
+<![CDATA[Bits.10]]>
 </Description>
 </Member>
 <Member Name="Bit11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="11" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.11: Description]]>
+<![CDATA[Bits.11]]>
 </Description>
 </Member>
 <Member Name="Bit12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="12" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.12: Description]]>
+<![CDATA[Bits.12]]>
 </Description>
 </Member>
 <Member Name="Bit13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="13" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.13: Description]]>
+<![CDATA[Bits.13]]>
 </Description>
 </Member>
 <Member Name="Bit14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="14" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.14: Description]]>
+<![CDATA[Bits.14]]>
 </Description>
 </Member>
 <Member Name="Bit15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="15" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.15: Description]]>
+<![CDATA[Bits.15]]>
 </Description>
 </Member>
 <Member Name="Bit16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="16" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.16: Description]]>
+<![CDATA[Bits.16]]>
 </Description>
 </Member>
 <Member Name="Bit17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="17" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.17: Description]]>
+<![CDATA[Bits.17]]>
 </Description>
 </Member>
 <Member Name="Bit18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="18" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.18: Description]]>
+<![CDATA[Bits.18]]>
 </Description>
 </Member>
 <Member Name="Bit19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="19" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.19: Description]]>
+<![CDATA[Bits.19]]>
 </Description>
 </Member>
 <Member Name="Bit20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="20" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.20: Description]]>
+<![CDATA[Bits.20]]>
 </Description>
 </Member>
 <Member Name="Bit21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="21" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.21: Description]]>
+<![CDATA[Bits.21]]>
 </Description>
 </Member>
 <Member Name="Bit22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="22" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.22: Description]]>
+<![CDATA[Bits.22]]>
 </Description>
 </Member>
 <Member Name="Bit23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="23" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.23: Description]]>
+<![CDATA[Bits.23]]>
 </Description>
 </Member>
 <Member Name="Bit24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="24" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.24: Description]]>
+<![CDATA[Bits.24]]>
 </Description>
 </Member>
 <Member Name="Bit25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="25" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.25: Description]]>
+<![CDATA[Bits.25]]>
 </Description>
 </Member>
 <Member Name="Bit26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="26" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.26: Description]]>
+<![CDATA[Bits.26]]>
 </Description>
 </Member>
 <Member Name="Bit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="27" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.27: Description]]>
+<![CDATA[Bits.27]]>
 </Description>
 </Member>
 <Member Name="Bit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="28" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.28: Description]]>
+<![CDATA[Bits.28]]>
 </Description>
 </Member>
 <Member Name="Bit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="29" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.29: Description]]>
+<![CDATA[Bits.29]]>
 </Description>
 </Member>
 <Member Name="Bit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="30" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.30: Description]]>
+<![CDATA[Bits.30]]>
 </Description>
 </Member>
 <Member Name="Bit31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="31" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Bits.31: Description]]>
+<![CDATA[Bits.31]]>
 </Description>
 </Member>
 </Members>
