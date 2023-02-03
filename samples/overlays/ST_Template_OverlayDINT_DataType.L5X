@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Template_OverlayDINT" TargetType="DataType" ContainsContext="true" ExportDate="Thu Feb 02 18:38:19 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="ST_Template_OverlayDINT" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Bits" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits (overlay).]]>
+</Description>
+</Member>
+<Member Name="Bit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.0: Description]]>
+</Description>
+</Member>
+<Member Name="Bit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.1: Description]]>
+</Description>
+</Member>
+<Member Name="Bit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.2: Description]]>
+</Description>
+</Member>
+<Member Name="Bit3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.3: Description]]>
+</Description>
+</Member>
+<Member Name="Bit4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.4: Description]]>
+</Description>
+</Member>
+<Member Name="Bit5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.5: Description]]>
+</Description>
+</Member>
+<Member Name="Bit6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.6: Description]]>
+</Description>
+</Member>
+<Member Name="Bit7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.7: Description]]>
+</Description>
+</Member>
+<Member Name="Bit8" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.8: Description]]>
+</Description>
+</Member>
+<Member Name="Bit9" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.9: Description]]>
+</Description>
+</Member>
+<Member Name="Bit10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.10: Description]]>
+</Description>
+</Member>
+<Member Name="Bit11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.11: Description]]>
+</Description>
+</Member>
+<Member Name="Bit12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.12: Description]]>
+</Description>
+</Member>
+<Member Name="Bit13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.13: Description]]>
+</Description>
+</Member>
+<Member Name="Bit14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.14: Description]]>
+</Description>
+</Member>
+<Member Name="Bit15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.15: Description]]>
+</Description>
+</Member>
+<Member Name="Bit16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="16" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.16: Description]]>
+</Description>
+</Member>
+<Member Name="Bit17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="17" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.17: Description]]>
+</Description>
+</Member>
+<Member Name="Bit18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="18" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.18: Description]]>
+</Description>
+</Member>
+<Member Name="Bit19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="19" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.19: Description]]>
+</Description>
+</Member>
+<Member Name="Bit20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="20" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.20: Description]]>
+</Description>
+</Member>
+<Member Name="Bit21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="21" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.21: Description]]>
+</Description>
+</Member>
+<Member Name="Bit22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="22" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.22: Description]]>
+</Description>
+</Member>
+<Member Name="Bit23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="23" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.23: Description]]>
+</Description>
+</Member>
+<Member Name="Bit24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="24" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.24: Description]]>
+</Description>
+</Member>
+<Member Name="Bit25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="25" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.25: Description]]>
+</Description>
+</Member>
+<Member Name="Bit26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="26" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.26: Description]]>
+</Description>
+</Member>
+<Member Name="Bit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="27" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.27: Description]]>
+</Description>
+</Member>
+<Member Name="Bit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="28" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.28: Description]]>
+</Description>
+</Member>
+<Member Name="Bit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="29" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.29: Description]]>
+</Description>
+</Member>
+<Member Name="Bit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="30" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.30: Description]]>
+</Description>
+</Member>
+<Member Name="Bit31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="31" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.31: Description]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
