@@ -1,0 +1,103 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="AddOnInstructionDefinition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Description" type="xs:string" minOccurs="0" />
+        <xs:element name="RevisionNote" type="xs:string" minOccurs="0" />
+        <xs:element name="AdditionalHelpText" type="xs:string" minOccurs="0" />
+        <xs:element name="SignatureHistory" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HistoryEntry" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Description" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                  <xs:attribute name="User" type="xs:string" />
+                  <xs:attribute name="SignatureID" type="xs:string" />
+                  <xs:attribute name="Timestamp" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Parameters" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Parameter" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Description" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="DataType" type="xs:string" />
+                  <xs:attribute name="Type" type="xs:string" />
+                  <xs:attribute name="Radix" type="xs:string" />
+                  <xs:attribute name="Required" type="xs:boolean" />
+                  <xs:attribute name="Visible" type="xs:boolean" />
+                  <xs:attribute name="Dimension" type="xs:string" />
+                  <xs:attribute name="CanBeNull" type="xs:boolean" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Routines">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Routine">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Description" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                  <xs:attribute name="Name" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Options">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Option">
+                <xs:complexType>
+                  <xs:sequence>
+                  </xs:sequence>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Value" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Name" type="xs:string" />
+      <xs:attribute name="Revision" type="xs:string" />
+      <xs:attribute name="ExecutePrescan" type="xs:boolean" />
+      <xs:attribute name="ExecutePostscan" type="xs:boolean" />
+      <xs:attribute name="ExecuteEnableInFalse" type="xs:boolean" />
+      <xs:attribute name="ExecLogicDuringPrescan" type="xs:boolean" />
+      <xs:attribute name="ExecLogicDuringPostscan" type="xs:boolean" />
+      <xs:attribute name="ExecLogicDuringEnableInFalse" type="xs:boolean" />
+      <xs:attribute name="CreatedDate" type="xs:dateTime" />
+      <xs:attribute name="CreatedBy" type="xs:string" />
+      <xs:attribute name="EditedDate" type="xs:dateTime" />
+      <xs:attribute name="EditedBy" type="xs:string" />
+      <xs:attribute name="SoftwareRevision" type="xs:string" />
+      <xs:attribute name="RevisionExtension" type="xs:string" />
+      <xs:attribute name="Vendor" type="xs:string" />
+      <xs:attribute name="Class" type="xs:string" />
+      <xs:attribute name="SignatureID" type="xs:string" />
+      <xs:attribute name="SignatureTimestamp" type="xs:string" />
+      <xs:attribute name="SafetyID" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="AddOnInstructionDefinition" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
