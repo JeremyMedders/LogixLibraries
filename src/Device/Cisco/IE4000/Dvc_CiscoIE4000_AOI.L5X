@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Cisco IE 4000 Network Switch-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_CiscoIE4000" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-03T19:07:06.271Z" ContainsContext="true" ExportDate="Fri Feb 03 13:07:21 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_CiscoIE4000" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-03T19:55:01.170Z" ContainsContext="true" ExportDate="Fri Feb 03 13:55:27 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Dvc" Family="NoFamily" Class="User">
@@ -4105,7 +4105,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-03T19:07:06.271Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-03T19:55:01.170Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Cisco IE 4000 Network Switch]]>
@@ -4127,10 +4127,11 @@
 <Parameter Name="Ref_DataOut" TagType="Base" DataType="AB:ETHERNET_MODULE_SINT_4Bytes:O:0" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 <Parameter Name="Ref_Msg" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
 <Parameter Name="Ref_MsgResp" TagType="Base" DataType="SINT" Dimensions="256" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
-<Parameter Name="Sts_Connected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Connected" Required="false" Visible="true" ExternalAccess="None"/>
-<Parameter Name="Sts_CommLoss" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Disconnected" Required="false" Visible="true" ExternalAccess="None"/>
-<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Inhibited" Required="false" Visible="true" ExternalAccess="None"/>
+<Parameter Name="Sts_Connected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Connected" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_CommLoss" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Disconnected" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Module.Sts_Inhibited" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Fault" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Fault" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_All_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.BandwidthUtilizationAllPorts" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Port01_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Port02_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Port03_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
@@ -4152,6 +4153,7 @@
 <Parameter Name="Val_Port19_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_Port20_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_SVI1_Utilization" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.SVI1_BandwidthUtilization" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_AnyPort" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.AnyLinkUp" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port01" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port02" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port03" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
@@ -4172,6 +4174,7 @@
 <Parameter Name="Sts_Port18" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port19" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port20" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_LinkUp" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Any_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.AnyPortUnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port01_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port02_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port03_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
@@ -4192,6 +4195,7 @@
 <Parameter Name="Sts_Port18_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi118_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port19_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi119_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port20_UnauthMACID" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi120_UnauthorizedMACID" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Any_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.AnyPortThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port01_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi11_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port02_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi12_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Sts_Port03_ThresholdExceeded" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DataIn.Gi13_ThresholdExceeded" Required="false" Visible="false" ExternalAccess="Read Only"/>
@@ -4286,7 +4290,7 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="Module" DataType="Sys_Module" ExternalAccess="None">
+<LocalTag Name="Module" DataType="Sys_Module" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,0,0,0,0,0,0,0,0]]]>
 </DefaultData>
