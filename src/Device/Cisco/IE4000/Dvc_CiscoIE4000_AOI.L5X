@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Cisco IE 4000 Network Switch-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_CiscoIE4000" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-03T19:55:01.170Z" ContainsContext="true" ExportDate="Fri Feb 03 13:55:27 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_CiscoIE4000" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-04T01:18:49.651Z" ContainsContext="true" ExportDate="Fri Feb 03 19:25:39 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Dvc" Family="NoFamily" Class="User">
@@ -4105,7 +4105,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-03T19:55:01.170Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Dvc_CiscoIE4000" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-27T20:36:05.854Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-04T01:18:49.651Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Cisco IE 4000 Network Switch]]>
@@ -5940,219 +5940,234 @@
 <![CDATA[]]>
 </Line>
 <Line Number="13">
-<![CDATA[COP(Ref_DataIn, Local.DataIn, 1);]]>
+<![CDATA[if (Module.Sts_Connected) then]]>
 </Line>
 <Line Number="14">
-<![CDATA[]]>
+<![CDATA[	COP(Ref_DataIn, Local.DataIn, 1);]]>
 </Line>
 <Line Number="15">
-<![CDATA[Local.DataOut.PortDisable := 0; // leave ports enabled]]>
+<![CDATA[else]]>
 </Line>
 <Line Number="16">
-<![CDATA[COP(Local.DataOut, Ref_DataOut, 1);]]>
+<![CDATA[	ReadSeq := 0;]]>
 </Line>
 <Line Number="17">
-<![CDATA[]]>
+<![CDATA[	COP(ReadSeq, Local.DataIn.GlobalLinkStatus, 14);]]>
 </Line>
 <Line Number="18">
-<![CDATA[/*]]>
-</Line>
-<Line Number="19">
-<![CDATA[	Read timing]]>
-</Line>
-<Line Number="20">
-<![CDATA[*/]]>
-</Line>
-<Line Number="21">
-<![CDATA[PG.Inp_Interval := 100;]]>
-</Line>
-<Line Number="22">
-<![CDATA[PG.Inp_Enable := Module.Sts_Connected;]]>
-</Line>
-<Line Number="23">
-<![CDATA[RTC_PulseGen(PG);]]>
-</Line>
-<Line Number="24">
-<![CDATA[]]>
-</Line>
-<Line Number="25">
-<![CDATA[if (PG.Out & (Ref_Msg.DN OR Ref_Msg.ER OR NOT Ref_Msg.EN)) then]]>
-</Line>
-<Line Number="26">
-<![CDATA[	]]>
-</Line>
-<Line Number="27">
-<![CDATA[	// Identity (1 instance)]]>
-</Line>
-<Line Number="28">
-<![CDATA[	if (ReadSeq = 0) then]]>
-</Line>
-<Line Number="29">
-<![CDATA[		Msg_SetParams(SetMsgParams, 16#01, 1, 0, 0, Ref_Msg);]]>
-</Line>
-<Line Number="30">
-<![CDATA[		MSG(Ref_Msg);]]>
-</Line>
-<Line Number="31">
-<![CDATA[		ReadSeq := 10;]]>
-</Line>
-<Line Number="32">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="33">
-<![CDATA[	]]>
-</Line>
-<Line Number="34">
-<![CDATA[	if (ReadSeq = 10 & (Ref_Msg.DN OR Ref_Msg.ER)) then]]>
-</Line>
-<Line Number="35">
-<![CDATA[		if (Ref_Msg.DN) then]]>
-</Line>
-<Line Number="36">
-<![CDATA[			CIP_GetAttrAll_Identity(GetAttrAllIdentity, Ref_MsgResp, Local.CIP.Identity);]]>
-</Line>
-<Line Number="37">
-<![CDATA[			ReadSeq := 20;]]>
-</Line>
-<Line Number="38">
-<![CDATA[		elsif (Ref_Msg.ER) then]]>
-</Line>
-<Line Number="39">
-<![CDATA[			ReadSeq := 0;]]>
-</Line>
-<Line Number="40">
-<![CDATA[		end_if;]]>
-</Line>
-<Line Number="41">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="42">
-<![CDATA[	]]>
-</Line>
-<Line Number="43">
-<![CDATA[	// TCPIP Interface (1 instance)]]>
-</Line>
-<Line Number="44">
-<![CDATA[	if (ReadSeq = 20) then]]>
-</Line>
-<Line Number="45">
-<![CDATA[		Msg_SetParams(SetMsgParams, 16#F5, 1, 0, 0, Ref_Msg);]]>
-</Line>
-<Line Number="46">
-<![CDATA[		MSG(Ref_Msg);]]>
-</Line>
-<Line Number="47">
-<![CDATA[		ReadSeq := 30;]]>
-</Line>
-<Line Number="48">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="49">
-<![CDATA[	]]>
-</Line>
-<Line Number="50">
-<![CDATA[	if (ReadSeq = 30 & (Ref_Msg.DN OR Ref_Msg.ER)) then]]>
-</Line>
-<Line Number="51">
-<![CDATA[		if (Ref_Msg.DN) then]]>
-</Line>
-<Line Number="52">
-<![CDATA[			CIP_GetAttrAll_TCPIPInterface(GetAttrAllTCPIP, Ref_MsgResp, Local.CIP.TCPIPInterface);]]>
-</Line>
-<Line Number="53">
-<![CDATA[			ReadSeq := 40;]]>
-</Line>
-<Line Number="54">
-<![CDATA[		elsif (Ref_Msg.ER) then]]>
-</Line>
-<Line Number="55">
-<![CDATA[			ReadSeq := 0;]]>
-</Line>
-<Line Number="56">
-<![CDATA[		end_if;]]>
-</Line>
-<Line Number="57">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="58">
-<![CDATA[	]]>
-</Line>
-<Line Number="59">
-<![CDATA[	// Ethernet Link (up to 20 instances)]]>
-</Line>
-<Line Number="60">
-<![CDATA[	if (ReadSeq = 40) then]]>
-</Line>
-<Line Number="61">
-<![CDATA[		ENetLinkInst := 0;]]>
-</Line>
-<Line Number="62">
-<![CDATA[		ReadSeq := 45;]]>
-</Line>
-<Line Number="63">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="64">
-<![CDATA[	]]>
-</Line>
-<Line Number="65">
-<![CDATA[	if (ReadSeq = 45) then]]>
-</Line>
-<Line Number="66">
-<![CDATA[		Msg_SetParams(SetMsgParams, 16#F6, ENetLinkInst, 0, 0, Ref_Msg);]]>
-</Line>
-<Line Number="67">
-<![CDATA[		MSG(Ref_Msg);]]>
-</Line>
-<Line Number="68">
-<![CDATA[		ReadSeq := 50;]]>
-</Line>
-<Line Number="69">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="70">
-<![CDATA[	]]>
-</Line>
-<Line Number="71">
-<![CDATA[	if (ReadSeq = 50 & (Ref_Msg.DN OR Ref_Msg.ER)) then]]>
-</Line>
-<Line Number="72">
-<![CDATA[		if (Ref_Msg.DN) then]]>
-</Line>
-<Line Number="73">
-<![CDATA[			if (ENetLinkInst > 0) then]]>
-</Line>
-<Line Number="74">
-<![CDATA[				CIP_GetAttrAll_EthernetLink(GetAttrAllEnetLink, Ref_MsgResp, Local.CIP.EnetLinks[ENetLinkInst - 1]);]]>
-</Line>
-<Line Number="75">
-<![CDATA[			end_if;]]>
-</Line>
-<Line Number="76">
-<![CDATA[			]]>
-</Line>
-<Line Number="77">
-<![CDATA[			ENetLinkInst := ENetLinkInst + 1;]]>
-</Line>
-<Line Number="78">
-<![CDATA[			ReadSeq := 45;]]>
-</Line>
-<Line Number="79">
-<![CDATA[		elsif (Ref_Msg.ER) then]]>
-</Line>
-<Line Number="80">
-<![CDATA[			ReadSeq := 0;]]>
-</Line>
-<Line Number="81">
-<![CDATA[		end_if;]]>
-</Line>
-<Line Number="82">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="83">
 <![CDATA[end_if;]]>
 </Line>
+<Line Number="19">
+<![CDATA[]]>
+</Line>
+<Line Number="20">
+<![CDATA[Local.DataOut.PortDisable := 0; // leave ports enabled]]>
+</Line>
+<Line Number="21">
+<![CDATA[COP(Local.DataOut, Ref_DataOut, 1);]]>
+</Line>
+<Line Number="22">
+<![CDATA[]]>
+</Line>
+<Line Number="23">
+<![CDATA[/*]]>
+</Line>
+<Line Number="24">
+<![CDATA[	Read timing]]>
+</Line>
+<Line Number="25">
+<![CDATA[*/]]>
+</Line>
+<Line Number="26">
+<![CDATA[PG.Inp_Interval := 100;]]>
+</Line>
+<Line Number="27">
+<![CDATA[PG.Inp_Enable := Module.Sts_Connected;]]>
+</Line>
+<Line Number="28">
+<![CDATA[RTC_PulseGen(PG);]]>
+</Line>
+<Line Number="29">
+<![CDATA[]]>
+</Line>
+<Line Number="30">
+<![CDATA[if (PG.Out & (Ref_Msg.DN OR Ref_Msg.ER OR NOT Ref_Msg.EN)) then]]>
+</Line>
+<Line Number="31">
+<![CDATA[	]]>
+</Line>
+<Line Number="32">
+<![CDATA[	// Identity (1 instance)]]>
+</Line>
+<Line Number="33">
+<![CDATA[	if (ReadSeq = 0) then]]>
+</Line>
+<Line Number="34">
+<![CDATA[		Msg_SetParams(SetMsgParams, 16#01, 1, 0, 0, Ref_Msg);]]>
+</Line>
+<Line Number="35">
+<![CDATA[		MSG(Ref_Msg);]]>
+</Line>
+<Line Number="36">
+<![CDATA[		ReadSeq := 10;]]>
+</Line>
+<Line Number="37">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="38">
+<![CDATA[	]]>
+</Line>
+<Line Number="39">
+<![CDATA[	if (ReadSeq = 10 & (Ref_Msg.DN OR Ref_Msg.ER)) then]]>
+</Line>
+<Line Number="40">
+<![CDATA[		if (Ref_Msg.DN) then]]>
+</Line>
+<Line Number="41">
+<![CDATA[			CIP_GetAttrAll_Identity(GetAttrAllIdentity, Ref_MsgResp, Local.CIP.Identity);]]>
+</Line>
+<Line Number="42">
+<![CDATA[			ReadSeq := 20;]]>
+</Line>
+<Line Number="43">
+<![CDATA[		elsif (Ref_Msg.ER) then]]>
+</Line>
+<Line Number="44">
+<![CDATA[			ReadSeq := 0;]]>
+</Line>
+<Line Number="45">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="46">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="47">
+<![CDATA[	]]>
+</Line>
+<Line Number="48">
+<![CDATA[	// TCPIP Interface (1 instance)]]>
+</Line>
+<Line Number="49">
+<![CDATA[	if (ReadSeq = 20) then]]>
+</Line>
+<Line Number="50">
+<![CDATA[		Msg_SetParams(SetMsgParams, 16#F5, 1, 0, 0, Ref_Msg);]]>
+</Line>
+<Line Number="51">
+<![CDATA[		MSG(Ref_Msg);]]>
+</Line>
+<Line Number="52">
+<![CDATA[		ReadSeq := 30;]]>
+</Line>
+<Line Number="53">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="54">
+<![CDATA[	]]>
+</Line>
+<Line Number="55">
+<![CDATA[	if (ReadSeq = 30 & (Ref_Msg.DN OR Ref_Msg.ER)) then]]>
+</Line>
+<Line Number="56">
+<![CDATA[		if (Ref_Msg.DN) then]]>
+</Line>
+<Line Number="57">
+<![CDATA[			CIP_GetAttrAll_TCPIPInterface(GetAttrAllTCPIP, Ref_MsgResp, Local.CIP.TCPIPInterface);]]>
+</Line>
+<Line Number="58">
+<![CDATA[			ReadSeq := 40;]]>
+</Line>
+<Line Number="59">
+<![CDATA[		elsif (Ref_Msg.ER) then]]>
+</Line>
+<Line Number="60">
+<![CDATA[			ReadSeq := 0;]]>
+</Line>
+<Line Number="61">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="62">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="63">
+<![CDATA[	]]>
+</Line>
+<Line Number="64">
+<![CDATA[	// Ethernet Link (up to 20 instances)]]>
+</Line>
+<Line Number="65">
+<![CDATA[	if (ReadSeq = 40) then]]>
+</Line>
+<Line Number="66">
+<![CDATA[		ENetLinkInst := 0;]]>
+</Line>
+<Line Number="67">
+<![CDATA[		ReadSeq := 45;]]>
+</Line>
+<Line Number="68">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="69">
+<![CDATA[	]]>
+</Line>
+<Line Number="70">
+<![CDATA[	if (ReadSeq = 45) then]]>
+</Line>
+<Line Number="71">
+<![CDATA[		Msg_SetParams(SetMsgParams, 16#F6, ENetLinkInst, 0, 0, Ref_Msg);]]>
+</Line>
+<Line Number="72">
+<![CDATA[		MSG(Ref_Msg);]]>
+</Line>
+<Line Number="73">
+<![CDATA[		ReadSeq := 50;]]>
+</Line>
+<Line Number="74">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="75">
+<![CDATA[	]]>
+</Line>
+<Line Number="76">
+<![CDATA[	if (ReadSeq = 50 & (Ref_Msg.DN OR Ref_Msg.ER)) then]]>
+</Line>
+<Line Number="77">
+<![CDATA[		if (Ref_Msg.DN) then]]>
+</Line>
+<Line Number="78">
+<![CDATA[			if (ENetLinkInst > 0) then]]>
+</Line>
+<Line Number="79">
+<![CDATA[				CIP_GetAttrAll_EthernetLink(GetAttrAllEnetLink, Ref_MsgResp, Local.CIP.EnetLinks[ENetLinkInst - 1]);]]>
+</Line>
+<Line Number="80">
+<![CDATA[			end_if;]]>
+</Line>
+<Line Number="81">
+<![CDATA[			]]>
+</Line>
+<Line Number="82">
+<![CDATA[			ENetLinkInst := ENetLinkInst + 1;]]>
+</Line>
+<Line Number="83">
+<![CDATA[			ReadSeq := 45;]]>
+</Line>
 <Line Number="84">
+<![CDATA[		elsif (Ref_Msg.ER) then]]>
+</Line>
+<Line Number="85">
+<![CDATA[			ReadSeq := 0;]]>
+</Line>
+<Line Number="86">
+<![CDATA[		end_if;]]>
+</Line>
+<Line Number="87">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="88">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="89">
 <![CDATA[]]>
 </Line>
 </STContent>
