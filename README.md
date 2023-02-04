@@ -27,7 +27,7 @@ Content
 - **Time** (Time_): ISO 8601 utilities.
 - **UI** (UI_): HMI helpers.
 
-Parameter naming follows PlantPAx (sensibly)
+Naming follows PlantPAx (sensibly)
 ------------
 - Inp_, Cfg_, PCmd_, OCmd_, MCmd, XCmd, PSet_, OSet_, MSet, XSet
 - Out_, Sts_, Val_
@@ -36,7 +36,7 @@ Parameter naming follows PlantPAx (sensibly)
 - At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
-UDTs follow the corresponding AOI in name:
+UDTs follow the corresponding AOI:
 - ST_Dvc_abc
 - ST_Sys_xyz
 - And so on.
