@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Parameter reinterpret_cast.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Par_Cast" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-03T00:43:35.717Z" ContainsContext="true" ExportDate="Fri Feb 03 19:37:54 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="PAR_ANY" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Bits" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits (overlay).]]>
+</Description>
+</Member>
+<Member Name="Bit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.0]]>
+</Description>
+</Member>
+<Member Name="Bit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.1]]>
+</Description>
+</Member>
+<Member Name="Bit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.2]]>
+</Description>
+</Member>
+<Member Name="Bit3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.3]]>
+</Description>
+</Member>
+<Member Name="Bit4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.4]]>
+</Description>
+</Member>
+<Member Name="Bit5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.5]]>
+</Description>
+</Member>
+<Member Name="Bit6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.6]]>
+</Description>
+</Member>
+<Member Name="Bit7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.7]]>
+</Description>
+</Member>
+<Member Name="Bit8" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.8]]>
+</Description>
+</Member>
+<Member Name="Bit9" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.9]]>
+</Description>
+</Member>
+<Member Name="Bit10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.10]]>
+</Description>
+</Member>
+<Member Name="Bit11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.11]]>
+</Description>
+</Member>
+<Member Name="Bit12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.12]]>
+</Description>
+</Member>
+<Member Name="Bit13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.13]]>
+</Description>
+</Member>
+<Member Name="Bit14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.14]]>
+</Description>
+</Member>
+<Member Name="Bit15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.15]]>
+</Description>
+</Member>
+<Member Name="Bit16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="16" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.16]]>
+</Description>
+</Member>
+<Member Name="Bit17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="17" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.17]]>
+</Description>
+</Member>
+<Member Name="Bit18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="18" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.18]]>
+</Description>
+</Member>
+<Member Name="Bit19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="19" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.19]]>
+</Description>
+</Member>
+<Member Name="Bit20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="20" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.20]]>
+</Description>
+</Member>
+<Member Name="Bit21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="21" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.21]]>
+</Description>
+</Member>
+<Member Name="Bit22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="22" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.22]]>
+</Description>
+</Member>
+<Member Name="Bit23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="23" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.23]]>
+</Description>
+</Member>
+<Member Name="Bit24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="24" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.24]]>
+</Description>
+</Member>
+<Member Name="Bit25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="25" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.25]]>
+</Description>
+</Member>
+<Member Name="Bit26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="26" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.26]]>
+</Description>
+</Member>
+<Member Name="Bit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="27" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.27]]>
+</Description>
+</Member>
+<Member Name="Bit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="28" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.28]]>
+</Description>
+</Member>
+<Member Name="Bit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="29" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.29]]>
+</Description>
+</Member>
+<Member Name="Bit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="30" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.30]]>
+</Description>
+</Member>
+<Member Name="Bit31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="31" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.31]]>
+</Description>
+</Member>
+<Member Name="Bit32" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="32" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.32]]>
+</Description>
+</Member>
+<Member Name="Bit33" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="33" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.33]]>
+</Description>
+</Member>
+<Member Name="Bit34" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="34" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.34]]>
+</Description>
+</Member>
+<Member Name="Bit35" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="35" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.35]]>
+</Description>
+</Member>
+<Member Name="Bit36" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="36" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.36]]>
+</Description>
+</Member>
+<Member Name="Bit37" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="37" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.37]]>
+</Description>
+</Member>
+<Member Name="Bit38" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="38" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.38]]>
+</Description>
+</Member>
+<Member Name="Bit39" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="39" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.39]]>
+</Description>
+</Member>
+<Member Name="Bit40" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="40" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.40]]>
+</Description>
+</Member>
+<Member Name="Bit41" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="41" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.41]]>
+</Description>
+</Member>
+<Member Name="Bit42" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="42" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.42]]>
+</Description>
+</Member>
+<Member Name="Bit43" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="43" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.43]]>
+</Description>
+</Member>
+<Member Name="Bit44" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="44" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.44]]>
+</Description>
+</Member>
+<Member Name="Bit45" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="45" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.45]]>
+</Description>
+</Member>
+<Member Name="Bit46" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="46" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.46]]>
+</Description>
+</Member>
+<Member Name="Bit47" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="47" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.47]]>
+</Description>
+</Member>
+<Member Name="Bit48" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="48" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.48]]>
+</Description>
+</Member>
+<Member Name="Bit49" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="49" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.49]]>
+</Description>
+</Member>
+<Member Name="Bit50" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="50" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.50]]>
+</Description>
+</Member>
+<Member Name="Bit51" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="51" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.51]]>
+</Description>
+</Member>
+<Member Name="Bit52" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="52" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.52]]>
+</Description>
+</Member>
+<Member Name="Bit53" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="53" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.53]]>
+</Description>
+</Member>
+<Member Name="Bit54" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="54" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.54]]>
+</Description>
+</Member>
+<Member Name="Bit55" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="55" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.55]]>
+</Description>
+</Member>
+<Member Name="Bit56" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="56" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.56]]>
+</Description>
+</Member>
+<Member Name="Bit57" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="57" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.57]]>
+</Description>
+</Member>
+<Member Name="Bit58" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="58" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.58]]>
+</Description>
+</Member>
+<Member Name="Bit59" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="59" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.59]]>
+</Description>
+</Member>
+<Member Name="Bit60" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="60" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.60]]>
+</Description>
+</Member>
+<Member Name="Bit61" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="61" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.61]]>
+</Description>
+</Member>
+<Member Name="Bit62" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="62" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.62]]>
+</Description>
+</Member>
+<Member Name="Bit63" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="63" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.63]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="ST_Par" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sum" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Type" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Number" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Name" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ingredient" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Comment" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EU" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EUShort" DataType="STR_8" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Cast" DataType="PAR_ANY" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="STR_8"/>
+<Dependency Type="DataType" Name="PAR_ANY"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_20" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="20" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_8" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="8" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<EncodedData EncodedType="AddOnInstructionDefinition" Name="Par_Cast" Revision="1.0" Vendor="Jeremy Medders" EditedDate="2023-02-03T00:43:35.717Z" SoftwareRevision="v35.00" EncryptionConfig="9">
+<Description>
+<![CDATA[Parameter reinterpret_cast.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Param" TagType="Base" DataType="ST_Par" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asBOOL" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asINT" TagType="Base" DataType="INT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asUINT" TagType="Base" DataType="UINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asDINT" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asUDINT" TagType="Base" DataType="UDINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asLINT" TagType="Base" DataType="LINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asULINT" TagType="Base" DataType="ULINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asREAL" TagType="Base" DataType="REAL" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asLREAL" TagType="Base" DataType="LREAL" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="asPAR" TagType="Base" DataType="ST_Par" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Par"/>
+</Dependencies>
+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</EncodedData>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
