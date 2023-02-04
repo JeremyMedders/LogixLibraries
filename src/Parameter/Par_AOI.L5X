@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Par" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-03T05:22:23.634Z" ContainsContext="true" ExportDate="Fri Feb 03 19:37:36 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="PAR_ANY" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Bits" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits (overlay).]]>
+</Description>
+</Member>
+<Member Name="Bit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.0]]>
+</Description>
+</Member>
+<Member Name="Bit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.1]]>
+</Description>
+</Member>
+<Member Name="Bit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.2]]>
+</Description>
+</Member>
+<Member Name="Bit3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.3]]>
+</Description>
+</Member>
+<Member Name="Bit4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.4]]>
+</Description>
+</Member>
+<Member Name="Bit5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.5]]>
+</Description>
+</Member>
+<Member Name="Bit6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.6]]>
+</Description>
+</Member>
+<Member Name="Bit7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.7]]>
+</Description>
+</Member>
+<Member Name="Bit8" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.8]]>
+</Description>
+</Member>
+<Member Name="Bit9" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.9]]>
+</Description>
+</Member>
+<Member Name="Bit10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.10]]>
+</Description>
+</Member>
+<Member Name="Bit11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.11]]>
+</Description>
+</Member>
+<Member Name="Bit12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.12]]>
+</Description>
+</Member>
+<Member Name="Bit13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.13]]>
+</Description>
+</Member>
+<Member Name="Bit14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.14]]>
+</Description>
+</Member>
+<Member Name="Bit15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.15]]>
+</Description>
+</Member>
+<Member Name="Bit16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="16" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.16]]>
+</Description>
+</Member>
+<Member Name="Bit17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="17" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.17]]>
+</Description>
+</Member>
+<Member Name="Bit18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="18" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.18]]>
+</Description>
+</Member>
+<Member Name="Bit19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="19" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.19]]>
+</Description>
+</Member>
+<Member Name="Bit20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="20" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.20]]>
+</Description>
+</Member>
+<Member Name="Bit21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="21" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.21]]>
+</Description>
+</Member>
+<Member Name="Bit22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="22" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.22]]>
+</Description>
+</Member>
+<Member Name="Bit23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="23" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.23]]>
+</Description>
+</Member>
+<Member Name="Bit24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="24" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.24]]>
+</Description>
+</Member>
+<Member Name="Bit25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="25" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.25]]>
+</Description>
+</Member>
+<Member Name="Bit26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="26" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.26]]>
+</Description>
+</Member>
+<Member Name="Bit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="27" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.27]]>
+</Description>
+</Member>
+<Member Name="Bit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="28" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.28]]>
+</Description>
+</Member>
+<Member Name="Bit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="29" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.29]]>
+</Description>
+</Member>
+<Member Name="Bit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="30" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.30]]>
+</Description>
+</Member>
+<Member Name="Bit31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="31" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.31]]>
+</Description>
+</Member>
+<Member Name="Bit32" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="32" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.32]]>
+</Description>
+</Member>
+<Member Name="Bit33" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="33" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.33]]>
+</Description>
+</Member>
+<Member Name="Bit34" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="34" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.34]]>
+</Description>
+</Member>
+<Member Name="Bit35" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="35" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.35]]>
+</Description>
+</Member>
+<Member Name="Bit36" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="36" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.36]]>
+</Description>
+</Member>
+<Member Name="Bit37" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="37" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.37]]>
+</Description>
+</Member>
+<Member Name="Bit38" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="38" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.38]]>
+</Description>
+</Member>
+<Member Name="Bit39" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="39" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.39]]>
+</Description>
+</Member>
+<Member Name="Bit40" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="40" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.40]]>
+</Description>
+</Member>
+<Member Name="Bit41" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="41" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.41]]>
+</Description>
+</Member>
+<Member Name="Bit42" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="42" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.42]]>
+</Description>
+</Member>
+<Member Name="Bit43" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="43" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.43]]>
+</Description>
+</Member>
+<Member Name="Bit44" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="44" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.44]]>
+</Description>
+</Member>
+<Member Name="Bit45" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="45" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.45]]>
+</Description>
+</Member>
+<Member Name="Bit46" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="46" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.46]]>
+</Description>
+</Member>
+<Member Name="Bit47" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="47" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.47]]>
+</Description>
+</Member>
+<Member Name="Bit48" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="48" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.48]]>
+</Description>
+</Member>
+<Member Name="Bit49" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="49" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.49]]>
+</Description>
+</Member>
+<Member Name="Bit50" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="50" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.50]]>
+</Description>
+</Member>
+<Member Name="Bit51" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="51" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.51]]>
+</Description>
+</Member>
+<Member Name="Bit52" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="52" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.52]]>
+</Description>
+</Member>
+<Member Name="Bit53" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="53" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.53]]>
+</Description>
+</Member>
+<Member Name="Bit54" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="54" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.54]]>
+</Description>
+</Member>
+<Member Name="Bit55" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="55" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.55]]>
+</Description>
+</Member>
+<Member Name="Bit56" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="56" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.56]]>
+</Description>
+</Member>
+<Member Name="Bit57" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="57" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.57]]>
+</Description>
+</Member>
+<Member Name="Bit58" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="58" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.58]]>
+</Description>
+</Member>
+<Member Name="Bit59" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="59" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.59]]>
+</Description>
+</Member>
+<Member Name="Bit60" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="60" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.60]]>
+</Description>
+</Member>
+<Member Name="Bit61" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="61" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.61]]>
+</Description>
+</Member>
+<Member Name="Bit62" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="62" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.62]]>
+</Description>
+</Member>
+<Member Name="Bit63" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Bits" BitNumber="63" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits.63]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="ST_Par" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ID" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sum" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Type" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Number" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Name" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ingredient" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Comment" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EU" DataType="STR_20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EUShort" DataType="STR_8" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Cast" DataType="PAR_ANY" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_20"/>
+<Dependency Type="DataType" Name="STR_8"/>
+<Dependency Type="DataType" Name="PAR_ANY"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_20" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="20" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_8" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="8" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="Par" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-03T01:01:09.277Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-03T05:22:23.634Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v35.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="SINT" TagType="Base" DataType="SINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="USINT" TagType="Base" DataType="USINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="INT" TagType="Base" DataType="INT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="UINT" TagType="Base" DataType="UINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="DINT" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="UDINT" TagType="Base" DataType="UDINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="LINT" TagType="Base" DataType="LINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="ULINT" TagType="Base" DataType="ULINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="REAL" TagType="Base" DataType="REAL" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="LREAL" TagType="Base" DataType="LREAL" Usage="InOut" Radix="Float" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Bit0" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit0" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit1" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit1" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit2" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit2" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit3" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit3" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit4" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit4" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit5" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit5" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit6" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit6" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit7" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit7" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit8" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit8" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit9" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit9" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit10" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit10" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit11" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit11" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit12" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit12" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit13" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit13" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit14" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit14" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit15" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit15" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit16" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit16" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit17" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit17" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit18" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit18" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit19" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit19" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit20" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit20" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit21" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit21" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit22" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit22" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit23" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit23" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit24" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit24" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit25" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit25" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit26" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit26" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit27" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit27" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit28" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit28" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit29" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit29" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit30" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit30" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit31" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit31" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit32" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit32" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit33" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit33" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit34" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit34" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit35" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit35" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit36" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit36" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit37" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit37" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit38" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit38" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit39" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit39" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit40" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit40" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit41" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit41" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit42" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit42" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit43" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit43" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit44" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit44" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit45" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit45" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit46" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit46" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit47" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit47" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit48" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit48" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit49" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit49" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit50" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit50" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit51" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit51" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit52" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit52" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit53" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit53" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit54" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit54" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit55" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit55" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit56" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit56" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit57" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit57" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit58" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit58" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit59" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit59" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit60" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit60" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit61" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit61" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit62" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit62" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="Bit63" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Cast.Bit63" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Local" DataType="ST_Par" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[[0,0.00000000e+000,0,0,0,[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[0,'$00$00$00$00$00$00$00$00'],[0]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="ST_Par">
+<DataValueMember Name="ID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Sum" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Type" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Number" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="Name" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Ingredient" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Comment" DataType="STR_40">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_40" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="EU" DataType="STR_20">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_20" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="EUShort" DataType="STR_8">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DATA" DataType="STR_8" Radix="ASCII">
+<![CDATA[]]>
+</DataValueMember>
+</StructureMember>
+<StructureMember Name="Cast" DataType="PAR_ANY">
+<DataValueMember Name="Bits" DataType="LINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Bit0" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit9" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit31" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit32" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit33" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit34" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit35" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit36" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit37" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit38" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit39" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit40" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit41" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit42" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit43" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit44" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit45" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit46" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit47" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit48" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit49" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit50" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit51" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit52" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit53" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit54" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit55" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit56" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit57" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit58" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit59" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit60" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit61" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit62" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bit63" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="RLL"/>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_Par"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
