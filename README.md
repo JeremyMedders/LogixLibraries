@@ -70,6 +70,7 @@ To-Do
 - AOI dependency chart/tree/spreadsheet
 - Produce/Consume tags "the smart way" guide with UDTs and sample
 - UI_ListVisitor
+- Improved PowerFlex 525 AOI
 
 Done:
 - Open discussion board
