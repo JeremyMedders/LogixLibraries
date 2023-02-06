@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Sys_Message" TargetType="DataType" ContainsContext="true" ExportDate="Mon Feb 06 17:00:35 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="ST_Sys_Message" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Address" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Flags" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EW" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Flags" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Flags.2: Enable waiting.]]>
+</Description>
+</Member>
+<Member Name="ER" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Flags" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Flags.4: Error.]]>
+</Description>
+</Member>
+<Member Name="DN" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Flags" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Flags.5: Done.]]>
+</Description>
+</Member>
+<Member Name="ST" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Flags" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Flags.6: Start.]]>
+</Description>
+</Member>
+<Member Name="EN" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Flags" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Flags.7: Enable.]]>
+</Description>
+</Member>
+<Member Name="TO" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Flags" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Flags.8: Timeout.]]>
+</Description>
+</Member>
+<Member Name="EN_CC" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Flags" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Flags.9: Enable cache.]]>
+</Description>
+</Member>
+<Member Name="ERR" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EXERR" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EXERRLEN" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ERR_SRC" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DN_LEN" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="REQ_LEN" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DestinationLink" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DestinationNode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SourceLink" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Class" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Attribute" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Instance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LocalIndex" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Channel" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Rack" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Group" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Slot" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Path" DataType="STRING" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Reserved1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RemoteIndex" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RemoteElement" DataType="STRING" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Reserved2" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UnconnectedTimeout" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ConnectionRate" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TimeoutMultiplier" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
