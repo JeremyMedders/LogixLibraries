@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_USB" TargetType="Program" ContainsContext="true" ExportDate="Sat Feb 11 14:04:58 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dev_USB" TargetType="Program" ContainsContext="true" ExportDate="Sat Feb 11 14:10:42 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Sys_USB" Family="NoFamily" Class="User">
@@ -958,8 +958,11 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Sys_USB" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T17:01:25.995Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-10T20:34:49.495Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Sys_USB" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T17:01:25.995Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-11T20:09:57.102Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
+<Description>
+<![CDATA[Monitors the USB port of a given module for activity.]]>
+</Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
@@ -1305,7 +1308,7 @@
 </Tag>
 <Tag Name="USB" TagType="Base" DataType="Sys_USB" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
-<![CDATA[[3,[255,4,1,0,2,0,0,24,2,0,0,2,0,0,1,24,24,0,2024,0,0,0],[1,0,0,0,0,0,0,0,0],[47,1000,1676145896576881,1676145896656873],[3,826
+<![CDATA[[3,[255,4,1,0,2,0,0,24,2,0,0,2,0,0,1,24,24,0,2024,0,0,0],[1,0,0,0,0,0,0,0,0],[47,1000,1676146240132827,1676146240432770],[3,826
 		,1,0,0],[3,14,82,1],1,60,60,[0,0,0]]]]>
 </Data>
 <Data Format="Decorated">
