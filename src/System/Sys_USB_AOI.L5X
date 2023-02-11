@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_USB" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-10T20:34:49.495Z" ContainsContext="true" ExportDate="Sat Feb 11 14:07:14 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<!--Monitors the USB port of a given module for activity.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_USB" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-02-11T20:09:57.102Z" ContainsContext="true" ExportDate="Sat Feb 11 14:10:21 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Sys_USB" Family="NoFamily" Class="User">
@@ -121,7 +122,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Name="RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T02:52:26.487Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T02:52:26.487Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Generates precision pulses on configurable intervals.]]>
@@ -373,7 +374,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Msg_SetPathToModule" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-14T20:40:32.238Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-10T18:30:45.749Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Msg_SetPathToModule" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-14T20:40:32.238Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-10T18:30:45.749Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Sets a message path to that of a module.]]>
@@ -872,7 +873,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Msg_ZeroBuffer" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T20:19:17.014Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-10T20:38:13.080Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Msg_ZeroBuffer" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T20:19:17.014Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2023-02-10T20:38:13.080Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Clears a message response buffer.]]>
@@ -954,8 +955,11 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Sys_USB" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T17:01:25.995Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-10T20:34:49.495Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Sys_USB" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T17:01:25.995Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2023-02-11T20:09:57.102Z" EditedBy="RLCCONTROLS\jrogers"
  SoftwareRevision="v35.00">
+<Description>
+<![CDATA[Monitors the USB port of a given module for activity.]]>
+</Description>
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
