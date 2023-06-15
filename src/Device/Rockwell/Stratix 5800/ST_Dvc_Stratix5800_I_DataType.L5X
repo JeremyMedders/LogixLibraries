@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Wed Jun 14 19:12:57 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Wed Jun 14 19:17:58 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="ST_Dvc_Stratix5800_I" Family="NoFamily" Class="User">
@@ -171,7 +171,11 @@
 </Description>
 </Member>
 <Member Name="Pad1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
-<Member Name="UnauthorizedDevice" DataType="DINT" Dimension="0" Radix="Binary" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UnauthorizedDevice" DataType="DINT" Dimension="0" Radix="Binary" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Unauthorized device status (overlay).]]>
+</Description>
+</Member>
 <Member Name="AnyPortUnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[UnauthorizedDevice.0]]>
@@ -179,157 +183,157 @@
 </Member>
 <Member Name="PortGi1_1UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.1]]>
+<![CDATA[UnauthorizedDevice.1: Gi1_1]]>
 </Description>
 </Member>
 <Member Name="PortGi1_2UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.2]]>
+<![CDATA[UnauthorizedDevice.2: Gi1_2]]>
 </Description>
 </Member>
 <Member Name="PortGi1_3UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.3]]>
+<![CDATA[UnauthorizedDevice.3: Gi1_3]]>
 </Description>
 </Member>
 <Member Name="PortGi1_4UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.4]]>
+<![CDATA[UnauthorizedDevice.4: Gi1_4]]>
 </Description>
 </Member>
 <Member Name="PortGi1_5UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.5]]>
+<![CDATA[UnauthorizedDevice.5: Gi1_5]]>
 </Description>
 </Member>
 <Member Name="PortGi1_6UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="6" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.6]]>
+<![CDATA[UnauthorizedDevice.6: Gi1_6]]>
 </Description>
 </Member>
 <Member Name="PortGi1_7UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="7" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.7]]>
+<![CDATA[UnauthorizedDevice.7: Gi1_7]]>
 </Description>
 </Member>
 <Member Name="PortGi1_8UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="8" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.8]]>
+<![CDATA[UnauthorizedDevice.8: Gi1_8]]>
 </Description>
 </Member>
 <Member Name="PortGi1_9UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="9" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.9]]>
+<![CDATA[UnauthorizedDevice.9: Gi1_9]]>
 </Description>
 </Member>
 <Member Name="PortGi1_10UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="10" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.10]]>
+<![CDATA[UnauthorizedDevice.10: Gi1_10]]>
 </Description>
 </Member>
 <Member Name="PortGi2_1UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="11" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.11]]>
+<![CDATA[UnauthorizedDevice.11: Gi2_1]]>
 </Description>
 </Member>
 <Member Name="PortGi2_2UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="12" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.12]]>
+<![CDATA[UnauthorizedDevice.12: Gi2_2]]>
 </Description>
 </Member>
 <Member Name="PortGi2_3UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="13" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.13]]>
+<![CDATA[UnauthorizedDevice.13: Gi2_3]]>
 </Description>
 </Member>
 <Member Name="PortGi2_4UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="14" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.14]]>
+<![CDATA[UnauthorizedDevice.14: Gi2_4]]>
 </Description>
 </Member>
 <Member Name="PortGi2_5UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="15" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.15]]>
+<![CDATA[UnauthorizedDevice.15: Gi2_5]]>
 </Description>
 </Member>
 <Member Name="PortGi2_6UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="16" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.16]]>
+<![CDATA[UnauthorizedDevice.16: Gi2_6]]>
 </Description>
 </Member>
 <Member Name="PortGi2_7UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="17" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.17]]>
+<![CDATA[UnauthorizedDevice.17: Gi2_7]]>
 </Description>
 </Member>
 <Member Name="PortGi2_8UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="18" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.18]]>
+<![CDATA[UnauthorizedDevice.18: Gi2_8]]>
 </Description>
 </Member>
 <Member Name="PortGi2_9UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="19" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.19]]>
+<![CDATA[UnauthorizedDevice.19: Gi2_9]]>
 </Description>
 </Member>
 <Member Name="PortGi2_10UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="20" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.20]]>
+<![CDATA[UnauthorizedDevice.20: Gi2_10]]>
 </Description>
 </Member>
 <Member Name="PortGi2_11UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="21" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.21]]>
+<![CDATA[UnauthorizedDevice.21: Gi2_11]]>
 </Description>
 </Member>
 <Member Name="PortGi2_12UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="22" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.22]]>
+<![CDATA[UnauthorizedDevice.22: Gi2_12]]>
 </Description>
 </Member>
 <Member Name="PortGi2_13UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="23" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.23]]>
+<![CDATA[UnauthorizedDevice.23: Gi2_13]]>
 </Description>
 </Member>
 <Member Name="PortGi2_14UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="24" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.24]]>
+<![CDATA[UnauthorizedDevice.24: Gi2_14]]>
 </Description>
 </Member>
 <Member Name="PortGi2_15UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="25" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.25]]>
+<![CDATA[UnauthorizedDevice.25: Gi2_15]]>
 </Description>
 </Member>
 <Member Name="PortGi2_16UnauthorizedDevice" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="26" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.26]]>
+<![CDATA[UnauthorizedDevice.26: Gi2_16]]>
 </Description>
 </Member>
 <Member Name="UnauthorizedDevice27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="27" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.27]]>
+<![CDATA[UnauthorizedDevice.27: Unused.]]>
 </Description>
 </Member>
 <Member Name="UnauthorizedDevice28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="28" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.28]]>
+<![CDATA[UnauthorizedDevice.28: Unused.]]>
 </Description>
 </Member>
 <Member Name="UnauthorizedDevice29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="29" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.29]]>
+<![CDATA[UnauthorizedDevice.29: Unused.]]>
 </Description>
 </Member>
 <Member Name="UnauthorizedDevice30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="30" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.30]]>
+<![CDATA[UnauthorizedDevice.30: Unused.]]>
 </Description>
 </Member>
 <Member Name="UnauthorizedDevice31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnauthorizedDevice" BitNumber="31" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[UnauthorizedDevice.31]]>
+<![CDATA[UnauthorizedDevice.31: Unused.]]>
 </Description>
 </Member>
 <Member Name="Pad2" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
