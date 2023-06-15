@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Wed Jun 14 19:35:32 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Wed Jun 14 19:37:52 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="ST_Dvc_Stratix5800_I" Family="NoFamily" Class="User">
@@ -502,132 +502,132 @@
 <Member Name="AllPortsUtilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PortGi1_1Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_1]]>
+<![CDATA[Port Gi1_1 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_2Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_2]]>
+<![CDATA[Port Gi1_2 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_3Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_3]]>
+<![CDATA[Port Gi1_3 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_4Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_4]]>
+<![CDATA[Port Gi1_4 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_5Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_5]]>
+<![CDATA[Port Gi1_5 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_6Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_6]]>
+<![CDATA[Port Gi1_6 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_7Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_7]]>
+<![CDATA[Port Gi1_7 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_8Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_8]]>
+<![CDATA[Port Gi1_8 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_9Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_9]]>
+<![CDATA[Port Gi1_9 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi1_10Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi1_10]]>
+<![CDATA[Port Gi1_10 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_1Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_1]]>
+<![CDATA[Port Gi2_1 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_2Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_2]]>
+<![CDATA[Port Gi2_2 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_3Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_3]]>
+<![CDATA[Port Gi2_3 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_4Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_4]]>
+<![CDATA[Port Gi2_4 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_5Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_5]]>
+<![CDATA[Port Gi2_5 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_6Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_6]]>
+<![CDATA[Port Gi2_6 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_7Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_7]]>
+<![CDATA[Port Gi2_7 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_8Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_8]]>
+<![CDATA[Port Gi2_8 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_9Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_9]]>
+<![CDATA[Port Gi2_9 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_10Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_10]]>
+<![CDATA[Port Gi2_10 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_11Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_11]]>
+<![CDATA[Port Gi2_11 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_12Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_12]]>
+<![CDATA[Port Gi2_12 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_13Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_13]]>
+<![CDATA[Port Gi2_13 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_14Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_14]]>
+<![CDATA[Port Gi2_14 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_15Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_15]]>
+<![CDATA[Port Gi2_15 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="PortGi2_16Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Gi2_16]]>
+<![CDATA[Port Gi2_16 utilization (%).]]>
 </Description>
 </Member>
 <Member Name="Pad4" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
