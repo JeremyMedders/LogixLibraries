@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Wed Jun 14 19:27:26 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Wed Jun 14 19:35:32 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="ST_Dvc_Stratix5800_I" Family="NoFamily" Class="User">
@@ -343,134 +343,134 @@
 <![CDATA[ThresholdStatus.0:]]>
 </Description>
 </Member>
-<Member Name="PortGi1_1Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="Port01Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.1:]]>
+<![CDATA[ThresholdStatus.1: Gi1_1]]>
 </Description>
 </Member>
-<Member Name="PortGi1_2Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="Port02Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.2:]]>
+<![CDATA[ThresholdStatus.2: Gi1_2]]>
 </Description>
 </Member>
-<Member Name="PortGi1_3Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Member Name="Port03Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.3:]]>
+<![CDATA[ThresholdStatus.3: Gi1_3]]>
 </Description>
 </Member>
-<Member Name="PortGi1_4Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Member Name="Port04Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.4:]]>
+<![CDATA[ThresholdStatus.4: Gi1_4]]>
 </Description>
 </Member>
-<Member Name="PortGi1_5Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Member Name="Port05Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.5:]]>
+<![CDATA[ThresholdStatus.5: Gi1_5]]>
 </Description>
 </Member>
-<Member Name="PortGi1_6Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Member Name="Port06Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="6" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.6:]]>
+<![CDATA[ThresholdStatus.6: Gi1_6]]>
 </Description>
 </Member>
-<Member Name="PortGi1_7Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Member Name="Port07Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="7" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.7:]]>
+<![CDATA[ThresholdStatus.7: Gi1_7]]>
 </Description>
 </Member>
-<Member Name="PortGi1_8Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="8" ExternalAccess="Read/Write">
+<Member Name="Port08Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="8" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.8:]]>
+<![CDATA[ThresholdStatus.8: Gi1_8]]>
 </Description>
 </Member>
-<Member Name="PortGi1_9Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="9" ExternalAccess="Read/Write">
+<Member Name="Port09Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="9" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.9:]]>
+<![CDATA[ThresholdStatus.9: Gi1_9]]>
 </Description>
 </Member>
-<Member Name="PortGi1_10Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="10" ExternalAccess="Read/Write">
+<Member Name="Port10Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="10" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.10:]]>
+<![CDATA[ThresholdStatus.10: Gi1_10]]>
 </Description>
 </Member>
-<Member Name="PortGi2_1Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="11" ExternalAccess="Read/Write">
+<Member Name="Port11Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="11" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.11:]]>
+<![CDATA[ThresholdStatus.11: Gi2_1]]>
 </Description>
 </Member>
-<Member Name="PortGi2_2Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="12" ExternalAccess="Read/Write">
+<Member Name="Port12Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="12" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.12:]]>
+<![CDATA[ThresholdStatus.12: Gi2_2]]>
 </Description>
 </Member>
-<Member Name="PortGi2_3Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="13" ExternalAccess="Read/Write">
+<Member Name="Port13Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="13" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.13:]]>
+<![CDATA[ThresholdStatus.13: Gi2_3]]>
 </Description>
 </Member>
-<Member Name="PortGi2_4Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="14" ExternalAccess="Read/Write">
+<Member Name="Port14Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="14" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.14:]]>
+<![CDATA[ThresholdStatus.14: Gi2_4]]>
 </Description>
 </Member>
-<Member Name="PortGi2_5Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="15" ExternalAccess="Read/Write">
+<Member Name="Port15Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="15" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.15:]]>
+<![CDATA[ThresholdStatus.15: Gi2_5]]>
 </Description>
 </Member>
-<Member Name="PortGi2_6Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="16" ExternalAccess="Read/Write">
+<Member Name="Port16Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="16" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.16:]]>
+<![CDATA[ThresholdStatus.16: Gi2_6]]>
 </Description>
 </Member>
-<Member Name="PortGi2_7Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="17" ExternalAccess="Read/Write">
+<Member Name="Port17Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="17" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.17:]]>
+<![CDATA[ThresholdStatus.17: Gi2_7]]>
 </Description>
 </Member>
-<Member Name="PortGi2_8Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="18" ExternalAccess="Read/Write">
+<Member Name="Port18Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="18" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.18:]]>
+<![CDATA[ThresholdStatus.18: Gi2_8]]>
 </Description>
 </Member>
-<Member Name="PortGi2_9Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="19" ExternalAccess="Read/Write">
+<Member Name="Port19Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="19" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.19:]]>
+<![CDATA[ThresholdStatus.19: Gi2_9]]>
 </Description>
 </Member>
-<Member Name="PortGi2_10Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="20" ExternalAccess="Read/Write">
+<Member Name="Port20Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="20" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.20:]]>
+<![CDATA[ThresholdStatus.20: Gi2_10]]>
 </Description>
 </Member>
-<Member Name="PortGi2_11Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="21" ExternalAccess="Read/Write">
+<Member Name="Port21Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="21" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.21:]]>
+<![CDATA[ThresholdStatus.21: Gi2_11]]>
 </Description>
 </Member>
-<Member Name="PortGi2_12Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="22" ExternalAccess="Read/Write">
+<Member Name="Port22Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="22" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.22:]]>
+<![CDATA[ThresholdStatus.22: Gi2_12]]>
 </Description>
 </Member>
-<Member Name="PortGi2_13Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="23" ExternalAccess="Read/Write">
+<Member Name="Port23Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="23" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.23:]]>
+<![CDATA[ThresholdStatus.23: Gi2_13]]>
 </Description>
 </Member>
-<Member Name="PortGi2_14Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="24" ExternalAccess="Read/Write">
+<Member Name="Port24Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="24" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.24:]]>
+<![CDATA[ThresholdStatus.24: Gi2_14]]>
 </Description>
 </Member>
-<Member Name="PortGi2_15Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="25" ExternalAccess="Read/Write">
+<Member Name="Port25Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="25" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.25:]]>
+<![CDATA[ThresholdStatus.25: Gi2_15]]>
 </Description>
 </Member>
-<Member Name="PortGi2_16Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="26" ExternalAccess="Read/Write">
+<Member Name="Port26Threshold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="26" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[ThresholdStatus.26:]]>
+<![CDATA[ThresholdStatus.26: Gi2_16]]>
 </Description>
 </Member>
 <Member Name="ThresholdStatus27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="27" ExternalAccess="Read/Write">
@@ -500,32 +500,136 @@
 </Member>
 <Member Name="Pad3" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="AllPortsUtilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_1Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_2Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_3Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_4Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_5Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_6Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_7Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_8Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_9Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi1_10Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_1Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_2Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_3Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_4Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_5Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_6Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_7Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_8Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_9Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_10Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_11Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_12Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_13Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_14Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_15Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PortGi2_16Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PortGi1_1Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_1]]>
+</Description>
+</Member>
+<Member Name="PortGi1_2Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_2]]>
+</Description>
+</Member>
+<Member Name="PortGi1_3Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_3]]>
+</Description>
+</Member>
+<Member Name="PortGi1_4Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_4]]>
+</Description>
+</Member>
+<Member Name="PortGi1_5Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_5]]>
+</Description>
+</Member>
+<Member Name="PortGi1_6Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_6]]>
+</Description>
+</Member>
+<Member Name="PortGi1_7Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_7]]>
+</Description>
+</Member>
+<Member Name="PortGi1_8Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_8]]>
+</Description>
+</Member>
+<Member Name="PortGi1_9Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_9]]>
+</Description>
+</Member>
+<Member Name="PortGi1_10Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi1_10]]>
+</Description>
+</Member>
+<Member Name="PortGi2_1Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_1]]>
+</Description>
+</Member>
+<Member Name="PortGi2_2Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_2]]>
+</Description>
+</Member>
+<Member Name="PortGi2_3Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_3]]>
+</Description>
+</Member>
+<Member Name="PortGi2_4Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_4]]>
+</Description>
+</Member>
+<Member Name="PortGi2_5Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_5]]>
+</Description>
+</Member>
+<Member Name="PortGi2_6Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_6]]>
+</Description>
+</Member>
+<Member Name="PortGi2_7Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_7]]>
+</Description>
+</Member>
+<Member Name="PortGi2_8Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_8]]>
+</Description>
+</Member>
+<Member Name="PortGi2_9Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_9]]>
+</Description>
+</Member>
+<Member Name="PortGi2_10Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_10]]>
+</Description>
+</Member>
+<Member Name="PortGi2_11Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_11]]>
+</Description>
+</Member>
+<Member Name="PortGi2_12Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_12]]>
+</Description>
+</Member>
+<Member Name="PortGi2_13Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_13]]>
+</Description>
+</Member>
+<Member Name="PortGi2_14Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_14]]>
+</Description>
+</Member>
+<Member Name="PortGi2_15Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_15]]>
+</Description>
+</Member>
+<Member Name="PortGi2_16Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Gi2_16]]>
+</Description>
+</Member>
 <Member Name="Pad4" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
 <Member Name="Pad5" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
 <Member Name="Pad6" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
