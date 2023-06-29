@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Thu Jun 29 00:18:35 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Thu Jun 29 00:37:24 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="ST_Dvc_Stratix5800_I" Family="NoFamily" Class="User">
@@ -473,27 +473,27 @@
 <![CDATA[ThresholdStatus.26: Port Gi2_16 exceeds threshold.]]>
 </Description>
 </Member>
-<Member Name="ThresholdStatus27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="27" ExternalAccess="Read/Write">
+<Member Name="ThresholdStatusBit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="27" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[ThresholdStatus.27: Unused.]]>
 </Description>
 </Member>
-<Member Name="ThresholdStatus28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="28" ExternalAccess="Read/Write">
+<Member Name="ThresholdStatusBit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="28" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[ThresholdStatus.28: Unused.]]>
 </Description>
 </Member>
-<Member Name="ThresholdStatus29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="29" ExternalAccess="Read/Write">
+<Member Name="ThresholdStatusBit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="29" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[ThresholdStatus.29: Unused.]]>
 </Description>
 </Member>
-<Member Name="ThresholdStatus30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="30" ExternalAccess="Read/Write">
+<Member Name="ThresholdStatusBit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="30" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[ThresholdStatus.30: Unused.]]>
 </Description>
 </Member>
-<Member Name="ThresholdStatus31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="31" ExternalAccess="Read/Write">
+<Member Name="ThresholdStatusBit31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ThresholdStatus" BitNumber="31" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[ThresholdStatus.31: Unused.]]>
 </Description>
