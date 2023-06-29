@@ -145,27 +145,27 @@
 <![CDATA[LinkStatus.26: Status of port Gi2_16.]]>
 </Description>
 </Member>
-<Member Name="LinkStatus27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="27" ExternalAccess="Read/Write">
+<Member Name="LinkStatusBit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="27" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[LinkStatus.27: Unused.]]>
 </Description>
 </Member>
-<Member Name="LinkStatus28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="28" ExternalAccess="Read/Write">
+<Member Name="LinkStatusBit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="28" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[LinkStatus.28: Unused.]]>
 </Description>
 </Member>
-<Member Name="LinkStatus29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="29" ExternalAccess="Read/Write">
+<Member Name="LinkStatusBit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="29" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[LinkStatus.29: Unused.]]>
 </Description>
 </Member>
-<Member Name="LinkStatus30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="30" ExternalAccess="Read/Write">
+<Member Name="LinkStatusBit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="30" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[LinkStatus.30: Unused.]]>
 </Description>
 </Member>
-<Member Name="LinkStatus31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="31" ExternalAccess="Read/Write">
+<Member Name="LinkStatusBit31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LinkStatus" BitNumber="31" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[LinkStatus.31: Unused.]]>
 </Description>
