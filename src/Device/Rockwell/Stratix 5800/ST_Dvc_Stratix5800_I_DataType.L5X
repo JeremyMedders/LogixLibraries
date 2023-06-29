@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Wed Jun 14 19:46:13 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="ST_Dvc_Stratix5800_I" TargetType="DataType" ContainsContext="true" ExportDate="Thu Jun 29 00:18:35 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="ST_Dvc_Stratix5800_I" Family="NoFamily" Class="User">
@@ -569,7 +569,7 @@
 <![CDATA[Port Gi2_3 utilization (%).]]>
 </Description>
 </Member>
-<Member Name="PortGi2_4Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Port14Utilization" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Port Gi2_4 utilization (%).]]>
 </Description>
