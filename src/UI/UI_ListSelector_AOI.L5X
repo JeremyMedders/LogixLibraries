@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Handles a remote piloted control list selector.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="UI_ListSelector" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T03:17:09.280Z" ContainsContext="true" ExportDate="Sat Jan 21 10:29:24 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="UI_ListSelector" TargetType="AddOnInstructionDefinition" TargetRevision="1.1 " TargetLastEdited="2023-07-18T21:17:29.955Z" ContainsContext="true" ExportDate="Tue Jul 18 16:17:36 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="UI_ListSelector" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-15T20:16:32.292Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T03:17:09.280Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="UI_ListSelector" Revision="1.1" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-15T20:16:32.292Z" CreatedBy="APEX\Jeremy" EditedDate="2023-07-18T21:17:29.955Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Description>
 <![CDATA[Handles a remote piloted control list selector.]]>
@@ -196,7 +196,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_HMI_ListNavigator]]>
+<![CDATA[	UI_ListNavigator]]>
 </Line>
 <Line Number="3">
 <![CDATA[	]]>
@@ -497,7 +497,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_HMI_ListNavigator]]>
+<![CDATA[	UI_ListNavigator]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
