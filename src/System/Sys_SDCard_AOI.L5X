@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_SDCard" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-07-18T14:23:24.009Z" ContainsContext="true" ExportDate="Tue Jul 18 09:24:12 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_SDCard" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-07-18T14:38:11.483Z" ContainsContext="true" ExportDate="Tue Jul 18 09:38:42 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Sys_SDCard" Family="NoFamily" Class="User">
@@ -285,6 +285,368 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="Sys_Module" Revision="1.1" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-11-11T18:04:33.847Z" CreatedBy="APEX\Jeremy" EditedDate="2023-07-13T01:42:42.501Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Provides detailed module diagnostics and inhibit ability.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Module" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true">
+<Description>
+<![CDATA[Name of the module in the I/O tree.]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Inhibit" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Command to inhibit the module.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_EntryStatus" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Specifies the current state of the specified map entry.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_FaultCode" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[A number that identifies a module fault, if one occurs.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_FaultInfo" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Provides specific information about the Module object fault code.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Instance" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Provides the instance number of this module object.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Mode" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Specifies the current mode of the Module object.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Standby" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.0" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The controller is powering up.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Faulted" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.1" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Indicates whether any of the Module object’s connections to the associated module have failed.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Validating" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.2" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The Module object is verifying Module object integrity prior to establishing connections to the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Connecting" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.3" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The Module object is initiating connections to the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Connected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.4" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[All connections to the module are established and data is transferring.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_ShuttingDown" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.5" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The Module object is in the process of shutting down all connections to the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.6" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The Module object is inhibited (the inhibit bit in the Mode attribute is set).]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Waiting" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.7" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[The parent object upon which this Module object depends is not running.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Reconfiguring" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.8" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_FirmwareUpdating" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.9" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Firmware supervisor is attempting to flash the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Configuring" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.10" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Controller is downloading configuration to the module.]]>
+</Description>
+</Parameter>
+<Parameter Name="Sts_Offline" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.11" Required="false" Visible="true" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="ModeSet" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ESts" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Status" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[/*]]>
+</Line>
+<Line Number="1">
+<![CDATA[	Sys_Module]]>
+</Line>
+<Line Number="2">
+<![CDATA[	]]>
+</Line>
+<Line Number="3">
+<![CDATA[	EntryStatus Map]]>
+</Line>
+<Line Number="4">
+<![CDATA[	• 0x0000: Standby]]>
+</Line>
+<Line Number="5">
+<![CDATA[	• 0x1000: Faulted]]>
+</Line>
+<Line Number="6">
+<![CDATA[	• 0x2000: Validating]]>
+</Line>
+<Line Number="7">
+<![CDATA[	• 0x3000: Connecting]]>
+</Line>
+<Line Number="8">
+<![CDATA[	• 0x4000: Running]]>
+</Line>
+<Line Number="9">
+<![CDATA[	• 0x5000: Shutting Down]]>
+</Line>
+<Line Number="10">
+<![CDATA[	• 0x6000: Inhibited]]>
+</Line>
+<Line Number="11">
+<![CDATA[	• 0x7000: Waiting]]>
+</Line>
+<Line Number="12">
+<![CDATA[	• 0x8000: Reconfiguring]]>
+</Line>
+<Line Number="13">
+<![CDATA[	• 0x9000: Firmware Updating]]>
+</Line>
+<Line Number="14">
+<![CDATA[	• 0xA000: Configuring]]>
+</Line>
+<Line Number="15">
+<![CDATA[*/]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[GSV(Module, Ref_Module, INSTANCE, Val_Instance);]]>
+</Line>
+<Line Number="18">
+<![CDATA[GSV(Module, Ref_Module, EntryStatus, Val_EntryStatus);]]>
+</Line>
+<Line Number="19">
+<![CDATA[GSV(Module, Ref_Module, FaultCode, Val_FaultCode);]]>
+</Line>
+<Line Number="20">
+<![CDATA[GSV(Module, Ref_Module, FaultInfo, Val_FaultInfo);]]>
+</Line>
+<Line Number="21">
+<![CDATA[GSV(Module, Ref_Module, Mode, Val_Mode);]]>
+</Line>
+<Line Number="22">
+<![CDATA[]]>
+</Line>
+<Line Number="23">
+<![CDATA[//if (Inp_Inhibit & NOT Sts_Inhibited) then]]>
+</Line>
+<Line Number="24">
+<![CDATA[//	ModeSet := Val_Mode OR 16#0004;]]>
+</Line>
+<Line Number="25">
+<![CDATA[//	SSV(Module, Ref_Module, Mode, ModeSet);]]>
+</Line>
+<Line Number="26">
+<![CDATA[//elsif (NOT Inp_Inhibit & Sts_Inhibited) then]]>
+</Line>
+<Line Number="27">
+<![CDATA[//	ModeSet := Val_Mode AND 16#FFFB;]]>
+</Line>
+<Line Number="28">
+<![CDATA[//	SSV(Module, Ref_Module, Mode, ModeSet);]]>
+</Line>
+<Line Number="29">
+<![CDATA[//end_if;]]>
+</Line>
+<Line Number="30">
+<![CDATA[]]>
+</Line>
+<Line Number="31">
+<![CDATA[ESts                 := Val_EntryStatus & 16#F000;]]>
+</Line>
+<Line Number="32">
+<![CDATA[Sts_Standby          := (ESts = 16#0000);]]>
+</Line>
+<Line Number="33">
+<![CDATA[Sts_Faulted          := (ESts = 16#1000);]]>
+</Line>
+<Line Number="34">
+<![CDATA[Sts_Validating       := (ESts = 16#2000);]]>
+</Line>
+<Line Number="35">
+<![CDATA[Sts_Connecting       := (ESts = 16#3000);]]>
+</Line>
+<Line Number="36">
+<![CDATA[Sts_Connected        := (ESts = 16#4000);]]>
+</Line>
+<Line Number="37">
+<![CDATA[Sts_ShuttingDown     := (ESts = 16#5000);]]>
+</Line>
+<Line Number="38">
+<![CDATA[Sts_Inhibited        := (ESts = 16#6000);]]>
+</Line>
+<Line Number="39">
+<![CDATA[Sts_Waiting          := (ESts = 16#7000);]]>
+</Line>
+<Line Number="40">
+<![CDATA[Sts_Reconfiguring    := (ESts = 16#8000);]]>
+</Line>
+<Line Number="41">
+<![CDATA[Sts_FirmwareUpdating := (ESts = 16#9000);]]>
+</Line>
+<Line Number="42">
+<![CDATA[Sts_Configuring      := (ESts = 16#A000);]]>
+</Line>
+<Line Number="43">
+<![CDATA[Sts_Offline          := NOT (Sts_Inhibited OR Sts_Connected);]]>
+</Line>
+<Line Number="44">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Sys_Module]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Inp_Inhibit := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Status := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+<Line Number="8">
+<![CDATA[Val_Instance := 0;]]>
+</Line>
+<Line Number="9">
+<![CDATA[Val_EntryStatus := 0;]]>
+</Line>
+<Line Number="10">
+<![CDATA[Val_FaultCode := 0;]]>
+</Line>
+<Line Number="11">
+<![CDATA[Val_FaultInfo := 0;]]>
+</Line>
+<Line Number="12">
+<![CDATA[Val_Mode := 0;]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
 <AddOnInstructionDefinition Name="Msg_SetPathToIO" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-12-14T20:40:32.238Z" CreatedBy="APEX\Jeremy" EditedDate="2023-02-16T06:23:27.820Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Description>
@@ -400,7 +762,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Sys_SDCard" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-07-17T21:20:39.062Z" CreatedBy="APEX\Jeremy" EditedDate="2023-07-18T14:23:24.009Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Sys_SDCard" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-07-17T21:20:39.062Z" CreatedBy="APEX\Jeremy" EditedDate="2023-07-18T14:38:11.483Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -488,6 +850,35 @@
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
+<LocalTag Name="Module" DataType="Sys_Module" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="Sys_Module">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Inhibit" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Val_EntryStatus" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="Val_FaultCode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_FaultInfo" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Instance" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Mode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Sts_Standby" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Validating" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Connecting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Connected" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_ShuttingDown" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Inhibited" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Waiting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Reconfiguring" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_FirmwareUpdating" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Configuring" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Offline" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
 </LocalTags>
 <Routines>
 <Routine Name="Logic" Type="ST">
@@ -508,78 +899,84 @@
 <![CDATA[]]>
 </Line>
 <Line Number="5">
-<![CDATA[PG.Inp_Interval := 100;]]>
+<![CDATA[Sys_Module(Module, Ref_Module);]]>
 </Line>
 <Line Number="6">
-<![CDATA[PG.Inp_Enable := 1;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="7">
-<![CDATA[RTC_PulseGen(PG);]]>
+<![CDATA[PG.Inp_Interval := 100;]]>
 </Line>
 <Line Number="8">
-<![CDATA[]]>
+<![CDATA[PG.Inp_Enable := Module.Sts_Connected;]]>
 </Line>
 <Line Number="9">
-<![CDATA[if (PG.Out & (Ref_Msg.DN OR Ref_Msg.ER OR NOT Ref_Msg.EN)) then]]>
+<![CDATA[RTC_PulseGen(PG);]]>
 </Line>
 <Line Number="10">
-<![CDATA[	Msg_SetParams(SetParams, 16#031A, 1, 0, 0, Ref_Msg);]]>
-</Line>
-<Line Number="11">
-<![CDATA[	Msg_SetPathToIO(SetPath, Ref_Module, Ref_Msg);]]>
-</Line>
-<Line Number="12">
-<![CDATA[	MSG(Ref_Msg);]]>
-</Line>
-<Line Number="13">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="14">
 <![CDATA[]]>
 </Line>
+<Line Number="11">
+<![CDATA[if (PG.Out & (Ref_Msg.DN OR Ref_Msg.ER OR NOT Ref_Msg.EN)) then]]>
+</Line>
+<Line Number="12">
+<![CDATA[	Msg_SetParams(SetParams, 16#031A, 1, 0, 0, Ref_Msg);]]>
+</Line>
+<Line Number="13">
+<![CDATA[	Msg_SetPathToIO(SetPath, Ref_Module, Ref_Msg);]]>
+</Line>
+<Line Number="14">
+<![CDATA[	MSG(Ref_Msg);]]>
+</Line>
 <Line Number="15">
-<![CDATA[if (Ref_Msg.DN OR Ref_Msg.ER) then]]>
-</Line>
-<Line Number="16">
-<![CDATA[	if (Ref_Msg.DN) then]]>
-</Line>
-<Line Number="17">
-<![CDATA[		COP(Ref_MsgResp[0], Local, 1);]]>
-</Line>
-<Line Number="18">
-<![CDATA[		Sts_Present := 1;]]>
-</Line>
-<Line Number="19">
-<![CDATA[		Sts_Locked := (Local.Locked <> 0);]]>
-</Line>
-<Line Number="20">
-<![CDATA[	else]]>
-</Line>
-<Line Number="21">
-<![CDATA[		Status := 0;]]>
-</Line>
-<Line Number="22">
-<![CDATA[		Local.DeviceType := 0;]]>
-</Line>
-<Line Number="23">
-<![CDATA[		Local.FileCount := 0;]]>
-</Line>
-<Line Number="24">
-<![CDATA[		Local.UsedSize := 0;]]>
-</Line>
-<Line Number="25">
-<![CDATA[		Local.TotalSize := 0;]]>
-</Line>
-<Line Number="26">
-<![CDATA[		Local.Locked := 0;]]>
-</Line>
-<Line Number="27">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="28">
 <![CDATA[end_if;]]>
 </Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[if (Ref_Msg.DN OR Ref_Msg.ER) then]]>
+</Line>
+<Line Number="18">
+<![CDATA[	if (Ref_Msg.DN) then]]>
+</Line>
+<Line Number="19">
+<![CDATA[		COP(Ref_MsgResp[0], Local, 1);]]>
+</Line>
+<Line Number="20">
+<![CDATA[		Sts_Present := 1;]]>
+</Line>
+<Line Number="21">
+<![CDATA[		Sts_Locked := (Local.Locked <> 0);]]>
+</Line>
+<Line Number="22">
+<![CDATA[	else]]>
+</Line>
+<Line Number="23">
+<![CDATA[		Status := 0;]]>
+</Line>
+<Line Number="24">
+<![CDATA[		Local.DeviceType := 0;]]>
+</Line>
+<Line Number="25">
+<![CDATA[		Local.FileCount := 0;]]>
+</Line>
+<Line Number="26">
+<![CDATA[		Local.UsedSize := 0;]]>
+</Line>
+<Line Number="27">
+<![CDATA[		Local.TotalSize := 0;]]>
+</Line>
+<Line Number="28">
+<![CDATA[		Local.Locked := 0;]]>
+</Line>
 <Line Number="29">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="30">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="31">
 <![CDATA[]]>
 </Line>
 </STContent>
@@ -627,6 +1024,7 @@
 </Routines>
 <Dependencies>
 <Dependency Type="DataType" Name="ST_Sys_SDCard"/>
+<Dependency Type="AddOnInstructionDefinition" Name="Sys_Module"/>
 <Dependency Type="AddOnInstructionDefinition" Name="RTC_PulseGen"/>
 <Dependency Type="AddOnInstructionDefinition" Name="Msg_SetParams"/>
 <Dependency Type="AddOnInstructionDefinition" Name="Msg_SetPathToIO"/>
