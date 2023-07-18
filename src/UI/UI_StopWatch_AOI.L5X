@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="UI_StopWatch" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-26T04:52:14.635Z" ContainsContext="true" ExportDate="Wed Jan 25 22:54:21 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="UI_Stopwatch" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-07-18T17:39:03.767Z" ContainsContext="true" ExportDate="Tue Jul 18 16:47:57 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 </DataTypes>
@@ -171,7 +171,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="UI_StopWatch" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-11-06T20:06:05.005Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T04:52:14.635Z" EditedBy="RLCCONTROLS\jrogers"
+<AddOnInstructionDefinition Use="Target" Name="UI_Stopwatch" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-11-06T20:06:05.005Z" CreatedBy="APEX\Jeremy" EditedDate="2023-07-18T17:39:03.767Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -184,30 +184,9 @@
 <![CDATA[Enable Output - System Defined Parameter]]>
 </Description>
 </Parameter>
-<Parameter Name="OCmd_Start" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="OCmd_Stop" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="OCmd_Reset" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
+<Parameter Name="OCmd_Reset" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.0" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Start" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.1" Required="false" Visible="true" ExternalAccess="Read/Write"/>
+<Parameter Name="OCmd_Stop" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="OCmd.2" Required="false" Visible="true" ExternalAccess="Read/Write"/>
 <Parameter Name="Val_AsHours" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[0.00000000e+000]]>
@@ -262,6 +241,14 @@
 </DefaultData>
 <DefaultData Format="Decorated">
 <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="FrSec" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
 </DefaultData>
 </Parameter>
 </Parameters>
@@ -329,6 +316,38 @@
 <DataValue DataType="REAL" Radix="Float" Value="0.0"/>
 </DefaultData>
 </LocalTag>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TStart" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TNow" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OCmd" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
 </LocalTags>
 <Routines>
 <Routine Name="Logic" Type="ST">
@@ -361,117 +380,165 @@
 <![CDATA[	Sec := 0;]]>
 </Line>
 <Line Number="9">
-<![CDATA[	]]>
-</Line>
-<Line Number="10">
 <![CDATA[	THour := 0.0;]]>
 </Line>
-<Line Number="11">
+<Line Number="10">
 <![CDATA[	TMin := 0.0;]]>
 </Line>
-<Line Number="12">
+<Line Number="11">
 <![CDATA[	TSec := 0;]]>
 </Line>
-<Line Number="13">
+<Line Number="12">
 <![CDATA[end_if;]]>
+</Line>
+<Line Number="13">
+<![CDATA[]]>
 </Line>
 <Line Number="14">
-<![CDATA[]]>
+<![CDATA[GSV(WallClockTime, , CurrentValue, TNow);]]>
 </Line>
 <Line Number="15">
-<![CDATA[PG.Inp_Enable := (PG.Inp_Enable OR OCmd_Start) & NOT OCmd_Stop;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="16">
-<![CDATA[PG.Inp_Interval := 1000;]]>
+<![CDATA[if (OCmd_Start & NOT OSR.0) then]]>
 </Line>
 <Line Number="17">
-<![CDATA[RTC_PulseGen(PG);]]>
+<![CDATA[	]]>
 </Line>
 <Line Number="18">
-<![CDATA[]]>
+<![CDATA[	GSV(WallClockTime, , CurrentValue, TStart);]]>
 </Line>
 <Line Number="19">
-<![CDATA[if (PG.Out) then]]>
-</Line>
-<Line Number="20">
-<![CDATA[	Sec := Sec + 1;]]>
-</Line>
-<Line Number="21">
-<![CDATA[	]]>
-</Line>
-<Line Number="22">
-<![CDATA[	if (Sec >= 60) then]]>
-</Line>
-<Line Number="23">
-<![CDATA[		Sec := 0;]]>
-</Line>
-<Line Number="24">
-<![CDATA[		Min := Min + 1;]]>
-</Line>
-<Line Number="25">
-<![CDATA[		]]>
-</Line>
-<Line Number="26">
-<![CDATA[		if (Min >= 60) then]]>
-</Line>
-<Line Number="27">
-<![CDATA[			Min := 0;]]>
-</Line>
-<Line Number="28">
-<![CDATA[			Hour := Hour + 1;]]>
-</Line>
-<Line Number="29">
-<![CDATA[		end_if;]]>
-</Line>
-<Line Number="30">
-<![CDATA[	end_if;]]>
-</Line>
-<Line Number="31">
-<![CDATA[	]]>
-</Line>
-<Line Number="32">
-<![CDATA[	THour := TSec / 3600.0;]]>
-</Line>
-<Line Number="33">
-<![CDATA[	TMin := TSec / 60.0;]]>
-</Line>
-<Line Number="34">
-<![CDATA[	TSec := TSec + 1;]]>
-</Line>
-<Line Number="35">
 <![CDATA[end_if;]]>
 </Line>
-<Line Number="36">
+<Line Number="20">
+<![CDATA[OSR.0 := OCmd_Start;]]>
+</Line>
+<Line Number="21">
 <![CDATA[]]>
+</Line>
+<Line Number="22">
+<![CDATA[if (OCmd_Stop & NOT OSR.1) then]]>
+</Line>
+<Line Number="23">
+<![CDATA[	]]>
+</Line>
+<Line Number="24">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="25">
+<![CDATA[OSR.1 := OCmd_Stop;]]>
+</Line>
+<Line Number="26">
+<![CDATA[]]>
+</Line>
+<Line Number="27">
+<![CDATA[FrSec := (TNow - TStart) * 0.001;]]>
+</Line>
+<Line Number="28">
+<![CDATA[]]>
+</Line>
+<Line Number="29">
+<![CDATA[PG.Inp_Enable := (PG.Inp_Enable OR OCmd_Start) & NOT OCmd_Stop;]]>
+</Line>
+<Line Number="30">
+<![CDATA[PG.Inp_Interval := 1000;]]>
+</Line>
+<Line Number="31">
+<![CDATA[RTC_PulseGen(PG);]]>
+</Line>
+<Line Number="32">
+<![CDATA[]]>
+</Line>
+<Line Number="33">
+<![CDATA[if (PG.Out) then]]>
+</Line>
+<Line Number="34">
+<![CDATA[	Sec := Sec + 1;]]>
+</Line>
+<Line Number="35">
+<![CDATA[	]]>
+</Line>
+<Line Number="36">
+<![CDATA[	if (Sec >= 60) then]]>
 </Line>
 <Line Number="37">
-<![CDATA[Val_AsHours := THour;]]>
+<![CDATA[		Sec := 0;]]>
 </Line>
 <Line Number="38">
-<![CDATA[Val_AsMinutes := TMin;]]>
+<![CDATA[		Min := Min + 1;]]>
 </Line>
 <Line Number="39">
-<![CDATA[Val_AsSeconds := TSec;]]>
+<![CDATA[		]]>
 </Line>
 <Line Number="40">
-<![CDATA[]]>
+<![CDATA[		if (Min >= 60) then]]>
 </Line>
 <Line Number="41">
-<![CDATA[Val_Hours := Hour;]]>
+<![CDATA[			Min := 0;]]>
 </Line>
 <Line Number="42">
-<![CDATA[Val_Minutes := Min;]]>
+<![CDATA[			Hour := Hour + 1;]]>
 </Line>
 <Line Number="43">
-<![CDATA[Val_Seconds := Sec;]]>
+<![CDATA[		end_if;]]>
 </Line>
 <Line Number="44">
-<![CDATA[]]>
+<![CDATA[	end_if;]]>
 </Line>
 <Line Number="45">
-<![CDATA[Sts_Active := PG.Sts_Enabled;]]>
+<![CDATA[	]]>
 </Line>
 <Line Number="46">
+<![CDATA[	THour := TSec / 3600.0;]]>
+</Line>
+<Line Number="47">
+<![CDATA[	TMin := TSec / 60.0;]]>
+</Line>
+<Line Number="48">
+<![CDATA[	TSec := TSec + 1;]]>
+</Line>
+<Line Number="49">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="50">
+<![CDATA[]]>
+</Line>
+<Line Number="51">
+<![CDATA[Val_AsHours := THour;]]>
+</Line>
+<Line Number="52">
+<![CDATA[Val_AsMinutes := TMin;]]>
+</Line>
+<Line Number="53">
+<![CDATA[Val_AsSeconds := TSec;]]>
+</Line>
+<Line Number="54">
+<![CDATA[]]>
+</Line>
+<Line Number="55">
+<![CDATA[Val_Hours := Hour;]]>
+</Line>
+<Line Number="56">
+<![CDATA[Val_Minutes := Min;]]>
+</Line>
+<Line Number="57">
+<![CDATA[Val_Seconds := Sec;]]>
+</Line>
+<Line Number="58">
+<![CDATA[]]>
+</Line>
+<Line Number="59">
+<![CDATA[Sts_Active := PG.Sts_Enabled;]]>
+</Line>
+<Line Number="60">
+<![CDATA[]]>
+</Line>
+<Line Number="61">
+<![CDATA[OCmd := 0;]]>
+</Line>
+<Line Number="62">
 <![CDATA[]]>
 </Line>
 </STContent>
