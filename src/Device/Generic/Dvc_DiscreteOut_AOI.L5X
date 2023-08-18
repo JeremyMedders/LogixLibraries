@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_DiscreteOut" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-01-20T18:44:34.555Z" ContainsContext="true" ExportDate="Sat Jan 21 10:10:24 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Dvc_DiscreteOut" TargetType="AddOnInstructionDefinition" TargetRevision="1.1 " TargetLastEdited="2023-08-17T23:56:26.982Z" ContainsContext="true" ExportDate="Thu Aug 17 18:58:17 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Dvc" Family="NoFamily" Class="User">
@@ -1640,7 +1640,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Name="RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:09:25.399Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="RTC_PulseGen" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T02:52:26.487Z" EditedBy="RLCCONTROLS\jrogers" SoftwareRevision="v35.00"
 >
 <Description>
 <![CDATA[Generates precision pulses on configurable intervals.]]>
@@ -1684,6 +1684,9 @@
 </DefaultData>
 </Parameter>
 <Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulsed output.]]>
+</Description>
 <DefaultData Format="L5K">
 <![CDATA[0]]>
 </DefaultData>
@@ -1870,471 +1873,6 @@
 <![CDATA[Val_Aligned := (((Val_Data + 4) + 3) & (16#FFFF XOR 16#0003)) / 4;]]>
 </Line>
 <Line Number="7">
-<![CDATA[]]>
-</Line>
-</STContent>
-</Routine>
-</Routines>
-</AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Math_Scale" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-21T15:22:37.532Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:41:53.258Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
->
-<Parameters>
-<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Enable Input - System Defined Parameter]]>
-</Description>
-</Parameter>
-<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Enable Output - System Defined Parameter]]>
-</Description>
-</Parameter>
-<Parameter Name="Inp_Raw" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Input signal to scale.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Inp_RawMin" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Input minimum for scaling.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Inp_RawMax" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Input maximum for scaling.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Inp_EUMin" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Minimum of scaled range.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Inp_EUMax" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Maximum of scaled range.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Scaled value.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Inp_Clamp" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Limits the scaled value to within scaled range.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
-</Parameters>
-<LocalTags/>
-<Routines>
-<Routine Name="Logic" Type="ST">
-<STContent>
-<Line Number="0">
-<![CDATA[]]>
-</Line>
-<Line Number="1">
-<![CDATA[/*]]>
-</Line>
-<Line Number="2">
-<![CDATA[	AO_Math_Scale]]>
-</Line>
-<Line Number="3">
-<![CDATA[*/]]>
-</Line>
-<Line Number="4">
-<![CDATA[]]>
-</Line>
-<Line Number="5">
-<![CDATA[if (Inp_EUMax = Inp_EUMin OR Inp_RawMax <= Inp_RawMin) then]]>
-</Line>
-<Line Number="6">
-<![CDATA[	Val := 0;]]>
-</Line>
-<Line Number="7">
-<![CDATA[elsif (Inp_Clamp & Inp_Raw <= Inp_RawMin) then]]>
-</Line>
-<Line Number="8">
-<![CDATA[	Val := Inp_EUMin;]]>
-</Line>
-<Line Number="9">
-<![CDATA[elsif (Inp_Clamp & Inp_Raw >= Inp_RawMax) then]]>
-</Line>
-<Line Number="10">
-<![CDATA[	Val := Inp_EUMax;]]>
-</Line>
-<Line Number="11">
-<![CDATA[else]]>
-</Line>
-<Line Number="12">
-<![CDATA[	Val := (Inp_Raw - Inp_RawMin) * (Inp_EUMax - Inp_EUMin) / (Inp_RawMax - Inp_RawMin) + Inp_EUMin;]]>
-</Line>
-<Line Number="13">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="14">
-<![CDATA[]]>
-</Line>
-</STContent>
-</Routine>
-</Routines>
-</AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Op_Gate" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2012-10-01T18:56:53.162Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T18:22:21.325Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
->
-<Description>
-<![CDATA[Condition Gate]]>
-</Description>
-<AdditionalHelpText>
-<![CDATA[Copyright © Rockwell Automation, Inc.  All Rights Reserved.
-
-This Instruction provides a "gate" for a discrete Input signal and
-provides on-delay and off-delay timing for the gated signal.
-
-When the Gate input is true, the instruction Input is passed through
-to the Output, with on-delay and off-delay timing applied.
-
-When the Gate input is false, the Output is kept off
-(note: off-delay still applies!)
-
-This instruction is usually used between a comparison
-(analog threshold with deadband or discrete logic)
-and a P_Alarm instance, but may be used as a
-gated on-delay/off-delay timer generally.
-
-When EnableIn  is FALSE (e.g., on a false LD rung), the Input "Inp"
-is inverted.  Note that the Gate input (Inp_Gate) is NOT inverted!!!
-
-SUMMARY OF CHANGES FROM PREVIOUS VERSION (4.00.00)
-See 4.10 Release Notes for details.
-* Unmodified, up-rev only for Library 4.10.00
-
-SUMMARY OF CHANGES FROM PREVIOUS VERSION (3.5-01)
-See 4.00 Release Notes for details.
-* Changed Inf_ items to HMI_ (e.g., HMI_Lib, HMI_Type).
-* Changed delay time configuration items to REAL seconds
-]]>
-</AdditionalHelpText>
-<Parameters>
-<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Enable Input - System Defined Parameter]]>
-</Description>
-</Parameter>
-<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Enable Output - System Defined Parameter]]>
-</Description>
-</Parameter>
-<Parameter Name="Inp_Condition" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Input condition.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Enables (1) or disables (0) the gate.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[1]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Cfg_GateDelay" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Time after Enable is true to permit Condition monitoring (seconds).]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[1.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Cfg_OnDelay" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Time to delay-on Out, once Condition and Enabled are true (seconds).]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[1.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Cfg_OffDelay" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Time to delay-off Out, once either Condition or Enable are false (seconds).]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[1.00000000e+000]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Indicates whether the gate is enabled, once enable-delay has expired.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
-<Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
-<Description>
-<![CDATA[Gate output. Maintained until off-delay expires.]]>
-</Description>
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
-</DefaultData>
-</Parameter>
-</Parameters>
-<LocalTags>
-<LocalTag Name="Timer" DataType="FBD_TIMER" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[[1,0,0,0,0,0,0,0,0,4,0,0]]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<Structure DataType="FBD_TIMER">
-<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
-<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
-<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
-<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
-<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
-<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
-<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
-<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
-<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
-<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
-<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
-</Structure>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
-</DefaultData>
-</LocalTag>
-</LocalTags>
-<Routines>
-<Routine Name="Logic" Type="ST">
-<STContent>
-<Line Number="0">
-<![CDATA[]]>
-</Line>
-<Line Number="1">
-<![CDATA[/*]]>
-</Line>
-<Line Number="2">
-<![CDATA[	AO_Op_Gate]]>
-</Line>
-<Line Number="3">
-<![CDATA[	]]>
-</Line>
-<Line Number="4">
-<![CDATA[	Provides a discrete signal gate with on-delay and off-delay timing for the gated signal.]]>
-</Line>
-<Line Number="5">
-<![CDATA[	Permit timer delays between 0 and 2000000 seconds.]]>
-</Line>
-<Line Number="6">
-<![CDATA[	If configuration times are invalid, maintain presets.]]>
-</Line>
-<Line Number="7">
-<![CDATA[*/]]>
-</Line>
-<Line Number="8">
-<![CDATA[]]>
-</Line>
-<Line Number="9">
-<![CDATA[if (NOT Sts_Enabled & NOT Out & (0.0 <= Cfg_GateDelay OR Cfg_GateDelay <= 2000000.0)) then]]>
-</Line>
-<Line Number="10">
-<![CDATA[	Timer.PRE := Cfg_GateDelay * 1000;]]>
-</Line>
-<Line Number="11">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="12">
-<![CDATA[]]>
-</Line>
-<Line Number="13">
-<![CDATA[if (Sts_Enabled & NOT Out & (0.0 <= Cfg_OnDelay & Cfg_OnDelay <= 2000000.0)) then]]>
-</Line>
-<Line Number="14">
-<![CDATA[	Timer.PRE := Cfg_OnDelay * 1000;]]>
-</Line>
-<Line Number="15">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="16">
-<![CDATA[]]>
-</Line>
-<Line Number="17">
-<![CDATA[if (Sts_Enabled & Out & (0.0 <= Cfg_OffDelay & Cfg_OffDelay <= 2000000.0)) then]]>
-</Line>
-<Line Number="18">
-<![CDATA[	Timer.PRE := Cfg_OffDelay * 1000;]]>
-</Line>
-<Line Number="19">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="20">
-<![CDATA[]]>
-</Line>
-<Line Number="21">
-<![CDATA[Timer.TimerEnable := ]]>
-</Line>
-<Line Number="22">
-<![CDATA[	(Inp_Enable & NOT Sts_Enabled) OR]]>
-</Line>
-<Line Number="23">
-<![CDATA[	(Inp_Enable & Inp_Condition & NOT Out) OR]]>
-</Line>
-<Line Number="24">
-<![CDATA[	(Inp_Enable & NOT Inp_Condition & Out) OR]]>
-</Line>
-<Line Number="25">
-<![CDATA[	(NOT Inp_Enable & Out);]]>
-</Line>
-<Line Number="26">
-<![CDATA[]]>
-</Line>
-<Line Number="27">
-<![CDATA[/*]]>
-</Line>
-<Line Number="28">
-<![CDATA[	If a timer reset has been carried out, lower the request.]]>
-</Line>
-<Line Number="29">
-<![CDATA[*/]]>
-</Line>
-<Line Number="30">
-<![CDATA[if (Timer.Reset & Timer.ACC = 0) then]]>
-</Line>
-<Line Number="31">
-<![CDATA[	Timer.Reset := 0;]]>
-</Line>
-<Line Number="32">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="33">
-<![CDATA[]]>
-</Line>
-<Line Number="34">
-<![CDATA[Sts_Enabled := (Sts_Enabled OR Timer.DN) & Inp_Enable;]]>
-</Line>
-<Line Number="35">
-<![CDATA[]]>
-</Line>
-<Line Number="36">
-<![CDATA[if (Sts_Enabled & NOT OSR.0) then]]>
-</Line>
-<Line Number="37">
-<![CDATA[	Timer.Reset := 1;]]>
-</Line>
-<Line Number="38">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="39">
-<![CDATA[OSR.0 := Sts_Enabled;]]>
-</Line>
-<Line Number="40">
-<![CDATA[]]>
-</Line>
-<Line Number="41">
-<![CDATA[if (Inp_Condition & Sts_Enabled & Timer.DN & NOT Timer.Reset) then]]>
-</Line>
-<Line Number="42">
-<![CDATA[	Out := 1;]]>
-</Line>
-<Line Number="43">
-<![CDATA[	Timer.Reset := 1;]]>
-</Line>
-<Line Number="44">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="45">
-<![CDATA[]]>
-</Line>
-<Line Number="46">
-<![CDATA[if (Out & (NOT Sts_Enabled OR NOT Inp_Condition) & Timer.DN) then]]>
-</Line>
-<Line Number="47">
-<![CDATA[	Out := 0;]]>
-</Line>
-<Line Number="48">
-<![CDATA[	Timer.Reset := 1;]]>
-</Line>
-<Line Number="49">
-<![CDATA[end_if;]]>
-</Line>
-<Line Number="50">
-<![CDATA[]]>
-</Line>
-<Line Number="51">
-<![CDATA[TONR(Timer);]]>
-</Line>
-<Line Number="52">
 <![CDATA[]]>
 </Line>
 </STContent>
@@ -2694,6 +2232,471 @@ See 4.00 Release Notes for details.
 <Dependency Type="DataType" Name="ST_Dvc"/>
 <Dependency Type="AddOnInstructionDefinition" Name="Str_Size"/>
 </Dependencies>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="Op_Gate" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2012-10-01T18:56:53.162Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T18:22:21.325Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Description>
+<![CDATA[Condition Gate]]>
+</Description>
+<AdditionalHelpText>
+<![CDATA[Copyright © Rockwell Automation, Inc.  All Rights Reserved.
+
+This Instruction provides a "gate" for a discrete Input signal and
+provides on-delay and off-delay timing for the gated signal.
+
+When the Gate input is true, the instruction Input is passed through
+to the Output, with on-delay and off-delay timing applied.
+
+When the Gate input is false, the Output is kept off
+(note: off-delay still applies!)
+
+This instruction is usually used between a comparison
+(analog threshold with deadband or discrete logic)
+and a P_Alarm instance, but may be used as a
+gated on-delay/off-delay timer generally.
+
+When EnableIn  is FALSE (e.g., on a false LD rung), the Input "Inp"
+is inverted.  Note that the Gate input (Inp_Gate) is NOT inverted!!!
+
+SUMMARY OF CHANGES FROM PREVIOUS VERSION (4.00.00)
+See 4.10 Release Notes for details.
+* Unmodified, up-rev only for Library 4.10.00
+
+SUMMARY OF CHANGES FROM PREVIOUS VERSION (3.5-01)
+See 4.00 Release Notes for details.
+* Changed Inf_ items to HMI_ (e.g., HMI_Lib, HMI_Type).
+* Changed delay time configuration items to REAL seconds
+]]>
+</AdditionalHelpText>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Condition" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Input condition.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Enables (1) or disables (0) the gate.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_GateDelay" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time after Enable is true to permit Condition monitoring (seconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_OnDelay" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time to delay-on Out, once Condition and Enabled are true (seconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_OffDelay" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time to delay-off Out, once either Condition or Enable are false (seconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Indicates whether the gate is enabled, once enable-delay has expired.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Gate output. Maintained until off-delay expires.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Timer" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,0,0,0,0,4,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Op_Gate]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Provides a discrete signal gate with on-delay and off-delay timing for the gated signal.]]>
+</Line>
+<Line Number="5">
+<![CDATA[	Permit timer delays between 0 and 2000000 seconds.]]>
+</Line>
+<Line Number="6">
+<![CDATA[	If configuration times are invalid, maintain presets.]]>
+</Line>
+<Line Number="7">
+<![CDATA[*/]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[if (NOT Sts_Enabled & NOT Out & (0.0 <= Cfg_GateDelay OR Cfg_GateDelay <= 2000000.0)) then]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Timer.PRE := Cfg_GateDelay * 1000;]]>
+</Line>
+<Line Number="11">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="12">
+<![CDATA[]]>
+</Line>
+<Line Number="13">
+<![CDATA[if (Sts_Enabled & NOT Out & (0.0 <= Cfg_OnDelay & Cfg_OnDelay <= 2000000.0)) then]]>
+</Line>
+<Line Number="14">
+<![CDATA[	Timer.PRE := Cfg_OnDelay * 1000;]]>
+</Line>
+<Line Number="15">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[if (Sts_Enabled & Out & (0.0 <= Cfg_OffDelay & Cfg_OffDelay <= 2000000.0)) then]]>
+</Line>
+<Line Number="18">
+<![CDATA[	Timer.PRE := Cfg_OffDelay * 1000;]]>
+</Line>
+<Line Number="19">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="20">
+<![CDATA[]]>
+</Line>
+<Line Number="21">
+<![CDATA[Timer.TimerEnable := ]]>
+</Line>
+<Line Number="22">
+<![CDATA[	(Inp_Enable & NOT Sts_Enabled) OR]]>
+</Line>
+<Line Number="23">
+<![CDATA[	(Inp_Enable & Inp_Condition & NOT Out) OR]]>
+</Line>
+<Line Number="24">
+<![CDATA[	(Inp_Enable & NOT Inp_Condition & Out) OR]]>
+</Line>
+<Line Number="25">
+<![CDATA[	(NOT Inp_Enable & Out);]]>
+</Line>
+<Line Number="26">
+<![CDATA[]]>
+</Line>
+<Line Number="27">
+<![CDATA[/*]]>
+</Line>
+<Line Number="28">
+<![CDATA[	If a timer reset has been carried out, lower the request.]]>
+</Line>
+<Line Number="29">
+<![CDATA[*/]]>
+</Line>
+<Line Number="30">
+<![CDATA[if (Timer.Reset & Timer.ACC = 0) then]]>
+</Line>
+<Line Number="31">
+<![CDATA[	Timer.Reset := 0;]]>
+</Line>
+<Line Number="32">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="33">
+<![CDATA[]]>
+</Line>
+<Line Number="34">
+<![CDATA[Sts_Enabled := (Sts_Enabled OR Timer.DN) & Inp_Enable;]]>
+</Line>
+<Line Number="35">
+<![CDATA[]]>
+</Line>
+<Line Number="36">
+<![CDATA[if (Sts_Enabled & NOT OSR.0) then]]>
+</Line>
+<Line Number="37">
+<![CDATA[	Timer.Reset := 1;]]>
+</Line>
+<Line Number="38">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="39">
+<![CDATA[OSR.0 := Sts_Enabled;]]>
+</Line>
+<Line Number="40">
+<![CDATA[]]>
+</Line>
+<Line Number="41">
+<![CDATA[if (Inp_Condition & Sts_Enabled & Timer.DN & NOT Timer.Reset) then]]>
+</Line>
+<Line Number="42">
+<![CDATA[	Out := 1;]]>
+</Line>
+<Line Number="43">
+<![CDATA[	Timer.Reset := 1;]]>
+</Line>
+<Line Number="44">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="45">
+<![CDATA[]]>
+</Line>
+<Line Number="46">
+<![CDATA[if (Out & (NOT Sts_Enabled OR NOT Inp_Condition) & Timer.DN) then]]>
+</Line>
+<Line Number="47">
+<![CDATA[	Out := 0;]]>
+</Line>
+<Line Number="48">
+<![CDATA[	Timer.Reset := 1;]]>
+</Line>
+<Line Number="49">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="50">
+<![CDATA[]]>
+</Line>
+<Line Number="51">
+<![CDATA[TONR(Timer);]]>
+</Line>
+<Line Number="52">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="Math_Scale" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-21T15:22:37.532Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T17:41:53.258Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Raw" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Input signal to scale.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_RawMin" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Input minimum for scaling.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_RawMax" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Input maximum for scaling.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_EUMin" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Minimum of scaled range.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_EUMax" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Maximum of scaled range.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Scaled value.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Clamp" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Limits the scaled value to within scaled range.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Math_Scale]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[if (Inp_EUMax = Inp_EUMin OR Inp_RawMax <= Inp_RawMin) then]]>
+</Line>
+<Line Number="6">
+<![CDATA[	Val := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[elsif (Inp_Clamp & Inp_Raw <= Inp_RawMin) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	Val := Inp_EUMin;]]>
+</Line>
+<Line Number="9">
+<![CDATA[elsif (Inp_Clamp & Inp_Raw >= Inp_RawMax) then]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Val := Inp_EUMax;]]>
+</Line>
+<Line Number="11">
+<![CDATA[else]]>
+</Line>
+<Line Number="12">
+<![CDATA[	Val := (Inp_Raw - Inp_RawMin) * (Inp_EUMax - Inp_EUMin) / (Inp_RawMax - Inp_RawMin) + Inp_EUMin;]]>
+</Line>
+<Line Number="13">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
 </AddOnInstructionDefinition>
 <AddOnInstructionDefinition Name="Op_CmdSrc" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-08T00:43:25.202Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T18:22:41.521Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
 >
@@ -4446,7 +4449,7 @@ See 4.00 Release Notes for details.
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Dvc_DiscreteOut" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-14T16:49:48.958Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-20T18:44:34.555Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="Dvc_DiscreteOut" Revision="1.1" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-14T16:49:48.958Z" CreatedBy="APEX\Jeremy" EditedDate="2023-08-17T23:56:26.982Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v35.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -5456,162 +5459,168 @@ See 4.00 Release Notes for details.
 <![CDATA[	Pulse := 1;]]>
 </Line>
 <Line Number="71">
-<![CDATA[end_if;]]>
+<![CDATA[elsif (NOT PulseOnOff) then]]>
 </Line>
 <Line Number="72">
-<![CDATA[OSR.0 := PulseOnOff;]]>
+<![CDATA[	Pulse := 0;]]>
 </Line>
 <Line Number="73">
-<![CDATA[]]>
+<![CDATA[end_if;]]>
 </Line>
 <Line Number="74">
-<![CDATA[if (Cfg_PulseOnDuration < 0.0) then]]>
+<![CDATA[OSR.0 := PulseOnOff;]]>
 </Line>
 <Line Number="75">
-<![CDATA[	Cfg_PulseOnDuration := 0.0;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="76">
-<![CDATA[end_if;]]>
+<![CDATA[if (Cfg_PulseOnDuration < 0.0) then]]>
 </Line>
 <Line Number="77">
-<![CDATA[]]>
+<![CDATA[	Cfg_PulseOnDuration := 0.0;]]>
 </Line>
 <Line Number="78">
-<![CDATA[if (Cfg_PulseOffDuration < 0.0) then]]>
+<![CDATA[end_if;]]>
 </Line>
 <Line Number="79">
-<![CDATA[	Cfg_PulseOffDuration := 0.0;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="80">
-<![CDATA[end_if;]]>
+<![CDATA[if (Cfg_PulseOffDuration < 0.0) then]]>
 </Line>
 <Line Number="81">
-<![CDATA[]]>
+<![CDATA[	Cfg_PulseOffDuration := 0.0;]]>
 </Line>
 <Line Number="82">
-<![CDATA[if (PulseOnOff) then]]>
+<![CDATA[end_if;]]>
 </Line>
 <Line Number="83">
-<![CDATA[	if (Pulse) then]]>
+<![CDATA[]]>
 </Line>
 <Line Number="84">
-<![CDATA[		PGOnOff.Inp_Interval := Cfg_PulseOnDuration * 1000;]]>
+<![CDATA[if (PulseOnOff) then]]>
 </Line>
 <Line Number="85">
-<![CDATA[	else]]>
+<![CDATA[	if (Pulse) then]]>
 </Line>
 <Line Number="86">
-<![CDATA[		PGOnOff.Inp_Interval := Cfg_PulseOffDuration * 1000;]]>
+<![CDATA[		PGOnOff.Inp_Interval := Cfg_PulseOnDuration * 1000;]]>
 </Line>
 <Line Number="87">
-<![CDATA[	end_if;]]>
+<![CDATA[	else]]>
 </Line>
 <Line Number="88">
-<![CDATA[end_if;]]>
+<![CDATA[		PGOnOff.Inp_Interval := Cfg_PulseOffDuration * 1000;]]>
 </Line>
 <Line Number="89">
-<![CDATA[]]>
-</Line>
-<Line Number="90">
-<![CDATA[PGOnOff.Inp_Enable := PulseOnOff;]]>
-</Line>
-<Line Number="91">
-<![CDATA[RTC_PulseGen(PGOnOff);]]>
-</Line>
-<Line Number="92">
-<![CDATA[]]>
-</Line>
-<Line Number="93">
-<![CDATA[if (PGOnOff.Out) then]]>
-</Line>
-<Line Number="94">
-<![CDATA[	if (PulseOnOff) then]]>
-</Line>
-<Line Number="95">
-<![CDATA[		Pulse := NOT Pulse;]]>
-</Line>
-<Line Number="96">
 <![CDATA[	end_if;]]>
 </Line>
-<Line Number="97">
+<Line Number="90">
 <![CDATA[end_if;]]>
+</Line>
+<Line Number="91">
+<![CDATA[]]>
+</Line>
+<Line Number="92">
+<![CDATA[PGOnOff.Inp_Enable := PulseOnOff;]]>
+</Line>
+<Line Number="93">
+<![CDATA[RTC_PulseGen(PGOnOff);]]>
+</Line>
+<Line Number="94">
+<![CDATA[]]>
+</Line>
+<Line Number="95">
+<![CDATA[if (PGOnOff.Out) then]]>
+</Line>
+<Line Number="96">
+<![CDATA[	if (PulseOnOff) then]]>
+</Line>
+<Line Number="97">
+<![CDATA[		Pulse := NOT Pulse;]]>
 </Line>
 <Line Number="98">
-<![CDATA[]]>
+<![CDATA[	end_if;]]>
 </Line>
 <Line Number="99">
-<![CDATA[if (Cfg_PulseOnceDuration < 0.0) then]]>
+<![CDATA[end_if;]]>
 </Line>
 <Line Number="100">
-<![CDATA[	Cfg_PulseOnceDuration := 0.0;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="101">
-<![CDATA[end_if;]]>
+<![CDATA[if (Cfg_PulseOnceDuration < 0.0) then]]>
 </Line>
 <Line Number="102">
-<![CDATA[]]>
+<![CDATA[	Cfg_PulseOnceDuration := 0.0;]]>
 </Line>
 <Line Number="103">
-<![CDATA[PulseOnceT.PRE := Cfg_PulseOnceDuration * 1000;]]>
-</Line>
-<Line Number="104">
-<![CDATA[PulseOnceT.TimerEnable := PulseOnce;]]>
-</Line>
-<Line Number="105">
-<![CDATA[TONR(PulseOnceT);]]>
-</Line>
-<Line Number="106">
-<![CDATA[Math_Scale(Scale, PulseOnceT.ACC, 0, PulseOnceT.PRE, 0.0, 100.0, Val_PulseOncePercent, 1);]]>
-</Line>
-<Line Number="107">
-<![CDATA[]]>
-</Line>
-<Line Number="108">
-<![CDATA[if (PulseOnceT.DN) then]]>
-</Line>
-<Line Number="109">
-<![CDATA[	PulseOnce := 0;]]>
-</Line>
-<Line Number="110">
 <![CDATA[end_if;]]>
 </Line>
-<Line Number="111">
+<Line Number="104">
 <![CDATA[]]>
+</Line>
+<Line Number="105">
+<![CDATA[PulseOnceT.PRE := Cfg_PulseOnceDuration * 1000;]]>
+</Line>
+<Line Number="106">
+<![CDATA[PulseOnceT.TimerEnable := PulseOnce;]]>
+</Line>
+<Line Number="107">
+<![CDATA[TONR(PulseOnceT);]]>
+</Line>
+<Line Number="108">
+<![CDATA[Math_Scale(Scale, PulseOnceT.ACC, 0, PulseOnceT.PRE, 0.0, 100.0, Val_PulseOncePercent, 1);]]>
+</Line>
+<Line Number="109">
+<![CDATA[]]>
+</Line>
+<Line Number="110">
+<![CDATA[if (PulseOnceT.DN) then]]>
+</Line>
+<Line Number="111">
+<![CDATA[	PulseOnce := 0;]]>
 </Line>
 <Line Number="112">
-<![CDATA[Sts_IOFault := Inp_IOFault;]]>
+<![CDATA[end_if;]]>
 </Line>
 <Line Number="113">
-<![CDATA[Sts_Bypass := Bypass;]]>
-</Line>
-<Line Number="114">
-<![CDATA[Sts_OnFeedback := Inp_OnFeedback;]]>
-</Line>
-<Line Number="115">
-<![CDATA[Sts_OffFeedback := Inp_OffFeedback;]]>
-</Line>
-<Line Number="116">
 <![CDATA[]]>
 </Line>
+<Line Number="114">
+<![CDATA[Sts_IOFault := Inp_IOFault;]]>
+</Line>
+<Line Number="115">
+<![CDATA[Sts_Bypass := Bypass;]]>
+</Line>
+<Line Number="116">
+<![CDATA[Sts_OnFeedback := Inp_OnFeedback;]]>
+</Line>
 <Line Number="117">
-<![CDATA[Out := On OR Pulse OR PulseOnce;]]>
+<![CDATA[Sts_OffFeedback := Inp_OffFeedback;]]>
 </Line>
 <Line Number="118">
 <![CDATA[]]>
 </Line>
 <Line Number="119">
-<![CDATA[Sts_Active := On OR PulseOnOff OR PulseOnce;]]>
+<![CDATA[Out := On OR Pulse OR PulseOnce;]]>
 </Line>
 <Line Number="120">
-<![CDATA[Sts_Steady := On;]]>
+<![CDATA[]]>
 </Line>
 <Line Number="121">
-<![CDATA[Sts_Pulsing := PulseOnOff;]]>
+<![CDATA[Sts_Active := On OR PulseOnOff OR PulseOnce;]]>
 </Line>
 <Line Number="122">
-<![CDATA[Sts_PulsingOnce := PulseOnce;]]>
+<![CDATA[Sts_Steady := On;]]>
 </Line>
 <Line Number="123">
+<![CDATA[Sts_Pulsing := PulseOnOff;]]>
+</Line>
+<Line Number="124">
+<![CDATA[Sts_PulsingOnce := PulseOnce;]]>
+</Line>
+<Line Number="125">
 <![CDATA[]]>
 </Line>
 </STContent>
