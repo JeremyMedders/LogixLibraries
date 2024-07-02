@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="35.00" TargetName="Sys_SDCard" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2023-07-18T14:38:11.483Z" ContainsContext="true" ExportDate="Tue Jul 18 09:38:42 2023" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="Sys_SDCard" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-01T23:11:30.119Z" ContainsContext="true" ExportDate="Tue Jul 02 16:30:43 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Sys_SDCard" Family="NoFamily" Class="User">
@@ -285,7 +285,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Sys_Module" Revision="1.1" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-11-11T18:04:33.847Z" CreatedBy="APEX\Jeremy" EditedDate="2023-07-13T01:42:42.501Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="Sys_Module" Revision="1.1" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-11-11T18:04:33.847Z" CreatedBy="APEX\Jeremy" EditedDate="2024-06-20T00:40:37.954Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[Provides detailed module diagnostics and inhibit ability.]]>
@@ -592,7 +592,7 @@
 <![CDATA[Sts_Configuring      := (ESts = 16#A000);]]>
 </Line>
 <Line Number="43">
-<![CDATA[Sts_Offline          := NOT (Sts_Inhibited OR Sts_Connected);]]>
+<![CDATA[Sts_Offline          := NOT (Sts_Connected OR Sts_Inhibited);]]>
 </Line>
 <Line Number="44">
 <![CDATA[]]>
@@ -608,7 +608,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	AO_Sys_Module]]>
+<![CDATA[	Sys_Module]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -762,8 +762,8 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="Sys_SDCard" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-07-17T21:20:39.062Z" CreatedBy="APEX\Jeremy" EditedDate="2023-07-18T14:38:11.483Z" EditedBy="APEX\Jeremy"
- SoftwareRevision="v35.00">
+<AddOnInstructionDefinition Use="Target" Name="Sys_SDCard" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-07-17T21:20:39.062Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-01T23:11:30.119Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
 <Description>
@@ -777,7 +777,7 @@
 </Parameter>
 <Parameter Name="Ref_Module" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true"/>
 <Parameter Name="Ref_Msg" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
-<Parameter Name="Ref_MsgResp" TagType="Base" DataType="SINT" Dimensions="256" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Ref_MsgResp" TagType="Base" DataType="SINT" Dimensions="32" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
 <Parameter Name="Val_Type" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.DeviceType" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_FileCount" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.FileCount" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="Val_UsedSize" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.UsedSize" Required="false" Visible="true" ExternalAccess="Read Only"/>
@@ -890,7 +890,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	]]>
+<![CDATA[	Sys_SDCard]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
@@ -944,7 +944,7 @@
 <![CDATA[		COP(Ref_MsgResp[0], Local, 1);]]>
 </Line>
 <Line Number="20">
-<![CDATA[		Sts_Present := 1;]]>
+<![CDATA[		Sts_Present := 1; // if the message succeeds, card is present]]>
 </Line>
 <Line Number="21">
 <![CDATA[		Sts_Locked := (Local.Locked <> 0);]]>
@@ -990,7 +990,7 @@
 <![CDATA[/*]]>
 </Line>
 <Line Number="2">
-<![CDATA[	]]>
+<![CDATA[	Sys_SDCard]]>
 </Line>
 <Line Number="3">
 <![CDATA[*/]]>
