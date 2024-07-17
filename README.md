@@ -14,6 +14,7 @@ Content
 - **CIP** (CIP_): Common Industrial Protocol utilities and structs.
 - **Device** (Dvc_): Device drivers.
 - **Filter** (Filter_)
+- **I/O** (IO_): IO helpers and diagnostics.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
