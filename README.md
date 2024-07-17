@@ -24,7 +24,7 @@ Content
 - **RTC** (RTC_): Precision pulse/timing utilities.
 - **String** (Str_): String utilities.
 - **System** (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
-- **Time** (Time_): ISO 8601 utilities.
+- **Time** (T_): Date and Time utilities (ISO 8601 included).
 - **UI** (UI_): HMI helpers.
 
 Naming follows PlantPAx (sensibly)
