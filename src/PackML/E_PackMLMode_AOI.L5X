@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="E_PackMLMode" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-18T01:28:54.493Z" ContainsContext="true" ExportDate="Wed Jul 17 20:30:16 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="E_PackMLMode" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-12T21:29:59.623Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-18T01:28:54.493Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Invalid" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[0]" Required="false" Visible="true" ExternalAccess="None"/>
+<Parameter Name="Production" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[1]" Required="false" Visible="true" ExternalAccess="None"/>
+<Parameter Name="Maintenance" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[2]" Required="false" Visible="true" ExternalAccess="None"/>
+<Parameter Name="Manual" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[3]" Required="false" Visible="true" ExternalAccess="None"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Data" DataType="DINT" Dimensions="32" Radix="Decimal" ExternalAccess="None">
+<Comments>
+<Comment Operand="[0]">
+<![CDATA[Invalid]]>
+</Comment>
+<Comment Operand="[1]">
+<![CDATA[Production]]>
+</Comment>
+<Comment Operand="[2]">
+<![CDATA[Maintenance]]>
+</Comment>
+<Comment Operand="[3]">
+<![CDATA[Manual]]>
+</Comment>
+</Comments>
+<DefaultData Format="L5K">
+<![CDATA[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="DINT" Dimensions="32" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="1"/>
+<Element Index="[2]" Value="2"/>
+<Element Index="[3]" Value="3"/>
+<Element Index="[4]" Value="4"/>
+<Element Index="[5]" Value="5"/>
+<Element Index="[6]" Value="6"/>
+<Element Index="[7]" Value="7"/>
+<Element Index="[8]" Value="8"/>
+<Element Index="[9]" Value="9"/>
+<Element Index="[10]" Value="10"/>
+<Element Index="[11]" Value="11"/>
+<Element Index="[12]" Value="12"/>
+<Element Index="[13]" Value="13"/>
+<Element Index="[14]" Value="14"/>
+<Element Index="[15]" Value="15"/>
+<Element Index="[16]" Value="16"/>
+<Element Index="[17]" Value="17"/>
+<Element Index="[18]" Value="18"/>
+<Element Index="[19]" Value="19"/>
+<Element Index="[20]" Value="20"/>
+<Element Index="[21]" Value="21"/>
+<Element Index="[22]" Value="22"/>
+<Element Index="[23]" Value="23"/>
+<Element Index="[24]" Value="24"/>
+<Element Index="[25]" Value="25"/>
+<Element Index="[26]" Value="26"/>
+<Element Index="[27]" Value="27"/>
+<Element Index="[28]" Value="28"/>
+<Element Index="[29]" Value="29"/>
+<Element Index="[30]" Value="30"/>
+<Element Index="[31]" Value="31"/>
+</Array>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
