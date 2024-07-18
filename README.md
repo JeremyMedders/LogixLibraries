@@ -14,6 +14,7 @@ Content
 - **CIP** (CIP_): Common Industrial Protocol utilities and structs.
 - **Device** (Dvc_): Device drivers.
 - **Filter** (Filter_)
+- **I/O** (IO_): IO helpers and diagnostics.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
@@ -24,7 +25,7 @@ Content
 - **RTC** (RTC_): Precision pulse/timing utilities.
 - **String** (Str_): String utilities.
 - **System** (Sys_): Diagnostics, WallClock utility/format generator, ISA 18.2 alarms with parent "class", and other utils.
-- **Time** (Time_): ISO 8601 utilities.
+- **Time** (T_): Date and Time utilities (ISO 8601 included).
 - **UI** (UI_): HMI helpers.
 
 Naming follows PlantPAx (sensibly)
@@ -32,7 +33,7 @@ Naming follows PlantPAx (sensibly)
 - Inp_, Cfg_, PCmd_, OCmd_, MCmd, XCmd, PSet_, OSet_, MSet, XSet
 - Out_, Sts_, Val_
 - Ref_
-- Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from AOI parameters).
+- Wrk_: Avoided using this for local AOI tags (forgoing a prefix distinguishes them from parameters).
 - At times, parameter names were modified for consistency / clarity, particularly with my CmdSrc substitute.
 - External access (Read, Read/Write, None) are set where sensible.
 
@@ -45,8 +46,8 @@ UDTs follow the corresponding AOI:
 AOI variants (future)
 ------------
 Depending on use case, some of the features of an AOI will go unused. Tentatively, I think a simple suffix to the block name could differentiate it from others. Example:
-- AO_Dvc_PF525: Full features. Drive parameters managed and updated dynamically from the PLC using added Class 3 messaging.
-- AO_Dvc_PF525_L: Light version. Block capable of running the device but limited to the scope of its Class 1 connection data. Unused block parameters deleted.
+- Dvc_PF525: Full features. Drive parameters managed and updated dynamically from the PLC using added Class 3 messaging.
+- Dvc_PF525_L: Light version. Block capable of running the device but limited to the scope of its Class 1 connection data. Unused block parameters deleted.
 - Both of these would still contain an "Op" strategy Command Source block and identitical core Local data to keep overall UDT sprawl to a minimum.
 
 So we have...
