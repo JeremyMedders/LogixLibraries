@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--ISO 8601 days of week.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="T_DOW_Enum" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-18T02:15:26.974Z" ContainsContext="true" ExportDate="Wed Jul 17 21:16:52 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="T_DOW_Enum" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-18T02:11:32.294Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-18T02:15:26.974Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
+<Description>
+<![CDATA[ISO 8601 days of week.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Mon" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[1]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Tue" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[2]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Wed" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[3]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Thu" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[4]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Fri" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[5]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sat" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[6]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sun" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[7]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Data" DataType="DINT" Dimensions="8" Radix="Decimal" ExternalAccess="Read Only">
+<Comments>
+<Comment Operand="[1]">
+<![CDATA[Monday]]>
+</Comment>
+<Comment Operand="[2]">
+<![CDATA[Tuesday]]>
+</Comment>
+<Comment Operand="[3]">
+<![CDATA[Wednesday]]>
+</Comment>
+<Comment Operand="[4]">
+<![CDATA[Thursday]]>
+</Comment>
+<Comment Operand="[5]">
+<![CDATA[Friday]]>
+</Comment>
+<Comment Operand="[6]">
+<![CDATA[Saturday]]>
+</Comment>
+<Comment Operand="[7]">
+<![CDATA[Sunday]]>
+</Comment>
+</Comments>
+<DefaultData Format="L5K">
+<![CDATA[[0,1,2,3,4,5,6,7]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="DINT" Dimensions="8" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="1"/>
+<Element Index="[2]" Value="2"/>
+<Element Index="[3]" Value="3"/>
+<Element Index="[4]" Value="4"/>
+<Element Index="[5]" Value="5"/>
+<Element Index="[6]" Value="6"/>
+<Element Index="[7]" Value="7"/>
+</Array>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
