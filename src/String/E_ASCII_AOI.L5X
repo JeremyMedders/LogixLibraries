@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="E_ASCII" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-17T20:21:34.147Z" ContainsContext="true" ExportDate="Wed Jul 17 20:34:15 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="E_ASCII" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-12T18:19:29.939Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-17T20:21:34.147Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="NUL" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[0]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SOH" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[1]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="STX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[2]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ETX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[3]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="EOT" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[4]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ENQ" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[5]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ACK" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[6]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="BEL" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[7]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="BS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[8]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="TAB" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[9]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LF" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[10]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="VT" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[11]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="FF" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[12]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="CR" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[13]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[14]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SI" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[15]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DLE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[16]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DC1" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[17]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DC2" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[18]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DC3" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[19]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DC4" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[20]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="NAK" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[21]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SYN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[22]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ETB" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[23]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="CAN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[24]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="EM" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[25]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SUB" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[26]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ESC" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[27]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="FS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[28]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="GS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[29]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="RS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[30]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="US" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[31]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Space" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[32]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Exclamation" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[33]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Quotation" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[34]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="NumberSign" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[35]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DollarSign" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[36]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="PercentSign" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[37]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Ampersand" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[38]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Apostrophe" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[39]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LeftParenthesis" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[40]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="RightParenthesis" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[41]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Asterisk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[42]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[43]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Comma" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[44]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[45]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Period" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[46]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Slash" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[47]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitZero" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[48]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitOne" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[49]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitTwo" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[50]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitThree" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[51]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitFour" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[52]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitFive" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[53]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitSix" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[54]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitSeven" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[55]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitEight" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[56]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DigitNine" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[57]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Colon" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[58]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Semicolon" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[59]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LessThan" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[60]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Equal" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[61]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="GreaterThan" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[62]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="QuestionMark" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[63]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="AtSign" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[64]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperA" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[65]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperB" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[66]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperC" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[67]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperD" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[68]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[69]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperF" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[70]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperG" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[71]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperH" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[72]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperI" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[73]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperJ" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[74]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperK" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[75]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperL" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[76]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperM" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[77]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[78]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[79]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperP" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[80]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperQ" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[81]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperR" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[82]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[83]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperT" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[84]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperU" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[85]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperV" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[86]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperW" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[87]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[88]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperY" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[89]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UpperZ" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[90]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LeftSquareBracket" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[91]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Backslash" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[92]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="RightSquareBracket" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[93]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="CircumflexAccent" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[94]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LowLine" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[95]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="GraveAccent" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[96]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="A" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[97]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="B" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[98]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="C" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[99]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="D" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[100]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="E" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[101]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="F" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[102]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="G" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[103]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="H" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[104]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="I" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[105]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="J" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[106]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="K" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[107]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="L" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[108]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="M" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[109]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="N" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[110]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="O" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[111]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="P" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[112]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Q" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[113]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="R" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[114]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="S" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[115]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="T" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[116]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="U" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[117]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="V" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[118]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="W" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[119]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="X" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[120]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Y" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[121]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Z" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[122]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LeftCurlyBracket" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Data[123]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="VerticalBar" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Data[124]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="RightCurlyBracket" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Data[125]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Tilde" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="Data[126]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DEL" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[127]" Required="false" Visible="false" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Data" DataType="SINT" Dimensions="128" Radix="Decimal" ExternalAccess="Read Only">
+<Comments>
+<Comment Operand="[0]">
+<![CDATA[Null]]>
+</Comment>
+<Comment Operand="[1]">
+<![CDATA[Start of heading]]>
+</Comment>
+<Comment Operand="[2]">
+<![CDATA[Start of text]]>
+</Comment>
+<Comment Operand="[3]">
+<![CDATA[End of text]]>
+</Comment>
+<Comment Operand="[4]">
+<![CDATA[End of transmission]]>
+</Comment>
+<Comment Operand="[5]">
+<![CDATA[Enquiry]]>
+</Comment>
+<Comment Operand="[6]">
+<![CDATA[Acknowledge]]>
+</Comment>
+<Comment Operand="[7]">
+<![CDATA[Bell]]>
+</Comment>
+<Comment Operand="[8]">
+<![CDATA[Backspace]]>
+</Comment>
+<Comment Operand="[9]">
+<![CDATA[Horizontal tab]]>
+</Comment>
+<Comment Operand="[10]">
+<![CDATA[Line feed]]>
+</Comment>
+<Comment Operand="[11]">
+<![CDATA[Vertical tab]]>
+</Comment>
+<Comment Operand="[12]">
+<![CDATA[Form feed]]>
+</Comment>
+<Comment Operand="[13]">
+<![CDATA[Carriage return]]>
+</Comment>
+<Comment Operand="[14]">
+<![CDATA[Shift out]]>
+</Comment>
+<Comment Operand="[15]">
+<![CDATA[Shift in]]>
+</Comment>
+<Comment Operand="[16]">
+<![CDATA[Data link escape]]>
+</Comment>
+<Comment Operand="[17]">
+<![CDATA[Device control 1]]>
+</Comment>
+<Comment Operand="[18]">
+<![CDATA[Device control 2]]>
+</Comment>
+<Comment Operand="[19]">
+<![CDATA[Device control 3]]>
+</Comment>
+<Comment Operand="[20]">
+<![CDATA[Device control 4]]>
+</Comment>
+<Comment Operand="[21]">
+<![CDATA[Negative acknowledge]]>
+</Comment>
+<Comment Operand="[22]">
+<![CDATA[Synchronous idle]]>
+</Comment>
+<Comment Operand="[23]">
+<![CDATA[End of transmission]]>
+</Comment>
+<Comment Operand="[24]">
+<![CDATA[Cancel]]>
+</Comment>
+<Comment Operand="[25]">
+<![CDATA[End of medium]]>
+</Comment>
+<Comment Operand="[26]">
+<![CDATA[Substitute]]>
+</Comment>
+<Comment Operand="[27]">
+<![CDATA[Escape]]>
+</Comment>
+<Comment Operand="[28]">
+<![CDATA[File separator]]>
+</Comment>
+<Comment Operand="[29]">
+<![CDATA[Group separator]]>
+</Comment>
+<Comment Operand="[30]">
+<![CDATA[Record separator]]>
+</Comment>
+<Comment Operand="[31]">
+<![CDATA[Unit separator]]>
+</Comment>
+<Comment Operand="[32]">
+<![CDATA[Space]]>
+</Comment>
+<Comment Operand="[33]">
+<![CDATA[!]]>
+</Comment>
+<Comment Operand="[34]">
+<![CDATA["]]>
+</Comment>
+<Comment Operand="[35]">
+<![CDATA[#]]>
+</Comment>
+<Comment Operand="[36]">
+<![CDATA[$]]>
+</Comment>
+<Comment Operand="[37]">
+<![CDATA[%]]>
+</Comment>
+<Comment Operand="[38]">
+<![CDATA[&]]>
+</Comment>
+<Comment Operand="[39]">
+<![CDATA[']]>
+</Comment>
+<Comment Operand="[40]">
+<![CDATA[(]]>
+</Comment>
+<Comment Operand="[41]">
+<![CDATA[)]]>
+</Comment>
+<Comment Operand="[42]">
+<![CDATA[*]]>
+</Comment>
+<Comment Operand="[43]">
+<![CDATA[+]]>
+</Comment>
+<Comment Operand="[44]">
+<![CDATA[,]]>
+</Comment>
+<Comment Operand="[45]">
+<![CDATA[-]]>
+</Comment>
+<Comment Operand="[46]">
+<![CDATA[.]]>
+</Comment>
+<Comment Operand="[47]">
+<![CDATA[/]]>
+</Comment>
+<Comment Operand="[48]">
+<![CDATA[0]]>
+</Comment>
+<Comment Operand="[49]">
+<![CDATA[1]]>
+</Comment>
+<Comment Operand="[50]">
+<![CDATA[2]]>
+</Comment>
+<Comment Operand="[51]">
+<![CDATA[3]]>
+</Comment>
+<Comment Operand="[52]">
+<![CDATA[4]]>
+</Comment>
+<Comment Operand="[53]">
+<![CDATA[5]]>
+</Comment>
+<Comment Operand="[54]">
+<![CDATA[6]]>
+</Comment>
+<Comment Operand="[55]">
+<![CDATA[7]]>
+</Comment>
+<Comment Operand="[56]">
+<![CDATA[8]]>
+</Comment>
+<Comment Operand="[57]">
+<![CDATA[9]]>
+</Comment>
+<Comment Operand="[58]">
+<![CDATA[:]]>
+</Comment>
+<Comment Operand="[59]">
+<![CDATA[;]]>
+</Comment>
+<Comment Operand="[60]">
+<![CDATA[<]]>
+</Comment>
+<Comment Operand="[61]">
+<![CDATA[=]]>
+</Comment>
+<Comment Operand="[62]">
+<![CDATA[>]]>
+</Comment>
+<Comment Operand="[63]">
+<![CDATA[?]]>
+</Comment>
+<Comment Operand="[64]">
+<![CDATA[@]]>
+</Comment>
+<Comment Operand="[65]">
+<![CDATA[A]]>
+</Comment>
+<Comment Operand="[66]">
+<![CDATA[B]]>
+</Comment>
+<Comment Operand="[67]">
+<![CDATA[C]]>
+</Comment>
+<Comment Operand="[68]">
+<![CDATA[D]]>
+</Comment>
+<Comment Operand="[69]">
+<![CDATA[E]]>
+</Comment>
+<Comment Operand="[70]">
+<![CDATA[F]]>
+</Comment>
+<Comment Operand="[71]">
+<![CDATA[G]]>
+</Comment>
+<Comment Operand="[72]">
+<![CDATA[H]]>
+</Comment>
+<Comment Operand="[73]">
+<![CDATA[I]]>
+</Comment>
+<Comment Operand="[74]">
+<![CDATA[J]]>
+</Comment>
+<Comment Operand="[75]">
+<![CDATA[K]]>
+</Comment>
+<Comment Operand="[76]">
+<![CDATA[L]]>
+</Comment>
+<Comment Operand="[77]">
+<![CDATA[M]]>
+</Comment>
+<Comment Operand="[78]">
+<![CDATA[N]]>
+</Comment>
+<Comment Operand="[79]">
+<![CDATA[O]]>
+</Comment>
+<Comment Operand="[80]">
+<![CDATA[P]]>
+</Comment>
+<Comment Operand="[81]">
+<![CDATA[Q]]>
+</Comment>
+<Comment Operand="[82]">
+<![CDATA[R]]>
+</Comment>
+<Comment Operand="[83]">
+<![CDATA[S]]>
+</Comment>
+<Comment Operand="[84]">
+<![CDATA[T]]>
+</Comment>
+<Comment Operand="[85]">
+<![CDATA[U]]>
+</Comment>
+<Comment Operand="[86]">
+<![CDATA[V]]>
+</Comment>
+<Comment Operand="[87]">
+<![CDATA[W]]>
+</Comment>
+<Comment Operand="[88]">
+<![CDATA[X]]>
+</Comment>
+<Comment Operand="[89]">
+<![CDATA[Y]]>
+</Comment>
+<Comment Operand="[90]">
+<![CDATA[Z]]>
+</Comment>
+<Comment Operand="[91]">
+<![CDATA[[]]>
+</Comment>
+<Comment Operand="[92]">
+<![CDATA[\]]>
+</Comment>
+<Comment Operand="[93]">
+<![CDATA[]]]>
+</Comment>
+<Comment Operand="[94]">
+<![CDATA[^]]>
+</Comment>
+<Comment Operand="[95]">
+<![CDATA[_]]>
+</Comment>
+<Comment Operand="[96]">
+<![CDATA[`]]>
+</Comment>
+<Comment Operand="[97]">
+<![CDATA[a]]>
+</Comment>
+<Comment Operand="[98]">
+<![CDATA[b]]>
+</Comment>
+<Comment Operand="[99]">
+<![CDATA[c]]>
+</Comment>
+<Comment Operand="[100]">
+<![CDATA[d]]>
+</Comment>
+<Comment Operand="[101]">
+<![CDATA[e]]>
+</Comment>
+<Comment Operand="[102]">
+<![CDATA[f]]>
+</Comment>
+<Comment Operand="[103]">
+<![CDATA[g]]>
+</Comment>
+<Comment Operand="[104]">
+<![CDATA[h]]>
+</Comment>
+<Comment Operand="[105]">
+<![CDATA[i]]>
+</Comment>
+<Comment Operand="[106]">
+<![CDATA[j]]>
+</Comment>
+<Comment Operand="[107]">
+<![CDATA[k]]>
+</Comment>
+<Comment Operand="[108]">
+<![CDATA[l]]>
+</Comment>
+<Comment Operand="[109]">
+<![CDATA[m]]>
+</Comment>
+<Comment Operand="[110]">
+<![CDATA[n]]>
+</Comment>
+<Comment Operand="[111]">
+<![CDATA[o]]>
+</Comment>
+<Comment Operand="[112]">
+<![CDATA[p]]>
+</Comment>
+<Comment Operand="[113]">
+<![CDATA[q]]>
+</Comment>
+<Comment Operand="[114]">
+<![CDATA[r]]>
+</Comment>
+<Comment Operand="[115]">
+<![CDATA[s]]>
+</Comment>
+<Comment Operand="[116]">
+<![CDATA[t]]>
+</Comment>
+<Comment Operand="[117]">
+<![CDATA[u]]>
+</Comment>
+<Comment Operand="[118]">
+<![CDATA[v]]>
+</Comment>
+<Comment Operand="[119]">
+<![CDATA[w]]>
+</Comment>
+<Comment Operand="[120]">
+<![CDATA[x]]>
+</Comment>
+<Comment Operand="[121]">
+<![CDATA[y]]>
+</Comment>
+<Comment Operand="[122]">
+<![CDATA[z]]>
+</Comment>
+<Comment Operand="[123]">
+<![CDATA[{]]>
+</Comment>
+<Comment Operand="[124]">
+<![CDATA[|]]>
+</Comment>
+<Comment Operand="[125]">
+<![CDATA[}]]>
+</Comment>
+<Comment Operand="[126]">
+<![CDATA[~]]>
+</Comment>
+<Comment Operand="[127]">
+<![CDATA[Delete]]>
+</Comment>
+</Comments>
+<DefaultData Format="L5K">
+<![CDATA[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="SINT" Dimensions="128" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="1"/>
+<Element Index="[2]" Value="2"/>
+<Element Index="[3]" Value="3"/>
+<Element Index="[4]" Value="4"/>
+<Element Index="[5]" Value="5"/>
+<Element Index="[6]" Value="6"/>
+<Element Index="[7]" Value="7"/>
+<Element Index="[8]" Value="8"/>
+<Element Index="[9]" Value="9"/>
+<Element Index="[10]" Value="10"/>
+<Element Index="[11]" Value="11"/>
+<Element Index="[12]" Value="12"/>
+<Element Index="[13]" Value="13"/>
+<Element Index="[14]" Value="14"/>
+<Element Index="[15]" Value="15"/>
+<Element Index="[16]" Value="16"/>
+<Element Index="[17]" Value="17"/>
+<Element Index="[18]" Value="18"/>
+<Element Index="[19]" Value="19"/>
+<Element Index="[20]" Value="20"/>
+<Element Index="[21]" Value="21"/>
+<Element Index="[22]" Value="22"/>
+<Element Index="[23]" Value="23"/>
+<Element Index="[24]" Value="24"/>
+<Element Index="[25]" Value="25"/>
+<Element Index="[26]" Value="26"/>
+<Element Index="[27]" Value="27"/>
+<Element Index="[28]" Value="28"/>
+<Element Index="[29]" Value="29"/>
+<Element Index="[30]" Value="30"/>
+<Element Index="[31]" Value="31"/>
+<Element Index="[32]" Value="32"/>
+<Element Index="[33]" Value="33"/>
+<Element Index="[34]" Value="34"/>
+<Element Index="[35]" Value="35"/>
+<Element Index="[36]" Value="36"/>
+<Element Index="[37]" Value="37"/>
+<Element Index="[38]" Value="38"/>
+<Element Index="[39]" Value="39"/>
+<Element Index="[40]" Value="40"/>
+<Element Index="[41]" Value="41"/>
+<Element Index="[42]" Value="42"/>
+<Element Index="[43]" Value="43"/>
+<Element Index="[44]" Value="44"/>
+<Element Index="[45]" Value="45"/>
+<Element Index="[46]" Value="46"/>
+<Element Index="[47]" Value="47"/>
+<Element Index="[48]" Value="48"/>
+<Element Index="[49]" Value="49"/>
+<Element Index="[50]" Value="50"/>
+<Element Index="[51]" Value="51"/>
+<Element Index="[52]" Value="52"/>
+<Element Index="[53]" Value="53"/>
+<Element Index="[54]" Value="54"/>
+<Element Index="[55]" Value="55"/>
+<Element Index="[56]" Value="56"/>
+<Element Index="[57]" Value="57"/>
+<Element Index="[58]" Value="58"/>
+<Element Index="[59]" Value="59"/>
+<Element Index="[60]" Value="60"/>
+<Element Index="[61]" Value="61"/>
+<Element Index="[62]" Value="62"/>
+<Element Index="[63]" Value="63"/>
+<Element Index="[64]" Value="64"/>
+<Element Index="[65]" Value="65"/>
+<Element Index="[66]" Value="66"/>
+<Element Index="[67]" Value="67"/>
+<Element Index="[68]" Value="68"/>
+<Element Index="[69]" Value="69"/>
+<Element Index="[70]" Value="70"/>
+<Element Index="[71]" Value="71"/>
+<Element Index="[72]" Value="72"/>
+<Element Index="[73]" Value="73"/>
+<Element Index="[74]" Value="74"/>
+<Element Index="[75]" Value="75"/>
+<Element Index="[76]" Value="76"/>
+<Element Index="[77]" Value="77"/>
+<Element Index="[78]" Value="78"/>
+<Element Index="[79]" Value="79"/>
+<Element Index="[80]" Value="80"/>
+<Element Index="[81]" Value="81"/>
+<Element Index="[82]" Value="82"/>
+<Element Index="[83]" Value="83"/>
+<Element Index="[84]" Value="84"/>
+<Element Index="[85]" Value="85"/>
+<Element Index="[86]" Value="86"/>
+<Element Index="[87]" Value="87"/>
+<Element Index="[88]" Value="88"/>
+<Element Index="[89]" Value="89"/>
+<Element Index="[90]" Value="90"/>
+<Element Index="[91]" Value="91"/>
+<Element Index="[92]" Value="92"/>
+<Element Index="[93]" Value="93"/>
+<Element Index="[94]" Value="94"/>
+<Element Index="[95]" Value="95"/>
+<Element Index="[96]" Value="96"/>
+<Element Index="[97]" Value="97"/>
+<Element Index="[98]" Value="98"/>
+<Element Index="[99]" Value="99"/>
+<Element Index="[100]" Value="100"/>
+<Element Index="[101]" Value="101"/>
+<Element Index="[102]" Value="102"/>
+<Element Index="[103]" Value="103"/>
+<Element Index="[104]" Value="104"/>
+<Element Index="[105]" Value="105"/>
+<Element Index="[106]" Value="106"/>
+<Element Index="[107]" Value="107"/>
+<Element Index="[108]" Value="108"/>
+<Element Index="[109]" Value="109"/>
+<Element Index="[110]" Value="110"/>
+<Element Index="[111]" Value="111"/>
+<Element Index="[112]" Value="112"/>
+<Element Index="[113]" Value="113"/>
+<Element Index="[114]" Value="114"/>
+<Element Index="[115]" Value="115"/>
+<Element Index="[116]" Value="116"/>
+<Element Index="[117]" Value="117"/>
+<Element Index="[118]" Value="118"/>
+<Element Index="[119]" Value="119"/>
+<Element Index="[120]" Value="120"/>
+<Element Index="[121]" Value="121"/>
+<Element Index="[122]" Value="122"/>
+<Element Index="[123]" Value="123"/>
+<Element Index="[124]" Value="124"/>
+<Element Index="[125]" Value="125"/>
+<Element Index="[126]" Value="126"/>
+<Element Index="[127]" Value="127"/>
+</Array>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
