@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="T_SunRiseSet" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-17T03:01:05.325Z" ContainsContext="true" ExportDate="Wed Jul 17 20:54:05 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="ST_T_LgxDateTime" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Logix DateTime]]>
+</Description>
+<Members>
+<Member Name="Year" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Month" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Day" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hour" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Minute" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Second" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Microsecond" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="T_SunRiseSet" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-01-15T05:24:00.948Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-17T03:01:05.325Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_DT" TagType="Base" DataType="ST_T_LgxDateTime" Usage="InOut" Required="true" Visible="true" Constant="false">
+<Description>
+<![CDATA[Date/Time for which to calculate Rise, Set, Az/El Position]]>
+</Description>
+</Parameter>
+<Parameter Name="Ref_Rise" TagType="Base" DataType="ST_T_LgxDateTime" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Ref_Set" TagType="Base" DataType="ST_T_LgxDateTime" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Cfg_Latitude" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Latitude of this location (degrees).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Longitude" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Longitude of this location (degrees).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_UTCOffset" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[UTC offset (hours).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Azimuth" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Solar azimuth angle (degrees).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Elevation" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Solar elevation (degrees), 0: Horizon, 90: Overhead.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_MidnightSun" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[24-hour daylight (no sunset).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_NoonNight" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[24-hour night (no sunrise).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Error" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Latitude, longitude, or UTC offset are invalid.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Sunset" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Sunrise" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SolHA" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="RSHA" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Long" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Lati" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="HrCos" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="FrYr" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="EqT" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Elev" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DoY" DataType="DINT" Radix="Decimal" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Decl" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Azim" DataType="REAL" Radix="Float" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	Time_SunRiseSet]]>
+</Line>
+<Line Number="3">
+<![CDATA[	]]>
+</Line>
+<Line Number="4">
+<![CDATA[	https://gml.noaa.gov/grad/solcalc/solareqns.PDF]]>
+</Line>
+<Line Number="5">
+<![CDATA[*/]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if ((Cfg_Latitude  <  -90.0 OR  90.0 < Cfg_Latitude)  OR ]]>
+</Line>
+<Line Number="8">
+<![CDATA[	(Cfg_Longitude < -180.0 OR 180.0 < Cfg_Longitude) OR ]]>
+</Line>
+<Line Number="9">
+<![CDATA[	(Cfg_UTCOffset <  -14.0 OR  14.0 < Cfg_UTCOffset)) then]]>
+</Line>
+<Line Number="10">
+<![CDATA[	]]>
+</Line>
+<Line Number="11">
+<![CDATA[	Sts_Error  := 1;]]>
+</Line>
+<Line Number="12">
+<![CDATA[	Ref_Rise.Hour   := 0;]]>
+</Line>
+<Line Number="13">
+<![CDATA[	Ref_Rise.Minute := 0;]]>
+</Line>
+<Line Number="14">
+<![CDATA[	Ref_Set.Hour    := 0;]]>
+</Line>
+<Line Number="15">
+<![CDATA[	Ref_Set.Minute  := 0;]]>
+</Line>
+<Line Number="16">
+<![CDATA[	Sts_NoonNight   := 0;]]>
+</Line>
+<Line Number="17">
+<![CDATA[	Sts_MidnightSun := 0;]]>
+</Line>
+<Line Number="18">
+<![CDATA[	]]>
+</Line>
+<Line Number="19">
+<![CDATA[	Val_Azimuth   := 0.0;]]>
+</Line>
+<Line Number="20">
+<![CDATA[	Val_Elevation := 0.0;]]>
+</Line>
+<Line Number="21">
+<![CDATA[else]]>
+</Line>
+<Line Number="22">
+<![CDATA[	Sts_Error := 0;]]>
+</Line>
+<Line Number="23">
+<![CDATA[	Lati := Cfg_Latitude * 0.017453293;]]>
+</Line>
+<Line Number="24">
+<![CDATA[	Long := -Cfg_Longitude;]]>
+</Line>
+<Line Number="25">
+<![CDATA[	]]>
+</Line>
+<Line Number="26">
+<![CDATA[	DoY := ((((Ref_DT.Month + 9) MOD 12) * 306 + 5) / 10 + Ref_DT.Day + 60) MOD 366;]]>
+</Line>
+<Line Number="27">
+<![CDATA[	]]>
+</Line>
+<Line Number="28">
+<![CDATA[	FrYr := 0.017214206 * (DoY - 1 + (Ref_DT.Hour - 12.0) / 24.0);]]>
+</Line>
+<Line Number="29">
+<![CDATA[	]]>
+</Line>
+<Line Number="30">
+<![CDATA[	EqT := 229.18 * (0.000075 + 0.001868 * cos(FrYr) - ]]>
+</Line>
+<Line Number="31">
+<![CDATA[			0.032077 * sin(FrYr) - 0.014615 * cos(2.0 * FrYr) - ]]>
+</Line>
+<Line Number="32">
+<![CDATA[			0.040849 * sin(2.0 * FrYr));]]>
+</Line>
+<Line Number="33">
+<![CDATA[	]]>
+</Line>
+<Line Number="34">
+<![CDATA[	Decl := 0.006918 - 0.399912 * cos(FrYr) + 0.070257 * sin(FrYr) - ]]>
+</Line>
+<Line Number="35">
+<![CDATA[			0.006758 * cos(2.0 * FrYr) + 0.000907 * sin(2.0 * FrYr) - ]]>
+</Line>
+<Line Number="36">
+<![CDATA[			0.002697 * cos(3.0 * FrYr) + 0.00148 * sin(3.0*FrYr);]]>
+</Line>
+<Line Number="37">
+<![CDATA[	]]>
+</Line>
+<Line Number="38">
+<![CDATA[	HrCos := (-0.014538081 / cos(Lati) / cos(Decl)) - tan(Lati) * tan(Decl);]]>
+</Line>
+<Line Number="39">
+<![CDATA[	]]>
+</Line>
+<Line Number="40">
+<![CDATA[	if (HrCos < -1.0) then // polar location with midnight sun]]>
+</Line>
+<Line Number="41">
+<![CDATA[		]]>
+</Line>
+<Line Number="42">
+<![CDATA[		Ref_Rise.Hour   := 0;]]>
+</Line>
+<Line Number="43">
+<![CDATA[		Ref_Rise.Minute := 0;]]>
+</Line>
+<Line Number="44">
+<![CDATA[		Ref_Set.Hour    := 0;]]>
+</Line>
+<Line Number="45">
+<![CDATA[		Ref_Set.Minute  := 0;]]>
+</Line>
+<Line Number="46">
+<![CDATA[		Sts_NoonNight   := 0;]]>
+</Line>
+<Line Number="47">
+<![CDATA[		Sts_MidnightSun := 1;]]>
+</Line>
+<Line Number="48">
+<![CDATA[	]]>
+</Line>
+<Line Number="49">
+<![CDATA[	elsif (HrCos > 1.0) then // polar location with noon darkness]]>
+</Line>
+<Line Number="50">
+<![CDATA[]]>
+</Line>
+<Line Number="51">
+<![CDATA[		Ref_Rise.Hour   := 0;]]>
+</Line>
+<Line Number="52">
+<![CDATA[		Ref_Rise.Minute := 0;]]>
+</Line>
+<Line Number="53">
+<![CDATA[		Ref_Set.Hour    := 0;]]>
+</Line>
+<Line Number="54">
+<![CDATA[		Ref_Set.Minute  := 0;]]>
+</Line>
+<Line Number="55">
+<![CDATA[		Sts_NoonNight   := 1;]]>
+</Line>
+<Line Number="56">
+<![CDATA[		Sts_MidnightSun := 0;]]>
+</Line>
+<Line Number="57">
+<![CDATA[ ]]>
+</Line>
+<Line Number="58">
+<![CDATA[	else]]>
+</Line>
+<Line Number="59">
+<![CDATA[		RSHA    := 57.29577951 * acos(HrCos);]]>
+</Line>
+<Line Number="60">
+<![CDATA[		Sunrise := 2160.0 + 4.0 * (Long - RSHA) - EqT + Cfg_UTCOffset * 60.0;]]>
+</Line>
+<Line Number="61">
+<![CDATA[		Sunset  := 2160.0 + 4.0 * (Long + RSHA) - EqT + Cfg_UTCOffset * 60.0;]]>
+</Line>
+<Line Number="62">
+<![CDATA[		]]>
+</Line>
+<Line Number="63">
+<![CDATA[		Ref_Rise.Hour   := (Sunrise / 60) MOD 24;]]>
+</Line>
+<Line Number="64">
+<![CDATA[		Ref_Rise.Minute := Sunrise MOD 60;]]>
+</Line>
+<Line Number="65">
+<![CDATA[		Ref_Set.Hour    := (Sunset / 60) MOD 24;]]>
+</Line>
+<Line Number="66">
+<![CDATA[		Ref_Set.Minute  := Sunset MOD 60;]]>
+</Line>
+<Line Number="67">
+<![CDATA[		]]>
+</Line>
+<Line Number="68">
+<![CDATA[		Sts_NoonNight   := 0;]]>
+</Line>
+<Line Number="69">
+<![CDATA[		Sts_MidnightSun := 0;]]>
+</Line>
+<Line Number="70">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="71">
+<![CDATA[	]]>
+</Line>
+<Line Number="72">
+<![CDATA[	SolHA := ((EqT - (4.0 * Long) - (60.0 * Cfg_UTCOffset) + (Ref_DT.Hour * 60.0) + ]]>
+</Line>
+<Line Number="73">
+<![CDATA[		Ref_DT.Minute + (Ref_DT.Second / 60.0)) / 4.0 - 180.0) / 57.29577951;]]>
+</Line>
+<Line Number="74">
+<![CDATA[	]]>
+</Line>
+<Line Number="75">
+<![CDATA[	Elev := cos(SolHA) * cos(Decl) * cos(Lati) + sin(Decl) * sin(Lati);]]>
+</Line>
+<Line Number="76">
+<![CDATA[	]]>
+</Line>
+<Line Number="77">
+<![CDATA[	if (Elev < -1.0) then]]>
+</Line>
+<Line Number="78">
+<![CDATA[		Elev := -1.0;]]>
+</Line>
+<Line Number="79">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="80">
+<![CDATA[	]]>
+</Line>
+<Line Number="81">
+<![CDATA[	if (Elev > 1.0) then]]>
+</Line>
+<Line Number="82">
+<![CDATA[		Elev := 1.0;]]>
+</Line>
+<Line Number="83">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="84">
+<![CDATA[]]>
+</Line>
+<Line Number="85">
+<![CDATA[	Val_Elevation := 57.29577951 * asin(Elev);]]>
+</Line>
+<Line Number="86">
+<![CDATA[]]>
+</Line>
+<Line Number="87">
+<![CDATA[	Azim := ((cos(SolHA) * cos(Decl) * sin(Lati)) - ]]>
+</Line>
+<Line Number="88">
+<![CDATA[		(sin(Decl) * cos(Lati))) / cos(Val_Elevation / 57.29577951);]]>
+</Line>
+<Line Number="89">
+<![CDATA[	]]>
+</Line>
+<Line Number="90">
+<![CDATA[	if (Azim < -1.0) then]]>
+</Line>
+<Line Number="91">
+<![CDATA[		Azim := -1.0;]]>
+</Line>
+<Line Number="92">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="93">
+<![CDATA[	]]>
+</Line>
+<Line Number="94">
+<![CDATA[	if (Azim > 1.0) then]]>
+</Line>
+<Line Number="95">
+<![CDATA[		Azim := 1.0;]]>
+</Line>
+<Line Number="96">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="97">
+<![CDATA[]]>
+</Line>
+<Line Number="98">
+<![CDATA[	if (SolHA < 0) then]]>
+</Line>
+<Line Number="99">
+<![CDATA[		Val_Azimuth := 180.0 - (57.29577951 * acos(Azim));]]>
+</Line>
+<Line Number="100">
+<![CDATA[	else]]>
+</Line>
+<Line Number="101">
+<![CDATA[		Val_Azimuth := 180.0 + (57.29577951 * acos(Azim));]]>
+</Line>
+<Line Number="102">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="103">
+<![CDATA[	]]>
+</Line>
+<Line Number="104">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="105">
+<![CDATA[]]>
+</Line>
+<Line Number="106">
+<![CDATA[Ref_Rise.Year  := Ref_DT.Year;]]>
+</Line>
+<Line Number="107">
+<![CDATA[Ref_Rise.Month := Ref_DT.Month;]]>
+</Line>
+<Line Number="108">
+<![CDATA[Ref_Rise.Day   := Ref_DT.Day;]]>
+</Line>
+<Line Number="109">
+<![CDATA[Ref_Rise.Second := 0;]]>
+</Line>
+<Line Number="110">
+<![CDATA[Ref_Rise.Microsecond := 0;]]>
+</Line>
+<Line Number="111">
+<![CDATA[	]]>
+</Line>
+<Line Number="112">
+<![CDATA[Ref_Set.Year := Ref_DT.Year;]]>
+</Line>
+<Line Number="113">
+<![CDATA[Ref_Set.Month := Ref_DT.Month;]]>
+</Line>
+<Line Number="114">
+<![CDATA[Ref_Set.Day := Ref_DT.Day;]]>
+</Line>
+<Line Number="115">
+<![CDATA[Ref_Set.Second := 0;]]>
+</Line>
+<Line Number="116">
+<![CDATA[Ref_Set.Microsecond := 0;]]>
+</Line>
+<Line Number="117">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="ST_T_LgxDateTime"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
