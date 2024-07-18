@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Months of the year.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="T_Month_Enum" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-18T02:20:45.564Z" ContainsContext="true" ExportDate="Wed Jul 17 21:21:35 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="T_Month_Enum" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-18T02:17:51.613Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-18T02:20:45.564Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
+<Description>
+<![CDATA[Months of the year.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Jan" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[1]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Feb" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[2]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Mar" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[3]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Apr" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[4]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="May" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[5]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Jun" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[6]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Jul" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[7]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Aug" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[8]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sep" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[9]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Oct" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[10]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Nov" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[11]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Dec" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[12]" Required="false" Visible="true" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Data" DataType="DINT" Dimensions="13" Radix="Decimal" ExternalAccess="Read Only">
+<Comments>
+<Comment Operand="[1]">
+<![CDATA[January]]>
+</Comment>
+<Comment Operand="[2]">
+<![CDATA[February]]>
+</Comment>
+<Comment Operand="[3]">
+<![CDATA[March]]>
+</Comment>
+<Comment Operand="[4]">
+<![CDATA[April]]>
+</Comment>
+<Comment Operand="[5]">
+<![CDATA[May]]>
+</Comment>
+<Comment Operand="[6]">
+<![CDATA[June]]>
+</Comment>
+<Comment Operand="[7]">
+<![CDATA[July]]>
+</Comment>
+<Comment Operand="[8]">
+<![CDATA[August]]>
+</Comment>
+<Comment Operand="[9]">
+<![CDATA[September]]>
+</Comment>
+<Comment Operand="[10]">
+<![CDATA[October]]>
+</Comment>
+<Comment Operand="[11]">
+<![CDATA[November]]>
+</Comment>
+<Comment Operand="[12]">
+<![CDATA[December]]>
+</Comment>
+</Comments>
+<DefaultData Format="L5K">
+<![CDATA[[0,1,2,3,4,5,6,7,8,9,10,11,12]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="DINT" Dimensions="13" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="1"/>
+<Element Index="[2]" Value="2"/>
+<Element Index="[3]" Value="3"/>
+<Element Index="[4]" Value="4"/>
+<Element Index="[5]" Value="5"/>
+<Element Index="[6]" Value="6"/>
+<Element Index="[7]" Value="7"/>
+<Element Index="[8]" Value="8"/>
+<Element Index="[9]" Value="9"/>
+<Element Index="[10]" Value="10"/>
+<Element Index="[11]" Value="11"/>
+<Element Index="[12]" Value="12"/>
+</Array>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<Description>
+<![CDATA[Months of the year.]]>
+</Description>
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
