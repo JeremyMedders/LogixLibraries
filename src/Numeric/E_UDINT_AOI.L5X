@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--UDINT constants.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="E_UDINT" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-20T18:40:14.087Z" ContainsContext="true" ExportDate="Sat Jul 20 13:51:54 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="E_UDINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:59.265Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:40:14.087Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
+<Description>
+<![CDATA[UDINT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="UDINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[4294967295]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="4294967295"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="UDINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="UDINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="UDINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="UDINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[4294901760]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Hex" Value="16#ffff_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="UDINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[65535]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Hex" Value="16#0000_ffff"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
