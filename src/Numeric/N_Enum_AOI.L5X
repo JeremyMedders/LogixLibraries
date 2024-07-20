@@ -1,0 +1,1201 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Constants for all numeric types.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="N_Enum" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-20T19:10:08.189Z" ContainsContext="true" ExportDate="Sat Jul 20 14:12:48 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="N_DINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:12.851Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:05:50.621Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[DINT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[2147483647]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="2147483647"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-2147483648]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="-2147483648"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="NEG_ONE" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="-1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-65536]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#ffff_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[65535]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#0000_ffff"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_INT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:22.401Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:56.609Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[INT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="INT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[32767]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="32767"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="INT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-32768]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="-32768"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="INT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="INT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="NEG_ONE" TagType="Base" DataType="INT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="-1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="INT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-256]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Hex" Value="16#ff00"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="INT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[255]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Hex" Value="16#00ff"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_LINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:28.032Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:07:04.228Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[LINT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="LINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[9223372036854775807]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="9223372036854775807"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="LINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-9223372036854775808]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="-9223372036854775808"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="LINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="LINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="NEG_ONE" TagType="Base" DataType="LINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="-1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="LINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-4294967296]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Hex" Value="16#ffff_ffff_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="LINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[4294967295]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Hex" Value="16#0000_0000_ffff_ffff"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_LREAL" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:59:03.823Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:07:10.497Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[LREAL constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX_POS" TagType="Base" DataType="LREAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1.7976931348623157e+308]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LREAL" Radix="Float" Value="1.7976931348623157e+308"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN_POS" TagType="Base" DataType="LREAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[2.2250738585072014e-308]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LREAL" Radix="Float" Value="2.2250738585072014e-308"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MAX_NEG" TagType="Base" DataType="LREAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-2.2250738585072014e-308]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LREAL" Radix="Float" Value="-2.2250738585072014e-308"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN_NEG" TagType="Base" DataType="LREAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-1.7976931348623157e+308]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LREAL" Radix="Float" Value="-1.7976931348623157e+308"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="LREAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1.0000000000000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LREAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="LREAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.0000000000000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LREAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="EXPONENT" TagType="Base" DataType="LINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[9218868437227405312]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Hex" Value="16#7ff0_0000_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MANTISSA" TagType="Base" DataType="LINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[4503599627370495]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Hex" Value="16#000f_ffff_ffff_ffff"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="SIGN" TagType="Base" DataType="LINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-9223372036854775808]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Hex" Value="16#8000_0000_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="POS_INF" TagType="Base" DataType="LINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[9218868437227405312]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Hex" Value="16#7ff0_0000_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="NEG_INF" TagType="Base" DataType="LINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-4503599627370496]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Hex" Value="16#fff0_0000_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="NAN" TagType="Base" DataType="LINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[9218868437227405313]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Hex" Value="16#7ff0_0000_0000_0001"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_REAL" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:47:31.222Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:37.544Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[REAL constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX_POS" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[3.40282347e+038]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="3.40282347e+038"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN_POS" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1.40129846e-045]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.40129846e-045"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MAX_NEG" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-1.40129846e-045]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="-1.40129846e-045"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN_NEG" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-3.40282347e+038]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="-3.40282347e+038"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="EXPONENT" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[2139095040]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#7f80_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MANTISSA" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[8388607]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#007f_ffff"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="SIGN" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-2147483648]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#8000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="POS_INF" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[2139095040]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#7f80_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="NEG_INF" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-8388608]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#ff80_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="NAN" TagType="Base" DataType="DINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[2139095041]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Hex" Value="16#7f80_0001"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_SINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:19:57.778Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:07:17.333Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[SINT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="SINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[127]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="127"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="SINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-128]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="-128"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="SINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="SINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="NEG_ONE" TagType="Base" DataType="SINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="-1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="SINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[-16]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Hex" Value="16#f0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="SINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[15]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Hex" Value="16#0f"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_UDINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:59.265Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:32.108Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[UDINT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="UDINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[4294967295]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="4294967295"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="UDINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="UDINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="UDINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="UDINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[4294901760]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Hex" Value="16#ffff_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="UDINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[65535]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Hex" Value="16#0000_ffff"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_UINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:53.877Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:41.678Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[UINT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="UINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[65535]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UINT" Radix="Decimal" Value="65535"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="UINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="UINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="UINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="UINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[65280]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UINT" Radix="Hex" Value="16#ff00"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="UINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[255]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UINT" Radix="Hex" Value="16#00ff"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_ULINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:21:05.775Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:39.604Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[ULINT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="ULINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[18446744073709551615]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="ULINT" Radix="Decimal" Value="18446744073709551615"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="ULINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="ULINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="ULINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="ULINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="ULINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="ULINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="ULINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[18446744069414584320]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="ULINT" Radix="Hex" Value="16#ffff_ffff_0000_0000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="ULINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[4294967295]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="ULINT" Radix="Hex" Value="16#0000_0000_ffff_ffff"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="N_USINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:46.493Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:35.415Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+>
+<Description>
+<![CDATA[USINT constants.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="MAX" TagType="Base" DataType="USINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[255]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="USINT" Radix="Decimal" Value="255"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="MIN" TagType="Base" DataType="USINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="USINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ONE" TagType="Base" DataType="USINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[1]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="USINT" Radix="Decimal" Value="1"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ZERO" TagType="Base" DataType="USINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="USINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="HI_MASK" TagType="Base" DataType="USINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[240]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="USINT" Radix="Hex" Value="16#f0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LO_MASK" TagType="Base" DataType="USINT" Usage="Output" Radix="Hex" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[15]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="USINT" Radix="Hex" Value="16#0f"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags/>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="N_Enum" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:38.458Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:10:08.189Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
+<Description>
+<![CDATA[Constants for all numeric types.]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="LINT_MAX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LINT.MAX" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LINT_MIN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LINT.MIN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LINT_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LINT.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LINT_ZERO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LINT.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LINT_NEG_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LINT.NEG_ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LINT_HI_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LINT.HI_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LINT_LO_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LINT.LO_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ULINT_MAX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="ULINT.MAX" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ULINT_MIN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="ULINT.MIN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ULINT_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="ULINT.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ULINT_ZERO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="ULINT.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ULINT_HI_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="ULINT.HI_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="ULINT_LO_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="ULINT.LO_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DINT_MAX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="DINT.MAX" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DINT_MIN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="DINT.MIN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DINT_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="DINT.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DINT_ZERO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="DINT.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DINT_NEG_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="DINT.NEG_ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DINT_HI_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="DINT.HI_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="DINT_LO_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="DINT.LO_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UDINT_MAX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="UDINT.MAX" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UDINT_MIN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="UDINT.MIN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UDINT_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="UDINT.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UDINT_ZERO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="UDINT.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UDINT_HI_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="UDINT.HI_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UDINT_LO_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="UDINT.LO_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="INT_MAX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="INT.MAX" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="INT_MIN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="INT.MIN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="INT_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="INT.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="INT_ZERO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="INT.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="INT_NEG_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="INT.NEG_ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="INT_HI_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="INT.HI_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="INT_LO_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="INT.LO_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UINT_MAX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="UINT.MAX" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UINT_MIN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="UINT.MIN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UINT_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="UINT.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UINT_ZERO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="UINT.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UINT_HI_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="UINT.HI_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="UINT_LO_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="UINT.LO_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SINT_MAX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="SINT.MAX" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SINT_MIN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="SINT.MIN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SINT_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="SINT.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SINT_ZERO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="SINT.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SINT_NEG_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="SINT.NEG_ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SINT_HI_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="SINT.HI_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="SINT_LO_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="SINT.LO_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="USINT_MAX" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="USINT.MAX" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="USINT_MIN" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="USINT.MIN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="USINT_ONE" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="USINT.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="USINT_ZERO" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="USINT.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="USINT_HI_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="USINT.HI_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="USINT_LO_MASK" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="USINT.LO_MASK" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_MAX_POS" TagType="Alias" Usage="Output" Radix="Float" AliasFor="REAL.MAX_POS" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_MIN_POS" TagType="Alias" Usage="Output" Radix="Float" AliasFor="REAL.MIN_POS" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_MAX_NEG" TagType="Alias" Usage="Output" Radix="Float" AliasFor="REAL.MAX_NEG" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_MIN_NEG" TagType="Alias" Usage="Output" Radix="Float" AliasFor="REAL.MIN_NEG" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_ONE" TagType="Alias" Usage="Output" Radix="Float" AliasFor="REAL.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_ZERO" TagType="Alias" Usage="Output" Radix="Float" AliasFor="REAL.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_EXPONENT" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="REAL.EXPONENT" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_MANTISSA" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="REAL.MANTISSA" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_SIGN" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="REAL.SIGN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_POS_INF" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="REAL.POS_INF" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_NEG_INF" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="REAL.NEG_INF" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="REAL_NAN" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="REAL.NAN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_MAX_POS" TagType="Alias" Usage="Output" Radix="Float" AliasFor="LREAL.MAX_POS" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_MIN_POS" TagType="Alias" Usage="Output" Radix="Float" AliasFor="LREAL.MIN_POS" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_MAX_NEG" TagType="Alias" Usage="Output" Radix="Float" AliasFor="LREAL.MAX_NEG" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_MIN_NEG" TagType="Alias" Usage="Output" Radix="Float" AliasFor="LREAL.MIN_NEG" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_ONE" TagType="Alias" Usage="Output" Radix="Float" AliasFor="LREAL.ONE" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_ZERO" TagType="Alias" Usage="Output" Radix="Float" AliasFor="LREAL.ZERO" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_EXPONENT" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LREAL.EXPONENT" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_MANTISSA" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LREAL.MANTISSA" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_SIGN" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LREAL.SIGN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_POS_INF" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LREAL.POS_INF" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_NEG_INF" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LREAL.NEG_INF" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="LREAL_NAN" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LREAL.NAN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="LREAL" DataType="N_LREAL" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,1.7976931348623157e+308,2.2250738585072014e-308,-2.2250738585072014e-308,-1.7976931348623157e+308,1.0000000000000000e+000,0.0000000000000000e+000,9218868437227405312,4503599627370495,-9223372036854775808,9218868437227405312,-4503599627370496,9218868437227405313]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_LREAL">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX_POS" DataType="LREAL" Radix="Float" Value="1.7976931348623157e+308"/>
+<DataValueMember Name="MIN_POS" DataType="LREAL" Radix="Float" Value="2.2250738585072014e-308"/>
+<DataValueMember Name="MAX_NEG" DataType="LREAL" Radix="Float" Value="-2.2250738585072014e-308"/>
+<DataValueMember Name="MIN_NEG" DataType="LREAL" Radix="Float" Value="-1.7976931348623157e+308"/>
+<DataValueMember Name="ONE" DataType="LREAL" Radix="Float" Value="1.0"/>
+<DataValueMember Name="ZERO" DataType="LREAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EXPONENT" DataType="LINT" Radix="Hex" Value="16#7ff0_0000_0000_0000"/>
+<DataValueMember Name="MANTISSA" DataType="LINT" Radix="Hex" Value="16#000f_ffff_ffff_ffff"/>
+<DataValueMember Name="SIGN" DataType="LINT" Radix="Hex" Value="16#8000_0000_0000_0000"/>
+<DataValueMember Name="POS_INF" DataType="LINT" Radix="Hex" Value="16#7ff0_0000_0000_0000"/>
+<DataValueMember Name="NEG_INF" DataType="LINT" Radix="Hex" Value="16#fff0_0000_0000_0000"/>
+<DataValueMember Name="NAN" DataType="LINT" Radix="Hex" Value="16#7ff0_0000_0000_0001"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="REAL" DataType="N_REAL" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,3.40282347e+038,1.40129846e-045,-1.40129846e-045,-3.40282347e+038,1.00000000e+000,0.00000000e+000,2139095040,8388607,-2147483648,2139095040,-8388608,2139095041]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_REAL">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX_POS" DataType="REAL" Radix="Float" Value="3.40282347e+038"/>
+<DataValueMember Name="MIN_POS" DataType="REAL" Radix="Float" Value="1.40129846e-045"/>
+<DataValueMember Name="MAX_NEG" DataType="REAL" Radix="Float" Value="-1.40129846e-045"/>
+<DataValueMember Name="MIN_NEG" DataType="REAL" Radix="Float" Value="-3.40282347e+038"/>
+<DataValueMember Name="ONE" DataType="REAL" Radix="Float" Value="1.0"/>
+<DataValueMember Name="ZERO" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="EXPONENT" DataType="DINT" Radix="Hex" Value="16#7f80_0000"/>
+<DataValueMember Name="MANTISSA" DataType="DINT" Radix="Hex" Value="16#007f_ffff"/>
+<DataValueMember Name="SIGN" DataType="DINT" Radix="Hex" Value="16#8000_0000"/>
+<DataValueMember Name="POS_INF" DataType="DINT" Radix="Hex" Value="16#7f80_0000"/>
+<DataValueMember Name="NEG_INF" DataType="DINT" Radix="Hex" Value="16#ff80_0000"/>
+<DataValueMember Name="NAN" DataType="DINT" Radix="Hex" Value="16#7f80_0001"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="USINT" DataType="N_USINT" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,255,0,1,0,240,15]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_USINT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX" DataType="USINT" Radix="Decimal" Value="255"/>
+<DataValueMember Name="MIN" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ONE" DataType="USINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ZERO" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="HI_MASK" DataType="USINT" Radix="Hex" Value="16#f0"/>
+<DataValueMember Name="LO_MASK" DataType="USINT" Radix="Hex" Value="16#0f"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="UINT" DataType="N_UINT" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,65535,0,1,0,65280,255]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_UINT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX" DataType="UINT" Radix="Decimal" Value="65535"/>
+<DataValueMember Name="MIN" DataType="UINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ONE" DataType="UINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ZERO" DataType="UINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="HI_MASK" DataType="UINT" Radix="Hex" Value="16#ff00"/>
+<DataValueMember Name="LO_MASK" DataType="UINT" Radix="Hex" Value="16#00ff"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="UDINT" DataType="N_UDINT" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,4294967295,0,1,0,4294901760,65535]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_UDINT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX" DataType="UDINT" Radix="Decimal" Value="4294967295"/>
+<DataValueMember Name="MIN" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ONE" DataType="UDINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ZERO" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="HI_MASK" DataType="UDINT" Radix="Hex" Value="16#ffff_0000"/>
+<DataValueMember Name="LO_MASK" DataType="UDINT" Radix="Hex" Value="16#0000_ffff"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ULINT" DataType="N_ULINT" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,18446744073709551615,0,1,0,18446744069414584320,4294967295]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_ULINT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX" DataType="ULINT" Radix="Decimal" Value="18446744073709551615"/>
+<DataValueMember Name="MIN" DataType="ULINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ONE" DataType="ULINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ZERO" DataType="ULINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="HI_MASK" DataType="ULINT" Radix="Hex" Value="16#ffff_ffff_0000_0000"/>
+<DataValueMember Name="LO_MASK" DataType="ULINT" Radix="Hex" Value="16#0000_0000_ffff_ffff"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SINT" DataType="N_SINT" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,127,-128,1,0,-1,-16,15]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_SINT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX" DataType="SINT" Radix="Decimal" Value="127"/>
+<DataValueMember Name="MIN" DataType="SINT" Radix="Decimal" Value="-128"/>
+<DataValueMember Name="ONE" DataType="SINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ZERO" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="NEG_ONE" DataType="SINT" Radix="Decimal" Value="-1"/>
+<DataValueMember Name="HI_MASK" DataType="SINT" Radix="Hex" Value="16#f0"/>
+<DataValueMember Name="LO_MASK" DataType="SINT" Radix="Hex" Value="16#0f"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="INT" DataType="N_INT" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,32767,-32768,1,0,-1,-256,255]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_INT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX" DataType="INT" Radix="Decimal" Value="32767"/>
+<DataValueMember Name="MIN" DataType="INT" Radix="Decimal" Value="-32768"/>
+<DataValueMember Name="ONE" DataType="INT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ZERO" DataType="INT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="NEG_ONE" DataType="INT" Radix="Decimal" Value="-1"/>
+<DataValueMember Name="HI_MASK" DataType="INT" Radix="Hex" Value="16#ff00"/>
+<DataValueMember Name="LO_MASK" DataType="INT" Radix="Hex" Value="16#00ff"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DINT" DataType="N_DINT" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,2147483647,-2147483648,1,0,-1,-65536,65535]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_DINT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX" DataType="DINT" Radix="Decimal" Value="2147483647"/>
+<DataValueMember Name="MIN" DataType="DINT" Radix="Decimal" Value="-2147483648"/>
+<DataValueMember Name="ONE" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ZERO" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="NEG_ONE" DataType="DINT" Radix="Decimal" Value="-1"/>
+<DataValueMember Name="HI_MASK" DataType="DINT" Radix="Hex" Value="16#ffff_0000"/>
+<DataValueMember Name="LO_MASK" DataType="DINT" Radix="Hex" Value="16#0000_ffff"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="LINT" DataType="N_LINT" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,9223372036854775807,-9223372036854775808,1,0,-1,-4294967296,4294967295]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="N_LINT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MAX" DataType="LINT" Radix="Decimal" Value="9223372036854775807"/>
+<DataValueMember Name="MIN" DataType="LINT" Radix="Decimal" Value="-9223372036854775808"/>
+<DataValueMember Name="ONE" DataType="LINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ZERO" DataType="LINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="NEG_ONE" DataType="LINT" Radix="Decimal" Value="-1"/>
+<DataValueMember Name="HI_MASK" DataType="LINT" Radix="Hex" Value="16#ffff_ffff_0000_0000"/>
+<DataValueMember Name="LO_MASK" DataType="LINT" Radix="Hex" Value="16#0000_0000_ffff_ffff"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="N_DINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_INT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_LINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_LREAL"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_REAL"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_SINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_UDINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_UINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_ULINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_USINT"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

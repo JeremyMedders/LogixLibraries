@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="Numeric" TargetType="Program" ContainsContext="true" ExportDate="Sat Jul 20 13:54:54 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="Numeric" TargetType="Program" ContainsContext="true" ExportDate="Sat Jul 20 14:13:57 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="ST_Sys_EthernetLinkClass" Family="NoFamily" Class="User">
@@ -352,7 +352,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Name="E_DINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:12.851Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:40:49.908Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_DINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:12.851Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:05:50.621Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[DINT constants.]]>
@@ -436,7 +436,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_INT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:22.401Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:41:32.676Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_INT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:22.401Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:56.609Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[INT constants.]]>
@@ -520,7 +520,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_LINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:28.032Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:40:58.066Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_LINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:28.032Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:07:04.228Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[LINT constants.]]>
@@ -604,7 +604,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_LREAL" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:59:03.823Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:40:21.569Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_LREAL" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:59:03.823Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:07:10.497Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[LREAL constants.]]>
@@ -728,7 +728,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_REAL" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:47:31.222Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:41:09.245Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_REAL" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:47:31.222Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:37.544Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[REAL constants.]]>
@@ -852,7 +852,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_SINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:19:57.778Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:39:59.704Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_SINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:19:57.778Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:07:17.333Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[SINT constants.]]>
@@ -936,7 +936,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_UDINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:59.265Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:40:14.087Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_UDINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:59.265Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:32.108Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[UDINT constants.]]>
@@ -1012,7 +1012,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_UINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:53.877Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:40:08.172Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_UINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:53.877Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:41.678Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[UINT constants.]]>
@@ -1088,7 +1088,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_ULINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:21:05.775Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:40:40.875Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_ULINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:21:05.775Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:39.604Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[ULINT constants.]]>
@@ -1164,7 +1164,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_USINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:46.493Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:41:18.082Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_USINT" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T18:20:46.493Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:09:35.415Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[USINT constants.]]>
@@ -1240,7 +1240,7 @@
 </Routine>
 </Routines>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="E_Numeric" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:38.458Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T18:50:58.495Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
+<AddOnInstructionDefinition Name="N_Enum" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-07-20T02:49:38.458Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:10:08.189Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[Constants for all numeric types.]]>
@@ -1334,12 +1334,12 @@
 <Parameter Name="LREAL_NAN" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LREAL.NAN" Required="false" Visible="false" ExternalAccess="Read Only"/>
 </Parameters>
 <LocalTags>
-<LocalTag Name="LREAL" DataType="E_LREAL" ExternalAccess="Read Only">
+<LocalTag Name="LREAL" DataType="N_LREAL" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,1.7976931348623157e+308,2.2250738585072014e-308,-2.2250738585072014e-308,-1.7976931348623157e+308,1.0000000000000000e+000,0.0000000000000000e+000,9218868437227405312,4503599627370495,-9223372036854775808,9218868437227405312,-4503599627370496,9218868437227405313]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_LREAL">
+<Structure DataType="N_LREAL">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX_POS" DataType="LREAL" Radix="Float" Value="1.7976931348623157e+308"/>
@@ -1357,12 +1357,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="REAL" DataType="E_REAL" ExternalAccess="Read Only">
+<LocalTag Name="REAL" DataType="N_REAL" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,3.40282347e+038,1.40129846e-045,-1.40129846e-045,-3.40282347e+038,1.00000000e+000,0.00000000e+000,2139095040,8388607,-2147483648,2139095040,-8388608,2139095041]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_REAL">
+<Structure DataType="N_REAL">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX_POS" DataType="REAL" Radix="Float" Value="3.40282347e+038"/>
@@ -1380,12 +1380,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="USINT" DataType="E_USINT" ExternalAccess="Read Only">
+<LocalTag Name="USINT" DataType="N_USINT" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,255,0,1,0,240,15]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_USINT">
+<Structure DataType="N_USINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX" DataType="USINT" Radix="Decimal" Value="255"/>
@@ -1397,12 +1397,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="UINT" DataType="E_UINT" ExternalAccess="Read Only">
+<LocalTag Name="UINT" DataType="N_UINT" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,65535,0,1,0,65280,255]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_UINT">
+<Structure DataType="N_UINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX" DataType="UINT" Radix="Decimal" Value="65535"/>
@@ -1414,12 +1414,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="UDINT" DataType="E_UDINT" ExternalAccess="Read Only">
+<LocalTag Name="UDINT" DataType="N_UDINT" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,4294967295,0,1,0,4294901760,65535]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_UDINT">
+<Structure DataType="N_UDINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX" DataType="UDINT" Radix="Decimal" Value="4294967295"/>
@@ -1431,12 +1431,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="ULINT" DataType="E_ULINT" ExternalAccess="Read Only">
+<LocalTag Name="ULINT" DataType="N_ULINT" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,18446744073709551615,0,1,0,18446744069414584320,4294967295]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_ULINT">
+<Structure DataType="N_ULINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX" DataType="ULINT" Radix="Decimal" Value="18446744073709551615"/>
@@ -1448,12 +1448,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="SINT" DataType="E_SINT" ExternalAccess="Read Only">
+<LocalTag Name="SINT" DataType="N_SINT" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,127,-128,1,0,-1,-16,15]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_SINT">
+<Structure DataType="N_SINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX" DataType="SINT" Radix="Decimal" Value="127"/>
@@ -1466,12 +1466,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="INT" DataType="E_INT" ExternalAccess="Read Only">
+<LocalTag Name="INT" DataType="N_INT" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,32767,-32768,1,0,-1,-256,255]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_INT">
+<Structure DataType="N_INT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX" DataType="INT" Radix="Decimal" Value="32767"/>
@@ -1484,12 +1484,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="DINT" DataType="E_DINT" ExternalAccess="Read Only">
+<LocalTag Name="DINT" DataType="N_DINT" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,2147483647,-2147483648,1,0,-1,-65536,65535]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_DINT">
+<Structure DataType="N_DINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX" DataType="DINT" Radix="Decimal" Value="2147483647"/>
@@ -1502,12 +1502,12 @@
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="LINT" DataType="E_LINT" ExternalAccess="Read Only">
+<LocalTag Name="LINT" DataType="N_LINT" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,9223372036854775807,-9223372036854775808,1,0,-1,-4294967296,4294967295]]]>
 </DefaultData>
 <DefaultData Format="Decorated">
-<Structure DataType="E_LINT">
+<Structure DataType="N_LINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
 <DataValueMember Name="MAX" DataType="LINT" Radix="Decimal" Value="9223372036854775807"/>
@@ -1531,19 +1531,19 @@
 </Routine>
 </Routines>
 <Dependencies>
-<Dependency Type="AddOnInstructionDefinition" Name="E_DINT"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_INT"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_LINT"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_LREAL"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_REAL"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_SINT"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_UDINT"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_UINT"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_ULINT"/>
-<Dependency Type="AddOnInstructionDefinition" Name="E_USINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_DINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_INT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_LINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_LREAL"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_REAL"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_SINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_UDINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_UINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_ULINT"/>
+<Dependency Type="AddOnInstructionDefinition" Name="N_USINT"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_DINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:07:59.965Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_DINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:05:57.970Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -1705,7 +1705,7 @@
 <Dependency Type="DataType" Name="STR_8"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_ETHMACtoStr" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-26T21:49:34.769Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-27T18:14:52.583Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_ETHMACtoStr" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-26T21:49:34.769Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:40.931Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[Forms a string from an Ethernet MAC address.]]>
@@ -1934,7 +1934,7 @@
 <Dependency Type="DataType" Name="STR_4"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_INTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:08:08.627Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_INTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:31.689Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -2097,7 +2097,7 @@
 <Dependency Type="DataType" Name="STR_4"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_IPv4toStr" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T19:18:10.350Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-30T11:30:25.588Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_IPv4toStr" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-19T19:18:10.350Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:36.000Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Description>
 <![CDATA[Converts an IPv4 address to a string.]]>
@@ -2258,7 +2258,7 @@
 <Dependency Type="DataType" Name="STR_16"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_LINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:08:39.073Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_LINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:25.673Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -2424,7 +2424,7 @@
 <Dependency Type="DataType" Name="STR_16"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_SINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:08:52.664Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_SINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:21.196Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -2570,7 +2570,7 @@
 <Dependency Type="DataType" Name="STR_4"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_UDINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:09:01.458Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_UDINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:16.875Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -2732,7 +2732,7 @@
 <Dependency Type="DataType" Name="STR_8"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_UINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:09:10.197Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_UINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:12.635Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -2895,7 +2895,7 @@
 <Dependency Type="DataType" Name="STR_4"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_ULINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:09:18.022Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_ULINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-07-10T02:37:11.620Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:07.953Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -3061,7 +3061,7 @@
 <Dependency Type="DataType" Name="STR_16"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Name="Num_USINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2023-01-26T22:09:27.814Z" EditedBy="APEX\Jeremy" SoftwareRevision="v35.00"
+<AddOnInstructionDefinition Name="N_USINTtoHex" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-04-13T18:18:02.739Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-20T19:06:03.595Z" EditedBy="APEX\Jeremy" SoftwareRevision="v36.00"
 >
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -3407,12 +3407,12 @@
 <Programs Use="Context">
 <Program Use="Target" Name="Numeric" TestEdits="false" MainRoutineName="Main" Disabled="false" UseAsFolder="false">
 <Tags>
-<Tag Name="DINT" TagType="Base" DataType="E_DINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="DINT" TagType="Base" DataType="N_DINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,2147483647,-2147483648,1,0,-1,-65536,65535]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_DINT">
+<Structure DataType="N_DINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX" DataType="DINT" Radix="Decimal" Value="2147483647"/>
@@ -3433,7 +3433,7 @@
 <![CDATA['00000000']]>
 </Data>
 </Tag>
-<Tag Name="Enum" TagType="Base" DataType="E_Numeric" Usage="Public" Constant="false" ExternalAccess="Read/Write">
+<Tag Name="Enum" TagType="Base" DataType="N_Enum" Usage="Public" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[[3,[1,1.7976931348623157e+308,2.2250738585072014e-308,-2.2250738585072014e-308,-1.7976931348623157e+308
 		,1.0000000000000000e+000,0.0000000000000000e+000,9218868437227405312,4503599627370495
@@ -3445,7 +3445,7 @@
 		,-9223372036854775808,1,0,-1,-4294967296,4294967295]]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_Numeric">
+<Structure DataType="N_Enum">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="LINT_MAX" DataType="LINT" Radix="Decimal" Value="9223372036854775807"/>
@@ -3551,24 +3551,24 @@
 <![CDATA['5C:88:16:EC:13:E1']]>
 </Data>
 </Tag>
-<Tag Name="ETHMACtoStr" TagType="Base" DataType="Num_ETHMACtoStr" Constant="false" ExternalAccess="Read/Write">
+<Tag Name="ETHMACtoStr" TagType="Base" DataType="N_ETHMACtoStr" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[[3,2,[1,'-$00$00$00'],[1,':$00$00$00'],[17,'5C:88:16:EC:13:E1$00$00$00'],6,49,[2,'E1$00$00']]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_ETHMACtoStr">
+<Structure DataType="N_ETHMACtoStr">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp_Style" DataType="DINT" Radix="Decimal" Value="2"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="INT" TagType="Base" DataType="E_INT" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="INT" TagType="Base" DataType="N_INT" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,32767,-32768,1,0,-1,-256,255]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_INT">
+<Structure DataType="N_INT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX" DataType="INT" Radix="Decimal" Value="32767"/>
@@ -3597,24 +3597,24 @@
 <![CDATA['192.168.32.15']]>
 </Data>
 </Tag>
-<Tag Name="IPv4toStr" TagType="Base" DataType="Num_IPv4toStr" Constant="false" ExternalAccess="Read/Write">
+<Tag Name="IPv4toStr" TagType="Base" DataType="N_IPv4toStr" Constant="false" ExternalAccess="Read/Write">
 <Data Format="L5K">
 <![CDATA[[3,3232243727,[1,'.$00$00$00'],[13,'192.168.32.15$00$00$00'],[15,32,168,192],15,[2,'15$00$00'],-1]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_IPv4toStr">
+<Structure DataType="N_IPv4toStr">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp_IP" DataType="UDINT" Radix="Decimal" Value="3232243727"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="LINT" TagType="Base" DataType="E_LINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="LINT" TagType="Base" DataType="N_LINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,9223372036854775807,-9223372036854775808,1,0,-1,-4294967296,4294967295]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_LINT">
+<Structure DataType="N_LINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX" DataType="LINT" Radix="Decimal" Value="9223372036854775807"/>
@@ -3635,14 +3635,14 @@
 <![CDATA['000005F4484F8F92']]>
 </Data>
 </Tag>
-<Tag Name="LREAL" TagType="Base" DataType="E_LREAL" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="LREAL" TagType="Base" DataType="N_LREAL" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,1.7976931348623157e+308,2.2250738585072014e-308,-2.2250738585072014e-308,-1.7976931348623157e+308
 		,1.0000000000000000e+000,0.0000000000000000e+000,9218868437227405312,4503599627370495
 		,-9223372036854775808,9218868437227405312,-4503599627370496,9218868437227405313]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_LREAL">
+<Structure DataType="N_LREAL">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX_POS" DataType="LREAL" Radix="Float" Value="1.7976931348623157e+308"/>
@@ -3660,109 +3660,109 @@
 </Structure>
 </Data>
 </Tag>
-<Tag Name="Num_DINTtoHex" TagType="Base" DataType="Num_DINTtoHex" Constant="false" ExternalAccess="Read Only">
+<Tag Name="Num_DINTtoHex" TagType="Base" DataType="N_DINTtoHex" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,0,[8,'00000000'],[0,0,0,0],48,4]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_DINTtoHex">
+<Structure DataType="N_DINTtoHex">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp" DataType="DINT" Radix="Decimal" Value="0"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="Num_INTtoHex" TagType="Base" DataType="Num_INTtoHex" Constant="false" ExternalAccess="Read Only">
+<Tag Name="Num_INTtoHex" TagType="Base" DataType="N_INTtoHex" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,-1,2,[-1,-1],[4,'FFFF'],70]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_INTtoHex">
+<Structure DataType="N_INTtoHex">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp" DataType="INT" Radix="Decimal" Value="-1"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="Num_LINTtoHex" TagType="Base" DataType="Num_LINTtoHex" Constant="false" ExternalAccess="Read Only">
+<Tag Name="Num_LINTtoHex" TagType="Base" DataType="N_LINTtoHex" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,6546743332754,[16,'000005F4484F8F92'],[-110,-113,79,72,-12,5,0,0],48,8]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_LINTtoHex">
+<Structure DataType="N_LINTtoHex">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp" DataType="LINT" Radix="Decimal" Value="6546743332754"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="Num_SINTtoHex" TagType="Base" DataType="Num_SINTtoHex" Constant="false" ExternalAccess="Read Only">
+<Tag Name="Num_SINTtoHex" TagType="Base" DataType="N_SINTtoHex" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,85,85,53,[2,'55$00$00']]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_SINTtoHex">
+<Structure DataType="N_SINTtoHex">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp" DataType="SINT" Radix="Decimal" Value="85"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="Num_UDINTtoHex" TagType="Base" DataType="Num_UDINTtoHex" Constant="false" ExternalAccess="Read Only">
+<Tag Name="Num_UDINTtoHex" TagType="Base" DataType="N_UDINTtoHex" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,3232243727,[8,'C0A8200F'],[15,32,-88,-64],48,4]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_UDINTtoHex">
+<Structure DataType="N_UDINTtoHex">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp" DataType="UDINT" Radix="Decimal" Value="3232243727"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="Num_UINTtoHex" TagType="Base" DataType="Num_UINTtoHex" Constant="false" ExternalAccess="Read Only">
+<Tag Name="Num_UINTtoHex" TagType="Base" DataType="N_UINTtoHex" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,4096,2,[0,16],[4,'1000'],48]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_UINTtoHex">
+<Structure DataType="N_UINTtoHex">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp" DataType="UINT" Radix="Decimal" Value="4096"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="Num_ULINTtoHex" TagType="Base" DataType="Num_ULINTtoHex" Constant="false" ExternalAccess="Read Only">
+<Tag Name="Num_ULINTtoHex" TagType="Base" DataType="N_ULINTtoHex" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,0,[16,'0000000000000000'],[0,0,0,0,0,0,0,0],48,8]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_ULINTtoHex">
+<Structure DataType="N_ULINTtoHex">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp" DataType="ULINT" Radix="Decimal" Value="0"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="Num_USINTtoHex" TagType="Base" DataType="Num_USINTtoHex" Constant="false" ExternalAccess="Read Only">
+<Tag Name="Num_USINTtoHex" TagType="Base" DataType="N_USINTtoHex" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,127,127,70,[2,'7F$00$00']]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="Num_USINTtoHex">
+<Structure DataType="N_USINTtoHex">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="Inp" DataType="USINT" Radix="Decimal" Value="127"/>
 </Structure>
 </Data>
 </Tag>
-<Tag Name="REAL" TagType="Base" DataType="E_REAL" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="REAL" TagType="Base" DataType="N_REAL" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,3.40282347e+038,1.40129846e-045,-1.40129846e-045,-3.40282347e+038,1.00000000e+000,0.00000000e+000
 		,2139095040,8388607,-2147483648,2139095040,-8388608,2139095041]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_REAL">
+<Structure DataType="N_REAL">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX_POS" DataType="REAL" Radix="Float" Value="3.40282347e+038"/>
@@ -3780,12 +3780,12 @@
 </Structure>
 </Data>
 </Tag>
-<Tag Name="SINT" TagType="Base" DataType="E_SINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="SINT" TagType="Base" DataType="N_SINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,127,-128,1,0,-1,-16,15]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_SINT">
+<Structure DataType="N_SINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX" DataType="SINT" Radix="Decimal" Value="127"/>
@@ -3870,12 +3870,12 @@
 <DataValue DataType="USINT" Radix="Decimal" Value="127"/>
 </Data>
 </Tag>
-<Tag Name="UDINT" TagType="Base" DataType="E_UDINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="UDINT" TagType="Base" DataType="N_UDINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,4294967295,0,1,0,4294901760,65535]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_UDINT">
+<Structure DataType="N_UDINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX" DataType="UDINT" Radix="Decimal" Value="4294967295"/>
@@ -3895,12 +3895,12 @@
 <![CDATA['C0A8200F']]>
 </Data>
 </Tag>
-<Tag Name="UINT" TagType="Base" DataType="E_UINT" Constant="false" ExternalAccess="Read Only">
+<Tag Name="UINT" TagType="Base" DataType="N_UINT" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,65535,0,1,0,65280,255]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_UINT">
+<Structure DataType="N_UINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX" DataType="UINT" Radix="Decimal" Value="65535"/>
@@ -3920,12 +3920,12 @@
 <![CDATA['1000']]>
 </Data>
 </Tag>
-<Tag Name="ULINT" TagType="Base" DataType="E_ULINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="ULINT" TagType="Base" DataType="N_ULINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,18446744073709551615,0,1,0,18446744069414584320,4294967295]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_ULINT">
+<Structure DataType="N_ULINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX" DataType="ULINT" Radix="Decimal" Value="18446744073709551615"/>
@@ -3945,12 +3945,12 @@
 <![CDATA['0000000000000000']]>
 </Data>
 </Tag>
-<Tag Name="USINT" TagType="Base" DataType="E_USINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
+<Tag Name="USINT" TagType="Base" DataType="N_USINT" Usage="Public" Constant="false" ExternalAccess="Read Only">
 <Data Format="L5K">
 <![CDATA[[3,255,0,1,0,240,15]]]>
 </Data>
 <Data Format="Decorated">
-<Structure DataType="E_USINT">
+<Structure DataType="N_USINT">
 <DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
 <DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
 <DataValueMember Name="MAX" DataType="USINT" Radix="Decimal" Value="255"/>
@@ -3981,22 +3981,22 @@
 </Rung>
 <Rung Number="1" Type="N">
 <Text>
-<![CDATA[E_SINT(SINT)E_INT(INT)E_DINT(DINT)E_LINT(LINT);]]>
+<![CDATA[N_SINT(SINT)N_INT(INT)N_DINT(DINT)N_LINT(LINT);]]>
 </Text>
 </Rung>
 <Rung Number="2" Type="N">
 <Text>
-<![CDATA[E_USINT(USINT)E_UINT(UINT)E_UDINT(UDINT)E_ULINT(ULINT);]]>
+<![CDATA[N_USINT(USINT)N_UINT(UINT)N_UDINT(UDINT)N_ULINT(ULINT);]]>
 </Text>
 </Rung>
 <Rung Number="3" Type="N">
 <Text>
-<![CDATA[E_REAL(REAL)E_LREAL(LREAL);]]>
+<![CDATA[N_REAL(REAL)N_LREAL(LREAL);]]>
 </Text>
 </Rung>
 <Rung Number="4" Type="N">
 <Text>
-<![CDATA[E_Numeric(Enum);]]>
+<![CDATA[N_Enum(Enum);]]>
 </Text>
 </Rung>
 <Rung Number="5" Type="N">
@@ -4004,7 +4004,7 @@
 <![CDATA[Num_ETHMACtoStr]]>
 </Comment>
 <Text>
-<![CDATA[[Num_ETHMACtoStr(ETHMACtoStr,SysEthernetLinks.List[0].PhysicalAddress,0,ETHMACStr) MOVE(ETHMACStr,ETHMACStr) ,Num_ETHMACtoStr(ETHMACtoStr,SysEthernetLinks.List[0].PhysicalAddress,1,ETHMACStr1) MOVE(ETHMACStr1,ETHMACStr1) ,Num_ETHMACtoStr(ETHMACtoStr,SysEthernetLinks.List[0].PhysicalAddress,2,ETHMACStr2) MOVE(ETHMACStr2,ETHMACStr2) ];]]>
+<![CDATA[[N_ETHMACtoStr(ETHMACtoStr,SysEthernetLinks.List[0].PhysicalAddress,0,ETHMACStr) MOVE(ETHMACStr,ETHMACStr) ,N_ETHMACtoStr(ETHMACtoStr,SysEthernetLinks.List[0].PhysicalAddress,1,ETHMACStr1) MOVE(ETHMACStr1,ETHMACStr1) ,N_ETHMACtoStr(ETHMACtoStr,SysEthernetLinks.List[0].PhysicalAddress,2,ETHMACStr2) MOVE(ETHMACStr2,ETHMACStr2) ];]]>
 </Text>
 </Rung>
 <Rung Number="6" Type="N">
@@ -4012,7 +4012,7 @@
 <![CDATA[Num_IPv4toStr]]>
 </Comment>
 <Text>
-<![CDATA[Num_IPv4toStr(IPv4toStr,tUDINT,IPAddrStr)MOVE(IPAddrStr,IPAddrStr);]]>
+<![CDATA[N_IPv4toStr(IPv4toStr,tUDINT,IPAddrStr)MOVE(IPAddrStr,IPAddrStr);]]>
 </Text>
 </Rung>
 <Rung Number="7" Type="N">
@@ -4020,7 +4020,7 @@
 <![CDATA[Num_LINTtoHex]]>
 </Comment>
 <Text>
-<![CDATA[Num_LINTtoHex(Num_LINTtoHex,tLINT,LINTtoHexStr)MOVE(LINTtoHexStr,LINTtoHexStr);]]>
+<![CDATA[N_LINTtoHex(Num_LINTtoHex,tLINT,LINTtoHexStr)MOVE(LINTtoHexStr,LINTtoHexStr);]]>
 </Text>
 </Rung>
 <Rung Number="8" Type="N">
@@ -4028,7 +4028,7 @@
 <![CDATA[Num_DINTtoHex]]>
 </Comment>
 <Text>
-<![CDATA[Num_DINTtoHex(Num_DINTtoHex,tDINT,DINTtoHexStr)MOVE(DINTtoHexStr,DINTtoHexStr);]]>
+<![CDATA[N_DINTtoHex(Num_DINTtoHex,tDINT,DINTtoHexStr)MOVE(DINTtoHexStr,DINTtoHexStr);]]>
 </Text>
 </Rung>
 <Rung Number="9" Type="N">
@@ -4036,7 +4036,7 @@
 <![CDATA[Num_INTtoHex]]>
 </Comment>
 <Text>
-<![CDATA[Num_INTtoHex(Num_INTtoHex,tINT,INTtoHexStr)MOVE(INTtoHexStr,INTtoHexStr);]]>
+<![CDATA[N_INTtoHex(Num_INTtoHex,tINT,INTtoHexStr)MOVE(INTtoHexStr,INTtoHexStr);]]>
 </Text>
 </Rung>
 <Rung Number="10" Type="N">
@@ -4044,7 +4044,7 @@
 <![CDATA[Num_SINTtoHex]]>
 </Comment>
 <Text>
-<![CDATA[Num_SINTtoHex(Num_SINTtoHex,tSINT,SINTtoHexStr)MOVE(SINTtoHexStr,SINTtoHexStr);]]>
+<![CDATA[N_SINTtoHex(Num_SINTtoHex,tSINT,SINTtoHexStr)MOVE(SINTtoHexStr,SINTtoHexStr);]]>
 </Text>
 </Rung>
 <Rung Number="11" Type="N">
@@ -4052,7 +4052,7 @@
 <![CDATA[Num_ULINTtoHex]]>
 </Comment>
 <Text>
-<![CDATA[Num_ULINTtoHex(Num_ULINTtoHex,tULINT,ULINTtoHexStr)MOVE(ULINTtoHexStr,ULINTtoHexStr);]]>
+<![CDATA[N_ULINTtoHex(Num_ULINTtoHex,tULINT,ULINTtoHexStr)MOVE(ULINTtoHexStr,ULINTtoHexStr);]]>
 </Text>
 </Rung>
 <Rung Number="12" Type="N">
@@ -4060,7 +4060,7 @@
 <![CDATA[Num_UDINTtoHex]]>
 </Comment>
 <Text>
-<![CDATA[Num_UDINTtoHex(Num_UDINTtoHex,tUDINT,UDINTtoHexStr)MOVE(UDINTtoHexStr,UDINTtoHexStr);]]>
+<![CDATA[N_UDINTtoHex(Num_UDINTtoHex,tUDINT,UDINTtoHexStr)MOVE(UDINTtoHexStr,UDINTtoHexStr);]]>
 </Text>
 </Rung>
 <Rung Number="13" Type="N">
@@ -4068,7 +4068,7 @@
 <![CDATA[Num_UINTtoHex]]>
 </Comment>
 <Text>
-<![CDATA[Num_UINTtoHex(Num_UINTtoHex,tUINT,UINTtoHexStr)MOVE(UINTtoHexStr,UINTtoHexStr);]]>
+<![CDATA[N_UINTtoHex(Num_UINTtoHex,tUINT,UINTtoHexStr)MOVE(UINTtoHexStr,UINTtoHexStr);]]>
 </Text>
 </Rung>
 <Rung Number="14" Type="N">
@@ -4076,7 +4076,7 @@
 <![CDATA[Num_USINTtoHex]]>
 </Comment>
 <Text>
-<![CDATA[Num_USINTtoHex(Num_USINTtoHex,tUSINT,USINTtoHexStr)MOVE(USINTtoHexStr,USINTtoHexStr);]]>
+<![CDATA[N_USINTtoHex(Num_USINTtoHex,tUSINT,USINTtoHexStr)MOVE(USINTtoHexStr,USINTtoHexStr);]]>
 </Text>
 </Rung>
 </RLLContent>
