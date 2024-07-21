@@ -18,7 +18,7 @@ Content
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
-- **Numeric** (Num_): Forms string representations of various types of numbers.
+- **Numeric** (N_): Forms string representations of various types of numbers.
 - **Parameter** (Par_): Experimental generic parameter handling.
 - **Process** (Op_): Lightweight PAx-style blocks.
 - **Recipe** (Rec_)
