@@ -1,0 +1,1568 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="E_UTC" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-12T20:58:23.159Z" ContainsContext="true" ExportDate="Thu Jul 25 00:20:31 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="STR_64" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="64" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="E_UTC" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-01-25T20:18:41.799Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-12T20:58:23.159Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v36.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Minus1200_InternationalDateLineWest" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[0].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus1100_UTC11" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[1].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus1000_AleutianIslands" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[2].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus1000_Hawaii" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[3].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0930_MarquesasIslands" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[4].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0900_Alaska" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[5].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0800_BajaCalifornia" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[6].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0800_UTC08" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[7].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0800_PacificTimeUS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[8].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0700_Arizona" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[9].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0700_Chihuahua" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[10].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0700_MountainTimeUS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[11].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0600_CentralAmerica" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[12].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0600_CentralTimeUS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[13].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0600_EasterIsland" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[14].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0600_Guadalajara" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[15].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0600_Saskatchewan" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[16].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0500_Bogota" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[17].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0500_Chetumal" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[18].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0500_EasternTimeUS" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[19].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0500_Haiti" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[20].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0500_Havana" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[21].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0500_EastIndiana" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[22].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0500_Turks" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[23].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0400_Asuncion" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[24].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0400_AtlanticTime" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[25].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0400_Caracas" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[26].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0400_Cuiaba" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[27].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0400_Georgetown" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[28].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0400_Santiago" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[29].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0330_Newfoundland" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[30].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_Araguaina" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[31].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_Brasilia" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[32].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_Cayenne" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[33].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_BuenosAiresCity" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[34].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_Greenland" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[35].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_Montevideo" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[36].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_PuntaArenas" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[37].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_SaintPierre" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[38].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0300_Salvador" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[39].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0200_UTC" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[40].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0100_Azores" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[41].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0100_CaboVerde" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[42].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Minus0000_UTC" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[43].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0000_Dublin" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[44].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0000_Monrovia" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[45].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0000_SaoTome" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[46].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0100_Casablanca" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[47].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0100_Amsterdam" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[48].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0100_Belgrade" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[49].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0100_Brussels" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[50].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0100_Sarajevo" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[51].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0100_WestCentralAfrica" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[52].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Amman" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[53].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Athens" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[54].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Beirut" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[55].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Cairo" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[56].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Chisinau" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[57].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Damascus" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[58].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Gaza" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[59].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Harare" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[60].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Helsinki" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[61].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Jerusalem" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[62].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Kaliningrad" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[63].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Khartoum" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[64].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Tripoli" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[65].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0200_Windhoek" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[66].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0300_Baghdad" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[67].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0300_Istanbul" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[68].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0300_Kuwait" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[69].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0300_Minsk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[70].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0300_Moscow" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[71].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0300_Nairobi" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[72].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0330_Tehran" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[73].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_AbuDhabi" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[74].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_Astrakhan" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[75].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_Baku" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[76].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_Izhevsk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[77].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_PortLouis" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[78].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_Saratov" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[79].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_Tbilisi" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[80].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_Volgograd" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[81].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0400_Yerevan" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[82].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0430_Kabul" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[83].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0500_Ashgabat" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[84].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0500_Ekaterinburg" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[85].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0500_Islamabad" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[86].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0500_Qyzylorda" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[87].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0530_Chennai" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[88].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0530_SriJayawardenepura" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[89].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0545_Kathmandu" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[90].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0600_Astana" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[91].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0600_Dhaka" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[92].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0600_Omsk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[93].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0630_Yangon" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[94].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0700_Bangkok" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[95].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0700_Barnaul" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[96].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0700_Krasnoyarsk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[97].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0700_Novosibirsk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[98].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0700_Tomsk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[99].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0800_Beijing" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[100].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0800_Irkutsk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[101].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0800_KualaLumpur" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[102].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0800_Perth" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[103].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0800_Taipei" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[104].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0800_Ulaanbaatar" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[105].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0845_Eucla" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[106].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0900_Chita" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[107].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0900_Osaka" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[108].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0900_Pyongyang" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[109].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0900_Seoul" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[110].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0900_Yakutsk" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[111].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0930_Adelaide" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[112].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus0930_Darwin" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[113].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_Brisbane" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[114].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_Canberra" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[115].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_Guam" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[116].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_Hobart" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[117].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_Vladivostok" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[118].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_LordHoweIsland" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[119].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_BougainvilleIsland" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[120].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_Chokurdakh" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[121].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_Magadan" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[122].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_NorfolkIsland" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[123].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Plus1000_Sakhalin" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Data[124].LEN" Required="false" Visible="false" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Data" DataType="STR_64" Dimensions="125" ExternalAccess="Read Only">
+<Comments>
+<Comment Operand="[0]">
+<![CDATA[(UTC-12:00) International Date Line West]]>
+</Comment>
+<Comment Operand="[1]">
+<![CDATA[(UTC-11:00) Coordinated Universal Time-11]]>
+</Comment>
+<Comment Operand="[2]">
+<![CDATA[(UTC-10:00) Aleutian Islands]]>
+</Comment>
+<Comment Operand="[3]">
+<![CDATA[(UTC-10:00) Hawaii]]>
+</Comment>
+<Comment Operand="[4]">
+<![CDATA[(UTC-09:30) Marquesas Islands]]>
+</Comment>
+<Comment Operand="[5]">
+<![CDATA[(UTC-09:00) Alaska]]>
+</Comment>
+<Comment Operand="[6]">
+<![CDATA[(UTC-08:00) Baja California]]>
+</Comment>
+<Comment Operand="[7]">
+<![CDATA[(UTC-08:00) Coordinated Universal Time-08]]>
+</Comment>
+<Comment Operand="[8]">
+<![CDATA[(UTC-08:00) Pacific Time (US & Canada)]]>
+</Comment>
+<Comment Operand="[9]">
+<![CDATA[(UTC-07:00) Arizona]]>
+</Comment>
+<Comment Operand="[10]">
+<![CDATA[(UTC-07:00) Chihuahua, La Paz, Mazatlan]]>
+</Comment>
+<Comment Operand="[11]">
+<![CDATA[(UTC-07:00) Mountain Time (US & Canada)]]>
+</Comment>
+<Comment Operand="[12]">
+<![CDATA[(UTC-06:00) Central America]]>
+</Comment>
+<Comment Operand="[13]">
+<![CDATA[(UTC-06:00) Central Time (US & Canada)]]>
+</Comment>
+<Comment Operand="[14]">
+<![CDATA[(UTC-06:00) Easter Island]]>
+</Comment>
+<Comment Operand="[15]">
+<![CDATA[(UTC-06:00) Guadalajara, Mexico City, Monterrey]]>
+</Comment>
+<Comment Operand="[16]">
+<![CDATA[(UTC-06:00) Saskatchewan]]>
+</Comment>
+<Comment Operand="[17]">
+<![CDATA[(UTC-05:00) Bogota, Lima, Quito, Rio Branco]]>
+</Comment>
+<Comment Operand="[18]">
+<![CDATA[(UTC-05:00) Chetumal]]>
+</Comment>
+<Comment Operand="[19]">
+<![CDATA[(UTC-05:00) Eastern Time (US & Canada)]]>
+</Comment>
+<Comment Operand="[20]">
+<![CDATA[(UTC-05:00) Haiti]]>
+</Comment>
+<Comment Operand="[21]">
+<![CDATA[(UTC-05:00) Havana]]>
+</Comment>
+<Comment Operand="[22]">
+<![CDATA[(UTC-05:00) Indiana (East)]]>
+</Comment>
+<Comment Operand="[23]">
+<![CDATA[(UTC-05:00) Turks and Caicos]]>
+</Comment>
+<Comment Operand="[24]">
+<![CDATA[(UTC-04:00) Asuncion]]>
+</Comment>
+<Comment Operand="[25]">
+<![CDATA[(UTC-04:00) Atlantic Time (Canada)]]>
+</Comment>
+<Comment Operand="[26]">
+<![CDATA[(UTC-04:00) Caracas]]>
+</Comment>
+<Comment Operand="[27]">
+<![CDATA[(UTC-04:00) Cuiaba]]>
+</Comment>
+<Comment Operand="[28]">
+<![CDATA[(UTC-04:00) Georgetown, La Paz, Manaus, San Juan]]>
+</Comment>
+<Comment Operand="[29]">
+<![CDATA[(UTC-04:00) Santiago]]>
+</Comment>
+<Comment Operand="[30]">
+<![CDATA[(UTC-03:30) Newfoundland]]>
+</Comment>
+<Comment Operand="[31]">
+<![CDATA[(UTC-03:00) Araguaina]]>
+</Comment>
+<Comment Operand="[32]">
+<![CDATA[(UTC-03:00) Brasilia]]>
+</Comment>
+<Comment Operand="[33]">
+<![CDATA[(UTC-03:00) Cayenne, Fortaleza]]>
+</Comment>
+<Comment Operand="[34]">
+<![CDATA[(UTC-03:00) City of Buenos Aires]]>
+</Comment>
+<Comment Operand="[35]">
+<![CDATA[(UTC-03:00) Greenland]]>
+</Comment>
+<Comment Operand="[36]">
+<![CDATA[(UTC-03:00) Montevideo]]>
+</Comment>
+<Comment Operand="[37]">
+<![CDATA[(UTC-03:00) Punta Arenas]]>
+</Comment>
+<Comment Operand="[38]">
+<![CDATA[(UTC-03:00) Saint Pierre and Miquelon]]>
+</Comment>
+<Comment Operand="[39]">
+<![CDATA[(UTC-03:00) Salvador]]>
+</Comment>
+<Comment Operand="[40]">
+<![CDATA[(UTC-02:00) Coordinated Universal Time-02]]>
+</Comment>
+<Comment Operand="[41]">
+<![CDATA[(UTC-01:00) Azores]]>
+</Comment>
+<Comment Operand="[42]">
+<![CDATA[(UTC-01:00) Cabo Verde Is.]]>
+</Comment>
+<Comment Operand="[43]">
+<![CDATA[(UTC-00:00) Coordinated Universal Time]]>
+</Comment>
+<Comment Operand="[44]">
+<![CDATA[(UTC+00:00) Dublin, Edinburgh, Lisbon, London]]>
+</Comment>
+<Comment Operand="[45]">
+<![CDATA[(UTC+00:00) Monrovia, Reykjavik]]>
+</Comment>
+<Comment Operand="[46]">
+<![CDATA[(UTC+00:00) Sao Tome]]>
+</Comment>
+<Comment Operand="[47]">
+<![CDATA[(UTC+01:00) Casablanca]]>
+</Comment>
+<Comment Operand="[48]">
+<![CDATA[(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm]]>
+</Comment>
+<Comment Operand="[49]">
+<![CDATA[(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljan]]>
+</Comment>
+<Comment Operand="[50]">
+<![CDATA[(UTC+01:00) Brussels, Copenhagen, Madrid, Paris]]>
+</Comment>
+<Comment Operand="[51]">
+<![CDATA[(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb]]>
+</Comment>
+<Comment Operand="[52]">
+<![CDATA[(UTC+01:00) West Central Africa]]>
+</Comment>
+<Comment Operand="[53]">
+<![CDATA[(UTC+02:00) Amman]]>
+</Comment>
+<Comment Operand="[54]">
+<![CDATA[(UTC+02:00) Athens, Bucharest]]>
+</Comment>
+<Comment Operand="[55]">
+<![CDATA[(UTC+02:00) Beirut]]>
+</Comment>
+<Comment Operand="[56]">
+<![CDATA[(UTC+02:00) Cairo]]>
+</Comment>
+<Comment Operand="[57]">
+<![CDATA[(UTC+02:00) Chisinau]]>
+</Comment>
+<Comment Operand="[58]">
+<![CDATA[(UTC+02:00) Damascus]]>
+</Comment>
+<Comment Operand="[59]">
+<![CDATA[(UTC+02:00) Gaza, Hebron]]>
+</Comment>
+<Comment Operand="[60]">
+<![CDATA[(UTC+02:00) Harare, Pretoria]]>
+</Comment>
+<Comment Operand="[61]">
+<![CDATA[(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius]]>
+</Comment>
+<Comment Operand="[62]">
+<![CDATA[(UTC+02:00) Jerusalem]]>
+</Comment>
+<Comment Operand="[63]">
+<![CDATA[(UTC+02:00) Kaliningrad]]>
+</Comment>
+<Comment Operand="[64]">
+<![CDATA[(UTC+02:00) Khartoum]]>
+</Comment>
+<Comment Operand="[65]">
+<![CDATA[(UTC+02:00) Tripoli]]>
+</Comment>
+<Comment Operand="[66]">
+<![CDATA[(UTC+02:00) Windhoek]]>
+</Comment>
+<Comment Operand="[67]">
+<![CDATA[(UTC+03:00) Baghdad]]>
+</Comment>
+<Comment Operand="[68]">
+<![CDATA[(UTC+03:00) Istanbul]]>
+</Comment>
+<Comment Operand="[69]">
+<![CDATA[(UTC+03:00) Kuwait, Riyadh]]>
+</Comment>
+<Comment Operand="[70]">
+<![CDATA[(UTC+03:00) Minsk]]>
+</Comment>
+<Comment Operand="[71]">
+<![CDATA[(UTC+03:00) Moscow, St. Petersburg]]>
+</Comment>
+<Comment Operand="[72]">
+<![CDATA[(UTC+03:00) Nairobi]]>
+</Comment>
+<Comment Operand="[73]">
+<![CDATA[(UTC+03:30) Tehran]]>
+</Comment>
+<Comment Operand="[74]">
+<![CDATA[(UTC+04:00) Abu Dhabi, Muscat]]>
+</Comment>
+<Comment Operand="[75]">
+<![CDATA[(UTC+04:00) Astrakhan, Ulyanovsk]]>
+</Comment>
+<Comment Operand="[76]">
+<![CDATA[(UTC+04:00) Baku]]>
+</Comment>
+<Comment Operand="[77]">
+<![CDATA[(UTC+04:00) Izhevsk, Samara]]>
+</Comment>
+<Comment Operand="[78]">
+<![CDATA[(UTC+04:00) Port Louis]]>
+</Comment>
+<Comment Operand="[79]">
+<![CDATA[(UTC+04:00) Saratov]]>
+</Comment>
+<Comment Operand="[80]">
+<![CDATA[(UTC+04:00) Tbilisi]]>
+</Comment>
+<Comment Operand="[81]">
+<![CDATA[(UTC+04:00) Volgograd]]>
+</Comment>
+<Comment Operand="[82]">
+<![CDATA[(UTC+04:00) Yerevan]]>
+</Comment>
+<Comment Operand="[83]">
+<![CDATA[(UTC+04:30) Kabul]]>
+</Comment>
+<Comment Operand="[84]">
+<![CDATA[(UTC+05:00) Ashgabat, Tashkent]]>
+</Comment>
+<Comment Operand="[85]">
+<![CDATA[(UTC+05:00) Ekaterinburg]]>
+</Comment>
+<Comment Operand="[86]">
+<![CDATA[(UTC+05:00) Islamabad, Karachi]]>
+</Comment>
+<Comment Operand="[87]">
+<![CDATA[(UTC+05:00) Qyzylorda]]>
+</Comment>
+<Comment Operand="[88]">
+<![CDATA[(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi]]>
+</Comment>
+<Comment Operand="[89]">
+<![CDATA[(UTC+05:30) Sri Jayawardenepura]]>
+</Comment>
+<Comment Operand="[90]">
+<![CDATA[(UTC+05:45) Kathmandu]]>
+</Comment>
+<Comment Operand="[91]">
+<![CDATA[(UTC+06:00) Astana]]>
+</Comment>
+<Comment Operand="[92]">
+<![CDATA[(UTC+06:00) Dhaka]]>
+</Comment>
+<Comment Operand="[93]">
+<![CDATA[(UTC+06:00) Omsk]]>
+</Comment>
+<Comment Operand="[94]">
+<![CDATA[(UTC+06:30) Yangon (Rangoon)]]>
+</Comment>
+<Comment Operand="[95]">
+<![CDATA[(UTC+07:00) Bangkok, Hanoi, Jakarta]]>
+</Comment>
+<Comment Operand="[96]">
+<![CDATA[(UTC+07:00) Barnaul, Gorno-Altaysk]]>
+</Comment>
+<Comment Operand="[97]">
+<![CDATA[(UTC+07:00) Krasnoyarsk]]>
+</Comment>
+<Comment Operand="[98]">
+<![CDATA[(UTC+07:00) Novosibirsk]]>
+</Comment>
+<Comment Operand="[99]">
+<![CDATA[(UTC+07:00) Tomsk]]>
+</Comment>
+<Comment Operand="[100]">
+<![CDATA[(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi]]>
+</Comment>
+<Comment Operand="[101]">
+<![CDATA[(UTC+08:00) Irkutsk]]>
+</Comment>
+<Comment Operand="[102]">
+<![CDATA[(UTC+08:00) Kuala Lumpur, Singapore]]>
+</Comment>
+<Comment Operand="[103]">
+<![CDATA[(UTC+08:00) Perth]]>
+</Comment>
+<Comment Operand="[104]">
+<![CDATA[(UTC+08:00) Taipei]]>
+</Comment>
+<Comment Operand="[105]">
+<![CDATA[(UTC+08:00) Ulaanbaatar]]>
+</Comment>
+<Comment Operand="[106]">
+<![CDATA[(UTC+08:45) Eucla]]>
+</Comment>
+<Comment Operand="[107]">
+<![CDATA[(UTC+09:00) Chita]]>
+</Comment>
+<Comment Operand="[108]">
+<![CDATA[(UTC+09:00) Osaka, Sapporo, Tokyo]]>
+</Comment>
+<Comment Operand="[109]">
+<![CDATA[(UTC+09:00) Pyongyang]]>
+</Comment>
+<Comment Operand="[110]">
+<![CDATA[(UTC+09:00) Seoul]]>
+</Comment>
+<Comment Operand="[111]">
+<![CDATA[(UTC+09:00) Yakutsk]]>
+</Comment>
+<Comment Operand="[112]">
+<![CDATA[(UTC+09:30) Adelaide]]>
+</Comment>
+<Comment Operand="[113]">
+<![CDATA[(UTC+09:30) Darwin]]>
+</Comment>
+<Comment Operand="[114]">
+<![CDATA[(UTC+10:00) Brisbane]]>
+</Comment>
+<Comment Operand="[115]">
+<![CDATA[(UTC+10:00) Canberra, Melbourne, Sydney]]>
+</Comment>
+<Comment Operand="[116]">
+<![CDATA[(UTC+10:00) Guam, Port Moresby]]>
+</Comment>
+<Comment Operand="[117]">
+<![CDATA[(UTC+10:00) Hobart]]>
+</Comment>
+<Comment Operand="[118]">
+<![CDATA[(UTC+10:00) Vladivostok]]>
+</Comment>
+<Comment Operand="[119]">
+<![CDATA[(UTC+10:00) Lord Howe Island]]>
+</Comment>
+<Comment Operand="[120]">
+<![CDATA[(UTC+10:00) Bougainville Island]]>
+</Comment>
+<Comment Operand="[121]">
+<![CDATA[(UTC+10:00) Chokurdakh]]>
+</Comment>
+<Comment Operand="[122]">
+<![CDATA[(UTC+10:00) Magadan]]>
+</Comment>
+<Comment Operand="[123]">
+<![CDATA[(UTC+10:00) Norfolk Island]]>
+</Comment>
+<Comment Operand="[124]">
+<![CDATA[(UTC+10:00) Sakhalin]]>
+</Comment>
+</Comments>
+<DefaultData Format="L5K">
+<![CDATA[[[40,'(UTC-12:00) International Date Line West$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[41,'(UTC-11:00) Coordinated Universal Time-11$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC-10:00) Aleutian Islands$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-10:00) Hawaii$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[29,'(UTC-09:30) Marquesas Islands$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-09:00) Alaska$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[27,'(UTC-08:00) Baja California$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[41,'(UTC-08:00) Coordinated Universal Time-08$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[38,'(UTC-08:00) Pacific Time (US & Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC-07:00) Arizona$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[39,'(UTC-07:00) Chihuahua, La Paz, Mazatlan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[39,'(UTC-07:00) Mountain Time (US & Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[27,'(UTC-06:00) Central America$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[38,'(UTC-06:00) Central Time (US & Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[25,'(UTC-06:00) Easter Island$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[47,'(UTC-06:00) Guadalajara, Mexico City, Monterrey$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC-06:00) Saskatchewan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[43,'(UTC-05:00) Bogota, Lima, Quito, Rio Branco$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-05:00) Chetumal$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[38,'(UTC-05:00) Eastern Time (US & Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC-05:00) Haiti$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-05:00) Havana$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[26,'(UTC-05:00) Indiana (East)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC-05:00) Turks and Caicos$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-04:00) Asuncion$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[34,'(UTC-04:00) Atlantic Time (Canada)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC-04:00) Caracas$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-04:00) Cuiaba$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[48,'(UTC-04:00) Georgetown, La Paz, Manaus, San Juan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-04:00) Santiago$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC-03:30) Newfoundland$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC-03:00) Araguaina$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-03:00) Brasilia$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[30,'(UTC-03:00) Cayenne, Fortaleza$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[32,'(UTC-03:00) City of Buenos Aires$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC-03:00) Greenland$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[22,'(UTC-03:00) Montevideo$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC-03:00) Punta Arenas$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[37,'(UTC-03:00) Saint Pierre and Miquelon$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC-03:00) Salvador$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[41,'(UTC-02:00) Coordinated Universal Time-02$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC-01:00) Azores$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[26,'(UTC-01:00) Cabo Verde Is.$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[38,'(UTC-00:00) Coordinated Universal Time$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[45,'(UTC+00:00) Dublin, Edinburgh, Lisbon, London$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[31,'(UTC+00:00) Monrovia, Reykjavik$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+00:00) Sao Tome$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[22,'(UTC+01:00) Casablanca$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[60,'(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna$00$00$00$00'],[61,'(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague$00$00$00'],[47,'(UTC+01:00) Brussels, Copenhagen, Madrid, Paris$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[44,'(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[31,'(UTC+01:00) West Central Africa$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+02:00) Amman$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[29,'(UTC+02:00) Athens, Bucharest$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+02:00) Beirut$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+02:00) Cairo$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+02:00) Chisinau$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+02:00) Damascus$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC+02:00) Gaza, Hebron$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC+02:00) Harare, Pretoria$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[57,'(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius$00$00$00$00$00$00$00'],[21,'(UTC+02:00) Jerusalem$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+02:00) Kaliningrad$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+02:00) Khartoum$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+02:00) Tripoli$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+02:00) Windhoek$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+03:00) Baghdad$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+03:00) Istanbul$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[26,'(UTC+03:00) Kuwait, Riyadh$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+03:00) Minsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[34,'(UTC+03:00) Moscow, St. Petersburg$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+03:00) Nairobi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+03:30) Tehran$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[29,'(UTC+04:00) Abu Dhabi, Muscat$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[32,'(UTC+04:00) Astrakhan, Ulyanovsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[16,'(UTC+04:00) Baku$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[27,'(UTC+04:00) Izhevsk, Samara$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[22,'(UTC+04:00) Port Louis$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+04:00) Saratov$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+04:00) Tbilisi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC+04:00) Volgograd$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+04:00) Yerevan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+04:30) Kabul$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[30,'(UTC+05:00) Ashgabat, Tashkent$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[24,'(UTC+05:00) Ekaterinburg$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[30,'(UTC+05:00) Islamabad, Karachi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC+05:00) Qyzylorda$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[47,'(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[31,'(UTC+05:30) Sri Jayawardenepura$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC+05:45) Kathmandu$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+06:00) Astana$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+06:00) Dhaka$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[16,'(UTC+06:00) Omsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC+06:30) Yangon (Rangoon)$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[35,'(UTC+07:00) Bangkok, Hanoi, Jakarta$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[34,'(UTC+07:00) Barnaul, Gorno-Altaysk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+07:00) Krasnoyarsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+07:00) Novosibirsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+07:00) Tomsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[49,'(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+08:00) Irkutsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[35,'(UTC+08:00) Kuala Lumpur, Singapore$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+08:00) Perth$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+08:00) Taipei$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+08:00) Ulaanbaatar$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+08:45) Eucla$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+09:00) Chita$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[33,'(UTC+09:00) Osaka, Sapporo, Tokyo$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[21,'(UTC+09:00) Pyongyang$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[17,'(UTC+09:00) Seoul$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+09:00) Yakutsk$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+09:30) Adelaide$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+09:30) Darwin$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+10:00) Brisbane$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[39,'(UTC+10:00) Canberra, Melbourne, Sydney$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[30,'(UTC+10:00) Guam, Port Moresby$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[18,'(UTC+10:00) Hobart$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[23,'(UTC+10:00) Vladivostok$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[28,'(UTC+10:00) Lord Howe Island$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[31,'(UTC+10:00) Bougainville Island$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[22,'(UTC+10:00) Chokurdakh$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[19,'(UTC+10:00) Magadan$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[26,'(UTC+10:00) Norfolk Island$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00'],[20,'(UTC+10:00) Sakhalin$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00$00']]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="STR_64" Dimensions="125">
+<Element Index="[0]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="40"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-12:00) International Date Line West']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[1]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="41"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-11:00) Coordinated Universal Time-11']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[2]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-10:00) Aleutian Islands']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[3]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-10:00) Hawaii']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[4]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="29"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-09:30) Marquesas Islands']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[5]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-09:00) Alaska']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[6]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="27"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-08:00) Baja California']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[7]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="41"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-08:00) Coordinated Universal Time-08']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[8]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="38"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-08:00) Pacific Time (US & Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[9]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-07:00) Arizona']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[10]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="39"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-07:00) Chihuahua, La Paz, Mazatlan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[11]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="39"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-07:00) Mountain Time (US & Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[12]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="27"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Central America']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[13]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="38"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Central Time (US & Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[14]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="25"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Easter Island']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[15]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="47"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Guadalajara, Mexico City, Monterrey']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[16]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-06:00) Saskatchewan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[17]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="43"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Bogota, Lima, Quito, Rio Branco']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[18]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Chetumal']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[19]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="38"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Eastern Time (US & Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[20]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Haiti']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[21]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Havana']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[22]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="26"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Indiana (East)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[23]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-05:00) Turks and Caicos']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[24]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Asuncion']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[25]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="34"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Atlantic Time (Canada)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[26]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Caracas']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[27]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Cuiaba']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[28]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="48"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Georgetown, La Paz, Manaus, San Juan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[29]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-04:00) Santiago']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[30]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:30) Newfoundland']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[31]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Araguaina']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[32]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Brasilia']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[33]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Cayenne, Fortaleza']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[34]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="32"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) City of Buenos Aires']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[35]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Greenland']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[36]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Montevideo']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[37]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Punta Arenas']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[38]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="37"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Saint Pierre and Miquelon']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[39]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-03:00) Salvador']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[40]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="41"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-02:00) Coordinated Universal Time-02']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[41]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-01:00) Azores']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[42]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="26"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-01:00) Cabo Verde Is.']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[43]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="38"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC-00:00) Coordinated Universal Time']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[44]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="45"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+00:00) Dublin, Edinburgh, Lisbon, London']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[45]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="31"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+00:00) Monrovia, Reykjavik']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[46]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+00:00) Sao Tome']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[47]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Casablanca']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[48]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="60"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[49]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="61"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[50]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="47"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Brussels, Copenhagen, Madrid, Paris']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[51]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="44"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[52]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="31"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+01:00) West Central Africa']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[53]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Amman']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[54]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="29"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Athens, Bucharest']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[55]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Beirut']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[56]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Cairo']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[57]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Chisinau']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[58]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Damascus']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[59]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Gaza, Hebron']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[60]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Harare, Pretoria']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[61]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="57"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[62]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Jerusalem']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[63]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Kaliningrad']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[64]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Khartoum']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[65]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Tripoli']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[66]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+02:00) Windhoek']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[67]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Baghdad']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[68]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Istanbul']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[69]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="26"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Kuwait, Riyadh']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[70]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Minsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[71]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="34"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Moscow, St. Petersburg']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[72]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:00) Nairobi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[73]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+03:30) Tehran']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[74]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="29"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Abu Dhabi, Muscat']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[75]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="32"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Astrakhan, Ulyanovsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[76]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="16"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Baku']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[77]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="27"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Izhevsk, Samara']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[78]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Port Louis']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[79]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Saratov']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[80]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Tbilisi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[81]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Volgograd']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[82]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:00) Yerevan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[83]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+04:30) Kabul']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[84]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:00) Ashgabat, Tashkent']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[85]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="24"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:00) Ekaterinburg']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[86]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:00) Islamabad, Karachi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[87]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:00) Qyzylorda']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[88]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="47"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[89]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="31"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:30) Sri Jayawardenepura']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[90]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+05:45) Kathmandu']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[91]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+06:00) Astana']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[92]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+06:00) Dhaka']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[93]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="16"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+06:00) Omsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[94]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+06:30) Yangon (Rangoon)']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[95]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="35"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Bangkok, Hanoi, Jakarta']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[96]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="34"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Barnaul, Gorno-Altaysk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[97]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Krasnoyarsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[98]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Novosibirsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[99]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+07:00) Tomsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[100]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="49"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[101]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Irkutsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[102]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="35"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Kuala Lumpur, Singapore']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[103]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Perth']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[104]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Taipei']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[105]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:00) Ulaanbaatar']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[106]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+08:45) Eucla']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[107]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Chita']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[108]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="33"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Osaka, Sapporo, Tokyo']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[109]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="21"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Pyongyang']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[110]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="17"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Seoul']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[111]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:00) Yakutsk']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[112]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:30) Adelaide']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[113]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+09:30) Darwin']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[114]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Brisbane']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[115]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="39"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Canberra, Melbourne, Sydney']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[116]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Guam, Port Moresby']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[117]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Hobart']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[118]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="23"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Vladivostok']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[119]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="28"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Lord Howe Island']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[120]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="31"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Bougainville Island']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[121]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="22"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Chokurdakh']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[122]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="19"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Magadan']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[123]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="26"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Norfolk Island']]>
+</DataValueMember>
+</Structure>
+</Element>
+<Element Index="[124]">
+<Structure DataType="STR_64">
+<DataValueMember Name="LEN" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="DATA" DataType="STR_64" Radix="ASCII">
+<![CDATA['(UTC+10:00) Sakhalin']]>
+</DataValueMember>
+</Structure>
+</Element>
+</Array>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_64"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
