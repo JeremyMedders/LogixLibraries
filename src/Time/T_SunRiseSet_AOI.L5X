@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="T_SunRiseSet" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-17T03:01:05.325Z" ContainsContext="true" ExportDate="Wed Jul 17 20:54:05 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="T_SunRiseSet" TargetType="AddOnInstructionDefinition" TargetRevision="2.0 " TargetLastEdited="2024-07-26T05:46:33.176Z" ContainsContext="true" ExportDate="Fri Jul 26 00:46:57 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
-<DataType Name="ST_T_LgxDateTime" Family="NoFamily" Class="User">
+<DataType Name="T_LxDateTime" Family="NoFamily" Class="User">
 <Description>
 <![CDATA[Logix DateTime]]>
 </Description>
@@ -18,7 +18,7 @@
 </DataType>
 </DataTypes>
 <AddOnInstructionDefinitions Use="Context">
-<AddOnInstructionDefinition Use="Target" Name="T_SunRiseSet" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-01-15T05:24:00.948Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-17T03:01:05.325Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="T_SunRiseSet" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2022-01-15T05:24:00.948Z" CreatedBy="APEX\Jeremy" EditedDate="2024-07-26T05:46:33.176Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v36.00">
 <Parameters>
 <Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
@@ -31,13 +31,9 @@
 <![CDATA[Enable Output - System Defined Parameter]]>
 </Description>
 </Parameter>
-<Parameter Name="Ref_DT" TagType="Base" DataType="ST_T_LgxDateTime" Usage="InOut" Required="true" Visible="true" Constant="false">
-<Description>
-<![CDATA[Date/Time for which to calculate Rise, Set, Az/El Position]]>
-</Description>
-</Parameter>
-<Parameter Name="Ref_Rise" TagType="Base" DataType="ST_T_LgxDateTime" Usage="InOut" Required="true" Visible="true" Constant="false"/>
-<Parameter Name="Ref_Set" TagType="Base" DataType="ST_T_LgxDateTime" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Ref_DT" TagType="Base" DataType="T_LxDateTime" Usage="InOut" Required="true" Visible="true" Constant="true"/>
+<Parameter Name="Ref_Rise" TagType="Base" DataType="T_LxDateTime" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Ref_Set" TagType="Base" DataType="T_LxDateTime" Usage="InOut" Required="true" Visible="true" Constant="false"/>
 <Parameter Name="Cfg_Latitude" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Latitude of this location (degrees).]]>
@@ -594,7 +590,7 @@
 </Routine>
 </Routines>
 <Dependencies>
-<Dependency Type="DataType" Name="ST_T_LgxDateTime"/>
+<Dependency Type="DataType" Name="T_LxDateTime"/>
 </Dependencies>
 </AddOnInstructionDefinition>
 </AddOnInstructionDefinitions>
