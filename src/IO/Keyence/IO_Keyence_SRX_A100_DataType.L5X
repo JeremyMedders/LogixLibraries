@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_Keyence_SRX_A100" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 18:43:46 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_Keyence_SRX_A100" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Status1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.0: Indicates whether a Buffer Overflow or General Error has occurred.]]>
+</Description>
+</Member>
+<Member Name="ReadDataAvailable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.1: Indicates whether read data exists.]]>
+</Description>
+</Member>
+<Member Name="ReadDataDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.2: Indicates whether a data read is done.]]>
+</Description>
+</Member>
+<Member Name="BufferOverflow" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.6]]>
+</Description>
+</Member>
+<Member Name="GeneralError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.7]]>
+</Description>
+</Member>
+<Member Name="Busy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.8: Summary indication of Trigger, Lock, Mode, or Error Busy statuses.]]>
+</Description>
+</Member>
+<Member Name="TriggerBusy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.9: Trigger Busy status.]]>
+</Description>
+</Member>
+<Member Name="LockBusy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.10: Forced trigger lock or testing by way of unit button operations.]]>
+</Description>
+</Member>
+<Member Name="ModeBusy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.11: Mode Busy status.]]>
+</Description>
+</Member>
+<Member Name="ErrorBusy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.12: Error indication (buffer full or reader error).]]>
+</Description>
+</Member>
+<Member Name="Ready" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status1" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status1.14: Ready status.]]>
+</Description>
+</Member>
+<Member Name="Status2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ReadDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.0: Indicates whether reading is complete.]]>
+</Description>
+</Member>
+<Member Name="PresetReadDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.1: Indicates whether preset reading is complete.]]>
+</Description>
+</Member>
+<Member Name="RegisterPresetDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.2: Indicates whether preset data registration is complete.]]>
+</Description>
+</Member>
+<Member Name="TuneDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.3: Indicates whether tuning is complete.]]>
+</Description>
+</Member>
+<Member Name="BankLoadDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.4: Indicates whether a bank load is complete.]]>
+</Description>
+</Member>
+<Member Name="ExternalOperationDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.7: Summary indication of Read, Preset Read, or Tune completion.]]>
+</Description>
+</Member>
+<Member Name="ReadError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.8]]>
+</Description>
+</Member>
+<Member Name="PresetReadError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.9]]>
+</Description>
+</Member>
+<Member Name="RegisterPresetError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.10]]>
+</Description>
+</Member>
+<Member Name="TuneError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.11]]>
+</Description>
+</Member>
+<Member Name="BankLoadError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.12]]>
+</Description>
+</Member>
+<Member Name="ExternalOperationError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status2" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status2.15]]>
+</Description>
+</Member>
+<Member Name="Status3" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DigIn1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.0: IO IN1 terminal status.]]>
+</Description>
+</Member>
+<Member Name="DigIn2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.1: IO IN2 terminal status.]]>
+</Description>
+</Member>
+<Member Name="DigOut1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.4: IO OUT1 terminal status.]]>
+</Description>
+</Member>
+<Member Name="DigOut2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.5: IO OUT2 terminal status.]]>
+</Description>
+</Member>
+<Member Name="DigOut3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.6: IO OUT3 terminal status.]]>
+</Description>
+</Member>
+<Member Name="Unstable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.8: Summary indication of Matching Level, ISO/IEC 15415, AIM DPM, SAE AS9132, or ISO/IEC 15416 Unstable statuses.]]>
+</Description>
+</Member>
+<Member Name="MatchingLevelUnstable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.9: Matching level verification result.]]>
+</Description>
+</Member>
+<Member Name="ISOIEC15415Unstable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.10: ISO/IEC 15415 verification result.]]>
+</Description>
+</Member>
+<Member Name="AIMDPMUnstable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.11: ISO/IEC TR 29158 (AIM DPM-1-2006) verification result.]]>
+</Description>
+</Member>
+<Member Name="SAEAS9132Unstable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.12: SAE AS9132 verification result.]]>
+</Description>
+</Member>
+<Member Name="ISOIEC154165Unstable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status3" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status3.13: ISO/IEC 15416 verification result.]]>
+</Description>
+</Member>
+<Member Name="Reserved1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MatchingLevel" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Indicates quality level of most recent read (%).]]>
+</Description>
+</Member>
+<Member Name="ISOIEC15415Grade" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: F, 1: D, 2: C, 3: B, 4: A]]>
+</Description>
+</Member>
+<Member Name="AIMDPMGrade" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: F, 1: D, 2: C, 3: B, 4: A]]>
+</Description>
+</Member>
+<Member Name="ISOIEC15416" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: F, 1: D, 2: C, 3: B, 4: A]]>
+</Description>
+</Member>
+<Member Name="ReadErrorCode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: No error]]>
+</Description>
+</Member>
+<Member Name="PresetErrorCode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: No error]]>
+</Description>
+</Member>
+<Member Name="RegisterPresetErrorCode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: No error]]>
+</Description>
+</Member>
+<Member Name="TuneErrorCode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: No error]]>
+</Description>
+</Member>
+<Member Name="BankLoadErrorCode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: No error]]>
+</Description>
+</Member>
+<Member Name="Reserved2" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Reserved3" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ExternalOperationErrorCode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: No error]]>
+</Description>
+</Member>
+<Member Name="GeneralErrorCode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: No error]]>
+</Description>
+</Member>
+<Member Name="SlaveID" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Number of the reader which sent the most recent data.]]>
+</Description>
+</Member>
+<Member Name="ReadReadyCount" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ReadUpdateCount" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TriggerInputCount" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Trigger input count for the master unit.]]>
+</Description>
+</Member>
+<Member Name="DataSize" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Data" DataType="SINT" Dimension="356" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

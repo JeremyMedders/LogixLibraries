@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_Keyence_SRX_A101" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 18:43:49 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_Keyence_SRX_A101" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Command1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ReadEnable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command1" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command1.1]]>
+</Description>
+</Member>
+<Member Name="Clear" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command1" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command1.7]]>
+</Description>
+</Member>
+<Member Name="Read" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command1" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command1.8]]>
+</Description>
+</Member>
+<Member Name="PresetRead" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command1" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command1.9]]>
+</Description>
+</Member>
+<Member Name="RegisterPreset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command1" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command1.10]]>
+</Description>
+</Member>
+<Member Name="Tune" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command1" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command1.11]]>
+</Description>
+</Member>
+<Member Name="BankLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command1" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command1.12]]>
+</Description>
+</Member>
+<Member Name="Command2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ReadAck" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command2" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command2.0: Read completion acknowledgement.]]>
+</Description>
+</Member>
+<Member Name="PresetReadAck" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command2" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command2.1: Preset read completion acknowledgement.]]>
+</Description>
+</Member>
+<Member Name="RegisterPresetAck" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command2" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command2.2: Register preset completion acknowledgement.]]>
+</Description>
+</Member>
+<Member Name="TuneAck" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command2" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command2.3: Tuning completion acknowledgement.]]>
+</Description>
+</Member>
+<Member Name="BankLoadAck" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command2" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command2.4: Bank load completion acknowledgement.]]>
+</Description>
+</Member>
+<Member Name="ExternalOperationAck" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Command2" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Command2.7: External operation completion acknowledgement.]]>
+</Description>
+</Member>
+<Member Name="BankNumber" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Reserved1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Reserved2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DataSize" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Data" DataType="SINT" Dimension="388" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
