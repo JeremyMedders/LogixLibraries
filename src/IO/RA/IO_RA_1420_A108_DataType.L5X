@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Alarm and Output Status-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1420_A108" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:32:34 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1420_A108" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Alarm and Output Status]]>
+</Description>
+<Members>
+<Member Name="VirtualAlarmStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Virtual alarm status (overlay).]]>
+</Description>
+</Member>
+<Member Name="VirtualAlarm1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VirtualAlarmStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VirtualAlarmStatus.0]]>
+</Description>
+</Member>
+<Member Name="VirtualAlarm2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VirtualAlarmStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VirtualAlarmStatus.1]]>
+</Description>
+</Member>
+<Member Name="VirtualAlarm3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VirtualAlarmStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VirtualAlarmStatus.2]]>
+</Description>
+</Member>
+<Member Name="VirtualAlarm4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VirtualAlarmStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VirtualAlarmStatus.3]]>
+</Description>
+</Member>
+<Member Name="OutputPortStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Output port status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Port1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputPortStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutputPortStatus.0]]>
+</Description>
+</Member>
+<Member Name="Port2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputPortStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutputPortStatus.1]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
