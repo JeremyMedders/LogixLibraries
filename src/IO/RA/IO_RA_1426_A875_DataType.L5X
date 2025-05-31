@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 EN50160 Yearly Log (M8)-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A875" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:24:15 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A875" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 EN50160 Yearly Log (M8)]]>
+</Description>
+<Members>
+<Member Name="Data" DataType="REAL" Dimension="37" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

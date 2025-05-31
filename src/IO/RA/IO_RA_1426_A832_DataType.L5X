@@ -1,0 +1,1052 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 Alarms Status-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A832" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:26:07 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A832" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 Alarms Status]]>
+</Description>
+<Members>
+<Member Name="SetpointStatus1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoints 1-10 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Setpoint1Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 1 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint2Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 2 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint3Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 3 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint4Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 4 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint5Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 5 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint6Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 6 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint7Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 7 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint8Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 8 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint9Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 9 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint10Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 10 active.]]>
+</Description>
+</Member>
+<Member Name="SetpointStatus2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoints 11-20 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Setpoint11Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 11 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint12Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 12 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint13Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 13 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint14Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 14 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint15Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 15 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint16Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 16 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint17Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 17 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint18Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 18 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint19Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 19 active.]]>
+</Description>
+</Member>
+<Member Name="Setpoint20Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint 20 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGateStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gates condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="LogicGate1Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 1 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate2Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 2 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate3Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 3 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate4Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 4 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate5Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 5 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate6Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 6 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate7Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 7 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate8Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 8 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate9Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 9 active.]]>
+</Description>
+</Member>
+<Member Name="LogicGate10Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicGateStatus" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic gate 10 active.]]>
+</Description>
+</Member>
+<Member Name="MeteringStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Metering condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="VirtualWiringCorrection" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MeteringStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Virtual wiring correction active.]]>
+</Description>
+</Member>
+<Member Name="V1_VoltageLoss" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MeteringStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 voltage loss condition.]]>
+</Description>
+</Member>
+<Member Name="V2_VoltageLoss" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MeteringStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 voltage loss condition.]]>
+</Description>
+</Member>
+<Member Name="V3_VoltageLoss" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MeteringStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 voltage loss condition.]]>
+</Description>
+</Member>
+<Member Name="VoltageOverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MeteringStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Voltage over-range condition.]]>
+</Description>
+</Member>
+<Member Name="CurrentOverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MeteringStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current over-range condition.]]>
+</Description>
+</Member>
+<Member Name="WiringDiagnosticsActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MeteringStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Wiring diagnostic feature active.]]>
+</Description>
+</Member>
+<Member Name="OverRangeStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Over-range condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 over-range condition.]]>
+</Description>
+</Member>
+<Member Name="V2_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 over-range condition.]]>
+</Description>
+</Member>
+<Member Name="V3_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 over-range condition.]]>
+</Description>
+</Member>
+<Member Name="VNG_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="I1_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I1 over-range condition.]]>
+</Description>
+</Member>
+<Member Name="I2_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I2 over-range condition.]]>
+</Description>
+</Member>
+<Member Name="I3_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I3 over-range condition.]]>
+</Description>
+</Member>
+<Member Name="I4_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I4 over-range condition.]]>
+</Description>
+</Member>
+<Member Name="PowerQualityStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Power quality condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="PowerSag" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Power sag condition.]]>
+</Description>
+</Member>
+<Member Name="PowerSwell" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Power swell condition.]]>
+</Description>
+</Member>
+<Member Name="PowerTransient" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Power transient condition.]]>
+</Description>
+</Member>
+<Member Name="PowerSagSwell_200ms" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PowerQualityStatus.3]]>
+</Description>
+</Member>
+<Member Name="PowerSagSwell_3s" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PowerQualityStatus.4]]>
+</Description>
+</Member>
+<Member Name="PowerSagSwell_10m" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PowerQualityStatus.5]]>
+</Description>
+</Member>
+<Member Name="PowerSagSwell_2h" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PowerQualityStatus.6]]>
+</Description>
+</Member>
+<Member Name="LoggingStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Log condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="DataLogFull" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LoggingStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Data log 80% to fill-and-stop.]]>
+</Description>
+</Member>
+<Member Name="EventLogFull" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LoggingStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Event log 80% to fill-and-stop.]]>
+</Description>
+</Member>
+<Member Name="SetpointLogFull" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LoggingStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Setpoint log 80% to fill-and-stop.]]>
+</Description>
+</Member>
+<Member Name="PowerQualityLogFull" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LoggingStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Power quality log 80% to fill-and-stop.]]>
+</Description>
+</Member>
+<Member Name="EnergyLogFull" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LoggingStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Energy log 80% to fill-and-stop.]]>
+</Description>
+</Member>
+<Member Name="WaveformLogFull" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LoggingStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Waveform log 80% to fill-and-stop.]]>
+</Description>
+</Member>
+<Member Name="TriggerDataLogFull" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LoggingStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Trigger data log 80% to fill-and-stop.]]>
+</Description>
+</Member>
+<Member Name="PulseOverrunStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Output pulse overrun condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="KYZPulseOverrun" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PulseOverrunStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[KYZ pulse overrun.]]>
+</Description>
+</Member>
+<Member Name="Relay1PulseOverrun" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PulseOverrunStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Relay 1 pulse overrun.]]>
+</Description>
+</Member>
+<Member Name="Relay2PulseOverrun" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PulseOverrunStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Relay 2 pulse overrun.]]>
+</Description>
+</Member>
+<Member Name="Relay3PulseOverrun" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PulseOverrunStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Relay 3 pulse overrun.]]>
+</Description>
+</Member>
+<Member Name="OverVoltageStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 over-voltage condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 over-voltage condition.]]>
+</Description>
+</Member>
+<Member Name="V2_OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 over-voltage condition.]]>
+</Description>
+</Member>
+<Member Name="V3_OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 over-voltage condition.]]>
+</Description>
+</Member>
+<Member Name="UnderVoltageStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 under-voltage condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 under-voltage condition.]]>
+</Description>
+</Member>
+<Member Name="V2_UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 under-voltage condition.]]>
+</Description>
+</Member>
+<Member Name="V3_UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 under-voltage condition.]]>
+</Description>
+</Member>
+<Member Name="ImbalanceStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 imbalance condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="VoltageImbalance" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ImbalanceStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Voltage imbalance condition.]]>
+</Description>
+</Member>
+<Member Name="CurrentImbalance" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ImbalanceStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current imbalance condition.]]>
+</Description>
+</Member>
+<Member Name="DCOffsetStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 DC offset condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 DC offset condition.]]>
+</Description>
+</Member>
+<Member Name="V2_DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 DC offset condition.]]>
+</Description>
+</Member>
+<Member Name="V3_DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 DC offset condition.]]>
+</Description>
+</Member>
+<Member Name="VoltageTHDStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 voltage THD/TID condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 voltage THD condition.]]>
+</Description>
+</Member>
+<Member Name="V2_VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 voltage THD condition.]]>
+</Description>
+</Member>
+<Member Name="V3_VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 voltage THD condition.]]>
+</Description>
+</Member>
+<Member Name="V1_VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 voltage TID condition.]]>
+</Description>
+</Member>
+<Member Name="V2_VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 voltage TID condition.]]>
+</Description>
+</Member>
+<Member Name="V3_VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 voltage TID condition.]]>
+</Description>
+</Member>
+<Member Name="CurrentTHDStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 current THD/TID condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="I1_CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I1 current THD condition.]]>
+</Description>
+</Member>
+<Member Name="I2_CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I2 current THD condition.]]>
+</Description>
+</Member>
+<Member Name="I3_CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I3 current THD condition.]]>
+</Description>
+</Member>
+<Member Name="I4_CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I4 current THD condition.]]>
+</Description>
+</Member>
+<Member Name="I1_CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I1 current TID condition.]]>
+</Description>
+</Member>
+<Member Name="I2_CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I2 current TID condition.]]>
+</Description>
+</Member>
+<Member Name="I3_CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I3 current TID condition.]]>
+</Description>
+</Member>
+<Member Name="I4_CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I4 current TID condition.]]>
+</Description>
+</Member>
+<Member Name="PowerFrequencyStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 power frequency condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="PowerFrequencyCondition" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerFrequencyStatus" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="OverallHarmonicStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 overall condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="ShortTermTDDTHDFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverallHarmonicStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term TDD/THD fail condition.]]>
+</Description>
+</Member>
+<Member Name="LongTermTDDTHDFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverallHarmonicStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term TDD/THD fail condition.]]>
+</Description>
+</Member>
+<Member Name="ShortTermHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverallHarmonicStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term harmonic fail condition.]]>
+</Description>
+</Member>
+<Member Name="LongTermHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverallHarmonicStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term harmonic fail condition.]]>
+</Description>
+</Member>
+<Member Name="ShortTermHarmonicStatus1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 2nd-17th harmonic condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="ShortTerm2ndHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 2nd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm3rdHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 3rd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm4thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 4th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm5thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 5th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm6thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 6th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm7thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 7th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm8thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 8th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm9thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 9th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm10thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 10th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm11thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 11th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm12thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 12th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm13thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 13th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm14thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 14th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm15thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 15th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm16thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 16th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm17thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus1" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 17th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTermHarmonicStatus2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 18th-33rd harmonic condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="ShortTerm18thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 18th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm19thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 19th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm20thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 20th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm21stHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 21st harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm22ndHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 22nd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm23rdHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 23rd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm24thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 24th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm25thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 25th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm26thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 26th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm27thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 27th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm28thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 28th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm29thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 29th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm30thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 30th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm31stHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 31st harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm32ndHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 32nd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm33rdHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus2" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 33rd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTermHarmonicStatus3" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 34th-40th harmonic condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="ShortTerm34thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus3" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 34th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm35thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus3" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 35th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm36thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus3" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 36th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm37thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus3" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 37th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm38thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus3" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 38th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm39thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus3" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 39th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="ShortTerm40thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortTermHarmonicStatus3" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Short-term 40th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTermHarmonicStatus1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 2nd-17th harmonic condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="LongTerm2ndHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 2nd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm3rdHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 3rd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm4thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 4th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm5thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 5th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm6thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 6th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm7thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 7th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm8thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 8th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm9thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 9th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm10thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 10th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm11thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 11th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm12thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 12th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm13thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 13th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm14thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 14th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm15thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 15th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm16thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 16th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm17thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus1" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 17th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTermHarmonicStatus2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 18th-33rd harmonic condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="LongTerm18thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 18th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm19thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 19th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm20thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 20th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm21stHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 21st harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm22ndHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 22nd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm23rdHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 23rd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm24thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 24th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm25thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 25th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm26thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 26th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm27thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 27th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm28thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 28th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm29thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 29th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm30thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 30th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm31stHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 31st harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm32ndHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 32nd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm33rdHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus2" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 33rd harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTermHarmonicStatus3" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 34th-40th harmonic condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="LongTerm34thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus3" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 34th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm35thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus3" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 35th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm36thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus3" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 36th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm37thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus3" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 37th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm38thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus3" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 38th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm39thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus3" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 39th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="LongTerm40thHarmonicFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LongTermHarmonicStatus3" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Long-term 40th harmonic fail.]]>
+</Description>
+</Member>
+<Member Name="VoltageFluctuationStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 voltage fluctuation condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 voltage fluctuation condition.]]>
+</Description>
+</Member>
+<Member Name="V2_VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 voltage fluctuation condition.]]>
+</Description>
+</Member>
+<Member Name="V3_VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 voltage fluctuation condition.]]>
+</Description>
+</Member>
+<Member Name="MainsSignalingStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EN61000 mains signaling condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 mains signaling condition.]]>
+</Description>
+</Member>
+<Member Name="V2_MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 mains signaling condition.]]>
+</Description>
+</Member>
+<Member Name="V3_MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 mains signaling condition.]]>
+</Description>
+</Member>
+<Member Name="UnderDeviationStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EN61000 under-deviation condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 under-deviation condition.]]>
+</Description>
+</Member>
+<Member Name="V2_UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 under-deviation condition.]]>
+</Description>
+</Member>
+<Member Name="V3_UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 under-deviation condition.]]>
+</Description>
+</Member>
+<Member Name="OverDeviationStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EN61000 over-deviation condition status (overlay).]]>
+</Description>
+</Member>
+<Member Name="V1_OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1 over-deviation condition.]]>
+</Description>
+</Member>
+<Member Name="V2_OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2 over-deviation condition.]]>
+</Description>
+</Member>
+<Member Name="V3_OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3 over-deviation condition.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

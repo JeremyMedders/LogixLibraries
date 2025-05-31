@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 Table Write Status-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A830" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:26:14 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A830" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 Table Write Status]]>
+</Description>
+<Members>
+<Member Name="LastTableWritten" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="OffendingElement" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ConfigurationLockOn" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PasswordNotValidated" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PasswordStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AdminPasswordActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PasswordStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PasswordStatus.0]]>
+</Description>
+</Member>
+<Member Name="ApplicationPasswordActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PasswordStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PasswordStatus.1]]>
+</Description>
+</Member>
+<Member Name="UserPaswordActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PasswordStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PasswordStatus.2]]>
+</Description>
+</Member>
+<Member Name="AdminCredentialRejected" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AdminAccountActive" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ApplicationCredentialRejected" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ApplicationAccountActive" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UserCredentialRejected" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UserAccountActive" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecurityStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: Disabled, 1: Enabled]]>
+</Description>
+</Member>
+<Member Name="OwnershipConflict" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="IOConfigConflict" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OwnershipConflict" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OwnershipConflict.0]]>
+</Description>
+</Member>
+<Member Name="FileDeletionConflict" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OwnershipConflict" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OwnershipConflict.1]]>
+</Description>
+</Member>
+<Member Name="WaveformCaptureActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OwnershipConflict" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OwnershipConflict.2]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

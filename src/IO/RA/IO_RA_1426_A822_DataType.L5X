@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 Trigger Data Log configuration-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A822" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:26:40 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A822" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 Trigger Data Log configuration]]>
+</Description>
+<Members>
+<Member Name="Mode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Sets how records are saved when log is full. 0: Stop, 1: Overwrite earliest (default)]]>
+</Description>
+</Member>
+<Member Name="Duration" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TriggerLog data length (seconds). Min: 0, Max: 10, Default: 1]]>
+</Description>
+</Member>
+<Member Name="Parameter1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Parameter to be logged. Min: 1, Max: 184, Default: 5]]>
+</Description>
+</Member>
+<Member Name="Parameter2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Parameter to be logged. Min: 0, Max: 184, Default: 9]]>
+</Description>
+</Member>
+<Member Name="Parameter3" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Parameter to be logged. Min: 0, Max: 184, Default: 14]]>
+</Description>
+</Member>
+<Member Name="Parameter4" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Parameter to be logged. Min: 0, Max: 184, Default: 15]]>
+</Description>
+</Member>
+<Member Name="Parameter5" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Parameter to be logged. Min: 0, Max: 184, Default: 19]]>
+</Description>
+</Member>
+<Member Name="Parameter6" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Parameter to be logged. Min: 0, Max: 184, Default: 23]]>
+</Description>
+</Member>
+<Member Name="Parameter7" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Parameter to be logged. Min: 0, Max: 184, Default: 27]]>
+</Description>
+</Member>
+<Member Name="Parameter8" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Parameter to be logged. Min: 0, Max: 184, Default: 39]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 Basic Metering Configuration-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A802" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:27:45 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A802" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 Basic Metering Configuration]]>
+</Description>
+<Members>
+<Member Name="MeteringMode" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Metering mode. Min: 0, Max: 10, Default: 2]]>
+</Description>
+</Member>
+<Member Name="V1_V2_V3_PT_Primary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Primary voltage of the PT transformer (V). Min: 0, Max: 1M, Default: 480]]>
+</Description>
+</Member>
+<Member Name="V1_V2_V3_PT_Secondary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Secondary voltage of the PT transformer (V). Min: 0, Max: 690, Default: 480]]>
+</Description>
+</Member>
+<Member Name="I1_I2_I3_CT_Primary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Primary current value of the CT transformer (A). Min: 0, Max: 1M, Default: 5]]>
+</Description>
+</Member>
+<Member Name="I1_I2_I3_CT_Secondary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Secondary current value of the CT transformer (A). Constant: 5]]>
+</Description>
+</Member>
+<Member Name="VN_PT_Primary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Primary voltage value of the PT transformer (V). Min: 0, Max: 1M, Default: 480]]>
+</Description>
+</Member>
+<Member Name="VN_PT_Secondary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Secondary voltage value of the PT transformer (V). Min: 0, Max: 690, Default: 480]]>
+</Description>
+</Member>
+<Member Name="I4_CT_Primary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Primary current value of the CT transformer (A). Min: 0, Max: 1M, Default: 5]]>
+</Description>
+</Member>
+<Member Name="I4_CT_Secondary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Secondary current value of the CT transformer (A). Constant: 5]]>
+</Description>
+</Member>
+<Member Name="NominalSystemLLVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Nominal line-to-line voltage of the system (V). Min: 0, Max: 1M, Default: 480]]>
+</Description>
+</Member>
+<Member Name="NominalSystemFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Nominal frequency of the system (Hz). Min: 50, Max: 60, Default: 60]]>
+</Description>
+</Member>
+<Member Name="RealtimeUpdateRate" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Update rate for data tables and setpoint calculations. 0: Average of 8 cycles (default), 1: Average of 4 cycles, 2: No average]]>
+</Description>
+</Member>
+<Member Name="DemandSource" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: Internal timer (default), 1: Status Input 2, 2: Controller command, 3: Ethernet demand broadcast]]>
+</Description>
+</Member>
+<Member Name="DemandPeriodLength" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Period for demand calculations (minutes). Min: 0, Max: 99, Default: 15]]>
+</Description>
+</Member>
+<Member Name="DemandPeriodCount" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Number of demand periods to average for demand measurement. Min: 1, Max: 15, Default: 1]]>
+</Description>
+</Member>
+<Member Name="ForcedDemandSyncDelay" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[External demand control wait delay (seconds). Min: 0 (indefinite), Max: 900, Default: 10]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

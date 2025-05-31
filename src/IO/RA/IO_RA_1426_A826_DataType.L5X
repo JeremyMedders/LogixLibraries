@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 Discrete IO-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A826" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:26:27 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A826" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 Discrete IO]]>
+</Description>
+<Members>
+<Member Name="Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Device IO status (overlay).]]>
+</Description>
+</Member>
+<Member Name="S1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.0: Status of the S1 input.]]>
+</Description>
+</Member>
+<Member Name="S2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.1: Status of the S2 input.]]>
+</Description>
+</Member>
+<Member Name="S3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.2: Status of the S3 input.]]>
+</Description>
+</Member>
+<Member Name="S4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.3: Status of the S4 input.]]>
+</Description>
+</Member>
+<Member Name="KYZReadback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.4]]>
+</Description>
+</Member>
+<Member Name="KYZForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.5]]>
+</Description>
+</Member>
+<Member Name="KYZForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.6]]>
+</Description>
+</Member>
+<Member Name="Relay1Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.7]]>
+</Description>
+</Member>
+<Member Name="Relay1ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.8]]>
+</Description>
+</Member>
+<Member Name="Relay1ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.9]]>
+</Description>
+</Member>
+<Member Name="Relay2Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.10]]>
+</Description>
+</Member>
+<Member Name="Relay2ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.11]]>
+</Description>
+</Member>
+<Member Name="Relay2ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.12]]>
+</Description>
+</Member>
+<Member Name="Relay3Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.13]]>
+</Description>
+</Member>
+<Member Name="Relay3ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.14]]>
+</Description>
+</Member>
+<Member Name="Relay3ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.15]]>
+</Description>
+</Member>
+<Member Name="Reserved" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

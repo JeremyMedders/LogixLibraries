@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 IO Output Data-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A101" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:22:45 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A101" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 IO Output Data]]>
+</Description>
+<Members>
+<Member Name="RelayCmd" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits command the PM output relays (overlay).]]>
+</Description>
+</Member>
+<Member Name="KYZ" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="RelayCmd" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[RelayCmd.0: Energizes the KYZ solid-state relay.]]>
+</Description>
+</Member>
+<Member Name="Relay1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="RelayCmd" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[RelayCmd.1: Energizes relay 1.]]>
+</Description>
+</Member>
+<Member Name="Relay2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="RelayCmd" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[RelayCmd.2: Energizes relay 2.]]>
+</Description>
+</Member>
+<Member Name="Relay3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="RelayCmd" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[RelayCmd.3: Energizes relay 3.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

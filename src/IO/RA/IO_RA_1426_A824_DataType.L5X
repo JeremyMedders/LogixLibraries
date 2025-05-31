@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 Communications Status-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A824" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:26:34 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A824" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 Communications Status]]>
+</Description>
+<Members>
+<Member Name="EthernetStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits indicate overall ethernet status (overlay). 0: No error]]>
+</Description>
+</Member>
+<Member Name="IPAddressInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.0]]>
+</Description>
+</Member>
+<Member Name="IPGatewayInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.1]]>
+</Description>
+</Member>
+<Member Name="DNS1Invalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.2]]>
+</Description>
+</Member>
+<Member Name="DNS2Invalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.3]]>
+</Description>
+</Member>
+<Member Name="SNTPInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.4]]>
+</Description>
+</Member>
+<Member Name="DHCPServerTimeout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.5]]>
+</Description>
+</Member>
+<Member Name="DuplicateIP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.6]]>
+</Description>
+</Member>
+<Member Name="TimeServerTimeout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.7]]>
+</Description>
+</Member>
+<Member Name="DNSServerTimeout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="EthernetStatus" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[EthernetStatus.8]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

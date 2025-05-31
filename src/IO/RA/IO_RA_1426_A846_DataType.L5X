@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A846" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:25:39 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A846" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Status1Count_xM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status 1 count times 1,000,000,]]>
+</Description>
+</Member>
+<Member Name="Status1Count_x1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status 1 count times 1.]]>
+</Description>
+</Member>
+<Member Name="Status2Count_xM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status 2 count times 1,000,000]]>
+</Description>
+</Member>
+<Member Name="Status2Count_x1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status 2 count times 1.]]>
+</Description>
+</Member>
+<Member Name="Status3Count_xM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status 3 count times 1,000,000]]>
+</Description>
+</Member>
+<Member Name="Status3Count_x1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status 3 count times 1.]]>
+</Description>
+</Member>
+<Member Name="Status4Count_xM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status 4 count times 1,000,000]]>
+</Description>
+</Member>
+<Member Name="Status4Count_x1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status 4 count times 1.]]>
+</Description>
+</Member>
+<Member Name="GWh_Fwd" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Forward gigawatt hours (GWh).]]>
+</Description>
+</Member>
+<Member Name="kWh_Fwd" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Forward kilowatt hours (kWh).]]>
+</Description>
+</Member>
+<Member Name="GWh_Rev" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reverse gigawatt hours (GWh).]]>
+</Description>
+</Member>
+<Member Name="kWh_Rev" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reverse kilowatt hours (kWh).]]>
+</Description>
+</Member>
+<Member Name="GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Net gigawatt hours (GWh).]]>
+</Description>
+</Member>
+<Member Name="kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Net kilowatt hours (kWh).]]>
+</Description>
+</Member>
+<Member Name="GVARH_Fwd" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Forward gigaVAR hours (GVARh).]]>
+</Description>
+</Member>
+<Member Name="kVARh_Fwd" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Forward kiloVAR hours (kVARh).]]>
+</Description>
+</Member>
+<Member Name="GVARH_Rev" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reverse gigaVAR hours (GVARh).]]>
+</Description>
+</Member>
+<Member Name="kVARh_Rev" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reverse kiloVAR hours (kVARh).]]>
+</Description>
+</Member>
+<Member Name="GVARH_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Net gigaVAR hours (GVARh).]]>
+</Description>
+</Member>
+<Member Name="kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Net kiloVAR hours (kVARh).]]>
+</Description>
+</Member>
+<Member Name="GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Net gigaVA hours (GVAh).]]>
+</Description>
+</Member>
+<Member Name="kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Net kiloVA hours (kVAh).]]>
+</Description>
+</Member>
+<Member Name="GAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Net gigaAmp hours (GAh).]]>
+</Description>
+</Member>
+<Member Name="kAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Net kiloAmp hours (kAh).]]>
+</Description>
+</Member>
+<Member Name="DemandRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average real power during the last demand period (kW).]]>
+</Description>
+</Member>
+<Member Name="DemandReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average reactive power during the last demand period (kVAR).]]>
+</Description>
+</Member>
+<Member Name="DemandApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average apparent power during the last demand period (kVA).]]>
+</Description>
+</Member>
+<Member Name="DemandPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average power factor during the last demand period.]]>
+</Description>
+</Member>
+<Member Name="DemandCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average demand for current during the last demand period (A).]]>
+</Description>
+</Member>
+<Member Name="ProjectedRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total real power for the present demand period (kW).]]>
+</Description>
+</Member>
+<Member Name="ProjectedReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total reactive power for the present demand
+period (kVAR).]]>
+</Description>
+</Member>
+<Member Name="ProjectedApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total apparent power for the present demand
+period (kVA).]]>
+</Description>
+</Member>
+<Member Name="ProjectedCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total amperes for the present demand period (A).]]>
+</Description>
+</Member>
+<Member Name="ElapsedDemandPeriodTime" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Present demand
+period (minutes).]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

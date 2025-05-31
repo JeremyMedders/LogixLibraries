@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--PM5000 Real-time VIF Power-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A844" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:25:45 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1426_A844" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[PM5000 Real-time VIF Power]]>
+</Description>
+<Members>
+<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of cycle collection (MM:DD:YY).]]>
+</Description>
+</Member>
+<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (HH:MM:SS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Microsecond of cycle collection (uSec).]]>
+</Description>
+</Member>
+<Member Name="L1NVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1-N true RMS voltage (V).]]>
+</Description>
+</Member>
+<Member Name="L2NVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2-N true RMS voltage (V).]]>
+</Description>
+</Member>
+<Member Name="L3NVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3-N true RMS voltage (V).]]>
+</Description>
+</Member>
+<Member Name="NGVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[N to G true RMS voltage (V).]]>
+</Description>
+</Member>
+<Member Name="AverageLNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average voltage of V1, V2, V3 (V).]]>
+</Description>
+</Member>
+<Member Name="L1L2Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V1-V2 true RMS voltage (V).]]>
+</Description>
+</Member>
+<Member Name="L2L3Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V2-V3 true RMS voltage (V).]]>
+</Description>
+</Member>
+<Member Name="L3L1Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[V3-V1 true RMS voltage (V).]]>
+</Description>
+</Member>
+<Member Name="AverageLLVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average voltage of V1-V2, V2-V3, V3-V1 (V).]]>
+</Description>
+</Member>
+<Member Name="L1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I1 true RMS current (A).]]>
+</Description>
+</Member>
+<Member Name="L2Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I2 true RMS current (A).]]>
+</Description>
+</Member>
+<Member Name="L3Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I3 true RMS current (A).]]>
+</Description>
+</Member>
+<Member Name="NCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[I4 true RMS current (A).]]>
+</Description>
+</Member>
+<Member Name="AverageCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average current of I1, I2, I3 (A).]]>
+</Description>
+</Member>
+<Member Name="Frequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Last frequency calculated (Hz).]]>
+</Description>
+</Member>
+<Member Name="AverageFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average frequency over 6 cycles (Hz).]]>
+</Description>
+</Member>
+<Member Name="L1RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L1 real power (kW).]]>
+</Description>
+</Member>
+<Member Name="L2RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L2 real power (kW).]]>
+</Description>
+</Member>
+<Member Name="L3RealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L3 real power (kW).]]>
+</Description>
+</Member>
+<Member Name="TotalRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total real power (kW).]]>
+</Description>
+</Member>
+<Member Name="L1ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L1 reactive power (kVAR).]]>
+</Description>
+</Member>
+<Member Name="L2ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L2 reactive power (kVAR).]]>
+</Description>
+</Member>
+<Member Name="L3ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L3 reactive power (kVAR).]]>
+</Description>
+</Member>
+<Member Name="TotalReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total reactive power (kVAR).]]>
+</Description>
+</Member>
+<Member Name="L1ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L1 apparent power (kVA).]]>
+</Description>
+</Member>
+<Member Name="L2ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L2 apparent power (kVA).]]>
+</Description>
+</Member>
+<Member Name="L3ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L3 apparent power (kVA).]]>
+</Description>
+</Member>
+<Member Name="TotalApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total apparent power (kVA).]]>
+</Description>
+</Member>
+<Member Name="L1TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L1 true power factor (%, full bandwidth).]]>
+</Description>
+</Member>
+<Member Name="L2TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L2 true power factor (%, full bandwidth).]]>
+</Description>
+</Member>
+<Member Name="L3TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L3 true power factor (%, full bandwidth).]]>
+</Description>
+</Member>
+<Member Name="TotalTruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total true power factor (%).]]>
+</Description>
+</Member>
+<Member Name="L1DisplacementPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L1 displacement power factor (%).]]>
+</Description>
+</Member>
+<Member Name="L2DisplacementPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L2 displacement power factor (%).]]>
+</Description>
+</Member>
+<Member Name="L3DisplacementPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L3 displacement power factor (%).]]>
+</Description>
+</Member>
+<Member Name="TotalDisplacementPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total displacement power factor (%).]]>
+</Description>
+</Member>
+<Member Name="L1PowerFactorLeadLag" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L1 lead or lag indicator for power factor.]]>
+</Description>
+</Member>
+<Member Name="L2PowerFactorLeadLag" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L2 lead or lag indicator for power factor]]>
+</Description>
+</Member>
+<Member Name="L3PowerFactorLeadLag" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L3 lead or lag indicator for power factor]]>
+</Description>
+</Member>
+<Member Name="TotalPowerFactorLeadLag" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total lead or lag indicator for power factor.]]>
+</Description>
+</Member>
+<Member Name="VoltageRotation" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Voltage rotation. 0: Not metering, 123: ABC, 132: ACB,4: None]]>
+</Description>
+</Member>
+<Member Name="MeteringIteration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
