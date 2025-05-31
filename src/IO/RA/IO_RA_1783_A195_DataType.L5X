@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1783_A195" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:12:45 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1783_A195" Family="NoFamily" Class="User">
+<Members>
+<Member Name="DisablePorts" DataType="DINT" Dimension="0" Radix="Binary" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits within disable specific switch ports (overlay).]]>
+</Description>
+</Member>
+<Member Name="DisableAllPorts" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.0: Disables all ports.]]>
+</Description>
+</Member>
+<Member Name="DisablePort01" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.1: Disables port Gi1_1.]]>
+</Description>
+</Member>
+<Member Name="DisablePort02" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.2: Disables port Gi1_2.]]>
+</Description>
+</Member>
+<Member Name="DisablePort03" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.3: Disables port Gi1_3.]]>
+</Description>
+</Member>
+<Member Name="DisablePort04" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.4: Disables port Gi1_4.]]>
+</Description>
+</Member>
+<Member Name="DisablePort05" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.5: Disables port Gi1_5.]]>
+</Description>
+</Member>
+<Member Name="DisablePort06" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.6: Disables port Gi1_6.]]>
+</Description>
+</Member>
+<Member Name="DisablePort07" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.7: Disables port Gi1_7.]]>
+</Description>
+</Member>
+<Member Name="DisablePort08" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.8: Disables port Gi1_8.]]>
+</Description>
+</Member>
+<Member Name="DisablePort09" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.9: Disables port Gi1_9.]]>
+</Description>
+</Member>
+<Member Name="DisablePort10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.10: Disables port Gi1_10.]]>
+</Description>
+</Member>
+<Member Name="DisablePort11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.11: Disables port Gi2_1.]]>
+</Description>
+</Member>
+<Member Name="DisablePort12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.12: Disables port Gi2_2.]]>
+</Description>
+</Member>
+<Member Name="DisablePort13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.13: Disables port Gi2_3.]]>
+</Description>
+</Member>
+<Member Name="DisablePort14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.14: Disables port Gi2_4.]]>
+</Description>
+</Member>
+<Member Name="DisablePort15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.15: Disables port Gi2_5.]]>
+</Description>
+</Member>
+<Member Name="DisablePort16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="16" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.16: Disables port Gi2_6.]]>
+</Description>
+</Member>
+<Member Name="DisablePort17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="17" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.17: Disables port Gi2_7.]]>
+</Description>
+</Member>
+<Member Name="DisablePort18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="18" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.18: Disables port Gi2_8.]]>
+</Description>
+</Member>
+<Member Name="DisablePort19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="19" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.19: Disables port Gi2_9.]]>
+</Description>
+</Member>
+<Member Name="DisablePort20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="20" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.20: Disables port Gi2_10.]]>
+</Description>
+</Member>
+<Member Name="DisablePort21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="21" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.21: Disables port Gi2_11.]]>
+</Description>
+</Member>
+<Member Name="DisablePort22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="22" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.22: Disables port Gi2_12.]]>
+</Description>
+</Member>
+<Member Name="DisablePort23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="23" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.23: Disables port Gi2_13.]]>
+</Description>
+</Member>
+<Member Name="DisablePort24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="24" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.24: Disables port Gi2_14.]]>
+</Description>
+</Member>
+<Member Name="DisablePort25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="25" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.25: Disables port Gi2_15.]]>
+</Description>
+</Member>
+<Member Name="DisablePort26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="26" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.26: Disables port Gi2_16.]]>
+</Description>
+</Member>
+<Member Name="DisablePortBit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="27" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.27: Unused.]]>
+</Description>
+</Member>
+<Member Name="DisablePortBit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="28" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.28: Unused.]]>
+</Description>
+</Member>
+<Member Name="DisablePortBit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="29" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.29: Unused.]]>
+</Description>
+</Member>
+<Member Name="DisablePortBit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="30" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.30: Unused.]]>
+</Description>
+</Member>
+<Member Name="DisablePortBit31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DisablePorts" BitNumber="31" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DisablePorts.31: Unused.]]>
+</Description>
+</Member>
+<Member Name="DisablePorts2" DataType="DINT" Dimension="0" Radix="Binary" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
