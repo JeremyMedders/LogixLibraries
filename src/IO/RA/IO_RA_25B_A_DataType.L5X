@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Assembly Collection-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_25B_A" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:08:11 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_25B_A" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Assembly Collection]]>
+</Description>
+<Members>
+<Member Name="DataIn" DataType="IO_RA_25B_A1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DataOut" DataType="IO_RA_25B_A2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="IO_RA_25B_A1"/>
+<Dependency Type="DataType" Name="IO_RA_25B_A2"/>
+</Dependencies>
+</DataType>
+<DataType Name="IO_RA_25B_A1" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Pad" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DriveStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ready" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="0" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.0: Drive is ready for operation.]]>
+</Description>
+</Member>
+<Member Name="Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="1" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.1: Drive is running.]]>
+</Description>
+</Member>
+<Member Name="DirectionCmd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="2" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.2: Drive commanded direction.]]>
+</Description>
+</Member>
+<Member Name="Direction" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="3" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.3: Drive actual direction.]]>
+</Description>
+</Member>
+<Member Name="Accelerating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="4" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.4: Drive is accelerating.]]>
+</Description>
+</Member>
+<Member Name="Decelerating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="5" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.5: Drive is decelerating.]]>
+</Description>
+</Member>
+<Member Name="DriveStatusBit6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="true" Target="DriveStatus" BitNumber="6" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DS.6: Unused.]]>
+</Description>
+</Member>
+<Member Name="Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="7" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.7: Drive is faulted.]]>
+</Description>
+</Member>
+<Member Name="AtSpeed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="8" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.8: Drive is at commanded speed.]]>
+</Description>
+</Member>
+<Member Name="EnetSpeed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="9" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.9: Drive speed reference is provided over Ethernet.]]>
+</Description>
+</Member>
+<Member Name="EnetLogic" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="10" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.10: Drive run and direction signals are provided over Ethernet.]]>
+</Description>
+</Member>
+<Member Name="ParameterLock" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="11" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.11: Drive parameters are password-protected.]]>
+</Description>
+</Member>
+<Member Name="DigIn5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="12" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.12: State of digital input 5.]]>
+</Description>
+</Member>
+<Member Name="DigIn6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="13" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.13: State of digital input 6.]]>
+</Description>
+</Member>
+<Member Name="DigIn7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="14" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.14: State of digital input 7.]]>
+</Description>
+</Member>
+<Member Name="DigIn8" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="15" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.15: State of digital input 8.]]>
+</Description>
+</Member>
+<Member Name="OutputSpeed" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Drive output speed (Hz x 100).]]>
+</Description>
+</Member>
+<Member Name="Datalinks" DataType="INT" Dimension="4" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Datalinks produced by the drive.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="IO_RA_25B_A2" Family="NoFamily" Class="User">
+<Members>
+<Member Name="LogicCommand" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand (overlay).]]>
+</Description>
+</Member>
+<Member Name="Stop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.0: Stop.]]>
+</Description>
+</Member>
+<Member Name="Start" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.1: Start.]]>
+</Description>
+</Member>
+<Member Name="Jog" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.2: Jog.]]>
+</Description>
+</Member>
+<Member Name="ClearFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.3: Clear fault.]]>
+</Description>
+</Member>
+<Member Name="Forward" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.4: Forward.]]>
+</Description>
+</Member>
+<Member Name="Reverse" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.5: Reverse.]]>
+</Description>
+</Member>
+<Member Name="KeypadControl" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.6: Keypad control.]]>
+</Description>
+</Member>
+<Member Name="MOPIncrement" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.7: MOP increment.]]>
+</Description>
+</Member>
+<Member Name="AccelRate1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.8: AccelRate1.]]>
+</Description>
+</Member>
+<Member Name="AccelRate2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.9: AccelRate2.]]>
+</Description>
+</Member>
+<Member Name="DecelRate1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.10: DecelRate1.]]>
+</Description>
+</Member>
+<Member Name="DecelRate2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.11: DecelRate2.]]>
+</Description>
+</Member>
+<Member Name="FreqSel1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.12: FreqSel1.]]>
+</Description>
+</Member>
+<Member Name="FreqSel2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.13: FreqSel2.]]>
+</Description>
+</Member>
+<Member Name="FreqSel3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.14: FreqSel3.]]>
+</Description>
+</Member>
+<Member Name="MOPDecrement" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.15: MOP decrement.]]>
+</Description>
+</Member>
+<Member Name="SpeedCommand" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Drive speed command (Hz x 100).]]>
+</Description>
+</Member>
+<Member Name="Datalinks" DataType="INT" Dimension="4" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Datalinks consumed by the drive.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

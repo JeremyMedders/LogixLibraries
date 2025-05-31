@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_25B_A2" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:08:08 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_25B_A2" Family="NoFamily" Class="User">
+<Members>
+<Member Name="LogicCommand" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand (overlay).]]>
+</Description>
+</Member>
+<Member Name="Stop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.0: Stop.]]>
+</Description>
+</Member>
+<Member Name="Start" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.1: Start.]]>
+</Description>
+</Member>
+<Member Name="Jog" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.2: Jog.]]>
+</Description>
+</Member>
+<Member Name="ClearFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.3: Clear fault.]]>
+</Description>
+</Member>
+<Member Name="Forward" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.4: Forward.]]>
+</Description>
+</Member>
+<Member Name="Reverse" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.5: Reverse.]]>
+</Description>
+</Member>
+<Member Name="KeypadControl" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.6: Keypad control.]]>
+</Description>
+</Member>
+<Member Name="MOPIncrement" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.7: MOP increment.]]>
+</Description>
+</Member>
+<Member Name="AccelRate1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.8: AccelRate1.]]>
+</Description>
+</Member>
+<Member Name="AccelRate2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.9: AccelRate2.]]>
+</Description>
+</Member>
+<Member Name="DecelRate1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.10: DecelRate1.]]>
+</Description>
+</Member>
+<Member Name="DecelRate2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.11: DecelRate2.]]>
+</Description>
+</Member>
+<Member Name="FreqSel1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.12: FreqSel1.]]>
+</Description>
+</Member>
+<Member Name="FreqSel2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.13: FreqSel2.]]>
+</Description>
+</Member>
+<Member Name="FreqSel3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.14: FreqSel3.]]>
+</Description>
+</Member>
+<Member Name="MOPDecrement" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.15: MOP decrement.]]>
+</Description>
+</Member>
+<Member Name="SpeedCommand" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Drive speed command (Hz x 100).]]>
+</Description>
+</Member>
+<Member Name="Datalinks" DataType="INT" Dimension="4" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Datalinks consumed by the drive.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_25B_A1" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:08:04 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC_L84ES">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_25B_A1" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Pad" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DriveStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ready" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="0" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.0: Drive is ready for operation.]]>
+</Description>
+</Member>
+<Member Name="Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="1" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.1: Drive is running.]]>
+</Description>
+</Member>
+<Member Name="DirectionCmd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="2" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.2: Drive commanded direction.]]>
+</Description>
+</Member>
+<Member Name="Direction" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="3" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.3: Drive actual direction.]]>
+</Description>
+</Member>
+<Member Name="Accelerating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="4" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.4: Drive is accelerating.]]>
+</Description>
+</Member>
+<Member Name="Decelerating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="5" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.5: Drive is decelerating.]]>
+</Description>
+</Member>
+<Member Name="DriveStatusBit6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="true" Target="DriveStatus" BitNumber="6" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DS.6: Unused.]]>
+</Description>
+</Member>
+<Member Name="Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="7" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.7: Drive is faulted.]]>
+</Description>
+</Member>
+<Member Name="AtSpeed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="8" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.8: Drive is at commanded speed.]]>
+</Description>
+</Member>
+<Member Name="EnetSpeed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="9" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.9: Drive speed reference is provided over Ethernet.]]>
+</Description>
+</Member>
+<Member Name="EnetLogic" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="10" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.10: Drive run and direction signals are provided over Ethernet.]]>
+</Description>
+</Member>
+<Member Name="ParameterLock" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="11" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.11: Drive parameters are password-protected.]]>
+</Description>
+</Member>
+<Member Name="DigIn5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="12" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.12: State of digital input 5.]]>
+</Description>
+</Member>
+<Member Name="DigIn6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="13" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.13: State of digital input 6.]]>
+</Description>
+</Member>
+<Member Name="DigIn7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="14" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.14: State of digital input 7.]]>
+</Description>
+</Member>
+<Member Name="DigIn8" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="15" ExternalAccess="Read Only">
+<Description>
+<![CDATA[DriveStatus.15: State of digital input 8.]]>
+</Description>
+</Member>
+<Member Name="OutputSpeed" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Drive output speed (Hz x 100).]]>
+</Description>
+</Member>
+<Member Name="Datalinks" DataType="INT" Dimension="4" Radix="Decimal" Hidden="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Datalinks produced by the drive.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
