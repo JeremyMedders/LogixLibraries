@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1609_UPS" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Mon Jun 02 20:38:24 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1609_UPS" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Mon Jun 02 20:44:00 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1609_UPS" Family="NoFamily" Class="User">
@@ -207,6 +207,16 @@
 <Member Name="TestType" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Attribute 31]]>
+</Description>
+</Member>
+<Member Name="TestResultsSummary" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 32]]>
+</Description>
+</Member>
+<Member Name="AlarmStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits indicate alarm statuses (overlay).]]>
 </Description>
 </Member>
 </Members>
