@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1609_UPS" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Mon Jun 02 20:44:00 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1609_UPS" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Mon Jun 02 20:52:51 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1609_UPS" Family="NoFamily" Class="User">
@@ -217,6 +217,91 @@
 <Member Name="AlarmStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Bits indicate alarm statuses (overlay).]]>
+</Description>
+</Member>
+<Member Name="Disconnect" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.0]]>
+</Description>
+</Member>
+<Member Name="PowerFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.1]]>
+</Description>
+</Member>
+<Member Name="BatteryLow" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.2]]>
+</Description>
+</Member>
+<Member Name="LoadWarning" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.3]]>
+</Description>
+</Member>
+<Member Name="TestInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.4]]>
+</Description>
+</Member>
+<Member Name="BatteryTestFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.5]]>
+</Description>
+</Member>
+<Member Name="OutputOverload" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.6]]>
+</Description>
+</Member>
+<Member Name="InverterAbnormal" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.7]]>
+</Description>
+</Member>
+<Member Name="ReserveAbnormal" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.8]]>
+</Description>
+</Member>
+<Member Name="OverTemperature" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.9]]>
+</Description>
+</Member>
+<Member Name="OutputBad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.10]]>
+</Description>
+</Member>
+<Member Name="UPSOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.11]]>
+</Description>
+</Member>
+<Member Name="ChargerFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.12]]>
+</Description>
+</Member>
+<Member Name="FanFail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.13]]>
+</Description>
+</Member>
+<Member Name="OutputOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.14]]>
+</Description>
+</Member>
+<Member Name="SmartShutdown" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.15]]>
+</Description>
+</Member>
+<Member Name="UPSShutdown" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="AlarmStatus" BitNumber="16" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AlarmStatus.16]]>
 </Description>
 </Member>
 </Members>
