@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1408" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Tue Jun 03 20:38:41 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1408" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Info" DataType="LpDevice" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="WiringStatus" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:0]]>
+</Description>
+</Member>
+<Member Name="VoltageInputMissing" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:1]]>
+</Description>
+</Member>
+<Member Name="VoltageInputInverted" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:2]]>
+</Description>
+</Member>
+<Member Name="CurrentInputMissing" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:3]]>
+</Description>
+</Member>
+<Member Name="CurrentInputInverted" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:4]]>
+</Description>
+</Member>
+<Member Name="VoltageRotation" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:5]]>
+</Description>
+</Member>
+<Member Name="CurrentRotation" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:6]]>
+</Description>
+</Member>
+<Member Name="VoltagePhase1Angle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:7 (deg)]]>
+</Description>
+</Member>
+<Member Name="VoltagePhase1Magnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:8 (V)]]>
+</Description>
+</Member>
+<Member Name="VoltagePhase2Angle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:9 (deg)]]>
+</Description>
+</Member>
+<Member Name="VoltagePhase2Magnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:10 (V)]]>
+</Description>
+</Member>
+<Member Name="VoltagePhase3Angle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:11 (deg)]]>
+</Description>
+</Member>
+<Member Name="VoltagePhase3Magnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:12 (V)]]>
+</Description>
+</Member>
+<Member Name="CurrentPhase1Angle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:13 (deg)]]>
+</Description>
+</Member>
+<Member Name="CurrentPhase1Magnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:14 (A)]]>
+</Description>
+</Member>
+<Member Name="CurrentPhase2Angle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:15 (deg)]]>
+</Description>
+</Member>
+<Member Name="CurrentPhase2Magnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:16 (A)]]>
+</Description>
+</Member>
+<Member Name="CurrentPhase3Angle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:17 (deg)]]>
+</Description>
+</Member>
+<Member Name="CurrentPhase3Magnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:18 (A)]]>
+</Description>
+</Member>
+<Member Name="DegreesOutOfRange" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:19 (deg)]]>
+</Description>
+</Member>
+<Member Name="Reserved1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[13:3:20]]>
+</Description>
+</Member>
+<Member Name="L1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:0 (A)]]>
+</Description>
+</Member>
+<Member Name="L2Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:1 (A)]]>
+</Description>
+</Member>
+<Member Name="L3Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:2 (A)]]>
+</Description>
+</Member>
+<Member Name="AvgCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:3 (A)]]>
+</Description>
+</Member>
+<Member Name="L1toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:4 (V)]]>
+</Description>
+</Member>
+<Member Name="L2toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:5 (V)]]>
+</Description>
+</Member>
+<Member Name="L3toNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:6 (V)]]>
+</Description>
+</Member>
+<Member Name="AvgLNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:7 (V)]]>
+</Description>
+</Member>
+<Member Name="L1toL2Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:8 (V)]]>
+</Description>
+</Member>
+<Member Name="L2toL3Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:9 (V)]]>
+</Description>
+</Member>
+<Member Name="L3toL1Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:10 (V)]]>
+</Description>
+</Member>
+<Member Name="AvgLLVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:11 (V)]]>
+</Description>
+</Member>
+<Member Name="Frequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:12 (Hz)]]>
+</Description>
+</Member>
+<Member Name="CurrentUnbalancePercent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:13 (%)]]>
+</Description>
+</Member>
+<Member Name="VoltageUnbalancePercent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:14 (%)]]>
+</Description>
+</Member>
+<Member Name="MeterIteration14" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[14:3:15]]>
+</Description>
+</Member>
+<Member Name="L1TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:0]]>
+</Description>
+</Member>
+<Member Name="L2TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:1]]>
+</Description>
+</Member>
+<Member Name="L3TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:2]]>
+</Description>
+</Member>
+<Member Name="TotalTruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:3]]>
+</Description>
+</Member>
+<Member Name="L1Power" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:4 (kW)]]>
+</Description>
+</Member>
+<Member Name="L2Power" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:5 (kW)]]>
+</Description>
+</Member>
+<Member Name="L3Power" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:6 (kW)]]>
+</Description>
+</Member>
+<Member Name="TotalPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:7 (kW)]]>
+</Description>
+</Member>
+<Member Name="L1ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:8 (kVAR)]]>
+</Description>
+</Member>
+<Member Name="L2ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:9 (kVAR)]]>
+</Description>
+</Member>
+<Member Name="L3ReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:10 (kVAR)]]>
+</Description>
+</Member>
+<Member Name="TotalReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:11 (kVAR)]]>
+</Description>
+</Member>
+<Member Name="L1ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:12 (kVA)]]>
+</Description>
+</Member>
+<Member Name="L2ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:13 (kVA)]]>
+</Description>
+</Member>
+<Member Name="L3ApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:14 (kVA)]]>
+</Description>
+</Member>
+<Member Name="TotalApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:15 (kVA)]]>
+</Description>
+</Member>
+<Member Name="MeterIteration15" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[15:3:16]]>
+</Description>
+</Member>
+<Member Name="Status1CountxM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:0]]>
+</Description>
+</Member>
+<Member Name="Status1Countx1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:1]]>
+</Description>
+</Member>
+<Member Name="Status2CountxM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:2]]>
+</Description>
+</Member>
+<Member Name="Status3Countx1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:3]]>
+</Description>
+</Member>
+<Member Name="ForwardGWh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:4 (GWh)]]>
+</Description>
+</Member>
+<Member Name="ForwardkWh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:5 (kWh)]]>
+</Description>
+</Member>
+<Member Name="ReverseGWh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:6 (GWh)]]>
+</Description>
+</Member>
+<Member Name="ReversekWh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:7 (kWh)]]>
+</Description>
+</Member>
+<Member Name="NetGWh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:8 (GWh)]]>
+</Description>
+</Member>
+<Member Name="NetkWh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:9 (kWh)]]>
+</Description>
+</Member>
+<Member Name="ForwardGVARh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:10 (GVARh)]]>
+</Description>
+</Member>
+<Member Name="ForwardkVARh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:11 (kVARh)]]>
+</Description>
+</Member>
+<Member Name="ReverseGVARh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:12 (GVARh)]]>
+</Description>
+</Member>
+<Member Name="ReversekVARh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:13 (kVARh)]]>
+</Description>
+</Member>
+<Member Name="NetGVARh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:14 (GVARh)]]>
+</Description>
+</Member>
+<Member Name="NetkVARh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:15 (kVARh)]]>
+</Description>
+</Member>
+<Member Name="NetGVAh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:16 (GVAh)]]>
+</Description>
+</Member>
+<Member Name="NetkVAh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:17 (kVAh)]]>
+</Description>
+</Member>
+<Member Name="MeterIteration16" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[16:3:18]]>
+</Description>
+</Member>
+<Member Name="DemandkW" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:0 (kW)]]>
+</Description>
+</Member>
+<Member Name="DemandkVAR" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:1 (kVAR)]]>
+</Description>
+</Member>
+<Member Name="DemandkVA" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:2 (kVA)]]>
+</Description>
+</Member>
+<Member Name="DemandPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:3]]>
+</Description>
+</Member>
+<Member Name="ProjectedkWDemand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:4 (kW)]]>
+</Description>
+</Member>
+<Member Name="ProjectedkVARDemand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:5 (kVAR)]]>
+</Description>
+</Member>
+<Member Name="ProjectedkVADemand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:6 (kVA)]]>
+</Description>
+</Member>
+<Member Name="ElapsedDemandPeriod" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:7]]>
+</Description>
+</Member>
+<Member Name="MeterIteration17" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[17:3:8]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="LpDevice"/>
+</Dependencies>
+</DataType>
+<DataType Name="LpDevice" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Name" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Description" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Tag" DataType="STR_40" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+<Dependency Type="DataType" Name="STR_40"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_40" Family="StringFamily" Class="User">
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="40" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
