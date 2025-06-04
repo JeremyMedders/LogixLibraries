@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_150_SMCFlex_A2" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Tue Jun 03 20:43:32 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_150_SMCFlex_A2" Family="NoFamily" Class="User">
+<Members>
+<Member Name="LogicCommand" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Stop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Start" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Option1Command" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="ClearFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="Option2Command" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="AuxEnable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="11" ExternalAccess="Read/Write"/>
+<Member Name="Aux1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="12" ExternalAccess="Read/Write"/>
+<Member Name="Aux2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="13" ExternalAccess="Read/Write"/>
+<Member Name="Aux3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="14" ExternalAccess="Read/Write"/>
+<Member Name="Aux4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="15" ExternalAccess="Read/Write"/>
+<Member Name="Pad" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Datalinks" DataType="INT" Dimension="8" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
