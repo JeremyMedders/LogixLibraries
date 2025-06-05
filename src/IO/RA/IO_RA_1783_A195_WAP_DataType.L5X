@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1783_A195_WAP" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 20:44:57 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1783_A195_WAP" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Fault" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Radio2_4GHz" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Radio2_4GHzEnabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Radio2_4GHz" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Radio2_4GHz.0]]>
+</Description>
+</Member>
+<Member Name="Radio5GHz" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Radio5GHzEnabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Radio5GHz" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Radio5GHz.0]]>
+</Description>
+</Member>
+<Member Name="Pad1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Radio2_4GHzUptime" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Radio5GHzUptime" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ClientsConnected" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="WorkGroupBridgesConnected" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UnicastPacketsSent" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UnicastPacketsReceived" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="CRCErrors" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TotalPacketsMoreThan1Retry" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TotalRetries" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SSIDsDefined" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PortGiLinkStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PortGiConnected" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PortGiLinkStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PortGiLinkStatus.0]]>
+</Description>
+</Member>
+<Member Name="PortGiSpeed" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PortGiDuplex" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PortGiFullDuplex" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PortGiDuplex" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PortGiDuplex.0]]>
+</Description>
+</Member>
+<Member Name="Pad2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
