@@ -1,10 +1,54 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1408_A17" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Tue Jun 03 20:39:20 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1408_A17" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 19:31:39 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1408_A17" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="36" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DemandRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average real power during the last demand period (kW).]]>
+</Description>
+</Member>
+<Member Name="DemandReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average reactive power during the last demand period (kVAR).]]>
+</Description>
+</Member>
+<Member Name="DemandApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average apparent power during the last demand period (kVA).]]>
+</Description>
+</Member>
+<Member Name="DemandPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average demand power factor during the last demand period.]]>
+</Description>
+</Member>
+<Member Name="ProjectedDemandRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total real power for the current period (kW).]]>
+</Description>
+</Member>
+<Member Name="ProjectedDemandReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total reactive power for the current period (kVAR).]]>
+</Description>
+</Member>
+<Member Name="ProjectedDemandApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total apparent power for the current period (kVA).]]>
+</Description>
+</Member>
+<Member Name="DemandPeriodElapsedTime" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time elapsed during the current period.]]>
+</Description>
+</Member>
+<Member Name="MeteringIteration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Increments by 1 for each new metering calculation.]]>
+</Description>
+</Member>
 </Members>
 </DataType>
 </DataTypes>

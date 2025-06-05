@@ -1,47 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Assembly Collection-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1408_A" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Tue Jun 03 20:38:45 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1408_A" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 19:31:09 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1408_A" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[Assembly Collection]]>
-</Description>
 <Members>
-<Member Name="A1" DataType="IO_RA_1408_A1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A3" DataType="IO_RA_1408_A3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A4" DataType="IO_RA_1408_A4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A5" DataType="IO_RA_1408_A5" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A6" DataType="IO_RA_1408_A6" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A7" DataType="IO_RA_1408_A7" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A8" DataType="IO_RA_1408_A8" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A9" DataType="IO_RA_1408_A9" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A10" DataType="IO_RA_1408_A10" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A11" DataType="IO_RA_1408_A11" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A12" DataType="IO_RA_1408_A12" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A13" DataType="IO_RA_1408_A13" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A14" DataType="IO_RA_1408_A14" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A15" DataType="IO_RA_1408_A15" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A16" DataType="IO_RA_1408_A16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A17" DataType="IO_RA_1408_A17" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A18" DataType="IO_RA_1408_A18" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A19" DataType="IO_RA_1408_A19" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A20" DataType="IO_RA_1408_A20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A21" DataType="IO_RA_1408_A21" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A22" DataType="IO_RA_1408_A22" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A23" DataType="IO_RA_1408_A23" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A24" DataType="IO_RA_1408_A24" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A25" DataType="IO_RA_1408_A25" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A26" DataType="IO_RA_1408_A26" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A27" DataType="IO_RA_1408_A27" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A28" DataType="IO_RA_1408_A28" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A29" DataType="IO_RA_1408_A29" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A30" DataType="IO_RA_1408_A30" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A31" DataType="IO_RA_1408_A31" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A32" DataType="IO_RA_1408_A32" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A33" DataType="IO_RA_1408_A33" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A34" DataType="IO_RA_1408_A34" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="A35" DataType="IO_RA_1408_A35" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TableResultsConfiguration" DataType="IO_RA_1408_A1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AnalogInputConfiguration" DataType="IO_RA_1408_A3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AdvancedConfiguration" DataType="IO_RA_1408_A4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SerialConfiguration" DataType="IO_RA_1408_A5" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EthernetConfiguration" DataType="IO_RA_1408_A6" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DateTimeConfiguration" DataType="IO_RA_1408_A7" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LogConfiguration" DataType="IO_RA_1408_A8" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="CommandTable" DataType="IO_RA_1408_A9" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LogRequestTable" DataType="IO_RA_1408_A10" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ControllerInterfaceTable" DataType="IO_RA_1408_A11" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DiscreteIO" DataType="IO_RA_1408_A12" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="WiringDiagnostics" DataType="IO_RA_1408_A13" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VoltageCurrentFrequency" DataType="IO_RA_1408_A14" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Power" DataType="IO_RA_1408_A15" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Energy" DataType="IO_RA_1408_A16" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Demand" DataType="IO_RA_1408_A17" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UnitStatusLog" DataType="IO_RA_1408_A18" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EnergyLog" DataType="IO_RA_1408_A19" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="WriteErrorStatus" DataType="IO_RA_1408_A20" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UnitRunStatus" DataType="IO_RA_1408_A21" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MinMaxLog" DataType="IO_RA_1408_A22" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LoadFactorLog" DataType="IO_RA_1408_A23" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TOULogRealEnergyDemand" DataType="IO_RA_1408_A24" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TOULogReactiveEnergyDemand" DataType="IO_RA_1408_A25" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TOULogApparentEnergyDemand" DataType="IO_RA_1408_A26" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="CatalogNumber" DataType="IO_RA_1408_A27" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PasswordWrite" DataType="IO_RA_1408_A28" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="User_Configurable_Table_Setup" DataType="IO_RA_1408_A29" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecurityPolicyConfiguration" DataType="IO_RA_1408_A30" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecurityPolicyStatus" DataType="IO_RA_1408_A31" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecurityUserNameTable" DataType="IO_RA_1408_A32" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecurityPasswordTable" DataType="IO_RA_1408_A33" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AlarmStatus" DataType="IO_RA_1408_A34" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AlarmLog" DataType="IO_RA_1408_A35" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 <Dependencies>
 <Dependency Type="DataType" Name="IO_RA_1408_A1"/>
@@ -102,33 +98,37 @@
 </DataType>
 <DataType Name="IO_RA_1408_A10" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Selected_Log" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Chronology_of_AutoReturn_Data" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="MinMax_recordto_be_returned" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Number_of_UnitStatus_Records" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Number_of_EnergyLog_Records" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Number_of_Time_ofUse_Log_Records" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Number_of_LoadFactor_Log_Records" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Load_Factor_or_TOURecord" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Internal_Error_LogRecords" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Alarm_Log_Records" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SelectedLog" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ChronologyAutoReturnData" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MinMaxRecordReturned" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UnitStatusRecordCount" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EnergyLogRecordCount" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TOULogRecordCount" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LoadFactorLogRecordCount" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LoadFactorOrTOURecord" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="InternalErrorLogRecords" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AlarmLogRecords" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A11" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="16" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TablePassword" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ControllerCommandWord" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A12" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Status_Input_States" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Output_Word" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Data" DataType="SINT" Dimension="8" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="InputStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="OutputStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A13" Family="NoFamily" Class="User">
 <Members>
-<Member Name="WiringStatus" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="WiringStatus" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status of the wiring diagnostic test.]]>
+</Description>
+</Member>
 <Member Name="VoltageInputMissing" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="VoltageInputInverted" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="CurrentInputMissing" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
@@ -147,23 +147,22 @@
 <Member Name="CurrentPhase2Magnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="CurrentPhase3Angle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="CurrentPhase3Magnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="DegreesOutOfRange" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Data" DataType="SINT" Dimension="4" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DegreesBeyondRange" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A14" Family="NoFamily" Class="User">
 <Members>
-<Member Name="L1_Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L2_Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L3_Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L2Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L3Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="AverageCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L1N_Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L2N_Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L3N_Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AverageLN_Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L1L2_Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L2L3_Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L3L1_Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L1NVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L2NVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L3NVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AverageLNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L1L2Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L2L3Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L3L1Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="AverageLLVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Frequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="CurrentUnbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
@@ -173,9 +172,9 @@
 </DataType>
 <DataType Name="IO_RA_1408_A15" Family="NoFamily" Class="User">
 <Members>
-<Member Name="L1_TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L2_TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="L3_TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L1TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L2TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="L3TruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="ThreePhaseTruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="L1_kW" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="L2_kW" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
@@ -217,44 +216,134 @@
 </DataType>
 <DataType Name="IO_RA_1408_A17" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="36" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DemandRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average real power during the last demand period (kW).]]>
+</Description>
+</Member>
+<Member Name="DemandReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average reactive power during the last demand period (kVAR).]]>
+</Description>
+</Member>
+<Member Name="DemandApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average apparent power during the last demand period (kVA).]]>
+</Description>
+</Member>
+<Member Name="DemandPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Average demand power factor during the last demand period.]]>
+</Description>
+</Member>
+<Member Name="ProjectedDemandRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total real power for the current period (kW).]]>
+</Description>
+</Member>
+<Member Name="ProjectedDemandReactivePower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total reactive power for the current period (kVAR).]]>
+</Description>
+</Member>
+<Member Name="ProjectedDemandApparentPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Projected total apparent power for the current period (kVA).]]>
+</Description>
+</Member>
+<Member Name="DemandPeriodElapsedTime" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time elapsed during the current period.]]>
+</Description>
+</Member>
+<Member Name="MeteringIteration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Increments by 1 for each new metering calculation.]]>
+</Description>
+</Member>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A18" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[26 bytes]]>
-</Description>
 <Members>
 <Member Name="RecordIdentifier" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Year" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="MonthDay" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="HourMinute" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="SecondsHundredths" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="StatusEventType" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="GeneralCode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="InformationCode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Data" DataType="SINT" Dimension="10" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="StatusEventType" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Type of status event that has occurred.]]>
+</Description>
+</Member>
+<Member Name="GeneralCode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[General information about the status event.]]>
+</Description>
+</Member>
+<Member Name="InformationCode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Specific information about the status event.]]>
+</Description>
+</Member>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A19" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="84" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RecordIdentifier" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Year" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MonthDay" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="HourMinute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecondsHundredths" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status1_Count_xM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status1_Count_x1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status2_Count_xM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status2_Count_x1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="GVARH_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="GVAH_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="kVAR_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DemandPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A20" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[6 bytes]]>
-</Description>
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="6" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TableInstance" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="OffendingElement" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="WriteErrorStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Reserved" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A21" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[50 bytes]]>
-</Description>
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="50" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="BulletinNumber" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Series_Letter" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Catalog_Device_Type" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Communication_Type" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Application_FRN" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Default_Device_ID" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Accuracy_Class" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Overall_Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="FlashMemoryStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SRAMStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="NVRAMStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SPI_Interface" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Real_Time_Clock" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Watchdog_Timer" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Metering" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LCD_Interface" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Serial_Communications" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ethernet_Communications" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Input_Over_Range" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Phase_Loss_Detection" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Configuration_Locked" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Single_Element_Password_Accepted" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Error_Recorded" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Troubleshooting_Mode_Times_Left" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A22" Family="NoFamily" Class="User">
@@ -262,34 +351,118 @@
 <Member Name="Parameter_Being_Returned" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="MIN_Value" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="MAX_Value" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Timestamp_Year_of_MIN" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Timestamp_MonthDay_of_MIN" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Timestamp_HourMinute_of_MIN" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Timestamp_Seconds_Hundredths_ofMIN" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Timestamp_Year_of_MAX" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Timestamp_MonthDay_of_MAX" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Timestamp_HourMinute_of_MAX" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Timestamp_Seconds_Hundredths_ofMAX" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Year_of_MIN" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MonthDay_of_MIN" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="HourMinute_of_MIN" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecondsHundredths_ofMIN" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Year_of_MAX" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MonthDay_of_MAX" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="HourMinute_of_MAX" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecondsHundredths_ofMAX" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A23" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="56" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Record_Number" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="End_Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Elapsed_Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(hours)]]>
+</Description>
+</Member>
+<Member Name="Peak_Demand_kW" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kW)]]>
+</Description>
+</Member>
+<Member Name="Average_Demand_kW" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kW)]]>
+</Description>
+</Member>
+<Member Name="Load_Factor_kW" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kW)]]>
+</Description>
+</Member>
+<Member Name="Peak_Demand_kVAR" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAR)]]>
+</Description>
+</Member>
+<Member Name="Average_Demand_kVAR" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAR)]]>
+</Description>
+</Member>
+<Member Name="Load_Factor_kVAR" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAR)]]>
+</Description>
+</Member>
+<Member Name="Peak_Demand_kVA" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVA)]]>
+</Description>
+</Member>
+<Member Name="Average_Demand_kVA" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVA)]]>
+</Description>
+</Member>
+<Member Name="Load_Factor_kVA" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVA)]]>
+</Description>
+</Member>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A24" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="48" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Record_Number" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Start_Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="End_Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="On_Peak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="On_Peak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="On_Peak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A25" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="48" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Record_Number" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="StartDate" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="End_Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_GVARH_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_kVARDemand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_GVARH_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_kVARDemand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="On_Peak_GVARH_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="On_Peak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="On_Peak_kVARDemand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A26" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="48" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Record_Number" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Start_Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="End_Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Off_Peak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Mid_Peak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="On_Peak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="On_Peak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="_On_Peak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A27" Family="NoFamily" Class="User">
@@ -301,11 +474,9 @@
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A28" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[2 bytes]]>
-</Description>
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TablePassword" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Reserved" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A29" Family="NoFamily" Class="User">
@@ -313,7 +484,23 @@
 <![CDATA[34 bytes]]>
 </Description>
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="34" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TablePassword" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter3" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter4" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter5" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter6" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter7" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter8" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter9" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter10" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter11" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter12" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter13" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter14" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter15" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Parameter16" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A3" Family="NoFamily" Class="User">
@@ -328,9 +515,6 @@
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A30" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[30 bytes]]>
-</Description>
 <Members>
 <Member Name="Table_Password" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Hardware_Configuration_Lock" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
@@ -342,7 +526,6 @@
 <Member Name="HTTPS_Enable" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="FTPS_Enable" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Reserved" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Data" DataType="SINT" Dimension="10" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A31" Family="NoFamily" Class="User">
@@ -350,7 +533,7 @@
 <![CDATA[2 bytes]]>
 </Description>
 <Members>
-<Member Name="SecurityPolicyStatusWord" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecurityPolicyStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Reserved" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
@@ -365,9 +548,6 @@
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A34" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[18 bytes]]>
-</Description>
 <Members>
 <Member Name="InputOverRange" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PhaseLossDetection" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
@@ -377,16 +557,15 @@
 <Member Name="EnergyRegisterRollover" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="MissedExternalDemandSync" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Reserved" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Data" DataType="SINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A35" Family="NoFamily" Class="User">
 <Members>
-<Member Name="StatusRecordInternalIdentifier" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TimestampRecordYear" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TimestampRecordMonthDay" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TimestampRecordHourMinute" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TimestampRecordSecondsHundredths" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RecordIdentifier" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Year" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MonthDay" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="HourMinute" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SecondsHundredths" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="StatusEventType" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="GeneralCode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="InformationCode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
@@ -394,13 +573,29 @@
 </DataType>
 <DataType Name="IO_RA_1408_A4" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="88" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Table_Password" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="NewTablePassword" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MeteringResultAveraging" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Log_Status_InputChanges" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Use_DaylightSaving_Correction" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Daylight_SavingStart" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hour_of_Day_Start" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Return_fromDaylight_Saving" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hour_of_Day_End" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="KYZ_Solid_StateOutputParameter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="KYZ_Solid_StateOutput_Scale" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="KYZ_PulseDuration_Setting" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status_Input_1Input_Scale" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status_Input_2Input_Scale" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Demand_Source" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Demand_PeriodLength" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Number_ofDemand_Periods" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Forced_DemandSync_Delay" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Unit_Error_Action" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Software_ErrorLog_Full_Action" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A5" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[18 bytes]]>
-</Description>
 <Members>
 <Member Name="TablePassword" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="ProtocolSetting" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
@@ -410,7 +605,7 @@
 <Member Name="DataFormat" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="IntercharacterTimeout" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="MaximumNodeAddress" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Parameter9" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Reserved" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A6" Family="NoFamily" Class="User">
@@ -445,13 +640,17 @@
 </DataType>
 <DataType Name="IO_RA_1408_A7" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Data" DataType="SINT" Dimension="16" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TablePassword" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Year" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Month" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Day" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hour" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Minute" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Seconds" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Hundredths" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A8" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[24 bytes]]>
-</Description>
 <Members>
 <Member Name="TablePassword" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="EnergyLogInterval" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
@@ -463,13 +662,9 @@
 <Member Name="ONPeakAMHours" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="ONPeakPMHours" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="LoadFactorLogAutoLogSetting" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Data" DataType="SINT" Dimension="4" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1408_A9" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[88 bytes]]>
-</Description>
 <Members>
 <Member Name="Table_Password" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Command_Word_1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
@@ -491,7 +686,6 @@
 <Member Name="kVAh_Register_SetValue" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="TroubleshootingModePassword" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Reserved" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Data" DataType="SINT" Dimension="48" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 </DataTypes>
