@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--CIP TCP/IP Interface (0xF5) instance.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="CipTCPIPInterface" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 20:18:12 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="CipTCPIPInterface" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Description>
+<![CDATA[CIP TCP/IP Interface (0xF5) instance.]]>
+</Description>
+<Members>
+<Member Name="Instance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Hex" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 1: Indicates the status of the interface (overlay).]]>
+</Description>
+</Member>
+<Member Name="StatusBit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.0]]>
+</Description>
+</Member>
+<Member Name="StatusBit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.1]]>
+</Description>
+</Member>
+<Member Name="StatusBit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.2]]>
+</Description>
+</Member>
+<Member Name="StatusBit3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.3]]>
+</Description>
+</Member>
+<Member Name="McastPending" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.4: A change is pending in the TTL or Mcast configs.]]>
+</Description>
+</Member>
+<Member Name="ConfigPending" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.5: A pending change exists in the interface config.]]>
+</Description>
+</Member>
+<Member Name="ACDStatus" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.6: An IP address conflict has been detected.]]>
+</Description>
+</Member>
+<Member Name="ACDFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.7: An IP address conflict has been detected or ACD failed.]]>
+</Description>
+</Member>
+<Member Name="IANAPortAdminPending" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.8: A pending change exists in the IANA Port Admin attribute.]]>
+</Description>
+</Member>
+<Member Name="IANAProtocolAdminPending" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Status.9: A pending change exists in the IANA Protocol Admin attribute.]]>
+</Description>
+</Member>
+<Member Name="Capability" DataType="DINT" Dimension="0" Radix="Hex" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 2: Interface capability flags (overlay).]]>
+</Description>
+</Member>
+<Member Name="BOOTPClient" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capability" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capability.0: The device is capable of being a BOOTP client.]]>
+</Description>
+</Member>
+<Member Name="DNSClient" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capability" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capability.1: The device is capable of resolving DNS host names.]]>
+</Description>
+</Member>
+<Member Name="DHCPClient" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capability" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capability.2: The device is capable of being a DHCP client.]]>
+</Description>
+</Member>
+<Member Name="DHCPDNSUpdate" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capability" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capability.3: Reserved.]]>
+</Description>
+</Member>
+<Member Name="ConfigSettable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capability" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capability.4: The Interface Configuration attribute is settable.]]>
+</Description>
+</Member>
+<Member Name="HardwareConfigurable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capability" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capability.5: The interface IP address member can be obtained from hardware settings.]]>
+</Description>
+</Member>
+<Member Name="RequiresReset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capability" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capability.6: The device requires a reset in order for a config change to take effect.]]>
+</Description>
+</Member>
+<Member Name="ACDCapable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capability" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capability.7: The device is capable of address conflict detection.]]>
+</Description>
+</Member>
+<Member Name="Control" DataType="DINT" Dimension="0" Radix="Hex" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 3: Used to control config options (overlay).]]>
+</Description>
+</Member>
+<Member Name="UsesStaticIP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Control" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Control.0: The device will use a static IP config.]]>
+</Description>
+</Member>
+<Member Name="UsesBOOTP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Control" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Control.1: The device will use a BOOTP IP config.]]>
+</Description>
+</Member>
+<Member Name="UsesDHCP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Control" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Control.2: The device will use a DHCP IP config.]]>
+</Description>
+</Member>
+<Member Name="ControlBit3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Control" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Control.3: Reserved.]]>
+</Description>
+</Member>
+<Member Name="DNSEnable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Control" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Control.4: The device will use DNS to resolve host names.]]>
+</Description>
+</Member>
+<Member Name="PhysicalLinkObject" DataType="SINT" Dimension="12" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4: Path identifying the CIP object instance associated with the interface.]]>
+</Description>
+</Member>
+<Member Name="IPAddress" DataType="UDINT" Dimension="0" Radix="Hex" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="IPMask" DataType="UDINT" Dimension="0" Radix="Hex" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="IPGateway" DataType="UDINT" Dimension="0" Radix="Hex" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="DNS1" DataType="UDINT" Dimension="0" Radix="Hex" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="DNS2" DataType="UDINT" Dimension="0" Radix="Hex" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="DomainName" DataType="STR_48" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="HostName" DataType="STR_64" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 6]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_48"/>
+<Dependency Type="DataType" Name="STR_64"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_48" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="48" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="STR_64" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="64" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

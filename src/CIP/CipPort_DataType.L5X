@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--CIP Port (0xF4) instance.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="CipPort" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 20:17:54 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="CipPort" Family="NoFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Description>
+<![CDATA[CIP Port (0xF4) instance.]]>
+</Description>
+<Members>
+<Member Name="Type" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 1]]>
+</Description>
+</Member>
+<Member Name="Number" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 2]]>
+</Description>
+</Member>
+<Member Name="LogicalLinkObject" DataType="SINT" Dimension="16" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 3]]>
+</Description>
+</Member>
+<Member Name="Name" DataType="STR_32" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="TypeName" DataType="STR_32" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5]]>
+</Description>
+</Member>
+<Member Name="NodeAddress" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7]]>
+</Description>
+</Member>
+<Member Name="NodePath" DataType="STR_32" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7 (derived)]]>
+</Description>
+</Member>
+<Member Name="MinNode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 8]]>
+</Description>
+</Member>
+<Member Name="MaxNode" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 8]]>
+</Description>
+</Member>
+<Member Name="Capabilities" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10]]>
+</Description>
+</Member>
+<Member Name="RoutesIncomingUnconnectedMessage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capabilities" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capabilities.0]]>
+</Description>
+</Member>
+<Member Name="RoutesOutgoingUnconnectedMessage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capabilities" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capabilities.1]]>
+</Description>
+</Member>
+<Member Name="RoutesIncomingClass0Class1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capabilities" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capabilities.2]]>
+</Description>
+</Member>
+<Member Name="RoutesOutgoingClass0Class1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capabilities" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capabilities.3]]>
+</Description>
+</Member>
+<Member Name="RoutesIncomingClass2Class3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capabilities" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capabilities.4]]>
+</Description>
+</Member>
+<Member Name="RoutesOutgoingClass2Class3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capabilities" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capabilities.5]]>
+</Description>
+</Member>
+<Member Name="RoutesOutgoingDeviceNetCIPSafety" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Capabilities" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Capabilities.6]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="STR_32"/>
+<Dependency Type="DataType" Name="STR_32"/>
+<Dependency Type="DataType" Name="STR_32"/>
+</Dependencies>
+</DataType>
+<DataType Name="STR_32" Family="StringFamily" Class="User">
+<CustomProperties>
+<Provider ID="ACM" Ext="0">
+<Header xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="2" Min="0" OExt="-1" UExt="1"><Libs><LibHdr CatalogNumber="Test" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" /></Libs></Header>
+</Provider>
+<Provider ID="ACM" Ext="1">
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Maj="3" Min="0" OExt="-1"><Val><![CDATA[<DecoratedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorRev="1" MinorRev="0" CRC="ToDo">
+  <Private xsi:type="UdtPrivateData" Guid="94CCB48E-362B-40B2-B5C8-66C930C9596D" ContentType="Task">
+    <Attrib />
+    <Subs />
+  </Private>
+</DecoratedData>]]></Val></Data>
+</Provider>
+</CustomProperties>
+<Members>
+<Member Name="LEN" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DATA" DataType="SINT" Dimension="32" Radix="ASCII" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

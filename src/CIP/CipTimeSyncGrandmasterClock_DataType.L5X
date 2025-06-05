@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="CipTimeSyncGrandmasterClock" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 20:18:20 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="CipTimeSyncGrandmasterClock" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ClockIdentity" DataType="USINT" Dimension="8" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ClockClass" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Class of the clock quality.]]>
+</Description>
+</Member>
+<Member Name="TimeAccuracy" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Expected absolute accuracy of the clock relative to PTP epoch.]]>
+</Description>
+</Member>
+<Member Name="OffsetScaledLogVariance" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Measure of the inherent stability properties of the clock.]]>
+</Description>
+</Member>
+<Member Name="CurrentUTCOffset" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current UTC offset from International Atomic Time
+of the clock (seconds).]]>
+</Description>
+</Member>
+<Member Name="TimePropertyFlags" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits indicate properties of the clock (overlay).]]>
+</Description>
+</Member>
+<Member Name="LeapIndicator61" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="TimePropertyFlags" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TimePropertyFlags.0: Last minute of the
+current UTC day contains 61 seconds.]]>
+</Description>
+</Member>
+<Member Name="LeapIndicator59" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="TimePropertyFlags" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TimePropertyFlags.1: Last minute of the
+current UTC day contains 59 seconds.]]>
+</Description>
+</Member>
+<Member Name="CurrentUTCOffsetValid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="TimePropertyFlags" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TimePropertyFlags.2: CurrentUTCOffset, LeapIndicator59, and LeapIndicator61 are correct.]]>
+</Description>
+</Member>
+<Member Name="PTPTimescale" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="TimePropertyFlags" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TimePropertyFlags.3: Timescale of the Grandmaster PTP
+Instance is PTP.]]>
+</Description>
+</Member>
+<Member Name="TimeTraceable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="TimePropertyFlags" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TimePropertyFlags.4: Timescale is traceable to a primary
+reference]]>
+</Description>
+</Member>
+<Member Name="FrequencyTraceable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="TimePropertyFlags" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TimePropertyFlags.5: Frequency determining the
+timescale is traceable to a primary reference.]]>
+</Description>
+</Member>
+<Member Name="SynchronizationUncertain" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="TimePropertyFlags" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TimePropertyFlags.6: Optional flag (IEEE 8.2.2.5).]]>
+</Description>
+</Member>
+<Member Name="TimeSource" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Primary time source of the clock.]]>
+</Description>
+</Member>
+<Member Name="Priority1" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Priority1 setting of the best master clock algorithm.]]>
+</Description>
+</Member>
+<Member Name="Priority2" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Priority2 setting of the best master clock algorithm.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

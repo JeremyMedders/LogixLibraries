@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="CipDeviceTypes" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 20:16:42 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="CipDeviceTypes" Family="NoFamily" Class="User">
+<Members>
+<Member Name="GenericDevice" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x00: Deprecated]]>
+</Description>
+</Member>
+<Member Name="ControlStation" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x01: Deprecated]]>
+</Description>
+</Member>
+<Member Name="ACDrive" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x02]]>
+</Description>
+</Member>
+<Member Name="MotorOverload" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x03]]>
+</Description>
+</Member>
+<Member Name="LimitSwitch" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x04]]>
+</Description>
+</Member>
+<Member Name="InductiveProximitySwitch" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x05]]>
+</Description>
+</Member>
+<Member Name="PhotoelectricSensor" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x06]]>
+</Description>
+</Member>
+<Member Name="GeneralPurposeDiscreteIO" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x07]]>
+</Description>
+</Member>
+<Member Name="xEncoder" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x08: Deprecated]]>
+</Description>
+</Member>
+<Member Name="Resolver" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x09]]>
+</Description>
+</Member>
+<Member Name="xGeneralPurposeAnalogIO" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x0A: Deprecated]]>
+</Description>
+</Member>
+<Member Name="Software" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x0B]]>
+</Description>
+</Member>
+<Member Name="CommunicationsAdapter" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x0C]]>
+</Description>
+</Member>
+<Member Name="xBarcodeScanner" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x0D: Deprecated]]>
+</Description>
+</Member>
+<Member Name="ProgrammableLogicController" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x0E]]>
+</Description>
+</Member>
+<Member Name="CNC" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x0F]]>
+</Description>
+</Member>
+<Member Name="PositionController" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x10]]>
+</Description>
+</Member>
+<Member Name="xWeighScale" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x11: Deprecated]]>
+</Description>
+</Member>
+<Member Name="xMessageDisplay" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x12: Deprecated]]>
+</Description>
+</Member>
+<Member Name="DCDrive" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x13]]>
+</Description>
+</Member>
+<Member Name="xServoDrive" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x14: Deprecated]]>
+</Description>
+</Member>
+<Member Name="Contactor" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x15]]>
+</Description>
+</Member>
+<Member Name="MotorStarter" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x16]]>
+</Description>
+</Member>
+<Member Name="SoftstartStarter" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x17]]>
+</Description>
+</Member>
+<Member Name="HMI" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x18]]>
+</Description>
+</Member>
+<Member Name="xPneumaticValve" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x19: Deprecated]]>
+</Description>
+</Member>
+<Member Name="MassFlowController" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x1A]]>
+</Description>
+</Member>
+<Member Name="PneumaticValve" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x1B]]>
+</Description>
+</Member>
+<Member Name="VacuumPressureGauge" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x1C]]>
+</Description>
+</Member>
+<Member Name="ProcessControlValve" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x1D]]>
+</Description>
+</Member>
+<Member Name="ResidualGasAnalyzer" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x1E]]>
+</Description>
+</Member>
+<Member Name="DCPowerGenerator" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x1F]]>
+</Description>
+</Member>
+<Member Name="RFPowerGenerator" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x20]]>
+</Description>
+</Member>
+<Member Name="TurbomolecularVacuumPump" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x21]]>
+</Description>
+</Member>
+<Member Name="Encoder" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x22]]>
+</Description>
+</Member>
+<Member Name="SafetyDiscreteIO" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x23]]>
+</Description>
+</Member>
+<Member Name="FluidFlowController" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x24]]>
+</Description>
+</Member>
+<Member Name="CIPMotionDrive" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x25]]>
+</Description>
+</Member>
+<Member Name="CompoNetRepeater" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x26]]>
+</Description>
+</Member>
+<Member Name="MassFlowControllerEnhanced" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x27]]>
+</Description>
+</Member>
+<Member Name="CIPModbusDevice" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x28]]>
+</Description>
+</Member>
+<Member Name="CIPModbusTranslator" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x29]]>
+</Description>
+</Member>
+<Member Name="SafetyAnalogIO" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x2A]]>
+</Description>
+</Member>
+<Member Name="GenericKeyableDevice" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x2B]]>
+</Description>
+</Member>
+<Member Name="ManagedEthernetSwitch" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x2C]]>
+</Description>
+</Member>
+<Member Name="CIPMotionSafetyDrive" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x2D]]>
+</Description>
+</Member>
+<Member Name="SafetyDrive" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x2E]]>
+</Description>
+</Member>
+<Member Name="CIPMotionEncoder" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x2F]]>
+</Description>
+</Member>
+<Member Name="CIPMotionConverter" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x30]]>
+</Description>
+</Member>
+<Member Name="CIPMotionIO" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x31]]>
+</Description>
+</Member>
+<Member Name="ControlNetPhysicalLayerComponent" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x32]]>
+</Description>
+</Member>
+<Member Name="CircuitBreaker" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x33]]>
+</Description>
+</Member>
+<Member Name="HARTDevice" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x34]]>
+</Description>
+</Member>
+<Member Name="CIPHARTTranslator" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x35]]>
+</Description>
+</Member>
+<Member Name="IOLinkMaster" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x36]]>
+</Description>
+</Member>
+<Member Name="OperatorInterfaceComponent" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0x37]]>
+</Description>
+</Member>
+<Member Name="EmbeddedComponent" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0xC8]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
