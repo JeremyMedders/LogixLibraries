@@ -15,6 +15,7 @@ Content
 - **Device** (Dvc_): Device drivers.
 - **Filter** (Filter_)
 - **IO** (IO_): IO helpers and diagnostics.
+- **Logix** (Lx): Logix helpers and utilities.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
