@@ -11,11 +11,11 @@ Wiki: https://github.com/JeremyMedders/LogixLibraries/wiki
 Content
 ------------
 - **Array** (Array_)
-- **CIP** (CIP_): Common Industrial Protocol utilities and structs.
+- **CIP**: Common Industrial Protocol utilities and structs.
 - **Device** (Dvc_): Device drivers.
 - **Filter** (Filter_)
-- **IO** (IO_): IO helpers and diagnostics.
-- **Logix** (Lx): Logix helpers and utilities.
+- **IO**: IO helpers and diagnostics.
+- **Lx**: Logix helpers and utilities.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
