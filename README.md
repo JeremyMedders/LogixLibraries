@@ -15,7 +15,7 @@ Content
 - **Dvc**: Device drivers.
 - **Filter** (Filter_)
 - **IO**: Supporting device IO data types / assemblies.
-- **Lm**: Assorted functions.
+- **Lm**: Math functions.
 - **Lp**: Process blocks.
 - **Lx**: Logix-specific content, including generic message helpers and utilities.
 - **Message** (Msg_): Generic message helpers and utilities.
