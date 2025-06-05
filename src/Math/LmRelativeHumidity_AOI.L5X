@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Relative Humidity-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LmRelativeHumidity" TargetType="AddOnInstructionDefinition" TargetRevision="3.0 " TargetLastEdited="2025-06-05T03:48:57.406Z" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 22:51:07 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="LmRelativeHumidity" Revision="3.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2016-02-11T13:09:18.731Z" CreatedBy="APEX\Jeremy" EditedDate="2025-06-05T03:48:57.406Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v37.00">
+<Description>
+<![CDATA[Relative Humidity]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Pressurre" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Atmospheric pressure (kPa).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_DryBulb" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Dry bulb temperature (C).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_WetBulb" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Wet bulb temperature (C).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Relative humidity (%).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="WaterVapPrs" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SatVapPrsWB" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SatVapPrsDB" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="RHFactor" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="e" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[2.71828175e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="2.7182817"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Math_RelativeHumidity]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[e := 2.71828182845905;]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (Inp_DryBulb >= 0.0 & Inp_WetBulb >= 0.0 & Inp_Pressurre >= 0.0) then	]]>
+</Line>
+<Line Number="8">
+<![CDATA[	RHFactor := 0.00066 * ( 1.0 + 0.00115 * Inp_WetBulb );]]>
+</Line>
+<Line Number="9">
+<![CDATA[	SatVapPrsWB := e ** ( (16.78 * Inp_WetBulb - 116.9) / (Inp_WetBulb + 237.3) );]]>
+</Line>
+<Line Number="10">
+<![CDATA[	WaterVapPrs := SatVapPrsWB - ]]>
+</Line>
+<Line Number="11">
+<![CDATA[		( RHFactor * Inp_Pressurre * (Inp_DryBulb - Inp_WetBulb) );]]>
+</Line>
+<Line Number="12">
+<![CDATA[	SatVapPrsDB := e ** ( (16.78 * Inp_DryBulb - 116.9) / (Inp_DryBulb + 237.3) );]]>
+</Line>
+<Line Number="13">
+<![CDATA[	Val := 100.0 * ( WaterVapPrs / SatVapPrsDB );]]>
+</Line>
+<Line Number="14">
+<![CDATA[else]]>
+</Line>
+<Line Number="15">
+<![CDATA[	Val:= 0.0;]]>
+</Line>
+<Line Number="16">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="17">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

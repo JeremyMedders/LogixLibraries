@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Bit Count-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LmBitCount" TargetType="AddOnInstructionDefinition" TargetRevision="3.0 " TargetLastEdited="2025-06-05T03:46:53.667Z" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 22:50:29 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="LmBitCount" Revision="3.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2015-12-29T16:02:29.214Z" CreatedBy="APEX\Jeremy" EditedDate="2025-06-05T03:46:53.667Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v37.00">
+<Description>
+<![CDATA[Bit Count]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp" TagType="Base" DataType="LINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="None">
+<Description>
+<![CDATA[Number of high bits.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="u32" DataType="UDINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="UDINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	LmBitCount]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[COP(Inp,  u32, 1);]]>
+</Line>
+<Line Number="6">
+<![CDATA[u32 := u32 - ((u32 / 2) & 16#55555555);]]>
+</Line>
+<Line Number="7">
+<![CDATA[u32 := (u32 & 16#33333333) + ((u32 / 4) & 16#33333333);]]>
+</Line>
+<Line Number="8">
+<![CDATA[Val := ((u32 + (u32 / 16)) & 16#0F0F0F0F) * 16#01010101 / 16#01000000;]]>
+</Line>
+<Line Number="9">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

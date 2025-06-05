@@ -1,0 +1,967 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Rate-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LmRate" TargetType="AddOnInstructionDefinition" TargetRevision="3.0 " TargetLastEdited="2025-06-05T03:47:14.296Z" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 22:51:02 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="LpPulse" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2025-01-22T20:47:43.421Z" EditedBy="APEX\Jeremy" SoftwareRevision="v37.00"
+>
+<Description>
+<![CDATA[Pulse Generator]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Interval" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulse interval (milliseconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulsed output.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TStart" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TNow" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	LpPulse]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[GSV(WallClockTime, , CurrentValue, TNow);]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (Inp_Enable & NOT OSR OR Out) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	TStart := TNow;]]>
+</Line>
+<Line Number="9">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="10">
+<![CDATA[OSR := Inp_Enable;]]>
+</Line>
+<Line Number="11">
+<![CDATA[]]>
+</Line>
+<Line Number="12">
+<![CDATA[Sts_Enabled := Inp_Enable;]]>
+</Line>
+<Line Number="13">
+<![CDATA[Out := Inp_Enable & (TNow - TStart >= Inp_Interval * 1000);]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	LpPulse]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[OSR := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Out := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="LmRate" Revision="3.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-10-29T16:59:10.666Z" CreatedBy="APEX\Jeremy" EditedDate="2025-06-05T03:47:14.296Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v37.00">
+<Description>
+<![CDATA[Rate]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_PV" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Input signal.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="PCmd_Reset" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Program command to reset.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Interval" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sample interval (seconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_Depth" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sample depth. Max: 60.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[60]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="60"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_PVDeadband" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Suppresses minute changes in signal.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Cfg_ROCDeadband" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Suppresses minute changes in signal.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="1.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PV instantaneous velocity.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Average" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PV average velocity (over Period x Interval seconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Acceleration" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[PV instantaneous acceleration.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val_Period" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Sample period (Interval x Depth, seconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_PVIncreasing" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_PVDecreasing" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_PVSteady" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_PVAccelerating" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_PVDecelerating" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_PVNoAccel" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Size" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Samples" DataType="REAL" Dimensions="60" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="60" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="0.0"/>
+<Element Index="[2]" Value="0.0"/>
+<Element Index="[3]" Value="0.0"/>
+<Element Index="[4]" Value="0.0"/>
+<Element Index="[5]" Value="0.0"/>
+<Element Index="[6]" Value="0.0"/>
+<Element Index="[7]" Value="0.0"/>
+<Element Index="[8]" Value="0.0"/>
+<Element Index="[9]" Value="0.0"/>
+<Element Index="[10]" Value="0.0"/>
+<Element Index="[11]" Value="0.0"/>
+<Element Index="[12]" Value="0.0"/>
+<Element Index="[13]" Value="0.0"/>
+<Element Index="[14]" Value="0.0"/>
+<Element Index="[15]" Value="0.0"/>
+<Element Index="[16]" Value="0.0"/>
+<Element Index="[17]" Value="0.0"/>
+<Element Index="[18]" Value="0.0"/>
+<Element Index="[19]" Value="0.0"/>
+<Element Index="[20]" Value="0.0"/>
+<Element Index="[21]" Value="0.0"/>
+<Element Index="[22]" Value="0.0"/>
+<Element Index="[23]" Value="0.0"/>
+<Element Index="[24]" Value="0.0"/>
+<Element Index="[25]" Value="0.0"/>
+<Element Index="[26]" Value="0.0"/>
+<Element Index="[27]" Value="0.0"/>
+<Element Index="[28]" Value="0.0"/>
+<Element Index="[29]" Value="0.0"/>
+<Element Index="[30]" Value="0.0"/>
+<Element Index="[31]" Value="0.0"/>
+<Element Index="[32]" Value="0.0"/>
+<Element Index="[33]" Value="0.0"/>
+<Element Index="[34]" Value="0.0"/>
+<Element Index="[35]" Value="0.0"/>
+<Element Index="[36]" Value="0.0"/>
+<Element Index="[37]" Value="0.0"/>
+<Element Index="[38]" Value="0.0"/>
+<Element Index="[39]" Value="0.0"/>
+<Element Index="[40]" Value="0.0"/>
+<Element Index="[41]" Value="0.0"/>
+<Element Index="[42]" Value="0.0"/>
+<Element Index="[43]" Value="0.0"/>
+<Element Index="[44]" Value="0.0"/>
+<Element Index="[45]" Value="0.0"/>
+<Element Index="[46]" Value="0.0"/>
+<Element Index="[47]" Value="0.0"/>
+<Element Index="[48]" Value="0.0"/>
+<Element Index="[49]" Value="0.0"/>
+<Element Index="[50]" Value="0.0"/>
+<Element Index="[51]" Value="0.0"/>
+<Element Index="[52]" Value="0.0"/>
+<Element Index="[53]" Value="0.0"/>
+<Element Index="[54]" Value="0.0"/>
+<Element Index="[55]" Value="0.0"/>
+<Element Index="[56]" Value="0.0"/>
+<Element Index="[57]" Value="0.0"/>
+<Element Index="[58]" Value="0.0"/>
+<Element Index="[59]" Value="0.0"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i0" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DeltaTInv" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DeltaT" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i1" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i2" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Sum" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Depth" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="a1" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="a2" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PVLast" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ROCRising" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ROCFalling" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PVRising" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PVFalling" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PVSteady" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ROCSteady" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PG" DataType="LpPulse" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,1000,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="LpPulse">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Interval" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="Sts_Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	AO_Math_Rate]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[SIZE(Samples, 0, Size);]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (PCmd_Reset & NOT OSR) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	Val := 0.0;]]>
+</Line>
+<Line Number="9">
+<![CDATA[	Val_Average := 0.0;]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Val_Acceleration := 0.0;]]>
+</Line>
+<Line Number="11">
+<![CDATA[	Sum := 0.0;]]>
+</Line>
+<Line Number="12">
+<![CDATA[	PVRising := 0;]]>
+</Line>
+<Line Number="13">
+<![CDATA[	PVFalling := 0;]]>
+</Line>
+<Line Number="14">
+<![CDATA[	PVSteady := 0;]]>
+</Line>
+<Line Number="15">
+<![CDATA[	ROCRising := 0;]]>
+</Line>
+<Line Number="16">
+<![CDATA[	ROCFalling := 0;]]>
+</Line>
+<Line Number="17">
+<![CDATA[	COP(Inp_PV, Samples[0], Size); // assume a stopped starting point (not necessarily zero!)]]>
+</Line>
+<Line Number="18">
+<![CDATA[	i0 := 0;]]>
+</Line>
+<Line Number="19">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="20">
+<![CDATA[OSR := PCmd_Reset;]]>
+</Line>
+<Line Number="21">
+<![CDATA[]]>
+</Line>
+<Line Number="22">
+<![CDATA[if (Cfg_PVDeadband < 0.0) then]]>
+</Line>
+<Line Number="23">
+<![CDATA[	Cfg_PVDeadband := -Cfg_PVDeadband;]]>
+</Line>
+<Line Number="24">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="25">
+<![CDATA[]]>
+</Line>
+<Line Number="26">
+<![CDATA[if (Cfg_ROCDeadband < 0.0) then]]>
+</Line>
+<Line Number="27">
+<![CDATA[	Cfg_ROCDeadband := -Cfg_ROCDeadband;]]>
+</Line>
+<Line Number="28">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="29">
+<![CDATA[]]>
+</Line>
+<Line Number="30">
+<![CDATA[if (Cfg_Interval > 0.0) then]]>
+</Line>
+<Line Number="31">
+<![CDATA[	DeltaT := Cfg_Interval;]]>
+</Line>
+<Line Number="32">
+<![CDATA[	//tDeltaTInv := 1.0 / tDeltaT;]]>
+</Line>
+<Line Number="33">
+<![CDATA[else]]>
+</Line>
+<Line Number="34">
+<![CDATA[	DeltaT := 1.0;]]>
+</Line>
+<Line Number="35">
+<![CDATA[	Cfg_Interval := DeltaT;]]>
+</Line>
+<Line Number="36">
+<![CDATA[	//tDeltaTInv := 1.0 / tDeltaT;]]>
+</Line>
+<Line Number="37">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="38">
+<![CDATA[]]>
+</Line>
+<Line Number="39">
+<![CDATA[DeltaTInv := 1.0 / DeltaT;]]>
+</Line>
+<Line Number="40">
+<![CDATA[]]>
+</Line>
+<Line Number="41">
+<![CDATA[PG.Inp_Interval := Cfg_Interval * 1000;]]>
+</Line>
+<Line Number="42">
+<![CDATA[PG.Inp_Enable := Inp_Enable & NOT PCmd_Reset;]]>
+</Line>
+<Line Number="43">
+<![CDATA[LpPulse(PG);]]>
+</Line>
+<Line Number="44">
+<![CDATA[]]>
+</Line>
+<Line Number="45">
+<![CDATA[if (PG.Out) then]]>
+</Line>
+<Line Number="46">
+<![CDATA[	if (i0 >= Size) then]]>
+</Line>
+<Line Number="47">
+<![CDATA[		i0 := 0;]]>
+</Line>
+<Line Number="48">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="49">
+<![CDATA[	]]>
+</Line>
+<Line Number="50">
+<![CDATA[	// record newest position and set trailing indices for velocity and acceleration calcs]]>
+</Line>
+<Line Number="51">
+<![CDATA[	Samples[i0] := Inp_PV;]]>
+</Line>
+<Line Number="52">
+<![CDATA[	i1 := (Size - (2 - (i0 + 1))) MOD Size; // "i0 - 1"]]>
+</Line>
+<Line Number="53">
+<![CDATA[	i2 := (Size - (3 - (i0 + 1))) MOD Size; // "i0 - 2"]]>
+</Line>
+<Line Number="54">
+<![CDATA[	]]>
+</Line>
+<Line Number="55">
+<![CDATA[	// instantaneous velocity and acceleration]]>
+</Line>
+<Line Number="56">
+<![CDATA[	Val := (Samples[i0] - Samples[i1]) / DeltaT;]]>
+</Line>
+<Line Number="57">
+<![CDATA[	Val_Acceleration := (Samples[i0] - 2 * Samples[i1] + Samples[i2]) / (DeltaT * DeltaT);]]>
+</Line>
+<Line Number="58">
+<![CDATA[	]]>
+</Line>
+<Line Number="59">
+<![CDATA[	// average of recent velocities]]>
+</Line>
+<Line Number="60">
+<![CDATA[	if (0 < Cfg_Depth & Cfg_Depth <= Size) then]]>
+</Line>
+<Line Number="61">
+<![CDATA[		Depth := Cfg_Depth;]]>
+</Line>
+<Line Number="62">
+<![CDATA[	else]]>
+</Line>
+<Line Number="63">
+<![CDATA[		Depth := Size;]]>
+</Line>
+<Line Number="64">
+<![CDATA[		Cfg_Depth := Depth;]]>
+</Line>
+<Line Number="65">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="66">
+<![CDATA[	]]>
+</Line>
+<Line Number="67">
+<![CDATA[	Val_Period := DeltaT * Depth;]]>
+</Line>
+<Line Number="68">
+<![CDATA[	]]>
+</Line>
+<Line Number="69">
+<![CDATA[	a1 := i0;]]>
+</Line>
+<Line Number="70">
+<![CDATA[	a2 := (Size - (2 - (a1 + 1))) MOD Size; // "a - 1"]]>
+</Line>
+<Line Number="71">
+<![CDATA[	Sum := 0.0;]]>
+</Line>
+<Line Number="72">
+<![CDATA[	]]>
+</Line>
+<Line Number="73">
+<![CDATA[	i:= 0;]]>
+</Line>
+<Line Number="74">
+<![CDATA[	while i < Depth do]]>
+</Line>
+<Line Number="75">
+<![CDATA[		Sum := Sum + (Samples[a1] - Samples[a2]) / DeltaT;]]>
+</Line>
+<Line Number="76">
+<![CDATA[		a1 := a1 - 1;]]>
+</Line>
+<Line Number="77">
+<![CDATA[		a2 := a2 - 1;]]>
+</Line>
+<Line Number="78">
+<![CDATA[		if (a1 < 0) then a1 := Size - 1; end_if;]]>
+</Line>
+<Line Number="79">
+<![CDATA[		if (a2 < 0) then a2 := Size - 1; end_if;]]>
+</Line>
+<Line Number="80">
+<![CDATA[		i := i + 1;]]>
+</Line>
+<Line Number="81">
+<![CDATA[	end_while;]]>
+</Line>
+<Line Number="82">
+<![CDATA[	]]>
+</Line>
+<Line Number="83">
+<![CDATA[	//for i := 0 to Depth - 1 by 1 do]]>
+</Line>
+<Line Number="84">
+<![CDATA[	//	tSum := Sum + (Samples[a1] - Samples[a2]) / DeltaT;]]>
+</Line>
+<Line Number="85">
+<![CDATA[	//	a1 := a1 - 1;]]>
+</Line>
+<Line Number="86">
+<![CDATA[	//	a2 := a2 - 1;]]>
+</Line>
+<Line Number="87">
+<![CDATA[	//	if (a1 < 0) then a1 := Size - 1; end_if;]]>
+</Line>
+<Line Number="88">
+<![CDATA[	//	if (a2 < 0) then a2 := Size - 1; end_if;]]>
+</Line>
+<Line Number="89">
+<![CDATA[	//end_for;]]>
+</Line>
+<Line Number="90">
+<![CDATA[	]]>
+</Line>
+<Line Number="91">
+<![CDATA[	Val_Average := Sum / Depth;]]>
+</Line>
+<Line Number="92">
+<![CDATA[	]]>
+</Line>
+<Line Number="93">
+<![CDATA[	// delta PV]]>
+</Line>
+<Line Number="94">
+<![CDATA[	PVRising := Inp_PV > PVLast + Cfg_PVDeadband;]]>
+</Line>
+<Line Number="95">
+<![CDATA[	PVFalling := Inp_PV < PVLast - Cfg_PVDeadband;]]>
+</Line>
+<Line Number="96">
+<![CDATA[	PVSteady := (PVLast - Cfg_PVDeadband <= Inp_PV) & (Inp_PV <= PVLast + Cfg_PVDeadband);]]>
+</Line>
+<Line Number="97">
+<![CDATA[	PVLast := Inp_PV;]]>
+</Line>
+<Line Number="98">
+<![CDATA[	]]>
+</Line>
+<Line Number="99">
+<![CDATA[	// delta acceleration]]>
+</Line>
+<Line Number="100">
+<![CDATA[	//tROCRising := (Val_Acceleration - Cfg_ROCDeadband) > tROCLast;]]>
+</Line>
+<Line Number="101">
+<![CDATA[	//tROCFalling := (Val_Acceleration + Cfg_ROCDeadband) < tROCLast & Val_Acceleration <> 0.0;]]>
+</Line>
+<Line Number="102">
+<![CDATA[	//tROCSteady := (-Cfg_ROCDeadband <= Val_Acceleration) & (Val_Acceleration <= Cfg_ROCDeadband);]]>
+</Line>
+<Line Number="103">
+<![CDATA[	]]>
+</Line>
+<Line Number="104">
+<![CDATA[	ROCRising := Val_Acceleration > 0.0;]]>
+</Line>
+<Line Number="105">
+<![CDATA[	ROCFalling := Val_Acceleration < 0.0;]]>
+</Line>
+<Line Number="106">
+<![CDATA[	ROCSteady := Val_Acceleration = 0.0;]]>
+</Line>
+<Line Number="107">
+<![CDATA[	]]>
+</Line>
+<Line Number="108">
+<![CDATA[	i0 := i0 + 1;]]>
+</Line>
+<Line Number="109">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="110">
+<![CDATA[]]>
+</Line>
+<Line Number="111">
+<![CDATA[Sts_Enabled := Inp_Enable;]]>
+</Line>
+<Line Number="112">
+<![CDATA[Sts_PVIncreasing := PVRising;]]>
+</Line>
+<Line Number="113">
+<![CDATA[Sts_PVDecreasing := PVFalling;]]>
+</Line>
+<Line Number="114">
+<![CDATA[Sts_PVSteady := PVSteady;]]>
+</Line>
+<Line Number="115">
+<![CDATA[Sts_PVAccelerating := ROCRising;]]>
+</Line>
+<Line Number="116">
+<![CDATA[Sts_PVDecelerating := ROCFalling;]]>
+</Line>
+<Line Number="117">
+<![CDATA[Sts_PVNoAccel := ROCSteady;]]>
+</Line>
+<Line Number="118">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="LpPulse"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

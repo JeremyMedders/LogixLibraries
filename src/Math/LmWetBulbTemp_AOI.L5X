@@ -1,0 +1,1093 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Wet Bulb Temperature Calculation by Stull formula. 
+-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LmWetBulbTemp" TargetType="AddOnInstructionDefinition" TargetRevision="3.0 " TargetLastEdited="2025-06-05T03:48:24.705Z" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 22:51:24 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="LmWetBulbTemp" Revision="3.0" Vendor="Cardoso&amp;Filho" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2021-02-13T14:36:41.393Z" CreatedBy="CARLOSCARDOB5D7\cardoso" EditedDate="2025-06-05T03:48:24.705Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v37.00">
+<Description>
+<![CDATA[Wet Bulb Temperature Calculation by Stull formula. 
+]]>
+</Description>
+<RevisionNote>
+<![CDATA[Made sure the relative humidity doesn't go the array going out of bounds. ]]>
+</RevisionNote>
+<AdditionalHelpText>
+<![CDATA[This AOI calculates the Wet Bulb Temperature by using the Stull formula. 
+To minimise the processing required by the PLC, it uses look up tables for the Relative Humidity values. ]]>
+</AdditionalHelpText>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Temperature" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Temperature input (if Fahrenheit used, please set correct tag)]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_RelativeHumidity" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Relative Humidity input %]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_isFahrenheit" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1 = Fahrenheit
+0 = Celsius]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Val" TagType="Base" DataType="REAL" Usage="Output" Radix="Float" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Wet Bulb Temperature]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="SecondTerm" DataType="REAL" Dimensions="101" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="101" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="0.0"/>
+<Element Index="[2]" Value="0.0"/>
+<Element Index="[3]" Value="0.0"/>
+<Element Index="[4]" Value="0.0"/>
+<Element Index="[5]" Value="0.0"/>
+<Element Index="[6]" Value="0.0"/>
+<Element Index="[7]" Value="0.0"/>
+<Element Index="[8]" Value="0.0"/>
+<Element Index="[9]" Value="0.0"/>
+<Element Index="[10]" Value="0.0"/>
+<Element Index="[11]" Value="0.0"/>
+<Element Index="[12]" Value="0.0"/>
+<Element Index="[13]" Value="0.0"/>
+<Element Index="[14]" Value="0.0"/>
+<Element Index="[15]" Value="0.0"/>
+<Element Index="[16]" Value="0.0"/>
+<Element Index="[17]" Value="0.0"/>
+<Element Index="[18]" Value="0.0"/>
+<Element Index="[19]" Value="0.0"/>
+<Element Index="[20]" Value="0.0"/>
+<Element Index="[21]" Value="0.0"/>
+<Element Index="[22]" Value="0.0"/>
+<Element Index="[23]" Value="0.0"/>
+<Element Index="[24]" Value="0.0"/>
+<Element Index="[25]" Value="0.0"/>
+<Element Index="[26]" Value="0.0"/>
+<Element Index="[27]" Value="0.0"/>
+<Element Index="[28]" Value="0.0"/>
+<Element Index="[29]" Value="0.0"/>
+<Element Index="[30]" Value="0.0"/>
+<Element Index="[31]" Value="0.0"/>
+<Element Index="[32]" Value="0.0"/>
+<Element Index="[33]" Value="0.0"/>
+<Element Index="[34]" Value="0.0"/>
+<Element Index="[35]" Value="0.0"/>
+<Element Index="[36]" Value="0.0"/>
+<Element Index="[37]" Value="0.0"/>
+<Element Index="[38]" Value="0.0"/>
+<Element Index="[39]" Value="0.0"/>
+<Element Index="[40]" Value="0.0"/>
+<Element Index="[41]" Value="0.0"/>
+<Element Index="[42]" Value="0.0"/>
+<Element Index="[43]" Value="0.0"/>
+<Element Index="[44]" Value="0.0"/>
+<Element Index="[45]" Value="0.0"/>
+<Element Index="[46]" Value="0.0"/>
+<Element Index="[47]" Value="0.0"/>
+<Element Index="[48]" Value="0.0"/>
+<Element Index="[49]" Value="0.0"/>
+<Element Index="[50]" Value="0.0"/>
+<Element Index="[51]" Value="0.0"/>
+<Element Index="[52]" Value="0.0"/>
+<Element Index="[53]" Value="0.0"/>
+<Element Index="[54]" Value="0.0"/>
+<Element Index="[55]" Value="0.0"/>
+<Element Index="[56]" Value="0.0"/>
+<Element Index="[57]" Value="0.0"/>
+<Element Index="[58]" Value="0.0"/>
+<Element Index="[59]" Value="0.0"/>
+<Element Index="[60]" Value="0.0"/>
+<Element Index="[61]" Value="0.0"/>
+<Element Index="[62]" Value="0.0"/>
+<Element Index="[63]" Value="0.0"/>
+<Element Index="[64]" Value="0.0"/>
+<Element Index="[65]" Value="0.0"/>
+<Element Index="[66]" Value="0.0"/>
+<Element Index="[67]" Value="0.0"/>
+<Element Index="[68]" Value="0.0"/>
+<Element Index="[69]" Value="0.0"/>
+<Element Index="[70]" Value="0.0"/>
+<Element Index="[71]" Value="0.0"/>
+<Element Index="[72]" Value="0.0"/>
+<Element Index="[73]" Value="0.0"/>
+<Element Index="[74]" Value="0.0"/>
+<Element Index="[75]" Value="0.0"/>
+<Element Index="[76]" Value="0.0"/>
+<Element Index="[77]" Value="0.0"/>
+<Element Index="[78]" Value="0.0"/>
+<Element Index="[79]" Value="0.0"/>
+<Element Index="[80]" Value="0.0"/>
+<Element Index="[81]" Value="0.0"/>
+<Element Index="[82]" Value="0.0"/>
+<Element Index="[83]" Value="0.0"/>
+<Element Index="[84]" Value="0.0"/>
+<Element Index="[85]" Value="0.0"/>
+<Element Index="[86]" Value="0.0"/>
+<Element Index="[87]" Value="0.0"/>
+<Element Index="[88]" Value="0.0"/>
+<Element Index="[89]" Value="0.0"/>
+<Element Index="[90]" Value="0.0"/>
+<Element Index="[91]" Value="0.0"/>
+<Element Index="[92]" Value="0.0"/>
+<Element Index="[93]" Value="0.0"/>
+<Element Index="[94]" Value="0.0"/>
+<Element Index="[95]" Value="0.0"/>
+<Element Index="[96]" Value="0.0"/>
+<Element Index="[97]" Value="0.0"/>
+<Element Index="[98]" Value="0.0"/>
+<Element Index="[99]" Value="0.0"/>
+<Element Index="[100]" Value="0.0"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="FirstTerm" DataType="REAL" Dimensions="101" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000,0.00000000e+000]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Array DataType="REAL" Dimensions="101" Radix="Float">
+<Element Index="[0]" Value="0.0"/>
+<Element Index="[1]" Value="0.0"/>
+<Element Index="[2]" Value="0.0"/>
+<Element Index="[3]" Value="0.0"/>
+<Element Index="[4]" Value="0.0"/>
+<Element Index="[5]" Value="0.0"/>
+<Element Index="[6]" Value="0.0"/>
+<Element Index="[7]" Value="0.0"/>
+<Element Index="[8]" Value="0.0"/>
+<Element Index="[9]" Value="0.0"/>
+<Element Index="[10]" Value="0.0"/>
+<Element Index="[11]" Value="0.0"/>
+<Element Index="[12]" Value="0.0"/>
+<Element Index="[13]" Value="0.0"/>
+<Element Index="[14]" Value="0.0"/>
+<Element Index="[15]" Value="0.0"/>
+<Element Index="[16]" Value="0.0"/>
+<Element Index="[17]" Value="0.0"/>
+<Element Index="[18]" Value="0.0"/>
+<Element Index="[19]" Value="0.0"/>
+<Element Index="[20]" Value="0.0"/>
+<Element Index="[21]" Value="0.0"/>
+<Element Index="[22]" Value="0.0"/>
+<Element Index="[23]" Value="0.0"/>
+<Element Index="[24]" Value="0.0"/>
+<Element Index="[25]" Value="0.0"/>
+<Element Index="[26]" Value="0.0"/>
+<Element Index="[27]" Value="0.0"/>
+<Element Index="[28]" Value="0.0"/>
+<Element Index="[29]" Value="0.0"/>
+<Element Index="[30]" Value="0.0"/>
+<Element Index="[31]" Value="0.0"/>
+<Element Index="[32]" Value="0.0"/>
+<Element Index="[33]" Value="0.0"/>
+<Element Index="[34]" Value="0.0"/>
+<Element Index="[35]" Value="0.0"/>
+<Element Index="[36]" Value="0.0"/>
+<Element Index="[37]" Value="0.0"/>
+<Element Index="[38]" Value="0.0"/>
+<Element Index="[39]" Value="0.0"/>
+<Element Index="[40]" Value="0.0"/>
+<Element Index="[41]" Value="0.0"/>
+<Element Index="[42]" Value="0.0"/>
+<Element Index="[43]" Value="0.0"/>
+<Element Index="[44]" Value="0.0"/>
+<Element Index="[45]" Value="0.0"/>
+<Element Index="[46]" Value="0.0"/>
+<Element Index="[47]" Value="0.0"/>
+<Element Index="[48]" Value="0.0"/>
+<Element Index="[49]" Value="0.0"/>
+<Element Index="[50]" Value="0.0"/>
+<Element Index="[51]" Value="0.0"/>
+<Element Index="[52]" Value="0.0"/>
+<Element Index="[53]" Value="0.0"/>
+<Element Index="[54]" Value="0.0"/>
+<Element Index="[55]" Value="0.0"/>
+<Element Index="[56]" Value="0.0"/>
+<Element Index="[57]" Value="0.0"/>
+<Element Index="[58]" Value="0.0"/>
+<Element Index="[59]" Value="0.0"/>
+<Element Index="[60]" Value="0.0"/>
+<Element Index="[61]" Value="0.0"/>
+<Element Index="[62]" Value="0.0"/>
+<Element Index="[63]" Value="0.0"/>
+<Element Index="[64]" Value="0.0"/>
+<Element Index="[65]" Value="0.0"/>
+<Element Index="[66]" Value="0.0"/>
+<Element Index="[67]" Value="0.0"/>
+<Element Index="[68]" Value="0.0"/>
+<Element Index="[69]" Value="0.0"/>
+<Element Index="[70]" Value="0.0"/>
+<Element Index="[71]" Value="0.0"/>
+<Element Index="[72]" Value="0.0"/>
+<Element Index="[73]" Value="0.0"/>
+<Element Index="[74]" Value="0.0"/>
+<Element Index="[75]" Value="0.0"/>
+<Element Index="[76]" Value="0.0"/>
+<Element Index="[77]" Value="0.0"/>
+<Element Index="[78]" Value="0.0"/>
+<Element Index="[79]" Value="0.0"/>
+<Element Index="[80]" Value="0.0"/>
+<Element Index="[81]" Value="0.0"/>
+<Element Index="[82]" Value="0.0"/>
+<Element Index="[83]" Value="0.0"/>
+<Element Index="[84]" Value="0.0"/>
+<Element Index="[85]" Value="0.0"/>
+<Element Index="[86]" Value="0.0"/>
+<Element Index="[87]" Value="0.0"/>
+<Element Index="[88]" Value="0.0"/>
+<Element Index="[89]" Value="0.0"/>
+<Element Index="[90]" Value="0.0"/>
+<Element Index="[91]" Value="0.0"/>
+<Element Index="[92]" Value="0.0"/>
+<Element Index="[93]" Value="0.0"/>
+<Element Index="[94]" Value="0.0"/>
+<Element Index="[95]" Value="0.0"/>
+<Element Index="[96]" Value="0.0"/>
+<Element Index="[97]" Value="0.0"/>
+<Element Index="[98]" Value="0.0"/>
+<Element Index="[99]" Value="0.0"/>
+<Element Index="[100]" Value="0.0"/>
+</Array>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="CelsiusTemperature" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="IntermediateCalc" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="DINT_RH" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="CelsiusWBTemperature" DataType="REAL" Radix="Float" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[(*]]>
+</Line>
+<Line Number="1">
+<![CDATA[This AOI calculates the Wet Bulb Temperature by using the Stull formula. ]]>
+</Line>
+<Line Number="2">
+<![CDATA[]]>
+</Line>
+<Line Number="3">
+<![CDATA[This was taken from the following website: ]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[https://www.omnicalculator.com/physics/wet-bulb]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[To minimise the processing required by the PLC to do this calculation, the AOI resorts to using look up tables (that's why this takes so much memory). ]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[*)]]>
+</Line>
+<Line Number="10">
+<![CDATA[]]>
+</Line>
+<Line Number="11">
+<![CDATA[if Inp_isFahrenheit then]]>
+</Line>
+<Line Number="12">
+<![CDATA[	CelsiusTemperature := (Inp_Temperature-32.0)/1.8;]]>
+</Line>
+<Line Number="13">
+<![CDATA[else]]>
+</Line>
+<Line Number="14">
+<![CDATA[	CelsiusTemperature := Inp_Temperature;]]>
+</Line>
+<Line Number="15">
+<![CDATA[end_IF;]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[]]>
+</Line>
+<Line Number="18">
+<![CDATA[//trim this to make sure we don't ask an array to be out of bounds. ]]>
+</Line>
+<Line Number="19">
+<![CDATA[if Inp_RelativeHumidity < 0 then]]>
+</Line>
+<Line Number="20">
+<![CDATA[	Inp_RelativeHumidity :=0; ]]>
+</Line>
+<Line Number="21">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="22">
+<![CDATA[if Inp_RelativeHumidity > 100 then]]>
+</Line>
+<Line Number="23">
+<![CDATA[	Inp_RelativeHumidity :=100; ]]>
+</Line>
+<Line Number="24">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="25">
+<![CDATA[]]>
+</Line>
+<Line Number="26">
+<![CDATA[DINT_RH := Inp_RelativeHumidity;]]>
+</Line>
+<Line Number="27">
+<![CDATA[// formula]]>
+</Line>
+<Line Number="28">
+<![CDATA[//  Tw = T * arctan[0.151977 * (rh% + 8.313659)^(1/2)] + arctan(T + rh%) - arctan(rh% - 1.676331) + 0.00391838 *(rh%)^(3/2) * arctan(0.023101 * rh%) - 4.686035]]>
+</Line>
+<Line Number="29">
+<![CDATA[//  This has been simplified to: ]]>
+</Line>
+<Line Number="30">
+<![CDATA[//  Tw = T * FirstTerm[RH] + Intermediate Calc + SecondTerm[RH]]]>
+</Line>
+<Line Number="31">
+<![CDATA[//calculate the middle bit in the formula]]>
+</Line>
+<Line Number="32">
+<![CDATA[IntermediateCalc := ATAN(Inp_Temperature + Inp_RelativeHumidity);]]>
+</Line>
+<Line Number="33">
+<![CDATA[]]>
+</Line>
+<Line Number="34">
+<![CDATA[//calculate WetBulb Temperature]]>
+</Line>
+<Line Number="35">
+<![CDATA[CelsiusWBTemperature:= CelsiusTemperature * FirstTerm[DINT_RH] + IntermediateCalc + SecondTerm[DINT_RH];]]>
+</Line>
+<Line Number="36">
+<![CDATA[]]>
+</Line>
+<Line Number="37">
+<![CDATA[//update the output for the Imperial crowd]]>
+</Line>
+<Line Number="38">
+<![CDATA[if Inp_isFahrenheit then ]]>
+</Line>
+<Line Number="39">
+<![CDATA[	Val := (CelsiusWBTemperature*1.8)+32.0;]]>
+</Line>
+<Line Number="40">
+<![CDATA[else	]]>
+</Line>
+<Line Number="41">
+<![CDATA[	Val:=CelsiusWBTemperature;]]>
+</Line>
+<Line Number="42">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="43">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<Description>
+<![CDATA[to put in place the correct parameters]]>
+</Description>
+<STContent>
+<Line Number="0">
+<![CDATA[FirstTerm[0] := 0.412999183919456;]]>
+</Line>
+<Line Number="1">
+<![CDATA[FirstTerm[1] := 0.434276967500252;]]>
+</Line>
+<Line Number="2">
+<![CDATA[FirstTerm[2] := 0.454060080743169;]]>
+</Line>
+<Line Number="3">
+<![CDATA[FirstTerm[3] := 0.472556739086409;]]>
+</Line>
+<Line Number="4">
+<![CDATA[FirstTerm[4] := 0.489931226117599;]]>
+</Line>
+<Line Number="5">
+<![CDATA[FirstTerm[5] := 0.506315983562747;]]>
+</Line>
+<Line Number="6">
+<![CDATA[FirstTerm[6] := 0.521819708983603;]]>
+</Line>
+<Line Number="7">
+<![CDATA[FirstTerm[7] := 0.536532967729344;]]>
+</Line>
+<Line Number="8">
+<![CDATA[FirstTerm[8] := 0.550532195643151;]]>
+</Line>
+<Line Number="9">
+<![CDATA[FirstTerm[9] := 0.563882624999991;]]>
+</Line>
+<Line Number="10">
+<![CDATA[FirstTerm[10] := 0.576640469263689;]]>
+</Line>
+<Line Number="11">
+<![CDATA[FirstTerm[11] := 0.588854584963017;]]>
+</Line>
+<Line Number="12">
+<![CDATA[FirstTerm[12] := 0.60056775665652;]]>
+</Line>
+<Line Number="13">
+<![CDATA[FirstTerm[13] := 0.61181770498283;]]>
+</Line>
+<Line Number="14">
+<![CDATA[FirstTerm[14] := 0.622637887784856;]]>
+</Line>
+<Line Number="15">
+<![CDATA[FirstTerm[15] := 0.633058144240025;]]>
+</Line>
+<Line Number="16">
+<![CDATA[FirstTerm[16] := 0.643105218237873;]]>
+</Line>
+<Line Number="17">
+<![CDATA[FirstTerm[17] := 0.652803187721008;]]>
+</Line>
+<Line Number="18">
+<![CDATA[FirstTerm[18] := 0.662173819963356;]]>
+</Line>
+<Line Number="19">
+<![CDATA[FirstTerm[19] := 0.671236867912222;]]>
+</Line>
+<Line Number="20">
+<![CDATA[FirstTerm[20] := 0.680010319185341;]]>
+</Line>
+<Line Number="21">
+<![CDATA[FirstTerm[21] := 0.68851060670163;]]>
+</Line>
+<Line Number="22">
+<![CDATA[FirstTerm[22] := 0.696752787970507;]]>
+</Line>
+<Line Number="23">
+<![CDATA[FirstTerm[23] := 0.704750698586883;]]>
+</Line>
+<Line Number="24">
+<![CDATA[FirstTerm[24] := 0.712517084349741;]]>
+</Line>
+<Line Number="25">
+<![CDATA[FirstTerm[25] := 0.720063715551046;]]>
+</Line>
+<Line Number="26">
+<![CDATA[FirstTerm[26] := 0.727401486303549;]]>
+</Line>
+<Line Number="27">
+<![CDATA[FirstTerm[27] := 0.734540501243751;]]>
+</Line>
+<Line Number="28">
+<![CDATA[FirstTerm[28] := 0.741490151525149;]]>
+</Line>
+<Line Number="29">
+<![CDATA[FirstTerm[29] := 0.748259181681319;]]>
+</Line>
+<Line Number="30">
+<![CDATA[FirstTerm[30] := 0.754855748669075;]]>
+</Line>
+<Line Number="31">
+<![CDATA[FirstTerm[31] := 0.761287474184474;]]>
+</Line>
+<Line Number="32">
+<![CDATA[FirstTerm[32] := 0.767561491167731;]]>
+</Line>
+<Line Number="33">
+<![CDATA[FirstTerm[33] := 0.773684485268638;]]>
+</Line>
+<Line Number="34">
+<![CDATA[FirstTerm[34] := 0.779662731925439;]]>
+</Line>
+<Line Number="35">
+<![CDATA[FirstTerm[35] := 0.785502129612054;]]>
+</Line>
+<Line Number="36">
+<![CDATA[FirstTerm[36] := 0.791208229727168;]]>
+</Line>
+<Line Number="37">
+<![CDATA[FirstTerm[37] := 0.796786263530865;]]>
+</Line>
+<Line Number="38">
+<![CDATA[FirstTerm[38] := 0.802241166477608;]]>
+</Line>
+<Line Number="39">
+<![CDATA[FirstTerm[39] := 0.807577600246565;]]>
+</Line>
+<Line Number="40">
+<![CDATA[FirstTerm[40] := 0.812799972729915;]]>
+</Line>
+<Line Number="41">
+<![CDATA[FirstTerm[41] := 0.81791245620548;]]>
+</Line>
+<Line Number="42">
+<![CDATA[FirstTerm[42] := 0.82291900389095;]]>
+</Line>
+<Line Number="43">
+<![CDATA[FirstTerm[43] := 0.827823365052035;]]>
+</Line>
+<Line Number="44">
+<![CDATA[FirstTerm[44] := 0.832629098815608;]]>
+</Line>
+<Line Number="45">
+<![CDATA[FirstTerm[45] := 0.837339586820532;]]>
+</Line>
+<Line Number="46">
+<![CDATA[FirstTerm[46] := 0.841958044823116;]]>
+</Line>
+<Line Number="47">
+<![CDATA[FirstTerm[47] := 0.846487533360433;]]>
+</Line>
+<Line Number="48">
+<![CDATA[FirstTerm[48] := 0.850930967562922;]]>
+</Line>
+<Line Number="49">
+<![CDATA[FirstTerm[49] := 0.855291126197371;]]>
+</Line>
+<Line Number="50">
+<![CDATA[FirstTerm[50] := 0.859570660012408;]]>
+</Line>
+<Line Number="51">
+<![CDATA[FirstTerm[51] := 0.863772099450765;]]>
+</Line>
+<Line Number="52">
+<![CDATA[FirstTerm[52] := 0.867897861785706;]]>
+</Line>
+<Line Number="53">
+<![CDATA[FirstTerm[53] := 0.871950257732961;]]>
+</Line>
+<Line Number="54">
+<![CDATA[FirstTerm[54] := 0.875931497584199;]]>
+</Line>
+<Line Number="55">
+<![CDATA[FirstTerm[55] := 0.879843696903371;]]>
+</Line>
+<Line Number="56">
+<![CDATA[FirstTerm[56] := 0.88368888182311;]]>
+</Line>
+<Line Number="57">
+<![CDATA[FirstTerm[57] := 0.8874689939747;]]>
+</Line>
+<Line Number="58">
+<![CDATA[FirstTerm[58] := 0.891185895081857;]]>
+</Line>
+<Line Number="59">
+<![CDATA[FirstTerm[59] := 0.894841371245686;]]>
+</Line>
+<Line Number="60">
+<![CDATA[FirstTerm[60] := 0.898437136945561;]]>
+</Line>
+<Line Number="61">
+<![CDATA[FirstTerm[61] := 0.901974838778404;]]>
+</Line>
+<Line Number="62">
+<![CDATA[FirstTerm[62] := 0.90545605895674;]]>
+</Line>
+<Line Number="63">
+<![CDATA[FirstTerm[63] := 0.908882318584101;]]>
+</Line>
+<Line Number="64">
+<![CDATA[FirstTerm[64] := 0.912255080724649;]]>
+</Line>
+<Line Number="65">
+<![CDATA[FirstTerm[65] := 0.915575753282446;]]>
+</Line>
+<Line Number="66">
+<![CDATA[FirstTerm[66] := 0.918845691704414;]]>
+</Line>
+<Line Number="67">
+<![CDATA[FirstTerm[67] := 0.922066201519867;]]>
+</Line>
+<Line Number="68">
+<![CDATA[FirstTerm[68] := 0.925238540728373;]]>
+</Line>
+<Line Number="69">
+<![CDATA[FirstTerm[69] := 0.928363922046733;]]>
+</Line>
+<Line Number="70">
+<![CDATA[FirstTerm[70] := 0.931443515024981;]]>
+</Line>
+<Line Number="71">
+<![CDATA[FirstTerm[71] := 0.934478448040493;]]>
+</Line>
+<Line Number="72">
+<![CDATA[FirstTerm[72] := 0.937469810178549;]]>
+</Line>
+<Line Number="73">
+<![CDATA[FirstTerm[73] := 0.94041865300707;]]>
+</Line>
+<Line Number="74">
+<![CDATA[FirstTerm[74] := 0.943325992252588;]]>
+</Line>
+<Line Number="75">
+<![CDATA[FirstTerm[75] := 0.946192809384008;]]>
+</Line>
+<Line Number="76">
+<![CDATA[FirstTerm[76] := 0.949020053110182;]]>
+</Line>
+<Line Number="77">
+<![CDATA[FirstTerm[77] := 0.951808640796891;]]>
+</Line>
+<Line Number="78">
+<![CDATA[FirstTerm[78] := 0.954559459808375;]]>
+</Line>
+<Line Number="79">
+<![CDATA[FirstTerm[79] := 0.957273368778195;]]>
+</Line>
+<Line Number="80">
+<![CDATA[FirstTerm[80] := 0.959951198813862;]]>
+</Line>
+<Line Number="81">
+<![CDATA[FirstTerm[81] := 0.962593754639317;]]>
+</Line>
+<Line Number="82">
+<![CDATA[FirstTerm[82] := 0.96520181567909;]]>
+</Line>
+<Line Number="83">
+<![CDATA[FirstTerm[83] := 0.967776137087668;]]>
+</Line>
+<Line Number="84">
+<![CDATA[FirstTerm[84] := 0.970317450727362;]]>
+</Line>
+<Line Number="85">
+<![CDATA[FirstTerm[85] := 0.972826466097736;]]>
+</Line>
+<Line Number="86">
+<![CDATA[FirstTerm[86] := 0.975303871219448;]]>
+</Line>
+<Line Number="87">
+<![CDATA[FirstTerm[87] := 0.977750333475156;]]>
+</Line>
+<Line Number="88">
+<![CDATA[FirstTerm[88] := 0.980166500409975;]]>
+</Line>
+<Line Number="89">
+<![CDATA[FirstTerm[89] := 0.982553000493781;]]>
+</Line>
+<Line Number="90">
+<![CDATA[FirstTerm[90] := 0.984910443847533;]]>
+</Line>
+<Line Number="91">
+<![CDATA[FirstTerm[91] := 0.987239422935622;]]>
+</Line>
+<Line Number="92">
+<![CDATA[FirstTerm[92] := 0.989540513226143;]]>
+</Line>
+<Line Number="93">
+<![CDATA[FirstTerm[93] := 0.991814273820837;]]>
+</Line>
+<Line Number="94">
+<![CDATA[FirstTerm[94] := 0.994061248056375;]]>
+</Line>
+<Line Number="95">
+<![CDATA[FirstTerm[95] := 0.996281964078519;]]>
+</Line>
+<Line Number="96">
+<![CDATA[FirstTerm[96] := 0.998476935390616;]]>
+</Line>
+<Line Number="97">
+<![CDATA[FirstTerm[97] := 1.00064666137778;]]>
+</Line>
+<Line Number="98">
+<![CDATA[FirstTerm[98] := 1.00279162780807;]]>
+</Line>
+<Line Number="99">
+<![CDATA[FirstTerm[99] := 1.00491230731178;]]>
+</Line>
+<Line Number="100">
+<![CDATA[FirstTerm[100] := 1.0070091598401;]]>
+</Line>
+<Line Number="101">
+<![CDATA[]]>
+</Line>
+<Line Number="102">
+<![CDATA[SecondTerm[0] := -3.6531108341574;]]>
+</Line>
+<Line Number="103">
+<![CDATA[SecondTerm[1] := -4.09128101130617;]]>
+</Line>
+<Line Number="104">
+<![CDATA[SecondTerm[2] := -4.99855089843746;]]>
+</Line>
+<Line Number="105">
+<![CDATA[SecondTerm[3] := -5.60842606644933;]]>
+</Line>
+<Line Number="106">
+<![CDATA[SecondTerm[4] := -5.84754624814133;]]>
+</Line>
+<Line Number="107">
+<![CDATA[SecondTerm[5] := -5.95953661871908;]]>
+</Line>
+<Line Number="108">
+<![CDATA[SecondTerm[6] := -6.02161126211956;]]>
+</Line>
+<Line Number="109">
+<![CDATA[SecondTerm[7] := -6.05952030767856;]]>
+</Line>
+<Line Number="110">
+<![CDATA[SecondTerm[8] := -6.08379123547508;]]>
+</Line>
+<Line Number="111">
+<![CDATA[SecondTerm[9] := -6.09943992136132;]]>
+</Line>
+<Line Number="112">
+<![CDATA[SecondTerm[10] := -6.10913407129205;]]>
+</Line>
+<Line Number="113">
+<![CDATA[SecondTerm[11] := -6.11441266150827;]]>
+</Line>
+<Line Number="114">
+<![CDATA[SecondTerm[12] := -6.11622046037205;]]>
+</Line>
+<Line Number="115">
+<![CDATA[SecondTerm[13] := -6.11516667697321;]]>
+</Line>
+<Line Number="116">
+<![CDATA[SecondTerm[14] := -6.11166024379888;]]>
+</Line>
+<Line Number="117">
+<![CDATA[SecondTerm[15] := -6.10598513983822;]]>
+</Line>
+<Line Number="118">
+<![CDATA[SecondTerm[16] := -6.09834452933237;]]>
+</Line>
+<Line Number="119">
+<![CDATA[SecondTerm[17] := -6.08888774639591;]]>
+</Line>
+<Line Number="120">
+<![CDATA[SecondTerm[18] := -6.07772738789046;]]>
+</Line>
+<Line Number="121">
+<![CDATA[SecondTerm[19] := -6.06495046880874;]]>
+</Line>
+<Line Number="122">
+<![CDATA[SecondTerm[20] := -6.05062588863923;]]>
+</Line>
+<Line Number="123">
+<![CDATA[SecondTerm[21] := -6.03480953623053;]]>
+</Line>
+<Line Number="124">
+<![CDATA[SecondTerm[22] := -6.01754784316729;]]>
+</Line>
+<Line Number="125">
+<![CDATA[SecondTerm[23] := -5.99888029447187;]]>
+</Line>
+<Line Number="126">
+<![CDATA[SecondTerm[24] := -5.97884122460011;]]>
+</Line>
+<Line Number="127">
+<![CDATA[SecondTerm[25] := -5.95746111505514;]]>
+</Line>
+<Line Number="128">
+<![CDATA[SecondTerm[26] := -5.93476753927376;]]>
+</Line>
+<Line Number="129">
+<![CDATA[SecondTerm[27] := -5.91078585468354;]]>
+</Line>
+<Line Number="130">
+<![CDATA[SecondTerm[28] := -5.88553971158705;]]>
+</Line>
+<Line Number="131">
+<![CDATA[SecondTerm[29] := -5.85905142816312;]]>
+</Line>
+<Line Number="132">
+<![CDATA[SecondTerm[30] := -5.83134226692107;]]>
+</Line>
+<Line Number="133">
+<![CDATA[SecondTerm[31] := -5.80243263823249;]]>
+</Line>
+<Line Number="134">
+<![CDATA[SecondTerm[32] := -5.7723422497084;]]>
+</Line>
+<Line Number="135">
+<![CDATA[SecondTerm[33] := -5.74109021528467;]]>
+</Line>
+<Line Number="136">
+<![CDATA[SecondTerm[34] := -5.70869513432806;]]>
+</Line>
+<Line Number="137">
+<![CDATA[SecondTerm[35] := -5.6751751484777;]]>
+</Line>
+<Line Number="138">
+<![CDATA[SecondTerm[36] := -5.64054798201802;]]>
+</Line>
+<Line Number="139">
+<![CDATA[SecondTerm[37] := -5.60483097015052;]]>
+</Line>
+<Line Number="140">
+<![CDATA[SecondTerm[38] := -5.56804107845941;]]>
+</Line>
+<Line Number="141">
+<![CDATA[SecondTerm[39] := -5.53019491605745;]]>
+</Line>
+<Line Number="142">
+<![CDATA[SecondTerm[40] := -5.49130874428476;]]>
+</Line>
+<Line Number="143">
+<![CDATA[SecondTerm[41] := -5.45139848236587;]]>
+</Line>
+<Line Number="144">
+<![CDATA[SecondTerm[42] := -5.41047971107395;]]>
+</Line>
+<Line Number="145">
+<![CDATA[SecondTerm[43] := -5.36856767517859;]]>
+</Line>
+<Line Number="146">
+<![CDATA[SecondTerm[44] := -5.32567728524447;]]>
+</Line>
+<Line Number="147">
+<![CDATA[SecondTerm[45] := -5.28182311918963;]]>
+</Line>
+<Line Number="148">
+<![CDATA[SecondTerm[46] := -5.23701942389009;]]>
+</Line>
+<Line Number="149">
+<![CDATA[SecondTerm[47] := -5.19128011702566;]]>
+</Line>
+<Line Number="150">
+<![CDATA[SecondTerm[48] := -5.14461878929223;]]>
+</Line>
+<Line Number="151">
+<![CDATA[SecondTerm[49] := -5.09704870705358;]]>
+</Line>
+<Line Number="152">
+<![CDATA[SecondTerm[50] := -5.04858281546752;]]>
+</Line>
+<Line Number="153">
+<![CDATA[SecondTerm[51] := -4.99923374209295;]]>
+</Line>
+<Line Number="154">
+<![CDATA[SecondTerm[52] := -4.94901380096437;]]>
+</Line>
+<Line Number="155">
+<![CDATA[SecondTerm[53] := -4.89793499710682;]]>
+</Line>
+<Line Number="156">
+<![CDATA[SecondTerm[54] := -4.84600903145481;]]>
+</Line>
+<Line Number="157">
+<![CDATA[SecondTerm[55] := -4.79324730613358;]]>
+</Line>
+<Line Number="158">
+<![CDATA[SecondTerm[56] := -4.739660930058;]]>
+</Line>
+<Line Number="159">
+<![CDATA[SecondTerm[57] := -4.6852607248036;]]>
+</Line>
+<Line Number="160">
+<![CDATA[SecondTerm[58] := -4.63005723070492;]]>
+</Line>
+<Line Number="161">
+<![CDATA[SecondTerm[59] := -4.5740607131378;]]>
+</Line>
+<Line Number="162">
+<![CDATA[SecondTerm[60] := -4.51728116894469;]]>
+</Line>
+<Line Number="163">
+<![CDATA[SecondTerm[61] := -4.45972833296467;]]>
+</Line>
+<Line Number="164">
+<![CDATA[SecondTerm[62] := -4.40141168463302;]]>
+</Line>
+<Line Number="165">
+<![CDATA[SecondTerm[63] := -4.34234045461819;]]>
+</Line>
+<Line Number="166">
+<![CDATA[SecondTerm[64] := -4.28252363146719;]]>
+</Line>
+<Line Number="167">
+<![CDATA[SecondTerm[65] := -4.22196996823365;]]>
+</Line>
+<Line Number="168">
+<![CDATA[SecondTerm[66] := -4.16068798906535;]]>
+</Line>
+<Line Number="169">
+<![CDATA[SecondTerm[67] := -4.09868599573142;]]>
+</Line>
+<Line Number="170">
+<![CDATA[SecondTerm[68] := -4.03597207407149;]]>
+</Line>
+<Line Number="171">
+<![CDATA[SecondTerm[69] := -3.9725541003518;]]>
+</Line>
+<Line Number="172">
+<![CDATA[SecondTerm[70] := -3.90843974751561;]]>
+</Line>
+<Line Number="173">
+<![CDATA[SecondTerm[71] := -3.84363649131689;]]>
+</Line>
+<Line Number="174">
+<![CDATA[SecondTerm[72] := -3.77815161632872;]]>
+</Line>
+<Line Number="175">
+<![CDATA[SecondTerm[73] := -3.71199222181899;]]>
+</Line>
+<Line Number="176">
+<![CDATA[SecondTerm[74] := -3.64516522748777;]]>
+</Line>
+<Line Number="177">
+<![CDATA[SecondTerm[75] := -3.57767737906207;]]>
+</Line>
+<Line Number="178">
+<![CDATA[SecondTerm[76] := -3.50953525374477;]]>
+</Line>
+<Line Number="179">
+<![CDATA[SecondTerm[77] := -3.44074526551568;]]>
+</Line>
+<Line Number="180">
+<![CDATA[SecondTerm[78] := -3.37131367028359;]]>
+</Line>
+<Line Number="181">
+<![CDATA[SecondTerm[79] := -3.30124657088888;]]>
+</Line>
+<Line Number="182">
+<![CDATA[SecondTerm[80] := -3.2305499219571;]]>
+</Line>
+<Line Number="183">
+<![CDATA[SecondTerm[81] := -3.15922953460459;]]>
+</Line>
+<Line Number="184">
+<![CDATA[SecondTerm[82] := -3.08729108099734;]]>
+</Line>
+<Line Number="185">
+<![CDATA[SecondTerm[83] := -3.01474009876535;]]>
+</Line>
+<Line Number="186">
+<![CDATA[SecondTerm[84] := -2.94158199527454;]]>
+</Line>
+<Line Number="187">
+<![CDATA[SecondTerm[85] := -2.8678220517589;]]>
+</Line>
+<Line Number="188">
+<![CDATA[SecondTerm[86] := -2.7934654273158;]]>
+</Line>
+<Line Number="189">
+<![CDATA[SecondTerm[87] := -2.71851716276739;]]>
+</Line>
+<Line Number="190">
+<![CDATA[SecondTerm[88] := -2.64298218439145;]]>
+</Line>
+<Line Number="191">
+<![CDATA[SecondTerm[89] := -2.5668653075249;]]>
+</Line>
+<Line Number="192">
+<![CDATA[SecondTerm[90] := -2.49017124004356;]]>
+</Line>
+<Line Number="193">
+<![CDATA[SecondTerm[91] := -2.41290458572153;]]>
+</Line>
+<Line Number="194">
+<![CDATA[SecondTerm[92] := -2.33506984747377;]]>
+</Line>
+<Line Number="195">
+<![CDATA[SecondTerm[93] := -2.25667143048545;]]>
+</Line>
+<Line Number="196">
+<![CDATA[SecondTerm[94] := -2.17771364523156;]]>
+</Line>
+<Line Number="197">
+<![CDATA[SecondTerm[95] := -2.09820071039039;]]>
+</Line>
+<Line Number="198">
+<![CDATA[SecondTerm[96] := -2.01813675565421;]]>
+</Line>
+<Line Number="199">
+<![CDATA[SecondTerm[97] := -1.93752582444074;]]>
+</Line>
+<Line Number="200">
+<![CDATA[SecondTerm[98] := -1.85637187650874;]]>
+</Line>
+<Line Number="201">
+<![CDATA[SecondTerm[99] := -1.77467879048101;]]>
+</Line>
+<Line Number="202">
+<![CDATA[SecondTerm[100] := -1.69245036627809;]]>
+</Line>
+<Line Number="203">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
