@@ -14,7 +14,7 @@ Content
 - **CIP**: Common Industrial Protocol utilities and structs.
 - **Device** (Dvc_): Device drivers.
 - **Filter** (Filter_)
-- **IO**: IO assemblies.
+- **IO**: Supporting device IO data types / assemblies.
 - **Lx**: Logix helpers and utilities.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
