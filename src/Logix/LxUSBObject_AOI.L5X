@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Logix USB Monitor-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LxUSBObject" TargetType="AddOnInstructionDefinition" TargetRevision="3.0 " TargetLastEdited="2025-06-05T03:40:28.435Z" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 22:40:44 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LxUSBObject" TargetType="AddOnInstructionDefinition" TargetRevision="3.0 " TargetLastEdited="2025-06-05T05:27:47.345Z" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Thu Jun 05 07:52:40 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Name="LxIOModule" Family="NoFamily" Class="User">
@@ -545,7 +545,7 @@
 <Dependencies>
 <Dependency Type="AddOnInstructionDefinition" Name="LxIOPath"/>
 </Dependencies>
-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</EncodedData>
+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</EncodedData>
 <AddOnInstructionDefinition Name="LxIO" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-11-11T18:04:33.847Z" CreatedBy="APEX\Jeremy" EditedDate="2025-01-22T23:39:43.941Z" EditedBy="APEX\Jeremy" SoftwareRevision="v37.00"
 >
 <Description>
@@ -715,7 +715,7 @@ AAmI3xjUruWGx4282N2azSx9xJ2b//6POZmzWj9+3HFwWPgDv2w7FJFWe+hZbQP57C02ggKB4Y6zBPK0
 <Dependency Type="DataType" Name="LxIOModule"/>
 </Dependencies>
 </AddOnInstructionDefinition>
-<AddOnInstructionDefinition Use="Target" Name="LxUSBObject" Revision="3.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T17:01:25.995Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2025-06-05T03:40:28.435Z" EditedBy="APEX\Jeremy"
+<AddOnInstructionDefinition Use="Target" Name="LxUSBObject" Revision="3.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T17:01:25.995Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2025-06-05T05:27:47.345Z" EditedBy="APEX\Jeremy"
  SoftwareRevision="v37.00">
 <Description>
 <![CDATA[Logix USB Monitor]]>
@@ -734,6 +734,7 @@ AAmI3xjUruWGx4282N2azSx9xJ2b//6POZmzWj9+3HFwWPgDv2w7FJFWe+hZbQP57C02ggKB4Y6zBPK0
 <Parameter Name="IO" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true"/>
 <Parameter Name="IO_Instance" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LxIO.Val_Instance" Required="false" Visible="true" ExternalAccess="Read Only"/>
 <Parameter Name="IO_Status" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LxIO.Val_Status" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Cfg_MsgInterval" TagType="Alias" Usage="Input" Radix="Decimal" AliasFor="PG.Inp_Interval" Required="false" Visible="false" ExternalAccess="Read Only"/>
 <Parameter Name="Msg01" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true">
 <Description>
 <![CDATA[0x01: GetAttributesAll]]>
@@ -824,7 +825,7 @@ AAmI3xjUruWGx4282N2azSx9xJ2b//6POZmzWj9+3HFwWPgDv2w7FJFWe+hZbQP57C02ggKB4Y6zBPK0
 </Structure>
 </DefaultData>
 </LocalTag>
-<LocalTag Name="PG" DataType="LpPulse" ExternalAccess="None">
+<LocalTag Name="PG" DataType="LpPulse" ExternalAccess="Read Only">
 <DefaultData Format="L5K">
 <![CDATA[[1,1000,0,0]]]>
 </DefaultData>
@@ -837,14 +838,6 @@ AAmI3xjUruWGx4282N2azSx9xJ2b//6POZmzWj9+3HFwWPgDv2w7FJFWe+hZbQP57C02ggKB4Y6zBPK0
 <DataValueMember Name="Sts_Enabled" DataType="BOOL" Value="0"/>
 <DataValueMember Name="Out" DataType="BOOL" Value="0"/>
 </Structure>
-</DefaultData>
-</LocalTag>
-<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
-<DefaultData Format="Decorated">
-<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </LocalTag>
 <LocalTag Name="Status" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
@@ -897,57 +890,54 @@ AAmI3xjUruWGx4282N2azSx9xJ2b//6POZmzWj9+3HFwWPgDv2w7FJFWe+hZbQP57C02ggKB4Y6zBPK0
 <![CDATA[]]>
 </Line>
 <Line Number="7">
-<![CDATA[PG.Inp_Interval := 100;]]>
-</Line>
-<Line Number="8">
 <![CDATA[PG.Inp_Enable := LxIO.Sts_Online;]]>
 </Line>
-<Line Number="9">
+<Line Number="8">
 <![CDATA[LpPulse(PG);]]>
 </Line>
-<Line Number="10">
+<Line Number="9">
 <![CDATA[]]>
 </Line>
-<Line Number="11">
+<Line Number="10">
 <![CDATA[if (PG.Out & (Msg01.DN OR Msg01.ER OR NOT Msg01.EN)) then]]>
 </Line>
-<Line Number="12">
+<Line Number="11">
 <![CDATA[	LxMsg(LxMsg, Msg01, 16#033A, 1, 0, 0, 1000000, IO);]]>
 </Line>
-<Line Number="13">
+<Line Number="12">
 <![CDATA[	MSG(Msg01);]]>
 </Line>
-<Line Number="14">
+<Line Number="13">
 <![CDATA[end_if;]]>
 </Line>
-<Line Number="15">
+<Line Number="14">
 <![CDATA[]]>
 </Line>
-<Line Number="16">
+<Line Number="15">
 <![CDATA[if (Msg01.DN OR Msg01.ER) then]]>
 </Line>
-<Line Number="17">
+<Line Number="16">
 <![CDATA[	if (NOT Msg01.ER) then]]>
 </Line>
-<Line Number="18">
+<Line Number="17">
 <![CDATA[		COP(MsgResp[0], Local, 1);]]>
 </Line>
-<Line Number="19">
+<Line Number="18">
 <![CDATA[		Sts_PortConnected := Local.LogicalAddress <> 255;]]>
 </Line>
-<Line Number="20">
+<Line Number="19">
 <![CDATA[	else]]>
 </Line>
-<Line Number="21">
+<Line Number="20">
 <![CDATA[		Status := 0;]]>
 </Line>
-<Line Number="22">
+<Line Number="21">
 <![CDATA[	end_if;]]>
 </Line>
-<Line Number="23">
+<Line Number="22">
 <![CDATA[end_if;]]>
 </Line>
-<Line Number="24">
+<Line Number="23">
 <![CDATA[]]>
 </Line>
 </STContent>
