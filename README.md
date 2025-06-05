@@ -15,9 +15,9 @@ Content
 - **Dvc**: Device drivers.
 - **Filter** (Filter_)
 - **IO**: Supporting device IO data types / assemblies.
+- **Lm**: Assorted functions.
 - **Lp**: Process blocks.
 - **Lx**: Logix-specific content, including generic message helpers and utilities.
-- **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
 - **MBTCP**: Modbus TCP client driver.
 - **Numeric** (N_): Forms string representations of various types of numbers.
