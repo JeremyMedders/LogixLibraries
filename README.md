@@ -12,7 +12,7 @@ Content
 ------------
 - **Array** (Array_)
 - **CIP**: Common Industrial Protocol utilities and structs.
-- **Device** (Dvc_): Device drivers.
+- **Dvc**: Device drivers.
 - **Filter** (Filter_)
 - **IO**: Supporting device IO data types / assemblies.
 - **Lx**: Logix helpers and utilities.
