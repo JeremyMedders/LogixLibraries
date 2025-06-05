@@ -1,0 +1,1191 @@
+$ EZ-EDS Version 3.31.1.20220811 Generated Electronic Data Sheet
+
+[File]
+        DescText = "1834 EtherNet/IP® In-Cabinet, Stratix 4400 Gateway";
+        CreateDate = 05-30-2023;
+        CreateTime = 11:58:30;
+        ModDate = 05-30-2023;
+        ModTime = 11:58:36;
+        Revision = 1.01;
+        HomeURL = "http://www.rockwellautomation.com";
+
+[Device]
+        VendCode = 1;
+        VendName = "Rockwell Automation/Allen-Bradley";
+        ProdType = 12;
+        ProdTypeStr = "Communications Adapter";
+        ApplicationProfileAssembly = 2000;
+        ProdCode = 333;
+        MajRev = 1;
+        MinRev = 1;
+        ProdName = "1834 Gateway EtherNet/IP®";
+        Catalog = "1834-AENTR";
+        Icon = "gateway_48x-32x-16x.ico";
+        IconContents =
+                "AAABAAMAEBAQAAEABAAoAQAANgAAACAgEAABAAQA6AIAAF4BAAAwMBAAAQAE"
+                "AGgGAABGBAAAKAAAABAAAAAgAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAADMzMwBmZmYAmZmZAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERDMzMzNEREREMAAAA0REREQwMzMD"
+                "RERERDAxEwNEREREMDETA0REREQwMzMDMzNERDAwARERE0REMDACIiIjREQw"
+                "MAIiIiNERDAwARERE0REMDMzAzMzREQwMzMDRERERDAyIwNEREREMDMzA0RE"
+                "REQwAAADRERERDMzMzNERPAPAADwDwAA8A8AAPAPAADwDwAA8AAAAPAAAADw"
+                "AAAA8AAAAPAAAADwAAAA8A8AAPAPAADwDwAA8A8AAPAPAAAoAAAAIAAAAEAA"
+                "AAABAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMzMzAGZmZgCZmZkAzMzM"
+                "AP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAFVVVVVERERERERERFVVVVVVVVVVRERERERERERVVVVVVVVVVUQAAAAA"
+                "AABEVVVVVVVVVVVEAAAAAAAARFVVVVVVVVVVRABEREREAERVVVVVVVVVVUQA"
+                "RERERABEVVVVVVVVVVVEAERABEQARFVVVVVVVVVVRABEQAREAERVVVVVVVVV"
+                "VUQAREAERABEVVVVVVVVVVVEAERABEQARFVVVVVVVVVVRABEQAREAERVVVVV"
+                "VVVVVUQARERERABERERERFVVVVVEAEAAAAQARERERERVVVVVRABAAAABERER"
+                "ERFEVVVVVUQAQAAAAiIiIiIiRFVVVVVEAEAAAAMzMzMzM0RVVVVVRABAAAAD"
+                "MzMzMzNEVVVVVUQAQAAAAiIiIiIiRFVVVVVEAEAAAAEREREREURVVVVVRABA"
+                "AAAEAEREREREVVVVVUQARERERABERERERFVVVVVEAERCJEQARFVVVVVVVVVV"
+                "RABEQiREAERVVVVVVVVVVUQARERERABEVVVVVVVVVVVEAERBFEQARFVVVVVV"
+                "VVVVRABEQRREAERVVVVVVVVVVUQARERERABEVVVVVVVVVVVEAEREREQARFVV"
+                "VVVVVVVVRAAAAAAAAERVVVVVVVVVVUQAAAAAAABEVVVVVVVVVVVERERERERE"
+                "RFVVVVVVVVVVRERERERERERVVVVV/wAA//8AAP//AAD//wAA//8AAP//AAD/"
+                "/wAA//8AAP//AAD//wAA//8AAP//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/"
+                "AAAA/wAAAP8AAAD/AAAA/wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8A"
+                "AP//AAD//wAA//8AAP8oAAAAMAAAAGAAAAABAAQAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAMzMzAGZmZgCZmZkAzMzMAP///wAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFVVVVVVVURERERERERERERE"
+                "RFVVVVVVVVVVVVVVVURERERERERERERERFVVVVVVVVVVVVVVVURERERERERE"
+                "RERERFVVVVVVVVVVVVVVVURAAAAAAAAAAAAERFVVVVVVVVVVVVVVVURAAAAA"
+                "AAAAAAAERFVVVVVVVVVVVVVVVURAAAAAAAAAAAAERFVVVVVVVVVVVVVVVURA"
+                "AERERERERAAERFVVVVVVVVVVVVVVVURAAERERERERAAERFVVVVVVVVVVVVVV"
+                "VURAAERERERERAAERFVVVVVVVVVVVVVVVURAAEREAABERAAERFVVVVVVVVVV"
+                "VVVVVURAAEREAABERAAERFVVVVVVVVVVVVVVVURAAEREAABERAAERFVVVVVV"
+                "VVVVVVVVVURAAEREAABERAAERFVVVVVVVVVVVVVVVURAAEREAABERAAERFVV"
+                "VVVVVVVVVVVVVURAAEREAABERAAERFVVVVVVVVVVVVVVVURAAEREAABERAAE"
+                "RFVVVVVVVVVVVVVVVURAAERERERERAAERFVVVVVVVVVVVVVVVURAAERERERE"
+                "RAAERERERERERFVVVVVVVURAAEQAAAAARAAERERERERERFVVVVVVVURAAEQA"
+                "AAAAEREREREREREURFVVVVVVVURAAEQAAAAAEREREREREREURFVVVVVVVURA"
+                "AEQAAAAAMzMzMzMzMzM0RFVVVVVVVURAAEQAAAAAMzMzMzMzMzM0RFVVVVVV"
+                "VURAAEQAAAAAMzMzMzMzMzM0RFVVVVVVVURAAEQAAAAAMzMzMzMzMzM0RFVV"
+                "VVVVVURAAEQAAAAAMzMzMzMzMzM0RFVVVVVVVURAAEQAAAAAMzMzMzMzMzM0"
+                "RFVVVVVVVURAAEQAAAAAEREREREREREURFVVVVVVVURAAEQAAAAAERERERER"
+                "EREURFVVVVVVVURAAEQAAAAARAAERERERERERFVVVVVVVURAAERERERERAAE"
+                "RERERERERFVVVVVVVURAAEREQzRERAAERERERERERFVVVVVVVURAAEREMANE"
+                "RAAERFVVVVVVVVVVVVVVVURAAEREMANERAAERFVVVVVVVVVVVVVVVURAAERE"
+                "QzRERAAERFVVVVVVVVVVVVVVVURAAERERERERAAERFVVVVVVVVVVVVVVVURA"
+                "AEREQjRERAAERFVVVVVVVVVVVVVVVURAAEREIANERAAERFVVVVVVVVVVVVVV"
+                "VURAAEREIANERAAERFVVVVVVVVVVVVVVVURAAEREQzRERAAERFVVVVVVVVVV"
+                "VVVVVURAAERERERERAAERFVVVVVVVVVVVVVVVURAAERERERERAAERFVVVVVV"
+                "VVVVVVVVVURAAAAAAAAAAAAERFVVVVVVVVVVVVVVVURAAAAAAAAAAAAERFVV"
+                "VVVVVVVVVVVVVURAAAAAAAAAAAAERFVVVVVVVVVVVVVVVURERERERERERERE"
+                "RFVVVVVVVVVVVVVVVURERERERERERERERFVVVVVVVVVVVVVVVURERERERERE"
+                "RERERFVVVVVVVf/wAAAP/wAA//AAAA//AAD/8AAAD/8AAP/wAAAP/wAA//AA"
+                "AA//AAD/8AAAD/8AAP/wAAAP/wAA//AAAA//AAD/8AAAD/8AAP/wAAAP/wAA"
+                "//AAAA//AAD/8AAAD/8AAP/wAAAP/wAA//AAAA//AAD/8AAAD/8AAP/wAAAP"
+                "/wAA//AAAA//AAD/8AAAAAAAAP/wAAAAAAAA//AAAAAAAAD/8AAAAAAAAP/w"
+                "AAAAAAAA//AAAAAAAAD/8AAAAAAAAP/wAAAAAAAA//AAAAAAAAD/8AAAAAAA"
+                "AP/wAAAAAAAA//AAAAAAAAD/8AAAAAAAAP/wAAAAAAAA//AAAAAAAAD/8AAA"
+                "D/8AAP/wAAAP/wAA//AAAA//AAD/8AAAD/8AAP/wAAAP/wAA//AAAA//AAD/"
+                "8AAAD/8AAP/wAAAP/wAA//AAAA//AAD/8AAAD/8AAP/wAAAP/wAA//AAAA//"
+                "AAD/8AAAD/8AAP/wAAAP/wAA//AAAA//AAD/8AAAD/8AAA==";
+
+[Device Classification]
+        Class1 = EtherNetIP;
+        Class2 = EtherNetIP_In_Cabinet;
+
+[ParamClass]
+        Revision = 1;
+        Object_Name = "Parameter Object";
+        Object_Class_Code = 0x0F;
+        MaxInst = 34;
+        Number_Of_Static_Instances = 34;
+        Max_Number_Of_Dynamic_Instances = 0;
+        Descriptor = 0x000B;
+        CfgAssembly = 0;
+
+[Params]
+        Param1 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0032,                 $ Descriptor
+                0xD1,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "DeviceStatus",         $ name
+                "",                     $ units
+                "Status of the power tap",    $ help string
+                0,0xff,0,               $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum1 =
+                0,"NPOn",
+                1,"SPOn",
+                2,"Reserved",
+                3,"Reserved",
+                4,"Reserved",
+                5,"Reserved",
+                6,"Reserved",
+                7,"Reserved";
+        Param2 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0032,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "TripWarnStatus",       $ name
+                "",                     $ units
+                "Trip / Warning Status bits",    $ help string
+                0,0xFFFF,0,             $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum2 =
+                0,"TripPresent",
+                1,"WarningPresent",
+                2,"Reserved",
+                3,"NPVoltageFlt",
+                4,"NPOverCurrentFlt",
+                5,"SPLowVoltageFlt",
+                6,"SPOverCurrentFlt",
+                7,"NPVoltageWrn",
+                8,"NPOverCurrentWrn",
+                9,"SPLowVoltageWrn",
+                10,"SPOverCurrentWrn",
+                11,"SecurityLogWrn",
+                12,"RefTopologyWrn",
+                13,"InternalFault",
+                14,"Reserved",
+                15,"OperHrsAlarm";
+        Param3 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0032,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "RefTopologySts",       $ name
+                "",                     $ units
+                "Reference Topology Status bits",    $ help string
+                0,0xFFFF,0,             $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum3 =
+                0,"RefDataReady",
+                1,"TopologyMismatch",
+                2,"NodeChanged",
+                3,"NodeDropped",
+                4,"NodeInserted",
+                5,"Reserved",
+                6,"Reserved",
+                7,"Reserved",
+                8,"Reserved",
+                9,"Reserved",
+                10,"Reserved",
+                11,"Reserved",
+                12,"Reserved",
+                13,"Reserved",
+                14,"Reserved",
+                15,"Reserved";
+        Param4 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "RefTopologyNode",      $ name
+                "",                     $ units
+                "The position ID of the node mismatched in the reference topology",    $ help string
+                0,0x27,0,               $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param5 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0032,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "ActTopologySts",       $ name
+                "",                     $ units
+                "Actual Topology Status bits",    $ help string
+                0,0xFFFF,0,             $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum5 =
+                0,"NoActualData",
+                1,"TopologyMismatch",
+                2,"DiscvyInProgress",
+                3,"MissingNode",
+                4,"ExtraNode",
+                5,"Reserved",
+                6,"Reserved",
+                7,"Reserved",
+                8,"Reserved",
+                9,"Reserved",
+                10,"Reserved",
+                11,"Reserved",
+                12,"Reserved",
+                13,"Reserved",
+                14,"Reserved",
+                15,"Reserved";
+        Param6 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "ActTopologyNode",      $ name
+                "",                     $ units
+                "The PositionID of the 1st missing or extra node in Actual Topology",    $ help string
+                0,0x27,0,               $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param7 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0030,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "OperationHours",       $ name
+                "Hrs",                  $ units
+                "The total time the device has been energized",    $ help string
+                0,0xffffffff,0,         $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                0;                      $ decimal places
+        Param11 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0002,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "TripWarnEnable",       $ name
+                "",                     $ units
+                "0 = Disabled, 1 = Enabled",    $ help string
+                0,0xffff,0,             $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum11 =
+                0,"Reserved",
+                1,"Reserved",
+                2,"Reserved",
+                3,"Reserved",
+                4,"Reserved",
+                5,"Reserved",
+                6,"Reserved",
+                7,"Reserved",
+                8,"Reserved",
+                9,"Reserved",
+                10,"Reserved",
+                11,"Reserved",
+                12,"Reserved",
+                13,"Reserved",
+                14,"Reserved",
+                15,"OperHrsEnabled";
+        Param13 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "RemHrsThreshold",      $ name
+                "Hrs",                  $ units
+                "Number of hours the device power is on before a warning",    $ help string
+                0,100000,10000,         $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param14 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xCA,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "NPVoltage",            $ name
+                "VDC",                  $ units
+                "Network Power Voltage",$ help string
+                0,100.0,0,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                1;                      $ decimal places
+        Param15 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xCA,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "NPCurrent",            $ name
+                "Amps",                 $ units
+                "Network Power Current",$ help string
+                0,100.0,0,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                1;                      $ decimal places
+        Param16 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xCA,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "SPVoltage",            $ name
+                "VDC",                  $ units
+                "Switched Power Voltage",    $ help string
+                0,100.0,0,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                1;                      $ decimal places
+        Param17 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xCA,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "SPCurrent",            $ name
+                "Amps",                 $ units
+                "Switched Power Current",    $ help string
+                0,100.0,0,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                1;                      $ decimal places
+        Param18 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0002,                 $ Descriptor
+                0xC1,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "NPTripReset",          $ name
+                "",                     $ units
+                "Attempts to reset a Network Power trip",    $ help string
+                0,1,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum18 =
+                0,"Ready",
+                1,"TripReset";
+        Param19 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0002,                 $ Descriptor
+                0xC1,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "SPTripReset",          $ name
+                "",                     $ units
+                "Attempts to reset a Switched Power trip",    $ help string
+                0,1,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum19 =
+                0,"Ready",
+                1,"TripReset";
+        Param21 =
+                0,                      $ reserved, shall equal 0
+                ,"",                    $ Link Path Size, Link Path
+                0x0002,                 $ Descriptor
+                0xC1,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "SPDisable",            $ name
+                "",                     $ units
+                "Disables the Switched Power to the network",    $ help string
+                0,1,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum21 =
+                0,"Enable",
+                1,"Disable";
+        Param22 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0002,                 $ Descriptor
+                0xC1,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "AutoIpAddressing",     $ name
+                "",                     $ units
+                "Enables/Disables the Auto IP Addressing of the end node devices.",    $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum22 =
+                0,"Disabled",
+                1,"Enabled";
+        Param25 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0012,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "ClockSource",          $ name
+                "",                     $ units
+                "The current clock source that the device is using",    $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum25 =
+                0,"PTP CIP Sync",
+                1,"CntrlSystemTime",
+                2,"RTC",
+                3,"TimeSincePowerup";
+        Param26 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Year",                 $ name
+                "Year",                 $ units
+                "Local Year",           $ help string
+                1970,2105,1970,         $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param27 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Month",                $ name
+                "Mon",                  $ units
+                "Local Month",          $ help string
+                1,12,1,                 $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param28 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Day",                  $ name
+                "Day",                  $ units
+                "Local Day",            $ help string
+                1,31,1,                 $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param29 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Hour",                 $ name
+                "Hrs",                  $ units
+                "Local Hour",           $ help string
+                0,24,0,                 $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param30 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Minute",               $ name
+                "Min",                  $ units
+                "Local Minute",         $ help string
+                0,60,0,                 $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param31 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Second",               $ name
+                "",                     $ units
+                "Local Second",         $ help string
+                0,60,0,                 $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param32 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "SecSincePwrUp",        $ name
+                "",                     $ units
+                "Seconds Since Power Up",    $ help string
+                0,0xffffffff,0,         $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param33 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "UTCTimeZone",          $ name
+                "",                     $ units
+                "UTC Time Zone",        $ help string
+                0,0x60,0x21,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param34 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC1,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "DSTEnable",            $ name
+                "",                     $ units
+                "Enable Daylight Saving Time",    $ help string
+                0,1,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum34 =
+                0,"No DST",
+                1,"Use DST";
+
+        Param1000 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0A00,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Reserved16",           $ name
+                "",                     $ units
+                "Reserved16",           $ help string
+                0,0,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param1001 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0A00,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Reserved32",           $ name
+                "",                     $ units
+                "Reserved32",           $ help string
+                0,0,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param1002 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0A00,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Reserved8",            $ name
+                "",                     $ units
+                "Reserved8",            $ help string
+                0,0,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param1003 =
+                0,
+                ,,
+                0x0200,
+                0xC8,
+                4,
+                "RPI Range",
+                "",
+                "",
+                20000,1000000,100000,
+                ,,,,
+                ,,,,
+                ;
+
+        Param2000 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC7,                   $ UINT
+                2,                      $ Data Size in bytes
+                "Number of application profiles",    $ name
+                "",                     $ units
+                "",                     $ help string
+                3,3,3,                  $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param2001 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0012,                 $ Descriptor
+                0xC7,                   $ UINT
+                2,                      $ Data Size in bytes
+                "Application 1 profile",$ name
+                "",                     $ units
+                "",                     $ help string
+                1,3,1,                  $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum2001 =
+                1,"CIP Security",
+                2,"EtherNet/Ip Transport",
+                3,"EtherNet/Ip Usage";
+
+        Param2002 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0012,                 $ Descriptor
+                0xD3,                   $ DWORD
+                4,                      $ Data Size in bytes
+                "CIP Security features",$ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0x00000032,           $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum2002 =
+                0,"EtherNet/IP Integrity",
+                1,"EtherNet/IP Confidentiality",
+                2,"CIP Authorization",
+                3,"CIP User Authentication",
+                4,"Resource-Constrained CIP Security",
+                5,"EtherNet/IP Pull Model Profile";
+
+        Param2003 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0012,                 $ Descriptor
+                0xC7,                   $ UINT
+                2,                      $ Data Size in bytes
+                "Application 2 profile",$ name
+                "",                     $ units
+                "",                     $ help string
+                1,3,2,                  $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum2003 =
+                1,"CIP Security",
+                2,"EtherNet/Ip Transport",
+                3,"EtherNet/Ip Usage";
+
+        Param2004 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0012,                 $ Descriptor
+                0xD3,                   $ DWORD
+                4,                      $ Data Size in bytes
+                "EtherNet/Ip Transport",$ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0x000000C7,           $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum2004 =
+                0,"UCMM over TCP",
+                1,"UCMM over UDP",
+                2,"Class 3 Connections via TCP",
+                3,"Class 3 Connections via UDP",
+                4,"Class 2 Connections via TCP",
+                5,"Class 2 Connections via UDP",
+                6,"Class 1 Connections",
+                7,"Class 0 Connections";
+
+        Param2005 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0012,                 $ Descriptor
+                0xC7,                   $ UINT
+                2,                      $ Data Size in bytes
+                "Application 3 profile",$ name
+                "",                     $ units
+                "",                     $ help string
+                1,3,3,                  $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum2005 =
+                1,"CIP Security",
+                2,"EtherNet/Ip Transport",
+                3,"EtherNet/Ip Usage";
+
+        Param2006 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0012,                 $ Descriptor
+                0xD3,                   $ DWORD
+                4,                      $ Data Size in bytes
+                "EtherNet/Ip Usage",    $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0x00000003,           $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum2006 =
+                0,"Standard EtherNet/IP Usage",
+                1,"In-Cabinet EtherNet/IP Usage";
+
+[Groups]
+        Revision = 2;
+        Object_Name = "Parameter Group Object";
+        Object_Class_Code = 0x10;
+        MaxInst = 3;
+        Number_Of_Static_Instances = 3;
+        Max_Number_Of_Dynamic_Instances = 0;
+        Group1 =
+                "Monitor",
+                11,
+                1,2,3,4,5,6,7,14,15,16,
+                17;
+        Group2 =
+                "Advanced",
+                6,
+                11,13,18,19,21,22;
+        Group3 =
+                "Time",
+                10,
+                25,26,27,28,29,30,31,32,33,34;
+
+[Assembly]
+        Revision = 2;
+        Object_Name = "Assembly Object";
+        Object_Class_Code = 0x04;
+        Class_Attributes =
+                1,
+                2,
+                3;
+        Instance_Attributes =
+                3,
+                4;
+        Class_Services = 0x0E;
+        Instance_Services =
+                0x0E,
+                0x10;
+        Assem1 =
+                "Status",
+                "20 04 25 00 57 04 30 03",
+                28,
+                0x0000,
+                ,,
+                32,Param1001,
+                32,Param1001,
+                8,Param1,
+                8,Param1002,
+                16,Param2,
+                32,Param14,
+                32,Param15,
+                32,Param16,
+                32,Param17;
+        Assem2 =
+                "Command",
+                "20 04 25 00 28 80 30 03",
+                8,
+                0x0000,
+                ,,
+                1,Param1002,
+                1,Param21,
+                4,Param1002,
+                1,Param18,
+                1,Param19,
+                8,Param1002,
+                16,Param1000,
+                32,Param1001;
+
+        Assem2000 =
+                "Application Profiles", $ name
+                "20 01 24 01 30 19",    $ path to ID obj, Attrib #25
+                ,                       $ size - unspecified
+                0x0000,                 $ reserved
+                ,,                      $ reserved
+                ,Param2000,             $ number of profiles, 3 for this example
+                ,Param2001,             $ profile number for 1st profile
+                ,Param2002,             $ features supported for 1st profile
+                ,Param2003,             $ profile number for 2nd profile
+                ,Param2004,             $ features supported for 2nd profile
+                ,Param2005,             $ profile number for 3rd profile
+                ,Param2006;             $ features supported for 3rd profile
+
+[Connection Manager]
+        Object_Name = "Connection Manager Object";
+        Object_Class_Code = 0x06;
+        Connection1 =
+                0x84010002,             $ 0-15    = supported transport classes
+                                        $ 16      = trigger: cyclic
+                                        $ 17      = trigger: change of state
+                                        $ 18      = trigger: application
+                                        $ 19-23   = trigger: reserved
+                                        $ 24      = application type: listen-only
+                                        $ 25      = application type: input-only
+                                        $ 26      = application type: exclusive-owner
+                                        $ 27      = application type: redundant-owner
+                                        $ 28-30   = reserved
+                                        $ 31      = Direction: Client = 0 / Server = 1
+                0x22750405,             $ 0       = O->T fixed size supported
+                                        $ 1       = O->T variable size supported
+                                        $ 2       = T->O fixed size supported
+                                        $ 3       = T->O variable size supported
+                                        $ 4-5     = O->T number of bytes per slot (obsolete)
+                                        $ 6-7     = T->O number of bytes per slot (obsolete)
+                                        $ 8-10    = O->T Real time transfer format
+                                        $ 11      = reserved
+                                        $ 12-14   = T->O Real time transfer format
+                                        $ 15      = reserved
+                                        $ 16      = O->T connection type: NULL
+                                        $ 17      = O->T connection type: MULTICAST
+                                        $ 18      = O->T connection type: POINT2POINT
+                                        $ 19      = O->T connection type: reserved
+                                        $ 20      = T->O connection type: NULL
+                                        $ 21      = T->O connection type: MULTICAST
+                                        $ 22      = T->O connection type: POINT2POINT
+                                        $ 23      = T->O connection type: reserved
+                                        $ 24      = O->T priority: LOW
+                                        $ 25      = O->T priority: HIGH
+                                        $ 26      = O->T priority: SCHEDULED
+                                        $ 27      = O->T priority: reserved
+                                        $ 28      = T->O priority: LOW
+                                        $ 29      = T->O priority: HIGH
+                                        $ 30      = T->O priority: SCHEDULED
+                                        $ 31      = T->O priority: reserved
+                Param1003,8,Assem2,     $ O->T RPI, size, format
+                Param1003,28,Assem1,    $ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                ,,                      $ target config size, format
+                "Exclusive Owner",      $ Connection Name
+                "",                     $ help string
+                "20 04 24 00 2D 00 2B 80 2D 00 57 04";    $ Path
+        Connection2 =
+                0x01010002,             $ 0-15    = supported transport classes
+                                        $ 16      = trigger: cyclic
+                                        $ 17      = trigger: change of state
+                                        $ 18      = trigger: application
+                                        $ 19-23   = trigger: reserved
+                                        $ 24      = application type: listen-only
+                                        $ 25      = application type: input-only
+                                        $ 26      = application type: exclusive-owner
+                                        $ 27      = application type: redundant-owner
+                                        $ 28-30   = reserved
+                                        $ 31      = Direction: Client = 0 / Server = 1
+                0x22640305,             $ 0       = O->T fixed size supported
+                                        $ 1       = O->T variable size supported
+                                        $ 2       = T->O fixed size supported
+                                        $ 3       = T->O variable size supported
+                                        $ 4-5     = O->T number of bytes per slot (obsolete)
+                                        $ 6-7     = T->O number of bytes per slot (obsolete)
+                                        $ 8-10    = O->T Real time transfer format
+                                        $ 11      = reserved
+                                        $ 12-14   = T->O Real time transfer format
+                                        $ 15      = reserved
+                                        $ 16      = O->T connection type: NULL
+                                        $ 17      = O->T connection type: MULTICAST
+                                        $ 18      = O->T connection type: POINT2POINT
+                                        $ 19      = O->T connection type: reserved
+                                        $ 20      = T->O connection type: NULL
+                                        $ 21      = T->O connection type: MULTICAST
+                                        $ 22      = T->O connection type: POINT2POINT
+                                        $ 23      = T->O connection type: reserved
+                                        $ 24      = O->T priority: LOW
+                                        $ 25      = O->T priority: HIGH
+                                        $ 26      = O->T priority: SCHEDULED
+                                        $ 27      = O->T priority: reserved
+                                        $ 28      = T->O priority: LOW
+                                        $ 29      = T->O priority: HIGH
+                                        $ 30      = T->O priority: SCHEDULED
+                                        $ 31      = T->O priority: reserved
+                Param1003,0,,           $ O->T RPI, size, format
+                Param1003,28,Assem1,    $ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                ,,                      $ target config size, format
+                "Listen Only",          $ Connection Name
+                "",                     $ help string
+                "20 04 24 00 2D 00 ED 00 2D 00 57 04";    $ Path
+
+[Port]
+        Revision = 2;
+        Object_Name = "Port Object";
+        Object_Class_Code = 0xF4;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+        Port1 =
+                TCP,
+                "Port 2 - 1000BASE-T",
+                "20 F5 24 02",
+                2,
+                0x05,                   $ routing capabilities: Unconnected and Class 1, 3 incoming
+                {"20 47 24 01","20 48 24 01","20 5E 24 02","20 F5 24 02","20 F6 24 01","20 F6 24 02"};
+
+        Port2 =
+                TCP,
+                "Port 3 - 10BASE-T1S",
+                "20 F5 24 03",
+                3,
+                0x0a,                   $ routing capabilities: Unconnected and Class 1, 3 outgoing
+                {"20 48 24 01","20 5E 24 03","20 F5 24 03","20 F6 24 03"};
+
+[Capacity]
+        MaxIOConnections = 2;
+        MaxMsgConnections = 16;
+        MaxConsumersPerMcast = 32;      $ Max consumers per multicast cnx
+        TSpec1 = TxRx, 1, 10000;        $ Packets per sec @ 1 bytes
+        TSpec2 = TxRx, 508, 6000;       $ Packets per sec @ 508 bytes
+        1_NumberOfTCPIPConnections = 16;$ Total number of TCP/IP connections supported by CIP router device
+        1_TCPIPConnectionReuseTime = 30;$ Sec. TCP/IP connection not avail after TCP/IP attempt to an IP address not present
+        1_TCPIPCIPInactivityTimeout = 120;    $ Sec. TCP/IP connection not avail after TCP/IP attempt to a non-EtherNet/IP
+        1_TCPIPInactivityTimeout = 120; $ Sec. TCP/IP connection remains open with no activity.
+
+[DLR Class]
+        Revision = 3;
+        Object_Name = "Device Level Ring Object";
+        Object_Class_Code = 0x47;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[TCP/IP Interface Class]
+        Revision = 4;
+        Object_Name = "TCP/IP Interface Object";
+        Object_Class_Code = 0xF5;
+        MaxInst = 3;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+        IANA_Port_Admin2 =
+                "Ethernet-IP-1",
+                2222,
+                17,
+                1,
+                1,
+                "Ethernet-IP-2",
+                44818,
+                17,
+                1,
+                1,
+                "Ethernet-IP-2",
+                44818,
+                6,
+                1,
+                1,
+                "Ethernet-IP-s",
+                2221,
+                17,
+                1,
+                1,
+                "Ethernet-IP-s",
+                2221,
+                6,
+                1,
+                1;
+        IANA_Port_Admin3 =
+                "Ethernet-IP-1",
+                2222,
+                17,
+                1,
+                1,
+                "Ethernet-IP-2",
+                44818,
+                17,
+                1,
+                1;
+
+[Ethernet Link Class]
+        Revision = 4;
+        Object_Name = "Ethernet Link Object";
+        Object_Class_Code = 0xF6;
+        MaxInst = 3;
+        Number_Of_Static_Instances = 3;
+        Max_Number_Of_Dynamic_Instances = 0;
+        InterfaceLabel1 = "1000Base-TX Port 1";
+        InterfaceLabel2 = "1000Base-TX Port 2";
+        InterfaceLabel3 = "10Base-T1S";
+        InterfaceType1 = 2;
+        InterfaceType2 = 2;
+        InterfaceType3 = 4;
+
+[Identity Class]
+        Revision = 2;
+        Object_Name = "Identity Object";
+        Object_Class_Code = 0x01;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Message Router Class]
+        Revision = 1;
+        Object_Name = "Message Router Object";
+        Object_Class_Code = 0x02;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[File Class]
+        Revision = 3;
+        Object_Name = "File Object";
+        Object_Class_Code = 0x37;
+        MaxInst = 476;
+        Number_Of_Static_Instances = 5;
+        Max_Number_Of_Dynamic_Instances = 10;
+
+[Time Sync Class]
+        Revision = 5;
+        Object_Name = "Time Sync Object";
+        Object_Class_Code = 0x43;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[QoS Class]
+        Revision = 1;
+        Object_Name = "QoS Object";
+        Object_Class_Code = 0x48;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[CIP Security Class]
+        Revision = 4;
+        Object_Name = "CIP Security Object";
+        Object_Class_Code = 0x5D;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[EtherNet/IP Security Class]
+        Revision = 5;
+        Object_Name = "EtherNet/IP Security Object";
+        Object_Class_Code = 0x5E;
+        MaxInst = 3;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Certificate Management Class]
+        Revision = 3;
+        Object_Name = "Certificate Management Object";
+        Object_Class_Code = 0x5F;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 1;
+
+[Ingress Egress Class]
+        Revision = 1;
+        Object_Name = "Ingress Egress Object";
+        Object_Class_Code = 0x63;
+        MaxInst = 3;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+        1_Ingress_TCP_Ports = ;
+        1_Ingress_UDP_Ports = ;
+        1_Ingress_Egress_Rules =
+                100,                    $ Max Number of Rules
+                16384,                  $ Max Buffer Space for Rules
+                Yes;                    $ Support Egress Rules
+
+[SELECT LINE LINK Class]
+        Revision = 1;
+        Object_Name = "Select Line Link Object";
+        Object_Class_Code = 0x10F;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[LLDP Management Class]
+        Revision = 1;
+        Object_Name = "LLDP Management Object";
+        Object_Class_Code = 0x109;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[LLDP Data Table Class]
+        Revision = 1;
+        Object_Name = "LLDP Data Table Object";
+        Object_Class_Code = 0x10A;
+        MaxInst = 48;
+        Number_Of_Static_Instances = 0;
+        Max_Number_Of_Dynamic_Instances = 48;
+
+[In-Cabinet Actual Topology Class]
+        Revision = 1;
+        Object_Name = "In-Cabinet Actual Topology Object";
+        Object_Class_Code = 0x0110;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[In-Cabinet Commissioning Class]
+        Revision = 1;
+        Object_Name = "In-Cabinet Commissioning Object";
+        Object_Class_Code = 0x0111;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Class139_Vendor1]
+        Revision = 1;
+        Object_Name = "Wall Clock Object";
+        Object_Class_Code = 0x08B;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Class161_Vendor1]
+        Revision = 1;
+        Object_Name = "NVS Object";
+        Object_Class_Code = 0xA1;
+        MaxInst = 1124;
+        Number_Of_Static_Instances = 12;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Class895_Vendor1]
+        Revision = 1;
+        Object_Name = "Data Aggregation Object";
+        Object_Class_Code = 0x037F;
+        MaxInst = 39;
+        Number_Of_Static_Instances = 0;
+        Max_Number_Of_Dynamic_Instances = 39;
+
+[Class948_Vendor1]
+        Revision = 1;
+        Object_Name = "Security Event Configuration Object";
+        Object_Class_Code = 0x03b4;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Class1044_Vendor1]
+        Revision = 1;
+        Object_Name = "Predictive Maintenance Component Object";
+        Object_Class_Code = 0x0414;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Class1045_Vendor1]
+        Revision = 1;
+        Object_Name = "Predictive Maintenance Group Object";
+        Object_Class_Code = 0x0415;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Class1062_Vendor1]
+        Revision = 1;
+        Object_Name = "Power Supply Object";
+        Object_Class_Code = 0x0426;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Class1959_Vendor1]
+        Revision = 1;
+        Object_Name = "Event Proxy Server Object";
+        Object_Class_Code = 0x03BF;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
