@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1732E_8IOL_A113" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 20:48:36 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1732E_8IOL_A113" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Fault" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Status" DataType="IO_RA_1732E_8IOL_Status" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch0DiagEvent" DataType="IO_RA_1732E_8IOL_EventTimestamp" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch1DiagEvent" DataType="IO_RA_1732E_8IOL_EventTimestamp" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch2DiagEvent" DataType="IO_RA_1732E_8IOL_EventTimestamp" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch3DiagEvent" DataType="IO_RA_1732E_8IOL_EventTimestamp" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch4DiagEvent" DataType="IO_RA_1732E_8IOL_EventTimestamp" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch5DiagEvent" DataType="IO_RA_1732E_8IOL_EventTimestamp" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch6DiagEvent" DataType="IO_RA_1732E_8IOL_EventTimestamp" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch7DiagEvent" DataType="IO_RA_1732E_8IOL_EventTimestamp" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LocalClockOffset" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="OffsetTimestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="GrandmasterClockId" DataType="SINT" Dimension="8" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch0Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch1Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch2Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch3Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch4Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch5Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch6Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch7Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Bits" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bit0 = Synchronized]]>
+</Description>
+</Member>
+<Member Name="Pad1" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pad2" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pad3" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch0Data" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch1Data" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch2Data" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch3Data" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch4Data" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch5Data" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch6Data" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch7Data" DataType="SINT" Dimension="32" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_Status"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_EventTimestamp"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_EventTimestamp"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_EventTimestamp"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_EventTimestamp"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_EventTimestamp"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_EventTimestamp"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_EventTimestamp"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_8IOL_EventTimestamp"/>
+</Dependencies>
+</DataType>
+<DataType Name="IO_RA_1732E_8IOL_EventTimestamp" Family="NoFamily" Class="User">
+<Members>
+<Member Name="SequenceCount" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Qualifier" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Source0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Qualifier" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Qualifier.0]]>
+</Description>
+</Member>
+<Member Name="Source1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Qualifier" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Qualifier.1]]>
+</Description>
+</Member>
+<Member Name="Source2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Qualifier" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Qualifier.2]]>
+</Description>
+</Member>
+<Member Name="Location" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Qualifier" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Qualifier.3]]>
+</Description>
+</Member>
+<Member Name="Type0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Qualifier" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Qualifier.4]]>
+</Description>
+</Member>
+<Member Name="Type1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Qualifier" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Qualifier.5]]>
+</Description>
+</Member>
+<Member Name="Mode0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Qualifier" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Qualifier.6]]>
+</Description>
+</Member>
+<Member Name="Mode1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Qualifier" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Qualifier.7]]>
+</Description>
+</Member>
+<Member Name="Code" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Timestamp" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1732E_8IOL_Status" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Ch0Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel 0 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ch0Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.0]]>
+</Description>
+</Member>
+<Member Name="Ch0ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.1]]>
+</Description>
+</Member>
+<Member Name="Ch0ConfigurationInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.2]]>
+</Description>
+</Member>
+<Member Name="Ch0ConfigurationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.3]]>
+</Description>
+</Member>
+<Member Name="Ch0KeyingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.4]]>
+</Description>
+</Member>
+<Member Name="Ch0ShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.5]]>
+</Description>
+</Member>
+<Member Name="Ch0DataInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.6]]>
+</Description>
+</Member>
+<Member Name="Ch0PowerFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.7]]>
+</Description>
+</Member>
+<Member Name="Ch0ClampAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.8]]>
+</Description>
+</Member>
+<Member Name="Ch0NoIOSize" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.9]]>
+</Description>
+</Member>
+<Member Name="Ch0Fallback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch0Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch0Status.10]]>
+</Description>
+</Member>
+<Member Name="Ch1Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel 1 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ch1Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.0]]>
+</Description>
+</Member>
+<Member Name="Ch1ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.1]]>
+</Description>
+</Member>
+<Member Name="Ch1ConfigurationInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.2]]>
+</Description>
+</Member>
+<Member Name="Ch1ConfigurationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.3]]>
+</Description>
+</Member>
+<Member Name="Ch1KeyingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.4]]>
+</Description>
+</Member>
+<Member Name="Ch1ShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.5]]>
+</Description>
+</Member>
+<Member Name="Ch1DataInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.6]]>
+</Description>
+</Member>
+<Member Name="Ch1PowerFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.7]]>
+</Description>
+</Member>
+<Member Name="Ch1ClampAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.8]]>
+</Description>
+</Member>
+<Member Name="Ch1NoIOSize" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.9]]>
+</Description>
+</Member>
+<Member Name="Ch1Fallback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch1Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch1Status.10]]>
+</Description>
+</Member>
+<Member Name="Ch2Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel 2 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ch2Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.0]]>
+</Description>
+</Member>
+<Member Name="Ch2ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.1]]>
+</Description>
+</Member>
+<Member Name="Ch2ConfigurationInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.2]]>
+</Description>
+</Member>
+<Member Name="Ch2ConfigurationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.3]]>
+</Description>
+</Member>
+<Member Name="Ch2KeyingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.4]]>
+</Description>
+</Member>
+<Member Name="Ch2ShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.5]]>
+</Description>
+</Member>
+<Member Name="Ch2DataInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.6]]>
+</Description>
+</Member>
+<Member Name="Ch2PowerFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.7]]>
+</Description>
+</Member>
+<Member Name="Ch2ClampAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.8]]>
+</Description>
+</Member>
+<Member Name="Ch2NoIOSize" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.9]]>
+</Description>
+</Member>
+<Member Name="Ch2Fallback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch2Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch2Status.10]]>
+</Description>
+</Member>
+<Member Name="Ch3Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel 3 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ch3Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.0]]>
+</Description>
+</Member>
+<Member Name="Ch3ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.1]]>
+</Description>
+</Member>
+<Member Name="Ch3ConfigurationInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.2]]>
+</Description>
+</Member>
+<Member Name="Ch3ConfigurationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.3]]>
+</Description>
+</Member>
+<Member Name="Ch3KeyingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.4]]>
+</Description>
+</Member>
+<Member Name="Ch3ShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.5]]>
+</Description>
+</Member>
+<Member Name="Ch3DataInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.6]]>
+</Description>
+</Member>
+<Member Name="Ch3PowerFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.7]]>
+</Description>
+</Member>
+<Member Name="Ch3ClampAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.8]]>
+</Description>
+</Member>
+<Member Name="Ch3NoIOSize" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.9]]>
+</Description>
+</Member>
+<Member Name="Ch3Fallback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch3Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch3Status.10]]>
+</Description>
+</Member>
+<Member Name="Ch4Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel 4 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ch4Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.0]]>
+</Description>
+</Member>
+<Member Name="Ch4ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.1]]>
+</Description>
+</Member>
+<Member Name="Ch4ConfigurationInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.2]]>
+</Description>
+</Member>
+<Member Name="Ch4ConfigurationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.3]]>
+</Description>
+</Member>
+<Member Name="Ch4KeyingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.4]]>
+</Description>
+</Member>
+<Member Name="Ch4ShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.5]]>
+</Description>
+</Member>
+<Member Name="Ch4DataInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.6]]>
+</Description>
+</Member>
+<Member Name="Ch4PowerFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.7]]>
+</Description>
+</Member>
+<Member Name="Ch4ClampAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.8]]>
+</Description>
+</Member>
+<Member Name="Ch4NoIOSize" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.9]]>
+</Description>
+</Member>
+<Member Name="Ch4Fallback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch4Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch4Status.10]]>
+</Description>
+</Member>
+<Member Name="Ch5Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel 5 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ch5Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.0]]>
+</Description>
+</Member>
+<Member Name="Ch5ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.1]]>
+</Description>
+</Member>
+<Member Name="Ch5ConfigurationInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.2]]>
+</Description>
+</Member>
+<Member Name="Ch5ConfigurationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.3]]>
+</Description>
+</Member>
+<Member Name="Ch5KeyingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.4]]>
+</Description>
+</Member>
+<Member Name="Ch5ShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.5]]>
+</Description>
+</Member>
+<Member Name="Ch5DataInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.6]]>
+</Description>
+</Member>
+<Member Name="Ch5PowerFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.7]]>
+</Description>
+</Member>
+<Member Name="Ch5ClampAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.8]]>
+</Description>
+</Member>
+<Member Name="Ch5NoIOSize" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.9]]>
+</Description>
+</Member>
+<Member Name="Ch5Fallback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch5Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch5Status.10]]>
+</Description>
+</Member>
+<Member Name="Ch6Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel 6 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ch6Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.0]]>
+</Description>
+</Member>
+<Member Name="Ch6ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.1]]>
+</Description>
+</Member>
+<Member Name="Ch6ConfigurationInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.2]]>
+</Description>
+</Member>
+<Member Name="Ch6ConfigurationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.3]]>
+</Description>
+</Member>
+<Member Name="Ch6KeyingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.4]]>
+</Description>
+</Member>
+<Member Name="Ch6ShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.5]]>
+</Description>
+</Member>
+<Member Name="Ch6DataInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.6]]>
+</Description>
+</Member>
+<Member Name="Ch6PowerFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.7]]>
+</Description>
+</Member>
+<Member Name="Ch6ClampAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.8]]>
+</Description>
+</Member>
+<Member Name="Ch6NoIOSize" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.9]]>
+</Description>
+</Member>
+<Member Name="Ch6Fallback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch6Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch6Status.10]]>
+</Description>
+</Member>
+<Member Name="Ch7Status" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel 7 status (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ch7Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.0]]>
+</Description>
+</Member>
+<Member Name="Ch7ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.1]]>
+</Description>
+</Member>
+<Member Name="Ch7ConfigurationInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.2]]>
+</Description>
+</Member>
+<Member Name="Ch7ConfigurationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.3]]>
+</Description>
+</Member>
+<Member Name="Ch7KeyingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.4]]>
+</Description>
+</Member>
+<Member Name="Ch7ShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.5]]>
+</Description>
+</Member>
+<Member Name="Ch7DataInvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.6]]>
+</Description>
+</Member>
+<Member Name="Ch7PowerFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.7]]>
+</Description>
+</Member>
+<Member Name="Ch7ClampAlarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.8]]>
+</Description>
+</Member>
+<Member Name="Ch7NoIOSize" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.9]]>
+</Description>
+</Member>
+<Member Name="Ch7Fallback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Ch7Status" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ch7Status.10]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
