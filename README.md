@@ -19,7 +19,7 @@ Content
 - **Lx**: Logix helpers and utilities.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
-- **Modbus TCP** (MBTCP_): Modbus TCP client driver.
+- **MBTCP**: Modbus TCP client driver.
 - **Numeric** (N_): Forms string representations of various types of numbers.
 - **Parameter** (Par_): Experimental generic parameter handling.
 - **Recipe** (Rec_)
