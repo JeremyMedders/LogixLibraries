@@ -15,13 +15,13 @@ Content
 - **Dvc**: Device drivers.
 - **Filter** (Filter_)
 - **IO**: Supporting device IO data types / assemblies.
+- **Lp**: Process blocks.
 - **Lx**: Logix helpers and utilities.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
 - **Modbus TCP** (MBTCP_): Modbus TCP client driver.
 - **Numeric** (N_): Forms string representations of various types of numbers.
 - **Parameter** (Par_): Experimental generic parameter handling.
-- **Process** (Op_): Lightweight PAx-style blocks.
 - **Recipe** (Rec_)
 - **RTC** (RTC_): Precision pulse/timing utilities.
 - **String** (Str_): String utilities.
