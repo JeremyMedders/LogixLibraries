@@ -16,7 +16,7 @@ Content
 - **Filter** (Filter_)
 - **IO**: Supporting device IO data types / assemblies.
 - **Lp**: Process blocks.
-- **Lx**: Logix helpers and utilities.
+- **Lx**: Logix-specific content, including generic message helpers and utilities.
 - **Math** (Math_): Assorted functions.
 - **Message** (Msg_): Generic message helpers and utilities.
 - **MBTCP**: Modbus TCP client driver.
