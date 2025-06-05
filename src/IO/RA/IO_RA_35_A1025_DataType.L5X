@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_35_A1025" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 20:10:36 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_35_A1025" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ConnectionStatus" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ConnectionStatus: Bitmask of connection status (overlay).]]>
+</Description>
+</Member>
+<Member Name="RunMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ConnectionStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ConnectionStatus.0: Connection is established and the producing device is actively emitting data.]]>
+</Description>
+</Member>
+<Member Name="ConnectionFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ConnectionStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ConnectionStatus.1: Connection is faulted and the state of the producing device is unknown]]>
+</Description>
+</Member>
+<Member Name="DriveStatus" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus: Bitmask of status bits (overlay).]]>
+</Description>
+</Member>
+<Member Name="Ready" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.0: Motor control is ready to run.]]>
+</Description>
+</Member>
+<Member Name="Running" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.1: Motor control is running.]]>
+</Description>
+</Member>
+<Member Name="CommandedDirection" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.2: Current commanded direction. 0: Forward, 1: Reverse.]]>
+</Description>
+</Member>
+<Member Name="ActualDirection" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.3: Actual running direction: 0: Forward, 1: Reverse.]]>
+</Description>
+</Member>
+<Member Name="Accelerating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.4: Motor control is accelerating.]]>
+</Description>
+</Member>
+<Member Name="Decelerating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.5: Motor control is decelerating.]]>
+</Description>
+</Member>
+<Member Name="AtReferenceSpeed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.6: Motor control is running and the current velocity is the velocity reference.]]>
+</Description>
+</Member>
+<Member Name="Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.7: Fault present.]]>
+</Description>
+</Member>
+<Member Name="SafetyIn0Monitor" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.8: Safety input 0 state. 0: Off, 1: On.]]>
+</Description>
+</Member>
+<Member Name="SafetyIn1Monitor" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.9: Safety input 1 state. 0: Off, 1: On.]]>
+</Description>
+</Member>
+<Member Name="SafetyIn2Monitor" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.10: Safety input 2 state. 0: Off, 1: On.]]>
+</Description>
+</Member>
+<Member Name="SafetyIn3Monitor" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.11: Safety input 3 state. 0: Off, 1: On.]]>
+</Description>
+</Member>
+<Member Name="SafetyOutMonitor" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.12: Safety output 0 state.]]>
+</Description>
+</Member>
+<Member Name="DriveStatusBit13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.13: Unused.]]>
+</Description>
+</Member>
+<Member Name="SafeTorqueEnabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.14: Safety logic is permitting motor torque.]]>
+</Description>
+</Member>
+<Member Name="SafetyFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.15: Safety specific fault present.]]>
+</Description>
+</Member>
+<Member Name="DigIn0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="16" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.16: Standard input 0 state.]]>
+</Description>
+</Member>
+<Member Name="DigIn1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="17" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.17: Standard input 1 state.]]>
+</Description>
+</Member>
+<Member Name="DigIn2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="18" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.18: Standard input 2 state.]]>
+</Description>
+</Member>
+<Member Name="DigIn3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="19" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.19: Standard input 3 state.]]>
+</Description>
+</Member>
+<Member Name="DigInOut0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="20" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.20: Self-configuring I/O point 0 state.]]>
+</Description>
+</Member>
+<Member Name="DigInOut1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="21" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.21: Self-configuring I/O point 1 state.]]>
+</Description>
+</Member>
+<Member Name="DriveStatusBit22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="22" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.22: Unused.]]>
+</Description>
+</Member>
+<Member Name="DriveStatusBit23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="23" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.23: Unused.]]>
+</Description>
+</Member>
+<Member Name="KeypadButtonF0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="24" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.24: State of front panel keypad button F0 (Hand/Auto).]]>
+</Description>
+</Member>
+<Member Name="KeypadButtonF1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="25" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.25: State of front panel keypad button F1 (Forward/Reverse).]]>
+</Description>
+</Member>
+<Member Name="KeypadButtonF2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="26" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.26: State of front panel keypad button F2 (Jog).]]>
+</Description>
+</Member>
+<Member Name="KeypadHandMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="27" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.27: Front panel keypad is in the Hand state.]]>
+</Description>
+</Member>
+<Member Name="ThreePhaseACPowerPresent" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="28" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.28: Three-phase AC power detected on the power input connector.]]>
+</Description>
+</Member>
+<Member Name="DisconnectClosed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="29" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.29: State of the AC power disconnect switch. 0: Open, 1: Closed.]]>
+</Description>
+</Member>
+<Member Name="EMBrakeReleased" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="30" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.30: EM brake is released (energized).]]>
+</Description>
+</Member>
+<Member Name="Alarm" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DriveStatus" BitNumber="31" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DriveStatus.31: Active alarm condition present.]]>
+</Description>
+</Member>
+<Member Name="OutputFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Frequency of the output to the motor (Hz).]]>
+</Description>
+</Member>
+<Member Name="OutputVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Voltage of the output to the motor (VAC).]]>
+</Description>
+</Member>
+<Member Name="OutputCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current being output to the motor (A).]]>
+</Description>
+</Member>
+<Member Name="OutputPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Power being output to the motor (kW).]]>
+</Description>
+</Member>
+<Member Name="DCBusVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Voltage of the internal DC bus (VDC).]]>
+</Description>
+</Member>
+<Member Name="DriveHeatsinkTemperature" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Temperature of the motor output heatsink (C).]]>
+</Description>
+</Member>
+<Member Name="EncoderCounts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Raw encoder count (feedback).]]>
+</Description>
+</Member>
+<Member Name="MotorOverloadLevel" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Motor thermal overload level (%).]]>
+</Description>
+</Member>
+<Member Name="TripFaultCode" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Code of the first fault that caused the device to enter the faulted state.]]>
+</Description>
+</Member>
+<Member Name="Position" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current actual position of the feedback device.]]>
+</Description>
+</Member>
+<Member Name="Velocity" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current estimated or measured velocity of the motor.]]>
+</Description>
+</Member>
+<Member Name="Pad0" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pad1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DLXDigitalOut" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut (overlay).]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.0]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.1]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.2]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.3]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.4]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.5]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.6]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.7]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut8" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.8]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut9" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.9]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.10]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.11]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.12]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.13]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.14]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOut15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.15]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="16" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.16: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="17" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.17: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="18" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.18: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="19" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.19: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="20" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.20: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="21" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.21: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="22" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.22: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="23" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.23: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="24" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.24: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="25" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.25: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="26" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.26: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="27" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.27: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="28" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.28: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="29" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.29: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalOutBit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="30" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.30: Unused.]]>
+</Description>
+</Member>
+<Member Name="DLXEnabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalOut" BitNumber="31" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalOut.31]]>
+</Description>
+</Member>
+<Member Name="DLXAnalogOut0" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DLXAnalogOut1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DLXAnalogOut2" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DLXAnalogOut3" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

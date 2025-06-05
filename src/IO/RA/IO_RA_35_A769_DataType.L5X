@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_35_A769" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 20:10:44 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_35_A769" Family="NoFamily" Class="User">
+<Members>
+<Member Name="LogicCommand" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand (overlay).]]>
+</Description>
+</Member>
+<Member Name="Stop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.0]]>
+</Description>
+</Member>
+<Member Name="Start" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.1]]>
+</Description>
+</Member>
+<Member Name="Run" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.2]]>
+</Description>
+</Member>
+<Member Name="Jog" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.3]]>
+</Description>
+</Member>
+<Member Name="Forward" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.4]]>
+</Description>
+</Member>
+<Member Name="Reverse" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.5]]>
+</Description>
+</Member>
+<Member Name="ClearFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.7]]>
+</Description>
+</Member>
+<Member Name="AccelBit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.8]]>
+</Description>
+</Member>
+<Member Name="AccelBit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.9]]>
+</Description>
+</Member>
+<Member Name="AccelBit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.10]]>
+</Description>
+</Member>
+<Member Name="VelocityBit0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.13]]>
+</Description>
+</Member>
+<Member Name="VelocityBit1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.14]]>
+</Description>
+</Member>
+<Member Name="VelocityBit2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.15]]>
+</Description>
+</Member>
+<Member Name="DigOut0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="20" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.20]]>
+</Description>
+</Member>
+<Member Name="DigOut1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="21" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.21]]>
+</Description>
+</Member>
+<Member Name="EMBrakeManual" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="30" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.30]]>
+</Description>
+</Member>
+<Member Name="EMBrakeRelease" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogicCommand" BitNumber="31" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogicCommand.31]]>
+</Description>
+</Member>
+<Member Name="CommandedVelocity" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DLXDigitalIn" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn (overlay).]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn0" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.0]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.1]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.2]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.3]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.4]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn5" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.5]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn6" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.6]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn7" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.7]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn8" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.8]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn9" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.9]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.10]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.11]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.12]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.13]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.14]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalIn15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.15]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="16" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.16: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="17" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.17: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="18" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.18: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="19" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.19: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="20" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.20: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="21" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.21: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="22" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.22: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="23" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.23: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="24" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.24: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="25" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.25: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="26" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.26: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="27" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.27: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="28" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.28: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="29" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.29: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="30" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.30: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXDigitalInBit31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DLXDigitalIn" BitNumber="31" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DLXDigitalIn.31: Unused]]>
+</Description>
+</Member>
+<Member Name="DLXAnalogIn0" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DLXAnalogIn1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DLXAnalogIn2" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="DLXAnalogIn3" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
