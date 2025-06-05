@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Logix USB Monitor-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LxUSBObject" TargetType="AddOnInstructionDefinition" TargetRevision="3.0 " TargetLastEdited="2025-06-05T03:40:28.435Z" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 22:40:44 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Name="LxIOModule" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4: Current state of this instance.]]>
+</Description>
+</Member>
+<Member Name="StatusBits" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits indicate the status of this instance (overlay).]]>
+</Description>
+</Member>
+<Member Name="Standby" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.0: Controller is powering up.]]>
+</Description>
+</Member>
+<Member Name="Faulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.1: Indicates whether any of this module's connections have failed.]]>
+</Description>
+</Member>
+<Member Name="Validating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.2: Connection integrity is being verified.]]>
+</Description>
+</Member>
+<Member Name="Connecting" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.3: Connections are being established with the module.]]>
+</Description>
+</Member>
+<Member Name="Online" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.4: All connections to the module are established and active.]]>
+</Description>
+</Member>
+<Member Name="ShuttingDown" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.5: All connections are shutting down.]]>
+</Description>
+</Member>
+<Member Name="Inhibited" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.6: The module is inhibited.]]>
+</Description>
+</Member>
+<Member Name="Waiting" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.7: This module's parent is not running.]]>
+</Description>
+</Member>
+<Member Name="Reconfiguring" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.8: The module is reconfiguring its connections.]]>
+</Description>
+</Member>
+<Member Name="FirmwareUpdating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.9: Firmware supervisor is attempting to flash the module.]]>
+</Description>
+</Member>
+<Member Name="Configuring" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.10: Controller is configuring the module.]]>
+</Description>
+</Member>
+<Member Name="Offline" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.11: The module is neither connected nor inhibited.]]>
+</Description>
+</Member>
+<Member Name="FaultCode" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5: Module fault code.]]>
+</Description>
+</Member>
+<Member Name="FaultInfo" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 6: Module fault detail.]]>
+</Description>
+</Member>
+<Member Name="Mode" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7: Present mode of this module.]]>
+</Description>
+</Member>
+<Member Name="Instance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 14: IO map instance.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="LxUSB" Family="NoFamily" Class="User">
+<Members>
+<Member Name="LogicalAddress" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 1]]>
+</Description>
+</Member>
+<Member Name="State" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 2. 0: Initializing, 1: Fault, 2: Initialized, 3: Configured, 4: Ready.]]>
+</Description>
+</Member>
+<Member Name="Suspended" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 3]]>
+</Description>
+</Member>
+<Member Name="Disabled" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="BusSpeed" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5: Bus speed. 0: Low, 1: Full, 2: High.]]>
+</Description>
+</Member>
+<Member Name="OTGSupport" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 6]]>
+</Description>
+</Member>
+<Member Name="Mode" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7. 0: Slave, 1: Host.]]>
+</Description>
+</Member>
+<Member Name="IFCounterLength" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 8: Size of Interface Counters struct (bytes).]]>
+</Description>
+</Member>
+<Member Name="IFRxGood" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 9: Interface counter.]]>
+</Description>
+</Member>
+<Member Name="IFRxBad" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 9: Interface counter.]]>
+</Description>
+</Member>
+<Member Name="IFRxDropped" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 9: Interface counter.]]>
+</Description>
+</Member>
+<Member Name="IFTxGood" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 9: Interface counter.]]>
+</Description>
+</Member>
+<Member Name="IFTxRetry" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 9: Interface counter.]]>
+</Description>
+</Member>
+<Member Name="IFTxDropped" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 9: Interface counter.]]>
+</Description>
+</Member>
+<Member Name="MCType" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Media counter.]]>
+</Description>
+</Member>
+<Member Name="MCLength" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Size of Media Counter struct (bytes).]]>
+</Description>
+</Member>
+<Member Name="MCRxBytes" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Media counter.]]>
+</Description>
+</Member>
+<Member Name="MCRxDroppedBytes" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Media counter.]]>
+</Description>
+</Member>
+<Member Name="MCTxBytes" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Media counter.]]>
+</Description>
+</Member>
+<Member Name="MCTxDroppedBytes" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Media counter.]]>
+</Description>
+</Member>
+<Member Name="FIFOOverflows" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Media counter.]]>
+</Description>
+</Member>
+<Member Name="FIFOUnderruns" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10: Media counter.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Name="LpPulse" Revision="1.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2020-06-26T18:22:41.463Z" CreatedBy="APEX\Jeremy" EditedDate="2025-01-22T20:47:43.421Z" EditedBy="APEX\Jeremy" SoftwareRevision="v37.00"
+>
+<Description>
+<![CDATA[Pulse Generator]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Inp_Enable" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Inp_Interval" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulse interval (milliseconds).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[1000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Enabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Out" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Pulsed output.]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="OSR" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TStart" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TNow" DataType="LINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="LINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	LpPulse]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[GSV(WallClockTime, , CurrentValue, TNow);]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (Inp_Enable & NOT OSR OR Out) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	TStart := TNow;]]>
+</Line>
+<Line Number="9">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="10">
+<![CDATA[OSR := Inp_Enable;]]>
+</Line>
+<Line Number="11">
+<![CDATA[]]>
+</Line>
+<Line Number="12">
+<![CDATA[Sts_Enabled := Inp_Enable;]]>
+</Line>
+<Line Number="13">
+<![CDATA[Out := Inp_Enable & (TNow - TStart >= Inp_Interval * 1000);]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	LpPulse]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[OSR := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Out := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Name="LxIOPath" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-10-01T20:55:32.953Z" CreatedBy="APEX\Jeremy" EditedDate="2025-01-22T23:39:30.990Z" EditedBy="APEX\Jeremy" SoftwareRevision="v37.00">
+<Description>
+<![CDATA[IO Path]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="IO" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="Path" TagType="Base" DataType="STRING" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Inst" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="INT" DataType="INT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	LxIOPath]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[GSV(Module, IO, INSTANCE, Inst);]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[if (Inst <> 1) then]]>
+</Line>
+<Line Number="8">
+<![CDATA[	GSV(Module, IO, Path, Path.DATA[0]);]]>
+</Line>
+<Line Number="9">
+<![CDATA[	COP(Path.DATA[0], INT, 1);]]>
+</Line>
+<Line Number="10">
+<![CDATA[	Path.LEN := INT;]]>
+</Line>
+<Line Number="11">
+<![CDATA[	COP(Path.DATA[2], Path.DATA[0], 82);]]>
+</Line>
+<Line Number="12">
+<![CDATA[else // path is 'Local']]>
+</Line>
+<Line Number="13">
+<![CDATA[	Path.LEN := 4;]]>
+</Line>
+<Line Number="14">
+<![CDATA[	Path.DATA[0] := 16#1F;]]>
+</Line>
+<Line Number="15">
+<![CDATA[	Path.DATA[1] := 0;]]>
+</Line>
+<Line Number="16">
+<![CDATA[	Path.DATA[2] := 0;]]>
+</Line>
+<Line Number="17">
+<![CDATA[	Path.DATA[3] := 0;]]>
+</Line>
+<Line Number="18">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="19">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+<EncodedData EncodedType="AddOnInstructionDefinition" Name="LxMsg" Revision="2.0" Vendor="Jeremy Medders" EditedDate="2024-10-09T13:08:33.983Z" SoftwareRevision="v37.00" EncryptionConfig="9">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="Message" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="Class" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Instance" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Attribute" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="RequestLength" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Request length (bytes).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="UnconnectedTimeout" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Unconnected timeout (uSec).]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[30000000]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="30000000"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="IO" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true">
+<Description>
+<![CDATA[IO module (optional).]]>
+</Description>
+</Parameter>
+</Parameters>
+<Dependencies>
+<Dependency Type="AddOnInstructionDefinition" Name="LxIOPath"/>
+</Dependencies>
+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</EncodedData>
+<AddOnInstructionDefinition Name="LxIO" Revision="2.0" Vendor="Jeremy Medders" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2019-11-11T18:04:33.847Z" CreatedBy="APEX\Jeremy" EditedDate="2025-01-22T23:39:43.941Z" EditedBy="APEX\Jeremy" SoftwareRevision="v37.00"
+>
+<Description>
+<![CDATA[IO Status]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="IO" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true">
+<Description>
+<![CDATA[Name of the module in the I/O tree.]]>
+</Description>
+</Parameter>
+<Parameter Name="Val_Instance" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Instance" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Status" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="Local.Status" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Standby" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Standby" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Faulted" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Faulted" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Validating" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Validating" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Connecting" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Connecting" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Online" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Online" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_ShuttingDown" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.ShuttingDown" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Inhibited" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Waiting" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Waiting" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Reconfiguring" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Reconfiguring" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_FirmwareUpdating" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.FirmwareUpdating" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Configuring" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Configuring" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Offline" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Offline" Required="false" Visible="true" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Local" DataType="LxIOModule" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[0,0,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="LxIOModule">
+<DataValueMember Name="Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="StatusBits" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Standby" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Validating" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Connecting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Online" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ShuttingDown" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inhibited" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Waiting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Reconfiguring" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FirmwareUpdating" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Configuring" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Offline" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FaultCode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="FaultInfo" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Mode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Instance" DataType="DINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[/*]]>
+</Line>
+<Line Number="1">
+<![CDATA[	LxIO]]>
+</Line>
+<Line Number="2">
+<![CDATA[	]]>
+</Line>
+<Line Number="3">
+<![CDATA[	EntryStatus Map]]>
+</Line>
+<Line Number="4">
+<![CDATA[	• 0x0000: Standby]]>
+</Line>
+<Line Number="5">
+<![CDATA[	• 0x1000: Faulted]]>
+</Line>
+<Line Number="6">
+<![CDATA[	• 0x2000: Validating]]>
+</Line>
+<Line Number="7">
+<![CDATA[	• 0x3000: Connecting]]>
+</Line>
+<Line Number="8">
+<![CDATA[	• 0x4000: Running]]>
+</Line>
+<Line Number="9">
+<![CDATA[	• 0x5000: Shutting Down]]>
+</Line>
+<Line Number="10">
+<![CDATA[	• 0x6000: Inhibited]]>
+</Line>
+<Line Number="11">
+<![CDATA[	• 0x7000: Waiting]]>
+</Line>
+<Line Number="12">
+<![CDATA[	• 0x8000: Reconfiguring]]>
+</Line>
+<Line Number="13">
+<![CDATA[	• 0x9000: Firmware Updating]]>
+</Line>
+<Line Number="14">
+<![CDATA[	• 0xA000: Configuring]]>
+</Line>
+<Line Number="15">
+<![CDATA[*/]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[GSV(Module, IO, Instance, Local.Instance);]]>
+</Line>
+<Line Number="18">
+<![CDATA[GSV(Module, IO, EntryStatus, Local.Status);]]>
+</Line>
+<Line Number="19">
+<![CDATA[Local.StatusBits := 2 ** (Local.Status / 4096);]]>
+</Line>
+<Line Number="20">
+<![CDATA[Local.Offline := NOT (Local.Online OR Local.Inhibited);]]>
+</Line>
+<Line Number="21">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Prescan" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	LxIO]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[Local.Instance := 0;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Local.Status := 0;]]>
+</Line>
+<Line Number="7">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="LxIOModule"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+<AddOnInstructionDefinition Use="Target" Name="LxUSBObject" Revision="3.0" Vendor="Jeremy Medders" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2023-02-10T17:01:25.995Z" CreatedBy="RLCCONTROLS\jrogers" EditedDate="2025-06-05T03:40:28.435Z" EditedBy="APEX\Jeremy"
+ SoftwareRevision="v37.00">
+<Description>
+<![CDATA[Logix USB Monitor]]>
+</Description>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="IO" TagType="Base" DataType="MODULE" Usage="InOut" Required="true" Visible="true"/>
+<Parameter Name="IO_Instance" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LxIO.Val_Instance" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="IO_Status" TagType="Alias" Usage="Output" Radix="Hex" AliasFor="LxIO.Val_Status" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Msg01" TagType="Base" DataType="MESSAGE" Usage="InOut" Required="true" Visible="true">
+<Description>
+<![CDATA[0x01: GetAttributesAll]]>
+</Description>
+</Parameter>
+<Parameter Name="MsgResp" TagType="Base" DataType="SINT" Dimensions="60" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Val_LogicalAddress" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.LogicalAddress" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_State" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.State" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Suspended" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Suspended" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Disabled" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Disabled" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_BusSpeed" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.BusSpeed" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_OTGSupport" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.OTGSupport" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_Mode" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.Mode" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Val_IFCounterLength" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.IFCounterLength" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_IFRxGood" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.IFRxGood" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_IFRxBad" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.IFRxBad" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_IFRxDropped" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.IFRxDropped" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_IFTxGood" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.IFTxGood" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_IFTxRetry" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.IFTxRetry" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_IFTxDropped" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.IFTxDropped" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MCType" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.MCType" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MCLength" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.MCLength" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MCRxBytes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.MCRxBytes" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MCRxDroppedBytes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.MCRxDroppedBytes" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MCTxBytes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.MCTxBytes" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_MCTxDroppedBytes" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.MCTxDroppedBytes" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_FIFOOverflows" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.FIFOOverflows" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Val_FIFOUnderruns" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Local.FIFOUnderruns" Required="false" Visible="false" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Online" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LxIO.Sts_Online" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Inhibited" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LxIO.Sts_Inhibited" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_Offline" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="LxIO.Sts_Offline" Required="false" Visible="true" ExternalAccess="Read Only"/>
+<Parameter Name="Sts_PortConnected" TagType="Alias" Usage="Output" Radix="Decimal" AliasFor="Status.0" Required="false" Visible="true" ExternalAccess="Read Only"/>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Local" DataType="LxUSB" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="LxUSB">
+<DataValueMember Name="LogicalAddress" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="State" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Suspended" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Disabled" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="BusSpeed" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="OTGSupport" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Mode" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="IFCounterLength" DataType="USINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="IFRxGood" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="IFRxBad" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="IFRxDropped" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="IFTxGood" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="IFTxRetry" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="IFTxDropped" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MCType" DataType="UINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MCLength" DataType="UINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MCRxBytes" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MCRxDroppedBytes" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MCTxBytes" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MCTxDroppedBytes" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="FIFOOverflows" DataType="UDINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="FIFOUnderruns" DataType="UDINT" Radix="Decimal" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="LxIO" DataType="LxIO" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[[1,[0,0,0,0,0,0]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="LxIO">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Val_Instance" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Val_Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="Sts_Standby" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Validating" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Connecting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Online" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_ShuttingDown" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Inhibited" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Waiting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Reconfiguring" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_FirmwareUpdating" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Configuring" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Sts_Offline" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="PG" DataType="LpPulse" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,1000,0,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="LpPulse">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Inp_Interval" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="Sts_Enabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="i" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Status" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="LxMsg" DataType="LxMsg" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[1,0,0,0,0,30000000,[1,0,0]]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="LxMsg">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Class" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Instance" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Attribute" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="RequestLength" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="UnconnectedTimeout" DataType="DINT" Radix="Decimal" Value="30000000"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[/*]]>
+</Line>
+<Line Number="2">
+<![CDATA[	LxUSBObject]]>
+</Line>
+<Line Number="3">
+<![CDATA[*/]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[LxIO(LxIO, IO);]]>
+</Line>
+<Line Number="6">
+<![CDATA[]]>
+</Line>
+<Line Number="7">
+<![CDATA[PG.Inp_Interval := 100;]]>
+</Line>
+<Line Number="8">
+<![CDATA[PG.Inp_Enable := LxIO.Sts_Online;]]>
+</Line>
+<Line Number="9">
+<![CDATA[LpPulse(PG);]]>
+</Line>
+<Line Number="10">
+<![CDATA[]]>
+</Line>
+<Line Number="11">
+<![CDATA[if (PG.Out & (Msg01.DN OR Msg01.ER OR NOT Msg01.EN)) then]]>
+</Line>
+<Line Number="12">
+<![CDATA[	LxMsg(LxMsg, Msg01, 16#033A, 1, 0, 0, 1000000, IO);]]>
+</Line>
+<Line Number="13">
+<![CDATA[	MSG(Msg01);]]>
+</Line>
+<Line Number="14">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="15">
+<![CDATA[]]>
+</Line>
+<Line Number="16">
+<![CDATA[if (Msg01.DN OR Msg01.ER) then]]>
+</Line>
+<Line Number="17">
+<![CDATA[	if (NOT Msg01.ER) then]]>
+</Line>
+<Line Number="18">
+<![CDATA[		COP(MsgResp[0], Local, 1);]]>
+</Line>
+<Line Number="19">
+<![CDATA[		Sts_PortConnected := Local.LogicalAddress <> 255;]]>
+</Line>
+<Line Number="20">
+<![CDATA[	else]]>
+</Line>
+<Line Number="21">
+<![CDATA[		Status := 0;]]>
+</Line>
+<Line Number="22">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="23">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="24">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="LxUSB"/>
+<Dependency Type="AddOnInstructionDefinition" Name="LxIO"/>
+<Dependency Type="AddOnInstructionDefinition" Name="LxMsg"/>
+<Dependency Type="AddOnInstructionDefinition" Name="LpPulse"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
