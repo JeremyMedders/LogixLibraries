@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LxProducedConsumedSafety" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Sat Jun 07 12:09:37 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="LxProducedConsumedSafety" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ConnectionStatus" DataType="CONNECTION_STATUS" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Data" DataType="SINT" Dimension="124" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
