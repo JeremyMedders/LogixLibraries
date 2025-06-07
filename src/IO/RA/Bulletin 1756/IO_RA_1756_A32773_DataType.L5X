@@ -1,13 +1,78 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1756_A32773" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 04 22:02:36 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1756_A32773" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Sat Jun 07 12:15:18 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1756_A32773" Family="NoFamily" Class="User">
 <Members>
 <Member Name="InfoBits" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RunMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InfoBits" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InfoBits.0]]>
+</Description>
+</Member>
+<Member Name="DiagnosticActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InfoBits" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InfoBits.2]]>
+</Description>
+</Member>
+<Member Name="CIPSyncValid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InfoBits" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InfoBits.3]]>
+</Description>
+</Member>
+<Member Name="CIPSyncTimeout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InfoBits" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InfoBits.4]]>
+</Description>
+</Member>
+<Member Name="AbleToControl" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InfoBits" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InfoBits.6]]>
+</Description>
+</Member>
 <Member Name="DiagnosticSequenceCount" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Pad1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="DuplexDiag" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PartnerMissingFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DuplexDiag" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DuplexDiag.0]]>
+</Description>
+</Member>
+<Member Name="PartnerProductTypeFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DuplexDiag" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DuplexDiag.1]]>
+</Description>
+</Member>
+<Member Name="PartnerRevisionFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DuplexDiag" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DuplexDiag.2]]>
+</Description>
+</Member>
+<Member Name="SecurityModeFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DuplexDiag" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DuplexDiag.3]]>
+</Description>
+</Member>
+<Member Name="ConnectionModeFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DuplexDiag" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DuplexDiag.4]]>
+</Description>
+</Member>
+<Member Name="PartnerLinkFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DuplexDiag" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DuplexDiag.5]]>
+</Description>
+</Member>
+<Member Name="ExternalDisqualificationFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DuplexDiag" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DuplexDiag.6]]>
+</Description>
+</Member>
+<Member Name="RedundantConnectionFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DuplexDiag" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DuplexDiag.11]]>
+</Description>
+</Member>
 <Member Name="Pad3" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PartnerMissingFaultTimestamp" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PartnerProductTypeFaultTimestamp" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
@@ -18,11 +83,51 @@
 <Member Name="ExternalDisqualificationFaultTimestamp" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="RedundantConnectionFaultTimestamp" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Port1Status" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Port1Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Port1Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Port1Status.1]]>
+</Description>
+</Member>
+<Member Name="Port1Uncertain" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Port1Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Port1Status.2]]>
+</Description>
+</Member>
+<Member Name="Port1Connected" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Port1Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Port1Status.3]]>
+</Description>
+</Member>
+<Member Name="Port1FullDuplex" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Port1Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Port1Status.4]]>
+</Description>
+</Member>
 <Member Name="Port1AutonegotiationStatus" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Port1Speed" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Port1Pad" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Port1DisconnectedTimestamp" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Port2Status" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Port2Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Port2Status" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Port2Status.1]]>
+</Description>
+</Member>
+<Member Name="Port2Uncertain" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Port2Status" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Port2Status.2]]>
+</Description>
+</Member>
+<Member Name="Port2Connected" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Port2Status" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Port2Status.3]]>
+</Description>
+</Member>
+<Member Name="Port2FullDuplex" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="Port2Status" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Port2Status.4]]>
+</Description>
+</Member>
 <Member Name="Port2AutonegotiationStatus" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Port2Speed" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Port2Pad" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
@@ -39,6 +144,46 @@
 <Member Name="DLRSupervisorState" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="ConcurrentConnectionsLostPackets" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="ModuleStatus" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MemoryCardFault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ModuleStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ModuleStatus.0]]>
+</Description>
+</Member>
+<Member Name="MemoryCardDataMismatch" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ModuleStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ModuleStatus.1]]>
+</Description>
+</Member>
+<Member Name="OverTemperature" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ModuleStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ModuleStatus.3]]>
+</Description>
+</Member>
+<Member Name="CriticalTemperature" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ModuleStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ModuleStatus.4]]>
+</Description>
+</Member>
+<Member Name="PRPPort1Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ModuleStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ModuleStatus.6]]>
+</Description>
+</Member>
+<Member Name="PRPPort2Fault" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ModuleStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ModuleStatus.7]]>
+</Description>
+</Member>
+<Member Name="DLREnabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ModuleStatus" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ModuleStatus.8]]>
+</Description>
+</Member>
+<Member Name="PRPEnabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ModuleStatus" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ModuleStatus.9]]>
+</Description>
+</Member>
 <Member Name="Pad5" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="LocalClockOffset" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="LocalClockOffsetTimestamp" DataType="LINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
