@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LxIOModule" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Sat Jun 07 12:20:16 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="LxIOModule" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4: Current state of this instance.]]>
+</Description>
+</Member>
+<Member Name="StatusBits" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bits indicate the status of this instance (overlay).]]>
+</Description>
+</Member>
+<Member Name="Standby" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.0: Controller is powering up.]]>
+</Description>
+</Member>
+<Member Name="Faulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.1: Indicates whether any of this module's connections have failed.]]>
+</Description>
+</Member>
+<Member Name="Validating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.2: Connection integrity is being verified.]]>
+</Description>
+</Member>
+<Member Name="Connecting" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.3: Connections are being established with the module.]]>
+</Description>
+</Member>
+<Member Name="Online" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.4: All connections to the module are established and active.]]>
+</Description>
+</Member>
+<Member Name="ShuttingDown" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.5: All connections are shutting down.]]>
+</Description>
+</Member>
+<Member Name="Inhibited" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.6: The module is inhibited.]]>
+</Description>
+</Member>
+<Member Name="Waiting" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.7: This module's parent is not running.]]>
+</Description>
+</Member>
+<Member Name="Reconfiguring" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.8: The module is reconfiguring its connections.]]>
+</Description>
+</Member>
+<Member Name="FirmwareUpdating" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.9: Firmware supervisor is attempting to flash the module.]]>
+</Description>
+</Member>
+<Member Name="Configuring" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.10: Controller is configuring the module.]]>
+</Description>
+</Member>
+<Member Name="Offline" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="StatusBits" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[StatusBits.11: The module is neither connected nor inhibited.]]>
+</Description>
+</Member>
+<Member Name="FaultCode" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5: Module fault code.]]>
+</Description>
+</Member>
+<Member Name="FaultInfo" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 6: Module fault detail.]]>
+</Description>
+</Member>
+<Member Name="Mode" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7: Present mode of this module.]]>
+</Description>
+</Member>
+<Member Name="Instance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 14: IO map instance.]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
