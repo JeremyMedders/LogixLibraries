@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--PM5000 General Status-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A823" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:26:37 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A823" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:53:48 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A823" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[PM5000 General Status]]>
-</Description>
 <Members>
 <Member Name="BulletinNumber" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="DeviceClass" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
@@ -34,49 +30,49 @@
 <Member Name="ManufactureMonth" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="ManufactureDay" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="ManufactureYear" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="SystemStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="SystemErrorStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Bits report the overall system status (overlay). 0: No error]]>
 </Description>
 </Member>
-<Member Name="AssemblySlot0Inst1Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="AssemblySlot0Inst1Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemErrorStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[SystemStatus.0]]>
+<![CDATA[SystemErrorStatus.0]]>
 </Description>
 </Member>
-<Member Name="AssemblySlot0Inst2Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="AssemblySlot0Inst2Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemErrorStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[SystemStatus.1]]>
+<![CDATA[SystemErrorStatus.1]]>
 </Description>
 </Member>
-<Member Name="AssemblySlot1Inst1Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="AssemblySlot1Inst1Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemErrorStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[SystemStatus.2]]>
+<![CDATA[SystemErrorStatus.2]]>
 </Description>
 </Member>
-<Member Name="AssemblySlot1Inst2Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Member Name="AssemblySlot1Inst2Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemErrorStatus" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[SystemStatus.3]]>
+<![CDATA[SystemErrorStatus.3]]>
 </Description>
 </Member>
-<Member Name="AssemblySlot2Inst1Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Member Name="AssemblySlot2Inst1Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemErrorStatus" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[SystemStatus.4]]>
+<![CDATA[SystemErrorStatus.4]]>
 </Description>
 </Member>
-<Member Name="AssemblySlot2Inst2Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Member Name="AssemblySlot2Inst2Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemErrorStatus" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[SystemStatus.5]]>
+<![CDATA[SystemErrorStatus.5]]>
 </Description>
 </Member>
-<Member Name="AssemblySlot3Inst1Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Member Name="AssemblySlot3Inst1Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemErrorStatus" BitNumber="6" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[SystemStatus.6]]>
+<![CDATA[SystemErrorStatus.6]]>
 </Description>
 </Member>
-<Member Name="AssemblySlot3Inst2Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Member Name="AssemblySlot3Inst2Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SystemErrorStatus" BitNumber="7" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[SystemStatus.7]]>
+<![CDATA[SystemErrorStatus.7]]>
 </Description>
 </Member>
 <Member Name="ErrorLogCount" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">

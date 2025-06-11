@@ -1,129 +1,137 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--PM5000 IEEE1159 Results-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A863" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:24:52 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A863" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:56:18 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A863" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[PM5000 IEEE1159 Results]]>
-</Description>
 <Members>
-<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_VoltageImbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[Date of cycle collection (MMDDYY).]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_CurrentImbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[Time of cycle collection (HHMMSS).]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_PowerFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[Time of cycle collection (usec).]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V1_DCOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VoltageImbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V2_DCOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="CurrentImbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V3_DCOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="PowerFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (Hz)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V1_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1DCOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V2_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2DCOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V3_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3DCOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_I1_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1TotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_I2_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2TotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_I3_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3TotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_I4_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1TotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V1_TID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I2TotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V2_TID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I3TotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V3_TID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4TotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_I1_TID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1TotalInterharmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_I2_TID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2TotalInterharmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_I3_TID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3TotalInterharmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_I4_TID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1TotalInterharmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V1_FluctuationPST" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I2TotalInterharmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V2_FluctuationPST" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I3TotalInterharmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_V3_FluctuationPST" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4TotalInterharmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[IEEE1159]]>
+<![CDATA[IEEE1159 (%)]]>
+</Description>
+</Member>
+<Member Name="V1FluctuationShortTermPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (PST)]]>
+</Description>
+</Member>
+<Member Name="V2FluctuationShortTermPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (PST)]]>
+</Description>
+</Member>
+<Member Name="V3FluctuationShortTermPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (PST)]]>
 </Description>
 </Member>
 </Members>

@@ -1,53 +1,53 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--EN50160 Compliance Results-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A884" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:23:56 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A884" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:57:12 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A884" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[EN50160 Compliance Results]]>
-</Description>
 <Members>
 <Member Name="MainsSignalingVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="SupplyVoltageRange1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="SupplyVoltageRange2" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="FlickerSeverityPLT" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="FlickerSeverityPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(PLT)]]>
+</Description>
+</Member>
 <Member Name="SupplyVoltageUnbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="IndividualHarmonicVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VoltageTHD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VoltageTotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PowerFrequencyRange1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PowerFrequencyRange2" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90u_to_80u10mS_to_200mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90u_to_80u200mS_to_500mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90u_to_80u500mS_to_1000mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90u_to_80u1000mS_to_5000mSDuration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90u_to_80u5000mS_to_60000mSDuration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80u_to_70u10mS_to_200mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80u_to_70u200mS_to_500mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80u_to_70u500mS_to_1000mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80u_to_70u1000mS_to_5000mSDuration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80u_to_70u5000mS_to_60000mSDuration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70u_to_40u10mS_to_200mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70u_to_40u200mS_to_500mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70u_to_40u500mS_to_1000mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70u_to_40u1000mS_to_5000mSDuration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70u_to_40u5000mS_to_60000mSDuration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40u_to_5u10mS_to_200mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40u_to_5u200mS_to_500mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40u_to_5u500mS_to_1000mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40u_to_5u1000mS_to_5000mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40u_to_5u5000mS_to_60000mSDuration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_less_than_5u10mS_to_200mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_less_than_5u200mS_to_500mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_less_than_5u500mS_to1000mS_Duration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_less_than_5u1000mS_to_5000mS_Duratio" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_less_than_5u5000mS_to_60000mSDuratio" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120u_or_greater_10mS_to_500mSDurat" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120u_or_greater_500mS_to_5000mSDur" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120u_or_greater_5000mS_to_60000mSD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120u_to_110u_10mS_to_500mS_Duratio" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120u_to_110u_500mS_to_5000mSDurati" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120u_to_110u_5000mS_to_60000mSDura" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_90to80u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_90to80u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_90to80u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_90to80u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_90to80u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_80to70u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_80to70u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_80to70u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_80to70u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_80to70u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_70to40u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_70to40u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_70to40u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_70to40u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_70to40u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_40to5u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_40to5u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_40to5u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_40to5u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_40to5u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_5uOrLess_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_5uOrLess_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_5uOrLess_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_5uOrLess_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag_5uOrLess_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Swell_120uOrGreater_10to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Swell_120uOrGreater_500to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Swell_120uOrGreater_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Swell_120to110u_10to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Swell_120to110u_500to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Swell_120to110u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 </DataTypes>

@@ -1,31 +1,99 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--PM5000 Power Quality Configuration-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A815" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:27:05 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A815" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:53:19 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A815" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[PM5000 Power Quality Configuration]]>
-</Description>
 <Members>
-<Member Name="Sag1TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag1Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag2TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag2Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag3TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag3Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag4TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag4Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag5TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag5Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell1TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell1Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell2TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell2Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell3TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell3Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell4TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell4Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sag1TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag1Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag2TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag2Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag3TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag3Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag4TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag4Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag5TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Sag5Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Swell1TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Swell1Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Swell2TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Swell2Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Swell3TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Swell3Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Swell4TripPoint" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Swell4Hysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
 <Member Name="CapturePreEventCycles" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="CapturePostEventCycles" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="RelativeSetpointInterval" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
@@ -33,41 +101,117 @@
 <![CDATA[(minutes)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_ParameterHysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_ImbalanceAveragingInterval" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="ParameterHysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[(minutes)]]>
+<![CDATA[IEEE1159 (%)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_VoltageImbalanceLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_CurrentImbalanceLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_DCOffsetHarmonicAverageInterval" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="ImbalanceAveragingInterval" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[(minutes)]]>
+<![CDATA[IEEE1159 (minutes)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_VoltageDCOffsetLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_VoltageTHDLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_CurrentTHDLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_PowerFrequencyAverageInterval" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VoltageImbalanceLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (%)]]>
+</Description>
+</Member>
+<Member Name="CurrentImbalanceLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (%)]]>
+</Description>
+</Member>
+<Member Name="DCOffsetHarmonicAverageInterval" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (minutes)]]>
+</Description>
+</Member>
+<Member Name="VoltageDCOffsetLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (%)]]>
+</Description>
+</Member>
+<Member Name="VoltageTotalHarmonicDistortionLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 total harmonic distortion limit (%).]]>
+</Description>
+</Member>
+<Member Name="CurrentTotalHarmonicDistortionLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 total harmonic distortion limit (%).]]>
+</Description>
+</Member>
+<Member Name="PowerFrequencyAveragingInterval" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (seconds)]]>
+</Description>
+</Member>
+<Member Name="PowerFrequencyLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (Hz)]]>
+</Description>
+</Member>
+<Member Name="PowerFrequencyHysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (Hz)]]>
+</Description>
+</Member>
+<Member Name="ComplianceParameter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE519 compliance parameter. 0: Current, 1: Voltage]]>
+</Description>
+</Member>
+<Member Name="MaxIscCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE519 (A)]]>
+</Description>
+</Member>
+<Member Name="MaxILCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE519 (A)]]>
+</Description>
+</Member>
+<Member Name="VoltageTotalInterharmonicDistortionLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 total interharmonic distortion limit (%).]]>
+</Description>
+</Member>
+<Member Name="CurrentTotalInterharmonicDistortionLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 total interharmonic distortion limit (%).]]>
+</Description>
+</Member>
+<Member Name="ShortTermPerceptibilityLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[IEEE1159 (PST)]]>
+</Description>
+</Member>
+<Member Name="MeteringSnapshotParameter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TransientDetectionThreshold" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="MainsSignalingFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(Hz)]]>
+</Description>
+</Member>
+<Member Name="MainsSignalingRecordingLength" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[(seconds)]]>
 </Description>
 </Member>
-<Member Name="IEEE1159_PowerFrequencyLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_PowerFrequencyHysteresis" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE519_ComplianceParameter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE519_Max_Isc_Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE_519_Max_IL_Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_VoltageTIDLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_CurrentTIDLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IEEE1159_ShortTermPerceptabilityLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="MeteringSnapshotParameter" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TransientDetectionThreshold" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="MainsSignalingFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="MainsSignalingRecordingLength" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="MainsSignalingThreshold" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="UnderOverVoltageDeviationThreshold" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MainsSignalingThreshold" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="UnderOverVoltageDeviationThreshold" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
 <Member Name="PowerFrequencySynchronization" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>

@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--PM5000 Alarms Status-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A832" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:26:07 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A832" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:54:35 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A832" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[PM5000 Alarms Status]]>
-</Description>
 <Members>
 <Member Name="SetpointStatus1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
@@ -218,38 +214,38 @@
 <![CDATA[Over-range condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 over-range condition.]]>
 </Description>
 </Member>
-<Member Name="V2_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 over-range condition.]]>
 </Description>
 </Member>
-<Member Name="V3_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 over-range condition.]]>
 </Description>
 </Member>
-<Member Name="VNG_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="3" ExternalAccess="Read/Write"/>
-<Member Name="I1_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Member Name="VNGOverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="I1OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I1 over-range condition.]]>
 </Description>
 </Member>
-<Member Name="I2_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Member Name="I2OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I2 over-range condition.]]>
 </Description>
 </Member>
-<Member Name="I3_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Member Name="I3OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="6" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I3 over-range condition.]]>
 </Description>
 </Member>
-<Member Name="I4_OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Member Name="I4OverRange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverRangeStatus" BitNumber="7" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I4 over-range condition.]]>
 </Description>
@@ -274,22 +270,22 @@
 <![CDATA[Power transient condition.]]>
 </Description>
 </Member>
-<Member Name="PowerSagSwell_200ms" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Member Name="PowerSagSwell200ms" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[PowerQualityStatus.3]]>
 </Description>
 </Member>
-<Member Name="PowerSagSwell_3s" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Member Name="PowerSagSwell3s" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[PowerQualityStatus.4]]>
 </Description>
 </Member>
-<Member Name="PowerSagSwell_10m" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Member Name="PowerSagSwell10m" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[PowerQualityStatus.5]]>
 </Description>
 </Member>
-<Member Name="PowerSagSwell_2h" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Member Name="PowerSagSwell2h" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PowerQualityStatus" BitNumber="6" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[PowerQualityStatus.6]]>
 </Description>
@@ -364,17 +360,17 @@
 <![CDATA[IEEE1159 over-voltage condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 over-voltage condition.]]>
 </Description>
 </Member>
-<Member Name="V2_OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 over-voltage condition.]]>
 </Description>
 </Member>
-<Member Name="V3_OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3OverVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverVoltageStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 over-voltage condition.]]>
 </Description>
@@ -384,17 +380,17 @@
 <![CDATA[IEEE1159 under-voltage condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 under-voltage condition.]]>
 </Description>
 </Member>
-<Member Name="V2_UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 under-voltage condition.]]>
 </Description>
 </Member>
-<Member Name="V3_UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3UnderVoltage" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderVoltageStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 under-voltage condition.]]>
 </Description>
@@ -419,17 +415,17 @@
 <![CDATA[IEEE1159 DC offset condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 DC offset condition.]]>
 </Description>
 </Member>
-<Member Name="V2_DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 DC offset condition.]]>
 </Description>
 </Member>
-<Member Name="V3_DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3DCOffset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DCOffsetStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 DC offset condition.]]>
 </Description>
@@ -439,34 +435,34 @@
 <![CDATA[IEEE1159 voltage THD/TID condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V1 voltage THD condition.]]>
+<![CDATA[V1 voltage total harmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="V2_VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V2 voltage THD condition.]]>
+<![CDATA[V2 voltage total harmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="V3_VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3VoltageTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V3 voltage THD condition.]]>
+<![CDATA[V3 voltage total harmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="V1_VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Member Name="V1VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V1 voltage TID condition.]]>
+<![CDATA[V1 voltage total interharmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="V2_VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Member Name="V2VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V2 voltage TID condition.]]>
+<![CDATA[V2 voltage total interharmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="V3_VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Member Name="V3VoltageTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageTHDStatus" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V3 voltage TID condition.]]>
+<![CDATA[V3 voltage total interharmonic distortion condition.]]>
 </Description>
 </Member>
 <Member Name="CurrentTHDStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
@@ -474,44 +470,44 @@
 <![CDATA[IEEE1159 current THD/TID condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="I1_CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="I1CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I1 current THD condition.]]>
+<![CDATA[I1 current total harmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="I2_CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="I2CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I2 current THD condition.]]>
+<![CDATA[I2 current total harmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="I3_CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="I3CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I3 current THD condition.]]>
+<![CDATA[I3 current total harmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="I4_CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Member Name="I4CurrentTHD" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I4 current THD condition.]]>
+<![CDATA[I4 current total harmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="I1_CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Member Name="I1CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I1 current TID condition.]]>
+<![CDATA[I1 current total interharmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="I2_CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Member Name="I2CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I2 current TID condition.]]>
+<![CDATA[I2 current total interharmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="I3_CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Member Name="I3CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="6" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I3 current TID condition.]]>
+<![CDATA[I3 current total interharmonic distortion condition.]]>
 </Description>
 </Member>
-<Member Name="I4_CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Member Name="I4CurrentTID" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="CurrentTHDStatus" BitNumber="7" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I4 current TID condition.]]>
+<![CDATA[I4 current total interharmonic distortion condition.]]>
 </Description>
 </Member>
 <Member Name="PowerFrequencyStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
@@ -970,17 +966,17 @@
 <![CDATA[IEEE1159 voltage fluctuation condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 voltage fluctuation condition.]]>
 </Description>
 </Member>
-<Member Name="V2_VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 voltage fluctuation condition.]]>
 </Description>
 </Member>
-<Member Name="V3_VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3VoltageFluctuation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="VoltageFluctuationStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 voltage fluctuation condition.]]>
 </Description>
@@ -990,17 +986,17 @@
 <![CDATA[EN61000 mains signaling condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 mains signaling condition.]]>
 </Description>
 </Member>
-<Member Name="V2_MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 mains signaling condition.]]>
 </Description>
 </Member>
-<Member Name="V3_MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3MainsSignaling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="MainsSignalingStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 mains signaling condition.]]>
 </Description>
@@ -1010,17 +1006,17 @@
 <![CDATA[EN61000 under-deviation condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 under-deviation condition.]]>
 </Description>
 </Member>
-<Member Name="V2_UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 under-deviation condition.]]>
 </Description>
 </Member>
-<Member Name="V3_UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3UnderDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="UnderDeviationStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 under-deviation condition.]]>
 </Description>
@@ -1030,17 +1026,17 @@
 <![CDATA[EN61000 over-deviation condition status (overlay).]]>
 </Description>
 </Member>
-<Member Name="V1_OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="V1OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 over-deviation condition.]]>
 </Description>
 </Member>
-<Member Name="V2_OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="V2OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 over-deviation condition.]]>
 </Description>
 </Member>
-<Member Name="V3_OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="V3OverDeviation" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OverDeviationStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 over-deviation condition.]]>
 </Description>

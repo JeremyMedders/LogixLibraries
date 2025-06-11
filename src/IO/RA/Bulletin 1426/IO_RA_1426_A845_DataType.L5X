@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--Real-time Power Quality-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A845" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:25:42 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A845" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:55:12 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A845" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[Real-time Power Quality]]>
-</Description>
 <Members>
 <Member Name="DateStamp" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
@@ -20,227 +16,227 @@
 </Member>
 <Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Time of cycle collection (uSec).]]>
+<![CDATA[Time of cycle collection (usec).]]>
 </Description>
 </Member>
-<Member Name="V1_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1 crest factor.]]>
 </Description>
 </Member>
-<Member Name="V2_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2 crest factor.]]>
 </Description>
 </Member>
-<Member Name="V3_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3 crest factor.]]>
 </Description>
 </Member>
-<Member Name="V1V2_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1V2CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1-V2 crest factor.]]>
 </Description>
 </Member>
-<Member Name="V2V3_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2V3CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2-V3 crest factor.]]>
 </Description>
 </Member>
-<Member Name="V3V1_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3V1CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3-V1 crest factor.]]>
 </Description>
 </Member>
-<Member Name="I1_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I1 crest factor.]]>
 </Description>
 </Member>
-<Member Name="I2_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I2CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I2 crest factor.]]>
 </Description>
 </Member>
-<Member Name="I3_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I3CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I3 crest factor.]]>
 </Description>
 </Member>
-<Member Name="I4_CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4CrestFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I4 crest factor.]]>
 </Description>
 </Member>
-<Member Name="V1_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V1-N IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[V1-N IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V2_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V2-N IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[V2-N IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V3_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V3-N IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[V3-N IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="VNG_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VNGTotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[VGN-N IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[VGN-N IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="Avg_IEEE_THD_V" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VAvgTotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Average V1/V2/V3 to N IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[Average V1/V2/V3 to N IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V1V2_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1V2TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V1-V2 IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[V1-V2 IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V2V3_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2V3TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V2-V3 IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[V2-V3 IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V3V1_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3V1TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V3-V1 IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[V3-V1 IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="Avg_IEEE_THD_VV" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VVAvgTotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Average IEEE THD for V1-V2, V2-V3, V3-V1 (%).]]>
 </Description>
 </Member>
-<Member Name="I1_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I1 IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[I1 IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="I2_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I2TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I2 IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[I2 IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="I3_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I3TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I3 IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[I3 IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="I4_IEEE_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4TotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I4 IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[I4 IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="Avg_IEEE_THD_I" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IAvgTotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Average I1/I2/I3 IEEE Total Harmonic Distortion (%).]]>
+<![CDATA[Average I1/I2/I3 IEEE total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V1_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V1-N IEC Total Harmonic Distortion (%).]]>
+<![CDATA[V1-N IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V2_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V2-N IEC Total Harmonic Distortion (%).]]>
+<![CDATA[V2-N IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V3_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V3-N IEC Total Harmonic Distortion (%).]]>
+<![CDATA[V3-N IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="VNG_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VNGTotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[VGN-N IEC Total Harmonic Distortion (%).]]>
+<![CDATA[VGN-N IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="Avg_IEC_THD_V" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VAvgTotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Average V1/V2/V3 to N IEC Total Harmonic Distortion (%).]]>
+<![CDATA[Average V1/V2/V3 to N IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V1V2_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1V2TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V1-V2 IEC Total Harmonic Distortion (%).]]>
+<![CDATA[V1-V2 IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V2V3_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2V3TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V2-V3 IEC Total Harmonic Distortion (%).]]>
+<![CDATA[V2-V3 IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="V3V1_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3V1TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[V3-V1 IEC Total Harmonic Distortion (%).]]>
+<![CDATA[V3-V1 IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="Avg_IEC_THD_VV" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VVAvgTotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Average IEC THD for V1-V2, V2-V3, V3-V1 (%).]]>
 </Description>
 </Member>
-<Member Name="I1_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I1 IEC Total Harmonic Distortion (%).]]>
+<![CDATA[I1 IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="I2_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I2TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I2 IEC Total Harmonic Distortion (%).]]>
+<![CDATA[I2 IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="I3_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I3TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I3 IEC Total Harmonic Distortion (%).]]>
+<![CDATA[I3 IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="I4_IEC_THD" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4TotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[I4 IEC Total Harmonic Distortion (%).]]>
+<![CDATA[I4 IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
-<Member Name="Avg_IEC_THD_I" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IAvgTotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Average I1/I2/I3 IEC Total Harmonic Distortion (%).]]>
+<![CDATA[Average I1/I2/I3 IEC total harmonic distortion (%).]]>
 </Description>
 </Member>
 <Member Name="PositiveSequenceVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Positive Sequence Voltage (V).]]>
+<![CDATA[Positive sequence voltage (V).]]>
 </Description>
 </Member>
 <Member Name="NegativeSequenceVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Negative Sequence Voltage (V).]]>
+<![CDATA[Negative sequence voltage (V).]]>
 </Description>
 </Member>
 <Member Name="ZeroSequenceVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Zero Sequence Voltage (V).]]>
+<![CDATA[Zero sequence voltage (V).]]>
 </Description>
 </Member>
 <Member Name="PositiveSequenceCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Positive Sequence Current (A).]]>
+<![CDATA[Positive sequence current (A).]]>
 </Description>
 </Member>
 <Member Name="NegativeSequenceCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Negative Sequence Current (A).]]>
+<![CDATA[Negative sequence current (A).]]>
 </Description>
 </Member>
 <Member Name="ZeroSequenceCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[Zero Sequence Current (A).]]>
+<![CDATA[Zero sequence current (A).]]>
 </Description>
 </Member>
 <Member Name="VoltageUnbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
@@ -253,17 +249,17 @@
 <![CDATA[Current unbalance (%).]]>
 </Description>
 </Member>
-<Member Name="I1_KFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1KFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I1 K-factor.]]>
 </Description>
 </Member>
-<Member Name="I2_KFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I2KFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I2 K-factor.]]>
 </Description>
 </Member>
-<Member Name="I3_KFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I3KFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I3 K-factor.]]>
 </Description>

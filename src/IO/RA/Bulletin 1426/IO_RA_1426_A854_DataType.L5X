@@ -1,43 +1,147 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--TOU Logging Results-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A854" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:25:18 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A854" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:55:34 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A854" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[TOU Logging Results]]>
-</Description>
 <Members>
-<Member Name="TOU_RecordNumber" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TOU_StartDate" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TOU_EndDate" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_GVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_kVAR_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_GVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_kVAR_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_GVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_kVAR_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Off_Peak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Mid_Peak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="On_Peak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RecordNumber" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="StartDate" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="EndDate" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="OffPeak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GWh)]]>
+</Description>
+</Member>
+<Member Name="OffPeak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kWh)]]>
+</Description>
+</Member>
+<Member Name="OffPeak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kW)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GWh)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kWh)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kW)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_GWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GWh)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_kWh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kWh)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_kW_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kW)]]>
+</Description>
+</Member>
+<Member Name="OffPeak_GVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GVARh)]]>
+</Description>
+</Member>
+<Member Name="OffPeak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVARh)]]>
+</Description>
+</Member>
+<Member Name="OffPeak_kVAR_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAR)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_GVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GVARh)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVARh)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_kVAR_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAR)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_GVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GVARh)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_kVARh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVARh)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_kVAR_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAR)]]>
+</Description>
+</Member>
+<Member Name="OffPeak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GVAh)]]>
+</Description>
+</Member>
+<Member Name="OffPeak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAh)]]>
+</Description>
+</Member>
+<Member Name="OffPeak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVA)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GVAh)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAh)]]>
+</Description>
+</Member>
+<Member Name="MidPeak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVA)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_GVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GVAh)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_kVAh_Net" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAh)]]>
+</Description>
+</Member>
+<Member Name="OnPeak_kVA_Demand" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVA)]]>
+</Description>
+</Member>
 </Members>
 </DataType>
 </DataTypes>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A100" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:22:42 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A100" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:51:41 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A100" Family="NoFamily" Class="User">
 <Members>
@@ -119,138 +119,214 @@
 <![CDATA[Setpoint 20 active.]]>
 </Description>
 </Member>
-<Member Name="DiscreteOutStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DiscreteOutputStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Discrete output status (overlay).]]>
 </Description>
 </Member>
-<Member Name="KYZLogicState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="KYZLogicState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.0]]>
+<![CDATA[DiscreteOutputStatus.0]]>
 </Description>
 </Member>
-<Member Name="Relay1LogicState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="Relay1LogicState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.1]]>
+<![CDATA[DiscreteOutputStatus.1]]>
 </Description>
 </Member>
-<Member Name="Relay2LogicState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="Relay2LogicState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.2]]>
+<![CDATA[DiscreteOutputStatus.2]]>
 </Description>
 </Member>
-<Member Name="Relay3LogicState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Member Name="Relay3LogicState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.3]]>
+<![CDATA[DiscreteOutputStatus.3]]>
 </Description>
 </Member>
-<Member Name="KYZReadback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Member Name="KYZReadback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="4" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.4]]>
+<![CDATA[DiscreteOutputStatus.4]]>
 </Description>
 </Member>
-<Member Name="KYZForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Member Name="KYZForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="5" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.5]]>
+<![CDATA[DiscreteOutputStatus.5]]>
 </Description>
 </Member>
-<Member Name="KYZForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Member Name="KYZForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="6" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.6]]>
+<![CDATA[DiscreteOutputStatus.6]]>
 </Description>
 </Member>
-<Member Name="Relay1Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Member Name="Relay1Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="7" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.7]]>
+<![CDATA[DiscreteOutputStatus.7]]>
 </Description>
 </Member>
-<Member Name="Relay1ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="8" ExternalAccess="Read/Write">
+<Member Name="Relay1ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="8" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.8]]>
+<![CDATA[DiscreteOutputStatus.8]]>
 </Description>
 </Member>
-<Member Name="Relay1ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="9" ExternalAccess="Read/Write">
+<Member Name="Relay1ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="9" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.9]]>
+<![CDATA[DiscreteOutputStatus.9]]>
 </Description>
 </Member>
-<Member Name="Relay2Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="10" ExternalAccess="Read/Write">
+<Member Name="Relay2Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="10" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.10]]>
+<![CDATA[DiscreteOutputStatus.10]]>
 </Description>
 </Member>
-<Member Name="Relay2ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="11" ExternalAccess="Read/Write">
+<Member Name="Relay2ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="11" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.11]]>
+<![CDATA[DiscreteOutputStatus.11]]>
 </Description>
 </Member>
-<Member Name="Relay2ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="12" ExternalAccess="Read/Write">
+<Member Name="Relay2ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="12" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.12]]>
+<![CDATA[DiscreteOutputStatus.12]]>
 </Description>
 </Member>
-<Member Name="Relay3Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="13" ExternalAccess="Read/Write">
+<Member Name="Relay3Readback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="13" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.13]]>
+<![CDATA[DiscreteOutputStatus.13]]>
 </Description>
 </Member>
-<Member Name="Relay3ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="14" ExternalAccess="Read/Write">
+<Member Name="Relay3ForcedOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="14" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.14]]>
+<![CDATA[DiscreteOutputStatus.14]]>
 </Description>
 </Member>
-<Member Name="Relay3ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutStatus" BitNumber="15" ExternalAccess="Read/Write">
+<Member Name="Relay3ForcedOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteOutputStatus" BitNumber="15" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteOutStatus.15]]>
+<![CDATA[DiscreteOutputStatus.15]]>
 </Description>
 </Member>
-<Member Name="Year" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="MonthDay" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="HourMinute" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="SecondMillisecond" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Year" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Present year.]]>
+</Description>
+</Member>
+<Member Name="MonthDay" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Present month and day.]]>
+</Description>
+</Member>
+<Member Name="HourMinute" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Present hour and minute.]]>
+</Description>
+</Member>
+<Member Name="SecondMillisecond" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Present second and millisecond.]]>
+</Description>
+</Member>
 <Member Name="Pad01" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="MeteringIteration" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PowerFactorLeadLag" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="DiscreteInStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="PowerFactorLeadLag" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[L1 lead (+) or lag (-) indicator.]]>
+</Description>
+</Member>
+<Member Name="DiscreteInputStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Discrete input status (overlay).]]>
 </Description>
 </Member>
-<Member Name="S1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteInStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Member Name="S1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteInputStatus" BitNumber="0" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteInStatus.0]]>
+<![CDATA[DiscreteInputStatus.0]]>
 </Description>
 </Member>
-<Member Name="S2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteInStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Member Name="S2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteInputStatus" BitNumber="1" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteInStatus.1]]>
+<![CDATA[DiscreteInputStatus.1]]>
 </Description>
 </Member>
-<Member Name="S3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteInStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Member Name="S3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteInputStatus" BitNumber="2" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteInStatus.2]]>
+<![CDATA[DiscreteInputStatus.2]]>
 </Description>
 </Member>
-<Member Name="S4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteInStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Member Name="S4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="DiscreteInputStatus" BitNumber="3" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[DiscreteInStatus.3]]>
+<![CDATA[DiscreteInputStatus.3]]>
 </Description>
 </Member>
-<Member Name="V1VNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V2VNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V3VNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VNVGVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AvgVNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V1V2Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V2V3Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V3V1Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AvgVVVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="I1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="I2Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="I3Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="I4Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="IAvgCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="LineFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V1VNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
+<Member Name="V2VNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
+<Member Name="V3VNVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
+<Member Name="VNVGVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
+<Member Name="VNAvgVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
+<Member Name="V1V2Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
+<Member Name="V2V3Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
+<Member Name="V3V1Voltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
+<Member Name="VVAvgVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="I1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(A)]]>
+</Description>
+</Member>
+<Member Name="I2Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(A)]]>
+</Description>
+</Member>
+<Member Name="I3Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(A)]]>
+</Description>
+</Member>
+<Member Name="I4Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(A)]]>
+</Description>
+</Member>
+<Member Name="IAvgCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(A)]]>
+</Description>
+</Member>
+<Member Name="LineFrequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(Hz)]]>
+</Description>
+</Member>
 <Member Name="TotalRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Total real power (kW).]]>
@@ -266,32 +342,136 @@
 <![CDATA[Total apparent power (kVA).]]>
 </Description>
 </Member>
-<Member Name="TotalTruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TotalDisplacementPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AvgTHD_VN_IEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AvgTHD_VV_IEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AvgTHD_Current_IEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AvgTHD_VN_IEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AvgTHD_VV_IEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="AvgTHD_Current_IEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VoltageUnbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="CurrentUnbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="S1ScaledCount_xM" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="S1ScaledCount_x1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="S2ScaledCount_xM" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="S2ScaledCount_x1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="S3ScaledCount_xM" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="S3ScaledCount_x1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="S4ScaledCount_xM" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="S4ScaledCount_x1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="GWh" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="kWh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="GVARh" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="kVARh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="GVAh" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="kVAh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="GAh" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="kAh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TotalTruePowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="TotalDisplacementPowerFactor" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="AvgVNTotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="AvgVVTotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="AvgCurrentTotalHarmonicDistortionIEEE" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="AvgVNTotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="AvgVVTotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="AvgCurrentTotalHarmonicDistortionIEC" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="VoltageUnbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Voltage unbalance level (%).]]>
+</Description>
+</Member>
+<Member Name="CurrentUnbalance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current unbalance level (%).]]>
+</Description>
+</Member>
+<Member Name="S1ScaledCount1M" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[S1 scaled count x 1M.]]>
+</Description>
+</Member>
+<Member Name="S1ScaledCount" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[S1 scaled count x 1.]]>
+</Description>
+</Member>
+<Member Name="S2ScaledCount1M" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[S2 scaled count x 1M.]]>
+</Description>
+</Member>
+<Member Name="S2ScaledCount" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[S2 scaled count x 1.]]>
+</Description>
+</Member>
+<Member Name="S3ScaledCount1M" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[S3 scaled count x 1M.]]>
+</Description>
+</Member>
+<Member Name="S3ScaledCount" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[S3 scaled count x 1.]]>
+</Description>
+</Member>
+<Member Name="S4ScaledCount1M" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[S4 scaled count x 1M.]]>
+</Description>
+</Member>
+<Member Name="S4ScaledCount" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[S4 scaled count x 1.]]>
+</Description>
+</Member>
+<Member Name="GWh" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GWh)]]>
+</Description>
+</Member>
+<Member Name="kWh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kWh)]]>
+</Description>
+</Member>
+<Member Name="GVARh" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GVARh)]]>
+</Description>
+</Member>
+<Member Name="kVARh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVARh)]]>
+</Description>
+</Member>
+<Member Name="GVAh" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GVAh)]]>
+</Description>
+</Member>
+<Member Name="kVAh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kVAh)]]>
+</Description>
+</Member>
+<Member Name="GAh" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(GAh)]]>
+</Description>
+</Member>
+<Member Name="kAh" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(kAh)]]>
+</Description>
+</Member>
 <Member Name="DemandRealPower" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Average real power during the last demand period (kW).]]>

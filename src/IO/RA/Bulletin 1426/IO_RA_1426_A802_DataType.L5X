@@ -1,54 +1,50 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--PM5000 Basic Metering Configuration-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A802" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:27:45 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A802" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:52:23 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A802" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[PM5000 Basic Metering Configuration]]>
-</Description>
 <Members>
 <Member Name="MeteringMode" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Metering mode. Min: 0, Max: 10, Default: 2]]>
 </Description>
 </Member>
-<Member Name="V1_V2_V3_PT_Primary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1V2V3_PT_PrimaryVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Primary voltage of the PT transformer (V). Min: 0, Max: 1M, Default: 480]]>
 </Description>
 </Member>
-<Member Name="V1_V2_V3_PT_Secondary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1V2V3_PT_SecondaryVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Secondary voltage of the PT transformer (V). Min: 0, Max: 690, Default: 480]]>
 </Description>
 </Member>
-<Member Name="I1_I2_I3_CT_Primary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1I2I3_CT_PrimaryCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Primary current value of the CT transformer (A). Min: 0, Max: 1M, Default: 5]]>
 </Description>
 </Member>
-<Member Name="I1_I2_I3_CT_Secondary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1I2I3_CT_SecondaryCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Secondary current value of the CT transformer (A). Constant: 5]]>
 </Description>
 </Member>
-<Member Name="VN_PT_Primary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VN_PT_PrimaryVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Primary voltage value of the PT transformer (V). Min: 0, Max: 1M, Default: 480]]>
 </Description>
 </Member>
-<Member Name="VN_PT_Secondary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VN_PT_SecondaryVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Secondary voltage value of the PT transformer (V). Min: 0, Max: 690, Default: 480]]>
 </Description>
 </Member>
-<Member Name="I4_CT_Primary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4_CT_PrimaryCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Primary current value of the CT transformer (A). Min: 0, Max: 1M, Default: 5]]>
 </Description>
 </Member>
-<Member Name="I4_CT_Secondary" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4_CT_SecondaryCurrent" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Secondary current value of the CT transformer (A). Constant: 5]]>
 </Description>

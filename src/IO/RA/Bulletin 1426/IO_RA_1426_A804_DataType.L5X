@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A804" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:27:37 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A804" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:52:32 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A804" Family="NoFamily" Class="User">
 <Members>
@@ -9,62 +9,62 @@
 <![CDATA[Startup IP address source. 0: Static IP, 1: DHCP]]>
 </Description>
 </Member>
-<Member Name="IPAddressA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPAddressOctetA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP address octet A.]]>
 </Description>
 </Member>
-<Member Name="IPAddressB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPAddressOctetB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP address octet B.]]>
 </Description>
 </Member>
-<Member Name="IPAddressC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPAddressOctetC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP address octet C.]]>
 </Description>
 </Member>
-<Member Name="IPAddressD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPAddressOctetD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP address octet D.]]>
 </Description>
 </Member>
-<Member Name="IPMaskA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPMaskOctetA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP mask octet A.]]>
 </Description>
 </Member>
-<Member Name="IPMaskB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPMaskOctetB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP mask octet B.]]>
 </Description>
 </Member>
-<Member Name="IPMaskC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPMaskOctetC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP mask octet C.]]>
 </Description>
 </Member>
-<Member Name="IPMaskD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPMaskOctetD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP mask octet D.]]>
 </Description>
 </Member>
-<Member Name="IPGatewayA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPGatewayOctetA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP gateway octet A.]]>
 </Description>
 </Member>
-<Member Name="IPGatewayB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPGatewayOctetB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP gateway octet B.]]>
 </Description>
 </Member>
-<Member Name="IPGatewayC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPGatewayOctetC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP gateway octet C.]]>
 </Description>
 </Member>
-<Member Name="IPGatewayD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="IPGatewayOctetD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[IP gateway octet D.]]>
 </Description>
@@ -74,42 +74,42 @@
 <![CDATA[DNS config. 0: Disable (default), 1: Enable]]>
 </Description>
 </Member>
-<Member Name="DNS1A" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DNS1OctetA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[DNS1 octet A.]]>
 </Description>
 </Member>
-<Member Name="DNS1B" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DNS1OctetB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[DNS1 octet B.]]>
 </Description>
 </Member>
-<Member Name="DNS1C" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DNS1OctetC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[DNS1 octet C.]]>
 </Description>
 </Member>
-<Member Name="DNS1D" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DNS1OctetD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[DNS1 octet D.]]>
 </Description>
 </Member>
-<Member Name="DNS2A" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DNS2OctetA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[DNS2 octet A.]]>
 </Description>
 </Member>
-<Member Name="DNS2B" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DNS2OctetB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[DNS2 octet B.]]>
 </Description>
 </Member>
-<Member Name="DNS2C" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DNS2OctetC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[DNS2 octet C.]]>
 </Description>
 </Member>
-<Member Name="DNS2D" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="DNS2OctetD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[DNS2 octet D.]]>
 </Description>
@@ -124,32 +124,32 @@
 <![CDATA[SNTP mode setting. 0: Unicast (default), 1: Anycast]]>
 </Description>
 </Member>
-<Member Name="SNTP_TimeUpdateInterval" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="SNTP_UpdateInterval" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Time between updates (seconds). Min: 1, Max: 32766, Default: 300]]>
 </Description>
 </Member>
-<Member Name="SNTP_TimeZone" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="SNTP_Zone" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[International time zone. Min: 0, Max: 32, Default: 6]]>
 </Description>
 </Member>
-<Member Name="SNTP_IPAddressA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="SNTP_IPAddressOctetA" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[SNTP IP address octet A.]]>
 </Description>
 </Member>
-<Member Name="SNTP_IPAddressB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="SNTP_IPAddressOctetB" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[SNTP IP address octet B.]]>
 </Description>
 </Member>
-<Member Name="SNTP_IPAddressC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="SNTP_IPAddressOctetC" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[SNTP IP address octet C.]]>
 </Description>
 </Member>
-<Member Name="SNTP_IPAddressD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="SNTP_IPAddressOctetD" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[SNTP IP address octet D.]]>
 </Description>
@@ -179,42 +179,42 @@
 <![CDATA[Link duplex when auto-negotiate is disabled. 0: Half, 1: Full (default)]]>
 </Description>
 </Member>
-<Member Name="QOS_DSCP_Enable" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="QoS_DSCP_Enable" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[QoS DSCP config. 0: Disable, 1: Enable (default)]]>
 </Description>
 </Member>
-<Member Name="QOS_DSCP_PTP_Event" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="QoS_DSCP_PTP_Event" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[QoS DSCP PTP Event setting. Min: 0, Max: 63, Default: 59]]>
 </Description>
 </Member>
-<Member Name="QOS_DSCP_PTP_General" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="QoS_DSCP_PTP_General" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[QoS DSCP PTP General setting. Min: 0, Max: 63, Default: 47]]>
 </Description>
 </Member>
-<Member Name="QOS_DSCP_Urgent" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="QoS_DSCP_Urgent" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[QoS DSCP Urgent setting. Min: 0, Max: 63, Default: 55]]>
 </Description>
 </Member>
-<Member Name="QOS_DSCP_Scheduled" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="QoS_DSCP_Scheduled" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[QoS DSCP Schedule setting. Min: 0, Max: 63, Default: 47]]>
 </Description>
 </Member>
-<Member Name="QOS_DSCP_High" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="QoS_DSCP_High" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[QoS DSCP High setting. Min: 0, Max: 63, Default: 43]]>
 </Description>
 </Member>
-<Member Name="QOS_DSCP_Low" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="QoS_DSCP_Low" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[QoS DSCP Low setting. Min: 0, Max: 63, Default: 31]]>
 </Description>
 </Member>
-<Member Name="QOS_DSCP_Explicit" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="QoS_DSCP_Explicit" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[QoS DSCP Explicit setting. Min: 0, Max: 63, Default: 27]]>
 </Description>

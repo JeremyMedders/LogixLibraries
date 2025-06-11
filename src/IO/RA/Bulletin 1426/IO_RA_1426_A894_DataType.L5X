@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--PM5000 Synchro Phasor Results-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A894" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Fri May 30 23:23:52 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="DEVPAC_L84ES">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A894" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:57:17 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A894" Family="NoFamily" Class="User">
-<Description>
-<![CDATA[PM5000 Synchro Phasor Results]]>
-</Description>
 <Members>
 <Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
@@ -28,112 +24,112 @@
 <![CDATA[Last line frequency calculated (Hz).]]>
 </Description>
 </Member>
-<Member Name="V1N_VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1NVoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1-N fundamental magnitude (V).]]>
 </Description>
 </Member>
-<Member Name="V1N_VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1NVoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1-N fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="V2N_VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2NVoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2-N fundamental magnitude (V).]]>
 </Description>
 </Member>
-<Member Name="V2N_VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2NVoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2-N fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="V3N_VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3NVoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3-N fundamental magnitude (V).]]>
 </Description>
 </Member>
-<Member Name="V3N_VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3NVoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3-N fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="VNG_VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VNGVoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[VN-G fundamental magnitude (V).]]>
 </Description>
 </Member>
-<Member Name="VNG_VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="VNGVoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[VN-G fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="V1V2_VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1V2VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1-V2 fundamental magnitude (V).]]>
 </Description>
 </Member>
-<Member Name="V1V2_VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V1V2VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V1-V2 fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="V2V3_VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2V3VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2-V3 fundamental magnitude (V).]]>
 </Description>
 </Member>
-<Member Name="V2V3_VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V2V3VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V2-V3 fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="V3V1_VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3V1VoltageFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3-V1 fundamental magnitude (V).]]>
 </Description>
 </Member>
-<Member Name="V3V1_VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="V3V1VoltageFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[V3-V1 fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="I1_CurrentFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1CurrentFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I1 current fundamental magnitude (A).]]>
 </Description>
 </Member>
-<Member Name="I1_CurrentFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I1CurrentFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I1 current fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="I2_CurrentFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I2CurrentFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I2 current fundamental magnitude (A).]]>
 </Description>
 </Member>
-<Member Name="I2_CurrentFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I2CurrentFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I2 current fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="I3_CurrentFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I3CurrentFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I3 current fundamental magnitude (A).]]>
 </Description>
 </Member>
-<Member Name="I3_CurrentFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I3CurrentFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I3 current fundamental angle (degrees).]]>
 </Description>
 </Member>
-<Member Name="I4_CurrentFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4CurrentFundamentalRMS" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I4 current fundamental magnitude (A).]]>
 </Description>
 </Member>
-<Member Name="I4_CurrentFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="I4CurrentFundamentalAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[I4 current fundamental angle (degrees).]]>
 </Description>
