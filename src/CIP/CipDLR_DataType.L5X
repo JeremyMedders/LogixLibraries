@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--CIP DLR (0x47) instance.-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="CipDLR" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 01:12:37 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="CipDLR" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[CIP DLR (0x47) instance.]]>
+</Description>
+<Members>
+<Member Name="NetworkTopology" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 1: Present topology. 0: Linear, 1: Ring.]]>
+</Description>
+</Member>
+<Member Name="NetworkStatus" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 2: Network status. 0: Normal, 1: Fault, 2: Unexpected loop, 3: Partial fault, 4: Rapid fault/restore cycle.]]>
+</Description>
+</Member>
+<Member Name="RingSupervisorStatus" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 3: 0: Backup supervisor, 1: Active supervisor, 2: Normal node, 3: Non-DLR topology, 4: Unsupported parameters.]]>
+</Description>
+</Member>
+<Member Name="RingSupervisorEnable" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="RingSupervisorPrecedence" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="BeaconInterval" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4: Duration of ring beacon interval (microseconds).]]>
+</Description>
+</Member>
+<Member Name="BeaconTimeout" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4: Duration of ring beacon timeout (microseconds).]]>
+</Description>
+</Member>
+<Member Name="VLAN" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 4]]>
+</Description>
+</Member>
+<Member Name="RingFaultCount" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 5: Number of rings faults since power-up.]]>
+</Description>
+</Member>
+<Member Name="Port1IPAddress" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 6]]>
+</Description>
+</Member>
+<Member Name="Port1MACAddress" DataType="USINT" Dimension="6" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Port2IPAddress" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 7]]>
+</Description>
+</Member>
+<Member Name="Port2MACAddress" DataType="USINT" Dimension="6" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RingProtocolParticipantCount" DataType="UINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 8]]>
+</Description>
+</Member>
+<Member Name="ActiveSupervisorIPAddress" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 10]]>
+</Description>
+</Member>
+<Member Name="ActiveSupervisorMACAddress" DataType="USINT" Dimension="6" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ActiveSupervisorPrecedence" DataType="USINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 11]]>
+</Description>
+</Member>
+<Member Name="CapabilityFlags" DataType="UDINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 12: Bits describe the capabilities of the device (overlay).]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
