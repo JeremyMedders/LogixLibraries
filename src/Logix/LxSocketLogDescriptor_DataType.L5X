@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="LxSocketLogDescriptor" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 01:31:45 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="LxSocketLogDescriptor" Family="NoFamily" Class="User">
+<Members>
+<Member Name="LogEnable" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Attribute 8]]>
+</Description>
+</Member>
+<Member Name="LogSocketCreate" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogEnable" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogEnable.0]]>
+</Description>
+</Member>
+<Member Name="LogOpenConnection" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogEnable" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogEnable.1]]>
+</Description>
+</Member>
+<Member Name="LogAcceptConnection" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogEnable" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogEnable.2]]>
+</Description>
+</Member>
+<Member Name="LogReadRequest" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogEnable" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogEnable.3]]>
+</Description>
+</Member>
+<Member Name="LogWriteRequest" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogEnable" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogEnable.4]]>
+</Description>
+</Member>
+<Member Name="LogSocketDelete" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogEnable" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogEnable.5]]>
+</Description>
+</Member>
+<Member Name="LogGetSetAttributes" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogEnable" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogEnable.6]]>
+</Description>
+</Member>
+<Member Name="LogAllServiceErrors" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="LogEnable" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[LogEnable.7]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
