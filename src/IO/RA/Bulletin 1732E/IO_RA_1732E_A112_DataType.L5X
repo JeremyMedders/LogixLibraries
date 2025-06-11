@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1732E_A112" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 01:18:38 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1732E_A112" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Fault" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="InputData" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pt00Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.0: State of DigIn00.]]>
+</Description>
+</Member>
+<Member Name="Pt01Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.1: State of DigIn01.]]>
+</Description>
+</Member>
+<Member Name="Pt02Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.2: State of DigIn02.]]>
+</Description>
+</Member>
+<Member Name="Pt03Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.3: State of DigIn03.]]>
+</Description>
+</Member>
+<Member Name="Pt04Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.4: State of DigIn04.]]>
+</Description>
+</Member>
+<Member Name="Pt05Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.5: State of DigIn05.]]>
+</Description>
+</Member>
+<Member Name="Pt06Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.6: State of DigIn06.]]>
+</Description>
+</Member>
+<Member Name="Pt07Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.7: State of DigIn07.]]>
+</Description>
+</Member>
+<Member Name="Pt08Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.8: State of DigIn08.]]>
+</Description>
+</Member>
+<Member Name="Pt09Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.9: State of DigIn09.]]>
+</Description>
+</Member>
+<Member Name="Pt10Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.10: State of DigIn10.]]>
+</Description>
+</Member>
+<Member Name="Pt11Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.11: State of DigIn11.]]>
+</Description>
+</Member>
+<Member Name="Pt12Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.12: State of DigIn12.]]>
+</Description>
+</Member>
+<Member Name="Pt13Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.13: State of DigIn13.]]>
+</Description>
+</Member>
+<Member Name="Pt14Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.14: State of DigIn14.]]>
+</Description>
+</Member>
+<Member Name="Pt15Data" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="InputData" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[InputData.15: State of DigIn15.]]>
+</Description>
+</Member>
+<Member Name="OpenWireStatus" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pt00_01OpenWire" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OpenWireStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OpenWireStatus.0]]>
+</Description>
+</Member>
+<Member Name="Pt02_03OpenWire" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OpenWireStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OpenWireStatus.1]]>
+</Description>
+</Member>
+<Member Name="Pt04_05OpenWire" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OpenWireStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OpenWireStatus.2]]>
+</Description>
+</Member>
+<Member Name="Pt06_07OpenWire" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OpenWireStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OpenWireStatus.3]]>
+</Description>
+</Member>
+<Member Name="Pt08_09OpenWire" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OpenWireStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OpenWireStatus.4]]>
+</Description>
+</Member>
+<Member Name="Pt10_11OpenWire" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OpenWireStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OpenWireStatus.5]]>
+</Description>
+</Member>
+<Member Name="ShortCircuitStatus" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pt00_01InputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortCircuitStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ShortCircuitStatus.0]]>
+</Description>
+</Member>
+<Member Name="Pt02_03InputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortCircuitStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ShortCircuitStatus.1]]>
+</Description>
+</Member>
+<Member Name="Pt04_05InputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortCircuitStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ShortCircuitStatus.2]]>
+</Description>
+</Member>
+<Member Name="Pt06_07InputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortCircuitStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ShortCircuitStatus.3]]>
+</Description>
+</Member>
+<Member Name="Pt08_09InputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortCircuitStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ShortCircuitStatus.4]]>
+</Description>
+</Member>
+<Member Name="Pt10_11InputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ShortCircuitStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ShortCircuitStatus.5]]>
+</Description>
+</Member>
+<Member Name="OutputNoLoad" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pt00NoLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputNoLoad" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutputNoLoad.0]]>
+</Description>
+</Member>
+<Member Name="Pt01NoLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputNoLoad" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutputNoLoad.1]]>
+</Description>
+</Member>
+<Member Name="Pt02NoLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputNoLoad" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutputNoLoad.2]]>
+</Description>
+</Member>
+<Member Name="Pt03NoLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputNoLoad" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutputNoLoad.3]]>
+</Description>
+</Member>
+<Member Name="OutputShortCircuit" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pt00OutputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputShortCircuit" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Pt01OutputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputShortCircuit" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Pt02OutputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputShortCircuit" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="Pt03OutputShortCircuit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputShortCircuit" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="OutputPower" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="OutputPowerPresent" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="OutputPower" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[OutputPower.7]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

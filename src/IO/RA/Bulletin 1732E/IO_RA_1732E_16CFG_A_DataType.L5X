@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1732E_16CFG_A" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 01:18:18 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="DEVPAC">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="IO_RA_1732E_16CFG_A" Family="NoFamily" Class="User">
+<Members>
+<Member Name="A5" DataType="IO_RA_1732E_A5" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A102" DataType="IO_RA_1732E_A102" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A105" DataType="IO_RA_1732E_A105" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="IO_RA_1732E_A5"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_A102"/>
+<Dependency Type="DataType" Name="IO_RA_1732E_A105"/>
+</Dependencies>
+</DataType>
+<DataType Name="IO_RA_1732E_A102" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Data" DataType="SINT" Dimension="12" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1732E_A105" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ConnectionFault" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="PointStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Point0Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.0]]>
+</Description>
+</Member>
+<Member Name="Point1Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.1]]>
+</Description>
+</Member>
+<Member Name="Point2Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.2]]>
+</Description>
+</Member>
+<Member Name="Point3Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.3]]>
+</Description>
+</Member>
+<Member Name="Point4Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.4]]>
+</Description>
+</Member>
+<Member Name="Point5Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.5]]>
+</Description>
+</Member>
+<Member Name="Point6Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.6]]>
+</Description>
+</Member>
+<Member Name="Point7Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.7]]>
+</Description>
+</Member>
+<Member Name="Point8Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="8" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.8]]>
+</Description>
+</Member>
+<Member Name="Point9Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="9" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.9]]>
+</Description>
+</Member>
+<Member Name="Point10Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="10" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.12]]>
+</Description>
+</Member>
+<Member Name="Point11Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="11" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.11]]>
+</Description>
+</Member>
+<Member Name="Point12Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="12" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.12]]>
+</Description>
+</Member>
+<Member Name="Point13Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="13" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.13]]>
+</Description>
+</Member>
+<Member Name="Point14Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="14" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.14]]>
+</Description>
+</Member>
+<Member Name="Point15Status" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="PointStatus" BitNumber="15" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PointStatus.15]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1732E_A5" Family="NoFamily" Class="User">
+<Members>
+<Member Name="place" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
