@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 00:50:14 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="IO_RA_1426_A" TargetType="DataType" ContainsContext="true" Owner="jmedders45@live.com" ExportDate="Wed Jun 11 19:32:50 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
 <Controller Use="Context" Name="DEVPAC">
 <DataTypes Use="Context">
 <DataType Use="Target" Name="IO_RA_1426_A" Family="NoFamily" Class="User">
@@ -69,7 +69,7 @@
 <Member Name="DataLog" DataType="IO_RA_1426_A851" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="EnergyLog" DataType="IO_RA_1426_A852" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="LoadFactorLog" DataType="IO_RA_1426_A853" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TOULog" DataType="IO_RA_1426_A854" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TimeOfUseLog" DataType="IO_RA_1426_A854" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="MinMaxLog" DataType="IO_RA_1426_A855" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="AlarmLog" DataType="IO_RA_1426_A856" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="EventLog" DataType="IO_RA_1426_A857" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
@@ -121,8 +121,374 @@
 <Member Name="EN61000_4_30_Aggregation" DataType="IO_RA_1426_A883" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="EN50160_ComplianceResults" DataType="IO_RA_1426_A884" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="SynchroPhasorResults" DataType="IO_RA_1426_A894" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="IEEE519_Ch1ShortTermResults" DataType="IO_RA_1426_IEEE519Results" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[A895]]>
+</Description>
+</Member>
+<Member Name="IEEE519_Ch2ShortTermResults" DataType="IO_RA_1426_IEEE519Results" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[A896]]>
+</Description>
+</Member>
+<Member Name="IEEE519_Ch3ShortTermResults" DataType="IO_RA_1426_IEEE519Results" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[A897]]>
+</Description>
+</Member>
+<Member Name="IEEE519_Ch1LongTermResults" DataType="IO_RA_1426_IEEE519Results" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[A898]]>
+</Description>
+</Member>
+<Member Name="IEEE519_Ch2LongTermResults" DataType="IO_RA_1426_IEEE519Results" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[A899]]>
+</Description>
+</Member>
+<Member Name="IEEE519_Ch3LongTermResults" DataType="IO_RA_1426_IEEE519Results" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[A900]]>
+</Description>
+</Member>
+<Member Name="A901" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A902" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A903" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A904" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A905" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A906" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A907" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A908" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A909" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A910" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A911" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A912" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A913" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A914" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A915" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A916" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A917" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A918" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A919" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A920" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A921" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A922" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A923" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A924" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A925" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A926" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A927" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A928" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A929" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A930" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A931" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A932" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A933" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A934" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A935" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A936" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A937" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A938" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A939" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A940" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A941" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A942" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A943" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A944" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A945" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A946" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A947" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A948" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A949" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A950" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A951" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A952" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A953" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A954" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A955" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A956" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A957" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A958" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A959" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A960" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A961" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A962" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A963" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A964" DataType="IO_RA_1426_HarmonicInterharmonicResults" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="A996" DataType="IO_RA_1426_A996" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="A997" DataType="IO_RA_1426_A997" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1001" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total (3-phase) real power, kW]]>
+</Description>
+</Member>
+<Member Name="A1002" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1003" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1004" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1005" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total (3-phase) reactive power, kVAR]]>
+</Description>
+</Member>
+<Member Name="A1006" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1007" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1008" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1009" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total (3-phase) apparent power, kVA]]>
+</Description>
+</Member>
+<Member Name="A1010" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1011" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1012" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1013" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 to Neutral voltage]]>
+</Description>
+</Member>
+<Member Name="A1014" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1015" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1016" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1017" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 to Neutral voltage]]>
+</Description>
+</Member>
+<Member Name="A1018" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1019" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1020" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1021" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 to Neutral voltage]]>
+</Description>
+</Member>
+<Member Name="A1022" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1023" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1024" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1025" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Neutral to Ground voltage]]>
+</Description>
+</Member>
+<Member Name="A1026" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1027" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1028" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1029" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 to Line 2 voltage]]>
+</Description>
+</Member>
+<Member Name="A1030" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1031" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1032" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1033" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 to Line 3 voltage]]>
+</Description>
+</Member>
+<Member Name="A1034" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1035" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1036" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1037" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 to Line 1 voltage]]>
+</Description>
+</Member>
+<Member Name="A1038" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1039" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1040" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1041" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 current]]>
+</Description>
+</Member>
+<Member Name="A1042" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1043" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1044" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1045" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 current]]>
+</Description>
+</Member>
+<Member Name="A1046" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1047" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1048" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1049" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 current]]>
+</Description>
+</Member>
+<Member Name="A1050" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1051" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1052" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1053" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 4 current]]>
+</Description>
+</Member>
+<Member Name="A1054" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1055" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1056" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1057" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 (Phase) real power, kW]]>
+</Description>
+</Member>
+<Member Name="A1058" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1059" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1060" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1061" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 (Phase) real power, kW]]>
+</Description>
+</Member>
+<Member Name="A1062" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1063" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1064" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1065" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 (Phase) real power, kW]]>
+</Description>
+</Member>
+<Member Name="A1066" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1067" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1068" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1069" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 (Phase) reactive power, kVAR]]>
+</Description>
+</Member>
+<Member Name="A1070" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1071" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1072" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1073" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 (Phase) reactive power, kVAR]]>
+</Description>
+</Member>
+<Member Name="A1074" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1075" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1076" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1077" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 (Phase) reactive power, kVAR]]>
+</Description>
+</Member>
+<Member Name="A1078" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1079" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1080" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1081" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 (Phase) apparent power, kVA]]>
+</Description>
+</Member>
+<Member Name="A1082" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1083" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1084" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1085" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 (Phase) apparent power, kVA]]>
+</Description>
+</Member>
+<Member Name="A1086" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1087" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1088" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1089" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 (Phase) apparent power, kVA]]>
+</Description>
+</Member>
+<Member Name="A1090" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1091" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1092" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1093" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 to Neutral voltage]]>
+</Description>
+</Member>
+<Member Name="A1094" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1095" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1096" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1097" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 to Neutral voltage]]>
+</Description>
+</Member>
+<Member Name="A1098" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1099" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1100" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1101" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 to Neutral voltage]]>
+</Description>
+</Member>
+<Member Name="A1102" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1103" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1104" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1105" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Neutral to Ground voltage]]>
+</Description>
+</Member>
+<Member Name="A1106" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1107" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1108" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1109" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 to Line 2 voltage]]>
+</Description>
+</Member>
+<Member Name="A1110" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1111" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1112" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1113" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 to Line 3 voltage]]>
+</Description>
+</Member>
+<Member Name="A1114" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1115" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1116" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1117" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 to Line 1 voltage]]>
+</Description>
+</Member>
+<Member Name="A1118" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1119" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1120" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1121" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 1 current]]>
+</Description>
+</Member>
+<Member Name="A1122" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1123" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1124" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1125" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 2 current]]>
+</Description>
+</Member>
+<Member Name="A1126" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1127" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1128" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1129" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 3 current]]>
+</Description>
+</Member>
+<Member Name="A1130" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1131" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1132" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1133" DataType="IO_RA_1426_HarmonicResultsH1" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line 4 current]]>
+</Description>
+</Member>
+<Member Name="A1134" DataType="IO_RA_1426_HarmonicResultsH2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1135" DataType="IO_RA_1426_HarmonicResultsH3" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="A1136" DataType="IO_RA_1426_HarmonicResultsH4" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 <Dependencies>
 <Dependency Type="DataType" Name="IO_RA_1426_A100"/>
@@ -202,127 +568,249 @@
 <Dependency Type="DataType" Name="IO_RA_1426_A883"/>
 <Dependency Type="DataType" Name="IO_RA_1426_A884"/>
 <Dependency Type="DataType" Name="IO_RA_1426_A894"/>
+<Dependency Type="DataType" Name="IO_RA_1426_IEEE519Results"/>
+<Dependency Type="DataType" Name="IO_RA_1426_IEEE519Results"/>
+<Dependency Type="DataType" Name="IO_RA_1426_IEEE519Results"/>
+<Dependency Type="DataType" Name="IO_RA_1426_IEEE519Results"/>
+<Dependency Type="DataType" Name="IO_RA_1426_IEEE519Results"/>
+<Dependency Type="DataType" Name="IO_RA_1426_IEEE519Results"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicInterharmonicResults"/>
 <Dependency Type="DataType" Name="IO_RA_1426_A996"/>
 <Dependency Type="DataType" Name="IO_RA_1426_A997"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH1"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH2"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH3"/>
+<Dependency Type="DataType" Name="IO_RA_1426_HarmonicResultsH4"/>
 </Dependencies>
 </DataType>
 <DataType Name="IO_RA_1426_A100" Family="NoFamily" Class="User">
 <Members>
-<Member Name="ConnectionFault" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Connection status.]]>
-</Description>
-</Member>
+<Member Name="ConnectionFault" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="SetpointStatus1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Status of setpoints 1-10 (overlay).]]>
 </Description>
 </Member>
-<Member Name="Setpoint1Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="0" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 1 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint2Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="1" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 2 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint3Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="2" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 3 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint4Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="3" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 4 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint5Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="4" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 5 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint6Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="5" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 6 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint7Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="6" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 7 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint8Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="7" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 8 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint9Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="8" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 9 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint10Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="9" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 10 active.]]>
-</Description>
-</Member>
+<Member Name="Setpoint1Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint2Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint3Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint4Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint5Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint6Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint7Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint8Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint9Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="8" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint10Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus1" BitNumber="9" ExternalAccess="Read/Write"/>
 <Member Name="SetpointStatus2" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Status of setpoints 11-20 (overlay).]]>
 </Description>
 </Member>
-<Member Name="Setpoint11Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="0" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 11 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint12Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="1" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 12 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint13Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="2" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 13 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint14Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="3" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 14 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint15Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="4" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 15 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint16Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="5" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 16 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint17Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="6" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 17 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint18Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="7" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 18 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint19Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="8" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 19 active.]]>
-</Description>
-</Member>
-<Member Name="Setpoint20Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="9" ExternalAccess="Read/Write">
-<Description>
-<![CDATA[Setpoint 20 active.]]>
-</Description>
-</Member>
+<Member Name="Setpoint11Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint12Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint13Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint14Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint15Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint16Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint17Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint18Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint19Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="8" ExternalAccess="Read/Write"/>
+<Member Name="Setpoint20Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="SetpointStatus2" BitNumber="9" ExternalAccess="Read/Write"/>
 <Member Name="DiscreteOutputStatus" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Discrete output status (overlay).]]>
@@ -428,7 +916,7 @@
 <![CDATA[Present second and millisecond.]]>
 </Description>
 </Member>
-<Member Name="Pad01" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pad1" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="MeteringIteration" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PowerFactorLeadLag" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
@@ -500,7 +988,11 @@
 <![CDATA[(V)]]>
 </Description>
 </Member>
-<Member Name="VVAvgVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VVAvgVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(V)]]>
+</Description>
+</Member>
 <Member Name="I1Current" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[(A)]]>
@@ -2841,7 +3333,7 @@ period (kVA).]]>
 </Member>
 <Member Name="Level1Gate2Seconds" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Level1Gate2Minutes" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Level1Gate2Hours" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Level1Gate2hs" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Level1Gate2TransitionCount" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Transition count x 1.]]>
@@ -2852,7 +3344,7 @@ period (kVA).]]>
 <![CDATA[Transition count x 1K.]]>
 </Description>
 </Member>
-<Member Name="Level1Gate3Seconds" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Level1Gate3ss" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Level1Gate3Minutes" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Level1Gate3Hours" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Level1Gate3TransitionCount" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
@@ -2944,7 +3436,7 @@ period (kVA).]]>
 </Description>
 </Member>
 <Member Name="Level1Gate10Seconds" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Level1Gate10Minutes" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Level1Gate10ms" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Level1Gate10Hours" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="Level1Gate10TransitionCount" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
 <Description>
@@ -5795,7 +6287,11 @@ period (minutes).]]>
 </DataType>
 <DataType Name="IO_RA_1426_A871" Family="NoFamily" Class="User">
 <Members>
-<Member Name="RecordIndicator" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RecordIndicator" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[0: No record, 1: Parameter values, 2: General info, 3: File not found]]>
+</Description>
+</Member>
 <Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[Date of cycle collection (MMDDYY).]]>
@@ -5811,18 +6307,46 @@ period (minutes).]]>
 <![CDATA[Time of cycle collection (usec).]]>
 </Description>
 </Member>
-<Member Name="FileID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="TotalCycles" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="CycleReturned" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Frequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="FileID" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
-<![CDATA[(Hz)]]>
+<![CDATA[Selected file ID.]]>
 </Description>
 </Member>
-<Member Name="MagnitudeAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Channel" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Order" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="X_0" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TotalCycles" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Total cycles of the waveform file.]]>
+</Description>
+</Member>
+<Member Name="CycleReturned" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current returned cycle.]]>
+</Description>
+</Member>
+<Member Name="Frequency" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Frequency of average cycle (Hz).]]>
+</Description>
+</Member>
+<Member Name="MagnitudeAngle" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Returned value is magnitude (0) or angle (1).]]>
+</Description>
+</Member>
+<Member Name="Channel" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Channel returned.]]>
+</Description>
+</Member>
+<Member Name="Order" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Range of harmonic orders of returned values. 0: DC...31st, 1: 32nd...63rd, 2: 64th...95th, 3: 96th...127th]]>
+</Description>
+</Member>
+<Member Name="X_0" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Returned value X_(h + Order * 32) for the spectral component specified by Channel at harmonic h.]]>
+</Description>
+</Member>
 <Member Name="X_1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="X_2" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="X_3" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
@@ -5906,9 +6430,21 @@ period (minutes).]]>
 <![CDATA[(%)]]>
 </Description>
 </Member>
-<Member Name="UninterruptedIntervals10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="UntinerruptedIntervals2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="UntinerruptedIntervals10Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="UninterruptedIntervals10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Number of 10-minute intervals without interruption flag set during 1 day.]]>
+</Description>
+</Member>
+<Member Name="UntinerruptedIntervals2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Number of 2-hour intervals without interruption flag set during 1 day.]]>
+</Description>
+</Member>
+<Member Name="UntinerruptedIntervals10Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Number of 10-second intervals without interruption flag set during 1 day.]]>
+</Description>
+</Member>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1426_A875" Family="NoFamily" Class="User">
@@ -6497,76 +7033,112 @@ period (minutes).]]>
 </DataType>
 <DataType Name="IO_RA_1426_A883" Family="NoFamily" Class="User">
 <Members>
-<Member Name="Date3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Time3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Microsecond3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Date10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Time10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Microsecond10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Date2Hourour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Time2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="PowerFrequency10Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V1NMagnitude3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V1NMagnitude10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V1NMagnitude2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V2NMagnitude3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V2NMagnitude2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V2NMagnitude10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V3NMagnitude3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V3NMagnitude10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V3NMagnitude2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VNGMagnitude3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VNGMagnitude10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VNGMagnitude2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V1V2Magnitude3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V1V2Magnitude10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V1V2Magnitude2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V2V3Magnitude3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V2V3Magnitude10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V2V3Magnitude2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V3V1Magnitude3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V3V1Magnitude10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="V3V1Magnitude2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="CH1_ShortTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Date3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of interval collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of interval collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of interval collection (usec).]]>
+</Description>
+</Member>
+<Member Name="Date10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of interval collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of interval collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of interval collection (usec).]]>
+</Description>
+</Member>
+<Member Name="Date2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of interval collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of interval collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of interval collection (usec).]]>
+</Description>
+</Member>
+<Member Name="PowerFrequency10s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V1NMagnitude3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V1NMagnitude10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V1NMagnitude2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V2NMagnitude3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V2NMagnitude2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V2NMagnitude10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V3NMagnitude3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V3NMagnitude10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V3NMagnitude2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VNGMagnitude3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VNGMagnitude10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VNGMagnitude2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V1V2Magnitude3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V1V2Magnitude10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V1V2Magnitude2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V2V3Magnitude3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V2V3Magnitude10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V2V3Magnitude2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V3V1Magnitude3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V3V1Magnitude10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="V3V1Magnitude2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch1ShortTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[(PST)]]>
 </Description>
 </Member>
-<Member Name="CH1_LongTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Ch1LongTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[(PLT)]]>
 </Description>
 </Member>
-<Member Name="CH2_ShortTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Ch2ShortTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[(PST)]]>
 </Description>
 </Member>
-<Member Name="CH2_LongTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Ch2LongTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[(PLT)]]>
 </Description>
 </Member>
-<Member Name="CH3_ShortTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Ch3ShortTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[(PST)]]>
 </Description>
 </Member>
-<Member Name="CH3_LongTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Member Name="Ch3LongTermFlickerPerceptibility" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
 <Description>
 <![CDATA[(PLT)]]>
 </Description>
 </Member>
-<Member Name="CH1_MainsSignalingVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="CH2_MainsSignalingVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="CH3_MainsSignalingVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VoltageUnbalance3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VoltageUnbalance10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="VoltageUnbalance2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="SagSwellStatusFlag3Second" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="SagSwellStatusFlag10Minute" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="SagSwellStatusFlag2Hour" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch1MainsSignalingVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch2MainsSignalingVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ch3MainsSignalingVoltage" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VoltageUnbalance3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VoltageUnbalance10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="VoltageUnbalance2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SagSwellStatusFlag3s" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SagSwellStatusFlag10m" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SagSwellStatusFlag2h" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1426_A884" Family="NoFamily" Class="User">
@@ -6584,37 +7156,161 @@ period (minutes).]]>
 <Member Name="VoltageTotalHarmonicDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PowerFrequencyRange1" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
 <Member Name="PowerFrequencyRange2" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90to80u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90to80u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90to80u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90to80u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_90to80u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80to70u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80to70u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80to70u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80to70u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_80to70u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70to40u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70to40u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70to40u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70to40u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_70to40u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40to5u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40to5u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40to5u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40to5u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_40to5u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_5uOrLess_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_5uOrLess_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_5uOrLess_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_5uOrLess_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Sag_5uOrLess_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120uOrGreater_10to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120uOrGreater_500to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120uOrGreater_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120to110u_10to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120to110u_500to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
-<Member Name="Swell_120to110u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="SagCount_90to80u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell A1]]>
+</Description>
+</Member>
+<Member Name="SagCount_90to80u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell A2]]>
+</Description>
+</Member>
+<Member Name="SagCount_90to80u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell A3]]>
+</Description>
+</Member>
+<Member Name="SagCount_90to80u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell A4]]>
+</Description>
+</Member>
+<Member Name="SagCount_90to80u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell A5]]>
+</Description>
+</Member>
+<Member Name="SagCount_80to70u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell B1]]>
+</Description>
+</Member>
+<Member Name="SagCount_80to70u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell B2]]>
+</Description>
+</Member>
+<Member Name="SagCount_80to70u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell B3]]>
+</Description>
+</Member>
+<Member Name="SagCount_80to70u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell B4]]>
+</Description>
+</Member>
+<Member Name="SagCount_80to70u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell B5]]>
+</Description>
+</Member>
+<Member Name="SagCount_70to40u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell C1]]>
+</Description>
+</Member>
+<Member Name="SagCount_70to40u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell C2]]>
+</Description>
+</Member>
+<Member Name="SagCount_70to40u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell C3]]>
+</Description>
+</Member>
+<Member Name="SagCount_70to40u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell C4]]>
+</Description>
+</Member>
+<Member Name="SagCount_70to40u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell C5]]>
+</Description>
+</Member>
+<Member Name="SagCount_40to5u_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell D1]]>
+</Description>
+</Member>
+<Member Name="SagCount_40to5u_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell D2]]>
+</Description>
+</Member>
+<Member Name="SagCount_40to5u_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell D3]]>
+</Description>
+</Member>
+<Member Name="SagCount_40to5u_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell D4]]>
+</Description>
+</Member>
+<Member Name="SagCount_40to5u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell D5]]>
+</Description>
+</Member>
+<Member Name="SagCount_5uOrLess_10to200ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell X1]]>
+</Description>
+</Member>
+<Member Name="SagCount_5uOrLess_200to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell X2]]>
+</Description>
+</Member>
+<Member Name="SagCount_5uOrLess_500to1000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell X3]]>
+</Description>
+</Member>
+<Member Name="SagCount_5uOrLess_1000to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell X4]]>
+</Description>
+</Member>
+<Member Name="SagCount_5uOrLess_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell X5]]>
+</Description>
+</Member>
+<Member Name="SwellCount_120uOrGreater_10to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell S1]]>
+</Description>
+</Member>
+<Member Name="SwellCount_120uOrGreater_500to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell S2]]>
+</Description>
+</Member>
+<Member Name="SwellCount_120uOrGreater_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell S3]]>
+</Description>
+</Member>
+<Member Name="SwellCount_120to110u_10to500ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell T1]]>
+</Description>
+</Member>
+<Member Name="SwellCount_120to110u_500to5000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell T2]]>
+</Description>
+</Member>
+<Member Name="SwellCount_120to110u_5000to60000ms" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell T3]]>
+</Description>
+</Member>
 </Members>
 </DataType>
 <DataType Name="IO_RA_1426_A894" Family="NoFamily" Class="User">
@@ -6759,6 +7455,475 @@ period (minutes).]]>
 <DataType Name="IO_RA_1426_A997" Family="NoFamily" Class="User">
 <Members>
 <Member Name="Data" DataType="SINT" Dimension="160" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1426_HarmonicInterharmonicResults" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of cycle collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (usec).]]>
+</Description>
+</Member>
+<Member Name="DCOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Data" DataType="REAL" Dimension="50" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1426_HarmonicResultsH1" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of cycle collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (usec).]]>
+</Description>
+</Member>
+<Member Name="DCOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DC offset RMS.]]>
+</Description>
+</Member>
+<Member Name="h1_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1st-31st harmonics result values]]>
+</Description>
+</Member>
+<Member Name="h2_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h3_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h4_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h5_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h6_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h7_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h8_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h9_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h10_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h11_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h12_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h13_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h14_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h15_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h16_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h17_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h18_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h19_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h20_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h21_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h22_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h23_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h24_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h25_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h26_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h27_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h28_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h29_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h30_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h31_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1426_HarmonicResultsH2" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of cycle collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (usec).]]>
+</Description>
+</Member>
+<Member Name="h32_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[32nd-63rd harmonics result values]]>
+</Description>
+</Member>
+<Member Name="h33_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h34_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h35_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h36_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h37_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h38_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h39_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h40_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h41_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h42_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h43_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h44_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h45_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h46_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h47_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h48_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h49_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h50_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h51_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h52_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h53_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h54_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h55_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h56_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h57_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h58_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h59_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h60_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h61_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h62_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h63_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1426_HarmonicResultsH3" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of cycle collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (usec).]]>
+</Description>
+</Member>
+<Member Name="h64_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[64th-95th harmonics result values]]>
+</Description>
+</Member>
+<Member Name="h65_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h66_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h67_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h68_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h69_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h70_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h71_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h72_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h73_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h74_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h75_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h76_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h77_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h78_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h79_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h80_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h81_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h82_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h83_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h84_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h85_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h86_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h87_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h88_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h89_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h90_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h91_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h92_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h93_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h94_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h95_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1426_HarmonicResultsH4" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of cycle collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (usec).]]>
+</Description>
+</Member>
+<Member Name="h96_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[96th-127th harmonics result values]]>
+</Description>
+</Member>
+<Member Name="h97_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h98_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h99_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h100_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h101_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h102_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h103_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h104_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h105_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h106_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h107_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h108_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h109_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h110_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h111_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h112_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h113_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h114_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h115_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h116_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h117_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h118_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h119_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h120_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h121_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h122_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h123_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h124_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h125_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h126_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="h127_H" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="IO_RA_1426_IEEE519Results" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Date" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Date of cycle collection (MMDDYY).]]>
+</Description>
+</Member>
+<Member Name="Time" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (HHMMSS).]]>
+</Description>
+</Member>
+<Member Name="Microsecond" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time of cycle collection (usec).]]>
+</Description>
+</Member>
+<Member Name="FundamentalMagnitude" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Fundamental RMS voltage or current (V or A).]]>
+</Description>
+</Member>
+<Member Name="Channel_2nd_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2nd-40th harmonic value as percent of fundamental or maximum demand current (%).]]>
+</Description>
+</Member>
+<Member Name="Channel_3rd_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_4th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_5th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_6th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_7th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_8th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_9th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_10th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_11th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_12th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_13th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_14th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_15th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_16th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_17th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_18th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_19th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_20th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_21nd_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_22nd_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_23rd_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_24th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_25th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_26th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_27th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_28th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_29th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_30th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_31st_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_32nd_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_33rd_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_34th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_35th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_36th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_37th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_38th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_39th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="Channel_40th_Harmonic" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
+<Member Name="TotalDistortion" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(%)]]>
+</Description>
+</Member>
 </Members>
 </DataType>
 <DataType Name="STR_20" Family="StringFamily" Class="User">
